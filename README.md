@@ -27,6 +27,12 @@ V2 is **AI-Based Fruit Freshness Intelligence Using Modern Vision AI**, a compar
 
 The research framework begins with [V2_RESEARCH_BLUEPRINT.md](docs/handbook/V2_RESEARCH_BLUEPRINT.md). The complete protocol is in [EXPERIMENT_PROTOCOL.md](docs/EXPERIMENT_PROTOCOL.md), and planned model cohorts are defined without results in [MODEL_COMPARISON_MATRIX.md](docs/MODEL_COMPARISON_MATRIX.md).
 
+### Competition line — OpenCV AI Competition 2026
+
+A separate branch, `competition/opencv-aws-2026`, adapts this work into an agentic visual inspection system for the OpenCV AI Competition 2026. It is branched from the completed V2 research state and contains only competition-specific work. It does not modify `legacy` or `master`, and its measurements are reported separately from the V2 research results above.
+
+That branch is documented in [OPENCV_AWS_2026_BLUEPRINT.md](docs/competition/OPENCV_AWS_2026_BLUEPRINT.md).
+
 ## V2 Phase 1
 
 ### Modern CNN Baseline Reproduction

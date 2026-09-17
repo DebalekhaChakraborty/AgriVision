@@ -32,3 +32,17 @@ v2/cache/
 *.ckpt
 *.safetensors
 wandb/
+
+# Local secret material and cloud credentials.
+# Scoped deliberately narrowly so research configs (*.yaml, *.json) are unaffected.
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.aws-sam/
+aws.json
+credentials
+secrets.json
