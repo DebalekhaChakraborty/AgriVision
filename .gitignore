@@ -46,3 +46,4 @@ wandb/
 aws.json
 credentials
 secrets.json
+.venv-competition/

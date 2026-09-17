@@ -3,54 +3,78 @@
 # Scope: the competition/opencv-aws-2026 branch only.
 #
 # This manifest is deliberately NOT a copy of requirements-v2.txt. The research
-# environment carries training, plotting, notebook and foundation-model tooling
-# that a deployed inspection service does not need and should not ship in a
-# container image. Entries are added here only when the competition system
-# actually requires them.
+# environment carries training, notebook and foundation-model tooling that a
+# deployed inspection service does not need and should not ship in a container
+# image. Entries are added here only when the competition system actually
+# requires them.
 #
 # requirements.txt (frozen V1) and requirements-v2.txt (V2 research) are NOT
 # modified by competition work.
 #
+# ENVIRONMENT
+# -----------
+# Phase 1 uses a dedicated virtual environment, .venv-competition, created with
+# Python 3.11 and gitignored. It is deliberately separate from .venv-v2: that
+# environment produced Experiments 001-015 and is pinned by requirements-v2.txt,
+# so installing competition tooling into it would mutate the environment behind
+# published research results.
+#
+#   python3 -m venv .venv-competition
+#   .venv-competition/bin/pip install -r requirements-competition.txt
+#
 # ---------------------------------------------------------------------------
-# VERIFIED — installed and imported successfully in .venv-v2 at Phase 0
+# VERIFIED — installed and exercised in .venv-competition
 # ---------------------------------------------------------------------------
 
-# OpenCV 5. Confirmed: imports as cv2 5.0.0, and cvtColor, Laplacian, Canny,
-# CLAHE, watershed, grabCut and the dnn module are all available.
+# OpenCV 5. Confirmed: imports as cv2 5.0.0. Phase 1 exercises cvtColor
+# (BGR2GRAY, BGR2LAB), Laplacian, GaussianBlur, convertScaleAbs, circle,
+# rectangle and imread/imwrite.
 # NOTE: cv2.ximgproc is NOT available in this wheel (contrib is not installed).
-# The perception design in the blueprint uses core modules only. If a contrib
-# operator later proves necessary, opencv-contrib-python must be resolved and
-# verified for OpenCV 5 before it is added here.
+# The perception layer uses core modules only. If a contrib operator later
+# proves necessary, opencv-contrib-python must be resolved and verified for
+# OpenCV 5 before it is added here.
 opencv-python==5.0.0.93
 
 numpy==2.4.6
 Pillow==12.3.0
 
+# Test framework. Resolved and verified during Phase 1; runs the 81-test
+# competition suite.
+pytest==9.1.1
+
+# Evaluation plots only. Not required by the perception layer or the runtime
+# service, and must be excluded from the deployment container image.
+matplotlib==3.11.2
+
 # ---------------------------------------------------------------------------
-# VERIFIED, but include only if the selected condition model requires them.
-# Phase 2 decides. Torch CPU is a large container dependency; a smaller
-# exported model may remove the need entirely.
+# VERIFIED in .venv-v2, but include only if the selected condition model
+# requires them. Phase 2 decides. Torch CPU is a large container dependency and
+# a smaller exported model may remove the need entirely.
 # ---------------------------------------------------------------------------
 # torch==2.13.0+cpu          # requires --extra-index-url https://download.pytorch.org/whl/cpu
 # torchvision==0.28.0+cpu
 
 # ---------------------------------------------------------------------------
-# UNRESOLVED — required by the planned architecture but NOT installed in this
-# environment, so no version is asserted here. Per the Phase 0 dependency rule,
-# these are documented rather than invented. Each must be resolved against a
-# clean Python 3.11 environment and pinned before Phase 4 deployment.
+# UNRESOLVED — required by the planned architecture but not yet installed or
+# verified, so no version is asserted. Per the dependency rule, these are
+# documented rather than invented. Each must be resolved against a clean
+# Python 3.11 environment and pinned before Phase 4 deployment.
 # ---------------------------------------------------------------------------
 #
 #   fastapi          - HTTP API layer                      UNRESOLVED
 #   uvicorn          - ASGI server                         UNRESOLVED
-#   pydantic         - evidence and trace schemas          UNRESOLVED
+#   pydantic         - request/response schemas            UNRESOLVED
 #   boto3            - S3, DynamoDB, Bedrock clients       UNRESOLVED
-#   pytest           - test framework (none exists yet)    UNRESOLVED
 #
-# Resolution procedure (Phase 1 for pytest, Phase 4 for the rest):
+# Note on pydantic: Phase 1 evidence types use stdlib dataclasses precisely so
+# that no unverified dependency was needed to define the evidence contract. If
+# pydantic is later adopted for API validation, the dataclass contract in
+# competition/vision/evidence.py should remain the source of truth.
+#
+# Resolution procedure (Phase 4):
 #   1. create a clean Python 3.11 environment
-#   2. install alongside the pinned entries above and confirm no conflict
-#      with numpy 2.4.6 or opencv-python 5.0.0.93
+#   2. install alongside the pinned entries above and confirm no conflict with
+#      numpy 2.4.6 or opencv-python 5.0.0.93
 #   3. record the exact resolved version here
 #   4. rebuild the container and re-verify inside it, not only on the host
 #

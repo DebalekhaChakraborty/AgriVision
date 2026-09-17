@@ -1,0 +1,23 @@
+{
+  "context": {
+    "degradation_version": "phase1-degradation-1.0.0",
+    "machine": "x86_64",
+    "opencv_version": "5.0.0",
+    "pipeline_version": "phase1-capture-quality-1.0.0",
+    "platform": "Linux",
+    "processor": "unknown",
+    "python_version": "3.11.2",
+    "threshold_policy_fingerprint": "e6bd2bee4f852f37",
+    "threshold_policy_status": "PROVISIONAL_DEVELOPMENT_ONLY"
+  },
+  "image_size": "256x256",
+  "max_ms": 4.2221,
+  "mean_ms": 3.4591,
+  "median_ms": 3.4343,
+  "min_ms": 3.2281,
+  "p95_ms": 3.7155,
+  "p99_ms": 3.8417,
+  "sample_count": 200,
+  "scope": "LOCAL_CPU_ONLY \u2014 not an AWS or deployed-endpoint measurement",
+  "warmup_runs_discarded": 5
+}

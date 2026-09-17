@@ -196,10 +196,20 @@ that makes the system safe, for four reasons:
    correction, denoising and re-segmentation with different parameters are the
    *actions* the agent takes. Without OpenCV there is no action space.
 4. **Cost and latency.** Perception gating runs in milliseconds on CPU and can
-   reject or repair an input before any model is invoked.
+   reject or repair an input before any model is invoked. Measured in Phase 1:
+   median 3.41 ms, p95 3.66 ms on 256×256 locally.
 
 The perception layer is therefore load-bearing: remove it and the agent has
 nothing to decide on and nothing to do.
+
+**Phase 1 added a fifth reason, discovered by measurement rather than assumed.**
+The capture-quality metrics are *coupled*: with no blur applied at all,
+Laplacian variance scales with roughly the square of exposure gain, so a dark
+capture is falsely flagged as blurred (observed at gain ≤ 0.25) and a bright one
+can mask real blur. A single-pass assessment is therefore insufficient on its
+own terms — exposure must be corrected and sharpness re-measured. The
+`assess → enhance → re-assess` loop is a measured necessity, not a design
+preference. See [PHASE1_OPENCV_PERCEPTION.md](PHASE1_OPENCV_PERCEPTION.md) §9.1.
 
 ## 12. Planned OpenCV 5 pipeline
 
@@ -207,11 +217,14 @@ All operations below are confirmed available in the installed `cv2 5.0.0`
 build. `cv2.ximgproc` is **not** available (contrib is not installed), so the
 design deliberately uses core modules only.
 
+Stages marked **[P1]** are implemented and tested as of Phase 1; the rest are
+planned.
+
 | Stage | Technique | Output |
 | --- | --- | --- |
-| Decode / normalise | `imdecode`, `cvtColor` | working image, colour spaces |
-| Blur assessment | variance of `Laplacian` | sharpness score |
-| Illumination assessment | HSV/Lab statistics, clipping fractions | exposure score, under/over flags |
+| Decode / normalise **[P1]** | `imread`, `cvtColor` | working image, colour spaces |
+| Blur assessment **[P1]** | variance of `Laplacian` | sharpness score |
+| Illumination assessment **[P1]** | Lab L* statistics, clipping fractions | exposure score, under/over flags |
 | Glare / specular | near-saturation mask, morphology | glare fraction |
 | Enhancement (action) | `createCLAHE`, gamma LUT, `fastNlMeansDenoising` | repaired image |
 | Foreground / ROI | `grabCut`, `watershed`, `findContours` | produce mask |
@@ -573,14 +586,20 @@ this branch. Dates will be added only from the official schedule.
 - **Exit:** branch verified from `3928d43`; research lines untouched; docs resolve.
 - **Supports:** documentation/presentation.
 
-### Phase 1 — OpenCV 5 perception baseline
+### Phase 1 — OpenCV 5 perception baseline *(capture-quality slice complete)*
 - **Objective:** the perception layer and its evidence record.
-- **Tasks:** quality metrics; enhancement; segmentation; anomaly localisation;
-  evidence rendering; typed, serialisable `PerceptionEvidence`.
-- **Artifacts:** `competition/vision/`, controlled-degradation generator.
-- **Tests:** unit tests per metric with synthetic fixtures of known degradation;
-  monotonicity tests (increasing blur must decrease sharpness score).
-- **Exit:** every metric measured against controlled degradation; deterministic.
+- **Done:** capture-quality metrics (sharpness, illumination, contrast,
+  clipping, validity); typed serialisable `PerceptionEvidence`; threshold policy
+  separated from measurement; controlled-degradation generator; CLI; baseline
+  sweep with plots and latency; 81 tests.
+- **Remaining for later phases:** enhancement actions, segmentation, ROI and
+  anomaly localisation, evidence overlay rendering.
+- **Artifacts:** `competition/vision/`, `competition/evaluation/`,
+  `tests/competition/`, [PHASE1_OPENCV_PERCEPTION.md](PHASE1_OPENCV_PERCEPTION.md).
+- **Tests:** per-metric unit tests on synthetic fixtures of known degradation;
+  monotonicity, determinism, safe-failure and path-hygiene tests.
+- **Exit:** met for the capture-quality slice — every metric measured against
+  controlled degradation and deterministic.
 - **Supports:** technical execution, innovation.
 
 ### Phase 2 — Condition model integration
@@ -674,3 +693,4 @@ this branch. Dates will be added only from the official schedule.
 - [REQUIREMENTS_TRACEABILITY.md](REQUIREMENTS_TRACEABILITY.md)
 - [EVALUATION_PLAN.md](EVALUATION_PLAN.md)
 - [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md)
+- [PHASE1_OPENCV_PERCEPTION.md](PHASE1_OPENCV_PERCEPTION.md) — Phase 1 technical note
