@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-09-02T18:06:45.553356+00:00",
+  "completed_systems": [
+    "custom_cnn",
+    "resnet50",
+    "efficientnet_b0",
+    "mobilenetv3_large",
+    "dinov2_linear_probe",
+    "clip_linear_probe",
+    "siglip2_linear_probe",
+    "clip_strict_zero_shot",
+    "siglip2_strict_zero_shot"
+  ],
+  "experiment_id": "V2-P3D-CROSS-DOMAIN-013",
+  "external_passes_per_system": 1,
+  "last_completed_at": "2026-09-02T18:06:45.294976+00:00",
+  "manifest_sha256": "6fd074e514f3b79e6d4f1878516fdaa9a4ea2e283a2dee4453a397d9da5a7208",
+  "schema_version": 1,
+  "started_at": "2026-09-02T17:38:52.148479+00:00",
+  "status": "COMPLETE_ONE_PASS_PER_SYSTEM"
+}

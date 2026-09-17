@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "systems": {
+    "clip_linear_probe": {
+      "fresh_apple": {
+        "external_recall": 0.37,
+        "shift_external_minus_source": -0.6274683544303797,
+        "source_recall": 0.9974683544303797
+      },
+      "fresh_banana": {
+        "external_recall": 0.03,
+        "shift_external_minus_source": -0.9673753280839895,
+        "source_recall": 0.9973753280839895
+      },
+      "fresh_orange": {
+        "external_recall": 0.895,
+        "shift_external_minus_source": -0.08953608247422684,
+        "source_recall": 0.9845360824742269
+      },
+      "rotten_apple": {
+        "external_recall": 0.94,
+        "shift_external_minus_source": 0.06479201331114803,
+        "source_recall": 0.8752079866888519
+      },
+      "rotten_banana": {
+        "external_recall": 1.0,
+        "shift_external_minus_source": 0.007547169811320753,
+        "source_recall": 0.9924528301886792
+      },
+      "rotten_orange": {
+        "external_recall": 0.425,
+        "shift_external_minus_source": -0.5129652605459056,
+        "source_recall": 0.9379652605459057
+      }
+    },
+    "clip_strict_zero_shot": {
+      "fresh_apple": {
+        "external_recall": 0.94,
+        "shift_external_minus_source": 0.023544303797468302,
+        "source_recall": 0.9164556962025316
+      },
+      "fresh_banana": {
+        "external_recall": 0.55,
+        "shift_external_minus_source": -0.43687664041994745,
+        "source_recall": 0.9868766404199475
+      },
+      "fresh_orange": {
+        "external_recall": 0.5,
+        "shift_external_minus_source": -0.20360824742268047,
+        "source_recall": 0.7036082474226805
+      },
+      "rotten_apple": {
+        "external_recall": 0.86,
+        "shift_external_minus_source": -0.016871880199667233,
+        "source_recall": 0.8768718801996672
+      },
+      "rotten_banana": {
+        "external_recall": 0.995,
+        "shift_external_minus_source": 0.015754716981132066,
+        "source_recall": 0.9792452830188679
+      },
+      "rotten_orange": {
+        "external_recall": 1.0,
+        "shift_external_minus_source": 0.08188585607940446,
+        "source_recall": 0.9181141439205955
+      }
+    },
+    "custom_cnn": {
+      "fresh_apple": {
+        "external_recall": 0.605,
+        "shift_external_minus_source": -0.3393037974683545,
+        "source_recall": 0.9443037974683545
+      },
+      "fresh_banana": {
+        "external_recall": 0.03,
+        "shift_external_minus_source": -0.749527559055118,
+        "source_recall": 0.7795275590551181
+      },
+      "fresh_orange": {
+        "external_recall": 0.155,
+        "shift_external_minus_source": -0.5898453608247423,
+        "source_recall": 0.7448453608247423
+      },
+      "rotten_apple": {
+        "external_recall": 0.275,
+        "shift_external_minus_source": -0.23914309484193008,
+        "source_recall": 0.5141430948419301
+      },
+      "rotten_banana": {
+        "external_recall": 0.985,
+        "shift_external_minus_source": 0.051037735849056576,
+        "source_recall": 0.9339622641509434
+      },
+      "rotten_orange": {
+        "external_recall": 0.025,
+        "shift_external_minus_source": -0.5606079404466501,
+        "source_recall": 0.5856079404466501
+      }
+    },
+    "dinov2_linear_probe": {
+      "fresh_apple": {
+        "external_recall": 1.0,
+        "shift_external_minus_source": 0.0,
+        "source_recall": 1.0
+      },
+      "fresh_banana": {
+        "external_recall": 0.455,
+        "shift_external_minus_source": -0.513503937007874,
+        "source_recall": 0.968503937007874
+      },
+      "fresh_orange": {
+        "external_recall": 1.0,
+        "shift_external_minus_source": 0.0,
+        "source_recall": 1.0
+      },
+      "rotten_apple": {
+        "external_recall": 0.52,
+        "shift_external_minus_source": -0.14056572379367716,
+        "source_recall": 0.6605657237936772
+      },
+      "rotten_banana": {
+        "external_recall": 1.0,
+        "shift_external_minus_source": 0.0,
+        "source_recall": 1.0
+      },
+      "rotten_orange": {
+        "external_recall": 0.115,
+        "shift_external_minus_source": -0.6889702233250621,
+        "source_recall": 0.8039702233250621
+      }
+    },
+    "efficientnet_b0": {
+      "fresh_apple": {
+        "external_recall": 0.675,
+        "shift_external_minus_source": -0.3199367088607594,
+        "source_recall": 0.9949367088607595
+      },
+      "fresh_banana": {
+        "external_recall": 0.735,
+        "shift_external_minus_source": -0.265,
+        "source_recall": 1.0
+      },
+      "fresh_orange": {
+        "external_recall": 0.85,
+        "shift_external_minus_source": -0.1396907216494846,
+        "source_recall": 0.9896907216494846
+      },
+      "rotten_apple": {
+        "external_recall": 0.62,
+        "shift_external_minus_source": -0.2751747088186356,
+        "source_recall": 0.8951747088186356
+      },
+      "rotten_banana": {
+        "external_recall": 0.97,
+        "shift_external_minus_source": 0.01716981132075468,
+        "source_recall": 0.9528301886792453
+      },
+      "rotten_orange": {
+        "external_recall": 0.275,
+        "shift_external_minus_source": -0.5934863523573201,
+        "source_recall": 0.8684863523573201
+      }
+    },
+    "mobilenetv3_large": {
+      "fresh_apple": {
+        "external_recall": 0.855,
+        "shift_external_minus_source": -0.124746835443038,
+        "source_recall": 0.979746835443038
+      },
+      "fresh_banana": {
+        "external_recall": 0.825,
+        "shift_external_minus_source": -0.17500000000000004,
+        "source_recall": 1.0
+      },
+      "fresh_orange": {
+        "external_recall": 0.965,
+        "shift_external_minus_source": -0.014381443298969065,
+        "source_recall": 0.979381443298969
+      },
+      "rotten_apple": {
+        "external_recall": 0.66,
+        "shift_external_minus_source": -0.1969051580698835,
+        "source_recall": 0.8569051580698835
+      },
+      "rotten_banana": {
+        "external_recall": 0.89,
+        "shift_external_minus_source": -0.08358490566037735,
+        "source_recall": 0.9735849056603774
+      },
+      "rotten_orange": {
+        "external_recall": 0.05,
+        "shift_external_minus_source": -0.7713399503722084,
+        "source_recall": 0.8213399503722084
+      }
+    },
+    "resnet50": {
+      "fresh_apple": {
+        "external_recall": 0.945,
+        "shift_external_minus_source": -0.05246835443037978,
+        "source_recall": 0.9974683544303797
+      },
+      "fresh_banana": {
+        "external_recall": 0.785,
+        "shift_external_minus_source": -0.2123753280839895,
+        "source_recall": 0.9973753280839895
+      },
+      "fresh_orange": {
+        "external_recall": 0.94,
+        "shift_external_minus_source": -0.034226804123711374,
+        "source_recall": 0.9742268041237113
+      },
+      "rotten_apple": {
+        "external_recall": 0.405,
+        "shift_external_minus_source": -0.5068136439267886,
+        "source_recall": 0.9118136439267887
+      },
+      "rotten_banana": {
+        "external_recall": 0.955,
+        "shift_external_minus_source": -0.0034905660377358982,
+        "source_recall": 0.9584905660377359
+      },
+      "rotten_orange": {
+        "external_recall": 0.13,
+        "shift_external_minus_source": -0.696302729528536,
+        "source_recall": 0.826302729528536
+      }
+    },
+    "siglip2_linear_probe": {
+      "fresh_apple": {
+        "external_recall": 0.995,
+        "shift_external_minus_source": -0.0050000000000000044,
+        "source_recall": 1.0
+      },
+      "fresh_banana": {
+        "external_recall": 0.32,
+        "shift_external_minus_source": -0.6773753280839896,
+        "source_recall": 0.9973753280839895
+      },
+      "fresh_orange": {
+        "external_recall": 0.955,
+        "shift_external_minus_source": -0.04242268041237118,
+        "source_recall": 0.9974226804123711
+      },
+      "rotten_apple": {
+        "external_recall": 0.89,
+        "shift_external_minus_source": -0.05841930116472549,
+        "source_recall": 0.9484193011647255
+      },
+      "rotten_banana": {
+        "external_recall": 1.0,
+        "shift_external_minus_source": 0.0018867924528301883,
+        "source_recall": 0.9981132075471698
+      },
+      "rotten_orange": {
+        "external_recall": 0.805,
+        "shift_external_minus_source": -0.18755583126550868,
+        "source_recall": 0.9925558312655087
+      }
+    },
+    "siglip2_strict_zero_shot": {
+      "fresh_apple": {
+        "external_recall": 1.0,
+        "shift_external_minus_source": 0.0,
+        "source_recall": 1.0
+      },
+      "fresh_banana": {
+        "external_recall": 0.765,
+        "shift_external_minus_source": -0.23237532808398953,
+        "source_recall": 0.9973753280839895
+      },
+      "fresh_orange": {
+        "external_recall": 0.885,
+        "shift_external_minus_source": -0.10726804123711342,
+        "source_recall": 0.9922680412371134
+      },
+      "rotten_apple": {
+        "external_recall": 0.89,
+        "shift_external_minus_source": -0.05841930116472549,
+        "source_recall": 0.9484193011647255
+      },
+      "rotten_banana": {
+        "external_recall": 0.935,
+        "shift_external_minus_source": -0.055566037735849005,
+        "source_recall": 0.9905660377358491
+      },
+      "rotten_orange": {
+        "external_recall": 0.97,
+        "shift_external_minus_source": 0.012183622828784046,
+        "source_recall": 0.9578163771712159
+      }
+    }
+  }
+}

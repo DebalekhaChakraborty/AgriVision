@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "experiment_id": "V2-P3F-REPRESENTATION-INTERPRETABILITY-015",
+  "status": "PASS",
+  "verified_at": "2026-09-07",
+  "branch": "master",
+  "baseline": {
+    "path": "prior_evidence_baseline.sha256",
+    "total_pre_phase_3f_files": 561,
+    "unchanged_files": 560,
+    "authorized_phase_3f_documentation_changes": [
+      "README.md"
+    ],
+    "unexpected_changes": [],
+    "note": "The full baseline differs only at README.md, which Experiment 015 intentionally updates. Rechecking the baseline with that declared documentation path excluded passed for every remaining file."
+  },
+  "checks": {
+    "experiments_001_through_014": {
+      "status": "PASS",
+      "method": "SHA-256 comparison to the pre-Phase-3F baseline"
+    },
+    "source_dataset_identity": {
+      "status": "PASS",
+      "split_identity_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+      "method": "Frozen source embedding metadata and sample-order checks; raw source images were not present or accessed"
+    },
+    "sultana_manifest": {
+      "status": "PASS",
+      "path": "v2/results/experiment_013_cross_domain/external_evaluation_manifest.json",
+      "sha256": "6fd074e514f3b79e6d4f1878516fdaa9a4ea2e283a2dee4453a397d9da5a7208"
+    },
+    "fruitvision_manifest": {
+      "status": "PASS",
+      "path": "v2/results/experiment_014_multi_domain/fruitvision_manifest.json",
+      "sha256": "71651aee8816b01baaa1a752f1bcc6327ae26e98578ed95c2150276ad445cb3f"
+    },
+    "phase_3b_prompt_registry": {
+      "status": "PASS",
+      "path": "v2/configs/zero_shot_prompts.yaml",
+      "sha256": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7"
+    },
+    "foundation_and_predictive_checkpoints": {
+      "status": "PASS",
+      "checkpoint_files_compared": 102,
+      "method": "SHA-256 comparison to the pre-Phase-3F baseline"
+    },
+    "frozen_embedding_caches": {
+      "status": "PASS",
+      "cache_files_compared": 9,
+      "method": "Current SHA-256 values compared with embedding_verification.json; all sample-order, label-order, dimension, finite-value, and normalization checks remain true"
+    },
+    "predictive_training": {
+      "status": "PASS",
+      "performed": false,
+      "note": "Only explicitly allowed exploratory cross-validated analytical probes were fitted."
+    }
+  }
+}

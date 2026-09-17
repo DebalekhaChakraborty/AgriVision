@@ -1,0 +1,493 @@
+{
+  "aggregate_by_class": {
+    "fresh_apple": {
+      "maximum_between_external_domain_range": 0.5438888888888889,
+      "mean_between_external_domain_range": 0.21605301379811184,
+      "mean_recall_across_models_and_external_domains": 0.7125290486564997,
+      "minimum_recall": 0.043137254901960784
+    },
+    "fresh_banana": {
+      "maximum_between_external_domain_range": 0.6629238985313751,
+      "mean_between_external_domain_range": 0.21792538199080255,
+      "mean_recall_across_models_and_external_domains": 0.5318762053107847,
+      "minimum_recall": 0.018691588785046728
+    },
+    "fresh_orange": {
+      "maximum_between_external_domain_range": 0.4269588313413014,
+      "mean_between_external_domain_range": 0.10244134572819832,
+      "mean_recall_across_models_and_external_domains": 0.8383639516010033,
+      "minimum_recall": 0.09428950863213811
+    },
+    "rotten_apple": {
+      "maximum_between_external_domain_range": 0.5806349206349206,
+      "mean_between_external_domain_range": 0.22714285714285712,
+      "mean_recall_across_models_and_external_domains": 0.6112698412698413,
+      "minimum_recall": 0.044444444444444446
+    },
+    "rotten_banana": {
+      "maximum_between_external_domain_range": 0.07518987341772154,
+      "mean_between_external_domain_range": 0.022995780590717288,
+      "mean_recall_across_models_and_external_domains": 0.9746272855133614,
+      "minimum_recall": 0.89
+    },
+    "rotten_orange": {
+      "maximum_between_external_domain_range": 0.3277439024390244,
+      "mean_between_external_domain_range": 0.12995934959349592,
+      "mean_recall_across_models_and_external_domains": 0.437289972899729,
+      "minimum_recall": 0.025
+    }
+  },
+  "schema_version": 1,
+  "systems": {
+    "clip_linear_probe": {
+      "fresh_apple": {
+        "external_recall_range": 0.3268627450980392,
+        "fruitvision_recall": 0.043137254901960784,
+        "mean_external_recall": 0.2065686274509804,
+        "source_recall": 0.9974683544303797,
+        "sultana_recall": 0.37,
+        "worst_external_recall": 0.043137254901960784
+      },
+      "fresh_banana": {
+        "external_recall_range": 0.011308411214953271,
+        "fruitvision_recall": 0.018691588785046728,
+        "mean_external_recall": 0.024345794392523365,
+        "source_recall": 0.9973753280839895,
+        "sultana_recall": 0.03,
+        "worst_external_recall": 0.018691588785046728
+      },
+      "fresh_orange": {
+        "external_recall_range": 0.0996879150066401,
+        "fruitvision_recall": 0.9946879150066401,
+        "mean_external_recall": 0.9448439575033201,
+        "source_recall": 0.9845360824742269,
+        "sultana_recall": 0.895,
+        "worst_external_recall": 0.895
+      },
+      "rotten_apple": {
+        "external_recall_range": 0.03682539682539676,
+        "fruitvision_recall": 0.9031746031746032,
+        "mean_external_recall": 0.9215873015873015,
+        "source_recall": 0.8752079866888519,
+        "sultana_recall": 0.94,
+        "worst_external_recall": 0.9031746031746032
+      },
+      "rotten_banana": {
+        "external_recall_range": 0.0,
+        "fruitvision_recall": 1.0,
+        "mean_external_recall": 1.0,
+        "source_recall": 0.9924528301886792,
+        "sultana_recall": 1.0,
+        "worst_external_recall": 1.0
+      },
+      "rotten_orange": {
+        "external_recall_range": 0.055182926829268286,
+        "fruitvision_recall": 0.4801829268292683,
+        "mean_external_recall": 0.45259146341463413,
+        "source_recall": 0.9379652605459057,
+        "sultana_recall": 0.425,
+        "worst_external_recall": 0.425
+      }
+    },
+    "clip_strict_zero_shot": {
+      "fresh_apple": {
+        "external_recall_range": 0.08509803921568626,
+        "fruitvision_recall": 0.8549019607843137,
+        "mean_external_recall": 0.8974509803921569,
+        "source_recall": 0.9164556962025316,
+        "sultana_recall": 0.94,
+        "worst_external_recall": 0.8549019607843137
+      },
+      "fresh_banana": {
+        "external_recall_range": 0.254939919893191,
+        "fruitvision_recall": 0.29506008010680906,
+        "mean_external_recall": 0.42253004005340455,
+        "source_recall": 0.9868766404199475,
+        "sultana_recall": 0.55,
+        "worst_external_recall": 0.29506008010680906
+      },
+      "fresh_orange": {
+        "external_recall_range": 0.4269588313413014,
+        "fruitvision_recall": 0.9269588313413014,
+        "mean_external_recall": 0.7134794156706508,
+        "source_recall": 0.7036082474226805,
+        "sultana_recall": 0.5,
+        "worst_external_recall": 0.5
+      },
+      "rotten_apple": {
+        "external_recall_range": 0.5806349206349206,
+        "fruitvision_recall": 0.27936507936507937,
+        "mean_external_recall": 0.5696825396825397,
+        "source_recall": 0.8768718801996672,
+        "sultana_recall": 0.86,
+        "worst_external_recall": 0.27936507936507937
+      },
+      "rotten_banana": {
+        "external_recall_range": 0.0050000000000000044,
+        "fruitvision_recall": 1.0,
+        "mean_external_recall": 0.9975,
+        "source_recall": 0.9792452830188679,
+        "sultana_recall": 0.995,
+        "worst_external_recall": 0.995
+      },
+      "rotten_orange": {
+        "external_recall_range": 0.3277439024390244,
+        "fruitvision_recall": 0.6722560975609756,
+        "mean_external_recall": 0.8361280487804879,
+        "source_recall": 0.9181141439205955,
+        "sultana_recall": 1.0,
+        "worst_external_recall": 0.6722560975609756
+      }
+    },
+    "custom_cnn": {
+      "fresh_apple": {
+        "external_recall_range": 0.2991176470588235,
+        "fruitvision_recall": 0.3058823529411765,
+        "mean_external_recall": 0.45544117647058824,
+        "source_recall": 0.9443037974683545,
+        "sultana_recall": 0.605,
+        "worst_external_recall": 0.3058823529411765
+      },
+      "fresh_banana": {
+        "external_recall_range": 0.6629238985313751,
+        "fruitvision_recall": 0.6929238985313751,
+        "mean_external_recall": 0.3614619492656876,
+        "source_recall": 0.7795275590551181,
+        "sultana_recall": 0.03,
+        "worst_external_recall": 0.03
+      },
+      "fresh_orange": {
+        "external_recall_range": 0.060710491367861885,
+        "fruitvision_recall": 0.09428950863213811,
+        "mean_external_recall": 0.12464475431606906,
+        "source_recall": 0.7448453608247423,
+        "sultana_recall": 0.155,
+        "worst_external_recall": 0.09428950863213811
+      },
+      "rotten_apple": {
+        "external_recall_range": 0.23055555555555557,
+        "fruitvision_recall": 0.044444444444444446,
+        "mean_external_recall": 0.15972222222222224,
+        "source_recall": 0.5141430948419301,
+        "sultana_recall": 0.275,
+        "worst_external_recall": 0.044444444444444446
+      },
+      "rotten_banana": {
+        "external_recall_range": 0.007151898734177209,
+        "fruitvision_recall": 0.9778481012658228,
+        "mean_external_recall": 0.9814240506329114,
+        "source_recall": 0.9339622641509434,
+        "sultana_recall": 0.985,
+        "worst_external_recall": 0.9778481012658228
+      },
+      "rotten_orange": {
+        "external_recall_range": 0.21890243902439024,
+        "fruitvision_recall": 0.24390243902439024,
+        "mean_external_recall": 0.13445121951219513,
+        "source_recall": 0.5856079404466501,
+        "sultana_recall": 0.025,
+        "worst_external_recall": 0.025
+      }
+    },
+    "dinov2_linear_probe": {
+      "fresh_apple": {
+        "external_recall_range": 0.005228758169934622,
+        "fruitvision_recall": 0.9947712418300654,
+        "mean_external_recall": 0.9973856209150327,
+        "source_recall": 1.0,
+        "sultana_recall": 1.0,
+        "worst_external_recall": 0.9947712418300654
+      },
+      "fresh_banana": {
+        "external_recall_range": 0.16528037383177574,
+        "fruitvision_recall": 0.2897196261682243,
+        "mean_external_recall": 0.37235981308411215,
+        "source_recall": 0.968503937007874,
+        "sultana_recall": 0.455,
+        "worst_external_recall": 0.2897196261682243
+      },
+      "fresh_orange": {
+        "external_recall_range": 0.0,
+        "fruitvision_recall": 1.0,
+        "mean_external_recall": 1.0,
+        "source_recall": 1.0,
+        "sultana_recall": 1.0,
+        "worst_external_recall": 1.0
+      },
+      "rotten_apple": {
+        "external_recall_range": 0.16285714285714287,
+        "fruitvision_recall": 0.35714285714285715,
+        "mean_external_recall": 0.4385714285714286,
+        "source_recall": 0.6605657237936772,
+        "sultana_recall": 0.52,
+        "worst_external_recall": 0.35714285714285715
+      },
+      "rotten_banana": {
+        "external_recall_range": 0.0,
+        "fruitvision_recall": 1.0,
+        "mean_external_recall": 1.0,
+        "source_recall": 1.0,
+        "sultana_recall": 1.0,
+        "worst_external_recall": 1.0
+      },
+      "rotten_orange": {
+        "external_recall_range": 0.1746341463414634,
+        "fruitvision_recall": 0.2896341463414634,
+        "mean_external_recall": 0.2023170731707317,
+        "source_recall": 0.8039702233250621,
+        "sultana_recall": 0.115,
+        "worst_external_recall": 0.115
+      }
+    },
+    "efficientnet_b0": {
+      "fresh_apple": {
+        "external_recall_range": 0.26584967320261443,
+        "fruitvision_recall": 0.4091503267973856,
+        "mean_external_recall": 0.5420751633986929,
+        "source_recall": 0.9949367088607595,
+        "sultana_recall": 0.675,
+        "worst_external_recall": 0.4091503267973856
+      },
+      "fresh_banana": {
+        "external_recall_range": 0.21693591455273697,
+        "fruitvision_recall": 0.951935914552737,
+        "mean_external_recall": 0.8434679572763685,
+        "source_recall": 1.0,
+        "sultana_recall": 0.735,
+        "worst_external_recall": 0.735
+      },
+      "fresh_orange": {
+        "external_recall_range": 0.15000000000000002,
+        "fruitvision_recall": 1.0,
+        "mean_external_recall": 0.925,
+        "source_recall": 0.9896907216494846,
+        "sultana_recall": 0.85,
+        "worst_external_recall": 0.85
+      },
+      "rotten_apple": {
+        "external_recall_range": 0.05650793650793651,
+        "fruitvision_recall": 0.5634920634920635,
+        "mean_external_recall": 0.5917460317460317,
+        "source_recall": 0.8951747088186356,
+        "sultana_recall": 0.62,
+        "worst_external_recall": 0.5634920634920635
+      },
+      "rotten_banana": {
+        "external_recall_range": 0.0031012658227848044,
+        "fruitvision_recall": 0.9731012658227848,
+        "mean_external_recall": 0.9715506329113923,
+        "source_recall": 0.9528301886792453,
+        "sultana_recall": 0.97,
+        "worst_external_recall": 0.97
+      },
+      "rotten_orange": {
+        "external_recall_range": 0.019207317073170693,
+        "fruitvision_recall": 0.2942073170731707,
+        "mean_external_recall": 0.28460365853658537,
+        "source_recall": 0.8684863523573201,
+        "sultana_recall": 0.275,
+        "worst_external_recall": 0.275
+      }
+    },
+    "mobilenetv3_large": {
+      "fresh_apple": {
+        "external_recall_range": 0.5438888888888889,
+        "fruitvision_recall": 0.3111111111111111,
+        "mean_external_recall": 0.5830555555555555,
+        "source_recall": 0.979746835443038,
+        "sultana_recall": 0.855,
+        "worst_external_recall": 0.3111111111111111
+      },
+      "fresh_banana": {
+        "external_recall_range": 0.1683244325767691,
+        "fruitvision_recall": 0.9933244325767691,
+        "mean_external_recall": 0.9091622162883846,
+        "source_recall": 1.0,
+        "sultana_recall": 0.825,
+        "worst_external_recall": 0.825
+      },
+      "fresh_orange": {
+        "external_recall_range": 0.03500000000000003,
+        "fruitvision_recall": 1.0,
+        "mean_external_recall": 0.9824999999999999,
+        "source_recall": 0.979381443298969,
+        "sultana_recall": 0.965,
+        "worst_external_recall": 0.965
+      },
+      "rotten_apple": {
+        "external_recall_range": 0.08920634920634918,
+        "fruitvision_recall": 0.7492063492063492,
+        "mean_external_recall": 0.7046031746031747,
+        "source_recall": 0.8569051580698835,
+        "sultana_recall": 0.66,
+        "worst_external_recall": 0.66
+      },
+      "rotten_banana": {
+        "external_recall_range": 0.07518987341772154,
+        "fruitvision_recall": 0.9651898734177216,
+        "mean_external_recall": 0.9275949367088607,
+        "source_recall": 0.9735849056603774,
+        "sultana_recall": 0.89,
+        "worst_external_recall": 0.89
+      },
+      "rotten_orange": {
+        "external_recall_range": 0.1451219512195122,
+        "fruitvision_recall": 0.1951219512195122,
+        "mean_external_recall": 0.1225609756097561,
+        "source_recall": 0.8213399503722084,
+        "sultana_recall": 0.05,
+        "worst_external_recall": 0.05
+      }
+    },
+    "resnet50": {
+      "fresh_apple": {
+        "external_recall_range": 0.3110130718954248,
+        "fruitvision_recall": 0.6339869281045751,
+        "mean_external_recall": 0.7894934640522875,
+        "source_recall": 0.9974683544303797,
+        "sultana_recall": 0.945,
+        "worst_external_recall": 0.6339869281045751
+      },
+      "fresh_banana": {
+        "external_recall_range": 0.1923030707610146,
+        "fruitvision_recall": 0.9773030707610146,
+        "mean_external_recall": 0.8811515353805073,
+        "source_recall": 0.9973753280839895,
+        "sultana_recall": 0.785,
+        "worst_external_recall": 0.785
+      },
+      "fresh_orange": {
+        "external_recall_range": 0.06000000000000005,
+        "fruitvision_recall": 1.0,
+        "mean_external_recall": 0.97,
+        "source_recall": 0.9742268041237113,
+        "sultana_recall": 0.94,
+        "worst_external_recall": 0.94
+      },
+      "rotten_apple": {
+        "external_recall_range": 0.37436507936507935,
+        "fruitvision_recall": 0.7793650793650794,
+        "mean_external_recall": 0.5921825396825398,
+        "source_recall": 0.9118136439267887,
+        "sultana_recall": 0.405,
+        "worst_external_recall": 0.405
+      },
+      "rotten_banana": {
+        "external_recall_range": 0.054683544303797404,
+        "fruitvision_recall": 0.9003164556962026,
+        "mean_external_recall": 0.9276582278481013,
+        "source_recall": 0.9584905660377359,
+        "sultana_recall": 0.955,
+        "worst_external_recall": 0.9003164556962026
+      },
+      "rotten_orange": {
+        "external_recall_range": 0.1123780487804878,
+        "fruitvision_recall": 0.2423780487804878,
+        "mean_external_recall": 0.1861890243902439,
+        "source_recall": 0.826302729528536,
+        "sultana_recall": 0.13,
+        "worst_external_recall": 0.13
+      }
+    },
+    "siglip2_linear_probe": {
+      "fresh_apple": {
+        "external_recall_range": 0.06035947712418299,
+        "fruitvision_recall": 0.934640522875817,
+        "mean_external_recall": 0.9648202614379084,
+        "source_recall": 1.0,
+        "sultana_recall": 0.995,
+        "worst_external_recall": 0.934640522875817
+      },
+      "fresh_banana": {
+        "external_recall_range": 0.2572496662216288,
+        "fruitvision_recall": 0.06275033377837116,
+        "mean_external_recall": 0.1913751668891856,
+        "source_recall": 0.9973753280839895,
+        "sultana_recall": 0.32,
+        "worst_external_recall": 0.06275033377837116
+      },
+      "fresh_orange": {
+        "external_recall_range": 0.04101593625498012,
+        "fruitvision_recall": 0.9960159362549801,
+        "mean_external_recall": 0.9755079681274901,
+        "source_recall": 0.9974226804123711,
+        "sultana_recall": 0.955,
+        "worst_external_recall": 0.955
+      },
+      "rotten_apple": {
+        "external_recall_range": 0.23603174603174604,
+        "fruitvision_recall": 0.653968253968254,
+        "mean_external_recall": 0.771984126984127,
+        "source_recall": 0.9484193011647255,
+        "sultana_recall": 0.89,
+        "worst_external_recall": 0.653968253968254
+      },
+      "rotten_banana": {
+        "external_recall_range": 0.0,
+        "fruitvision_recall": 1.0,
+        "mean_external_recall": 1.0,
+        "source_recall": 0.9981132075471698,
+        "sultana_recall": 1.0,
+        "worst_external_recall": 1.0
+      },
+      "rotten_orange": {
+        "external_recall_range": 0.010792682926829333,
+        "fruitvision_recall": 0.7942073170731707,
+        "mean_external_recall": 0.7996036585365853,
+        "source_recall": 0.9925558312655087,
+        "sultana_recall": 0.805,
+        "worst_external_recall": 0.7942073170731707
+      }
+    },
+    "siglip2_strict_zero_shot": {
+      "fresh_apple": {
+        "external_recall_range": 0.04705882352941182,
+        "fruitvision_recall": 0.9529411764705882,
+        "mean_external_recall": 0.9764705882352941,
+        "source_recall": 1.0,
+        "sultana_recall": 1.0,
+        "worst_external_recall": 0.9529411764705882
+      },
+      "fresh_banana": {
+        "external_recall_range": 0.03206275033377837,
+        "fruitvision_recall": 0.7970627503337784,
+        "mean_external_recall": 0.7810313751668891,
+        "source_recall": 0.9973753280839895,
+        "sultana_recall": 0.765,
+        "worst_external_recall": 0.765
+      },
+      "fresh_orange": {
+        "external_recall_range": 0.04859893758300127,
+        "fruitvision_recall": 0.9335989375830013,
+        "mean_external_recall": 0.9092994687915006,
+        "source_recall": 0.9922680412371134,
+        "sultana_recall": 0.885,
+        "worst_external_recall": 0.885
+      },
+      "rotten_apple": {
+        "external_recall_range": 0.27730158730158727,
+        "fruitvision_recall": 0.6126984126984127,
+        "mean_external_recall": 0.7513492063492064,
+        "source_recall": 0.9484193011647255,
+        "sultana_recall": 0.89,
+        "worst_external_recall": 0.6126984126984127
+      },
+      "rotten_banana": {
+        "external_recall_range": 0.06183544303797461,
+        "fruitvision_recall": 0.9968354430379747,
+        "mean_external_recall": 0.9659177215189874,
+        "source_recall": 0.9905660377358491,
+        "sultana_recall": 0.935,
+        "worst_external_recall": 0.935
+      },
+      "rotten_orange": {
+        "external_recall_range": 0.105670731707317,
+        "fruitvision_recall": 0.864329268292683,
+        "mean_external_recall": 0.9171646341463415,
+        "source_recall": 0.9578163771712159,
+        "sultana_recall": 0.97,
+        "worst_external_recall": 0.864329268292683
+      }
+    }
+  }
+}

@@ -1,0 +1,1058 @@
+{
+  "experiment_id": "V2-P3E-MULTI-DOMAIN-014",
+  "manifest_sha256": "71651aee8816b01baaa1a752f1bcc6327ae26e98578ed95c2150276ad445cb3f",
+  "schema_version": 1,
+  "systems": {
+    "clip_linear_probe": {
+      "accuracy": 0.5524492234169653,
+      "condition": "014-F",
+      "confusion_matrix": [
+        [
+          33,
+          0,
+          1,
+          729,
+          0,
+          2
+        ],
+        [
+          0,
+          14,
+          0,
+          0,
+          735,
+          0
+        ],
+        [
+          0,
+          0,
+          749,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          569,
+          0,
+          61
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          632,
+          0
+        ],
+        [
+          0,
+          0,
+          319,
+          22,
+          0,
+          315
+        ]
+      ],
+      "display_name": "CLIP + linear probe",
+      "evaluated_at": "2026-09-02T22:35:16.055585+00:00",
+      "macro_f1": 0.4607366280437202,
+      "macro_precision": 0.736441502562902,
+      "macro_recall": 0.5733123814495865,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.08270676691729323,
+          "precision": 1.0,
+          "recall": 0.043137254901960784,
+          "support": 765.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.03669724770642202,
+          "precision": 1.0,
+          "recall": 0.018691588785046728,
+          "support": 749.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.8221734357848518,
+          "precision": 0.7006548175865295,
+          "recall": 0.9946879150066401,
+          "support": 753.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.5835897435897436,
+          "precision": 0.43106060606060603,
+          "recall": 0.9031746031746032,
+          "support": 630.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.6323161580790395,
+          "precision": 0.46232626188734455,
+          "recall": 1.0,
+          "support": 632.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.6069364161849711,
+          "precision": 0.824607329842932,
+          "recall": 0.4801829268292683,
+          "support": 656.0
+        }
+      },
+      "samples": 4185,
+      "shared_encoder_traversal_with": "clip_strict_zero_shot",
+      "single_fruitvision_pass": true,
+      "system": "clip_linear_probe",
+      "timing": {
+        "combined_forward_ms_per_image": 68.60255717896281,
+        "device": "cpu",
+        "encoder_forward_ms_per_image": 68.60243255435795,
+        "encoder_forward_seconds": 287.101180239988,
+        "evaluation_loop_wall_seconds": 439.8885284930002,
+        "probe_forward_seconds": 0.0005215539713390172,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded."
+      },
+      "weighted_f1": 0.4480977662496214,
+      "weighted_precision": 0.7518025962605982,
+      "weighted_recall": 0.5524492234169653,
+      "zero_target_domain_adaptation": true
+    },
+    "clip_strict_zero_shot": {
+      "accuracy": 0.6743130227001195,
+      "classifier_training": false,
+      "condition": "014-H",
+      "confusion_matrix": [
+        [
+          654,
+          0,
+          27,
+          44,
+          0,
+          40
+        ],
+        [
+          0,
+          221,
+          0,
+          0,
+          528,
+          0
+        ],
+        [
+          0,
+          0,
+          698,
+          0,
+          0,
+          55
+        ],
+        [
+          119,
+          0,
+          5,
+          176,
+          0,
+          330
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          632,
+          0
+        ],
+        [
+          0,
+          0,
+          208,
+          7,
+          0,
+          441
+        ]
+      ],
+      "display_name": "CLIP strict P1 zero-shot",
+      "evaluated_at": "2026-09-02T22:35:16.447267+00:00",
+      "macro_f1": 0.6378775292738251,
+      "macro_precision": 0.7365977753817127,
+      "macro_recall": 0.6714236748597465,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.8504551365409623,
+          "precision": 0.8460543337645536,
+          "recall": 0.8549019607843137,
+          "support": 765.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.4556701030927835,
+          "precision": 1.0,
+          "recall": 0.29506008010680906,
+          "support": 749.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.8255470136014192,
+          "precision": 0.744136460554371,
+          "recall": 0.9269588313413014,
+          "support": 753.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.41073512252042005,
+          "precision": 0.775330396475771,
+          "recall": 0.27936507936507937,
+          "support": 630.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.7053571428571429,
+          "precision": 0.5448275862068965,
+          "recall": 1.0,
+          "support": 632.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.5795006570302234,
+          "precision": 0.5092378752886836,
+          "recall": 0.6722560975609756,
+          "support": 656.0
+        }
+      },
+      "prompt_family": "P1",
+      "prompt_registry_sha256": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+      "prototype_generation": {
+        "equal_weighting": true,
+        "family": "P1",
+        "normalize_each_prompt": true,
+        "prompt_counts": {
+          "fresh_apple": 1,
+          "fresh_banana": 1,
+          "fresh_orange": 1,
+          "rotten_apple": 1,
+          "rotten_banana": 1,
+          "rotten_orange": 1
+        },
+        "renormalize_class_prototype": true,
+        "text_embedding_seconds": 0.21268823801074177,
+        "total_prompts": 6
+      },
+      "samples": 4185,
+      "shared_encoder_traversal_with": "clip_linear_probe",
+      "single_fruitvision_pass": true,
+      "system": "clip_strict_zero_shot",
+      "timing": {
+        "combined_forward_ms_per_image": 68.60250145854236,
+        "device": "cpu",
+        "encoder_forward_ms_per_image": 68.60243255435795,
+        "encoder_forward_seconds": 287.101180239988,
+        "evaluation_loop_wall_seconds": 439.8885284930002,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded.",
+        "similarity_forward_seconds": 0.0002883640117943287
+      },
+      "weighted_f1": 0.6447391303220085,
+      "weighted_precision": 0.7463358543797362,
+      "weighted_recall": 0.6743130227001195,
+      "zero_target_domain_adaptation": true
+    },
+    "custom_cnn": {
+      "accuracy": 0.38948626045400236,
+      "condition": "014-A",
+      "confusion_matrix": [
+        [
+          234,
+          0,
+          0,
+          15,
+          353,
+          163
+        ],
+        [
+          12,
+          519,
+          0,
+          0,
+          147,
+          71
+        ],
+        [
+          624,
+          0,
+          71,
+          18,
+          0,
+          40
+        ],
+        [
+          48,
+          0,
+          0,
+          28,
+          368,
+          186
+        ],
+        [
+          0,
+          9,
+          0,
+          0,
+          618,
+          5
+        ],
+        [
+          96,
+          0,
+          26,
+          150,
+          224,
+          160
+        ]
+      ],
+      "display_name": "Custom CNN",
+      "evaluated_at": "2026-09-02T22:09:54.214134+00:00",
+      "macro_f1": 0.3478528092711866,
+      "macro_precision": 0.4492979116138754,
+      "macro_recall": 0.3932151241398912,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.2630691399662732,
+          "precision": 0.23076923076923078,
+          "recall": 0.3058823529411765,
+          "support": 765.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.8128425998433829,
+          "precision": 0.9829545454545454,
+          "recall": 0.6929238985313751,
+          "support": 749.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.16705882352941176,
+          "precision": 0.7319587628865979,
+          "recall": 0.09428950863213811,
+          "support": 753.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.06658739595719382,
+          "precision": 0.13270142180094788,
+          "recall": 0.044444444444444446,
+          "support": 630.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.5277540563620837,
+          "precision": 0.36140350877192984,
+          "recall": 0.9778481012658228,
+          "support": 632.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.2498048399687744,
+          "precision": 0.256,
+          "recall": 0.24390243902439024,
+          "support": 656.0
+        }
+      },
+      "samples": 4185,
+      "single_fruitvision_pass": true,
+      "system": "custom_cnn",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 151.94823378702858,
+        "model_forward_ms_per_image": 3.9925831688841718,
+        "model_forward_seconds": 16.70896056178026,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded."
+      },
+      "weighted_f1": 0.35250296094813016,
+      "weighted_precision": 0.4644877605295056,
+      "weighted_recall": 0.38948626045400236,
+      "zero_target_domain_adaptation": true
+    },
+    "dinov2_linear_probe": {
+      "accuracy": 0.6637992831541218,
+      "condition": "014-E",
+      "confusion_matrix": [
+        [
+          761,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          217,
+          0,
+          0,
+          532,
+          0
+        ],
+        [
+          0,
+          0,
+          753,
+          0,
+          0,
+          0
+        ],
+        [
+          359,
+          0,
+          10,
+          225,
+          0,
+          36
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          632,
+          0
+        ],
+        [
+          0,
+          0,
+          466,
+          0,
+          0,
+          190
+        ]
+      ],
+      "display_name": "DINOv2 + linear probe",
+      "evaluated_at": "2026-09-02T22:27:51.481910+00:00",
+      "macro_f1": 0.6126585930665771,
+      "macro_precision": 0.7789721954805988,
+      "macro_recall": 0.6552113119137684,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.8074270557029177,
+          "precision": 0.6794642857142857,
+          "recall": 0.9947712418300654,
+          "support": 765.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.4492753623188406,
+          "precision": 1.0,
+          "recall": 0.2897196261682243,
+          "support": 749.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.7583081570996979,
+          "precision": 0.610705596107056,
+          "recall": 1.0,
+          "support": 753.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.5263157894736842,
+          "precision": 1.0,
+          "recall": 0.35714285714285715,
+          "support": 630.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.7037861915367484,
+          "precision": 0.5429553264604811,
+          "recall": 1.0,
+          "support": 632.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.4308390022675737,
+          "precision": 0.8407079646017699,
+          "recall": 0.2896341463414634,
+          "support": 656.0
+        }
+      },
+      "samples": 4185,
+      "single_fruitvision_pass": true,
+      "system": "dinov2_linear_probe",
+      "timing": {
+        "combined_forward_ms_per_image": 95.08581177528731,
+        "device": "cpu",
+        "encoder_forward_ms_per_image": 95.08382865414691,
+        "encoder_forward_seconds": 397.9258229176048,
+        "evaluation_loop_wall_seconds": 500.3197805280215,
+        "probe_forward_seconds": 0.008299361972603947,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded."
+      },
+      "weighted_f1": 0.6174903685048483,
+      "weighted_precision": 0.777372445290759,
+      "weighted_recall": 0.6637992831541218,
+      "zero_target_domain_adaptation": true
+    },
+    "efficientnet_b0": {
+      "accuracy": 0.7029868578255675,
+      "condition": "014-C",
+      "confusion_matrix": [
+        [
+          313,
+          0,
+          152,
+          230,
+          0,
+          70
+        ],
+        [
+          0,
+          713,
+          0,
+          0,
+          36,
+          0
+        ],
+        [
+          0,
+          0,
+          753,
+          0,
+          0,
+          0
+        ],
+        [
+          24,
+          0,
+          65,
+          355,
+          0,
+          186
+        ],
+        [
+          0,
+          17,
+          0,
+          0,
+          615,
+          0
+        ],
+        [
+          0,
+          0,
+          454,
+          9,
+          0,
+          193
+        ]
+      ],
+      "display_name": "EfficientNet-B0",
+      "evaluated_at": "2026-09-02T22:16:52.332552+00:00",
+      "macro_f1": 0.6853463206142196,
+      "macro_precision": 0.7344125838093397,
+      "macro_recall": 0.6986478146230235,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.5680580762250453,
+          "precision": 0.9287833827893175,
+          "recall": 0.4091503267973856,
+          "support": 765.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.9641649763353617,
+          "precision": 0.9767123287671233,
+          "recall": 0.951935914552737,
+          "support": 749.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.6917776757005053,
+          "precision": 0.5287921348314607,
+          "recall": 1.0,
+          "support": 753.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.5800653594771242,
+          "precision": 0.5976430976430976,
+          "recall": 0.5634920634920635,
+          "support": 630.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.9586905689789555,
+          "precision": 0.9447004608294931,
+          "recall": 0.9731012658227848,
+          "support": 632.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.34932126696832577,
+          "precision": 0.4298440979955457,
+          "recall": 0.2942073170731707,
+          "support": 656.0
+        }
+      },
+      "samples": 4185,
+      "single_fruitvision_pass": true,
+      "system": "efficientnet_b0",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 172.54836285399506,
+        "model_forward_ms_per_image": 12.266904396840049,
+        "model_forward_seconds": 51.33699490077561,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded."
+      },
+      "weighted_f1": 0.6877230472129835,
+      "weighted_precision": 0.7397373645526791,
+      "weighted_recall": 0.7029868578255675,
+      "zero_target_domain_adaptation": true
+    },
+    "mobilenetv3_large": {
+      "accuracy": 0.7037037037037037,
+      "condition": "014-D",
+      "confusion_matrix": [
+        [
+          238,
+          0,
+          91,
+          318,
+          0,
+          118
+        ],
+        [
+          0,
+          744,
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          753,
+          0,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          16,
+          472,
+          0,
+          135
+        ],
+        [
+          0,
+          22,
+          0,
+          0,
+          610,
+          0
+        ],
+        [
+          0,
+          0,
+          455,
+          73,
+          0,
+          128
+        ]
+      ],
+      "display_name": "MobileNetV3-Large",
+      "evaluated_at": "2026-09-02T22:19:27.121138+00:00",
+      "macro_f1": 0.6732005297569171,
+      "macro_precision": 0.7316814598713482,
+      "macro_recall": 0.7023256195885773,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.47128712871287126,
+          "precision": 0.9714285714285714,
+          "recall": 0.3111111111111111,
+          "support": 765.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.9821782178217822,
+          "precision": 0.9712793733681462,
+          "recall": 0.9933244325767691,
+          "support": 749.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.7282398452611218,
+          "precision": 0.5726235741444867,
+          "recall": 1.0,
+          "support": 753.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.6322839919624916,
+          "precision": 0.5469293163383546,
+          "recall": 0.7492063492063492,
+          "support": 630.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.9783480352846833,
+          "precision": 0.991869918699187,
+          "recall": 0.9651898734177216,
+          "support": 632.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.24686595949855353,
+          "precision": 0.3359580052493438,
+          "recall": 0.1951219512195122,
+          "support": 656.0
+        }
+      },
+      "samples": 4185,
+      "single_fruitvision_pass": true,
+      "system": "mobilenetv3_large",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 153.89294814498862,
+        "model_forward_ms_per_image": 7.263699494535381,
+        "model_forward_seconds": 30.398582384630572,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded."
+      },
+      "weighted_f1": 0.6745877382945823,
+      "weighted_precision": 0.7392192039381162,
+      "weighted_recall": 0.7037037037037037,
+      "zero_target_domain_adaptation": true
+    },
+    "resnet50": {
+      "accuracy": 0.7620071684587814,
+      "condition": "014-B",
+      "confusion_matrix": [
+        [
+          485,
+          0,
+          84,
+          177,
+          0,
+          19
+        ],
+        [
+          0,
+          732,
+          0,
+          0,
+          17,
+          0
+        ],
+        [
+          0,
+          0,
+          753,
+          0,
+          0,
+          0
+        ],
+        [
+          89,
+          0,
+          16,
+          491,
+          0,
+          34
+        ],
+        [
+          0,
+          63,
+          0,
+          0,
+          569,
+          0
+        ],
+        [
+          1,
+          0,
+          422,
+          74,
+          0,
+          159
+        ]
+      ],
+      "display_name": "ResNet50",
+      "evaluated_at": "2026-09-02T22:13:58.879457+00:00",
+      "macro_f1": 0.7385153530090413,
+      "macro_precision": 0.7895893402704016,
+      "macro_recall": 0.7555582637845598,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.7238805970149254,
+          "precision": 0.8434782608695652,
+          "recall": 0.6339869281045751,
+          "support": 765.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.9481865284974094,
+          "precision": 0.9207547169811321,
+          "recall": 0.9773030707610146,
+          "support": 749.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.742603550295858,
+          "precision": 0.5905882352941176,
+          "recall": 1.0,
+          "support": 753.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.7157434402332361,
+          "precision": 0.6617250673854448,
+          "recall": 0.7793650793650794,
+          "support": 630.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.9343185550082101,
+          "precision": 0.9709897610921502,
+          "recall": 0.9003164556962026,
+          "support": 632.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.3663594470046083,
+          "precision": 0.75,
+          "recall": 0.2423780487804878,
+          "support": 656.0
+        }
+      },
+      "samples": 4185,
+      "single_fruitvision_pass": true,
+      "system": "resnet50",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 243.24207791901426,
+        "model_forward_ms_per_image": 29.781548391786718,
+        "model_forward_seconds": 124.63578001962742,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded."
+      },
+      "weighted_f1": 0.7419068891949604,
+      "weighted_precision": 0.78904932263408,
+      "weighted_recall": 0.7620071684587814,
+      "zero_target_domain_adaptation": true
+    },
+    "siglip2_linear_probe": {
+      "accuracy": 0.7352449223416966,
+      "condition": "014-G",
+      "confusion_matrix": [
+        [
+          715,
+          0,
+          0,
+          48,
+          0,
+          2
+        ],
+        [
+          0,
+          47,
+          0,
+          0,
+          702,
+          0
+        ],
+        [
+          0,
+          0,
+          750,
+          0,
+          0,
+          3
+        ],
+        [
+          116,
+          0,
+          0,
+          412,
+          0,
+          102
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          632,
+          0
+        ],
+        [
+          0,
+          0,
+          134,
+          1,
+          0,
+          521
+        ]
+      ],
+      "display_name": "SigLIP2 + linear probe",
+      "evaluated_at": "2026-09-02T22:42:24.822297+00:00",
+      "macro_f1": 0.6900195719267287,
+      "macro_precision": 0.8176526192641588,
+      "macro_recall": 0.7402637273250988,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.8959899749373433,
+          "precision": 0.8604091456077015,
+          "recall": 0.934640522875817,
+          "support": 765.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.11809045226130653,
+          "precision": 1.0,
+          "recall": 0.06275033377837116,
+          "support": 749.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.916310323762981,
+          "precision": 0.8484162895927602,
+          "recall": 0.9960159362549801,
+          "support": 753.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.7552703941338221,
+          "precision": 0.8937093275488069,
+          "recall": 0.653968253968254,
+          "support": 630.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.6429298067141404,
+          "precision": 0.4737631184407796,
+          "recall": 1.0,
+          "support": 632.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.8115264797507789,
+          "precision": 0.8296178343949044,
+          "recall": 0.7942073170731707,
+          "support": 656.0
+        }
+      },
+      "samples": 4185,
+      "shared_encoder_traversal_with": "siglip2_strict_zero_shot",
+      "single_fruitvision_pass": true,
+      "system": "siglip2_linear_probe",
+      "timing": {
+        "combined_forward_ms_per_image": 77.49171780949189,
+        "device": "cpu",
+        "encoder_forward_ms_per_image": 77.49159814616868,
+        "encoder_forward_seconds": 324.3023382417159,
+        "evaluation_loop_wall_seconds": 419.15172194398474,
+        "probe_forward_seconds": 0.0005007910076528788,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded."
+      },
+      "weighted_f1": 0.6877842557296217,
+      "weighted_precision": 0.8250310463623939,
+      "weighted_recall": 0.7352449223416966,
+      "zero_target_domain_adaptation": true
+    },
+    "siglip2_strict_zero_shot": {
+      "accuracy": 0.8630824372759857,
+      "classifier_training": false,
+      "condition": "014-I",
+      "confusion_matrix": [
+        [
+          729,
+          0,
+          6,
+          27,
+          0,
+          3
+        ],
+        [
+          0,
+          597,
+          0,
+          0,
+          152,
+          0
+        ],
+        [
+          0,
+          0,
+          703,
+          0,
+          0,
+          50
+        ],
+        [
+          140,
+          0,
+          2,
+          386,
+          0,
+          102
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          630,
+          0
+        ],
+        [
+          0,
+          0,
+          71,
+          18,
+          0,
+          567
+        ]
+      ],
+      "display_name": "SigLIP2 strict P1 zero-shot",
+      "evaluated_at": "2026-09-02T22:42:25.231334+00:00",
+      "macro_f1": 0.8559404669203072,
+      "macro_precision": 0.8701783618701473,
+      "macro_recall": 0.859577664736073,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.8922888616891065,
+          "precision": 0.8388952819332566,
+          "recall": 0.9529411764705882,
+          "support": 765.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.8857566765578635,
+          "precision": 0.996661101836394,
+          "recall": 0.7970627503337784,
+          "support": 749.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.9159609120521173,
+          "precision": 0.8989769820971867,
+          "recall": 0.9335989375830013,
+          "support": 753.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.7276154571159283,
+          "precision": 0.8955916473317865,
+          "recall": 0.6126984126984127,
+          "support": 630.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.8910891089108911,
+          "precision": 0.8056265984654731,
+          "recall": 0.9968354430379747,
+          "support": 632.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.8229317851959361,
+          "precision": 0.7853185595567868,
+          "recall": 0.864329268292683,
+          "support": 656.0
+        }
+      },
+      "prompt_family": "P1",
+      "prompt_registry_sha256": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+      "prototype_generation": {
+        "equal_weighting": true,
+        "family": "P1",
+        "normalize_each_prompt": true,
+        "prompt_counts": {
+          "fresh_apple": 1,
+          "fresh_banana": 1,
+          "fresh_orange": 1,
+          "rotten_apple": 1,
+          "rotten_banana": 1,
+          "rotten_orange": 1
+        },
+        "renormalize_class_prototype": true,
+        "text_embedding_seconds": 0.28176263399655,
+        "total_prompts": 6
+      },
+      "samples": 4185,
+      "shared_encoder_traversal_with": "siglip2_linear_probe",
+      "single_fruitvision_pass": true,
+      "system": "siglip2_strict_zero_shot",
+      "timing": {
+        "combined_forward_ms_per_image": 77.49170084222996,
+        "device": "cpu",
+        "encoder_forward_ms_per_image": 77.49159814616868,
+        "encoder_forward_seconds": 324.3023382417159,
+        "evaluation_loop_wall_seconds": 419.15172194398474,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded.",
+        "similarity_forward_seconds": 0.00042978301644325256
+      },
+      "weighted_f1": 0.8595365836589015,
+      "weighted_precision": 0.8730541091020404,
+      "weighted_recall": 0.8630824372759857,
+      "zero_target_domain_adaptation": true
+    }
+  }
+}

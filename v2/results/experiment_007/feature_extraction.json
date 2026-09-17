@@ -1,0 +1,85 @@
+{
+  "cache_identity": {
+    "dataset_split_hash": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+    "embedding_dim": 768,
+    "encoder_checkpoint": "google/siglip2-base-patch16-224",
+    "encoder_revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "experiment_id": "V2-P3A-SIGLIP2-007",
+    "l2_normalized": true,
+    "preprocessing_identity": "google-siglip2-base-patch16-224-rev-75de2d5"
+  },
+  "completed_at": "2026-09-01T18:08:39.608046+00:00",
+  "device": "cpu",
+  "encoder": {
+    "adapter": "SigLIP2Encoder",
+    "all_parameters_frozen": true,
+    "checkpoint_file": {
+      "path": "/home/AI_POC/tactics/AI-Based-Detection-of-Rotten-Fruits/v2/cache/huggingface/models--google--siglip2-base-patch16-224/blobs/612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "sha256": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "size_bytes": 1500800904
+    },
+    "checkpoint_id": "google/siglip2-base-patch16-224",
+    "embedding_dim": 768,
+    "encoder_parameters": 92884224,
+    "library": "transformers",
+    "library_version": "5.16.1",
+    "preprocessing": {
+      "do_convert_rgb": null,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_processor_type": "SiglipImageProcessor",
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "resample": 2,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "height": 224,
+        "width": 224
+      }
+    },
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "vision_encoder_only": true
+  },
+  "experiment_id": "V2-P3A-SIGLIP2-007",
+  "seed": 42,
+  "splits": {
+    "train": {
+      "cache_path": "v2/cache/siglip2/train.pt",
+      "cache_sha256": "dfadbce54a6a07b1e9775be779b05a848306f4a0770f7085e9c07b0c74f2603c",
+      "deterministic_order": true,
+      "embedding_dim": 768,
+      "encoder_forward_ms_per_image": 84.71394216438605,
+      "encoder_forward_seconds": 130.37475699099014,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1247.6875,
+      "samples": 1539,
+      "split": "train",
+      "wall_ms_per_image": 90.86271600324699,
+      "wall_seconds": 139.8377199289971
+    },
+    "validation": {
+      "cache_path": "v2/cache/siglip2/validation.pt",
+      "cache_sha256": "0ad2d7f738ae0db8ed58e6b67f85667ce2cf83da33d54abc434f13fd4c311832",
+      "deterministic_order": true,
+      "embedding_dim": 768,
+      "encoder_forward_ms_per_image": 85.66759985190367,
+      "encoder_forward_seconds": 23.130251960013993,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1266.2734375,
+      "samples": 270,
+      "split": "validation",
+      "wall_ms_per_image": 91.85993508888512,
+      "wall_seconds": 24.802182473998982
+    }
+  },
+  "test_accessed": false
+}

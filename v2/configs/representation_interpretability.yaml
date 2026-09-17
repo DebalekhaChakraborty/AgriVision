@@ -1,0 +1,99 @@
+schema_version: 1
+status: preregistered_before_experiment_015_analysis
+
+experiment:
+  id: V2-P3F-REPRESENTATION-INTERPRETABILITY-015
+  number: 15
+  phase: 3F
+  seed: 42
+  post_hoc_only: true
+  predictive_model_changes_prohibited: true
+
+encoders:
+  dinov2:
+    display_name: DINOv2 ViT-B/14
+    source_cache: v2/cache/dinov2/test.pt
+    sultana_cache: v2/cache/experiment_013_cross_domain/dinov2_linear_probe_external.pt
+    fruitvision_cache: v2/cache/experiment_014_multi_domain/dinov2_linear_probe_fruitvision.pt
+    embedding_dim: 768
+    revision: f9e44c814b77203eaa57a6bdbbd535f21ede1415
+  clip:
+    display_name: Original CLIP ViT-B/16
+    source_cache: v2/cache/clip/test.pt
+    sultana_cache: v2/cache/experiment_013_cross_domain/clip_linear_probe_external.pt
+    fruitvision_cache: v2/cache/experiment_014_multi_domain/clip_linear_probe_fruitvision.pt
+    embedding_dim: 512
+    revision: 977e3dd0ec55ab8da155f2fbeb6b5f54948b6e3d
+  siglip2:
+    display_name: SigLIP2 Base Patch16/224
+    source_cache: v2/cache/siglip2/test.pt
+    sultana_cache: v2/cache/experiment_013_cross_domain/siglip2_linear_probe_external.pt
+    fruitvision_cache: v2/cache/experiment_014_multi_domain/siglip2_linear_probe_fruitvision.pt
+    embedding_dim: 768
+    revision: 75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2
+
+frozen_manifests:
+  source_split_identity: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  sultana: v2/results/experiment_013_cross_domain/external_evaluation_manifest.json
+  sultana_sha256: 6fd074e514f3b79e6d4f1878516fdaa9a4ea2e283a2dee4453a397d9da5a7208
+  fruitvision: v2/results/experiment_014_multi_domain/fruitvision_manifest.json
+  fruitvision_sha256: 71651aee8816b01baaa1a752f1bcc6327ae26e98578ed95c2150276ad445cb3f
+
+balanced_pool:
+  policy: deterministic_sha256_order_within_domain_by_semantic_class
+  samples_per_domain_class: 200
+  total_samples: 3600
+  seed: 42
+
+geometry:
+  pca_components: 2
+  pca_seed: 42
+  silhouette_metric: cosine
+  secondary_cluster_metric: calinski_harabasz
+
+analytical_probes:
+  classifier: logistic_regression
+  regularization_c: 1.0
+  solver: lbfgs
+  max_iterations: 2000
+  folds: 5
+  splitter: stratified_k_fold_with_shuffle
+  seed: 42
+  scaling: standard_scaler_fit_inside_each_fold
+
+directions:
+  definition: l2_normalize(mean_rotten_embedding_minus_mean_fresh_embedding)
+  bootstrap_resamples: 2000
+  bootstrap_seed: 42
+  interval: percentile_95
+
+retrieval:
+  query_domains: [sultana, fruitvision]
+  gallery_domain: source
+  similarity: cosine
+  k: [1, 5, 10]
+  no_classifier: true
+
+attribution:
+  domains: [sultana, fruitvision]
+  selection_source: frozen_experiment_013_and_014_prediction_records
+  correctness_stratum: majority_correct_across_the_five_attribution_systems
+  samples_per_domain_class_stratum: 5
+  selection_order: sha256_of_seed_domain_class_stratum_identifier
+  systems:
+    - efficientnet_b0
+    - clip_linear_probe
+    - clip_strict_zero_shot
+    - siglip2_linear_probe
+    - siglip2_strict_zero_shot
+  grid: [7, 7]
+  occlusion_baseline: zero_in_normalized_model_input_equivalent_to_model_channel_mean
+  target_score: frozen_predicted_class_score_minus_strongest_competing_class_score
+  deletion_fractions: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+  random_seed: 42
+  image_overlays_committed: false
+
+outputs:
+  result_dir: v2/results/experiment_015_interpretability
+  balanced_manifest: v2/results/experiment_015_interpretability/balanced_analysis_manifest.json
+  attribution_manifest: v2/results/experiment_015_interpretability/attribution_subset_manifest.json

@@ -23,9 +23,133 @@ V2 is **AI-Based Fruit Freshness Intelligence Using Modern Vision AI**, a compar
 - Multimodal reasoning and explanation assessment
 - Labelled-data efficiency and cross-domain generalization
 
-**Research in progress.** V2 currently provides the research protocol, dataset strategy, reproducibility rules, roadmap, configuration intent, and empty project structure only. No V2 model has been implemented and no V2 result is claimed.
+**Research in progress.** V2 now includes the executed Phase 1 PyTorch baseline, the completed Phase 2 frozen-backbone transfer-learning benchmark, the completed Phase 3A frozen foundation-representation benchmark, the completed Phase 3B zero-shot semantic benchmark, the completed Phase 3C label-efficiency study, the completed Phase 3D zero-adaptation cross-domain benchmark, and the completed Phase 3E multi-domain robustness study.
 
-The research framework begins with [V2_RESEARCH_BLUEPRINT.md](docs/V2_RESEARCH_BLUEPRINT.md). The complete protocol is in [EXPERIMENT_PROTOCOL.md](docs/EXPERIMENT_PROTOCOL.md), and planned model cohorts are defined without results in [MODEL_COMPARISON_MATRIX.md](docs/MODEL_COMPARISON_MATRIX.md).
+The research framework begins with [V2_RESEARCH_BLUEPRINT.md](docs/handbook/V2_RESEARCH_BLUEPRINT.md). The complete protocol is in [EXPERIMENT_PROTOCOL.md](docs/EXPERIMENT_PROTOCOL.md), and planned model cohorts are defined without results in [MODEL_COMPARISON_MATRIX.md](docs/MODEL_COMPARISON_MATRIX.md).
+
+## V2 Phase 1
+
+### Modern CNN Baseline Reproduction
+
+V1 is the historical TensorFlow 1.x study frozen on the `legacy` branch. V2 Phase 1 reproduces its fundamental unregularized CNN concept with Python 3.11 and PyTorch, using the same frozen leakage-safe train, validation, and test partitions. It keeps the 150 × 150 RGB input, 32/64/128 convolution stages, dense 128 classifier, Adam optimizer, batch size 32, learning rate 0.001, seed 42, and fixed 20 epochs. It adds no dropout, batch normalization, pretrained weights, residual blocks, or other accuracy-oriented changes.
+
+Exactly one run was made. Validation-only checkpoint selection retained epoch 2 at 83.33% validation accuracy and 0.6173 loss. After selection, one held-out test pass measured 74.09% accuracy, 74.57% macro F1, and 74.03% weighted F1 across 2,698 images. These measurements establish a reproducible modern baseline; they are not evidence that modern tooling alone improves accuracy. The model reached 100% training accuracy while validation loss increased, showing substantial overfitting.
+
+Run the registered pipeline from the repository root after creating the separate V2 environment and making the frozen V1 split available at the configured local path:
+
+```bash
+PYTHONPATH=. python -m v2.src.training.train --config v2/configs/baseline_cnn.yaml
+PYTHONPATH=. python -m v2.src.evaluation.evaluate --config v2/configs/baseline_cnn.yaml
+```
+
+The evaluation command is intentionally guarded against a second test pass for the same experiment metadata. See [experiment_001_baseline_cnn.md](v2/experiments/experiment_001_baseline_cnn.md) for the complete run record and limitations. Generated metric JSON, learning curves, and the confusion matrix are in [v2/results/](v2/results/). The trained checkpoint and source images remain local and ignored by Git.
+
+## V2 Phase 2 — Transfer Learning Benchmark
+
+Phase 2 compares the frozen Experiment 001 control with three ImageNet-pretrained representations: ResNet50, EfficientNet-B0, and MobileNetV3-Large. Each backbone remains frozen and only a single six-class linear head is trained. All experiments use the same V1 leakage-safe split, seed 42, Adam optimizer, batch size 32, 20 fixed epochs, validation-based checkpoint selection, and one held-out test pass.
+
+Phase 2 preprocessing uses 224 × 224 inputs, mild random horizontal flip, rotation, and color jitter for training, plus deterministic resize and center crop for validation/test. It applies ImageNet mean `[0.485, 0.456, 0.406]` and standard deviation `[0.229, 0.224, 0.225]`. This differs materially from Experiment 001’s 150 × 150 scaling-only pipeline and is part of the registered transfer-learning protocol.
+
+| Experiment | Model | Selected epoch | Test accuracy | Weighted F1 | Total / trainable parameters | CPU forward time |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 001 | CNN from scratch | 2 | 74.09% | 74.03% | 4,829,126 / 4,829,126 | Not measured; test remained frozen |
+| 002 | ResNet50 | 20 | 94.18% | 94.13% | 23,520,326 / 12,294 | 31.282 ms/image |
+| 003 | EfficientNet-B0 | 8 | **94.55%** | **94.52%** | 4,015,234 / 7,686 | 12.555 ms/image |
+| 004 | MobileNetV3-Large | 1 | 93.03% | 92.98% | 2,977,718 / 5,766 | **6.441 ms/image** |
+
+All three transfer pipelines measured higher accuracy and weighted F1 than the control on this dataset. EfficientNet-B0 produced the strongest accuracy/compute balance in these runs, while MobileNetV3-Large was fastest and smallest. Rotten-apple recall increased from 51.41% in Experiment 001 to 91.18%, 89.52%, and 85.69%, respectively. These are dataset-specific observations, not proof that pretraining alone caused the difference: architecture, input resolution, augmentation, and normalization also changed.
+
+Run a registered model with the shared pipeline:
+
+```bash
+PYTHONPATH=. python -m v2.src.training.train_transfer --config v2/configs/resnet50.yaml
+PYTHONPATH=. python -m v2.src.evaluation.evaluate_transfer --config v2/configs/resnet50.yaml
+```
+
+Substitute `efficientnet.yaml` or `mobilenetv3.yaml` for the other registered experiments. Each evaluator refuses a second test pass once its metadata records completion. Full class-level analysis, timing definitions, and limitations are in [TRANSFER_LEARNING_ANALYSIS.md](docs/TRANSFER_LEARNING_ANALYSIS.md).
+
+## V2 Phase 3A — Vision Foundation Representations
+
+Phase 1 trained a custom CNN from scratch. Phase 2 trained identical linear heads on frozen ImageNet-pretrained CNN backbones. Phase 3A measures three frozen vision foundation representations by extracting one deterministic, model-native embedding per image, L2-normalizing it, and training the same single linear six-class probe.
+
+All Phase 3A encoders remained frozen. Each used Adam, learning rate 0.001, batch size 64, 50 epochs, and seed 42 on the unchanged 1,539/270/2,698 train/validation/test split. Selection used validation accuracy with lower validation loss as the tie-break, followed by exactly one held-out test evaluation. No stochastic extraction augmentation, text prompt, zero-shot classification, nonlinear probe, or encoder fine-tuning was used.
+
+| Exp | Model | Representation regime | Trainable params | Test accuracy | Weighted F1 |
+| --- | --- | --- | ---: | ---: | ---: |
+| 001 | Custom CNN | From scratch | 4,829,126 | 74.09% | 74.03% |
+| 002 | ResNet50 | ImageNet transfer | 12,294 | 94.18% | 94.13% |
+| 003 | EfficientNet-B0 | ImageNet transfer | 7,686 | 94.55% | 94.52% |
+| 004 | MobileNetV3-Large | ImageNet transfer | 5,766 | 93.03% | 92.98% |
+| 005 | DINOv2 ViT-B/14 | Self-supervised foundation | 4,614 | 89.07% | 89.01% |
+| 006 | Original CLIP ViT-B/16 | Vision-language contrastive | 3,078 | 95.85% | 95.84% |
+| 007 | SigLIP2 Base Patch16/224 | Modern vision-language foundation | 4,614 | **98.63%** | **98.62%** |
+
+SigLIP2 was strongest overall and produced 94.84% rotten-apple recall, compared with 87.52% for CLIP and 66.06% for DINOv2. DINOv2 still exceeded the from-scratch CNN but trailed all Phase 2 transfer models. CLIP and SigLIP2 exceeded the strongest Phase 2 accuracy by 1.30 and 4.08 percentage points respectively. These observations compare complete pretrained systems; architecture, scale, pretraining data/objective, preprocessing, and representation dimension all differ, so the results do not isolate a causal benefit from self-supervision or language supervision.
+
+Exact checkpoint revisions and hashes are in [FOUNDATION_MODEL_PROVENANCE.md](docs/FOUNDATION_MODEL_PROVENANCE.md). The full class-level, compute, and limitation analysis is in [FOUNDATION_REPRESENTATION_ANALYSIS.md](docs/FOUNDATION_REPRESENTATION_ANALYSIS.md), with individual run records under [v2/experiments/](v2/experiments/). Downloaded weights, embedding caches, source images, and probe checkpoints remain local and Git-ignored.
+
+## V2 Phase 3B — Zero-Shot Semantic Recognition
+
+Phase 3A trained a supervised linear classifier on frozen image embeddings. Phase 3B removes that classifier: frozen CLIP and SigLIP2 image embeddings are compared directly with frozen text prototypes, with no target-dataset parameter fitting, prompt learning, image prototypes, fine-tuning, or calibration.
+
+The prompt registry was fixed before validation. Strict zero-shot uses the canonical P1 texts such as “a photo of a fresh apple.” A separate validation-selected condition compares four pre-registered prompt families and is not described as pure strict zero-shot. For each model, strict and selected conditions were computed together in one locked held-out test run.
+
+| Exp | Model | Condition | Selected prompt | Test accuracy | Weighted F1 |
+| --- | --- | --- | --- | ---: | ---: |
+| 006 | Original CLIP ViT-B/16 | Supervised linear probe | Not applicable | 95.85% | 95.84% |
+| 008A | Original CLIP ViT-B/16 | Strict zero-shot | P1 canonical | 89.96% | 90.09% |
+| 008B | Original CLIP ViT-B/16 | Validation-selected zero-shot | P3 condition description | 90.25% | 90.23% |
+| 007 | SigLIP2 Base | Supervised linear probe | Not applicable | 98.63% | 98.62% |
+| 009A | SigLIP2 Base | Strict zero-shot | P1 canonical | **97.89%** | **97.89%** |
+| 009B | SigLIP2 Base | Validation-selected zero-shot | P2 natural object | 96.96% | 96.96% |
+
+CLIP strict zero-shot trailed its linear probe by 5.89 accuracy points. SigLIP2 strict zero-shot trailed its probe by only 0.74 points, showing substantially stronger direct alignment with these six class texts under this protocol. Validation selection helped CLIP slightly but hurt SigLIP2 on test; the registered P2 selection was retained rather than revised after seeing the result.
+
+Most mistakes were freshness-condition errors rather than fruit-identity errors. This supports a narrow claim that the pretrained image-language spaces exhibit semantic alignment with the dataset labels; it does not show that the models understand spoilage or can assess food safety. Full prompt comparisons, class metrics, semantic error categories, similarity margins, compute measurements, and limitations are in [ZERO_SHOT_ANALYSIS.md](docs/ZERO_SHOT_ANALYSIS.md).
+
+## V2 Phase 3C — Label-Efficiency Study
+
+Phase 3A measured full-supervision linear probes on frozen foundation embeddings. Phase 3B measured zero-shot semantic recognition with frozen text prototypes. Phase 3C fills the controlled low-label region between them using nested, class-balanced subsets at 1, 5, 10, 25, 50, and 100 labelled images per class.
+
+For DINOv2, original CLIP, and SigLIP2, five pre-registered subset draws (seeds 42–46) were evaluated at each budget while keeping optimization seed 42 and the Phase 3A `nn.Linear` protocol fixed. All 90 probes used cached L2-normalized embeddings from the unchanged frozen encoders, validation-only checkpoint selection, no augmentation, and one locked test evaluation after every checkpoint was frozen.
+
+| Model | 1-shot mean accuracy | 5-shot | 25-shot | 100-shot | Frozen full-data |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| DINOv2 ViT-B/14 | 81.14% | 92.97% | 94.20% | 92.59% | 89.07% |
+| Original CLIP ViT-B/16 | 74.28% | 89.85% | 94.37% | 95.30% | 95.85% |
+| SigLIP2 Base | **87.52%** | **97.21%** | **98.12%** | **98.50%** | **98.63%** |
+
+SigLIP2 led at every supervised budget and was within one percentage point of its full-data result at 10 labels/class. CLIP needed 100 labels/class to reach that threshold. DINOv2 was non-monotonic and exceeded its frozen full-data endpoint from 5-shot onward, a protocol-specific result that must not be interpreted as evidence that fewer labels are inherently better. Strict zero-shot markers for CLIP and SigLIP2 use a different text-prototype decision mechanism from the supervised probes.
+
+These findings describe this frozen dataset, representation set, and linear-probe protocol; they do not establish universal food-freshness sample complexity. Aggregate intervals, per-class behavior, rotten-apple analysis, plots, and limitations are in [LABEL_EFFICIENCY_ANALYSIS.md](docs/LABEL_EFFICIENCY_ANALYSIS.md).
+
+## V2 Phase 3D — Cross-Domain Generalization
+
+Phase 3D challenges the nine frozen conditions from Experiments 001–009 on an independently collected dataset without changing their parameters, prompts, class mapping, or original model-specific preprocessing. The external benchmark uses all 1,200 original physical photographs—200 each for fresh/rotten apple, banana, and orange—from Sultana, Jahan, and Uddin's Mendeley Data release (DOI `10.17632/bdd69gyhv8.1`). The separately packaged augmentation archive and ten non-overlapping classes are excluded.
+
+| Frozen system | Source accuracy | External accuracy | Retention |
+|---|---:|---:|---:|
+| Custom CNN | 74.09% | 34.58% | 46.68% |
+| ResNet50 | 94.18% | 69.33% | 73.62% |
+| EfficientNet-B0 | 94.55% | 68.75% | 72.71% |
+| MobileNetV3-Large | 93.03% | 70.75% | 76.05% |
+| DINOv2 + linear probe | 89.07% | 68.17% | 76.54% |
+| CLIP + linear probe | 95.85% | 61.00% | 63.64% |
+| SigLIP2 + linear probe | 98.63% | 82.75% | 83.90% |
+| CLIP strict P1 zero-shot | 89.96% | 80.75% | 89.77% |
+| SigLIP2 strict P1 zero-shot | 97.89% | **90.75%** | **92.71%** |
+
+Strict zero-shot classification generalized better than the corresponding source-trained probe for both CLIP (+19.75 external accuracy points) and SigLIP2 (+8.00 points). Fresh-banana recall showed the largest average collapse across systems, while rotten orange had the lowest mean external recall. Condition errors dominated for all pretrained systems, indicating that fruit identity was generally more stable than the fresh/rotten boundary.
+
+These results measure external-domain generalization on one independently collected dataset; they do not prove real-world generalization or food-safety capability. See [external provenance](docs/EXTERNAL_DATASET_PROVENANCE.md), the [domain profile](docs/DOMAIN_SHIFT_PROFILE.md), and the full [cross-domain analysis](docs/CROSS_DOMAIN_GENERALIZATION_ANALYSIS.md).
+
+## V2 Phase 3E — Multi-Domain Robustness
+
+Phase 3E reuses the frozen source and Sultana results, then evaluates the same nine systems once on 4,185 raw FruitVision originals from the six overlapping apple/banana/orange × fresh/rotten classes. FruitVision is evaluation-only: no target-domain training, validation, calibration, prompt selection, preprocessing change, or adaptation occurs. Augmented, formalin-mixed, grape, and mango images are excluded.
+
+SigLIP2 strict P1 zero-shot remains strongest, with 88.53% mean external accuracy and 86.31% worst external accuracy across Sultana and FruitVision. Its worst external retention is 88.17%. Zero-shot beats the corresponding source-trained probe on both external datasets for CLIP (mean advantage 15.97 points) and SigLIP2 (10.39 points). External rankings are more concordant with each other (Spearman 0.833) than source rankings are with either external domain (0.567 and 0.617), showing that high source performance alone does not determine multi-domain robustness.
+
+MobileNetV3-Large provides the strongest measured lightweight compromise at 7.26 CPU forward ms/image, 70.56% mean external accuracy, and 70.37% worst external accuracy. These results support robustness across two independently collected external fruit-image datasets, not general real-world robustness or food-safety capability. See the [FruitVision provenance](docs/FRUITVISION_DATASET_PROVENANCE.md), [domain-shift profile](docs/FRUITVISION_DOMAIN_SHIFT_PROFILE.md), and [multi-domain analysis](docs/MULTI_DOMAIN_ROBUSTNESS_ANALYSIS.md).
 
 ## Historical Runtime Contract
 
@@ -133,7 +257,7 @@ source .venv-v2/bin/activate
 python -m pip install -r requirements-v2.txt
 ```
 
-`requirements-v2.txt` is a bootstrap manifest for PyTorch, torchvision, timm, transformers, OpenCV, scikit-learn, pandas, NumPy, Matplotlib, Jupyter, seaborn, and Pillow. Exact resolved versions must be locked and recorded before an experiment. No V2 packages are required to inspect the research framework.
+`requirements-v2.txt` is the pinned V2 manifest for CPU PyTorch, torchvision, the analysis stack, Transformers, Hugging Face Hub, safetensors, OpenCLIP, timm, and ftfy. No V2 packages are required to inspect the historical V1 artifacts.
 
 ## Training
 
@@ -232,6 +356,12 @@ The real selected model also passed the unchanged CLI and Flask GET/model-backed
 
 V1 remains frozen. Future research is organized through the phased [V2 roadmap](docs/ROADMAP.md): research setup, modern baseline reproduction, transfer learning, foundation embeddings, vision-language reasoning, and paper preparation.
 
+### V2 Phase 3F — Representation interpretability
+
+Experiment 015 studies frozen DINOv2, CLIP, and SigLIP2 representation geometry across the source, Sultana, and FruitVision domains. It adds balanced PCA/separability analysis, exploratory factor and domain probes, empirical fresh-to-rotten centroid-direction alignment, centroid drift, source-gallery retrieval, probe-versus-zero-shot disagreement, and common 7 × 7 perturbation attribution with deletion-faithfulness checks. It does not change any predictive model or prior experiment.
+
+The main result is deliberately plural rather than causal: SigLIP2 has the most consistent cross-domain and cross-fruit freshness directions, DINOv2 has the strongest linear freshness access and source-gallery retrieval, and CLIP has the smallest class-centroid drift. Strict zero-shot decisions recover more fitted-probe errors than they introduce for both CLIP and SigLIP2 in both external domains. See [the full representation analysis](docs/REPRESENTATION_INTERPRETABILITY_ANALYSIS.md) and [Experiment 015 record](v2/experiments/experiment_015_representation_interpretability.md).
+
 ## Repository Structure
 
 ```text
@@ -242,7 +372,8 @@ V1 remains frozen. Future research is organized through the phased [V2 roadmap](
 ├── requirements.txt
 ├── requirements-v2.txt
 ├── docs/
-│   ├── V2_RESEARCH_BLUEPRINT.md
+│   ├── handbook/
+│   │   └── V2_RESEARCH_BLUEPRINT.md
 │   ├── EXPERIMENT_PROTOCOL.md
 │   ├── MODEL_COMPARISON_MATRIX.md
 │   ├── DATASET_STRATEGY.md
@@ -278,6 +409,7 @@ V1 remains frozen. Future research is organized through the phased [V2 roadmap](
 │   │   ├── processed/
 │   │   └── splits/
 │   ├── notebooks/
+│   │   └── 01_baseline_analysis.ipynb
 │   ├── src/
 │   │   ├── datasets/
 │   │   ├── models/
@@ -285,12 +417,21 @@ V1 remains frozen. Future research is organized through the phased [V2 roadmap](
 │   │   ├── evaluation/
 │   │   └── visualization/
 │   ├── experiments/
+│   │   ├── experiment_001_baseline_cnn.md
+│   │   └── experiment_001_metadata.json
+│   ├── checkpoints/
+│   │   └── class_indices.json
 │   ├── configs/
 │   │   ├── baseline_cnn.yaml
 │   │   ├── transfer_learning.yaml
 │   │   ├── foundation_embedding.yaml
 │   │   └── vlm_evaluation.yaml
 │   └── results/
+│       ├── baseline_history.json
+│       ├── baseline_test_metrics.json
+│       ├── baseline_training_curve.png
+│       ├── baseline_validation_curve.png
+│       └── baseline_confusion_matrix.png
 ├── static/
 │   ├── css/style.css
 │   └── uploads/.gitkeep

@@ -1,0 +1,123 @@
+{
+  "audited_at": "2026-09-02T17:29:07.226255+00:00",
+  "exact_cross_dataset_matches": [],
+  "exact_file_method": "SHA-256 over original file bytes",
+  "external_identifiers_excluded_for_exact_or_pixel_match": [],
+  "external_original_images_compared": 1200,
+  "near_duplicate_candidates_require_review_before_manifest_freeze": true,
+  "perceptual_method": "64-bit pHash using 32x32 grayscale, orthonormal 2D DCT, and median-thresholded low-frequency 8x8 coefficients excluding DC",
+  "perceptual_near_duplicate_candidates": [
+    {
+      "external": {
+        "class": "fresh_banana",
+        "file_sha256": "1bc8f9bb997775ffa40a43255bb91da142cbb1d359dd0d6fe9df5d5f15f1f653",
+        "height": 883,
+        "identifier": "FreshBanana/FreshBanana (54).jpg",
+        "phash_63bit_hex": "6a97a5689e215875",
+        "pixel_rgb_sha256": "24082f267f8cdef8226860847896daf734dca96cbdab41224fe53ade1233fa42",
+        "width": 1413
+      },
+      "hamming_distance": 6,
+      "source": {
+        "class": "rotten_apple",
+        "file_sha256": "4b61f342e9e9cb0ec0418d22a019b2af46f983c198f3d73b144cfaa174002681",
+        "height": 406,
+        "identifier": "test/rotten_apple/vertical_flip_Screen Shot 2018-06-08 at 2.42.30 PM.png",
+        "phash_63bit_hex": "6296b5689e315a65",
+        "pixel_rgb_sha256": "2af8ae42b7447ee8c6c5dd7ab4abceb168c9a0272f95e23c21a342e3ad03db4b",
+        "width": 376
+      }
+    },
+    {
+      "external": {
+        "class": "rotten_orange",
+        "file_sha256": "eda49407acc74d01294f40d68b622b2254cbcf005d36e4aa9db8a643d4b0099a",
+        "height": 2346,
+        "identifier": "RottenOrange/RottenOrange (49).jpg",
+        "phash_63bit_hex": "6a85c59ccb728cc9",
+        "pixel_rgb_sha256": "37c1f1c789b0683b2d06f5cbf9f8f2425502012c7c40923b4bf2112030969f24",
+        "width": 2389
+      },
+      "hamming_distance": 6,
+      "source": {
+        "class": "fresh_orange",
+        "file_sha256": "586be6dbc5d6327b602bcdbabeb253530a111efc2d9b841813f5f1654a76ffa4",
+        "height": 196,
+        "identifier": "train/fresh_orange/Screen Shot 2018-06-12 at 11.55.00 PM.png",
+        "phash_63bit_hex": "6a85e59cc27a8d49",
+        "pixel_rgb_sha256": "ed49a14eb3526fdfb0b140181383fa4ca836d7eaf69d2914041d600cbeabbd13",
+        "width": 180
+      }
+    },
+    {
+      "external": {
+        "class": "rotten_orange",
+        "file_sha256": "eda49407acc74d01294f40d68b622b2254cbcf005d36e4aa9db8a643d4b0099a",
+        "height": 2346,
+        "identifier": "RottenOrange/RottenOrange (49).jpg",
+        "phash_63bit_hex": "6a85c59ccb728cc9",
+        "pixel_rgb_sha256": "37c1f1c789b0683b2d06f5cbf9f8f2425502012c7c40923b4bf2112030969f24",
+        "width": 2389
+      },
+      "hamming_distance": 6,
+      "source": {
+        "class": "fresh_orange",
+        "file_sha256": "6b53dff8458be97192a632cae7245de686e90233c81ba298861f00af9ca60670",
+        "height": 196,
+        "identifier": "train/fresh_orange/saltandpepper_Screen Shot 2018-06-12 at 11.55.00 PM.png",
+        "phash_63bit_hex": "6a85e59cc27a8d49",
+        "pixel_rgb_sha256": "062b2b181f18e85dfbc16f4e20cfb932ce3ea219351d6f50d6d95be49e3b6f78",
+        "width": 180
+      }
+    },
+    {
+      "external": {
+        "class": "rotten_banana",
+        "file_sha256": "57a24243961fdb91b821873da83bc9d5a4e1f31aab444187f3abd94a85ad85af",
+        "height": 2268,
+        "identifier": "RottenBanana/RottenBanana (117).jpg",
+        "phash_63bit_hex": "7f4ad0342d29d8ca",
+        "pixel_rgb_sha256": "1ec43b2fb68377ebd2b3b73cafcc85eaf47acee98a09db788a09ee0dd71dee49",
+        "width": 3587
+      },
+      "hamming_distance": 6,
+      "source": {
+        "class": "rotten_banana",
+        "file_sha256": "a5b9afad64b34752343b26ad2d287af849c34f6c04f7a45d288e4e5f1e057ab9",
+        "height": 338,
+        "identifier": "train/rotten_banana/Screen Shot 2018-06-12 at 9.06.56 PM.png",
+        "phash_63bit_hex": "3ecbc0342d2bd8ca",
+        "pixel_rgb_sha256": "72a955ccb6ef37156b06ee93b6a8be0b17c3a145180ec9c59be7e1355df8c138",
+        "width": 582
+      }
+    },
+    {
+      "external": {
+        "class": "rotten_banana",
+        "file_sha256": "57a24243961fdb91b821873da83bc9d5a4e1f31aab444187f3abd94a85ad85af",
+        "height": 2268,
+        "identifier": "RottenBanana/RottenBanana (117).jpg",
+        "phash_63bit_hex": "7f4ad0342d29d8ca",
+        "pixel_rgb_sha256": "1ec43b2fb68377ebd2b3b73cafcc85eaf47acee98a09db788a09ee0dd71dee49",
+        "width": 3587
+      },
+      "hamming_distance": 6,
+      "source": {
+        "class": "rotten_banana",
+        "file_sha256": "c0a4e05af5bdf197160f02ecabe60d94eada9da62a918ebc4719d39561195108",
+        "height": 338,
+        "identifier": "train/rotten_banana/saltandpepper_Screen Shot 2018-06-12 at 9.06.56 PM.png",
+        "phash_63bit_hex": "3ecbc0342d2bd8ca",
+        "pixel_rgb_sha256": "7e46091cec740224af96ca01c9410d1e20da23d7fec18fbeaa4c442c115489f5",
+        "width": 582
+      }
+    }
+  ],
+  "phash_hamming_candidate_threshold": 6,
+  "pixel_equivalent_cross_dataset_matches": [],
+  "pixel_equivalent_method": "SHA-256 over width, height, and decoded canonical RGB bytes",
+  "schema_version": 1,
+  "source_images_compared": 4507,
+  "status": "REVIEW_REQUIRED",
+  "threshold_status": "frozen_before_candidate_inspection"
+}

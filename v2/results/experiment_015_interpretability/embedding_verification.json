@@ -1,0 +1,173 @@
+{
+  "experiment_id": "V2-P3F-REPRESENTATION-INTERPRETABILITY-015",
+  "failures": [],
+  "frozen_identity_checks": {
+    "fruitvision": true,
+    "prompt_registry": true,
+    "sultana": true
+  },
+  "records": {
+    "clip": {
+      "fruitvision": {
+        "cache": "v2/cache/experiment_014_multi_domain/clip_linear_probe_fruitvision.pt",
+        "cache_sha256": "82b9d1f8389df2752c48517a811134a136d704a6350a09bba5e7166e5b7c82c1",
+        "checks": {
+          "embedding_dimension": true,
+          "embedding_rows": true,
+          "finite": true,
+          "l2_normalized": true,
+          "label_order": true,
+          "sample_count": true,
+          "sample_order": true
+        },
+        "embedding_dimension": 512,
+        "samples": 4185,
+        "status": "PASS"
+      },
+      "source": {
+        "cache": "v2/cache/clip/test.pt",
+        "cache_sha256": "3059d78ef1b36329f423cd1feeb8e865b4da717f36fabe55fcf2677c0c6d19bc",
+        "checks": {
+          "embedding_dimension": true,
+          "embedding_rows": true,
+          "encoder_revision": true,
+          "finite": true,
+          "l2_normalized": true,
+          "label_order": true,
+          "preprocessing_identity_present": true,
+          "sample_count": true,
+          "sample_order": true,
+          "source_split_identity": true
+        },
+        "embedding_dimension": 512,
+        "samples": 2698,
+        "status": "PASS"
+      },
+      "sultana": {
+        "cache": "v2/cache/experiment_013_cross_domain/clip_linear_probe_external.pt",
+        "cache_sha256": "fb382e7044494c3ce590231374c91ae07f7c6f6e2bb693f326fe986a85ed884a",
+        "checks": {
+          "embedding_dimension": true,
+          "embedding_rows": true,
+          "finite": true,
+          "l2_normalized": true,
+          "label_order": true,
+          "sample_count": true,
+          "sample_order": true
+        },
+        "embedding_dimension": 512,
+        "samples": 1200,
+        "status": "PASS"
+      }
+    },
+    "dinov2": {
+      "fruitvision": {
+        "cache": "v2/cache/experiment_014_multi_domain/dinov2_linear_probe_fruitvision.pt",
+        "cache_sha256": "84b219f5abc8453fb538510ad19b2108df81d18bec811e226ed5cea5595d8b4d",
+        "checks": {
+          "embedding_dimension": true,
+          "embedding_rows": true,
+          "finite": true,
+          "l2_normalized": true,
+          "label_order": true,
+          "sample_count": true,
+          "sample_order": true
+        },
+        "embedding_dimension": 768,
+        "samples": 4185,
+        "status": "PASS"
+      },
+      "source": {
+        "cache": "v2/cache/dinov2/test.pt",
+        "cache_sha256": "b07a8dd63435cfdfc436690c4fc5e045b8cf90631d83368b89cc046945162da8",
+        "checks": {
+          "embedding_dimension": true,
+          "embedding_rows": true,
+          "encoder_revision": true,
+          "finite": true,
+          "l2_normalized": true,
+          "label_order": true,
+          "preprocessing_identity_present": true,
+          "sample_count": true,
+          "sample_order": true,
+          "source_split_identity": true
+        },
+        "embedding_dimension": 768,
+        "samples": 2698,
+        "status": "PASS"
+      },
+      "sultana": {
+        "cache": "v2/cache/experiment_013_cross_domain/dinov2_linear_probe_external.pt",
+        "cache_sha256": "bf1c349e01bfba54d8ac2a99e635d715c4c42e4bc1548e120e3554e7f06352ad",
+        "checks": {
+          "embedding_dimension": true,
+          "embedding_rows": true,
+          "finite": true,
+          "l2_normalized": true,
+          "label_order": true,
+          "sample_count": true,
+          "sample_order": true
+        },
+        "embedding_dimension": 768,
+        "samples": 1200,
+        "status": "PASS"
+      }
+    },
+    "siglip2": {
+      "fruitvision": {
+        "cache": "v2/cache/experiment_014_multi_domain/siglip2_linear_probe_fruitvision.pt",
+        "cache_sha256": "5c220c82f5b268446b8a0a2249bf26abc58ce6923db7f504db01418ffb7256c2",
+        "checks": {
+          "embedding_dimension": true,
+          "embedding_rows": true,
+          "finite": true,
+          "l2_normalized": true,
+          "label_order": true,
+          "sample_count": true,
+          "sample_order": true
+        },
+        "embedding_dimension": 768,
+        "samples": 4185,
+        "status": "PASS"
+      },
+      "source": {
+        "cache": "v2/cache/siglip2/test.pt",
+        "cache_sha256": "71e4c40fda647c47e9106f3d80e69b6450cc132b4999007021a91fa78810e890",
+        "checks": {
+          "embedding_dimension": true,
+          "embedding_rows": true,
+          "encoder_revision": true,
+          "finite": true,
+          "l2_normalized": true,
+          "label_order": true,
+          "preprocessing_identity_present": true,
+          "sample_count": true,
+          "sample_order": true,
+          "source_split_identity": true
+        },
+        "embedding_dimension": 768,
+        "samples": 2698,
+        "status": "PASS"
+      },
+      "sultana": {
+        "cache": "v2/cache/experiment_013_cross_domain/siglip2_linear_probe_external.pt",
+        "cache_sha256": "ac0d86899f3d549770b938ae952ecc245dddb3c5907bff7f198be54421f75d98",
+        "checks": {
+          "embedding_dimension": true,
+          "embedding_rows": true,
+          "finite": true,
+          "l2_normalized": true,
+          "label_order": true,
+          "sample_count": true,
+          "sample_order": true
+        },
+        "embedding_dimension": 768,
+        "samples": 1200,
+        "status": "PASS"
+      }
+    }
+  },
+  "schema_version": 1,
+  "status": "PASS",
+  "verified_at": "2026-09-03T18:43:20.813421+00:00"
+}

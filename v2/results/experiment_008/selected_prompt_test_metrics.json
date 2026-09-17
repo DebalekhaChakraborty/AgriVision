@@ -1,0 +1,163 @@
+{
+  "accuracy": 0.902520385470719,
+  "classifier_trained": false,
+  "condition": "validation_selected_zero_shot",
+  "confusion_matrix": [
+    [
+      387,
+      0,
+      0,
+      7,
+      0,
+      1
+    ],
+    [
+      0,
+      379,
+      0,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      375,
+      0,
+      0,
+      13
+    ],
+    [
+      33,
+      1,
+      2,
+      482,
+      0,
+      83
+    ],
+    [
+      0,
+      38,
+      0,
+      0,
+      492,
+      0
+    ],
+    [
+      3,
+      0,
+      72,
+      8,
+      0,
+      320
+    ]
+  ],
+  "end_to_end_forward_ms_per_image": 79.26793857224969,
+  "image_encoding": {
+    "image_encoder_ms_per_image": 79.2677172379319,
+    "image_encoder_seconds": 213.86430110794026,
+    "image_loop_wall_ms_per_image": 88.64133184100173,
+    "image_loop_wall_seconds": 239.15431330702268,
+    "peak_process_rss_mb": 2181.56640625,
+    "samples": 2698,
+    "scope": "Model forward after deterministic preprocessing; image embeddings are L2-normalized."
+  },
+  "macro_f1": 0.9017231176598103,
+  "macro_precision": 0.8983229854672411,
+  "macro_recall": 0.9108892601649466,
+  "per_class": {
+    "fresh_apple": {
+      "f1-score": 0.9462102689486552,
+      "precision": 0.9148936170212766,
+      "recall": 0.979746835443038,
+      "support": 395.0
+    },
+    "fresh_banana": {
+      "f1-score": 0.9486858573216521,
+      "precision": 0.9066985645933014,
+      "recall": 0.994750656167979,
+      "support": 381.0
+    },
+    "fresh_orange": {
+      "f1-score": 0.8960573476702509,
+      "precision": 0.8351893095768375,
+      "recall": 0.9664948453608248,
+      "support": 388.0
+    },
+    "rotten_apple": {
+      "f1-score": 0.8779599271402551,
+      "precision": 0.9698189134808853,
+      "recall": 0.8019966722129783,
+      "support": 601.0
+    },
+    "rotten_banana": {
+      "f1-score": 0.9609375,
+      "precision": 0.9959514170040485,
+      "recall": 0.9283018867924528,
+      "support": 530.0
+    },
+    "rotten_orange": {
+      "f1-score": 0.7804878048780488,
+      "precision": 0.7673860911270983,
+      "recall": 0.794044665012407,
+      "support": 403.0
+    }
+  },
+  "prompt_family": "P3",
+  "samples": 2698,
+  "semantic_error_analysis": {
+    "confusion_pairs": {
+      "fresh_apple -> rotten_apple": 7,
+      "fresh_apple -> rotten_orange": 1,
+      "fresh_banana -> rotten_banana": 2,
+      "fresh_orange -> rotten_orange": 13,
+      "rotten_apple -> fresh_apple": 33,
+      "rotten_apple -> fresh_banana": 1,
+      "rotten_apple -> fresh_orange": 2,
+      "rotten_apple -> rotten_orange": 83,
+      "rotten_banana -> fresh_banana": 38,
+      "rotten_orange -> fresh_apple": 3,
+      "rotten_orange -> fresh_orange": 72,
+      "rotten_orange -> rotten_apple": 8
+    },
+    "counts": {
+      "both_errors": 7,
+      "condition_errors": 165,
+      "fruit_identity_errors": 91
+    },
+    "percent_of_all_predictions": {
+      "both_errors": 0.25945144551519644,
+      "condition_errors": 6.115641215715344,
+      "fruit_identity_errors": 3.3728687916975537
+    },
+    "percent_of_errors": {
+      "both_errors": 2.661596958174905,
+      "condition_errors": 62.73764258555133,
+      "fruit_identity_errors": 34.60076045627376
+    },
+    "total_errors": 263,
+    "total_predictions": 2698
+  },
+  "similarity_classification_ms_per_image": 0.00022133431779503755,
+  "similarity_classification_seconds": 0.0005971599894110113,
+  "similarity_score_warning": "Cosine similarities and native logits are not calibrated probabilities.",
+  "text_prototype_generation": {
+    "equal_weighting": true,
+    "family": "P3",
+    "normalize_each_prompt": true,
+    "prompt_counts": {
+      "fresh_apple": 1,
+      "fresh_banana": 1,
+      "fresh_orange": 1,
+      "rotten_apple": 1,
+      "rotten_banana": 1,
+      "rotten_orange": 1
+    },
+    "renormalize_class_prototype": true,
+    "text_embedding_seconds": 0.18246831800206564,
+    "total_prompts": 6
+  },
+  "weighted_f1": 0.9022831709960981,
+  "weighted_precision": 0.9083990350954942,
+  "weighted_recall": 0.902520385470719
+}

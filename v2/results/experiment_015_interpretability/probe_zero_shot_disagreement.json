@@ -1,0 +1,277 @@
+{
+  "families": {
+    "clip": {
+      "fruitvision": {
+        "agreement_rate": 0.6320191158900836,
+        "both_correct": 0.43727598566308246,
+        "both_wrong": 0.2105137395459976,
+        "margin_by_outcome": {
+          "both_correct": {
+            "count": 1830,
+            "probe_margin_mean": 2.032974233592306,
+            "zero_shot_margin_mean": 0.018803769382622723,
+            "zero_shot_margin_median": 0.01598784327507019
+          },
+          "both_wrong": {
+            "count": 881,
+            "probe_margin_mean": 1.235322611941348,
+            "zero_shot_margin_mean": 0.00778061821295644,
+            "zero_shot_margin_median": 0.006401777267456055
+          },
+          "probe_only_correct": {
+            "count": 482,
+            "probe_margin_mean": 0.9933065518087618,
+            "zero_shot_margin_mean": 0.008049560162041692,
+            "zero_shot_margin_median": 0.006132021546363831
+          },
+          "zero_shot_only_correct": {
+            "count": 992,
+            "probe_margin_mean": 0.8197377736233326,
+            "zero_shot_margin_mean": 0.008912687430218343,
+            "zero_shot_margin_median": 0.008210808038711548
+          }
+        },
+        "per_class": {
+          "fresh_apple": {
+            "both_correct": 0.043137254901960784,
+            "both_wrong": 0.1450980392156863,
+            "zero_shot_only_correct": 0.8117647058823529
+          },
+          "fresh_banana": {
+            "both_correct": 0.01602136181575434,
+            "both_wrong": 0.7022696929238985,
+            "probe_only_correct": 0.0026702269692923898,
+            "zero_shot_only_correct": 0.27903871829105475
+          },
+          "fresh_orange": {
+            "both_correct": 0.9256308100929614,
+            "both_wrong": 0.00398406374501992,
+            "probe_only_correct": 0.06905710491367861,
+            "zero_shot_only_correct": 0.0013280212483399733
+          },
+          "rotten_apple": {
+            "both_correct": 0.2746031746031746,
+            "both_wrong": 0.09206349206349207,
+            "probe_only_correct": 0.6285714285714286,
+            "zero_shot_only_correct": 0.004761904761904762
+          },
+          "rotten_banana": {
+            "both_correct": 1.0
+          },
+          "rotten_orange": {
+            "both_correct": 0.43140243902439024,
+            "both_wrong": 0.27896341463414637,
+            "probe_only_correct": 0.04878048780487805,
+            "zero_shot_only_correct": 0.24085365853658536
+          }
+        },
+        "probe_only_correct": 0.11517323775388291,
+        "samples": 4185,
+        "zero_shot_only_correct": 0.23703703703703705
+      },
+      "sultana": {
+        "agreement_rate": 0.6266666666666667,
+        "both_correct": 0.5258333333333334,
+        "both_wrong": 0.10833333333333334,
+        "margin_by_outcome": {
+          "both_correct": {
+            "count": 631,
+            "probe_margin_mean": 1.752166346456448,
+            "zero_shot_margin_mean": 0.01908209277597358,
+            "zero_shot_margin_median": 0.019616693258285522
+          },
+          "both_wrong": {
+            "count": 130,
+            "probe_margin_mean": 1.4341891074982973,
+            "zero_shot_margin_mean": 0.009895025766812837,
+            "zero_shot_margin_median": 0.007630690932273865
+          },
+          "probe_only_correct": {
+            "count": 101,
+            "probe_margin_mean": 0.838644547037559,
+            "zero_shot_margin_mean": 0.007132826170118728,
+            "zero_shot_margin_median": 0.005227386951446533
+          },
+          "zero_shot_only_correct": {
+            "count": 338,
+            "probe_margin_mean": 0.6222334165104042,
+            "zero_shot_margin_mean": 0.01242891192083528,
+            "zero_shot_margin_median": 0.009953141212463379
+          }
+        },
+        "per_class": {
+          "fresh_apple": {
+            "both_correct": 0.37,
+            "both_wrong": 0.06,
+            "zero_shot_only_correct": 0.57
+          },
+          "fresh_banana": {
+            "both_correct": 0.03,
+            "both_wrong": 0.45,
+            "zero_shot_only_correct": 0.52
+          },
+          "fresh_orange": {
+            "both_correct": 0.5,
+            "both_wrong": 0.105,
+            "probe_only_correct": 0.395
+          },
+          "rotten_apple": {
+            "both_correct": 0.835,
+            "both_wrong": 0.035,
+            "probe_only_correct": 0.105,
+            "zero_shot_only_correct": 0.025
+          },
+          "rotten_banana": {
+            "both_correct": 0.995,
+            "probe_only_correct": 0.005
+          },
+          "rotten_orange": {
+            "both_correct": 0.425,
+            "zero_shot_only_correct": 0.575
+          }
+        },
+        "probe_only_correct": 0.08416666666666667,
+        "samples": 1200,
+        "zero_shot_only_correct": 0.2816666666666667
+      }
+    },
+    "siglip2": {
+      "fruitvision": {
+        "agreement_rate": 0.8062126642771804,
+        "both_correct": 0.7032258064516129,
+        "both_wrong": 0.10489844683393071,
+        "margin_by_outcome": {
+          "both_correct": {
+            "count": 2943,
+            "probe_margin_mean": 1.7180504802319516,
+            "zero_shot_margin_mean": 0.027865308535329914,
+            "zero_shot_margin_median": 0.026875168085098267
+          },
+          "both_wrong": {
+            "count": 439,
+            "probe_margin_mean": 0.9249998035931913,
+            "zero_shot_margin_mean": 0.010789715907704042,
+            "zero_shot_margin_median": 0.008981093764305115
+          },
+          "probe_only_correct": {
+            "count": 134,
+            "probe_margin_mean": 0.6471810025065693,
+            "zero_shot_margin_mean": 0.005431471920725125,
+            "zero_shot_margin_median": 0.0039986297488212585
+          },
+          "zero_shot_only_correct": {
+            "count": 669,
+            "probe_margin_mean": 0.7058294382063263,
+            "zero_shot_margin_mean": 0.011731002741508598,
+            "zero_shot_margin_median": 0.010372012853622437
+          }
+        },
+        "per_class": {
+          "fresh_apple": {
+            "both_correct": 0.9294117647058824,
+            "both_wrong": 0.04183006535947712,
+            "probe_only_correct": 0.00522875816993464,
+            "zero_shot_only_correct": 0.023529411764705882
+          },
+          "fresh_banana": {
+            "both_correct": 0.06275033377837116,
+            "both_wrong": 0.20293724966622162,
+            "zero_shot_only_correct": 0.7343124165554072
+          },
+          "fresh_orange": {
+            "both_correct": 0.9335989375830013,
+            "both_wrong": 0.00398406374501992,
+            "probe_only_correct": 0.06241699867197875
+          },
+          "rotten_apple": {
+            "both_correct": 0.5777777777777777,
+            "both_wrong": 0.3111111111111111,
+            "probe_only_correct": 0.0761904761904762,
+            "zero_shot_only_correct": 0.03492063492063492
+          },
+          "rotten_banana": {
+            "both_correct": 0.9968354430379747,
+            "probe_only_correct": 0.0031645569620253164
+          },
+          "rotten_orange": {
+            "both_correct": 0.7439024390243902,
+            "both_wrong": 0.08536585365853659,
+            "probe_only_correct": 0.05030487804878049,
+            "zero_shot_only_correct": 0.12042682926829268
+          }
+        },
+        "probe_only_correct": 0.03201911589008363,
+        "samples": 4185,
+        "zero_shot_only_correct": 0.15985663082437276
+      },
+      "sultana": {
+        "agreement_rate": 0.865,
+        "both_correct": 0.8,
+        "both_wrong": 0.065,
+        "margin_by_outcome": {
+          "both_correct": {
+            "count": 960,
+            "probe_margin_mean": 1.6969276321004145,
+            "zero_shot_margin_mean": 0.03236476427797849,
+            "zero_shot_margin_median": 0.03323572874069214
+          },
+          "both_wrong": {
+            "count": 78,
+            "probe_margin_mean": 1.64413011379731,
+            "zero_shot_margin_mean": 0.014117929320304822,
+            "zero_shot_margin_median": 0.013286329805850983
+          },
+          "probe_only_correct": {
+            "count": 33,
+            "probe_margin_mean": 1.5166815040689525,
+            "zero_shot_margin_mean": 0.006204602619012197,
+            "zero_shot_margin_median": 0.0045761168003082275
+          },
+          "zero_shot_only_correct": {
+            "count": 129,
+            "probe_margin_mean": 0.7496616581613703,
+            "zero_shot_margin_mean": 0.01827718981707743,
+            "zero_shot_margin_median": 0.018405184149742126
+          }
+        },
+        "per_class": {
+          "fresh_apple": {
+            "both_correct": 0.995,
+            "zero_shot_only_correct": 0.005
+          },
+          "fresh_banana": {
+            "both_correct": 0.32,
+            "both_wrong": 0.235,
+            "zero_shot_only_correct": 0.445
+          },
+          "fresh_orange": {
+            "both_correct": 0.88,
+            "both_wrong": 0.04,
+            "probe_only_correct": 0.075,
+            "zero_shot_only_correct": 0.005
+          },
+          "rotten_apple": {
+            "both_correct": 0.875,
+            "both_wrong": 0.095,
+            "probe_only_correct": 0.015,
+            "zero_shot_only_correct": 0.015
+          },
+          "rotten_banana": {
+            "both_correct": 0.935,
+            "probe_only_correct": 0.065
+          },
+          "rotten_orange": {
+            "both_correct": 0.795,
+            "both_wrong": 0.02,
+            "probe_only_correct": 0.01,
+            "zero_shot_only_correct": 0.175
+          }
+        },
+        "probe_only_correct": 0.0275,
+        "samples": 1200,
+        "zero_shot_only_correct": 0.1075
+      }
+    }
+  },
+  "schema_version": 1
+}

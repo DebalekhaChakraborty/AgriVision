@@ -1,0 +1,17 @@
+{
+  "boundary": "Exploratory only; not used for selection or adaptation.",
+  "dinov2": {
+    "explained_variance_ratio": [
+      0.24082762002944946,
+      0.1708446592092514
+    ],
+    "samples_per_domain": 1200
+  },
+  "siglip2": {
+    "explained_variance_ratio": [
+      0.18156833946704865,
+      0.15081104636192322
+    ],
+    "samples_per_domain": 1200
+  }
+}

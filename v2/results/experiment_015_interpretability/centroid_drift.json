@@ -1,0 +1,102 @@
+{
+  "encoders": {
+    "clip": {
+      "source_to_fruitvision": {
+        "by_class": {
+          "fresh_apple": 0.09732288122177124,
+          "fresh_banana": 0.0703498125076294,
+          "fresh_orange": 0.06009185314178467,
+          "rotten_apple": 0.09002840518951416,
+          "rotten_banana": 0.07692831754684448,
+          "rotten_orange": 0.08009302616119385
+        },
+        "mean": 0.0791357159614563,
+        "range": [
+          0.06009185314178467,
+          0.09732288122177124
+        ]
+      },
+      "source_to_sultana": {
+        "by_class": {
+          "fresh_apple": 0.07438045740127563,
+          "fresh_banana": 0.08543753623962402,
+          "fresh_orange": 0.06294167041778564,
+          "rotten_apple": 0.06812208890914917,
+          "rotten_banana": 0.059717416763305664,
+          "rotten_orange": 0.08948850631713867
+        },
+        "mean": 0.07334794600804646,
+        "range": [
+          0.059717416763305664,
+          0.08948850631713867
+        ]
+      }
+    },
+    "dinov2": {
+      "source_to_fruitvision": {
+        "by_class": {
+          "fresh_apple": 0.22663992643356323,
+          "fresh_banana": 0.1715395450592041,
+          "fresh_orange": 0.2241901159286499,
+          "rotten_apple": 0.18076664209365845,
+          "rotten_banana": 0.15447866916656494,
+          "rotten_orange": 0.23583728075027466
+        },
+        "mean": 0.19890869657198587,
+        "range": [
+          0.15447866916656494,
+          0.23583728075027466
+        ]
+      },
+      "source_to_sultana": {
+        "by_class": {
+          "fresh_apple": 0.16760385036468506,
+          "fresh_banana": 0.1582965850830078,
+          "fresh_orange": 0.16205084323883057,
+          "rotten_apple": 0.15366166830062866,
+          "rotten_banana": 0.14746099710464478,
+          "rotten_orange": 0.3060585856437683
+        },
+        "mean": 0.18252208828926086,
+        "range": [
+          0.14746099710464478,
+          0.3060585856437683
+        ]
+      }
+    },
+    "siglip2": {
+      "source_to_fruitvision": {
+        "by_class": {
+          "fresh_apple": 0.1353001594543457,
+          "fresh_banana": 0.08729267120361328,
+          "fresh_orange": 0.10289061069488525,
+          "rotten_apple": 0.1295546293258667,
+          "rotten_banana": 0.07105100154876709,
+          "rotten_orange": 0.12122702598571777
+        },
+        "mean": 0.10788601636886597,
+        "range": [
+          0.07105100154876709,
+          0.1353001594543457
+        ]
+      },
+      "source_to_sultana": {
+        "by_class": {
+          "fresh_apple": 0.10461539030075073,
+          "fresh_banana": 0.09853625297546387,
+          "fresh_orange": 0.08181852102279663,
+          "rotten_apple": 0.07041621208190918,
+          "rotten_banana": 0.06543481349945068,
+          "rotten_orange": 0.11823123693466187
+        },
+        "mean": 0.08984207113583882,
+        "range": [
+          0.06543481349945068,
+          0.11823123693466187
+        ]
+      }
+    }
+  },
+  "metric": "cosine_distance",
+  "schema_version": 1
+}

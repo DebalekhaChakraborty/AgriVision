@@ -1,0 +1,68 @@
+schema_version: 1
+status: phase_2_transfer_benchmark
+
+experiment:
+  id: V2-P2-EFFICIENTNET-B0-003
+  number: 3
+  phase: 2
+  plot_title: V2 Experiment 003 EfficientNet-B0
+  objective: Measure a frozen ImageNet-pretrained EfficientNet-B0 representation against Experiment 001.
+
+data:
+  root: v2/data/processed/v1_frozen_split
+  dataset_name: Fruits fresh and rotten for classification
+  dataset_author: Sriram Reddy Kalluri
+  dataset_version: Kaggle version 1, 2018-08-24
+  split_policy: Frozen leakage-safe V1 split; do not resplit.
+  split_report_sha256: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  train_split: train
+  validation_split: validation
+  test_split: test
+
+preprocessing:
+  image_size: 224
+  evaluation_resize_size: 256
+  normalization_mean: [0.485, 0.456, 0.406]
+  normalization_std: [0.229, 0.224, 0.225]
+  train_augmentation:
+    horizontal_flip_probability: 0.5
+    rotation_degrees: 10
+    color_jitter:
+      brightness: 0.1
+      contrast: 0.1
+      saturation: 0.1
+      hue: 0.02
+
+model:
+  architecture: efficientnet_b0
+  display_name: EfficientNet-B0
+  pretrained_weights: IMAGENET1K_V1
+  weights_source: torchvision.models.EfficientNet_B0_Weights.IMAGENET1K_V1
+  freeze_backbone: true
+  classifier: single_linear_layer
+  num_classes: 6
+
+training:
+  batch_size: 32
+  epochs: 20
+  learning_rate: 0.001
+  optimizer: Adam
+  loss: CrossEntropyLoss
+  seed: 42
+  num_workers: 0
+  device: auto
+
+selection:
+  split: validation
+  primary_metric: accuracy
+  tie_break: lower_loss
+
+outputs:
+  checkpoint: v2/checkpoints/best_efficientnet.pt
+  class_mapping: v2/checkpoints/experiment_003_class_indices.json
+  history: v2/results/experiment_003/history.json
+  metadata: v2/experiments/experiment_003_metadata.json
+  training_curve: v2/results/experiment_003/training_curve.png
+  validation_curve: v2/results/experiment_003/validation_curve.png
+  test_metrics: v2/results/experiment_003/metrics.json
+  confusion_matrix: v2/results/experiment_003/confusion_matrix.png

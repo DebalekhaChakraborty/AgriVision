@@ -1,0 +1,40 @@
+{
+  "comparisons": {
+    "clip_strict_zero_shot_minus_clip_linear_probe": {
+      "left": "clip_strict_zero_shot",
+      "lower": 0.10991636798088411,
+      "mean_paired_bootstrap_accuracy_difference": 0.12175039426523297,
+      "observed_accuracy_difference": 0.12186379928315416,
+      "right": "clip_linear_probe",
+      "upper": 0.13405017921146944
+    },
+    "siglip2_strict_zero_shot_minus_clip_strict_zero_shot": {
+      "left": "siglip2_strict_zero_shot",
+      "lower": 0.1763440860215053,
+      "mean_paired_bootstrap_accuracy_difference": 0.18891307048984468,
+      "observed_accuracy_difference": 0.18876941457586616,
+      "right": "clip_strict_zero_shot",
+      "upper": 0.201194743130227
+    },
+    "siglip2_strict_zero_shot_minus_mobilenetv3_large": {
+      "left": "siglip2_strict_zero_shot",
+      "lower": 0.1464755077658304,
+      "mean_paired_bootstrap_accuracy_difference": 0.15943182795698926,
+      "observed_accuracy_difference": 0.15937873357228194,
+      "right": "mobilenetv3_large",
+      "upper": 0.17228195937873347
+    },
+    "siglip2_strict_zero_shot_minus_siglip2_linear_probe": {
+      "left": "siglip2_strict_zero_shot",
+      "lower": 0.11875746714456392,
+      "mean_paired_bootstrap_accuracy_difference": 0.12790050179211468,
+      "observed_accuracy_difference": 0.12783751493428908,
+      "right": "siglip2_linear_probe",
+      "upper": 0.13739545997610514
+    }
+  },
+  "method": "Paired 95% class-stratified bootstrap interval over the FruitVision evaluation sample.",
+  "resamples": 5000,
+  "schema_version": 1,
+  "seed": 42
+}

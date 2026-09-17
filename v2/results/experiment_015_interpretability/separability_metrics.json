@@ -1,0 +1,75 @@
+{
+  "encoders": {
+    "clip": {
+      "domain": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 237.66366600509002,
+        "silhouette_cosine": 0.0949890986084938
+      },
+      "freshness_condition": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 208.36027015482213,
+        "silhouette_cosine": 0.0975542888045311
+      },
+      "fruit_identity": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 648.3780282059516,
+        "silhouette_cosine": 0.29825863242149353
+      },
+      "semantic_class": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 370.3327426619536,
+        "silhouette_cosine": 0.15842661261558533
+      }
+    },
+    "dinov2": {
+      "domain": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 84.89753550074467,
+        "silhouette_cosine": 0.027957454323768616
+      },
+      "freshness_condition": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 146.5197808255921,
+        "silhouette_cosine": 0.0730251893401146
+      },
+      "fruit_identity": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 1106.0877332540779,
+        "silhouette_cosine": 0.4479939043521881
+      },
+      "semantic_class": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 591.8457355089585,
+        "silhouette_cosine": 0.18812036514282227
+      }
+    },
+    "siglip2": {
+      "domain": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 287.76532999732564,
+        "silhouette_cosine": 0.08151107281446457
+      },
+      "freshness_condition": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 298.9661800121145,
+        "silhouette_cosine": 0.13530683517456055
+      },
+      "fruit_identity": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 702.0310709530581,
+        "silhouette_cosine": 0.3489271402359009
+      },
+      "semantic_class": {
+        "boundary": "Unsupervised cluster statistic; not classification accuracy.",
+        "calinski_harabasz": 436.3023771433765,
+        "silhouette_cosine": 0.2099144458770752
+      }
+    }
+  },
+  "protocol": {
+    "secondary_metric": "calinski_harabasz",
+    "silhouette_metric": "cosine"
+  },
+  "schema_version": 1
+}

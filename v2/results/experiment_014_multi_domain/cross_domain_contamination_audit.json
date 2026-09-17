@@ -1,0 +1,1111 @@
+{
+  "audited_at": "2026-09-02T22:00:25.779225+00:00",
+  "domain_b_identifiers_excluded_for_exact_or_pixel_match": [],
+  "domain_b_images": 4185,
+  "exact_method": "SHA-256 over original file bytes",
+  "perceptual_candidate_count_including_internal": 7274,
+  "perceptual_method": "63-bit pHash using 32x32 grayscale, orthonormal 2D DCT, and median-thresholded low-frequency 8x8 coefficients excluding DC",
+  "pixel_method": "SHA-256 over width, height, and decoded canonical RGB bytes",
+  "schema_version": 1,
+  "source_comparison": {
+    "comparison_images": 4507,
+    "exact_file_matches": [],
+    "perceptual_candidates": [
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "6129915e52af0308453ee2e84bd4cdf9e92bfc343cd6d9fb41c65bf75cb25b8e",
+          "height": 344,
+          "identifier": "test/rotten_banana/vertical_flip_Screen Shot 2018-06-12 at 9.25.18 PM.png",
+          "phash_63bit_hex": "696a9785781a2765",
+          "pixel_rgb_sha256": "1332aacd4c4359c70b3ea16e63fbc336922015e00bbab0e07543c94d4b8490d1",
+          "source_folder": "test/rotten_banana",
+          "width": 458
+        },
+        "domain_b": {
+          "class": "rotten_apple",
+          "file_sha256": "f4a7f95059efff3f54a84d44899c7ec9bd5e006b5c45b8b0f3793d8054e8bb4c",
+          "height": 1280,
+          "identifier": "Apple/Rotten/msg5170347760-68508.jpg",
+          "phash_63bit_hex": "692b9784781a656d",
+          "pixel_rgb_sha256": "deb484de0146e92efbe31fd684dea48216e7dcedf30bcfc1d36a5ced81c625de",
+          "source_folder": "Apple/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "9314f5c8d54cb108f2632d1899c9471001b8f877fee4572963c2b428ae590289",
+          "height": 416,
+          "identifier": "test/rotten_banana/saltandpepper_Screen Shot 2018-06-12 at 9.05.02 PM.png",
+          "phash_63bit_hex": "66b1981999ccc7c6",
+          "pixel_rgb_sha256": "d532af5f73e83fd9f072c1d7d12d12381e9e94492bb93dd624d328d18ac8cf4b",
+          "source_folder": "test/rotten_banana",
+          "width": 272
+        },
+        "domain_b": {
+          "class": "fresh_banana",
+          "file_sha256": "c5fb4806642317d890285d19731f0ac11d58d2863555e1a92d5f2b1a51de9285",
+          "height": 2228,
+          "identifier": "Banana/Fresh/_. (16)_3.jpg",
+          "phash_63bit_hex": "6639991899cec6c6",
+          "pixel_rgb_sha256": "b506dbf26dfdb515a3240caef0dcf52581f24ba71bbdc4e15d33641134f3162c",
+          "source_folder": "Banana/Fresh",
+          "width": 2136
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "da0a80efd9a8a1994907c3cd2092ea781df6416e449a88671193e62463ec2f0f",
+          "height": 356,
+          "identifier": "train/rotten_banana/Screen Shot 2018-06-12 at 9.21.10 PM.png",
+          "phash_63bit_hex": "36e28fb8c11fc60c",
+          "pixel_rgb_sha256": "9984445036f06fb5944a6110c35dfb3ce4012e8ffc6d589feaac9b01433bb096",
+          "source_folder": "train/rotten_banana",
+          "width": 286
+        },
+        "domain_b": {
+          "class": "fresh_banana",
+          "file_sha256": "b859d92b7fd3887b8e827cbcc38da4c5193ece5af09fcbae6db792d1c08e21b4",
+          "height": 1280,
+          "identifier": "Banana/Fresh/msg5170347760-66658.jpg",
+          "phash_63bit_hex": "36e29b39c91fc40c",
+          "pixel_rgb_sha256": "4223c977c084a31c6126ee6d687ce470368489425b1d93e4c16d6b83bce5c14b",
+          "source_folder": "Banana/Fresh",
+          "width": 721
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_orange",
+          "file_sha256": "e6d41558bcd88c4e97efe9c807aa04a51287d28503e7d41a17208f2655bf6d9f",
+          "height": 230,
+          "identifier": "train/rotten_orange/saltandpepper_Screen Shot 2018-06-12 at 11.28.08 PM.png",
+          "phash_63bit_hex": "34c7c23ccf388c33",
+          "pixel_rgb_sha256": "9f040006975e55aa3d791ede20dfd78b84dc6227ddbf7ca3e7d5a30d1cc460fa",
+          "source_folder": "train/rotten_orange",
+          "width": 264
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "17875b76aa27dd0416aa2408fb543de49a30709939988a648088ebc60abbb252",
+          "height": 960,
+          "identifier": "Orange/Rotten/6150065028531862847.jpg",
+          "phash_63bit_hex": "34cbd32ccf308c33",
+          "pixel_rgb_sha256": "f78dbc6f062203b96e52ed1a7961bf3af064e1a20f786dc9c4fa66b5707b5fbb",
+          "source_folder": "Orange/Rotten",
+          "width": 1280
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_orange",
+          "file_sha256": "e6d41558bcd88c4e97efe9c807aa04a51287d28503e7d41a17208f2655bf6d9f",
+          "height": 230,
+          "identifier": "train/rotten_orange/saltandpepper_Screen Shot 2018-06-12 at 11.28.08 PM.png",
+          "phash_63bit_hex": "34c7c23ccf388c33",
+          "pixel_rgb_sha256": "9f040006975e55aa3d791ede20dfd78b84dc6227ddbf7ca3e7d5a30d1cc460fa",
+          "source_folder": "train/rotten_orange",
+          "width": 264
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "33d772695e82a85c75a9f5ae76968c1597b23e39761650720b3e4fa1c8dfab29",
+          "height": 960,
+          "identifier": "Orange/Rotten/6150065028531863014.jpg",
+          "phash_63bit_hex": "34cdc336cf380c33",
+          "pixel_rgb_sha256": "5332d1a24550f87c0dba7354b4fbc032561b81dfdbf2422bba294462599284df",
+          "source_folder": "Orange/Rotten",
+          "width": 1280
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_orange",
+          "file_sha256": "fa325661a5386efc4707028513e13a85187c6d92586fc02b2315ed0615f15e19",
+          "height": 230,
+          "identifier": "train/rotten_orange/vertical_flip_Screen Shot 2018-06-12 at 11.28.08 PM.png",
+          "phash_63bit_hex": "619297689a6d9966",
+          "pixel_rgb_sha256": "5d0cc2d7cc51984d368a99cdfc9925d6b79036d6fc227958e2f4109e51e0e1e5",
+          "source_folder": "train/rotten_orange",
+          "width": 264
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "abb612c5fe928f0253dd5c568011231eac960c90919094204aa7efb289f0fa17",
+          "height": 960,
+          "identifier": "Orange/Rotten/6150065028531863024.jpg",
+          "phash_63bit_hex": "6092c76b9a6d9866",
+          "pixel_rgb_sha256": "e410a1fbe201c98cac9363e032b0439adb8d96b80f9f0b457f62cbef34f09463",
+          "source_folder": "Orange/Rotten",
+          "width": 1280
+        },
+        "hamming_distance": 6
+      }
+    ],
+    "pixel_equivalent_matches": []
+  },
+  "status": "REVIEW_REQUIRED",
+  "sultana_comparison": {
+    "comparison_images": 1200,
+    "exact_file_matches": [],
+    "perceptual_candidates": [
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "fresh_orange",
+          "file_sha256": "6cd41b15bf12633ce68f00c65306dd3087cf1eeec537dc6f8fe747c18d4d0cdf",
+          "height": 1040,
+          "identifier": "Orange/Fresh/WhatsApp Image 2024-06-21 at 11.10.48 PM (1).jpeg",
+          "phash_63bit_hex": "4a15955a5a6169b7",
+          "pixel_rgb_sha256": "dec1ac129697350120140ec33c2ef2560b7d84772b03a432e34f3920a3abc7aa",
+          "source_folder": "Orange/Fresh",
+          "width": 780
+        },
+        "hamming_distance": 4
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "34a2f1bec0c9ae52b63a435e3eddbd0d41eefa7e893a713c0eba6fb9f9ad2779",
+          "height": 2678,
+          "identifier": "RottenBanana/RottenBanana (147).jpg",
+          "phash_63bit_hex": "6b24951b68e5965a",
+          "pixel_rgb_sha256": "9d11e6d77c733896646a7c8ae35c8557c6de07d8422a31dd29c9004e6e9c3f8e",
+          "width": 3425
+        },
+        "domain_b": {
+          "class": "rotten_banana",
+          "file_sha256": "d66df354a13d0b6eb2e4a136adce9a9a9703b95905a67bcd6e2c32f2dada926e",
+          "height": 1280,
+          "identifier": "Banana/Rotten/msg5170347760-69029.jpg",
+          "phash_63bit_hex": "4b24951a6ae5975a",
+          "pixel_rgb_sha256": "39d419f581e52146bbeecf5f44ff82409d1267e57ccdaf08112e3dc1cf13bf65",
+          "source_folder": "Banana/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 4
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "1dad8ccc5bbb2b1ea65828f3b3b4c3b8251cb627063fa55f7c64fcb42667bb9e",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862983.jpg",
+          "phash_63bit_hex": "6a95956a5a656196",
+          "pixel_rgb_sha256": "ccc142787597b2aebbd689c1836146c57b5c85b9978aa12ef07273f785b1b026",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 4
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "cb6dd1339ba8f97910e324ab4c76ed529ee7cab6322eca5e4f7bff62ae431f6c",
+          "height": 2686,
+          "identifier": "RottenBanana/RottenBanana (95).jpg",
+          "phash_63bit_hex": "3830c7cf3c34c34b",
+          "pixel_rgb_sha256": "5db702d8bd5c5c6d0829a16a618c17dfcc8a05411d35c264d20ad619b86fdeeb",
+          "width": 3889
+        },
+        "domain_b": {
+          "class": "fresh_banana",
+          "file_sha256": "c4033d31d11bc78001a36225993b0416bb049bcd5b9bb06d54573fb39c443ad7",
+          "height": 3028,
+          "identifier": "Banana/Fresh/_. (4)_2.jpg",
+          "phash_63bit_hex": "3834c7cb3c34c2cb",
+          "pixel_rgb_sha256": "d471453079650d3590cf30eb635bf34d1a4b9f94d450c31a42955a758b61af6f",
+          "source_folder": "Banana/Fresh",
+          "width": 2096
+        },
+        "hamming_distance": 4
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "6fc4c973431cf7e6d58a388fe774ff91dd70f6de5ace8e80d5645977557d2e72",
+          "height": 2083,
+          "identifier": "FreshOrange/FreshOrange (174).jpg",
+          "phash_63bit_hex": "3134c6969a9ad999",
+          "pixel_rgb_sha256": "c5cdef2a6d865507bab808f40d551bc4b08e789ad9082a1e6da25b75be643cf8",
+          "width": 2598
+        },
+        "domain_b": {
+          "class": "fresh_orange",
+          "file_sha256": "3198eb2c023b677ec39aba714d6b0cf4acc0b3bcbcbed1fc9a7e1a0f649cf19b",
+          "height": 1200,
+          "identifier": "Orange/Fresh/WhatsApp Image 2024-06-22 at 10.41.07 PM (1).jpeg",
+          "phash_63bit_hex": "6165c6169a9ad999",
+          "pixel_rgb_sha256": "3769ea3a4ae2365cd3744bb4f289d40beee76561ee6f3a6a63e8a0da200862c6",
+          "source_folder": "Orange/Fresh",
+          "width": 1600
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "6fc4c973431cf7e6d58a388fe774ff91dd70f6de5ace8e80d5645977557d2e72",
+          "height": 2083,
+          "identifier": "FreshOrange/FreshOrange (174).jpg",
+          "phash_63bit_hex": "3134c6969a9ad999",
+          "pixel_rgb_sha256": "c5cdef2a6d865507bab808f40d551bc4b08e789ad9082a1e6da25b75be643cf8",
+          "width": 2598
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "ee79ecf74bb2257be94265716ba9138c936c546efbaaa5d7f677d1d6d026bb6b",
+          "height": 960,
+          "identifier": "Orange/Rotten/6183649667036855483.jpg",
+          "phash_63bit_hex": "216586969a9ed999",
+          "pixel_rgb_sha256": "5d1eb7420c0c8ed1b85c41597d81b526c00ec2b0ad144f4fd71a9753e4cf3bab",
+          "source_folder": "Orange/Rotten",
+          "width": 1280
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "7ea95c4c2555700090b3c3c873d918a5dabed5399426262ac70037112d1f2136",
+          "height": 3000,
+          "identifier": "FreshOrange/FreshOrange (122).jpg",
+          "phash_63bit_hex": "6996c63b9966194c",
+          "pixel_rgb_sha256": "456aabfc5691219c743fbaf35bd12f51fbbe8d98905054d52b9cad55056f2cfa",
+          "width": 4000
+        },
+        "domain_b": {
+          "class": "fresh_apple",
+          "file_sha256": "b82aa5ae070b5ec88123d766e7a4a8b3599fe929fc56d8c4ac6ed632417a2f31",
+          "height": 960,
+          "identifier": "Apple/Fresh/msg5170347760-68616.jpg",
+          "phash_63bit_hex": "6996c63b98653964",
+          "pixel_rgb_sha256": "9ea8f861619b1348fa50a7c12a67190d681ea0020619c21f6db0906cbddbf22e",
+          "source_folder": "Apple/Fresh",
+          "width": 1280
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "fresh_apple",
+          "file_sha256": "1171457b77ce2b31e0390dc35545ac97aa89ef0e54d95953b9d86a8709cd6c40",
+          "height": 1280,
+          "identifier": "Apple/Fresh/msg5170347760-64627.jpg",
+          "phash_63bit_hex": "6a31857a5a656996",
+          "pixel_rgb_sha256": "fcc05ff2e645c30f1aadcfb91eb150161862a24b6c2131e72809238a91b19d04",
+          "source_folder": "Apple/Fresh",
+          "width": 860
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "fresh_apple",
+          "file_sha256": "ef4337310eaed69411e4bff7cdb091da63a558fd927d59e5143939fbceed06ed",
+          "height": 1600,
+          "identifier": "Apple/Fresh/WhatsApp Image 2024-06-22 at 10.44.39 PM.jpeg",
+          "phash_63bit_hex": "7817855a5a656996",
+          "pixel_rgb_sha256": "3f784a27adb9b209ede30a66d9dd290b5a24f39c53eb34c530dd8942abc5fb70",
+          "source_folder": "Apple/Fresh",
+          "width": 1200
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "fresh_orange",
+          "file_sha256": "844fedccf512d304cece5900228dd0c814fb3a283a34dccc8c9a679b6855cded",
+          "height": 1040,
+          "identifier": "Orange/Fresh/WhatsApp Image 2024-06-21 at 11.10.43 PM (1).jpeg",
+          "phash_63bit_hex": "4a15955a5a657996",
+          "pixel_rgb_sha256": "02a3b736472f7a4bfccc48d299663ea270fbca807a2c1744f85226d4cc78a7a7",
+          "source_folder": "Orange/Fresh",
+          "width": 780
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "fresh_orange",
+          "file_sha256": "96cfdb2eb902c6245353b0c4156a97aada007efa15891209c233104b98e69a1e",
+          "height": 1040,
+          "identifier": "Orange/Fresh/WhatsApp Image 2024-06-21 at 11.10.32 PM (1).jpeg",
+          "phash_63bit_hex": "4a15955a5e6969a5",
+          "pixel_rgb_sha256": "56afe8cae03ce09463caf33af5ea4073b6914899714c348417843bc59033eea3",
+          "source_folder": "Orange/Fresh",
+          "width": 780
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "fresh_orange",
+          "file_sha256": "f2475ac64c5956f353c413a2c0729ca3806b8cf910eddcab62b111464c752da8",
+          "height": 1040,
+          "identifier": "Orange/Fresh/WhatsApp Image 2024-06-21 at 11.10.48 PM.jpeg",
+          "phash_63bit_hex": "4a15954ada6569b6",
+          "pixel_rgb_sha256": "b160b9352a47144e125da06e0df4a15253487b22cacbfbe40de29c2e3a7ce213",
+          "source_folder": "Orange/Fresh",
+          "width": 780
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "fresh_orange",
+          "file_sha256": "ff6897087d2865b7b0703b5516881d967c107550e323d3e97eeaa5477c11267e",
+          "height": 1600,
+          "identifier": "Orange/Fresh/WhatsApp Image 2024-06-22 at 10.41.20 PM (1).jpeg",
+          "phash_63bit_hex": "7ab5855a5a616994",
+          "pixel_rgb_sha256": "3c0c5ae01f3b9bd31e9937c20e845a04966601a89fdc4eecf446ef261548f7f3",
+          "source_folder": "Orange/Fresh",
+          "width": 1200
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_apple",
+          "file_sha256": "5f5240a03a02eca47616bdb4be25e73056c085fcd4e058b48889b7276a53c58a",
+          "height": 1280,
+          "identifier": "Apple/Rotten/msg5170347760-65807.jpg",
+          "phash_63bit_hex": "6aa5855a5a656996",
+          "pixel_rgb_sha256": "71f7dbfaca19a9897956f99b8ab19d3b70ff209f9c0adeb39b82b1ab5a45ac5a",
+          "source_folder": "Apple/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_apple",
+          "file_sha256": "ea585fc203d01884d645c9b0ffd5d281b59e35f06c117bcfe46b5a6962859c33",
+          "height": 1280,
+          "identifier": "Apple/Rotten/msg5170347760-69203.jpg",
+          "phash_63bit_hex": "6a37855a5a656196",
+          "pixel_rgb_sha256": "c9d5dcc7ecdbaecef7238b5677c41dc64f66dacd606ded60f1ede44bd5c9d929",
+          "source_folder": "Apple/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "0e180f6b2da7d96bc08f821fb46e8ac5be2945e26a0d35720eb1c8332f36efa3",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6184002721938521960.jpg",
+          "phash_63bit_hex": "6a05957a5a616997",
+          "pixel_rgb_sha256": "37b4e9d3dbbfe1c4b332106fd121051c0a244da8ba97b99ea6b7f64c1d5bdaa4",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "12db748321f7622077bdc30304461f6ab9b628a92a44c70997f750f740673f94",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531863019.jpg",
+          "phash_63bit_hex": "6a07857a5a616997",
+          "pixel_rgb_sha256": "54a874ebf4f4aeac5b8fa584cac597e5d62e28a3fba9e0fb33104e18c738d1f4",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "261fc18821d1156f3896f4d0d99c72a5293d94013045c4239302004e20e992de",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6179278253617954099.jpg",
+          "phash_63bit_hex": "6a05857a5a2d6997",
+          "pixel_rgb_sha256": "3a8c7cfc70ca55c82a4033019810448f3067ecd8c41106a14b16339e63637915",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "5aa0dc85ad33eaa02e59c53f236d22c028abb25dd0d2b8f57e4acad9d8d70ce2",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862834.jpg",
+          "phash_63bit_hex": "7a95855a1a616997",
+          "pixel_rgb_sha256": "fe298fe24a08eb790d3e1ec76221d3308466648adc380b349d7278d3426a7af5",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "5cea93891d6383b2c8e5bc3a524d3bed5bb1cc3c2134e1de560eec43824976fe",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862988.jpg",
+          "phash_63bit_hex": "6ab5855a5a616996",
+          "pixel_rgb_sha256": "ff5d649b9c2f8aabc0837466532f47d4b51ecc92a3b221653902c40ef938b1a0",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "6250d5017cb210780b80849bab60d69a0b35ec56aa167a5fcc2780d8edaa1283",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6174559330100165477.jpg",
+          "phash_63bit_hex": "6a07856a5a2569b7",
+          "pixel_rgb_sha256": "8481a50cdb3d056e203ede0964aae8e07a1d20bf987858043d1d5d22dce700cc",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "6407dba94c0a949d7b2efe7c8360ad7327dcf4ceb724f7b01b744ca4e0b94a78",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862978.jpg",
+          "phash_63bit_hex": "6a14855a5e6d68b6",
+          "pixel_rgb_sha256": "37128c9aedb555f8ae06de63a23baada487daf198b08a9e0112fa876e575043e",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "7d157750b46ce18816a3b8f65ebf61bb88a779f37ebef52a3770fb8082c5389e",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862827.jpg",
+          "phash_63bit_hex": "6895857a5a656996",
+          "pixel_rgb_sha256": "12821658c717c21152ab1d2099a0d865bbf014530322e258e2557384506aad1e",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "9eecdbac96ace0292c09f7e1f94b697a3eaa41deb77bbefb4fc36b1ec2e47e0a",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862809.jpg",
+          "phash_63bit_hex": "4a15a55a5e6969a5",
+          "pixel_rgb_sha256": "838d919971764fe4f0c7ce652b5f037682fe2773e36a1a322d868bc7e04c2dac",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "a70d9c8910593b1b6bdf2103432238aae3f28145a399d08089139eedd630246a",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862957.jpg",
+          "phash_63bit_hex": "6a15957a5a616996",
+          "pixel_rgb_sha256": "aca0663793fd9cdb88787957d6ef6ad86c46c64486a9d51fe9e3b90c59e3ad5e",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "db381e99d21682ef9ab4971535f0e0fbf942d16cac95281af9533f89624edc9f",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862965.jpg",
+          "phash_63bit_hex": "6a95955a5a616987",
+          "pixel_rgb_sha256": "2c5fd9f05d7548577cebba496a96725dc6fa50d84818c3c9eac3389a3121c048",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "80006c096c769196e6a3dc6a36724cfabfccffb36ee206e7687fd4e6a2bedf4c",
+          "height": 3251,
+          "identifier": "FreshOrange/FreshOrange (132).jpg",
+          "phash_63bit_hex": "6a15855a5a6569b5",
+          "pixel_rgb_sha256": "598e3993360359939893e52ee015844e3bb5b58ab9cca91719622e13c2109a2a",
+          "width": 3000
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "e72bfb80393ab4169b3601be0760b3af212f56efd84d149a0b7cbbc34f63572f",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862917.jpg",
+          "phash_63bit_hex": "6a05857a5e696995",
+          "pixel_rgb_sha256": "a9c0f58652119c1c25bbb3f7307c0770060a13bf5bba38d62003cd5af3053cbc",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "fresh_orange",
+          "file_sha256": "ce921ee39b81b6d15e0e78c8cf631d1bcf06f8992ba1ab03cd1e3e51a4036797",
+          "height": 2370,
+          "identifier": "FreshOrange/FreshOrange (161).jpg",
+          "phash_63bit_hex": "6a68978d589a6533",
+          "pixel_rgb_sha256": "cfa567d1e4f6b9e7839c8022cdf343b85623911865984561594b3540d0d78f07",
+          "width": 2560
+        },
+        "domain_b": {
+          "class": "fresh_orange",
+          "file_sha256": "5bceaaffec25f74dd7920637c60c3925b2fd1338d6df2baa34217196e8f0291e",
+          "height": 1280,
+          "identifier": "Orange/Fresh/msg5170347760-65142.jpg",
+          "phash_63bit_hex": "686897a55a9a6539",
+          "pixel_rgb_sha256": "1fb67a632f39c60b5486f164772729774474efa4000f5d46805096f252462f8a",
+          "source_folder": "Orange/Fresh",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_apple",
+          "file_sha256": "5cbad14d4df7946bd6eec8888242de3fa771db82a07aff5c94c2aae87485c830",
+          "height": 2938,
+          "identifier": "RottenApple/RottenApple (28).jpg",
+          "phash_63bit_hex": "25cac669d8655966",
+          "pixel_rgb_sha256": "d6e198d4cb4acc3ff5e27d9909bdc0de30ae1addfef8a5881e6c7abc47e95716",
+          "width": 3120
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "4fe42d44fa4b0c7f4cbc5b703fb08596fd5d9653cc686188eda0d9fa21428442",
+          "height": 960,
+          "identifier": "Orange/Rotten/6158706318047820702.jpg",
+          "phash_63bit_hex": "61da966998655966",
+          "pixel_rgb_sha256": "c93975ffe2aec651b5e45d07e8c63e1ed38fd0fa07051f139cdc945be6586e4e",
+          "source_folder": "Orange/Rotten",
+          "width": 1280
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "118142e26bcde97e8ef50f4d021cfb8776e24e4066892cacd47100b3c371a967",
+          "height": 2008,
+          "identifier": "RottenBanana/RottenBanana (190).jpg",
+          "phash_63bit_hex": "7434c1cb3c3cd2c3",
+          "pixel_rgb_sha256": "558a164c8b996f31f4178a0cfe366eb9f85363a1555b44ea4b49a75fb8983f6e",
+          "width": 3307
+        },
+        "domain_b": {
+          "class": "rotten_banana",
+          "file_sha256": "96c3dd0238cf028b8e1fd207c621c3335b70026bec6f53387c3b1bac3582bc90",
+          "height": 3356,
+          "identifier": "Banana/Rotten/_. (6)_10.jpg",
+          "phash_63bit_hex": "3c30c3cb3c34d2cb",
+          "pixel_rgb_sha256": "e71abe3030dafa00fe65a37fd28036a6586bc75db5a5a3a8ac8438a4c4fd3c4f",
+          "source_folder": "Banana/Rotten",
+          "width": 2128
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "fresh_orange",
+          "file_sha256": "6468eb19aef769c973f13b8e1610cdf2a48fd158604fad365e39976716c7d1c1",
+          "height": 1600,
+          "identifier": "Orange/Fresh/WhatsApp Image 2024-06-22 at 10.37.54 PM (1).jpeg",
+          "phash_63bit_hex": "6895d72a1e657096",
+          "pixel_rgb_sha256": "754448913d2849346fe2c4d52a1b2f644785dd71c15137c053e37c5a313b8d15",
+          "source_folder": "Orange/Fresh",
+          "width": 1200
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "fresh_orange",
+          "file_sha256": "ce3822362fb303a8a5188a1ceb0da6f06792ff5130d4da135c32561093ab4f91",
+          "height": 1600,
+          "identifier": "Orange/Fresh/WhatsApp Image 2024-06-22 at 10.37.56 PM (1).jpeg",
+          "phash_63bit_hex": "6895d72a1ae56196",
+          "pixel_rgb_sha256": "1e764004541a171d21b2f8dcf9fb9c4ca68b72191f90a95065dbc882cf4a738b",
+          "source_folder": "Orange/Fresh",
+          "width": 1200
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_apple",
+          "file_sha256": "82fad12221d7f4a613ccbaa27c7bad8712ad1926937d7a6e0a1775ff1419c5ab",
+          "height": 1280,
+          "identifier": "Apple/Rotten/msg5170347760-68430.jpg",
+          "phash_63bit_hex": "6815976a5a656396",
+          "pixel_rgb_sha256": "bf9f72e408adcdbe810ed1841b34ce0e0a7e5e9137faae1359241b635af51050",
+          "source_folder": "Apple/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_apple",
+          "file_sha256": "f7aac73f3db73caa1b2df8756ceca90fef94cc28196217650ae806e2561c7558",
+          "height": 1040,
+          "identifier": "Apple/Rotten/6100533069082640042.jpg",
+          "phash_63bit_hex": "7897857a1a656196",
+          "pixel_rgb_sha256": "4bc1ff4c85658e135e3ae95336f87f2638ab6fc5cdff2a1360cc45bbb8adcef9",
+          "source_folder": "Apple/Rotten",
+          "width": 780
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "0dbc0f52a890e3da29325a6dca8161e78d71bfa96bcb0d64388594a03d6414f2",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531863026.jpg",
+          "phash_63bit_hex": "6d9796681c656196",
+          "pixel_rgb_sha256": "c7d8961efb08c10116763e782f1427ff98a8b0cc4c08dacd66b79215ed2dd700",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "1eb7efc256326153854d6e4f26a644834863971c4bba1a13e9eea8623873330b",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862943.jpg",
+          "phash_63bit_hex": "6817956a5a657196",
+          "pixel_rgb_sha256": "85e86d5495ca96387ce1a82afa80822a655d948f732da274e4f10fee1e820b41",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "24fae5cd4237243bbaef922efb4f709f9e43ea32d240382bb917e2286ef3186e",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862961.jpg",
+          "phash_63bit_hex": "6a95954a1e6570d6",
+          "pixel_rgb_sha256": "801c525a3b934da013e83f2093025f1a9decf3930cca97cff41b66ecd24eedfd",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "32b8d044fb9ac30ee3ad29baa02073041d584daa0f1f3be02f0503e8b728df00",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6179278253617954144.jpg",
+          "phash_63bit_hex": "6817956a5a656996",
+          "pixel_rgb_sha256": "5e93235caca6d91da84f1c69376d099e5af021e8d556654f2ba2ce7c6d8032de",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "7d157750b46ce18816a3b8f65ebf61bb88a779f37ebef52a3770fb8082c5389e",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862827.jpg",
+          "phash_63bit_hex": "6895857a5a656996",
+          "pixel_rgb_sha256": "12821658c717c21152ab1d2099a0d865bbf014530322e258e2557384506aad1e",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "81c1b0c865278276e92afe1639ad763fc374f547c744688e96ab26d9d389dcd8",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862973.jpg",
+          "phash_63bit_hex": "6817957a5a656196",
+          "pixel_rgb_sha256": "cdc4d5e18eeaff58d00313840a43555f4d5a3c285f36079805d07f2943403eac",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "36d230bdbc30f861e1cc2fc3a0cdbfdd76266f0f0c865c93d2345573870056df",
+          "height": 1578,
+          "identifier": "RottenBanana/RottenBanana (165).jpg",
+          "phash_63bit_hex": "6995956a1e656196",
+          "pixel_rgb_sha256": "14f9d01e470ed9e9a5e458c91d900b3473432cf4b16ffb08d678dd8ab5a55ff7",
+          "width": 3070
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "b5629157d4f36e177015c973906ad920eef2413d7e4283c362efc8e0cc1145e3",
+          "height": 1280,
+          "identifier": "Orange/Rotten/6150065028531862825.jpg",
+          "phash_63bit_hex": "689797685a656196",
+          "pixel_rgb_sha256": "a17e23feec8377b077447a8e31dfad2b7eb80fefc7674d314c9db2746500fb60",
+          "source_folder": "Orange/Rotten",
+          "width": 960
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_banana",
+          "file_sha256": "cb6dd1339ba8f97910e324ab4c76ed529ee7cab6322eca5e4f7bff62ae431f6c",
+          "height": 2686,
+          "identifier": "RottenBanana/RottenBanana (95).jpg",
+          "phash_63bit_hex": "3830c7cf3c34c34b",
+          "pixel_rgb_sha256": "5db702d8bd5c5c6d0829a16a618c17dfcc8a05411d35c264d20ad619b86fdeeb",
+          "width": 3889
+        },
+        "domain_b": {
+          "class": "rotten_banana",
+          "file_sha256": "96c3dd0238cf028b8e1fd207c621c3335b70026bec6f53387c3b1bac3582bc90",
+          "height": 3356,
+          "identifier": "Banana/Rotten/_. (6)_10.jpg",
+          "phash_63bit_hex": "3c30c3cb3c34d2cb",
+          "pixel_rgb_sha256": "e71abe3030dafa00fe65a37fd28036a6586bc75db5a5a3a8ac8438a4c4fd3c4f",
+          "source_folder": "Banana/Rotten",
+          "width": 2128
+        },
+        "hamming_distance": 6
+      },
+      {
+        "comparison": {
+          "class": "rotten_orange",
+          "file_sha256": "a81646e601228ebdf28264c643d39cd1e2d8f6b167f256a77b9ad1f8e5f2c67a",
+          "height": 2016,
+          "identifier": "RottenOrange/RottenOrange (73).jpg",
+          "phash_63bit_hex": "609bc6799a609967",
+          "pixel_rgb_sha256": "7de8a6e1905738f625fa2505d2da708f8f0edb46533ad520019ea26c07a93920",
+          "width": 2137
+        },
+        "domain_b": {
+          "class": "rotten_orange",
+          "file_sha256": "7d62407ad37299d05891d584beab3ab354753c364882aef9f8971dea0e655283",
+          "height": 960,
+          "identifier": "Orange/Rotten/6174559330100165476.jpg",
+          "phash_63bit_hex": "619e86599a619967",
+          "pixel_rgb_sha256": "128414e89966d3a641243aebac67d474b005d9932044e24c6653cf809abde3fb",
+          "source_folder": "Orange/Rotten",
+          "width": 1280
+        },
+        "hamming_distance": 6
+      }
+    ],
+    "pixel_equivalent_matches": []
+  },
+  "threshold": 6,
+  "threshold_status": "frozen_before_candidate_inspection"
+}

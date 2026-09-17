@@ -1,0 +1,75 @@
+schema_version: 1
+status: phase_3b_zero_shot
+
+experiment:
+  id: V2-P3B-CLIP-ZS-008
+  number: 8
+  phase: 3B
+  model_label: Original OpenAI CLIP ViT-B/16
+  objective: Evaluate semantic fruit-freshness transfer without fitting any target-dataset parameter.
+
+data:
+  root: v2/data/processed/v1_frozen_split
+  dataset_name: Fruits fresh and rotten for classification
+  dataset_version: Kaggle version 1, 2018-08-24
+  split_report_sha256: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  validation_split: validation
+  test_split: test
+  validation_samples: 270
+  test_samples: 2698
+  train_split_prohibited: true
+
+model:
+  adapter: clip_zero_shot
+  family: CLIP
+  model_name: ViT-B-16
+  pretrained_identifier: openai
+  checkpoint_id: timm/vit_base_patch16_clip_224.openai
+  checkpoint_filename: open_clip_model.safetensors
+  checkpoint_sha256: 4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f
+  checkpoint_size_bytes: 598516980
+  revision: 977e3dd0ec55ab8da155f2fbeb6b5f54948b6e3d
+  provider: OpenAI via OpenCLIP
+  library: open_clip_torch
+  library_version: 3.3.0
+  input_resolution: 224
+  embedding_dim: 512
+  download_cache: v2/cache/huggingface
+  preprocessing_identity: openai-clip-vit-b16-openclip-3.3.0
+  resize_mode: shortest
+  interpolation: bicubic
+  image_mean: [0.48145466, 0.4578275, 0.40821073]
+  image_std: [0.26862954, 0.26130258, 0.27577711]
+
+prompts:
+  registry_path: v2/configs/zero_shot_prompts.yaml
+  registry_sha256: e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7
+  strict_family: P1
+  candidate_families: [P1, P2, P3, P4]
+  selection_primary: macro_f1
+  first_tie_breaker: accuracy
+  second_tie_breaker: simpler_prompt_strategy
+
+evaluation:
+  seed: 42
+  device: auto
+  batch_size: 32
+  num_workers: 0
+  normalize_image_embeddings: true
+  normalize_text_embeddings: true
+  similarity: cosine_with_model_native_logit_scale_and_bias
+  classifier_training: false
+  calibration_fitting: false
+
+outputs:
+  result_dir: v2/results/experiment_008
+  validation_comparison: v2/results/experiment_008/validation_prompt_comparison.json
+  prompt_figure: v2/results/experiment_008/prompt_strategy_validation_comparison.png
+  strict_metrics: v2/results/experiment_008/strict_zero_shot_test_metrics.json
+  selected_metrics: v2/results/experiment_008/selected_prompt_test_metrics.json
+  strict_report: v2/results/experiment_008/classification_report_strict.json
+  selected_report: v2/results/experiment_008/classification_report_selected.json
+  strict_confusion: v2/results/experiment_008/confusion_matrix_strict.png
+  selected_confusion: v2/results/experiment_008/confusion_matrix_selected.png
+  margins: v2/results/experiment_008/similarity_margin_analysis.json
+  metadata: v2/results/experiment_008/metadata.json

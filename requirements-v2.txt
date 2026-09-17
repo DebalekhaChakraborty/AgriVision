@@ -1,17 +1,21 @@
-# V2 research bootstrap environment (Python 3.11+)
-#
-# This manifest is intentionally separate from the frozen V1 requirements.txt.
-# Resolve and record exact versions in an environment lock before each experiment.
+# V2 research environment through Phase 3A (Python 3.11+; CPU reference installation)
+# This manifest is separate from the frozen V1 requirements.txt.
+--extra-index-url https://download.pytorch.org/whl/cpu
 
-torch
-torchvision
-timm
-transformers
-opencv-python
-scikit-learn
-pandas
-numpy
-matplotlib
-jupyter
-seaborn
-Pillow
+torch==2.13.0+cpu
+torchvision==0.28.0+cpu
+numpy==2.4.6
+pandas==3.0.5
+matplotlib==3.11.1
+scikit-learn==1.9.0
+opencv-python==5.0.0.93
+Pillow==12.3.0
+jupyter==1.1.1
+tqdm==4.70.0
+PyYAML==6.0.3
+transformers==5.16.1
+huggingface-hub==1.29.0
+safetensors==0.8.0
+open-clip-torch==3.3.0
+timm==1.0.29
+ftfy==6.3.1

@@ -1,0 +1,123 @@
+{
+  "accuracy": 0.7409191994069682,
+  "checkpoint": {
+    "path": "v2/checkpoints/best_model.pt",
+    "selected_epoch": 2,
+    "sha256": "37e582bb8ec034b04d26ab6f2a6168fc251d9d154ae4bf711b1a8517be33e96d"
+  },
+  "class_mapping": {
+    "fresh_apple": 0,
+    "fresh_banana": 1,
+    "fresh_orange": 2,
+    "rotten_apple": 3,
+    "rotten_banana": 4,
+    "rotten_orange": 5
+  },
+  "classification_report": {
+    "accuracy": 0.7409191994069682,
+    "fresh_apple": {
+      "f1-score": 0.6678603401969562,
+      "precision": 0.5166204986149584,
+      "recall": 0.9443037974683545,
+      "support": 395.0
+    },
+    "fresh_banana": {
+      "f1-score": 0.8485714285714285,
+      "precision": 0.9310344827586207,
+      "recall": 0.7795275590551181,
+      "support": 381.0
+    },
+    "fresh_orange": {
+      "f1-score": 0.8106591865357644,
+      "precision": 0.8892307692307693,
+      "recall": 0.7448453608247423,
+      "support": 388.0
+    },
+    "macro avg": {
+      "f1-score": 0.7456826643433953,
+      "precision": 0.7752513369417473,
+      "recall": 0.7503983361312897,
+      "support": 2698.0
+    },
+    "rotten_apple": {
+      "f1-score": 0.5913875598086125,
+      "precision": 0.6959459459459459,
+      "recall": 0.5141430948419301,
+      "support": 601.0
+    },
+    "rotten_banana": {
+      "f1-score": 0.8926961226330027,
+      "precision": 0.8549222797927462,
+      "recall": 0.9339622641509434,
+      "support": 530.0
+    },
+    "rotten_orange": {
+      "f1-score": 0.6629213483146067,
+      "precision": 0.7637540453074434,
+      "recall": 0.5856079404466501,
+      "support": 403.0
+    },
+    "weighted avg": {
+      "f1-score": 0.7403100388623582,
+      "precision": 0.7720444682757786,
+      "recall": 0.7409191994069682,
+      "support": 2698.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      373,
+      1,
+      0,
+      18,
+      0,
+      3
+    ],
+    [
+      67,
+      297,
+      3,
+      0,
+      11,
+      3
+    ],
+    [
+      36,
+      4,
+      289,
+      47,
+      1,
+      11
+    ],
+    [
+      215,
+      0,
+      7,
+      309,
+      42,
+      28
+    ],
+    [
+      0,
+      6,
+      0,
+      1,
+      495,
+      28
+    ],
+    [
+      31,
+      11,
+      26,
+      69,
+      30,
+      236
+    ]
+  ],
+  "evaluated_at": "2026-09-01T11:06:30.652462+00:00",
+  "experiment_id": "V2-P1-CNN-V1SPLIT-001",
+  "loss": 0.7287531182269329,
+  "samples": 2698,
+  "single_test_pass": true,
+  "split": "test"
+}

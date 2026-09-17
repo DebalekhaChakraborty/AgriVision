@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "experiment_id": "V2-P3E-MULTI-DOMAIN-014",
+  "reviewed_at": "2026-09-02",
+  "candidate_count": 7274,
+  "cross_domain_review": {
+    "source_candidates": 6,
+    "sultana_candidates": 43,
+    "visually_reviewed_pairs": 49,
+    "disposition": "ALL_FALSE_POSITIVE_NOT_SAME_PHOTOGRAPH",
+    "basis": "Side-by-side review found different fruit instances, geometry, surface markings, crops, and/or species. Low distances were driven by a single centered fruit on a light background. No pair depicted the same underlying photograph or scene."
+  },
+  "within_fruitvision_review": {
+    "candidate_pairs": 7225,
+    "unique_records_in_candidates": 1774,
+    "distance_distribution": {
+      "0": 9,
+      "2": 232,
+      "4": 1517,
+      "6": 5467
+    },
+    "visual_review_design": "A deterministic 30-pair sample spanning the full candidate list, including the smallest-distance and later list regions, was reviewed side by side. Exact/pixel groups were audited separately and are fully enumerated in fruitvision_dataset_audit.json.",
+    "visually_reviewed_sample_pairs": 30,
+    "sample_disposition": "DIFFERENT_PHYSICAL_FRUIT_OR_DIFFERENT_RAW_CAPTURE",
+    "interpretation": "The coarse global pHash is highly sensitive to FruitVision's standardized centered-object/white-background composition. Candidate status is not treated as proof of duplication. Published records are preserved. Some dependence from repeated physical fruit/capture sessions may remain and is a stated limitation.",
+    "exact_duplicate_groups": 28,
+    "pixel_equivalent_duplicate_groups": 28,
+    "secondary_exact_or_pixel_record_fraction": 0.006690561529271207,
+    "pre_registered_severe_fraction": 0.1,
+    "severe_duplication_blocker": false
+  },
+  "ambiguous_or_contaminating_candidates": [],
+  "automatic_perceptual_exclusions": 0,
+  "status": "PASS_REVIEW_COMPLETE"
+}

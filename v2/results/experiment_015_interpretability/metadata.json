@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "experiment_id": "V2-P3F-REPRESENTATION-INTERPRETABILITY-015",
+  "title": "Representation Interpretability and Robustness-Mechanism Study",
+  "branch": "master",
+  "status": "complete",
+  "completed_at": "2026-09-07",
+  "seed": 42,
+  "predictive_training_performed": false,
+  "target_domain_adaptation_performed": false,
+  "models": {
+    "representations": [
+      "DINOv2 ViT-B/14",
+      "Original CLIP ViT-B/16",
+      "SigLIP2 Base"
+    ],
+    "decision_systems": [
+      "CLIP full-source linear probe",
+      "CLIP strict P1 zero-shot",
+      "SigLIP2 full-source linear probe",
+      "SigLIP2 strict P1 zero-shot",
+      "EfficientNet-B0 frozen Experiment 003 checkpoint"
+    ]
+  },
+  "domains": [
+    "source",
+    "sultana",
+    "fruitvision"
+  ],
+  "balanced_manifest": {
+    "path": "balanced_analysis_manifest.json",
+    "sha256": "e9998cd1ab4eadfc17edc5d59835cd35d4ff527171bb2d6c225b4f81147e8941",
+    "total_samples": 3600,
+    "samples_per_domain_class": 200
+  },
+  "attribution_manifest": {
+    "path": "attribution_subset_manifest.json",
+    "sha256": "58b091dafac6b665547a1129384fccb8e5ed11dce5cb199cdc3f63c81202c790",
+    "total_images": 109,
+    "same_images_for_all_systems": true
+  },
+  "analysis_protocol": {
+    "pca_components": 2,
+    "silhouette_metric": "cosine",
+    "analytical_probe_folds": 5,
+    "direction_bootstrap_resamples": 2000,
+    "retrieval_gallery": "source",
+    "retrieval_k": [1, 5, 10],
+    "occlusion_grid": [7, 7],
+    "occlusion_baseline": "zero-valued normalized model input",
+    "decision_score": "predicted-class score minus strongest competing-class score"
+  },
+  "omissions": {
+    "source_attribution": "No frozen per-image source prediction record existed; prior inference was not rerun.",
+    "transformer_attention": "Omitted; raw attention is not a causal explanation and was not necessary.",
+    "grad_cam": "Omitted; common model-agnostic occlusion was sufficient and avoided an invasive model-specific extension.",
+    "image_overlays": "No raw or transformed dataset photographs are committed."
+  },
+  "claim_boundary": "Post-hoc descriptive association only. No causal mechanism, food-safety, edibility, shelf-life, chemical-spoilage, or microbial-spoilage claim."
+}

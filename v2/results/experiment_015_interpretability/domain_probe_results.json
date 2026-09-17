@@ -1,0 +1,117 @@
+{
+  "encoders": {
+    "clip": {
+      "accuracy_fold_std": 0.001388888888888884,
+      "accuracy_mean": 0.9986111111111111,
+      "folds": [
+        {
+          "accuracy": 0.9972222222222222,
+          "fold": 1,
+          "macro_f1": 0.9972250856873904
+        },
+        {
+          "accuracy": 0.9986111111111111,
+          "fold": 2,
+          "macro_f1": 0.9986111050829214
+        },
+        {
+          "accuracy": 0.9972222222222222,
+          "fold": 3,
+          "macro_f1": 0.9972222161940326
+        },
+        {
+          "accuracy": 1.0,
+          "fold": 4,
+          "macro_f1": 1.0
+        },
+        {
+          "accuracy": 1.0,
+          "fold": 5,
+          "macro_f1": 1.0
+        }
+      ],
+      "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+      "macro_f1_fold_std": 0.001388174937748707,
+      "macro_f1_mean": 0.9986116813928689
+    },
+    "dinov2": {
+      "accuracy_fold_std": 0.0029462782549439376,
+      "accuracy_mean": 0.9958333333333332,
+      "folds": [
+        {
+          "accuracy": 1.0,
+          "fold": 1,
+          "macro_f1": 1.0
+        },
+        {
+          "accuracy": 0.9972222222222222,
+          "fold": 2,
+          "macro_f1": 0.9972222222222222
+        },
+        {
+          "accuracy": 0.9958333333333333,
+          "fold": 3,
+          "macro_f1": 0.9958362148080311
+        },
+        {
+          "accuracy": 0.9930555555555556,
+          "fold": 4,
+          "macro_f1": 0.9930640498724134
+        },
+        {
+          "accuracy": 0.9930555555555556,
+          "fold": 5,
+          "macro_f1": 0.9930610603324269
+        }
+      ],
+      "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+      "macro_f1_fold_std": 0.0029429790709181083,
+      "macro_f1_mean": 0.9958367094470187
+    },
+    "siglip2": {
+      "accuracy_fold_std": 0.002598373185259672,
+      "accuracy_mean": 0.9972222222222223,
+      "folds": [
+        {
+          "accuracy": 1.0,
+          "fold": 1,
+          "macro_f1": 1.0
+        },
+        {
+          "accuracy": 1.0,
+          "fold": 2,
+          "macro_f1": 1.0
+        },
+        {
+          "accuracy": 0.9958333333333333,
+          "fold": 3,
+          "macro_f1": 0.9958333152487642
+        },
+        {
+          "accuracy": 0.9958333333333333,
+          "fold": 4,
+          "macro_f1": 0.9958332972392346
+        },
+        {
+          "accuracy": 0.9944444444444445,
+          "fold": 5,
+          "macro_f1": 0.9944443962182986
+        }
+      ],
+      "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+      "macro_f1_fold_std": 0.002598393314179766,
+      "macro_f1_mean": 0.9972222017412594
+    }
+  },
+  "protocol": {
+    "classifier": "logistic_regression",
+    "folds": 5,
+    "max_iterations": 2000,
+    "regularization_c": 1.0,
+    "scaling": "standard_scaler_fit_inside_each_fold",
+    "seed": 42,
+    "solver": "lbfgs",
+    "splitter": "stratified_k_fold_with_shuffle"
+  },
+  "schema_version": 1
+}

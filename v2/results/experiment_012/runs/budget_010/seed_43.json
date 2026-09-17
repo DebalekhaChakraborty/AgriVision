@@ -1,0 +1,134 @@
+{
+  "checkpoint": {
+    "path": "v2/checkpoints/label_efficiency/experiment_012/budget_010/seed_43.pt",
+    "sha256": "d875a846052ae79aa390829b3ef61af3a367d751d0a5aecfe634d71cfe9af2c3"
+  },
+  "examples_per_class": 10,
+  "execution": {
+    "completed_at": "2026-09-02T16:31:29.895566+00:00",
+    "cpu_count": 20,
+    "device": "cpu",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "probe_test_forward_ms_per_image": 0.00036400037778305333,
+    "probe_test_forward_seconds": 0.000982073019258678,
+    "python": "3.11.2",
+    "pytorch": "2.13.0+cpu",
+    "started_at": "2026-09-02T16:31:29.633355+00:00",
+    "test_evaluated_at": "2026-09-02T16:32:10.344667+00:00",
+    "training_seconds": 0.2622142150066793
+  },
+  "experiment_id": "V2-P3C-SIGLIP2-012",
+  "manifest_hash": "8ac7adcbd0f05079ff7e3229abbc7b535ca0acac511d372ce037bdcfa4757726",
+  "model": "SigLIP2 Base Patch16/224",
+  "model_key": "siglip2",
+  "model_revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+  "optimization_seed": 42,
+  "schema_version": 1,
+  "selected_epoch": 50,
+  "single_locked_test_evaluation": true,
+  "status": "complete",
+  "subset_seed": 43,
+  "test_metrics": {
+    "accuracy": 0.9796145292809488,
+    "confusion_matrix": [
+      [
+        395,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        380,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        386,
+        0,
+        0,
+        2
+      ],
+      [
+        24,
+        0,
+        0,
+        565,
+        0,
+        12
+      ],
+      [
+        0,
+        10,
+        0,
+        0,
+        520,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0,
+        397
+      ]
+    ],
+    "loss": 1.4762221574783325,
+    "macro_f1": 0.980013556996543,
+    "macro_precision": 0.9776318282493279,
+    "macro_recall": 0.9830940434203495,
+    "per_class": {
+      "fresh_apple": {
+        "f1": 0.9705159705159705,
+        "precision": 0.9427207637231504,
+        "recall": 1.0,
+        "support": 395.0
+      },
+      "fresh_banana": {
+        "f1": 0.9857328145265889,
+        "precision": 0.9743589743589743,
+        "recall": 0.9973753280839895,
+        "support": 381.0
+      },
+      "fresh_orange": {
+        "f1": 0.9897435897435898,
+        "precision": 0.9846938775510204,
+        "recall": 0.9948453608247423,
+        "support": 388.0
+      },
+      "rotten_apple": {
+        "f1": 0.9691252144082333,
+        "precision": 1.0,
+        "recall": 0.940099833610649,
+        "support": 601.0
+      },
+      "rotten_banana": {
+        "f1": 0.9895337773549001,
+        "precision": 0.9980806142034548,
+        "recall": 0.9811320754716981,
+        "support": 530.0
+      },
+      "rotten_orange": {
+        "f1": 0.9754299754299754,
+        "precision": 0.9659367396593674,
+        "recall": 0.9851116625310173,
+        "support": 403.0
+      }
+    },
+    "weighted_f1": 0.9795900516918744,
+    "weighted_precision": 0.9803268817649242,
+    "weighted_recall": 0.9796145292809488
+  },
+  "total_labelled_examples": 60,
+  "validation_metrics": {
+    "accuracy": 1.0,
+    "loss": 1.4760351375297265
+  }
+}

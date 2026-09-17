@@ -1,0 +1,134 @@
+{
+  "accuracy": 0.9303187546330616,
+  "checkpoint": {
+    "path": "v2/checkpoints/best_mobilenetv3.pt",
+    "selected_epoch": 1,
+    "sha256": "ee4c1b3c5561041d635ae6726d11c5ebe40bc3470e4eac6603f48c8bf1ab57ab"
+  },
+  "class_mapping": {
+    "fresh_apple": 0,
+    "fresh_banana": 1,
+    "fresh_orange": 2,
+    "rotten_apple": 3,
+    "rotten_banana": 4,
+    "rotten_orange": 5
+  },
+  "classification_report": {
+    "accuracy": 0.9303187546330616,
+    "fresh_apple": {
+      "f1-score": 0.9073856975381008,
+      "precision": 0.8449781659388647,
+      "recall": 0.979746835443038,
+      "support": 395.0
+    },
+    "fresh_banana": {
+      "f1-score": 0.9794344473007712,
+      "precision": 0.9596977329974811,
+      "recall": 1.0,
+      "support": 381.0
+    },
+    "fresh_orange": {
+      "f1-score": 0.9245742092457421,
+      "precision": 0.8755760368663594,
+      "recall": 0.979381443298969,
+      "support": 388.0
+    },
+    "macro avg": {
+      "f1-score": 0.9297007934516804,
+      "precision": 0.9294661168938688,
+      "recall": 0.9351597154740795,
+      "support": 2698.0
+    },
+    "rotten_apple": {
+      "f1-score": 0.9003496503496503,
+      "precision": 0.9484346224677717,
+      "recall": 0.8569051580698835,
+      "support": 601.0
+    },
+    "rotten_banana": {
+      "f1-score": 0.9837940896091516,
+      "precision": 0.9942196531791907,
+      "recall": 0.9735849056603774,
+      "support": 530.0
+    },
+    "rotten_orange": {
+      "f1-score": 0.8826666666666667,
+      "precision": 0.9538904899135446,
+      "recall": 0.8213399503722084,
+      "support": 403.0
+    },
+    "weighted avg": {
+      "f1-score": 0.9297821876042062,
+      "precision": 0.9342098613214602,
+      "recall": 0.9303187546330616,
+      "support": 2698.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      387,
+      0,
+      4,
+      4,
+      0,
+      0
+    ],
+    [
+      0,
+      381,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      380,
+      2,
+      0,
+      2
+    ],
+    [
+      63,
+      2,
+      4,
+      515,
+      3,
+      14
+    ],
+    [
+      0,
+      14,
+      0,
+      0,
+      516,
+      0
+    ],
+    [
+      4,
+      0,
+      46,
+      22,
+      0,
+      331
+    ]
+  ],
+  "evaluated_at": "2026-09-01T12:23:46.282898+00:00",
+  "experiment_id": "V2-P2-MOBILENETV3-LARGE-004",
+  "loss": 0.4985173163014575,
+  "parameters": {
+    "total": 2977718,
+    "trainable": 5766
+  },
+  "samples": 2698,
+  "single_test_pass": true,
+  "split": "test",
+  "timing": {
+    "device": "cpu",
+    "inference_seconds_per_image": 0.0064405701482714945,
+    "inference_timing_scope": "Model forward pass only; image decoding and transforms excluded.",
+    "model_inference_seconds": 17.376658260036493,
+    "training_seconds": 640.2230234520102
+  }
+}

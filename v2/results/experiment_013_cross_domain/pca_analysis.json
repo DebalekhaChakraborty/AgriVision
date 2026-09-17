@@ -1,0 +1,19 @@
+{
+  "dinov2": {
+    "explained_variance_ratio": [
+      0.2335718870162964,
+      0.1648792326450348
+    ],
+    "external_samples": 1200,
+    "source_samples": 1200
+  },
+  "interpretation_boundary": "Exploratory descriptive visualization only; not used for selection or adaptation.",
+  "siglip2": {
+    "explained_variance_ratio": [
+      0.18006345629692078,
+      0.15051354467868805
+    ],
+    "external_samples": 1200,
+    "source_samples": 1200
+  }
+}

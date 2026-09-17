@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-02",
+  "branch": "master",
+  "experiments_001_through_012": {
+    "baseline_manifest": "v2/results/experiment_013_cross_domain/prior_evidence_baseline.sha256",
+    "baseline_manifest_sha256": "4ccacbf10c92a66f31f25a853e5038b1e70a69dc74990afba746eadf1ba7bdae",
+    "files_checked": 347,
+    "sha256sum_check_exit_code": 0,
+    "status": "PASS_UNCHANGED"
+  },
+  "source_dataset": {
+    "files": 4507,
+    "ordered_content_manifest_sha256": "7d70ec2c01c1788cfb9ea014564d2158ff0cf4fed21afe011e9afe65b3d29092",
+    "partition_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+    "status": "PASS_UNCHANGED"
+  },
+  "phase_3a": {
+    "checkpoint_and_result_tree_sha256": "2b21d6702bd9ca3e765102ee747742eafd4d39185aeb061c961cdfe540b41721",
+    "individual_checkpoint_identities": "See checkpoint_verification.json",
+    "status": "PASS_UNCHANGED"
+  },
+  "phase_3b": {
+    "prompt_registry_sha256": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+    "status": "PASS_UNCHANGED"
+  },
+  "phase_3c": {
+    "manifest_and_result_tree_sha256": "5cbe25c6d8c7d5635fa7e38dea241c5ec103c608f9a947eb24cf301bbd1560e8",
+    "status": "PASS_UNCHANGED"
+  },
+  "v1_vs_legacy": {
+    "scope": "app.py, src, templates, static, notebooks, dataset, model, outputs, results, V1 requirements and V1 evidence documents",
+    "git_diff_exit_code": 0,
+    "status": "PASS_IDENTICAL"
+  },
+  "overall_status": "PASS"
+}

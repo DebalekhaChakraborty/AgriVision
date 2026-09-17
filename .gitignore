@@ -25,6 +25,8 @@ v2/data/raw/*
 !v2/data/raw/.gitkeep
 v2/data/processed/*
 !v2/data/processed/.gitkeep
+v2/data/external/
+v2/cache/
 *.pt
 *.pth
 *.ckpt

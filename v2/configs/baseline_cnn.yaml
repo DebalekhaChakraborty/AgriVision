@@ -1,35 +1,58 @@
 schema_version: 1
-status: planned
+status: phase_1_baseline
 
 experiment:
-  id: null
+  id: V2-P1-CNN-V1SPLIT-001
   phase: 1
-  objective: Establish a modern from-scratch CNN comparison baseline.
-
-model:
-  family: custom_cnn
-  initialization: random
-  architecture: to_be_registered
+  objective: Reproduce the V1 from-scratch CNN baseline with modern PyTorch tooling.
 
 data:
-  dataset_version: null
-  split_manifest: null
-  labelled_fraction: 1.0
+  root: v2/data/processed/v1_frozen_split
+  dataset_name: Fruits fresh and rotten for classification
+  dataset_author: Sriram Reddy Kalluri
+  dataset_version: Kaggle version 1, 2018-08-24
+  split_policy: Frozen leakage-safe V1 split; do not resplit.
+  split_report_sha256: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  train_split: train
+  validation_split: validation
+  test_split: test
+
+model:
+  name: cnn_baseline
+  input_size: 150
+  input_channels: 3
+  conv_channels:
+    - 32
+    - 64
+    - 128
+  kernel_size: 3
+  pool_size: 2
+  dense_units: 128
+  num_classes: 6
+  initialization: random
+  dropout: 0.0
 
 training:
-  input_size: null
-  batch_size: null
-  learning_rate: null
-  epochs: null
-  optimizer: null
+  batch_size: 32
+  epochs: 20
+  learning_rate: 0.001
+  optimizer: Adam
+  loss: CrossEntropyLoss
   seed: 42
+  num_workers: 0
+  device: auto
 
-evaluation:
-  selection_split: validation
-  metrics:
-    - accuracy
-    - precision
-    - recall
-    - f1
-    - confusion_matrix
-  test_access: closed_until_selection
+selection:
+  split: validation
+  primary_metric: accuracy
+  tie_break: lower_loss
+
+outputs:
+  checkpoint: v2/checkpoints/best_model.pt
+  class_mapping: v2/checkpoints/class_indices.json
+  history: v2/results/baseline_history.json
+  metadata: v2/experiments/experiment_001_metadata.json
+  training_curve: v2/results/baseline_training_curve.png
+  validation_curve: v2/results/baseline_validation_curve.png
+  test_metrics: v2/results/baseline_test_metrics.json
+  confusion_matrix: v2/results/baseline_confusion_matrix.png

@@ -1,0 +1,1931 @@
+{
+  "aggregates": {
+    "1": {
+      "accuracy": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.7410077091330151,
+          0.8818240180723224
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.8888065233506302,
+        "mean": 0.8114158636026687,
+        "minimum": 0.7464788732394366,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.05670467579917634
+      },
+      "full_performance_gap": 0.07924388435878427,
+      "macro_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.7439156306196139,
+          0.879908617469933
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.8830241237466873,
+        "mean": 0.8119121240447734,
+        "minimum": 0.7459845423341401,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.05476239427375327
+      },
+      "macro_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.7909314151849718,
+          0.8831911401845787
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.8943303044909044,
+        "mean": 0.8370612776847752,
+        "minimum": 0.7925414488829531,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.037151646956452344
+      },
+      "macro_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.7779924832597637,
+          0.8865629111949324
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.888430050681232,
+        "mean": 0.832277697227348,
+        "minimum": 0.7755103327766011,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.043719729368102166
+      },
+      "per_class": {
+        "fresh_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.6834414263360955,
+              0.926250861768682
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.949748743718593,
+            "mean": 0.8048461440523887,
+            "minimum": 0.6942003514938488,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0977758217133794
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.5097234328053788,
+              0.9261952762253696
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.942643391521197,
+            "mean": 0.7179593545153742,
+            "minimum": 0.531628532974428,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.1677071430042561
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8641885339115394,
+              1.0315076686201063
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9478481012658229,
+            "minimum": 0.8354430379746836,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0673769775682538
+          }
+        },
+        "fresh_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7283339505288443,
+              0.8735130952689206
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8758620689655172,
+            "mean": 0.8009235228988825,
+            "minimum": 0.7333333333333333,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.05846152620600152
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.6360413659678401,
+              0.7851693019026007
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.7791411042944786,
+            "mean": 0.7106053339352204,
+            "minimum": 0.6147403685092128,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.06005164688293052
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7997778722261754,
+              1.0521906317108325
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9259842519685039,
+            "minimum": 0.7506561679790026,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.10164294038073342
+          }
+        },
+        "fresh_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8020175189982894,
+              0.9578552073405149
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9636363636363636,
+            "mean": 0.8799363631694022,
+            "minimum": 0.8053097345132744,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.06275356641074623
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7456236327032439,
+              1.0248544375738322
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9712041884816754,
+            "mean": 0.8852390351385381,
+            "minimum": 0.7119266055045872,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.1124421764964326
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.736970211214542,
+              1.0558132939400973
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.8963917525773196,
+            "minimum": 0.7036082474226805,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.12839346360480963
+          }
+        },
+        "rotten_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.5435499003823623,
+              0.9345873364963675
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9471947194719472,
+            "mean": 0.7390686184393649,
+            "minimum": 0.5154130702836005,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.15746507778259394
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8867682869848534,
+              0.9971332015380088
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9952380952380953,
+            "mean": 0.9419507442614311,
+            "minimum": 0.8747553816046967,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.044442342982003544
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.35722337375482494,
+              0.9193157277426791
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9550748752079867,
+            "mean": 0.638269550748752,
+            "minimum": 0.34775374376039936,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.22634640079804041
+          }
+        },
+        "rotten_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.731728502409144,
+              0.8912663690386862
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8853838065194533,
+            "mean": 0.8114974357239151,
+            "minimum": 0.7109004739336493,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.06424357429237502
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8470437750976598,
+              1.028358730177233
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9377012526374464,
+            "minimum": 0.814453125,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.07301289050092041
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.6063144572566457,
+              0.8389685616112788
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.7943396226415095,
+            "mean": 0.7226415094339622,
+            "minimum": 0.5660377358490566,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.09368641785990348
+          }
+        },
+        "rotten_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.764202360969762,
+              0.9061989589996141
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8961493582263711,
+            "mean": 0.8352006599846881,
+            "minimum": 0.7421758569299552,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.05717996101814548
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7468010893267599,
+              0.9110228019145211
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9291044776119403,
+            "mean": 0.8289119456206405,
+            "minimum": 0.7633744855967078,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0661296908122205
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.6841676363522816,
+              1.0408943983871723
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.967741935483871,
+            "mean": 0.862531017369727,
+            "minimum": 0.6178660049627791,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.14364866926597852
+          }
+        }
+      },
+      "performance_retention": 0.9110278818143986,
+      "weighted_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.7309482757901694,
+          0.8816100226712528
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.8881371488577525,
+        "mean": 0.8062791492307111,
+        "minimum": 0.7404607484767016,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.060669290202114166
+      },
+      "weighted_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.8097292198329274,
+          0.8914960568021574
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.903149575665105,
+        "mean": 0.8506126383175424,
+        "minimum": 0.8131761817671739,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.03292631383672098
+      },
+      "weighted_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.7410077091330151,
+          0.8818240180723224
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.8888065233506302,
+        "mean": 0.8114158636026687,
+        "minimum": 0.7464788732394366,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.05670467579917634
+      }
+    },
+    "10": {
+      "accuracy": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9225687393328326,
+          0.945333410407716
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9484803558191253,
+        "mean": 0.9339510748702743,
+        "minimum": 0.9243884358784284,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.009167001341673565
+      },
+      "full_performance_gap": -0.043291326908821315,
+      "macro_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9235625143358501,
+          0.9470959375723267
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9498452628893462,
+        "mean": 0.9353292259540884,
+        "minimum": 0.9251255377049367,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.009476566635789056
+      },
+      "macro_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9247543344948803,
+          0.9451790194725582
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9475863102001596,
+        "mean": 0.9349666769837193,
+        "minimum": 0.9261154544623569,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.008224723035871625
+      },
+      "macro_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.933628023528935,
+          0.9544585018888568
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9566933929414011,
+        "mean": 0.9440432627088959,
+        "minimum": 0.9348141900390948,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.008388130118154289
+      },
+      "per_class": {
+        "fresh_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.882735222533015,
+              0.9457200547581557
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9414575866188769,
+            "mean": 0.9142276386455853,
+            "minimum": 0.8797327394209354,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.025363074195698988
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7894685223996267,
+              0.8977165074746085
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8914027149321267,
+            "mean": 0.8435925149371176,
+            "minimum": 0.7852882703777336,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.04358988632656537
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9972656015679537,
+              1.00070908197635
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9989873417721519,
+            "minimum": 0.9974683544303797,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0013866393860890356
+          }
+        },
+        "fresh_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8649093184298944,
+              0.9593194584275428
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.947103274559194,
+            "mean": 0.9121143884287186,
+            "minimum": 0.865296803652968,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.03801758774282954
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7631563494799942,
+              0.9326325065845391
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.910411622276029,
+            "mean": 0.8478944280322667,
+            "minimum": 0.7656565656565657,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.06824557905750465
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9829609884453073,
+              0.9970915049930128
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9973753280839895,
+            "mean": 0.9900262467191601,
+            "minimum": 0.984251968503937,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.005690153120388141
+          }
+        },
+        "fresh_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9556942984012193,
+              0.9852567330637345
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9845360824742269,
+            "mean": 0.9704755157324769,
+            "minimum": 0.9555273189326556,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.011904361689346377
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9313337775346949,
+              0.993905516203145
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9894459102902374,
+            "mean": 0.96261964686892,
+            "minimum": 0.9322033898305084,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.02519672743953619
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9654024477007158,
+              0.9923295110621709
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9922680412371134,
+            "mean": 0.9788659793814434,
+            "minimum": 0.9664948453608248,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.010843136065960128
+          }
+        },
+        "rotten_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.897060421182684,
+              0.9559329106272776
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9512195121951219,
+            "mean": 0.9264966659049808,
+            "minimum": 0.8972477064220183,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.023707093678225568
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9939999328761628,
+              1.0015567790645024
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9977783559703326,
+            "minimum": 0.9925925925925926,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.003043031850513351
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.812977890567778,
+              0.9181369180844681
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.908485856905158,
+            "mean": 0.865557404326123,
+            "minimum": 0.8136439267886856,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.04234600812652085
+          }
+        },
+        "rotten_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8756118210228999,
+              0.9729515759176889
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9591439688715954,
+            "mean": 0.9242816984702944,
+            "minimum": 0.8752642706131079,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0391973009749836
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9868586177497161,
+              0.9972560132521266
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9976525821596244,
+            "mean": 0.9920573155009214,
+            "minimum": 0.987603305785124,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.004186879670124883
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.779929740500046,
+              0.9551645991225952
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.930188679245283,
+            "mean": 0.8675471698113206,
+            "minimum": 0.7811320754716982,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.07056452424973662
+          }
+        },
+        "rotten_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.943081440493841,
+              0.9856774565911084
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9814126394052045,
+            "mean": 0.9643794485424747,
+            "minimum": 0.9405940594059405,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.01715279502300472
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9445442749834314,
+              0.9871713262020825
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9801980198019802,
+            "mean": 0.9658578005927569,
+            "minimum": 0.9382716049382716,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.01716529241417839
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9296368917214605,
+              0.9969139767648919
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9925558312655087,
+            "mean": 0.9632754342431762,
+            "minimum": 0.9280397022332506,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.02709150186393287
+          }
+        }
+      },
+      "performance_retention": 1.0486059092800666,
+      "weighted_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9227996924606945,
+          0.9456352323141874
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9487963419466183,
+        "mean": 0.934217462387441,
+        "minimum": 0.9246585911231189,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.009195539166202612
+      },
+      "weighted_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9344993578270873,
+          0.95168233695285
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9538083703776836,
+        "mean": 0.9430908473899686,
+        "minimum": 0.935651877161094,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.006919335323654473
+      },
+      "weighted_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9225687393328326,
+          0.945333410407716
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9484803558191253,
+        "mean": 0.9339510748702743,
+        "minimum": 0.9243884358784284,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.009167001341673565
+      }
+    },
+    "100": {
+      "accuracy": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9131712092535514,
+          0.938570821880622
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9388435878428466,
+        "mean": 0.9258710155670867,
+        "minimum": 0.9154929577464789,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.010228053911450454
+      },
+      "full_performance_gap": -0.035211267605633756,
+      "macro_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9166171003201371,
+          0.9411835220496061
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9408012049083251,
+        "mean": 0.9289003111848716,
+        "minimum": 0.9179304757114556,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.009892540077270343
+      },
+      "macro_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9192106543169772,
+          0.9406984944459736
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9391146020264092,
+        "mean": 0.9299545743814754,
+        "minimum": 0.9187861453889169,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.008652840124253193
+      },
+      "macro_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9293695693661314,
+          0.9506879046343285
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9499804451984404,
+        "mean": 0.9400287370002299,
+        "minimum": 0.9300401068915459,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.008584582986636108
+      },
+      "per_class": {
+        "fresh_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8366350600493504,
+              0.8906269204929618
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8977272727272727,
+            "mean": 0.8636309902711561,
+            "minimum": 0.8395324123273114,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.021741735494351856
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7181959629940864,
+              0.8028305461872609
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8144329896907216,
+            "mean": 0.7605132545906736,
+            "minimum": 0.7234432234432234,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.034081113455657
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              1.0,
+              1.0
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0
+          }
+        },
+        "fresh_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9402992843488955,
+              0.9712045565639622
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9704749679075738,
+            "mean": 0.9557519204564289,
+            "minimum": 0.9419035846724351,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.012445102805499415
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8893937060864434,
+              0.951520314333905
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.949748743718593,
+            "mean": 0.9204570102101742,
+            "minimum": 0.8901869158878505,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.025017479904924436
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.989976556995515,
+              0.9984748865740385
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9942257217847768,
+            "minimum": 0.9921259842519685,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.00342215349354469
+          }
+        },
+        "fresh_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9602142232586985,
+              0.985472869682152
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9807445442875481,
+            "mean": 0.9728435464704253,
+            "minimum": 0.9561952440550688,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.010171288875248626
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9360159179585859,
+              0.9872377340137395
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9819121447028424,
+            "mean": 0.9616268259861627,
+            "minimum": 0.9294403892944039,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0206262789809694
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9800103658088398,
+              0.9890617991396139
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9896907216494846,
+            "mean": 0.9845360824742269,
+            "minimum": 0.979381443298969,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.003644880315394601
+          }
+        },
+        "rotten_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8288429589270468,
+              0.8978350967349359
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9092558983666061,
+            "mean": 0.8633390278309914,
+            "minimum": 0.8363988383349468,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.02778212862243551
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              1.0,
+              1.0
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7057967973887547,
+              0.8150018714964367
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8336106489184693,
+            "mean": 0.7603993344425957,
+            "minimum": 0.718801996672213,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.043975292134450956
+          }
+        },
+        "rotten_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9526450661489244,
+              0.9787543005244265
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9779482262703739,
+            "mean": 0.9656996833366754,
+            "minimum": 0.9536031589338598,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.010513808249765035
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9924214024048069,
+              0.9988396216548862
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9956305120298465,
+            "minimum": 0.9939024390243902,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.002584523373216901
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9112823386310976,
+              0.9641893594821097
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9622641509433962,
+            "mean": 0.9377358490566037,
+            "minimum": 0.9113207547169812,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.021304886397426816
+          }
+        },
+        "rotten_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9357027007500618,
+              0.968570696737042
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9664596273291925,
+            "mean": 0.9521366987435519,
+            "minimum": 0.9305210918114144,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.013235463069932066
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9221925486597004,
+              0.9608071382842885
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9676616915422885,
+            "mean": 0.9414998434719944,
+            "minimum": 0.9305210918114144,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.015549532595150291
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.937924534529832,
+              0.9886263339565203
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9826302729528535,
+            "mean": 0.9632754342431762,
+            "minimum": 0.9305210918114144,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.020416875861760993
+          }
+        }
+      },
+      "performance_retention": 1.0395339159384103,
+      "weighted_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9126010929091438,
+          0.938501721301417
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9390126094045951,
+        "mean": 0.9255514071052804,
+        "minimum": 0.9150597749502238,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.01042980565988138
+      },
+      "weighted_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9291165076737726,
+          0.9480641248177439
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9470880064519033,
+        "mean": 0.9385903162457583,
+        "minimum": 0.9288391431617535,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.0076299293413442295
+      },
+      "weighted_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9131712092535514,
+          0.938570821880622
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9388435878428466,
+        "mean": 0.9258710155670867,
+        "minimum": 0.9154929577464789,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.010228053911450454
+      }
+    },
+    "25": {
+      "accuracy": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9222492060242699,
+          0.961664804353788
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9621942179392142,
+        "mean": 0.9419570051890289,
+        "minimum": 0.9177168272794662,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.015872087129262843
+      },
+      "full_performance_gap": -0.05129725722757594,
+      "macro_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9247222283287395,
+          0.9619469978585855
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9612683252621775,
+        "mean": 0.9433346130936625,
+        "minimum": 0.9198126639843222,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.014989872293831757
+      },
+      "macro_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9236062708341075,
+          0.9601186942063848
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9592854313661819,
+        "mean": 0.9418624825202462,
+        "minimum": 0.9187989311222622,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.014703020875654503
+      },
+      "macro_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9362112475237121,
+          0.9668978716843488
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.965601232345529,
+        "mean": 0.9515545596040305,
+        "minimum": 0.9318807690286396,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.012357056419864424
+      },
+      "per_class": {
+        "fresh_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8756930148375508,
+              0.9499027753036537
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9564164648910412,
+            "mean": 0.9127978950706023,
+            "minimum": 0.8886389201349831,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.029883189241798672
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7768648411399502,
+              0.9045651835672187
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9164733178654292,
+            "mean": 0.8407150123535845,
+            "minimum": 0.7995951417004049,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.05142306719531374
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              1.0,
+              1.0
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0
+          }
+        },
+        "fresh_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9141546772519182,
+              0.9723277506852428
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9731113956466069,
+            "mean": 0.9432412139685805,
+            "minimum": 0.9189842805320435,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.02342544904156028
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8455282953397457,
+              0.949538922139821
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.95,
+            "mean": 0.8975336087397834,
+            "minimum": 0.852017937219731,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.04188356389109322
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9914916955427722,
+              0.9980096167931858
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9973753280839895,
+            "mean": 0.994750656167979,
+            "minimum": 0.9921259842519685,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0026246719160105125
+          }
+        },
+        "fresh_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9528978824850195,
+              0.9915929417901744
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9909443725743855,
+            "mean": 0.972245412137597,
+            "minimum": 0.9519112207151664,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.015581936563004401
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9197207915486632,
+              1.0009936884878095
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9948051948051948,
+            "mean": 0.9603572400182363,
+            "minimum": 0.9125295508274232,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.03272741138372311
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9729924008796913,
+              0.997110691903814
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9948453608247423,
+            "mean": 0.9850515463917526,
+            "minimum": 0.9690721649484536,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.009712084371864325
+          }
+        },
+        "rotten_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8773568373051109,
+              0.9610643188092948
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9628990509059534,
+            "mean": 0.9192105780572029,
+            "minimum": 0.878731343283582,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.03370778311414281
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9985987216678301,
+              1.0006591633043407
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9996289424860854,
+            "minimum": 0.9981447124304267,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0008297098246752611
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7797536154924404,
+              0.9247388969867608
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9284525790349417,
+            "mean": 0.8522462562396006,
+            "minimum": 0.78369384359401,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.058383460301684294
+          }
+        },
+        "rotten_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9290282730796432,
+              0.9799670822556793
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9798270893371758,
+            "mean": 0.9544976776676612,
+            "minimum": 0.9326633165829146,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.02051231623439431
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9933075448981453,
+              0.9984737279137353
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9980430528375733,
+            "mean": 0.9958906364059403,
+            "minimum": 0.9936170212765958,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.002080346624796893
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8706263970790218,
+              0.9633358670719219
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9622641509433962,
+            "mean": 0.9169811320754718,
+            "minimum": 0.8754716981132076,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.03733275271209316
+          }
+        },
+        "rotten_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.928612154615098,
+              0.9874176487055635
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.986469864698647,
+            "mean": 0.9580149016603308,
+            "minimum": 0.9261904761904762,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.023680115625296132
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.909414598617869,
+              1.0046843116178261
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9794344473007712,
+            "mean": 0.9570494551178476,
+            "minimum": 0.8901601830663616,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.038363725266166
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9185043426104983,
+              1.002091190888261
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9950372208436724,
+            "mean": 0.9602977667493796,
+            "minimum": 0.9106699751861043,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.03365920587158938
+          }
+        }
+      },
+      "performance_retention": 1.0575946733250103,
+      "weighted_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9220673641143566,
+          0.961973127308666
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9622314352020251,
+        "mean": 0.9420202457115113,
+        "minimum": 0.9172839936701184,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.01606946937820474
+      },
+      "weighted_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9331352513328242,
+          0.9652719436845054
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9645603821158136,
+        "mean": 0.9492035975086648,
+        "minimum": 0.9288600178457801,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.012940977751699043
+      },
+      "weighted_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9222492060242699,
+          0.961664804353788
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9621942179392142,
+        "mean": 0.9419570051890289,
+        "minimum": 0.9177168272794662,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.015872087129262843
+      }
+    },
+    "5": {
+      "accuracy": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9210753671270187,
+          0.9383760783881776
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9399555226093402,
+        "mean": 0.9297257227575981,
+        "minimum": 0.9221645663454411,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.006966744339123478
+      },
+      "full_performance_gap": -0.03906597479614515,
+      "macro_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9222370707876428,
+          0.9399364905168484
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9416293092571637,
+        "mean": 0.9310867806522456,
+        "minimum": 0.9237817724403908,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.0071272984296919485
+      },
+      "macro_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9251350339439942,
+          0.9380860384521238
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9399575698028967,
+        "mean": 0.931610536198059,
+        "minimum": 0.9266796384494921,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.005215180808521884
+      },
+      "macro_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9288083046321383,
+          0.9493902021192837
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9493838811037323,
+        "mean": 0.939099253375711,
+        "minimum": 0.9283248999669529,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.008288030222717194
+      },
+      "per_class": {
+        "fresh_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8875956753268961,
+              0.9314464202732873
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9390681003584229,
+            "mean": 0.9095210478000917,
+            "minimum": 0.891647855530474,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.017658056048104453
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7834451553140531,
+              0.9405795642269172
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9602272727272727,
+            "mean": 0.8620123597704852,
+            "minimum": 0.8044806517311609,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.06327573689024577
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8906525265492308,
+              1.0496006380077314
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.970126582278481,
+            "minimum": 0.8556962025316456,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.06400608847821967
+          }
+        },
+        "fresh_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8760787654489328,
+              0.937962949781902
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9378109452736318,
+            "mean": 0.9070208576154174,
+            "minimum": 0.8735632183908046,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.02491985932687623
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.7808231950950301,
+              0.888733640628988
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8912529550827423,
+            "mean": 0.834778417862009,
+            "minimum": 0.7770961145194274,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0434539640716268
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9883959157896107,
+              1.0000555277799428
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9942257217847768,
+            "minimum": 0.989501312335958,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.004695155858267309
+          }
+        },
+        "fresh_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9436974020668932,
+              0.9966415501723979
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9897435897435898,
+            "mean": 0.9701694761196455,
+            "minimum": 0.9388753056234719,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.02131983700183601
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9156525090365574,
+              1.0229631132026877
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9693078111196225,
+            "minimum": 0.8930232558139535,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.04321241669299002
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9353878479692178,
+              1.0099729767730503
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9948453608247423,
+            "mean": 0.9726804123711341,
+            "minimum": 0.9226804123711341,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.03003434460197363
+          }
+        },
+        "rotten_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9001428203559867,
+              0.9424771725032934
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9449781659388646,
+            "mean": 0.9213099964296401,
+            "minimum": 0.8972477064220183,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.017047426763016876
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9291316478161508,
+              1.0251136865478894
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.97712266718202,
+            "minimum": 0.9083601286173634,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.03865056845917632
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8144633987082199,
+              0.9339559024565058
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.940099833610649,
+            "mean": 0.8742096505823629,
+            "minimum": 0.8136439267886856,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.048117890154320254
+          }
+        },
+        "rotten_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8884151924927883,
+              0.951977483601602
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9508840864440079,
+            "mean": 0.9201963380471951,
+            "minimum": 0.884453781512605,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.02559560847409802
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9905294346763228,
+              0.9999704532695058
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 0.9952499439729143,
+            "minimum": 0.9910714285714286,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0038017606239854874
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8005975439450516,
+              0.91261000322476
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9132075471698113,
+            "mean": 0.8566037735849058,
+            "minimum": 0.7943396226415095,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.04510578523729026
+          }
+        },
+        "rotten_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9368120815766013,
+              0.9797938542263657
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9695493300852619,
+            "mean": 0.9583029679014835,
+            "minimum": 0.9276485788113695,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.017308133565901544
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.935896705363471,
+              0.9664873291991352
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.967654986522911,
+            "mean": 0.9511920172813031,
+            "minimum": 0.9345794392523364,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.012318398487802475
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9134462877708317,
+              1.0200524715343793
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9925558312655087,
+            "mean": 0.9667493796526054,
+            "minimum": 0.890818858560794,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.042928756860860784
+          }
+        }
+      },
+      "performance_retention": 1.0438618393674572,
+      "weighted_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9211631427959486,
+          0.9386359531643613
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9402616814044389,
+        "mean": 0.929899547980155,
+        "minimum": 0.92204201910756,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.007036046141987501
+      },
+      "weighted_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9313418904754021,
+          0.9461232439023479
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9468840804197416,
+        "mean": 0.938732567188875,
+        "minimum": 0.9314590448106023,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.00595223564842383
+      },
+      "weighted_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9210753671270187,
+          0.9383760783881776
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9399555226093402,
+        "mean": 0.9297257227575981,
+        "minimum": 0.9221645663454411,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.006966744339123478
+      }
+    },
+    "50": {
+      "accuracy": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.8939577649758603,
+          0.9503713677150216
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9429206819866568,
+        "mean": 0.922164566345441,
+        "minimum": 0.8914010378057821,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.022716935829971377
+      },
+      "full_performance_gap": -0.031504818383988,
+      "macro_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.8985869440328191,
+          0.9531026539295104
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9465805250271795,
+        "mean": 0.9258447989811648,
+        "minimum": 0.8958100891697939,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.02195268203618518
+      },
+      "macro_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9061297085281121,
+          0.9518627040620968
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9483002704935374,
+        "mean": 0.9289962062951045,
+        "minimum": 0.904474667701376,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.01841601093377255
+      },
+      "macro_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.9143673483889551,
+          0.9604478556043193
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9550573886420772,
+        "mean": 0.9374076019966372,
+        "minimum": 0.9121348548673608,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.018555948824330083
+      },
+      "per_class": {
+        "fresh_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.805646898406803,
+              0.8941853172772838
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9018264840182648,
+            "mean": 0.8499161078420434,
+            "minimum": 0.8061224489795918,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.035653131200777136
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.6726768800311954,
+              0.8080327277451779
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8212058212058212,
+            "mean": 0.7403548038881866,
+            "minimum": 0.6752136752136753,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.054505827627197405
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              1.0,
+              1.0
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0
+          }
+        },
+        "fresh_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9246412389380558,
+              0.984629060997686
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9856584093872229,
+            "mean": 0.9546351499678709,
+            "minimum": 0.9210206561360875,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.024156221870977424
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8633057823375155,
+              0.9754985540728923
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9792746113989638,
+            "mean": 0.9194021682052039,
+            "minimum": 0.8574660633484162,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.04517839443588548
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9919157811531281,
+              0.9954857936500217
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.994750656167979,
+            "mean": 0.9937007874015749,
+            "minimum": 0.9921259842519685,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.001437592014449232
+          }
+        },
+        "fresh_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9605120720326071,
+              0.9891952485706518
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9870801033591732,
+            "mean": 0.9748536603016295,
+            "minimum": 0.957286432160804,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.011550297254143927
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.937848501776096,
+              0.9922576883224195
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9896373056994818,
+            "mean": 0.9650530950492577,
+            "minimum": 0.9338235294117647,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.021909786635125755
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9823740963049392,
+              0.987728996478566
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9871134020618557,
+            "mean": 0.9850515463917526,
+            "minimum": 0.9819587628865979,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.002156340274572392
+          }
+        },
+        "rotten_apple": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.792478410303935,
+              0.909692542610263
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9072727272727272,
+            "mean": 0.851085476457099,
+            "minimum": 0.7809330628803245,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.04720042317240979
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              1.0,
+              1.0
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 1.0,
+            "mean": 1.0,
+            "minimum": 1.0,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.6553373926812789,
+              0.8308522911789542
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.8302828618968386,
+            "mean": 0.7430948419301165,
+            "minimum": 0.6405990016638935,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0706772922270361
+          }
+        },
+        "rotten_banana": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9389141779804022,
+              0.9896409949265701
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9895734597156398,
+            "mean": 0.9642775864534862,
+            "minimum": 0.934934934934935,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.020426950052329362
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9939270323961231,
+              0.9964612431458633
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9960629921259843,
+            "mean": 0.9951941377709932,
+            "minimum": 0.9939024390243902,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.0010204897433630643
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.8880371874513093,
+              0.9836609257562379
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9849056603773585,
+            "mean": 0.9358490566037736,
+            "minimum": 0.8811320754716981,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.038506286098035
+          }
+        },
+        "rotten_orange": {
+          "f1": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9358763909963248,
+              0.9847252347333959
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9791411042944785,
+            "mean": 0.9603008128648604,
+            "minimum": 0.9285714285714286,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.019670717604656964
+          },
+          "precision": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9301506193281414,
+              0.9777954463858284
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9684466019417476,
+            "mean": 0.9539730328569849,
+            "minimum": 0.921760391198044,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.019185877631392855
+          },
+          "recall": {
+            "interval_95_across_pre_registered_subset_draws": [
+              0.9403708229089288,
+              0.993127936396282
+            ],
+            "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+            "maximum": 0.9900744416873449,
+            "mean": 0.9667493796526054,
+            "minimum": 0.9354838709677419,
+            "n_subset_draws": 5,
+            "standard_deviation": 0.02124452088635634
+          }
+        }
+      },
+      "performance_retention": 1.035372451102788,
+      "weighted_f1": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.8929472930306488,
+          0.9508234962117539
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9430997225421364,
+        "mean": 0.9218853946212013,
+        "minimum": 0.8897804134977009,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.023305903716637846
+      },
+      "weighted_precision": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.91788956727495,
+          0.9576308180186898
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9543404298051545,
+        "mean": 0.9377601926468199,
+        "minimum": 0.9162301847832507,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.016003222611443574
+      },
+      "weighted_recall": {
+        "interval_95_across_pre_registered_subset_draws": [
+          0.8939577649758603,
+          0.9503713677150216
+        ],
+        "interval_method": "Two-sided t interval for the mean, df=4, t*=2.776445; not complete predictive uncertainty.",
+        "maximum": 0.9429206819866568,
+        "mean": 0.922164566345441,
+        "minimum": 0.8914010378057821,
+        "n_subset_draws": 5,
+        "standard_deviation": 0.022716935829971377
+      }
+    }
+  },
+  "display_name": "DINOv2 ViT-B/14",
+  "experiment_id": "V2-P3C-DINOV2-010",
+  "full_data_endpoint": {
+    "accuracy": 0.890659747961453,
+    "reused_not_rerun": true,
+    "rotten_apple_recall": 0.6605657237936772,
+    "source_experiment": 5,
+    "training_images": 1539,
+    "weighted_f1": 0.8901492381795155
+  },
+  "strict_zero_shot_endpoint": {
+    "applicable": false,
+    "reason": "DINOv2 has no registered text classifier."
+  },
+  "thresholds": {
+    "at_least_95_percent_of_full": 5,
+    "interpolation_used": false,
+    "within_one_percentage_point_of_full": 5
+  }
+}

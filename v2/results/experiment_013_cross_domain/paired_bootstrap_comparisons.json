@@ -1,0 +1,40 @@
+{
+  "comparisons": {
+    "clip_linear_probe_minus_efficientnet_b0": {
+      "left": "clip_linear_probe",
+      "lower": -0.10333333333333339,
+      "mean_paired_bootstrap_accuracy_difference": -0.07770099999999999,
+      "observed_accuracy_difference": -0.07750000000000001,
+      "right": "efficientnet_b0",
+      "upper": -0.05249999999999999
+    },
+    "clip_strict_zero_shot_minus_clip_linear_probe": {
+      "left": "clip_strict_zero_shot",
+      "lower": 0.17414583333333325,
+      "mean_paired_bootstrap_accuracy_difference": 0.19758283333333335,
+      "observed_accuracy_difference": 0.1975,
+      "right": "clip_linear_probe",
+      "upper": 0.22249999999999992
+    },
+    "siglip2_linear_probe_minus_efficientnet_b0": {
+      "left": "siglip2_linear_probe",
+      "lower": 0.11416666666666675,
+      "mean_paired_bootstrap_accuracy_difference": 0.13998066666666664,
+      "observed_accuracy_difference": 0.14,
+      "right": "efficientnet_b0",
+      "upper": 0.16416666666666668
+    },
+    "siglip2_strict_zero_shot_minus_siglip2_linear_probe": {
+      "left": "siglip2_strict_zero_shot",
+      "lower": 0.0625,
+      "mean_paired_bootstrap_accuracy_difference": 0.07997466666666667,
+      "observed_accuracy_difference": 0.07999999999999996,
+      "right": "siglip2_linear_probe",
+      "upper": 0.09750000000000003
+    }
+  },
+  "method": "Paired 95% class-stratified bootstrap interval over the external evaluation sample.",
+  "resamples": 5000,
+  "schema_version": 1,
+  "seed": 42
+}

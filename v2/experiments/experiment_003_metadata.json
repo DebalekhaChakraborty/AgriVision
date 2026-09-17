@@ -1,0 +1,202 @@
+{
+  "artifacts": {
+    "class_mapping": "v2/checkpoints/experiment_003_class_indices.json",
+    "history": "v2/results/experiment_003/history.json",
+    "training_curve": "v2/results/experiment_003/training_curve.png",
+    "validation_curve": "v2/results/experiment_003/validation_curve.png"
+  },
+  "checkpoint": {
+    "path": "v2/checkpoints/best_efficientnet.pt",
+    "sha256": "b312eb80df31f4bce5882311d3d4fea3be20e05e1e2062dadcdb3f70e50abcd2"
+  },
+  "completed_at": "2026-09-01T12:10:34.232065+00:00",
+  "configuration": {
+    "data": {
+      "dataset_author": "Sriram Reddy Kalluri",
+      "dataset_name": "Fruits fresh and rotten for classification",
+      "dataset_version": "Kaggle version 1, 2018-08-24",
+      "root": "v2/data/processed/v1_frozen_split",
+      "split_policy": "Frozen leakage-safe V1 split; do not resplit.",
+      "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+      "test_split": "test",
+      "train_split": "train",
+      "validation_split": "validation"
+    },
+    "experiment": {
+      "id": "V2-P2-EFFICIENTNET-B0-003",
+      "number": 3,
+      "objective": "Measure a frozen ImageNet-pretrained EfficientNet-B0 representation against Experiment 001.",
+      "phase": 2,
+      "plot_title": "V2 Experiment 003 EfficientNet-B0"
+    },
+    "model": {
+      "architecture": "efficientnet_b0",
+      "classifier": "single_linear_layer",
+      "display_name": "EfficientNet-B0",
+      "freeze_backbone": true,
+      "num_classes": 6,
+      "pretrained_weights": "IMAGENET1K_V1",
+      "weights_source": "torchvision.models.EfficientNet_B0_Weights.IMAGENET1K_V1"
+    },
+    "outputs": {
+      "checkpoint": "v2/checkpoints/best_efficientnet.pt",
+      "class_mapping": "v2/checkpoints/experiment_003_class_indices.json",
+      "confusion_matrix": "v2/results/experiment_003/confusion_matrix.png",
+      "history": "v2/results/experiment_003/history.json",
+      "metadata": "v2/experiments/experiment_003_metadata.json",
+      "test_metrics": "v2/results/experiment_003/metrics.json",
+      "training_curve": "v2/results/experiment_003/training_curve.png",
+      "validation_curve": "v2/results/experiment_003/validation_curve.png"
+    },
+    "preprocessing": {
+      "evaluation_resize_size": 256,
+      "image_size": 224,
+      "normalization_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalization_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "train_augmentation": {
+        "color_jitter": {
+          "brightness": 0.1,
+          "contrast": 0.1,
+          "hue": 0.02,
+          "saturation": 0.1
+        },
+        "horizontal_flip_probability": 0.5,
+        "rotation_degrees": 10
+      }
+    },
+    "schema_version": 1,
+    "selection": {
+      "primary_metric": "accuracy",
+      "split": "validation",
+      "tie_break": "lower_loss"
+    },
+    "status": "phase_2_transfer_benchmark",
+    "training": {
+      "batch_size": 32,
+      "device": "auto",
+      "epochs": 20,
+      "learning_rate": 0.001,
+      "loss": "CrossEntropyLoss",
+      "num_workers": 0,
+      "optimizer": "Adam",
+      "seed": 42
+    }
+  },
+  "configuration_path": "v2/configs/efficientnet.yaml",
+  "dataset": {
+    "author": "Sriram Reddy Kalluri",
+    "class_mapping": {
+      "fresh_apple": 0,
+      "fresh_banana": 1,
+      "fresh_orange": 2,
+      "rotten_apple": 3,
+      "rotten_banana": 4,
+      "rotten_orange": 5
+    },
+    "location": "/tmp/fruit-v1-genuine-2018/work/dataset",
+    "name": "Fruits fresh and rotten for classification",
+    "split_policy": "Frozen leakage-safe V1 split; do not resplit.",
+    "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+    "train_counts": {
+      "fresh_apple": 261,
+      "fresh_banana": 270,
+      "fresh_orange": 234,
+      "rotten_apple": 207,
+      "rotten_banana": 360,
+      "rotten_orange": 207
+    },
+    "train_total": 1539,
+    "validation_counts": {
+      "fresh_apple": 45,
+      "fresh_banana": 45,
+      "fresh_orange": 45,
+      "rotten_apple": 36,
+      "rotten_banana": 63,
+      "rotten_orange": 36
+    },
+    "validation_total": 270,
+    "version": "Kaggle version 1, 2018-08-24"
+  },
+  "environment": {
+    "cpu_count": 20,
+    "cuda_available": false,
+    "cuda_runtime": null,
+    "device": "cpu",
+    "device_name": "CPU",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2",
+    "pytorch": "2.13.0+cpu",
+    "torchvision": "0.28.0+cpu"
+  },
+  "experiment_id": "V2-P2-EFFICIENTNET-B0-003",
+  "model": {
+    "architecture": "efficientnet_b0",
+    "backbone_frozen": true,
+    "pretrained_weights": "IMAGENET1K_V1",
+    "total_parameters": 4015234,
+    "trainable_parameters": 7686,
+    "weights_source": "torchvision.models.EfficientNet_B0_Weights.IMAGENET1K_V1"
+  },
+  "objective": "Measure a frozen ImageNet-pretrained EfficientNet-B0 representation against Experiment 001.",
+  "preprocessing": {
+    "evaluation_resize_size": 256,
+    "image_size": 224,
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "train_augmentation": {
+      "color_jitter": {
+        "brightness": 0.1,
+        "contrast": 0.1,
+        "hue": 0.02,
+        "saturation": 0.1
+      },
+      "horizontal_flip_probability": 0.5,
+      "rotation_degrees": 10
+    }
+  },
+  "repository": {
+    "branch": "master",
+    "commit": "a4285bfe275bac34a498e5d7f9fb48fbbe3ecf67",
+    "working_tree_porcelain": "M README.md\n D docs/V2_RESEARCH_BLUEPRINT.md\n M requirements-v2.txt\n M v2/configs/baseline_cnn.yaml\n?? docs/TRANSFER_LEARNING_ANALYSIS.md\n?? docs/handbook/\n?? v2/__init__.py\n?? v2/checkpoints/\n?? v2/configs/efficientnet.yaml\n?? v2/configs/mobilenetv3.yaml\n?? v2/configs/resnet50.yaml\n?? v2/experiments/experiment_001_baseline_cnn.md\n?? v2/experiments/experiment_001_metadata.json\n?? v2/experiments/experiment_002_metadata.json\n?? v2/experiments/experiment_002_resnet50.md\n?? v2/experiments/experiment_003_efficientnet.md\n?? v2/experiments/experiment_004_mobilenetv3.md\n?? v2/notebooks/01_baseline_analysis.ipynb\n?? v2/results/baseline_confusion_matrix.png\n?? v2/results/baseline_history.json\n?? v2/results/baseline_test_metrics.json\n?? v2/results/baseline_training_curve.png\n?? v2/results/baseline_validation_curve.png\n?? v2/results/experiment_002/\n?? v2/results/experiment_003/\n?? v2/src/__init__.py\n?? v2/src/datasets/__init__.py\n?? v2/src/datasets/fruit_dataset.py\n?? v2/src/datasets/transfer_transforms.py\n?? v2/src/evaluation/__init__.py\n?? v2/src/evaluation/evaluate.py\n?? v2/src/evaluation/evaluate_transfer.py\n?? v2/src/models/__init__.py\n?? v2/src/models/cnn_baseline.py\n?? v2/src/models/efficientnet_transfer.py\n?? v2/src/models/frozen_backbone.py\n?? v2/src/models/mobilenetv3_transfer.py\n?? v2/src/models/resnet50_transfer.py\n?? v2/src/models/transfer_registry.py\n?? v2/src/training/__init__.py\n?? v2/src/training/train.py\n?? v2/src/training/train_transfer.py\n?? v2/src/training/utils.py\n?? v2/src/visualization/__init__.py\n?? v2/src/visualization/plots.py"
+  },
+  "started_at": "2026-09-01T11:55:52.818622+00:00",
+  "status": "complete",
+  "test_accessed": true,
+  "test_evaluation": {
+    "accuracy": 0.9455151964418087,
+    "confusion_matrix_path": "v2/results/experiment_003/confusion_matrix.png",
+    "evaluated_at": "2026-09-01T12:11:50.377293+00:00",
+    "inference_seconds_per_image": 0.012554733225345002,
+    "loss": 0.15246722940562654,
+    "metrics_path": "v2/results/experiment_003/metrics.json",
+    "samples": 2698
+  },
+  "training": {
+    "batch_size": 32,
+    "best_epoch": 8,
+    "best_validation_accuracy": 0.9666666666666667,
+    "best_validation_loss": 0.13513493769698673,
+    "duration_seconds": 880.9182899389998,
+    "epochs_completed": 20,
+    "learning_rate": 0.001,
+    "loss": "CrossEntropyLoss",
+    "optimizer": "Adam",
+    "seed": 42
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "systems": {
+    "clip_linear_probe": {
+      "counts": {
+        "combined_error": 9,
+        "condition_error": 391,
+        "fruit_identity_error": 68
+      },
+      "percent_of_errors": {
+        "combined_error": 1.9230769230769231,
+        "condition_error": 83.54700854700855,
+        "fruit_identity_error": 14.52991452991453
+      },
+      "top_confusion_pairs": {
+        "fresh_apple -> rotten_apple": 126,
+        "fresh_banana -> rotten_banana": 194,
+        "fresh_orange -> rotten_apple": 9,
+        "fresh_orange -> rotten_orange": 12,
+        "rotten_apple -> fresh_apple": 11,
+        "rotten_apple -> rotten_banana": 1,
+        "rotten_orange -> fresh_orange": 48,
+        "rotten_orange -> rotten_apple": 66,
+        "rotten_orange -> rotten_banana": 1
+      },
+      "total_errors": 468
+    },
+    "clip_strict_zero_shot": {
+      "counts": {
+        "combined_error": 0,
+        "condition_error": 212,
+        "fruit_identity_error": 19
+      },
+      "percent_of_errors": {
+        "combined_error": 0.0,
+        "condition_error": 91.77489177489177,
+        "fruit_identity_error": 8.225108225108226
+      },
+      "top_confusion_pairs": {
+        "fresh_apple -> rotten_apple": 12,
+        "fresh_banana -> rotten_banana": 90,
+        "fresh_orange -> rotten_orange": 100,
+        "rotten_apple -> fresh_apple": 9,
+        "rotten_apple -> rotten_orange": 19,
+        "rotten_banana -> fresh_banana": 1
+      },
+      "total_errors": 231
+    },
+    "custom_cnn": {
+      "counts": {
+        "combined_error": 246,
+        "condition_error": 201,
+        "fruit_identity_error": 338
+      },
+      "percent_of_errors": {
+        "combined_error": 31.337579617834393,
+        "condition_error": 25.605095541401273,
+        "fruit_identity_error": 43.05732484076433
+      },
+      "top_confusion_pairs": {
+        "fresh_apple -> fresh_orange": 19,
+        "fresh_apple -> rotten_apple": 28,
+        "fresh_apple -> rotten_banana": 21,
+        "fresh_banana -> fresh_apple": 34,
+        "fresh_banana -> rotten_apple": 20,
+        "fresh_banana -> rotten_banana": 103,
+        "fresh_banana -> rotten_orange": 35,
+        "fresh_orange -> fresh_apple": 62,
+        "fresh_orange -> rotten_apple": 56,
+        "fresh_orange -> rotten_banana": 33,
+        "rotten_apple -> fresh_apple": 38,
+        "rotten_apple -> rotten_banana": 54,
+        "rotten_apple -> rotten_orange": 53,
+        "rotten_orange -> fresh_apple": 70,
+        "rotten_orange -> rotten_apple": 108
+      },
+      "total_errors": 785
+    },
+    "dinov2_linear_probe": {
+      "counts": {
+        "combined_error": 0,
+        "condition_error": 377,
+        "fruit_identity_error": 5
+      },
+      "percent_of_errors": {
+        "combined_error": 0.0,
+        "condition_error": 98.69109947643979,
+        "fruit_identity_error": 1.3089005235602094
+      },
+      "top_confusion_pairs": {
+        "fresh_banana -> rotten_banana": 109,
+        "rotten_apple -> fresh_apple": 96,
+        "rotten_orange -> fresh_orange": 172,
+        "rotten_orange -> rotten_apple": 5
+      },
+      "total_errors": 382
+    },
+    "efficientnet_b0": {
+      "counts": {
+        "combined_error": 16,
+        "condition_error": 290,
+        "fruit_identity_error": 69
+      },
+      "percent_of_errors": {
+        "combined_error": 4.266666666666667,
+        "condition_error": 77.33333333333333,
+        "fruit_identity_error": 18.4
+      },
+      "top_confusion_pairs": {
+        "fresh_apple -> fresh_orange": 1,
+        "fresh_apple -> rotten_apple": 58,
+        "fresh_apple -> rotten_orange": 6,
+        "fresh_banana -> rotten_banana": 53,
+        "fresh_orange -> fresh_apple": 5,
+        "fresh_orange -> rotten_apple": 10,
+        "fresh_orange -> rotten_orange": 15,
+        "rotten_apple -> fresh_apple": 71,
+        "rotten_apple -> rotten_orange": 5,
+        "rotten_banana -> fresh_banana": 6,
+        "rotten_orange -> fresh_orange": 87,
+        "rotten_orange -> rotten_apple": 58
+      },
+      "total_errors": 375
+    },
+    "mobilenetv3_large": {
+      "counts": {
+        "combined_error": 4,
+        "condition_error": 236,
+        "fruit_identity_error": 111
+      },
+      "percent_of_errors": {
+        "combined_error": 1.1396011396011396,
+        "condition_error": 67.23646723646723,
+        "fruit_identity_error": 31.623931623931625
+      },
+      "top_confusion_pairs": {
+        "fresh_apple -> fresh_orange": 3,
+        "fresh_apple -> rotten_apple": 26,
+        "fresh_banana -> rotten_banana": 35,
+        "fresh_orange -> fresh_apple": 1,
+        "fresh_orange -> rotten_apple": 4,
+        "fresh_orange -> rotten_orange": 2,
+        "rotten_apple -> fresh_apple": 68,
+        "rotten_banana -> fresh_banana": 22,
+        "rotten_orange -> fresh_orange": 83,
+        "rotten_orange -> rotten_apple": 107
+      },
+      "total_errors": 351
+    },
+    "resnet50": {
+      "counts": {
+        "combined_error": 4,
+        "condition_error": 315,
+        "fruit_identity_error": 49
+      },
+      "percent_of_errors": {
+        "combined_error": 1.0869565217391304,
+        "condition_error": 85.59782608695652,
+        "fruit_identity_error": 13.315217391304348
+      },
+      "top_confusion_pairs": {
+        "fresh_apple -> fresh_orange": 4,
+        "fresh_apple -> rotten_apple": 7,
+        "fresh_banana -> rotten_banana": 43,
+        "fresh_orange -> fresh_apple": 4,
+        "fresh_orange -> rotten_apple": 2,
+        "fresh_orange -> rotten_orange": 6,
+        "rotten_apple -> fresh_apple": 119,
+        "rotten_banana -> fresh_banana": 9,
+        "rotten_orange -> fresh_apple": 2,
+        "rotten_orange -> fresh_orange": 131,
+        "rotten_orange -> rotten_apple": 41
+      },
+      "total_errors": 368
+    },
+    "siglip2_linear_probe": {
+      "counts": {
+        "combined_error": 0,
+        "condition_error": 202,
+        "fruit_identity_error": 5
+      },
+      "percent_of_errors": {
+        "combined_error": 0.0,
+        "condition_error": 97.58454106280193,
+        "fruit_identity_error": 2.4154589371980677
+      },
+      "top_confusion_pairs": {
+        "fresh_apple -> rotten_apple": 1,
+        "fresh_banana -> rotten_banana": 136,
+        "fresh_orange -> rotten_orange": 9,
+        "rotten_apple -> fresh_apple": 19,
+        "rotten_apple -> rotten_banana": 1,
+        "rotten_apple -> rotten_orange": 2,
+        "rotten_orange -> fresh_orange": 37,
+        "rotten_orange -> rotten_apple": 2
+      },
+      "total_errors": 207
+    },
+    "siglip2_strict_zero_shot": {
+      "counts": {
+        "combined_error": 0,
+        "condition_error": 106,
+        "fruit_identity_error": 5
+      },
+      "percent_of_errors": {
+        "combined_error": 0.0,
+        "condition_error": 95.49549549549549,
+        "fruit_identity_error": 4.504504504504505
+      },
+      "top_confusion_pairs": {
+        "fresh_banana -> rotten_banana": 47,
+        "fresh_orange -> rotten_orange": 23,
+        "rotten_apple -> fresh_apple": 19,
+        "rotten_apple -> rotten_orange": 3,
+        "rotten_banana -> fresh_banana": 13,
+        "rotten_orange -> fresh_orange": 4,
+        "rotten_orange -> rotten_apple": 2
+      },
+      "total_errors": 111
+    }
+  }
+}

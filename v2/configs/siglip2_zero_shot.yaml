@@ -1,0 +1,70 @@
+schema_version: 1
+status: phase_3b_zero_shot
+
+experiment:
+  id: V2-P3B-SIGLIP2-ZS-009
+  number: 9
+  phase: 3B
+  model_label: SigLIP2 Base Patch16/224
+  objective: Evaluate semantic fruit-freshness transfer without fitting any target-dataset parameter.
+
+data:
+  root: v2/data/processed/v1_frozen_split
+  dataset_name: Fruits fresh and rotten for classification
+  dataset_version: Kaggle version 1, 2018-08-24
+  split_report_sha256: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  validation_split: validation
+  test_split: test
+  validation_samples: 270
+  test_samples: 2698
+  train_split_prohibited: true
+
+model:
+  adapter: siglip2_zero_shot
+  family: SigLIP2
+  checkpoint_id: google/siglip2-base-patch16-224
+  checkpoint_filename: model.safetensors
+  checkpoint_sha256: 612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b
+  checkpoint_size_bytes: 1500800904
+  revision: 75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2
+  provider: Google
+  library: transformers
+  library_version: 5.16.1
+  input_resolution: 224
+  embedding_dim: 768
+  text_max_length: 64
+  download_cache: v2/cache/huggingface
+  preprocessing_identity: google-siglip2-base-patch16-224-rev-75de2d5
+
+prompts:
+  registry_path: v2/configs/zero_shot_prompts.yaml
+  registry_sha256: e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7
+  strict_family: P1
+  candidate_families: [P1, P2, P3, P4]
+  selection_primary: macro_f1
+  first_tie_breaker: accuracy
+  second_tie_breaker: simpler_prompt_strategy
+
+evaluation:
+  seed: 42
+  device: auto
+  batch_size: 32
+  num_workers: 0
+  normalize_image_embeddings: true
+  normalize_text_embeddings: true
+  similarity: cosine_with_model_native_logit_scale_and_bias
+  classifier_training: false
+  calibration_fitting: false
+
+outputs:
+  result_dir: v2/results/experiment_009
+  validation_comparison: v2/results/experiment_009/validation_prompt_comparison.json
+  prompt_figure: v2/results/experiment_009/prompt_strategy_validation_comparison.png
+  strict_metrics: v2/results/experiment_009/strict_zero_shot_test_metrics.json
+  selected_metrics: v2/results/experiment_009/selected_prompt_test_metrics.json
+  strict_report: v2/results/experiment_009/classification_report_strict.json
+  selected_report: v2/results/experiment_009/classification_report_selected.json
+  strict_confusion: v2/results/experiment_009/confusion_matrix_strict.png
+  selected_confusion: v2/results/experiment_009/confusion_matrix_selected.png
+  margins: v2/results/experiment_009/similarity_margin_analysis.json
+  metadata: v2/results/experiment_009/metadata.json

@@ -1,0 +1,22 @@
+{
+  "completed_at": "2026-09-02T22:42:26.759495+00:00",
+  "completed_systems": [
+    "custom_cnn",
+    "resnet50",
+    "efficientnet_b0",
+    "mobilenetv3_large",
+    "dinov2_linear_probe",
+    "clip_linear_probe",
+    "clip_strict_zero_shot",
+    "siglip2_linear_probe",
+    "siglip2_strict_zero_shot"
+  ],
+  "experiment_id": "V2-P3E-MULTI-DOMAIN-014",
+  "fruitvision_passes_per_system": 1,
+  "last_completed_at": "2026-09-02T22:42:25.753108+00:00",
+  "manifest_sha256": "71651aee8816b01baaa1a752f1bcc6327ae26e98578ed95c2150276ad445cb3f",
+  "schema_version": 1,
+  "shared_encoder_policy": "CLIP and SigLIP2 each use one image traversal shared by their frozen probe and strict-P1 heads; each condition receives exactly one prediction per image.",
+  "started_at": "2026-09-02T22:07:21.821468+00:00",
+  "status": "COMPLETE_ONE_PASS_PER_SYSTEM"
+}

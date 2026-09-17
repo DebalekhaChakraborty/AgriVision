@@ -1,0 +1,82 @@
+schema_version: 1
+status: phase_3a_foundation_linear_probe
+
+experiment:
+  id: V2-P3A-CLIP-006
+  number: 6
+  phase: 3A
+  plot_title: V2 Experiment 006 original CLIP ViT-B16 linear probe
+  objective: Measure fruit-freshness information in the frozen original OpenAI CLIP image representation.
+
+data:
+  root: v2/data/processed/v1_frozen_split
+  dataset_name: Fruits fresh and rotten for classification
+  dataset_author: Sriram Reddy Kalluri
+  dataset_version: Kaggle version 1, 2018-08-24
+  split_policy: Frozen leakage-safe V1 split; do not resplit.
+  split_report_sha256: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  train_split: train
+  validation_split: validation
+  test_split: test
+
+encoder:
+  adapter: clip
+  family: CLIP
+  model_name: ViT-B-16
+  pretrained_identifier: openai
+  checkpoint_id: timm/vit_base_patch16_clip_224.openai
+  checkpoint_filename: open_clip_model.safetensors
+  revision: 977e3dd0ec55ab8da155f2fbeb6b5f54948b6e3d
+  provider: OpenAI via OpenCLIP
+  library: open_clip_torch
+  library_version: 3.3.0
+  pretrained_data: Approximately 400M internet image-text pairs used for original CLIP
+  pretraining_objective: Image-text contrastive learning
+  input_resolution: 224
+  embedding_dim: 512
+  license: OpenAI repository MIT; pinned mirror metadata Apache-2.0
+  download_source: https://huggingface.co/timm/vit_base_patch16_clip_224.openai
+  original_weight_url: https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt
+  download_cache: v2/cache/huggingface
+  preprocessing_identity: openai-clip-vit-b16-openclip-3.3.0
+  resize_mode: shortest
+  interpolation: bicubic
+  image_mean: [0.48145466, 0.4578275, 0.40821073]
+  image_std: [0.26862954, 0.26130258, 0.27577711]
+
+extraction:
+  batch_size: 32
+  num_workers: 0
+  deterministic: true
+  l2_normalize: true
+  cache_files:
+    train: v2/cache/clip/train.pt
+    validation: v2/cache/clip/validation.pt
+    test: v2/cache/clip/test.pt
+
+probe:
+  architecture: linear
+  num_classes: 6
+  optimizer: Adam
+  learning_rate: 0.001
+  batch_size: 64
+  epochs: 50
+  loss: CrossEntropyLoss
+  seed: 42
+  device: auto
+
+selection:
+  split: validation
+  primary_metric: accuracy
+  tie_break: lower_loss
+
+outputs:
+  probe_checkpoint: v2/checkpoints/experiment_006_linear_probe.pt
+  extraction_metadata: v2/results/experiment_006/feature_extraction.json
+  metadata: v2/results/experiment_006/metadata.json
+  history: v2/results/experiment_006/history.json
+  training_curve: v2/results/experiment_006/training_curve.png
+  validation_curve: v2/results/experiment_006/validation_curve.png
+  test_metrics: v2/results/experiment_006/test_metrics.json
+  classification_report: v2/results/experiment_006/classification_report.json
+  confusion_matrix: v2/results/experiment_006/confusion_matrix.png

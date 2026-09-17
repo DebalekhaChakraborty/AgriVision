@@ -1,0 +1,134 @@
+{
+  "checkpoint": {
+    "path": "v2/checkpoints/label_efficiency/experiment_010/budget_050/seed_44.pt",
+    "sha256": "e66991f2fe46c28dce1cb31a541d49595e364a3750b121ae56a085c9de5a593c"
+  },
+  "examples_per_class": 50,
+  "execution": {
+    "completed_at": "2026-09-02T16:31:09.004034+00:00",
+    "cpu_count": 20,
+    "device": "cpu",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "probe_test_forward_ms_per_image": 0.0003253969621379964,
+    "probe_test_forward_seconds": 0.0008779210038483143,
+    "python": "3.11.2",
+    "pytorch": "2.13.0+cpu",
+    "started_at": "2026-09-02T16:31:08.439098+00:00",
+    "test_evaluated_at": "2026-09-02T16:32:09.252265+00:00",
+    "training_seconds": 0.5649446520255879
+  },
+  "experiment_id": "V2-P3C-DINOV2-010",
+  "manifest_hash": "d73d392c17d986d9218b7c3dd69245e2bb7e86b5d7d426e59fa342b9591bdcb4",
+  "model": "DINOv2 ViT-B/14",
+  "model_key": "dinov2",
+  "model_revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+  "optimization_seed": 42,
+  "schema_version": 1,
+  "selected_epoch": 4,
+  "single_locked_test_evaluation": true,
+  "status": "complete",
+  "subset_seed": 44,
+  "test_metrics": {
+    "accuracy": 0.8914010378057821,
+    "confusion_matrix": [
+      [
+        395,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        378,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        381,
+        0,
+        0,
+        7
+      ],
+      [
+        190,
+        0,
+        1,
+        385,
+        0,
+        25
+      ],
+      [
+        0,
+        41,
+        0,
+        0,
+        489,
+        0
+      ],
+      [
+        0,
+        0,
+        26,
+        0,
+        0,
+        377
+      ]
+    ],
+    "loss": 1.5860297679901123,
+    "macro_f1": 0.8958100891697939,
+    "macro_precision": 0.904474667701376,
+    "macro_recall": 0.9121348548673608,
+    "per_class": {
+      "fresh_apple": {
+        "f1": 0.8061224489795918,
+        "precision": 0.6752136752136753,
+        "recall": 1.0,
+        "support": 395.0
+      },
+      "fresh_banana": {
+        "f1": 0.945,
+        "precision": 0.9021479713603818,
+        "recall": 0.9921259842519685,
+        "support": 381.0
+      },
+      "fresh_orange": {
+        "f1": 0.957286432160804,
+        "precision": 0.9338235294117647,
+        "recall": 0.9819587628865979,
+        "support": 388.0
+      },
+      "rotten_apple": {
+        "f1": 0.7809330628803245,
+        "precision": 1.0,
+        "recall": 0.6405990016638935,
+        "support": 601.0
+      },
+      "rotten_banana": {
+        "f1": 0.9569471624266145,
+        "precision": 0.9939024390243902,
+        "recall": 0.9226415094339623,
+        "support": 530.0
+      },
+      "rotten_orange": {
+        "f1": 0.9285714285714286,
+        "precision": 0.921760391198044,
+        "recall": 0.9354838709677419,
+        "support": 403.0
+      }
+    },
+    "weighted_f1": 0.8897804134977009,
+    "weighted_precision": 0.9162301847832507,
+    "weighted_recall": 0.8914010378057821
+  },
+  "total_labelled_examples": 300,
+  "validation_metrics": {
+    "accuracy": 1.0,
+    "loss": 1.5756900584256208
+  }
+}

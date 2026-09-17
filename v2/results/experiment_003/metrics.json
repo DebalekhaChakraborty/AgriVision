@@ -1,0 +1,134 @@
+{
+  "accuracy": 0.9455151964418087,
+  "checkpoint": {
+    "path": "v2/checkpoints/best_efficientnet.pt",
+    "selected_epoch": 8,
+    "sha256": "b312eb80df31f4bce5882311d3d4fea3be20e05e1e2062dadcdb3f70e50abcd2"
+  },
+  "class_mapping": {
+    "fresh_apple": 0,
+    "fresh_banana": 1,
+    "fresh_orange": 2,
+    "rotten_apple": 3,
+    "rotten_banana": 4,
+    "rotten_orange": 5
+  },
+  "classification_report": {
+    "accuracy": 0.9455151964418087,
+    "fresh_apple": {
+      "f1-score": 0.9379474940334129,
+      "precision": 0.8871331828442438,
+      "recall": 0.9949367088607595,
+      "support": 395.0
+    },
+    "fresh_banana": {
+      "f1-score": 0.9694656488549618,
+      "precision": 0.9407407407407408,
+      "recall": 1.0,
+      "support": 381.0
+    },
+    "fresh_orange": {
+      "f1-score": 0.9504950495049505,
+      "precision": 0.9142857142857143,
+      "recall": 0.9896907216494846,
+      "support": 388.0
+    },
+    "macro avg": {
+      "f1-score": 0.9451818053334726,
+      "precision": 0.9432917528012834,
+      "recall": 0.9501864467275741,
+      "support": 2698.0
+    },
+    "rotten_apple": {
+      "f1-score": 0.9291882556131261,
+      "precision": 0.9658886894075404,
+      "recall": 0.8951747088186356,
+      "support": 601.0
+    },
+    "rotten_banana": {
+      "f1-score": 0.974903474903475,
+      "precision": 0.9980237154150198,
+      "recall": 0.9528301886792453,
+      "support": 530.0
+    },
+    "rotten_orange": {
+      "f1-score": 0.9090909090909091,
+      "precision": 0.9536784741144414,
+      "recall": 0.8684863523573201,
+      "support": 403.0
+    },
+    "weighted avg": {
+      "f1-score": 0.9452010271500468,
+      "precision": 0.947875012290796,
+      "recall": 0.9455151964418087,
+      "support": 2698.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      393,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      381,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      384,
+      0,
+      0,
+      1
+    ],
+    [
+      44,
+      0,
+      3,
+      538,
+      0,
+      16
+    ],
+    [
+      0,
+      23,
+      0,
+      2,
+      505,
+      0
+    ],
+    [
+      3,
+      0,
+      33,
+      16,
+      1,
+      350
+    ]
+  ],
+  "evaluated_at": "2026-09-01T12:11:50.377293+00:00",
+  "experiment_id": "V2-P2-EFFICIENTNET-B0-003",
+  "loss": 0.15246722940562654,
+  "parameters": {
+    "total": 4015234,
+    "trainable": 7686
+  },
+  "samples": 2698,
+  "single_test_pass": true,
+  "split": "test",
+  "timing": {
+    "device": "cpu",
+    "inference_seconds_per_image": 0.012554733225345002,
+    "inference_timing_scope": "Model forward pass only; image decoding and transforms excluded.",
+    "model_inference_seconds": 33.87267024198081,
+    "training_seconds": 880.9182899389998
+  }
+}

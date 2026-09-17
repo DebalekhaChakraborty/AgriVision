@@ -1,0 +1,114 @@
+{
+  "gap_definition": "external - source; negative is degradation",
+  "schema_version": 1,
+  "systems": {
+    "clip_linear_probe": {
+      "accuracy_gap_external_minus_source": -0.3484877687175686,
+      "accuracy_retention": 0.6364191802010827,
+      "condition": "013-F",
+      "display_name": "CLIP + linear probe",
+      "external_accuracy": 0.61,
+      "external_weighted_f1": 0.5496432996295147,
+      "source_accuracy": 0.9584877687175686,
+      "source_weighted_f1": 0.9584109297758671,
+      "weighted_f1_gap_external_minus_source": -0.4087676301463523,
+      "weighted_f1_retention": 0.573494398439356
+    },
+    "clip_strict_zero_shot": {
+      "accuracy_gap_external_minus_source": -0.09205522609340255,
+      "accuracy_retention": 0.8976658426040379,
+      "condition": "013-H",
+      "display_name": "CLIP strict P1 zero-shot",
+      "external_accuracy": 0.8075,
+      "external_weighted_f1": 0.800269602143843,
+      "source_accuracy": 0.8995552260934025,
+      "source_weighted_f1": 0.900872848568694,
+      "weighted_f1_gap_external_minus_source": -0.10060324642485097,
+      "weighted_f1_retention": 0.8883269191821139
+    },
+    "custom_cnn": {
+      "accuracy_gap_external_minus_source": -0.39508586607363483,
+      "accuracy_retention": 0.46676254794063693,
+      "condition": "013-A",
+      "display_name": "Custom CNN",
+      "external_accuracy": 0.3458333333333333,
+      "external_weighted_f1": 0.2772412169003058,
+      "source_accuracy": 0.7409191994069682,
+      "source_weighted_f1": 0.7403100388623582,
+      "weighted_f1_gap_external_minus_source": -0.46306882196205246,
+      "weighted_f1_retention": 0.3744933910748328
+    },
+    "dinov2_linear_probe": {
+      "accuracy_gap_external_minus_source": -0.20899308129478633,
+      "accuracy_retention": 0.7653502566236648,
+      "condition": "013-E",
+      "display_name": "DINOv2 + linear probe",
+      "external_accuracy": 0.6816666666666666,
+      "external_weighted_f1": 0.6327422779743809,
+      "source_accuracy": 0.890659747961453,
+      "source_weighted_f1": 0.8901492381795155,
+      "weighted_f1_gap_external_minus_source": -0.25740696020513465,
+      "weighted_f1_retention": 0.7108271858642835
+    },
+    "efficientnet_b0": {
+      "accuracy_gap_external_minus_source": -0.2580151964418087,
+      "accuracy_retention": 0.7271168169345356,
+      "condition": "013-C",
+      "display_name": "EfficientNet-B0",
+      "external_accuracy": 0.6875,
+      "external_weighted_f1": 0.6737887848939552,
+      "source_accuracy": 0.9455151964418087,
+      "source_weighted_f1": 0.9452010271500468,
+      "weighted_f1_gap_external_minus_source": -0.2714122422560916,
+      "weighted_f1_retention": 0.7128523621324778
+    },
+    "mobilenetv3_large": {
+      "accuracy_gap_external_minus_source": -0.22281875463306156,
+      "accuracy_retention": 0.7604920318725099,
+      "condition": "013-D",
+      "display_name": "MobileNetV3-Large",
+      "external_accuracy": 0.7075,
+      "external_weighted_f1": 0.6591760497710687,
+      "source_accuracy": 0.9303187546330616,
+      "source_weighted_f1": 0.9297821876042062,
+      "weighted_f1_gap_external_minus_source": -0.2706061378331375,
+      "weighted_f1_retention": 0.7089574940874966
+    },
+    "resnet50": {
+      "accuracy_gap_external_minus_source": -0.2484754138868297,
+      "accuracy_retention": 0.7361721107175653,
+      "condition": "013-B",
+      "display_name": "ResNet50",
+      "external_accuracy": 0.6933333333333334,
+      "external_weighted_f1": 0.6510015927643293,
+      "source_accuracy": 0.9418087472201631,
+      "source_weighted_f1": 0.9412854521307247,
+      "weighted_f1_gap_external_minus_source": -0.29028385936639534,
+      "weighted_f1_retention": 0.6916091088953948
+    },
+    "siglip2_linear_probe": {
+      "accuracy_gap_external_minus_source": -0.15878613787991103,
+      "accuracy_retention": 0.8390060127771515,
+      "condition": "013-G",
+      "display_name": "SigLIP2 + linear probe",
+      "external_accuracy": 0.8275,
+      "external_weighted_f1": 0.8123964194168288,
+      "source_accuracy": 0.986286137879911,
+      "source_weighted_f1": 0.9862441687560008,
+      "weighted_f1_gap_external_minus_source": -0.17384774933917202,
+      "weighted_f1_retention": 0.823727475561701
+    },
+    "siglip2_strict_zero_shot": {
+      "accuracy_gap_external_minus_source": -0.07137323943661977,
+      "accuracy_retention": 0.9270863309352517,
+      "condition": "013-I",
+      "display_name": "SigLIP2 strict P1 zero-shot",
+      "external_accuracy": 0.9075,
+      "external_weighted_f1": 0.9070426918553528,
+      "source_accuracy": 0.9788732394366197,
+      "source_weighted_f1": 0.9789070727977148,
+      "weighted_f1_gap_external_minus_source": -0.07186438094236203,
+      "weighted_f1_retention": 0.9265871266646651
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "checkpoint": {
+    "path": "v2/checkpoints/label_efficiency/experiment_011/budget_050/seed_43.pt",
+    "sha256": "18ad53ab24f6a5963d644215c330a9187b6d5c40d22f8e020ec168fdfd39cb73"
+  },
+  "examples_per_class": 50,
+  "execution": {
+    "completed_at": "2026-09-02T16:31:21.045561+00:00",
+    "cpu_count": 20,
+    "device": "cpu",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "probe_test_forward_ms_per_image": 0.0003300266717667598,
+    "probe_test_forward_seconds": 0.000890411960426718,
+    "python": "3.11.2",
+    "pytorch": "2.13.0+cpu",
+    "started_at": "2026-09-02T16:31:20.544736+00:00",
+    "test_evaluated_at": "2026-09-02T16:32:09.890270+00:00",
+    "training_seconds": 0.5008326810202561
+  },
+  "experiment_id": "V2-P3C-CLIP-011",
+  "manifest_hash": "8ac7adcbd0f05079ff7e3229abbc7b535ca0acac511d372ce037bdcfa4757726",
+  "model": "Original CLIP ViT-B/16",
+  "model_key": "clip",
+  "model_revision": "977e3dd0ec55ab8da155f2fbeb6b5f54948b6e3d",
+  "optimization_seed": 42,
+  "schema_version": 1,
+  "selected_epoch": 47,
+  "single_locked_test_evaluation": true,
+  "status": "complete",
+  "subset_seed": 43,
+  "test_metrics": {
+    "accuracy": 0.9395848776871757,
+    "confusion_matrix": [
+      [
+        388,
+        0,
+        1,
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        380,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        381,
+        0,
+        0,
+        7
+      ],
+      [
+        71,
+        0,
+        0,
+        516,
+        0,
+        14
+      ],
+      [
+        0,
+        35,
+        0,
+        0,
+        495,
+        0
+      ],
+      [
+        1,
+        0,
+        25,
+        2,
+        0,
+        375
+      ]
+    ],
+    "loss": 1.0601654052734375,
+    "macro_f1": 0.94029762171299,
+    "macro_precision": 0.9374908733258053,
+    "macro_recall": 0.9474441632543837,
+    "per_class": {
+      "fresh_apple": {
+        "f1": 0.9076023391812865,
+        "precision": 0.8434782608695652,
+        "recall": 0.9822784810126582,
+        "support": 395.0
+      },
+      "fresh_banana": {
+        "f1": 0.9547738693467337,
+        "precision": 0.9156626506024096,
+        "recall": 0.9973753280839895,
+        "support": 381.0
+      },
+      "fresh_orange": {
+        "f1": 0.9584905660377359,
+        "precision": 0.9361179361179361,
+        "recall": 0.9819587628865979,
+        "support": 388.0
+      },
+      "rotten_apple": {
+        "f1": 0.9173333333333333,
+        "precision": 0.9847328244274809,
+        "recall": 0.8585690515806988,
+        "support": 601.0
+      },
+      "rotten_banana": {
+        "f1": 0.9649122807017544,
+        "precision": 0.9979838709677419,
+        "recall": 0.9339622641509434,
+        "support": 530.0
+      },
+      "rotten_orange": {
+        "f1": 0.9386733416770964,
+        "precision": 0.946969696969697,
+        "recall": 0.9305210918114144,
+        "support": 403.0
+      }
+    },
+    "weighted_f1": 0.9396487422614856,
+    "weighted_precision": 0.9442697587506903,
+    "weighted_recall": 0.9395848776871757
+  },
+  "total_labelled_examples": 300,
+  "validation_metrics": {
+    "accuracy": 0.9740740740740741,
+    "loss": 1.041844963144373
+  }
+}

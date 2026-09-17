@@ -1,0 +1,75 @@
+schema_version: 1
+status: phase_3a_foundation_linear_probe
+
+experiment:
+  id: V2-P3A-DINOV2-005
+  number: 5
+  phase: 3A
+  plot_title: V2 Experiment 005 DINOv2 ViT-B14 linear probe
+  objective: Measure fruit-freshness information in a frozen self-supervised DINOv2 representation.
+
+data:
+  root: v2/data/processed/v1_frozen_split
+  dataset_name: Fruits fresh and rotten for classification
+  dataset_author: Sriram Reddy Kalluri
+  dataset_version: Kaggle version 1, 2018-08-24
+  split_policy: Frozen leakage-safe V1 split; do not resplit.
+  split_report_sha256: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  train_split: train
+  validation_split: validation
+  test_split: test
+
+encoder:
+  adapter: dinov2
+  family: DINOv2
+  canonical_architecture: dinov2_vitb14
+  checkpoint_id: facebook/dinov2-base
+  revision: f9e44c814b77203eaa57a6bdbbd535f21ede1415
+  provider: Meta AI / Facebook Research
+  library: transformers
+  library_version: 5.16.1
+  pretrained_data: LVD-142M
+  pretraining_objective: Self-supervised DINO and iBOT with KoLeo regularization
+  input_resolution: 224
+  embedding_dim: 768
+  license: Apache-2.0
+  download_source: https://huggingface.co/facebook/dinov2-base
+  download_cache: v2/cache/huggingface
+  preprocessing_identity: facebook-dinov2-base-bitprocessor-rev-f9e44c8
+
+extraction:
+  batch_size: 32
+  num_workers: 0
+  deterministic: true
+  l2_normalize: true
+  cache_files:
+    train: v2/cache/dinov2/train.pt
+    validation: v2/cache/dinov2/validation.pt
+    test: v2/cache/dinov2/test.pt
+
+probe:
+  architecture: linear
+  num_classes: 6
+  optimizer: Adam
+  learning_rate: 0.001
+  batch_size: 64
+  epochs: 50
+  loss: CrossEntropyLoss
+  seed: 42
+  device: auto
+
+selection:
+  split: validation
+  primary_metric: accuracy
+  tie_break: lower_loss
+
+outputs:
+  probe_checkpoint: v2/checkpoints/experiment_005_linear_probe.pt
+  extraction_metadata: v2/results/experiment_005/feature_extraction.json
+  metadata: v2/results/experiment_005/metadata.json
+  history: v2/results/experiment_005/history.json
+  training_curve: v2/results/experiment_005/training_curve.png
+  validation_curve: v2/results/experiment_005/validation_curve.png
+  test_metrics: v2/results/experiment_005/test_metrics.json
+  classification_report: v2/results/experiment_005/classification_report.json
+  confusion_matrix: v2/results/experiment_005/confusion_matrix.png

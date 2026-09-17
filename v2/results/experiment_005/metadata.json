@@ -1,0 +1,242 @@
+{
+  "checkpoint": {
+    "path": "v2/checkpoints/experiment_005_linear_probe.pt",
+    "sha256": "55f19bcc5e59f78a0bb55271f7e02af3ce333ae7d9b60138f671b6768416c90a"
+  },
+  "completed_at": "2026-09-01T17:43:20.152683+00:00",
+  "configuration": {
+    "data": {
+      "dataset_author": "Sriram Reddy Kalluri",
+      "dataset_name": "Fruits fresh and rotten for classification",
+      "dataset_version": "Kaggle version 1, 2018-08-24",
+      "root": "v2/data/processed/v1_frozen_split",
+      "split_policy": "Frozen leakage-safe V1 split; do not resplit.",
+      "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+      "test_split": "test",
+      "train_split": "train",
+      "validation_split": "validation"
+    },
+    "encoder": {
+      "adapter": "dinov2",
+      "canonical_architecture": "dinov2_vitb14",
+      "checkpoint_id": "facebook/dinov2-base",
+      "download_cache": "v2/cache/huggingface",
+      "download_source": "https://huggingface.co/facebook/dinov2-base",
+      "embedding_dim": 768,
+      "family": "DINOv2",
+      "input_resolution": 224,
+      "library": "transformers",
+      "library_version": "5.16.1",
+      "license": "Apache-2.0",
+      "preprocessing_identity": "facebook-dinov2-base-bitprocessor-rev-f9e44c8",
+      "pretrained_data": "LVD-142M",
+      "pretraining_objective": "Self-supervised DINO and iBOT with KoLeo regularization",
+      "provider": "Meta AI / Facebook Research",
+      "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+    },
+    "experiment": {
+      "id": "V2-P3A-DINOV2-005",
+      "number": 5,
+      "objective": "Measure fruit-freshness information in a frozen self-supervised DINOv2 representation.",
+      "phase": "3A",
+      "plot_title": "V2 Experiment 005 DINOv2 ViT-B14 linear probe"
+    },
+    "extraction": {
+      "batch_size": 32,
+      "cache_files": {
+        "test": "v2/cache/dinov2/test.pt",
+        "train": "v2/cache/dinov2/train.pt",
+        "validation": "v2/cache/dinov2/validation.pt"
+      },
+      "deterministic": true,
+      "l2_normalize": true,
+      "num_workers": 0
+    },
+    "outputs": {
+      "classification_report": "v2/results/experiment_005/classification_report.json",
+      "confusion_matrix": "v2/results/experiment_005/confusion_matrix.png",
+      "extraction_metadata": "v2/results/experiment_005/feature_extraction.json",
+      "history": "v2/results/experiment_005/history.json",
+      "metadata": "v2/results/experiment_005/metadata.json",
+      "probe_checkpoint": "v2/checkpoints/experiment_005_linear_probe.pt",
+      "test_metrics": "v2/results/experiment_005/test_metrics.json",
+      "training_curve": "v2/results/experiment_005/training_curve.png",
+      "validation_curve": "v2/results/experiment_005/validation_curve.png"
+    },
+    "probe": {
+      "architecture": "linear",
+      "batch_size": 64,
+      "device": "auto",
+      "epochs": 50,
+      "learning_rate": 0.001,
+      "loss": "CrossEntropyLoss",
+      "num_classes": 6,
+      "optimizer": "Adam",
+      "seed": 42
+    },
+    "schema_version": 1,
+    "selection": {
+      "primary_metric": "accuracy",
+      "split": "validation",
+      "tie_break": "lower_loss"
+    },
+    "status": "phase_3a_foundation_linear_probe"
+  },
+  "configuration_path": "v2/configs/dinov2_linear_probe.yaml",
+  "dataset": {
+    "class_mapping": {
+      "fresh_apple": 0,
+      "fresh_banana": 1,
+      "fresh_orange": 2,
+      "rotten_apple": 3,
+      "rotten_banana": 4,
+      "rotten_orange": 5
+    },
+    "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+    "train_samples": 1539,
+    "validation_samples": 270
+  },
+  "development_extraction": {
+    "train": {
+      "cache_path": "v2/cache/dinov2/train.pt",
+      "cache_sha256": "fe34d078df0f8b372fedd41f1ed43f2c9438a9f22fbaa9ec696d6a628dd88fe1",
+      "deterministic_order": true,
+      "embedding_dim": 768,
+      "encoder_forward_ms_per_image": 98.87907985055334,
+      "encoder_forward_seconds": 152.1749038900016,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1419.91015625,
+      "samples": 1539,
+      "split": "train",
+      "wall_ms_per_image": 105.44871155556024,
+      "wall_seconds": 162.2855670840072
+    },
+    "validation": {
+      "cache_path": "v2/cache/dinov2/validation.pt",
+      "cache_sha256": "c75075cf7a3fc1cc053631130a8de07139fba2738b7d5c90d3ed6eddf4831946",
+      "deterministic_order": true,
+      "embedding_dim": 768,
+      "encoder_forward_ms_per_image": 97.07502228902067,
+      "encoder_forward_seconds": 26.21025601803558,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1473.703125,
+      "samples": 270,
+      "split": "validation",
+      "wall_ms_per_image": 104.01861588147261,
+      "wall_seconds": 28.085026287997607
+    }
+  },
+  "embedding_caches": {
+    "train": {
+      "path": "v2/cache/dinov2/train.pt",
+      "sha256": "fe34d078df0f8b372fedd41f1ed43f2c9438a9f22fbaa9ec696d6a628dd88fe1"
+    },
+    "validation": {
+      "path": "v2/cache/dinov2/validation.pt",
+      "sha256": "c75075cf7a3fc1cc053631130a8de07139fba2738b7d5c90d3ed6eddf4831946"
+    }
+  },
+  "encoder": {
+    "adapter": "DINOv2Encoder",
+    "all_parameters_frozen": true,
+    "canonical_architecture": "dinov2_vitb14",
+    "checkpoint_file": {
+      "path": "/home/AI_POC/tactics/AI-Based-Detection-of-Rotten-Fruits/v2/cache/huggingface/models--facebook--dinov2-base/blobs/d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "sha256": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "size_bytes": 346345912
+    },
+    "checkpoint_id": "facebook/dinov2-base",
+    "embedding_dim": 768,
+    "encoder_parameters": 86580480,
+    "library": "transformers",
+    "library_version": "5.16.1",
+    "preprocessing": {
+      "crop_size": {
+        "height": 224,
+        "width": 224
+      },
+      "do_center_crop": true,
+      "do_convert_rgb": true,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_processor_type": "BitImageProcessor",
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "resample": 3,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "shortest_edge": 256
+      }
+    },
+    "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+  },
+  "environment": {
+    "cpu_count": 20,
+    "cuda_available": false,
+    "cuda_runtime": null,
+    "device": "cpu",
+    "device_name": "CPU",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2",
+    "pytorch": "2.13.0+cpu",
+    "torchvision": "0.28.0+cpu"
+  },
+  "experiment_id": "V2-P3A-DINOV2-005",
+  "objective": "Measure fruit-freshness information in a frozen self-supervised DINOv2 representation.",
+  "probe": {
+    "architecture": "nn.Linear(embedding_dim, 6)",
+    "batch_size": 64,
+    "best_epoch": 2,
+    "best_validation_accuracy": 0.9925925925925926,
+    "best_validation_loss": 1.290609147813585,
+    "duration_seconds": 2.347112985997228,
+    "embedding_dim": 768,
+    "epochs_completed": 50,
+    "learning_rate": 0.001,
+    "optimizer": "Adam",
+    "seed": 42,
+    "trainable_parameters": 4614
+  },
+  "repository": {
+    "branch": "master",
+    "commit": "a4285bfe275bac34a498e5d7f9fb48fbbe3ecf67",
+    "working_tree_porcelain": "M .gitignore\n M README.md\n D docs/V2_RESEARCH_BLUEPRINT.md\n M requirements-v2.txt\n M v2/configs/baseline_cnn.yaml\n?? docs/FOUNDATION_MODEL_PROVENANCE.md\n?? docs/FOUNDATION_REPRESENTATION_ANALYSIS.md\n?? docs/TRANSFER_LEARNING_ANALYSIS.md\n?? docs/handbook/\n?? v2/__init__.py\n?? v2/checkpoints/\n?? v2/configs/clip_linear_probe.yaml\n?? v2/configs/dinov2_linear_probe.yaml\n?? v2/configs/efficientnet.yaml\n?? v2/configs/mobilenetv3.yaml\n?? v2/configs/resnet50.yaml\n?? v2/configs/siglip2_linear_probe.yaml\n?? v2/experiments/experiment_001_baseline_cnn.md\n?? v2/experiments/experiment_001_metadata.json\n?? v2/experiments/experiment_002_metadata.json\n?? v2/experiments/experiment_002_resnet50.md\n?? v2/experiments/experiment_003_efficientnet.md\n?? v2/experiments/experiment_003_metadata.json\n?? v2/experiments/experiment_004_metadata.json\n?? v2/experiments/experiment_004_mobilenetv3.md\n?? v2/experiments/experiment_005_dinov2.md\n?? v2/experiments/experiment_006_clip.md\n?? v2/experiments/experiment_007_siglip2.md\n?? v2/notebooks/01_baseline_analysis.ipynb\n?? v2/results/baseline_confusion_matrix.png\n?? v2/results/baseline_history.json\n?? v2/results/baseline_test_metrics.json\n?? v2/results/baseline_training_curve.png\n?? v2/results/baseline_validation_curve.png\n?? v2/results/experiment_002/\n?? v2/results/experiment_003/\n?? v2/results/experiment_004/\n?? v2/results/experiment_005/\n?? v2/src/__init__.py\n?? v2/src/datasets/__init__.py\n?? v2/src/datasets/fruit_dataset.py\n?? v2/src/datasets/transfer_transforms.py\n?? v2/src/evaluation/__init__.py\n?? v2/src/evaluation/evaluate.py\n?? v2/src/evaluation/evaluate_transfer.py\n?? v2/src/foundation/\n?? v2/src/models/__init__.py\n?? v2/src/models/cnn_baseline.py\n?? v2/src/models/efficientnet_transfer.py\n?? v2/src/models/frozen_backbone.py\n?? v2/src/models/mobilenetv3_transfer.py\n?? v2/src/models/resnet50_transfer.py\n?? v2/src/models/transfer_registry.py\n?? v2/src/training/__init__.py\n?? v2/src/training/train.py\n?? v2/src/training/train_transfer.py\n?? v2/src/training/utils.py\n?? v2/src/visualization/__init__.py\n?? v2/src/visualization/plots.py\n?? v2/src/visualization/transfer_plots.py"
+  },
+  "started_at": "2026-09-01T17:43:17.328762+00:00",
+  "status": "complete",
+  "test_accessed": true,
+  "test_evaluation": {
+    "accuracy": 0.890659747961453,
+    "classification_report_path": "v2/results/experiment_005/classification_report.json",
+    "confusion_matrix_path": "v2/results/experiment_005/confusion_matrix.png",
+    "evaluated_at": "2026-09-01T17:49:38.152390+00:00",
+    "loss": 1.3253979639621731,
+    "metrics_path": "v2/results/experiment_005/test_metrics.json",
+    "samples": 2698,
+    "test_embedding_cache": {
+      "path": "v2/cache/dinov2/test.pt",
+      "sha256": "b07a8dd63435cfdfc436690c4fc5e045b8cf90631d83368b89cc046945162da8",
+      "size_bytes": 8529165
+    },
+    "timing": {
+      "device": "cpu",
+      "encoder_forward_ms_per_image": 93.89821196183485,
+      "encoder_forward_seconds": 253.3373758730304,
+      "image_representation_probe_ms_per_image": 93.93147380877248,
+      "peak_process_rss_mb": 1406.5625,
+      "probe_forward_ms_per_image": 0.006601169383156081,
+      "probe_forward_seconds": 0.017809954995755106,
+      "scope": "Model forward only after preprocessing; includes L2 normalization in the full path.",
+      "test_loop_wall_seconds": 270.98285102299997
+    }
+  }
+}

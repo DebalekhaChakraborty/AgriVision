@@ -1,0 +1,237 @@
+{
+  "checkpoint": {
+    "path": "v2/checkpoints/experiment_007_linear_probe.pt",
+    "sha256": "011909e15d99abc090ebe1e1d5ba8035085a8ff1e59775539cadd15b71aa8736"
+  },
+  "completed_at": "2026-09-01T18:09:07.846426+00:00",
+  "configuration": {
+    "data": {
+      "dataset_author": "Sriram Reddy Kalluri",
+      "dataset_name": "Fruits fresh and rotten for classification",
+      "dataset_version": "Kaggle version 1, 2018-08-24",
+      "root": "v2/data/processed/v1_frozen_split",
+      "split_policy": "Frozen leakage-safe V1 split; do not resplit.",
+      "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+      "test_split": "test",
+      "train_split": "train",
+      "validation_split": "validation"
+    },
+    "encoder": {
+      "adapter": "siglip2",
+      "checkpoint_id": "google/siglip2-base-patch16-224",
+      "download_cache": "v2/cache/huggingface",
+      "download_source": "https://huggingface.co/google/siglip2-base-patch16-224",
+      "embedding_dim": 768,
+      "family": "SigLIP2",
+      "input_resolution": 224,
+      "library": "transformers",
+      "library_version": "5.16.1",
+      "license": "Apache-2.0",
+      "preprocessing_identity": "google-siglip2-base-patch16-224-rev-75de2d5",
+      "pretrained_data": "Multilingual diverse mixture; exact corpus composition not fully enumerated",
+      "pretraining_objective": "Sigmoid image-text learning plus captioning, self-distillation, masked prediction, and online curation",
+      "provider": "Google",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2"
+    },
+    "experiment": {
+      "id": "V2-P3A-SIGLIP2-007",
+      "number": 7,
+      "objective": "Measure fruit-freshness information in the frozen SigLIP2 Base image representation.",
+      "phase": "3A",
+      "plot_title": "V2 Experiment 007 SigLIP2 Base linear probe"
+    },
+    "extraction": {
+      "batch_size": 32,
+      "cache_files": {
+        "test": "v2/cache/siglip2/test.pt",
+        "train": "v2/cache/siglip2/train.pt",
+        "validation": "v2/cache/siglip2/validation.pt"
+      },
+      "deterministic": true,
+      "l2_normalize": true,
+      "num_workers": 0
+    },
+    "outputs": {
+      "classification_report": "v2/results/experiment_007/classification_report.json",
+      "confusion_matrix": "v2/results/experiment_007/confusion_matrix.png",
+      "extraction_metadata": "v2/results/experiment_007/feature_extraction.json",
+      "history": "v2/results/experiment_007/history.json",
+      "metadata": "v2/results/experiment_007/metadata.json",
+      "probe_checkpoint": "v2/checkpoints/experiment_007_linear_probe.pt",
+      "test_metrics": "v2/results/experiment_007/test_metrics.json",
+      "training_curve": "v2/results/experiment_007/training_curve.png",
+      "validation_curve": "v2/results/experiment_007/validation_curve.png"
+    },
+    "probe": {
+      "architecture": "linear",
+      "batch_size": 64,
+      "device": "auto",
+      "epochs": 50,
+      "learning_rate": 0.001,
+      "loss": "CrossEntropyLoss",
+      "num_classes": 6,
+      "optimizer": "Adam",
+      "seed": 42
+    },
+    "schema_version": 1,
+    "selection": {
+      "primary_metric": "accuracy",
+      "split": "validation",
+      "tie_break": "lower_loss"
+    },
+    "status": "phase_3a_foundation_linear_probe"
+  },
+  "configuration_path": "v2/configs/siglip2_linear_probe.yaml",
+  "dataset": {
+    "class_mapping": {
+      "fresh_apple": 0,
+      "fresh_banana": 1,
+      "fresh_orange": 2,
+      "rotten_apple": 3,
+      "rotten_banana": 4,
+      "rotten_orange": 5
+    },
+    "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+    "train_samples": 1539,
+    "validation_samples": 270
+  },
+  "development_extraction": {
+    "train": {
+      "cache_path": "v2/cache/siglip2/train.pt",
+      "cache_sha256": "dfadbce54a6a07b1e9775be779b05a848306f4a0770f7085e9c07b0c74f2603c",
+      "deterministic_order": true,
+      "embedding_dim": 768,
+      "encoder_forward_ms_per_image": 84.71394216438605,
+      "encoder_forward_seconds": 130.37475699099014,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1247.6875,
+      "samples": 1539,
+      "split": "train",
+      "wall_ms_per_image": 90.86271600324699,
+      "wall_seconds": 139.8377199289971
+    },
+    "validation": {
+      "cache_path": "v2/cache/siglip2/validation.pt",
+      "cache_sha256": "0ad2d7f738ae0db8ed58e6b67f85667ce2cf83da33d54abc434f13fd4c311832",
+      "deterministic_order": true,
+      "embedding_dim": 768,
+      "encoder_forward_ms_per_image": 85.66759985190367,
+      "encoder_forward_seconds": 23.130251960013993,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1266.2734375,
+      "samples": 270,
+      "split": "validation",
+      "wall_ms_per_image": 91.85993508888512,
+      "wall_seconds": 24.802182473998982
+    }
+  },
+  "embedding_caches": {
+    "train": {
+      "path": "v2/cache/siglip2/train.pt",
+      "sha256": "dfadbce54a6a07b1e9775be779b05a848306f4a0770f7085e9c07b0c74f2603c"
+    },
+    "validation": {
+      "path": "v2/cache/siglip2/validation.pt",
+      "sha256": "0ad2d7f738ae0db8ed58e6b67f85667ce2cf83da33d54abc434f13fd4c311832"
+    }
+  },
+  "encoder": {
+    "adapter": "SigLIP2Encoder",
+    "all_parameters_frozen": true,
+    "checkpoint_file": {
+      "path": "/home/AI_POC/tactics/AI-Based-Detection-of-Rotten-Fruits/v2/cache/huggingface/models--google--siglip2-base-patch16-224/blobs/612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "sha256": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "size_bytes": 1500800904
+    },
+    "checkpoint_id": "google/siglip2-base-patch16-224",
+    "embedding_dim": 768,
+    "encoder_parameters": 92884224,
+    "library": "transformers",
+    "library_version": "5.16.1",
+    "preprocessing": {
+      "do_convert_rgb": null,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_processor_type": "SiglipImageProcessor",
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "resample": 2,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "height": 224,
+        "width": 224
+      }
+    },
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "vision_encoder_only": true
+  },
+  "environment": {
+    "cpu_count": 20,
+    "cuda_available": false,
+    "cuda_runtime": null,
+    "device": "cpu",
+    "device_name": "CPU",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2",
+    "pytorch": "2.13.0+cpu",
+    "torchvision": "0.28.0+cpu"
+  },
+  "experiment_id": "V2-P3A-SIGLIP2-007",
+  "objective": "Measure fruit-freshness information in the frozen SigLIP2 Base image representation.",
+  "probe": {
+    "architecture": "nn.Linear(embedding_dim, 6)",
+    "batch_size": 64,
+    "best_epoch": 50,
+    "best_validation_accuracy": 1.0,
+    "best_validation_loss": 0.14118763263578768,
+    "duration_seconds": 4.204006004001712,
+    "embedding_dim": 768,
+    "epochs_completed": 50,
+    "learning_rate": 0.001,
+    "optimizer": "Adam",
+    "seed": 42,
+    "trainable_parameters": 4614
+  },
+  "repository": {
+    "branch": "master",
+    "commit": "a4285bfe275bac34a498e5d7f9fb48fbbe3ecf67",
+    "working_tree_porcelain": "M .gitignore\n M README.md\n D docs/V2_RESEARCH_BLUEPRINT.md\n M requirements-v2.txt\n M v2/configs/baseline_cnn.yaml\n?? docs/FOUNDATION_MODEL_PROVENANCE.md\n?? docs/FOUNDATION_REPRESENTATION_ANALYSIS.md\n?? docs/TRANSFER_LEARNING_ANALYSIS.md\n?? docs/handbook/\n?? v2/__init__.py\n?? v2/checkpoints/\n?? v2/configs/clip_linear_probe.yaml\n?? v2/configs/dinov2_linear_probe.yaml\n?? v2/configs/efficientnet.yaml\n?? v2/configs/mobilenetv3.yaml\n?? v2/configs/resnet50.yaml\n?? v2/configs/siglip2_linear_probe.yaml\n?? v2/experiments/experiment_001_baseline_cnn.md\n?? v2/experiments/experiment_001_metadata.json\n?? v2/experiments/experiment_002_metadata.json\n?? v2/experiments/experiment_002_resnet50.md\n?? v2/experiments/experiment_003_efficientnet.md\n?? v2/experiments/experiment_003_metadata.json\n?? v2/experiments/experiment_004_metadata.json\n?? v2/experiments/experiment_004_mobilenetv3.md\n?? v2/experiments/experiment_005_dinov2.md\n?? v2/experiments/experiment_006_clip.md\n?? v2/experiments/experiment_007_siglip2.md\n?? v2/notebooks/01_baseline_analysis.ipynb\n?? v2/results/baseline_confusion_matrix.png\n?? v2/results/baseline_history.json\n?? v2/results/baseline_test_metrics.json\n?? v2/results/baseline_training_curve.png\n?? v2/results/baseline_validation_curve.png\n?? v2/results/experiment_002/\n?? v2/results/experiment_003/\n?? v2/results/experiment_004/\n?? v2/results/experiment_005/\n?? v2/results/experiment_006/\n?? v2/results/experiment_007/\n?? v2/src/__init__.py\n?? v2/src/datasets/__init__.py\n?? v2/src/datasets/fruit_dataset.py\n?? v2/src/datasets/transfer_transforms.py\n?? v2/src/evaluation/__init__.py\n?? v2/src/evaluation/evaluate.py\n?? v2/src/evaluation/evaluate_transfer.py\n?? v2/src/foundation/\n?? v2/src/models/__init__.py\n?? v2/src/models/cnn_baseline.py\n?? v2/src/models/efficientnet_transfer.py\n?? v2/src/models/frozen_backbone.py\n?? v2/src/models/mobilenetv3_transfer.py\n?? v2/src/models/resnet50_transfer.py\n?? v2/src/models/transfer_registry.py\n?? v2/src/training/__init__.py\n?? v2/src/training/train.py\n?? v2/src/training/train_transfer.py\n?? v2/src/training/utils.py\n?? v2/src/visualization/__init__.py\n?? v2/src/visualization/plots.py\n?? v2/src/visualization/transfer_plots.py"
+  },
+  "started_at": "2026-09-01T18:09:03.096300+00:00",
+  "status": "complete",
+  "test_accessed": true,
+  "test_evaluation": {
+    "accuracy": 0.986286137879911,
+    "classification_report_path": "v2/results/experiment_007/classification_report.json",
+    "confusion_matrix_path": "v2/results/experiment_007/confusion_matrix.png",
+    "evaluated_at": "2026-09-01T18:13:33.034143+00:00",
+    "loss": 0.16603716715253486,
+    "metrics_path": "v2/results/experiment_007/test_metrics.json",
+    "samples": 2698,
+    "test_embedding_cache": {
+      "path": "v2/cache/siglip2/test.pt",
+      "sha256": "71e4c40fda647c47e9106f3d80e69b6450cc132b4999007021a91fa78810e890",
+      "size_bytes": 8529229
+    },
+    "timing": {
+      "device": "cpu",
+      "encoder_forward_ms_per_image": 82.31884535807917,
+      "encoder_forward_seconds": 222.0962447760976,
+      "image_representation_probe_ms_per_image": 82.33771496557027,
+      "peak_process_rss_mb": 1506.875,
+      "probe_forward_ms_per_image": 0.005112670112078149,
+      "probe_forward_seconds": 0.013793983962386847,
+      "scope": "Model forward only after preprocessing; includes L2 normalization in the full path.",
+      "test_loop_wall_seconds": 238.15177057200344
+    }
+  }
+}

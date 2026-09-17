@@ -1,0 +1,248 @@
+{
+  "checkpoint": {
+    "path": "v2/checkpoints/experiment_006_linear_probe.pt",
+    "sha256": "f213e49fd0d928524dbc8a25d131fcb8b9d01c03826202a60885bd1409bc8b8b"
+  },
+  "completed_at": "2026-09-01T17:57:43.698389+00:00",
+  "configuration": {
+    "data": {
+      "dataset_author": "Sriram Reddy Kalluri",
+      "dataset_name": "Fruits fresh and rotten for classification",
+      "dataset_version": "Kaggle version 1, 2018-08-24",
+      "root": "v2/data/processed/v1_frozen_split",
+      "split_policy": "Frozen leakage-safe V1 split; do not resplit.",
+      "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+      "test_split": "test",
+      "train_split": "train",
+      "validation_split": "validation"
+    },
+    "encoder": {
+      "adapter": "clip",
+      "checkpoint_filename": "open_clip_model.safetensors",
+      "checkpoint_id": "timm/vit_base_patch16_clip_224.openai",
+      "download_cache": "v2/cache/huggingface",
+      "download_source": "https://huggingface.co/timm/vit_base_patch16_clip_224.openai",
+      "embedding_dim": 512,
+      "family": "CLIP",
+      "image_mean": [
+        0.48145466,
+        0.4578275,
+        0.40821073
+      ],
+      "image_std": [
+        0.26862954,
+        0.26130258,
+        0.27577711
+      ],
+      "input_resolution": 224,
+      "interpolation": "bicubic",
+      "library": "open_clip_torch",
+      "library_version": "3.3.0",
+      "license": "OpenAI repository MIT; pinned mirror metadata Apache-2.0",
+      "model_name": "ViT-B-16",
+      "original_weight_url": "https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt",
+      "preprocessing_identity": "openai-clip-vit-b16-openclip-3.3.0",
+      "pretrained_data": "Approximately 400M internet image-text pairs used for original CLIP",
+      "pretrained_identifier": "openai",
+      "pretraining_objective": "Image-text contrastive learning",
+      "provider": "OpenAI via OpenCLIP",
+      "resize_mode": "shortest",
+      "revision": "977e3dd0ec55ab8da155f2fbeb6b5f54948b6e3d"
+    },
+    "experiment": {
+      "id": "V2-P3A-CLIP-006",
+      "number": 6,
+      "objective": "Measure fruit-freshness information in the frozen original OpenAI CLIP image representation.",
+      "phase": "3A",
+      "plot_title": "V2 Experiment 006 original CLIP ViT-B16 linear probe"
+    },
+    "extraction": {
+      "batch_size": 32,
+      "cache_files": {
+        "test": "v2/cache/clip/test.pt",
+        "train": "v2/cache/clip/train.pt",
+        "validation": "v2/cache/clip/validation.pt"
+      },
+      "deterministic": true,
+      "l2_normalize": true,
+      "num_workers": 0
+    },
+    "outputs": {
+      "classification_report": "v2/results/experiment_006/classification_report.json",
+      "confusion_matrix": "v2/results/experiment_006/confusion_matrix.png",
+      "extraction_metadata": "v2/results/experiment_006/feature_extraction.json",
+      "history": "v2/results/experiment_006/history.json",
+      "metadata": "v2/results/experiment_006/metadata.json",
+      "probe_checkpoint": "v2/checkpoints/experiment_006_linear_probe.pt",
+      "test_metrics": "v2/results/experiment_006/test_metrics.json",
+      "training_curve": "v2/results/experiment_006/training_curve.png",
+      "validation_curve": "v2/results/experiment_006/validation_curve.png"
+    },
+    "probe": {
+      "architecture": "linear",
+      "batch_size": 64,
+      "device": "auto",
+      "epochs": 50,
+      "learning_rate": 0.001,
+      "loss": "CrossEntropyLoss",
+      "num_classes": 6,
+      "optimizer": "Adam",
+      "seed": 42
+    },
+    "schema_version": 1,
+    "selection": {
+      "primary_metric": "accuracy",
+      "split": "validation",
+      "tie_break": "lower_loss"
+    },
+    "status": "phase_3a_foundation_linear_probe"
+  },
+  "configuration_path": "v2/configs/clip_linear_probe.yaml",
+  "dataset": {
+    "class_mapping": {
+      "fresh_apple": 0,
+      "fresh_banana": 1,
+      "fresh_orange": 2,
+      "rotten_apple": 3,
+      "rotten_banana": 4,
+      "rotten_orange": 5
+    },
+    "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+    "train_samples": 1539,
+    "validation_samples": 270
+  },
+  "development_extraction": {
+    "train": {
+      "cache_path": "v2/cache/clip/train.pt",
+      "cache_sha256": "951441b765800ba1753fe4862825019544f343e667c49d91f3133ab9815f04ea",
+      "deterministic_order": true,
+      "embedding_dim": 512,
+      "encoder_forward_ms_per_image": 83.77111014618285,
+      "encoder_forward_seconds": 128.9237385149754,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1653.77734375,
+      "samples": 1539,
+      "split": "train",
+      "wall_ms_per_image": 91.60500383560148,
+      "wall_seconds": 140.98010090299067
+    },
+    "validation": {
+      "cache_path": "v2/cache/clip/validation.pt",
+      "cache_sha256": "ad40852056cbd581e0f2610883c92a1c1660ac507d613aa2cfc3c477fe3dc368",
+      "deterministic_order": true,
+      "embedding_dim": 512,
+      "encoder_forward_ms_per_image": 78.98476992591492,
+      "encoder_forward_seconds": 21.325887879997026,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1653.77734375,
+      "samples": 270,
+      "split": "validation",
+      "wall_ms_per_image": 87.10202316665176,
+      "wall_seconds": 23.517546254995978
+    }
+  },
+  "embedding_caches": {
+    "train": {
+      "path": "v2/cache/clip/train.pt",
+      "sha256": "951441b765800ba1753fe4862825019544f343e667c49d91f3133ab9815f04ea"
+    },
+    "validation": {
+      "path": "v2/cache/clip/validation.pt",
+      "sha256": "ad40852056cbd581e0f2610883c92a1c1660ac507d613aa2cfc3c477fe3dc368"
+    }
+  },
+  "encoder": {
+    "adapter": "CLIPEncoder",
+    "all_parameters_frozen": true,
+    "checkpoint_file": {
+      "path": "/home/AI_POC/tactics/AI-Based-Detection-of-Rotten-Fruits/v2/cache/huggingface/models--timm--vit_base_patch16_clip_224.openai/blobs/4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f",
+      "sha256": "4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f",
+      "size_bytes": 598516980
+    },
+    "checkpoint_id": "timm/vit_base_patch16_clip_224.openai",
+    "embedding_dim": 512,
+    "encoder_parameters": 86192640,
+    "library": "open_clip_torch",
+    "library_version": "3.3.0",
+    "model_name": "ViT-B-16",
+    "preprocessing": {
+      "center_crop": true,
+      "convert_rgb": true,
+      "image_mean": [
+        0.48145466,
+        0.4578275,
+        0.40821073
+      ],
+      "image_std": [
+        0.26862954,
+        0.26130258,
+        0.27577711
+      ],
+      "input_resolution": 224,
+      "interpolation": "bicubic",
+      "resize_mode": "shortest"
+    },
+    "pretrained_identifier": "openai",
+    "revision": "977e3dd0ec55ab8da155f2fbeb6b5f54948b6e3d"
+  },
+  "environment": {
+    "cpu_count": 20,
+    "cuda_available": false,
+    "cuda_runtime": null,
+    "device": "cpu",
+    "device_name": "CPU",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2",
+    "pytorch": "2.13.0+cpu",
+    "torchvision": "0.28.0+cpu"
+  },
+  "experiment_id": "V2-P3A-CLIP-006",
+  "objective": "Measure fruit-freshness information in the frozen original OpenAI CLIP image representation.",
+  "probe": {
+    "architecture": "nn.Linear(embedding_dim, 6)",
+    "batch_size": 64,
+    "best_epoch": 50,
+    "best_validation_accuracy": 0.9851851851851852,
+    "best_validation_loss": 0.27165399061308965,
+    "duration_seconds": 2.1531185419880785,
+    "embedding_dim": 512,
+    "epochs_completed": 50,
+    "learning_rate": 0.001,
+    "optimizer": "Adam",
+    "seed": 42,
+    "trainable_parameters": 3078
+  },
+  "repository": {
+    "branch": "master",
+    "commit": "a4285bfe275bac34a498e5d7f9fb48fbbe3ecf67",
+    "working_tree_porcelain": "M .gitignore\n M README.md\n D docs/V2_RESEARCH_BLUEPRINT.md\n M requirements-v2.txt\n M v2/configs/baseline_cnn.yaml\n?? docs/FOUNDATION_MODEL_PROVENANCE.md\n?? docs/FOUNDATION_REPRESENTATION_ANALYSIS.md\n?? docs/TRANSFER_LEARNING_ANALYSIS.md\n?? docs/handbook/\n?? v2/__init__.py\n?? v2/checkpoints/\n?? v2/configs/clip_linear_probe.yaml\n?? v2/configs/dinov2_linear_probe.yaml\n?? v2/configs/efficientnet.yaml\n?? v2/configs/mobilenetv3.yaml\n?? v2/configs/resnet50.yaml\n?? v2/configs/siglip2_linear_probe.yaml\n?? v2/experiments/experiment_001_baseline_cnn.md\n?? v2/experiments/experiment_001_metadata.json\n?? v2/experiments/experiment_002_metadata.json\n?? v2/experiments/experiment_002_resnet50.md\n?? v2/experiments/experiment_003_efficientnet.md\n?? v2/experiments/experiment_003_metadata.json\n?? v2/experiments/experiment_004_metadata.json\n?? v2/experiments/experiment_004_mobilenetv3.md\n?? v2/experiments/experiment_005_dinov2.md\n?? v2/experiments/experiment_006_clip.md\n?? v2/experiments/experiment_007_siglip2.md\n?? v2/notebooks/01_baseline_analysis.ipynb\n?? v2/results/baseline_confusion_matrix.png\n?? v2/results/baseline_history.json\n?? v2/results/baseline_test_metrics.json\n?? v2/results/baseline_training_curve.png\n?? v2/results/baseline_validation_curve.png\n?? v2/results/experiment_002/\n?? v2/results/experiment_003/\n?? v2/results/experiment_004/\n?? v2/results/experiment_005/\n?? v2/results/experiment_006/\n?? v2/src/__init__.py\n?? v2/src/datasets/__init__.py\n?? v2/src/datasets/fruit_dataset.py\n?? v2/src/datasets/transfer_transforms.py\n?? v2/src/evaluation/__init__.py\n?? v2/src/evaluation/evaluate.py\n?? v2/src/evaluation/evaluate_transfer.py\n?? v2/src/foundation/\n?? v2/src/models/__init__.py\n?? v2/src/models/cnn_baseline.py\n?? v2/src/models/efficientnet_transfer.py\n?? v2/src/models/frozen_backbone.py\n?? v2/src/models/mobilenetv3_transfer.py\n?? v2/src/models/resnet50_transfer.py\n?? v2/src/models/transfer_registry.py\n?? v2/src/training/__init__.py\n?? v2/src/training/train.py\n?? v2/src/training/train_transfer.py\n?? v2/src/training/utils.py\n?? v2/src/visualization/__init__.py\n?? v2/src/visualization/plots.py\n?? v2/src/visualization/transfer_plots.py"
+  },
+  "started_at": "2026-09-01T17:57:41.088148+00:00",
+  "status": "complete",
+  "test_accessed": true,
+  "test_evaluation": {
+    "accuracy": 0.9584877687175686,
+    "classification_report_path": "v2/results/experiment_006/classification_report.json",
+    "confusion_matrix_path": "v2/results/experiment_006/confusion_matrix.png",
+    "evaluated_at": "2026-09-01T18:02:13.249932+00:00",
+    "loss": 0.31806707256276845,
+    "metrics_path": "v2/results/experiment_006/test_metrics.json",
+    "samples": 2698,
+    "test_embedding_cache": {
+      "path": "v2/cache/clip/test.pt",
+      "sha256": "3059d78ef1b36329f423cd1feeb8e865b4da717f36fabe55fcf2677c0c6d19bc",
+      "size_bytes": 5766413
+    },
+    "timing": {
+      "device": "cpu",
+      "encoder_forward_ms_per_image": 79.00409596509441,
+      "encoder_forward_seconds": 213.1530509138247,
+      "image_representation_probe_ms_per_image": 79.01522650922254,
+      "peak_process_rss_mb": 2457.4609375,
+      "probe_forward_ms_per_image": 0.0046355730258176905,
+      "probe_forward_seconds": 0.01250677602365613,
+      "scope": "Model forward only after preprocessing; includes L2 normalization in the full path.",
+      "test_loop_wall_seconds": 234.69968978399993
+    }
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "encoders": {
+    "clip": {
+      "freshness_condition": {
+        "accuracy_fold_std": 0.0034583054438857936,
+        "accuracy_mean": 0.9816666666666667,
+        "folds": [
+          {
+            "accuracy": 0.9875,
+            "fold": 1,
+            "macro_f1": 0.9874997829823435
+          },
+          {
+            "accuracy": 0.9805555555555555,
+            "fold": 2,
+            "macro_f1": 0.980554955399858
+          },
+          {
+            "accuracy": 0.9791666666666666,
+            "fold": 3,
+            "macro_f1": 0.9791646972804142
+          },
+          {
+            "accuracy": 0.9819444444444444,
+            "fold": 4,
+            "macro_f1": 0.9819427376430256
+          },
+          {
+            "accuracy": 0.9791666666666666,
+            "fold": 5,
+            "macro_f1": 0.9791663049705723
+          }
+        ],
+        "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+        "macro_f1_fold_std": 0.0034586492227341057,
+        "macro_f1_mean": 0.9816656956552429
+      },
+      "freshness_minus_fruit_accuracy": -0.015277777777777835,
+      "freshness_to_fruit_accuracy_ratio": 0.9846753970465311,
+      "fruit_identity": {
+        "accuracy_fold_std": 0.0022821773229381843,
+        "accuracy_mean": 0.9969444444444445,
+        "folds": [
+          {
+            "accuracy": 0.9972222222222222,
+            "fold": 1,
+            "macro_f1": 0.9972221739960764
+          },
+          {
+            "accuracy": 0.9930555555555556,
+            "fold": 2,
+            "macro_f1": 0.993055525414607
+          },
+          {
+            "accuracy": 0.9986111111111111,
+            "fold": 3,
+            "macro_f1": 0.9986111050829214
+          },
+          {
+            "accuracy": 0.9986111111111111,
+            "fold": 4,
+            "macro_f1": 0.9986111050829214
+          },
+          {
+            "accuracy": 0.9972222222222222,
+            "fold": 5,
+            "macro_f1": 0.9972222222222222
+          }
+        ],
+        "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+        "macro_f1_fold_std": 0.0022821864945907953,
+        "macro_f1_mean": 0.9969444263597497
+      },
+      "six_class": {
+        "accuracy_fold_std": 0.004120110270608745,
+        "accuracy_mean": 0.9852777777777778,
+        "folds": [
+          {
+            "accuracy": 0.9902777777777778,
+            "fold": 1,
+            "macro_f1": 0.9902947792877423
+          },
+          {
+            "accuracy": 0.9805555555555555,
+            "fold": 2,
+            "macro_f1": 0.9805348978092026
+          },
+          {
+            "accuracy": 0.9888888888888889,
+            "fold": 3,
+            "macro_f1": 0.9889060573968299
+          },
+          {
+            "accuracy": 0.9833333333333333,
+            "fold": 4,
+            "macro_f1": 0.9832714568418685
+          },
+          {
+            "accuracy": 0.9833333333333333,
+            "fold": 5,
+            "macro_f1": 0.9832785478561372
+          }
+        ],
+        "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+        "macro_f1_fold_std": 0.004148787279036375,
+        "macro_f1_mean": 0.9852571478383562
+      }
+    },
+    "dinov2": {
+      "freshness_condition": {
+        "accuracy_fold_std": 0.0020600551353043436,
+        "accuracy_mean": 0.9947222222222223,
+        "folds": [
+          {
+            "accuracy": 0.9944444444444445,
+            "fold": 1,
+            "macro_f1": 0.9944444444444445
+          },
+          {
+            "accuracy": 0.9972222222222222,
+            "fold": 2,
+            "macro_f1": 0.9972222007885864
+          },
+          {
+            "accuracy": 0.9944444444444445,
+            "fold": 3,
+            "macro_f1": 0.9944444444444445
+          },
+          {
+            "accuracy": 0.9916666666666667,
+            "fold": 4,
+            "macro_f1": 0.991666602365759
+          },
+          {
+            "accuracy": 0.9958333333333333,
+            "fold": 5,
+            "macro_f1": 0.9958332609941145
+          }
+        ],
+        "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+        "macro_f1_fold_std": 0.0020600627220304047,
+        "macro_f1_mean": 0.9947221906074699
+      },
+      "freshness_minus_fruit_accuracy": -0.005277777777777715,
+      "freshness_to_fruit_accuracy_ratio": 0.9947222222222223,
+      "fruit_identity": {
+        "accuracy_fold_std": 0.0,
+        "accuracy_mean": 1.0,
+        "folds": [
+          {
+            "accuracy": 1.0,
+            "fold": 1,
+            "macro_f1": 1.0
+          },
+          {
+            "accuracy": 1.0,
+            "fold": 2,
+            "macro_f1": 1.0
+          },
+          {
+            "accuracy": 1.0,
+            "fold": 3,
+            "macro_f1": 1.0
+          },
+          {
+            "accuracy": 1.0,
+            "fold": 4,
+            "macro_f1": 1.0
+          },
+          {
+            "accuracy": 1.0,
+            "fold": 5,
+            "macro_f1": 1.0
+          }
+        ],
+        "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+        "macro_f1_fold_std": 0.0,
+        "macro_f1_mean": 1.0
+      },
+      "six_class": {
+        "accuracy_fold_std": 0.0018108895570007292,
+        "accuracy_mean": 0.9955555555555555,
+        "folds": [
+          {
+            "accuracy": 0.9972222222222222,
+            "fold": 1,
+            "macro_f1": 0.9972221739960764
+          },
+          {
+            "accuracy": 0.9972222222222222,
+            "fold": 2,
+            "macro_f1": 0.9972220293075909
+          },
+          {
+            "accuracy": 0.9930555555555556,
+            "fold": 3,
+            "macro_f1": 0.9930554832163369
+          },
+          {
+            "accuracy": 0.9944444444444445,
+            "fold": 4,
+            "macro_f1": 0.9944442515298131
+          },
+          {
+            "accuracy": 0.9958333333333333,
+            "fold": 5,
+            "macro_f1": 0.9958389763902487
+          }
+        ],
+        "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+        "macro_f1_fold_std": 0.0018111068593502973,
+        "macro_f1_mean": 0.9955565828880133
+      }
+    },
+    "siglip2": {
+      "freshness_condition": {
+        "accuracy_fold_std": 0.004001350080802222,
+        "accuracy_mean": 0.9880555555555557,
+        "folds": [
+          {
+            "accuracy": 0.9930555555555556,
+            "fold": 1,
+            "macro_f1": 0.9930555421596107
+          },
+          {
+            "accuracy": 0.9847222222222223,
+            "fold": 2,
+            "macro_f1": 0.9847221927511434
+          },
+          {
+            "accuracy": 0.9833333333333333,
+            "fold": 3,
+            "macro_f1": 0.9833333333333333
+          },
+          {
+            "accuracy": 0.9888888888888889,
+            "fold": 4,
+            "macro_f1": 0.9888885459427761
+          },
+          {
+            "accuracy": 0.9902777777777778,
+            "fold": 5,
+            "macro_f1": 0.9902776089862672
+          }
+        ],
+        "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+        "macro_f1_fold_std": 0.004001310745094691,
+        "macro_f1_mean": 0.9880554446346261
+      },
+      "freshness_minus_fruit_accuracy": -0.01138888888888867,
+      "freshness_to_fruit_accuracy_ratio": 0.9886047804335745,
+      "fruit_identity": {
+        "accuracy_fold_std": 0.000760725774312728,
+        "accuracy_mean": 0.9994444444444444,
+        "folds": [
+          {
+            "accuracy": 0.9986111111111111,
+            "fold": 1,
+            "macro_f1": 0.9986111050829214
+          },
+          {
+            "accuracy": 0.9986111111111111,
+            "fold": 2,
+            "macro_f1": 0.9986111050829214
+          },
+          {
+            "accuracy": 1.0,
+            "fold": 3,
+            "macro_f1": 1.0
+          },
+          {
+            "accuracy": 1.0,
+            "fold": 4,
+            "macro_f1": 1.0
+          },
+          {
+            "accuracy": 1.0,
+            "fold": 5,
+            "macro_f1": 1.0
+          }
+        ],
+        "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+        "macro_f1_fold_std": 0.0007607290760882214,
+        "macro_f1_mean": 0.9994444420331685
+      },
+      "six_class": {
+        "accuracy_fold_std": 0.0036217791140014588,
+        "accuracy_mean": 0.9897222222222222,
+        "folds": [
+          {
+            "accuracy": 0.9861111111111112,
+            "fold": 1,
+            "macro_f1": 0.9861102230575794
+          },
+          {
+            "accuracy": 0.9944444444444445,
+            "fold": 2,
+            "macro_f1": 0.9944439163133615
+          },
+          {
+            "accuracy": 0.9902777777777778,
+            "fold": 3,
+            "macro_f1": 0.9902600528454814
+          },
+          {
+            "accuracy": 0.9861111111111112,
+            "fold": 4,
+            "macro_f1": 0.9861102911761926
+          },
+          {
+            "accuracy": 0.9916666666666667,
+            "fold": 5,
+            "macro_f1": 0.991660613069571
+          }
+        ],
+        "interpretation": "Exploratory analytical probe only; not a predictive model candidate.",
+        "macro_f1_fold_std": 0.003620547763839088,
+        "macro_f1_mean": 0.989717019292437
+      }
+    }
+  },
+  "protocol": {
+    "classifier": "logistic_regression",
+    "folds": 5,
+    "max_iterations": 2000,
+    "regularization_c": 1.0,
+    "scaling": "standard_scaler_fit_inside_each_fold",
+    "seed": 42,
+    "solver": "lbfgs",
+    "splitter": "stratified_k_fold_with_shuffle"
+  },
+  "schema_version": 1
+}

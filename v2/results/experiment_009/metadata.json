@@ -1,0 +1,234 @@
+{
+  "artifacts": {
+    "v2/results/experiment_009/classification_report_selected.json": "6c87722187612a0efcf924ef6d96762ccea9f25e60e61b4e2317218413b1a9ef",
+    "v2/results/experiment_009/classification_report_strict.json": "d88d9ab59b69419a81b63ebf22fab5225b0eee133a786ff913c35cf21d2cae9d",
+    "v2/results/experiment_009/confusion_matrix_selected.png": "b690db568755c8f3685dbe1755b8d04b42b92523e813a90c27f7a902e95cbb94",
+    "v2/results/experiment_009/confusion_matrix_strict.png": "c22ed17f3944dd8142ac7923477ae6839407b1be5fe39f8ef996d6b48a4f6d1b",
+    "v2/results/experiment_009/selected_prompt_test_metrics.json": "f9a7240067c54db22617713b4340e33a17035672505cbfb3a7597362d695cb5b",
+    "v2/results/experiment_009/similarity_margin_analysis.json": "d858bf13284fb1c014fc7a95b8773729c039d0639c16b25f9ae26144e563b66a",
+    "v2/results/experiment_009/strict_zero_shot_test_metrics.json": "bcf88d6227b1c994e6b527bcf10a65cd41397007ac338fc91787dc142abe8712"
+  },
+  "completed_at": "2026-09-01T18:45:38.477587+00:00",
+  "configuration": {
+    "data": {
+      "dataset_name": "Fruits fresh and rotten for classification",
+      "dataset_version": "Kaggle version 1, 2018-08-24",
+      "root": "v2/data/processed/v1_frozen_split",
+      "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+      "test_samples": 2698,
+      "test_split": "test",
+      "train_split_prohibited": true,
+      "validation_samples": 270,
+      "validation_split": "validation"
+    },
+    "evaluation": {
+      "batch_size": 32,
+      "calibration_fitting": false,
+      "classifier_training": false,
+      "device": "auto",
+      "normalize_image_embeddings": true,
+      "normalize_text_embeddings": true,
+      "num_workers": 0,
+      "seed": 42,
+      "similarity": "cosine_with_model_native_logit_scale_and_bias"
+    },
+    "experiment": {
+      "id": "V2-P3B-SIGLIP2-ZS-009",
+      "model_label": "SigLIP2 Base Patch16/224",
+      "number": 9,
+      "objective": "Evaluate semantic fruit-freshness transfer without fitting any target-dataset parameter.",
+      "phase": "3B"
+    },
+    "model": {
+      "adapter": "siglip2_zero_shot",
+      "checkpoint_filename": "model.safetensors",
+      "checkpoint_id": "google/siglip2-base-patch16-224",
+      "checkpoint_sha256": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "checkpoint_size_bytes": 1500800904,
+      "download_cache": "v2/cache/huggingface",
+      "embedding_dim": 768,
+      "family": "SigLIP2",
+      "input_resolution": 224,
+      "library": "transformers",
+      "library_version": "5.16.1",
+      "preprocessing_identity": "google-siglip2-base-patch16-224-rev-75de2d5",
+      "provider": "Google",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "text_max_length": 64
+    },
+    "outputs": {
+      "margins": "v2/results/experiment_009/similarity_margin_analysis.json",
+      "metadata": "v2/results/experiment_009/metadata.json",
+      "prompt_figure": "v2/results/experiment_009/prompt_strategy_validation_comparison.png",
+      "result_dir": "v2/results/experiment_009",
+      "selected_confusion": "v2/results/experiment_009/confusion_matrix_selected.png",
+      "selected_metrics": "v2/results/experiment_009/selected_prompt_test_metrics.json",
+      "selected_report": "v2/results/experiment_009/classification_report_selected.json",
+      "strict_confusion": "v2/results/experiment_009/confusion_matrix_strict.png",
+      "strict_metrics": "v2/results/experiment_009/strict_zero_shot_test_metrics.json",
+      "strict_report": "v2/results/experiment_009/classification_report_strict.json",
+      "validation_comparison": "v2/results/experiment_009/validation_prompt_comparison.json"
+    },
+    "prompts": {
+      "candidate_families": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "first_tie_breaker": "accuracy",
+      "registry_path": "v2/configs/zero_shot_prompts.yaml",
+      "registry_sha256": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+      "second_tie_breaker": "simpler_prompt_strategy",
+      "selection_primary": "macro_f1",
+      "strict_family": "P1"
+    },
+    "schema_version": 1,
+    "status": "phase_3b_zero_shot"
+  },
+  "configuration_path": "v2/configs/siglip2_zero_shot.yaml",
+  "environment": {
+    "cpu_count": 20,
+    "cuda_available": false,
+    "cuda_runtime": null,
+    "device": "cpu",
+    "device_name": "CPU",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2",
+    "pytorch": "2.13.0+cpu",
+    "torchvision": "0.28.0+cpu"
+  },
+  "experiment_id": "V2-P3B-SIGLIP2-ZS-009",
+  "integrity": {
+    "classifier_trained": false,
+    "model_parameters_updated": false,
+    "prompt_parameters_learned": false,
+    "single_locked_test_run": true,
+    "test_accessed": true,
+    "train_split_accessed": false
+  },
+  "model": {
+    "adapter": "SigLIP2ZeroShotModel",
+    "all_parameters_frozen": true,
+    "checkpoint_file": {
+      "path": "/home/AI_POC/tactics/AI-Based-Detection-of-Rotten-Fruits/v2/cache/huggingface/models--google--siglip2-base-patch16-224/blobs/612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "sha256": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "size_bytes": 1500800904
+    },
+    "checkpoint_id": "google/siglip2-base-patch16-224",
+    "embedding_dim": 768,
+    "image_encoder_parameters": 92884224,
+    "library": "transformers",
+    "library_version": "5.16.1",
+    "native_logit_bias": -16.771724700927734,
+    "native_logit_scale": 112.66889953613281,
+    "preprocessing": {
+      "do_convert_rgb": null,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "image_processor_type": "SiglipImageProcessor",
+      "image_std": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "resample": 2,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "height": 224,
+        "width": 224
+      }
+    },
+    "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+    "shared_similarity_parameters": 2,
+    "text_encoder_parameters": 282303744,
+    "text_max_length": 64,
+    "tokenizer_class": "GemmaTokenizer",
+    "tokenizer_vocab_size": 256000,
+    "total_model_parameters": 375187970
+  },
+  "prompt_registry": {
+    "frozen_before_validation": true,
+    "path": "v2/configs/zero_shot_prompts.yaml",
+    "sha256": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7"
+  },
+  "repository": {
+    "branch": "master",
+    "commit": "a4285bfe275bac34a498e5d7f9fb48fbbe3ecf67",
+    "working_tree_porcelain": "M .gitignore\n M README.md\n D docs/V2_RESEARCH_BLUEPRINT.md\n M requirements-v2.txt\n M v2/configs/baseline_cnn.yaml\n?? docs/FOUNDATION_MODEL_PROVENANCE.md\n?? docs/FOUNDATION_REPRESENTATION_ANALYSIS.md\n?? docs/TRANSFER_LEARNING_ANALYSIS.md\n?? docs/handbook/\n?? v2/__init__.py\n?? v2/checkpoints/\n?? v2/configs/clip_linear_probe.yaml\n?? v2/configs/clip_zero_shot.yaml\n?? v2/configs/dinov2_linear_probe.yaml\n?? v2/configs/efficientnet.yaml\n?? v2/configs/mobilenetv3.yaml\n?? v2/configs/resnet50.yaml\n?? v2/configs/siglip2_linear_probe.yaml\n?? v2/configs/siglip2_zero_shot.yaml\n?? v2/configs/zero_shot_prompts.yaml\n?? v2/experiments/experiment_001_baseline_cnn.md\n?? v2/experiments/experiment_001_metadata.json\n?? v2/experiments/experiment_002_metadata.json\n?? v2/experiments/experiment_002_resnet50.md\n?? v2/experiments/experiment_003_efficientnet.md\n?? v2/experiments/experiment_003_metadata.json\n?? v2/experiments/experiment_004_metadata.json\n?? v2/experiments/experiment_004_mobilenetv3.md\n?? v2/experiments/experiment_005_dinov2.md\n?? v2/experiments/experiment_006_clip.md\n?? v2/experiments/experiment_007_siglip2.md\n?? v2/notebooks/01_baseline_analysis.ipynb\n?? v2/results/baseline_confusion_matrix.png\n?? v2/results/baseline_history.json\n?? v2/results/baseline_test_metrics.json\n?? v2/results/baseline_training_curve.png\n?? v2/results/baseline_validation_curve.png\n?? v2/results/experiment_002/\n?? v2/results/experiment_003/\n?? v2/results/experiment_004/\n?? v2/results/experiment_005/\n?? v2/results/experiment_006/\n?? v2/results/experiment_007/\n?? v2/results/experiment_008/\n?? v2/results/experiment_009/\n?? v2/src/__init__.py\n?? v2/src/datasets/__init__.py\n?? v2/src/datasets/fruit_dataset.py\n?? v2/src/datasets/transfer_transforms.py\n?? v2/src/evaluation/__init__.py\n?? v2/src/evaluation/evaluate.py\n?? v2/src/evaluation/evaluate_transfer.py\n?? v2/src/foundation/\n?? v2/src/models/__init__.py\n?? v2/src/models/cnn_baseline.py\n?? v2/src/models/efficientnet_transfer.py\n?? v2/src/models/frozen_backbone.py\n?? v2/src/models/mobilenetv3_transfer.py\n?? v2/src/models/resnet50_transfer.py\n?? v2/src/models/transfer_registry.py\n?? v2/src/training/__init__.py\n?? v2/src/training/train.py\n?? v2/src/training/train_transfer.py\n?? v2/src/training/utils.py\n?? v2/src/visualization/__init__.py\n?? v2/src/visualization/plots.py\n?? v2/src/visualization/transfer_plots.py"
+  },
+  "status": "complete",
+  "test": {
+    "evaluated_at": "2026-09-01T18:50:12.170080+00:00",
+    "image_encoding": {
+      "image_encoder_ms_per_image": 80.67492664342853,
+      "image_encoder_seconds": 217.6609520839702,
+      "image_loop_wall_ms_per_image": 86.50266144477231,
+      "image_loop_wall_seconds": 233.38418057799572,
+      "peak_process_rss_mb": 2622.42578125,
+      "samples": 2698,
+      "scope": "Model forward after deterministic preprocessing; image embeddings are L2-normalized."
+    },
+    "margins_path": "v2/results/experiment_009/similarity_margin_analysis.json",
+    "samples": 2698,
+    "selected_accuracy": 0.9696071163825055,
+    "selected_metrics_path": "v2/results/experiment_009/selected_prompt_test_metrics.json",
+    "selected_prompt_family": "P2",
+    "selected_similarity_classification_seconds": 0.0007648539904039353,
+    "selected_text_prototype_generation": {
+      "equal_weighting": true,
+      "family": "P2",
+      "normalize_each_prompt": true,
+      "prompt_counts": {
+        "fresh_apple": 1,
+        "fresh_banana": 1,
+        "fresh_orange": 1,
+        "rotten_apple": 1,
+        "rotten_banana": 1,
+        "rotten_orange": 1
+      },
+      "renormalize_class_prototype": true,
+      "text_embedding_seconds": 0.27919781900709495,
+      "total_prompts": 6
+    },
+    "selected_weighted_f1": 0.9696451454597375,
+    "strict_accuracy": 0.9788732394366197,
+    "strict_metrics_path": "v2/results/experiment_009/strict_zero_shot_test_metrics.json",
+    "strict_prompt_family": "P1",
+    "strict_similarity_classification_seconds": 0.0009346599981654435,
+    "strict_text_prototype_generation": {
+      "equal_weighting": true,
+      "family": "P1",
+      "normalize_each_prompt": true,
+      "prompt_counts": {
+        "fresh_apple": 1,
+        "fresh_banana": 1,
+        "fresh_orange": 1,
+        "rotten_apple": 1,
+        "rotten_banana": 1,
+        "rotten_orange": 1
+      },
+      "renormalize_class_prototype": true,
+      "text_embedding_seconds": 0.32327468899893574,
+      "total_prompts": 6
+    },
+    "strict_weighted_f1": 0.9789070727977148
+  },
+  "test_accessed": true,
+  "validation": {
+    "comparison_path": "v2/results/experiment_009/validation_prompt_comparison.json",
+    "comparison_sha256": "107ed05345906b0b6a9bacb331242618135a5c22f36320550a52f1b46ba45115",
+    "figure_path": "v2/results/experiment_009/prompt_strategy_validation_comparison.png",
+    "samples": 270,
+    "selected_accuracy": 0.9888888888888889,
+    "selected_macro_f1": 0.988450071667463,
+    "selected_prompt_family": "P2",
+    "strict_zero_shot_family": "P1"
+  }
+}

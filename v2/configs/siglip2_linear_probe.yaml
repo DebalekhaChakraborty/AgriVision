@@ -1,0 +1,74 @@
+schema_version: 1
+status: phase_3a_foundation_linear_probe
+
+experiment:
+  id: V2-P3A-SIGLIP2-007
+  number: 7
+  phase: 3A
+  plot_title: V2 Experiment 007 SigLIP2 Base linear probe
+  objective: Measure fruit-freshness information in the frozen SigLIP2 Base image representation.
+
+data:
+  root: v2/data/processed/v1_frozen_split
+  dataset_name: Fruits fresh and rotten for classification
+  dataset_author: Sriram Reddy Kalluri
+  dataset_version: Kaggle version 1, 2018-08-24
+  split_policy: Frozen leakage-safe V1 split; do not resplit.
+  split_report_sha256: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  train_split: train
+  validation_split: validation
+  test_split: test
+
+encoder:
+  adapter: siglip2
+  family: SigLIP2
+  checkpoint_id: google/siglip2-base-patch16-224
+  revision: 75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2
+  provider: Google
+  library: transformers
+  library_version: 5.16.1
+  pretrained_data: Multilingual diverse mixture; exact corpus composition not fully enumerated
+  pretraining_objective: Sigmoid image-text learning plus captioning, self-distillation, masked prediction, and online curation
+  input_resolution: 224
+  embedding_dim: 768
+  license: Apache-2.0
+  download_source: https://huggingface.co/google/siglip2-base-patch16-224
+  download_cache: v2/cache/huggingface
+  preprocessing_identity: google-siglip2-base-patch16-224-rev-75de2d5
+
+extraction:
+  batch_size: 32
+  num_workers: 0
+  deterministic: true
+  l2_normalize: true
+  cache_files:
+    train: v2/cache/siglip2/train.pt
+    validation: v2/cache/siglip2/validation.pt
+    test: v2/cache/siglip2/test.pt
+
+probe:
+  architecture: linear
+  num_classes: 6
+  optimizer: Adam
+  learning_rate: 0.001
+  batch_size: 64
+  epochs: 50
+  loss: CrossEntropyLoss
+  seed: 42
+  device: auto
+
+selection:
+  split: validation
+  primary_metric: accuracy
+  tie_break: lower_loss
+
+outputs:
+  probe_checkpoint: v2/checkpoints/experiment_007_linear_probe.pt
+  extraction_metadata: v2/results/experiment_007/feature_extraction.json
+  metadata: v2/results/experiment_007/metadata.json
+  history: v2/results/experiment_007/history.json
+  training_curve: v2/results/experiment_007/training_curve.png
+  validation_curve: v2/results/experiment_007/validation_curve.png
+  test_metrics: v2/results/experiment_007/test_metrics.json
+  classification_report: v2/results/experiment_007/classification_report.json
+  confusion_matrix: v2/results/experiment_007/confusion_matrix.png

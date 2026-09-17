@@ -1,0 +1,188 @@
+{
+  "accuracy": 0.890659747961453,
+  "class_mapping": {
+    "fresh_apple": 0,
+    "fresh_banana": 1,
+    "fresh_orange": 2,
+    "rotten_apple": 3,
+    "rotten_banana": 4,
+    "rotten_orange": 5
+  },
+  "classification_report": {
+    "accuracy": 0.890659747961453,
+    "fresh_apple": {
+      "f1-score": 0.7987866531850354,
+      "precision": 0.664983164983165,
+      "recall": 1.0,
+      "support": 395.0
+    },
+    "fresh_banana": {
+      "f1-score": 0.984,
+      "precision": 1.0,
+      "recall": 0.968503937007874,
+      "support": 381.0
+    },
+    "fresh_orange": {
+      "f1-score": 0.9065420560747663,
+      "precision": 0.8290598290598291,
+      "recall": 1.0,
+      "support": 388.0
+    },
+    "macro avg": {
+      "f1-score": 0.893363795019753,
+      "precision": 0.9099512751149268,
+      "recall": 0.9055066473544356,
+      "support": 2698.0
+    },
+    "rotten_apple": {
+      "f1-score": 0.7955911823647295,
+      "precision": 1.0,
+      "recall": 0.6605657237936772,
+      "support": 601.0
+    },
+    "rotten_banana": {
+      "f1-score": 0.9888059701492538,
+      "precision": 0.977859778597786,
+      "recall": 1.0,
+      "support": 530.0
+    },
+    "rotten_orange": {
+      "f1-score": 0.8864569083447332,
+      "precision": 0.9878048780487805,
+      "recall": 0.8039702233250621,
+      "support": 403.0
+    },
+    "weighted avg": {
+      "f1-score": 0.8901492381795155,
+      "precision": 0.9201981513543547,
+      "recall": 0.890659747961453,
+      "support": 2698.0
+    }
+  },
+  "classification_report_path": "v2/results/experiment_005/classification_report.json",
+  "confusion_matrix": [
+    [
+      395,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      369,
+      0,
+      0,
+      12,
+      0
+    ],
+    [
+      0,
+      0,
+      388,
+      0,
+      0,
+      0
+    ],
+    [
+      198,
+      0,
+      2,
+      397,
+      0,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      530,
+      0
+    ],
+    [
+      1,
+      0,
+      78,
+      0,
+      0,
+      324
+    ]
+  ],
+  "encoder": {
+    "adapter": "DINOv2Encoder",
+    "all_parameters_frozen": true,
+    "canonical_architecture": "dinov2_vitb14",
+    "checkpoint_file": {
+      "path": "/home/AI_POC/tactics/AI-Based-Detection-of-Rotten-Fruits/v2/cache/huggingface/models--facebook--dinov2-base/blobs/d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "sha256": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "size_bytes": 346345912
+    },
+    "checkpoint_id": "facebook/dinov2-base",
+    "embedding_dim": 768,
+    "encoder_parameters": 86580480,
+    "library": "transformers",
+    "library_version": "5.16.1",
+    "preprocessing": {
+      "crop_size": {
+        "height": 224,
+        "width": 224
+      },
+      "do_center_crop": true,
+      "do_convert_rgb": true,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_processor_type": "BitImageProcessor",
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "resample": 3,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "shortest_edge": 256
+      }
+    },
+    "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+  },
+  "evaluated_at": "2026-09-01T17:49:38.152390+00:00",
+  "experiment_id": "V2-P3A-DINOV2-005",
+  "loss": 1.3253979639621731,
+  "probe": {
+    "architecture": "nn.Linear(embedding_dim, 6)",
+    "selected_epoch": 2,
+    "trainable_parameters": 4614
+  },
+  "probe_checkpoint": {
+    "path": "v2/checkpoints/experiment_005_linear_probe.pt",
+    "sha256": "55f19bcc5e59f78a0bb55271f7e02af3ce333ae7d9b60138f671b6768416c90a",
+    "size_bytes": 21061
+  },
+  "samples": 2698,
+  "single_test_pass": true,
+  "split": "test",
+  "test_embedding_cache": {
+    "path": "v2/cache/dinov2/test.pt",
+    "sha256": "b07a8dd63435cfdfc436690c4fc5e045b8cf90631d83368b89cc046945162da8",
+    "size_bytes": 8529165
+  },
+  "timing": {
+    "device": "cpu",
+    "encoder_forward_ms_per_image": 93.89821196183485,
+    "encoder_forward_seconds": 253.3373758730304,
+    "image_representation_probe_ms_per_image": 93.93147380877248,
+    "peak_process_rss_mb": 1406.5625,
+    "probe_forward_ms_per_image": 0.006601169383156081,
+    "probe_forward_seconds": 0.017809954995755106,
+    "scope": "Model forward only after preprocessing; includes L2 normalization in the full path.",
+    "test_loop_wall_seconds": 270.98285102299997
+  }
+}

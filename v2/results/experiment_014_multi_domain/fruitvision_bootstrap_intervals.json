@@ -1,0 +1,116 @@
+{
+  "method": "95% class-stratified bootstrap interval over the FruitVision evaluation sample.",
+  "resamples": 5000,
+  "schema_version": 1,
+  "seed": 42,
+  "systems": {
+    "clip_linear_probe": {
+      "accuracy": {
+        "estimate": 0.5524492234169653,
+        "lower": 0.5448028673835126,
+        "upper": 0.5603345280764636
+      },
+      "macro_f1": {
+        "estimate": 0.4607366280437202,
+        "lower": 0.45050171789776,
+        "upper": 0.4709878644597454
+      }
+    },
+    "clip_strict_zero_shot": {
+      "accuracy": {
+        "estimate": 0.6743130227001195,
+        "lower": 0.663321385902031,
+        "upper": 0.6857825567502986
+      },
+      "macro_f1": {
+        "estimate": 0.6378775292738251,
+        "lower": 0.6242984623260804,
+        "upper": 0.6516759611419738
+      }
+    },
+    "custom_cnn": {
+      "accuracy": {
+        "estimate": 0.38948626045400236,
+        "lower": 0.37849462365591396,
+        "upper": 0.4004778972520908
+      },
+      "macro_f1": {
+        "estimate": 0.3478528092711866,
+        "lower": 0.3364425526901282,
+        "upper": 0.3592700310580708
+      }
+    },
+    "dinov2_linear_probe": {
+      "accuracy": {
+        "estimate": 0.6637992831541218,
+        "lower": 0.6540023894862604,
+        "upper": 0.6738351254480287
+      },
+      "macro_f1": {
+        "estimate": 0.6126585930665771,
+        "lower": 0.5980514823405878,
+        "upper": 0.6271722500855117
+      }
+    },
+    "efficientnet_b0": {
+      "accuracy": {
+        "estimate": 0.7029868578255675,
+        "lower": 0.6922341696535245,
+        "upper": 0.7137395459976105
+      },
+      "macro_f1": {
+        "estimate": 0.6853463206142196,
+        "lower": 0.6729875323313528,
+        "upper": 0.6977043741520194
+      }
+    },
+    "mobilenetv3_large": {
+      "accuracy": {
+        "estimate": 0.7037037037037037,
+        "lower": 0.6941457586618877,
+        "upper": 0.7132616487455197
+      },
+      "macro_f1": {
+        "estimate": 0.6732005297569171,
+        "lower": 0.6615087977278179,
+        "upper": 0.6846353102793963
+      }
+    },
+    "resnet50": {
+      "accuracy": {
+        "estimate": 0.7620071684587814,
+        "lower": 0.7519713261648745,
+        "upper": 0.7718040621266428
+      },
+      "macro_f1": {
+        "estimate": 0.7385153530090413,
+        "lower": 0.7267646152229206,
+        "upper": 0.7501773741326417
+      }
+    },
+    "siglip2_linear_probe": {
+      "accuracy": {
+        "estimate": 0.7352449223416966,
+        "lower": 0.7266427718040621,
+        "upper": 0.7438470728793309
+      },
+      "macro_f1": {
+        "estimate": 0.6900195719267287,
+        "lower": 0.6790927448088491,
+        "upper": 0.7005109080477595
+      }
+    },
+    "siglip2_strict_zero_shot": {
+      "accuracy": {
+        "estimate": 0.8630824372759857,
+        "lower": 0.853763440860215,
+        "upper": 0.8731182795698925
+      },
+      "macro_f1": {
+        "estimate": 0.8559404669203072,
+        "lower": 0.8456015847993232,
+        "upper": 0.8667620293567553
+      }
+    }
+  }
+}

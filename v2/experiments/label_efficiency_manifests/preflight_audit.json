@@ -1,0 +1,89 @@
+{
+  "class_mapping": {
+    "fresh_apple": 0,
+    "fresh_banana": 1,
+    "fresh_orange": 2,
+    "rotten_apple": 3,
+    "rotten_banana": 4,
+    "rotten_orange": 5
+  },
+  "models": {
+    "clip": {
+      "all_parameters_frozen": true,
+      "caches": {
+        "train": {
+          "path": "v2/cache/clip/train.pt",
+          "samples": 1539,
+          "sha256": "951441b765800ba1753fe4862825019544f343e667c49d91f3133ab9815f04ea"
+        },
+        "validation": {
+          "path": "v2/cache/clip/validation.pt",
+          "samples": 270,
+          "sha256": "ad40852056cbd581e0f2610883c92a1c1660ac507d613aa2cfc3c477fe3dc368"
+        }
+      },
+      "checkpoint_id": "timm/vit_base_patch16_clip_224.openai",
+      "checkpoint_sha256": "4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f",
+      "checkpoint_size_bytes": 598516980,
+      "embedding_dim": 512,
+      "preprocessing_identity": "openai-clip-vit-b16-openclip-3.3.0",
+      "revision": "977e3dd0ec55ab8da155f2fbeb6b5f54948b6e3d"
+    },
+    "dinov2": {
+      "all_parameters_frozen": true,
+      "caches": {
+        "train": {
+          "path": "v2/cache/dinov2/train.pt",
+          "samples": 1539,
+          "sha256": "fe34d078df0f8b372fedd41f1ed43f2c9438a9f22fbaa9ec696d6a628dd88fe1"
+        },
+        "validation": {
+          "path": "v2/cache/dinov2/validation.pt",
+          "samples": 270,
+          "sha256": "c75075cf7a3fc1cc053631130a8de07139fba2738b7d5c90d3ed6eddf4831946"
+        }
+      },
+      "checkpoint_id": "facebook/dinov2-base",
+      "checkpoint_sha256": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "checkpoint_size_bytes": 346345912,
+      "embedding_dim": 768,
+      "preprocessing_identity": "facebook-dinov2-base-bitprocessor-rev-f9e44c8",
+      "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+    },
+    "siglip2": {
+      "all_parameters_frozen": true,
+      "caches": {
+        "train": {
+          "path": "v2/cache/siglip2/train.pt",
+          "samples": 1539,
+          "sha256": "dfadbce54a6a07b1e9775be779b05a848306f4a0770f7085e9c07b0c74f2603c"
+        },
+        "validation": {
+          "path": "v2/cache/siglip2/validation.pt",
+          "samples": 270,
+          "sha256": "0ad2d7f738ae0db8ed58e6b67f85667ce2cf83da33d54abc434f13fd4c311832"
+        }
+      },
+      "checkpoint_id": "google/siglip2-base-patch16-224",
+      "checkpoint_sha256": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "checkpoint_size_bytes": 1500800904,
+      "embedding_dim": 768,
+      "preprocessing_identity": "google-siglip2-base-patch16-224-rev-75de2d5",
+      "revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2"
+    }
+  },
+  "split_report": {
+    "path": "/tmp/fruit-v1-genuine-2018/work/partition_report.json",
+    "sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea"
+  },
+  "test_cache_loaded": false,
+  "training_class_capacity": {
+    "fresh_apple": 261,
+    "fresh_banana": 270,
+    "fresh_orange": 234,
+    "rotten_apple": 207,
+    "rotten_banana": 360,
+    "rotten_orange": 207
+  },
+  "verified_at": "2026-09-02T16:30:08.935058+00:00"
+}

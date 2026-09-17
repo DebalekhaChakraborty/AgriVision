@@ -1,0 +1,373 @@
+{
+  "boundary": "Descriptive associations do not establish causal mechanisms.",
+  "cells": [
+    {
+      "centroid_drift": 0.16760385036468506,
+      "class": "fresh_apple",
+      "domain": "sultana",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.6240504384040833,
+      "probe_error_rate": 0.0,
+      "retrieval_six_class_consistency_at_10": 0.7671666666666671
+    },
+    {
+      "centroid_drift": 0.1582965850830078,
+      "class": "fresh_banana",
+      "domain": "sultana",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.6121437549591064,
+      "probe_error_rate": 0.5449999999999999,
+      "retrieval_six_class_consistency_at_10": 0.7671666666666671
+    },
+    {
+      "centroid_drift": 0.16205084323883057,
+      "class": "fresh_orange",
+      "domain": "sultana",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.4721839427947998,
+      "probe_error_rate": 0.0,
+      "retrieval_six_class_consistency_at_10": 0.7671666666666671
+    },
+    {
+      "centroid_drift": 0.15366166830062866,
+      "class": "rotten_apple",
+      "domain": "sultana",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.6240504384040833,
+      "probe_error_rate": 0.48,
+      "retrieval_six_class_consistency_at_10": 0.7671666666666671
+    },
+    {
+      "centroid_drift": 0.14746099710464478,
+      "class": "rotten_banana",
+      "domain": "sultana",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.6121437549591064,
+      "probe_error_rate": 0.0,
+      "retrieval_six_class_consistency_at_10": 0.7671666666666671
+    },
+    {
+      "centroid_drift": 0.3060585856437683,
+      "class": "rotten_orange",
+      "domain": "sultana",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.4721839427947998,
+      "probe_error_rate": 0.885,
+      "retrieval_six_class_consistency_at_10": 0.7671666666666671
+    },
+    {
+      "centroid_drift": 0.22663992643356323,
+      "class": "fresh_apple",
+      "domain": "fruitvision",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.6443305015563965,
+      "probe_error_rate": 0.005228758169934622,
+      "retrieval_six_class_consistency_at_10": 0.7561290322580663
+    },
+    {
+      "centroid_drift": 0.1715395450592041,
+      "class": "fresh_banana",
+      "domain": "fruitvision",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.7002160549163818,
+      "probe_error_rate": 0.7102803738317758,
+      "retrieval_six_class_consistency_at_10": 0.7561290322580663
+    },
+    {
+      "centroid_drift": 0.2241901159286499,
+      "class": "fresh_orange",
+      "domain": "fruitvision",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.5396553874015808,
+      "probe_error_rate": 0.0,
+      "retrieval_six_class_consistency_at_10": 0.7561290322580663
+    },
+    {
+      "centroid_drift": 0.18076664209365845,
+      "class": "rotten_apple",
+      "domain": "fruitvision",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.6443305015563965,
+      "probe_error_rate": 0.6428571428571428,
+      "retrieval_six_class_consistency_at_10": 0.7561290322580663
+    },
+    {
+      "centroid_drift": 0.15447866916656494,
+      "class": "rotten_banana",
+      "domain": "fruitvision",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.7002160549163818,
+      "probe_error_rate": 0.0,
+      "retrieval_six_class_consistency_at_10": 0.7561290322580663
+    },
+    {
+      "centroid_drift": 0.23583728075027466,
+      "class": "rotten_orange",
+      "domain": "fruitvision",
+      "encoder": "dinov2",
+      "freshness_direction_alignment": 0.5396553874015808,
+      "probe_error_rate": 0.7103658536585367,
+      "retrieval_six_class_consistency_at_10": 0.7561290322580663
+    },
+    {
+      "centroid_drift": 0.07438045740127563,
+      "class": "fresh_apple",
+      "domain": "sultana",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.4806862771511078,
+      "probe_error_rate": 0.63,
+      "retrieval_six_class_consistency_at_10": 0.5897500000000001
+    },
+    {
+      "centroid_drift": 0.08543753623962402,
+      "class": "fresh_banana",
+      "domain": "sultana",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.6472548246383667,
+      "probe_error_rate": 0.97,
+      "retrieval_six_class_consistency_at_10": 0.5897500000000001
+    },
+    {
+      "centroid_drift": 0.06294167041778564,
+      "class": "fresh_orange",
+      "domain": "sultana",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.37171125411987305,
+      "probe_error_rate": 0.10499999999999998,
+      "retrieval_six_class_consistency_at_10": 0.5897500000000001
+    },
+    {
+      "centroid_drift": 0.06812208890914917,
+      "class": "rotten_apple",
+      "domain": "sultana",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.4806862771511078,
+      "probe_error_rate": 0.06000000000000005,
+      "retrieval_six_class_consistency_at_10": 0.5897500000000001
+    },
+    {
+      "centroid_drift": 0.059717416763305664,
+      "class": "rotten_banana",
+      "domain": "sultana",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.6472548246383667,
+      "probe_error_rate": 0.0,
+      "retrieval_six_class_consistency_at_10": 0.5897500000000001
+    },
+    {
+      "centroid_drift": 0.08948850631713867,
+      "class": "rotten_orange",
+      "domain": "sultana",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.37171125411987305,
+      "probe_error_rate": 0.575,
+      "retrieval_six_class_consistency_at_10": 0.5897500000000001
+    },
+    {
+      "centroid_drift": 0.09732288122177124,
+      "class": "fresh_apple",
+      "domain": "fruitvision",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.48235663771629333,
+      "probe_error_rate": 0.9568627450980393,
+      "retrieval_six_class_consistency_at_10": 0.5515890083632011
+    },
+    {
+      "centroid_drift": 0.0703498125076294,
+      "class": "fresh_banana",
+      "domain": "fruitvision",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.6715325713157654,
+      "probe_error_rate": 0.9813084112149533,
+      "retrieval_six_class_consistency_at_10": 0.5515890083632011
+    },
+    {
+      "centroid_drift": 0.06009185314178467,
+      "class": "fresh_orange",
+      "domain": "fruitvision",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.5097533464431763,
+      "probe_error_rate": 0.005312084993359889,
+      "retrieval_six_class_consistency_at_10": 0.5515890083632011
+    },
+    {
+      "centroid_drift": 0.09002840518951416,
+      "class": "rotten_apple",
+      "domain": "fruitvision",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.48235663771629333,
+      "probe_error_rate": 0.09682539682539681,
+      "retrieval_six_class_consistency_at_10": 0.5515890083632011
+    },
+    {
+      "centroid_drift": 0.07692831754684448,
+      "class": "rotten_banana",
+      "domain": "fruitvision",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.6715325713157654,
+      "probe_error_rate": 0.0,
+      "retrieval_six_class_consistency_at_10": 0.5515890083632011
+    },
+    {
+      "centroid_drift": 0.08009302616119385,
+      "class": "rotten_orange",
+      "domain": "fruitvision",
+      "encoder": "clip",
+      "freshness_direction_alignment": 0.5097533464431763,
+      "probe_error_rate": 0.5198170731707317,
+      "retrieval_six_class_consistency_at_10": 0.5515890083632011
+    },
+    {
+      "centroid_drift": 0.10461539030075073,
+      "class": "fresh_apple",
+      "domain": "sultana",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.5718204975128174,
+      "probe_error_rate": 0.0050000000000000044,
+      "retrieval_six_class_consistency_at_10": 0.7326666666666656
+    },
+    {
+      "centroid_drift": 0.09853625297546387,
+      "class": "fresh_banana",
+      "domain": "sultana",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.6953679323196411,
+      "probe_error_rate": 0.6799999999999999,
+      "retrieval_six_class_consistency_at_10": 0.7326666666666656
+    },
+    {
+      "centroid_drift": 0.08181852102279663,
+      "class": "fresh_orange",
+      "domain": "sultana",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.5679841041564941,
+      "probe_error_rate": 0.04500000000000004,
+      "retrieval_six_class_consistency_at_10": 0.7326666666666656
+    },
+    {
+      "centroid_drift": 0.07041621208190918,
+      "class": "rotten_apple",
+      "domain": "sultana",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.5718204975128174,
+      "probe_error_rate": 0.10999999999999999,
+      "retrieval_six_class_consistency_at_10": 0.7326666666666656
+    },
+    {
+      "centroid_drift": 0.06543481349945068,
+      "class": "rotten_banana",
+      "domain": "sultana",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.6953679323196411,
+      "probe_error_rate": 0.0,
+      "retrieval_six_class_consistency_at_10": 0.7326666666666656
+    },
+    {
+      "centroid_drift": 0.11823123693466187,
+      "class": "rotten_orange",
+      "domain": "sultana",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.5679841041564941,
+      "probe_error_rate": 0.19499999999999995,
+      "retrieval_six_class_consistency_at_10": 0.7326666666666656
+    },
+    {
+      "centroid_drift": 0.1353001594543457,
+      "class": "fresh_apple",
+      "domain": "fruitvision",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.593518853187561,
+      "probe_error_rate": 0.065359477124183,
+      "retrieval_six_class_consistency_at_10": 0.6424372759856652
+    },
+    {
+      "centroid_drift": 0.08729267120361328,
+      "class": "fresh_banana",
+      "domain": "fruitvision",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.7003616690635681,
+      "probe_error_rate": 0.9372496662216289,
+      "retrieval_six_class_consistency_at_10": 0.6424372759856652
+    },
+    {
+      "centroid_drift": 0.10289061069488525,
+      "class": "fresh_orange",
+      "domain": "fruitvision",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.6667449474334717,
+      "probe_error_rate": 0.003984063745019917,
+      "retrieval_six_class_consistency_at_10": 0.6424372759856652
+    },
+    {
+      "centroid_drift": 0.1295546293258667,
+      "class": "rotten_apple",
+      "domain": "fruitvision",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.593518853187561,
+      "probe_error_rate": 0.346031746031746,
+      "retrieval_six_class_consistency_at_10": 0.6424372759856652
+    },
+    {
+      "centroid_drift": 0.07105100154876709,
+      "class": "rotten_banana",
+      "domain": "fruitvision",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.7003616690635681,
+      "probe_error_rate": 0.0,
+      "retrieval_six_class_consistency_at_10": 0.6424372759856652
+    },
+    {
+      "centroid_drift": 0.12122702598571777,
+      "class": "rotten_orange",
+      "domain": "fruitvision",
+      "encoder": "siglip2",
+      "freshness_direction_alignment": 0.6667449474334717,
+      "probe_error_rate": 0.20579268292682928,
+      "retrieval_six_class_consistency_at_10": 0.6424372759856652
+    }
+  ],
+  "correlations": {
+    "probe_error_rate_vs_centroid_drift": {
+      "n_cells": 36,
+      "p_value_descriptive": 0.6270718801759301,
+      "spearman_rho": 0.08378982647514566
+    },
+    "probe_error_rate_vs_freshness_direction_alignment": {
+      "n_cells": 36,
+      "p_value_descriptive": 0.5917384778851561,
+      "spearman_rho": -0.09245755276767756
+    },
+    "probe_error_rate_vs_retrieval_six_class_consistency_at_10": {
+      "n_cells": 36,
+      "p_value_descriptive": 0.30249606840566384,
+      "spearman_rho": -0.17672893217696298
+    }
+  },
+  "schema_version": 1,
+  "zero_shot_margin_associations": {
+    "clip": {
+      "fruitvision": {
+        "both_correct_mean_margin": 0.018803769382622723,
+        "both_wrong_mean_margin": 0.00778061821295644,
+        "zero_shot_only_correct_mean_margin": 0.008912687430218343
+      },
+      "sultana": {
+        "both_correct_mean_margin": 0.01908209277597358,
+        "both_wrong_mean_margin": 0.009895025766812837,
+        "zero_shot_only_correct_mean_margin": 0.01242891192083528
+      }
+    },
+    "siglip2": {
+      "fruitvision": {
+        "both_correct_mean_margin": 0.027865308535329914,
+        "both_wrong_mean_margin": 0.010789715907704042,
+        "zero_shot_only_correct_mean_margin": 0.011731002741508598
+      },
+      "sultana": {
+        "both_correct_mean_margin": 0.03236476427797849,
+        "both_wrong_mean_margin": 0.014117929320304822,
+        "zero_shot_only_correct_mean_margin": 0.01827718981707743
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+schema_version: 1
+status: phase_3e_pre_registered_before_fruitvision_inference
+
+experiment:
+  id: V2-P3E-MULTI-DOMAIN-014
+  number: 14
+  title: Multi-Domain Robustness Benchmark
+
+domains:
+  source:
+    name: Kalluri frozen source test
+    policy: reuse_only_no_inference
+  sultana:
+    name: Sultana 2022 external originals
+    manifest_sha256: 6fd074e514f3b79e6d4f1878516fdaa9a4ea2e283a2dee4453a397d9da5a7208
+    policy: reuse_experiment_013_only_no_inference
+  fruitvision:
+    name: FruitVision
+    doi: 10.17632/xkbjx8959c.2
+    version: 2
+    publication_date: "2025-01-15"
+    dataset_licence: CC BY-NC-ND 4.0
+    local_original_root: v2/data/external/fruitvision/Fruits Original
+    official_original_archive:
+      filename: Original Image.zip
+      file_id: 7d97a2e2-d501-4b8c-9fff-699433c001ea
+      size_bytes: 898826798
+      sha256: c72a8d8d9b1f44f8f4a7f31e1420da7f356de5eb4f18e698bbe692ca4d1a18fc
+    official_augmented_archive:
+      filename: Augmented-Resized Image.zip
+      file_id: 5dfc18cf-0f8b-4c06-ac53-141c17ee0b76
+      size_bytes: 4787094558
+      sha256: 06f550197ec8ab47eff8abea0eac6051565fe3f0a0ceaeb3e3bd3c5132d0a38c
+      downloaded: false
+    selected_class_counts_from_article:
+      fresh_apple: 765
+      rotten_apple: 630
+      fresh_banana: 749
+      rotten_banana: 632
+      fresh_orange: 753
+      rotten_orange: 656
+    class_mapping:
+      Fresh Apple: fresh_apple
+      Rotten Apple: rotten_apple
+      Fresh Banana: fresh_banana
+      Rotten Banana: rotten_banana
+      Fresh Orange: fresh_orange
+      Rotten Orange: rotten_orange
+    excluded_conditions: [Formalin-mixed]
+    excluded_fruits: [Grape, Mango]
+
+contamination_screening:
+  exact_method: SHA-256 over original file bytes
+  pixel_method: SHA-256 over width, height, and decoded canonical RGB bytes
+  perceptual_method: 63-bit pHash using 32x32 grayscale, orthonormal 2D DCT, and median-thresholded low-frequency 8x8 coefficients excluding DC
+  phash_hamming_candidate_threshold: 6
+  threshold_status: frozen_before_candidate_inspection
+  severe_internal_exact_or_pixel_secondary_record_fraction: 0.10
+
+evaluation:
+  batch_size: 32
+  seed: 42
+  device: auto
+  external_training: false
+  external_validation: false
+  calibration: false
+  prompt_selection: false
+  passes_per_system: 1
+
+uncertainty:
+  bootstrap_seed: 42
+  class_stratified_resamples: 5000
+  interval_percent: 95
+  paired_comparisons:
+    - [siglip2_strict_zero_shot, siglip2_linear_probe]
+    - [clip_strict_zero_shot, clip_linear_probe]
+    - [siglip2_strict_zero_shot, mobilenetv3_large]
+    - [siglip2_strict_zero_shot, clip_strict_zero_shot]
+
+robustness_ranking:
+  primary: worst_external_accuracy
+  secondary: mean_external_accuracy
+  tie_method: average_rank
+  status: frozen_before_fruitvision_results
+
+outputs:
+  directory: v2/results/experiment_014_multi_domain
+  dataset_audit: v2/results/experiment_014_multi_domain/fruitvision_dataset_audit.json
+  contamination_audit: v2/results/experiment_014_multi_domain/cross_domain_contamination_audit.json
+  candidate_review: v2/results/experiment_014_multi_domain/perceptual_candidate_review.json
+  manifest: v2/results/experiment_014_multi_domain/fruitvision_manifest.json
+  manifest_hash: v2/results/experiment_014_multi_domain/manifest_sha256.txt

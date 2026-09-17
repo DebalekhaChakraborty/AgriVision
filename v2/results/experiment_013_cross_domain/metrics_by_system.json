@@ -1,0 +1,1050 @@
+{
+  "experiment_id": "V2-P3D-CROSS-DOMAIN-013",
+  "manifest_sha256": "6fd074e514f3b79e6d4f1878516fdaa9a4ea2e283a2dee4453a397d9da5a7208",
+  "schema_version": 1,
+  "systems": {
+    "clip_linear_probe": {
+      "accuracy": 0.61,
+      "condition": "013-F",
+      "confusion_matrix": [
+        [
+          74,
+          0,
+          0,
+          126,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          194,
+          0
+        ],
+        [
+          0,
+          0,
+          179,
+          9,
+          0,
+          12
+        ],
+        [
+          11,
+          0,
+          0,
+          188,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          0,
+          48,
+          66,
+          1,
+          85
+        ]
+      ],
+      "display_name": "CLIP + linear probe",
+      "encoder_forward_seconds": 128.26688300684327,
+      "evaluated_at": "2026-09-02T17:55:28.935688+00:00",
+      "macro_f1": 0.5496432996295147,
+      "macro_precision": 0.753960690679487,
+      "macro_recall": 0.61,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.519298245614035,
+          "precision": 0.8705882352941177,
+          "recall": 0.37,
+          "support": 200.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.05825242718446602,
+          "precision": 1.0,
+          "recall": 0.03,
+          "support": 200.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.8384074941451991,
+          "precision": 0.788546255506608,
+          "recall": 0.895,
+          "support": 200.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.6383701188455009,
+          "precision": 0.4832904884318766,
+          "recall": 0.94,
+          "support": 200.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.6711409395973155,
+          "precision": 0.5050505050505051,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.5723905723905723,
+          "precision": 0.8762886597938144,
+          "recall": 0.425,
+          "support": 200.0
+        }
+      },
+      "probe_forward_seconds": 0.00032080698292702436,
+      "samples": 1200,
+      "single_external_pass": true,
+      "system": "clip_linear_probe",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 289.2936924370006,
+        "model_forward_ms_per_image": 106.88933651152183,
+        "model_forward_seconds": 128.2672038138262,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded from model-forward time."
+      },
+      "weighted_f1": 0.5496432996295147,
+      "weighted_precision": 0.7539606906794869,
+      "weighted_recall": 0.61,
+      "zero_target_domain_adaptation": true
+    },
+    "clip_strict_zero_shot": {
+      "accuracy": 0.8075,
+      "classifier_training": false,
+      "condition": "013-H",
+      "confusion_matrix": [
+        [
+          188,
+          0,
+          0,
+          12,
+          0,
+          0
+        ],
+        [
+          0,
+          110,
+          0,
+          0,
+          90,
+          0
+        ],
+        [
+          0,
+          0,
+          100,
+          0,
+          0,
+          100
+        ],
+        [
+          9,
+          0,
+          0,
+          172,
+          0,
+          19
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          199,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          200
+        ]
+      ],
+      "display_name": "CLIP strict P1 zero-shot",
+      "evaluated_at": "2026-09-02T18:02:53.126386+00:00",
+      "macro_f1": 0.8002696021438429,
+      "macro_precision": 0.8659381471711035,
+      "macro_recall": 0.8075000000000001,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.947103274559194,
+          "precision": 0.9543147208121827,
+          "recall": 0.94,
+          "support": 200.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.707395498392283,
+          "precision": 0.990990990990991,
+          "recall": 0.55,
+          "support": 200.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.6666666666666666,
+          "precision": 1.0,
+          "recall": 0.5,
+          "support": 200.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.8958333333333334,
+          "precision": 0.9347826086956522,
+          "recall": 0.86,
+          "support": 200.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.8139059304703476,
+          "precision": 0.6885813148788927,
+          "recall": 0.995,
+          "support": 200.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.7707129094412332,
+          "precision": 0.6269592476489029,
+          "recall": 1.0,
+          "support": 200.0
+        }
+      },
+      "prompt_family": "P1",
+      "prompt_registry_sha256": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+      "prototype_generation": {
+        "equal_weighting": true,
+        "family": "P1",
+        "normalize_each_prompt": true,
+        "prompt_counts": {
+          "fresh_apple": 1,
+          "fresh_banana": 1,
+          "fresh_orange": 1,
+          "rotten_apple": 1,
+          "rotten_banana": 1,
+          "rotten_orange": 1
+        },
+        "renormalize_class_prototype": true,
+        "text_embedding_seconds": 0.2324676239513792,
+        "total_prompts": 6
+      },
+      "samples": 1200,
+      "single_external_pass": true,
+      "system": "clip_strict_zero_shot",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 234.01307196798734,
+        "model_forward_ms_per_image": 76.72580678893912,
+        "model_forward_seconds": 92.07096814672695,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded from model-forward time."
+      },
+      "weighted_f1": 0.800269602143843,
+      "weighted_precision": 0.8659381471711036,
+      "weighted_recall": 0.8075,
+      "zero_target_domain_adaptation": true
+    },
+    "custom_cnn": {
+      "accuracy": 0.3458333333333333,
+      "condition": "013-A",
+      "confusion_matrix": [
+        [
+          121,
+          0,
+          19,
+          28,
+          21,
+          11
+        ],
+        [
+          34,
+          6,
+          2,
+          20,
+          103,
+          35
+        ],
+        [
+          62,
+          0,
+          31,
+          56,
+          33,
+          18
+        ],
+        [
+          38,
+          0,
+          0,
+          55,
+          54,
+          53
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          197,
+          3
+        ],
+        [
+          70,
+          0,
+          14,
+          108,
+          3,
+          5
+        ]
+      ],
+      "display_name": "Custom CNN",
+      "evaluated_at": "2026-09-02T17:41:03.037063+00:00",
+      "macro_f1": 0.2772412169003058,
+      "macro_precision": 0.4278859843601908,
+      "macro_recall": 0.34583333333333327,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.46095238095238095,
+          "precision": 0.3723076923076923,
+          "recall": 0.605,
+          "support": 200.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.05825242718446602,
+          "precision": 1.0,
+          "recall": 0.03,
+          "support": 200.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.23308270676691728,
+          "precision": 0.4696969696969697,
+          "recall": 0.155,
+          "support": 200.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.23554603854389722,
+          "precision": 0.20599250936329588,
+          "recall": 0.275,
+          "support": 200.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.6448445171849427,
+          "precision": 0.4793187347931874,
+          "recall": 0.985,
+          "support": 200.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.03076923076923077,
+          "precision": 0.04,
+          "recall": 0.025,
+          "support": 200.0
+        }
+      },
+      "samples": 1200,
+      "single_external_pass": true,
+      "system": "custom_cnn",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 130.42549382703146,
+        "model_forward_ms_per_image": 4.624652346683433,
+        "model_forward_seconds": 5.54958281602012,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded from model-forward time."
+      },
+      "weighted_f1": 0.2772412169003058,
+      "weighted_precision": 0.42788598436019093,
+      "weighted_recall": 0.3458333333333333,
+      "zero_target_domain_adaptation": true
+    },
+    "dinov2_linear_probe": {
+      "accuracy": 0.6816666666666666,
+      "condition": "013-E",
+      "confusion_matrix": [
+        [
+          200,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          91,
+          0,
+          0,
+          109,
+          0
+        ],
+        [
+          0,
+          0,
+          200,
+          0,
+          0,
+          0
+        ],
+        [
+          96,
+          0,
+          0,
+          104,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          0,
+          172,
+          5,
+          0,
+          23
+        ]
+      ],
+      "display_name": "DINOv2 + linear probe",
+      "encoder_forward_seconds": 110.82686410582392,
+      "evaluated_at": "2026-09-02T17:50:35.511718+00:00",
+      "macro_f1": 0.6327422779743809,
+      "macro_precision": 0.8024479525972184,
+      "macro_recall": 0.6816666666666666,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.8064516129032258,
+          "precision": 0.6756756756756757,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.6254295532646048,
+          "precision": 1.0,
+          "recall": 0.455,
+          "support": 200.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.6993006993006993,
+          "precision": 0.5376344086021505,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.6731391585760518,
+          "precision": 0.9541284403669725,
+          "recall": 0.52,
+          "support": 200.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.7858546168958742,
+          "precision": 0.6472491909385113,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.2062780269058296,
+          "precision": 1.0,
+          "recall": 0.115,
+          "support": 200.0
+        }
+      },
+      "probe_forward_seconds": 0.010762524965684861,
+      "samples": 1200,
+      "single_external_pass": true,
+      "system": "dinov2_linear_probe",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 197.66316248301882,
+        "model_forward_ms_per_image": 92.36468885899133,
+        "model_forward_seconds": 110.8376266307896,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded from model-forward time."
+      },
+      "weighted_f1": 0.6327422779743809,
+      "weighted_precision": 0.8024479525972184,
+      "weighted_recall": 0.6816666666666666,
+      "zero_target_domain_adaptation": true
+    },
+    "efficientnet_b0": {
+      "accuracy": 0.6875,
+      "condition": "013-C",
+      "confusion_matrix": [
+        [
+          135,
+          0,
+          1,
+          58,
+          0,
+          6
+        ],
+        [
+          0,
+          147,
+          0,
+          0,
+          53,
+          0
+        ],
+        [
+          5,
+          0,
+          170,
+          10,
+          0,
+          15
+        ],
+        [
+          71,
+          0,
+          0,
+          124,
+          0,
+          5
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          194,
+          0
+        ],
+        [
+          0,
+          0,
+          87,
+          58,
+          0,
+          55
+        ]
+      ],
+      "display_name": "EfficientNet-B0",
+      "evaluated_at": "2026-09-02T17:45:24.106157+00:00",
+      "macro_f1": 0.6737887848939552,
+      "macro_precision": 0.7033244859735888,
+      "macro_recall": 0.6875000000000001,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.656934306569343,
+          "precision": 0.6398104265402843,
+          "recall": 0.675,
+          "support": 200.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.8328611898016998,
+          "precision": 0.9607843137254902,
+          "recall": 0.735,
+          "support": 200.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.74235807860262,
+          "precision": 0.6589147286821705,
+          "recall": 0.85,
+          "support": 200.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.5511111111111111,
+          "precision": 0.496,
+          "recall": 0.62,
+          "support": 200.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.8680089485458613,
+          "precision": 0.7854251012145749,
+          "recall": 0.97,
+          "support": 200.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.3914590747330961,
+          "precision": 0.6790123456790124,
+          "recall": 0.275,
+          "support": 200.0
+        }
+      },
+      "samples": 1200,
+      "single_external_pass": true,
+      "system": "efficientnet_b0",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 116.83144129998982,
+        "model_forward_ms_per_image": 11.771730984134289,
+        "model_forward_seconds": 14.126077180961147,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded from model-forward time."
+      },
+      "weighted_f1": 0.6737887848939552,
+      "weighted_precision": 0.7033244859735887,
+      "weighted_recall": 0.6875,
+      "zero_target_domain_adaptation": true
+    },
+    "mobilenetv3_large": {
+      "accuracy": 0.7075,
+      "condition": "013-D",
+      "confusion_matrix": [
+        [
+          171,
+          0,
+          3,
+          26,
+          0,
+          0
+        ],
+        [
+          0,
+          165,
+          0,
+          0,
+          35,
+          0
+        ],
+        [
+          1,
+          0,
+          193,
+          4,
+          0,
+          2
+        ],
+        [
+          68,
+          0,
+          0,
+          132,
+          0,
+          0
+        ],
+        [
+          0,
+          22,
+          0,
+          0,
+          178,
+          0
+        ],
+        [
+          0,
+          0,
+          83,
+          107,
+          0,
+          10
+        ]
+      ],
+      "display_name": "MobileNetV3-Large",
+      "evaluated_at": "2026-09-02T17:47:14.199669+00:00",
+      "macro_f1": 0.6591760497710687,
+      "macro_precision": 0.7410549362979247,
+      "macro_recall": 0.7075,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.7772727272727272,
+          "precision": 0.7125,
+          "recall": 0.855,
+          "support": 200.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.8527131782945736,
+          "precision": 0.8823529411764706,
+          "recall": 0.825,
+          "support": 200.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.8058455114822547,
+          "precision": 0.6917562724014337,
+          "recall": 0.965,
+          "support": 200.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.5628997867803838,
+          "precision": 0.49070631970260226,
+          "recall": 0.66,
+          "support": 200.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.8619854721549637,
+          "precision": 0.8356807511737089,
+          "recall": 0.89,
+          "support": 200.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.09433962264150944,
+          "precision": 0.8333333333333334,
+          "recall": 0.05,
+          "support": 200.0
+        }
+      },
+      "samples": 1200,
+      "single_external_pass": true,
+      "system": "mobilenetv3_large",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 109.24999347497942,
+        "model_forward_ms_per_image": 5.737530210074813,
+        "model_forward_seconds": 6.885036252089776,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded from model-forward time."
+      },
+      "weighted_f1": 0.6591760497710687,
+      "weighted_precision": 0.7410549362979247,
+      "weighted_recall": 0.7075,
+      "zero_target_domain_adaptation": true
+    },
+    "resnet50": {
+      "accuracy": 0.6933333333333334,
+      "condition": "013-B",
+      "confusion_matrix": [
+        [
+          189,
+          0,
+          4,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          157,
+          0,
+          0,
+          43,
+          0
+        ],
+        [
+          4,
+          0,
+          188,
+          2,
+          0,
+          6
+        ],
+        [
+          119,
+          0,
+          0,
+          81,
+          0,
+          0
+        ],
+        [
+          0,
+          9,
+          0,
+          0,
+          191,
+          0
+        ],
+        [
+          2,
+          0,
+          131,
+          41,
+          0,
+          26
+        ]
+      ],
+      "display_name": "ResNet50",
+      "evaluated_at": "2026-09-02T17:43:26.440079+00:00",
+      "macro_f1": 0.6510015927643295,
+      "macro_precision": 0.729466205189198,
+      "macro_recall": 0.6933333333333334,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.7354085603112841,
+          "precision": 0.6019108280254777,
+          "recall": 0.945,
+          "support": 200.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.8579234972677595,
+          "precision": 0.9457831325301205,
+          "recall": 0.785,
+          "support": 200.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.7189292543021033,
+          "precision": 0.5820433436532507,
+          "recall": 0.94,
+          "support": 200.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.48942598187311176,
+          "precision": 0.6183206106870229,
+          "recall": 0.405,
+          "support": 200.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.880184331797235,
+          "precision": 0.8162393162393162,
+          "recall": 0.955,
+          "support": 200.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.22413793103448276,
+          "precision": 0.8125,
+          "recall": 0.13,
+          "support": 200.0
+        }
+      },
+      "samples": 1200,
+      "single_external_pass": true,
+      "system": "resnet50",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 142.10350918304175,
+        "model_forward_ms_per_image": 31.45634631422581,
+        "model_forward_seconds": 37.747615577070974,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded from model-forward time."
+      },
+      "weighted_f1": 0.6510015927643293,
+      "weighted_precision": 0.729466205189198,
+      "weighted_recall": 0.6933333333333334,
+      "zero_target_domain_adaptation": true
+    },
+    "siglip2_linear_probe": {
+      "accuracy": 0.8275,
+      "condition": "013-G",
+      "confusion_matrix": [
+        [
+          199,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          64,
+          0,
+          0,
+          136,
+          0
+        ],
+        [
+          0,
+          0,
+          191,
+          0,
+          0,
+          9
+        ],
+        [
+          19,
+          0,
+          0,
+          178,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          200,
+          0
+        ],
+        [
+          0,
+          0,
+          37,
+          2,
+          0,
+          161
+        ]
+      ],
+      "display_name": "SigLIP2 + linear probe",
+      "encoder_forward_seconds": 117.3351174381678,
+      "evaluated_at": "2026-09-02T17:58:54.622347+00:00",
+      "macro_f1": 0.8123964194168288,
+      "macro_precision": 0.8772511785040717,
+      "macro_recall": 0.8275,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.9521531100478469,
+          "precision": 0.9128440366972477,
+          "recall": 0.995,
+          "support": 200.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.48484848484848486,
+          "precision": 1.0,
+          "recall": 0.32,
+          "support": 200.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.8925233644859814,
+          "precision": 0.8377192982456141,
+          "recall": 0.955,
+          "support": 200.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.9343832020997376,
+          "precision": 0.9834254143646409,
+          "recall": 0.89,
+          "support": 200.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.74487895716946,
+          "precision": 0.5934718100890207,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.8655913978494624,
+          "precision": 0.936046511627907,
+          "recall": 0.805,
+          "support": 200.0
+        }
+      },
+      "probe_forward_seconds": 0.0002443549456074834,
+      "samples": 1200,
+      "single_external_pass": true,
+      "system": "siglip2_linear_probe",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 199.56109082396142,
+        "model_forward_ms_per_image": 97.77946816092783,
+        "model_forward_seconds": 117.3353617931134,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded from model-forward time."
+      },
+      "weighted_f1": 0.8123964194168288,
+      "weighted_precision": 0.8772511785040717,
+      "weighted_recall": 0.8275,
+      "zero_target_domain_adaptation": true
+    },
+    "siglip2_strict_zero_shot": {
+      "accuracy": 0.9075,
+      "classifier_training": false,
+      "condition": "013-I",
+      "confusion_matrix": [
+        [
+          200,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          153,
+          0,
+          0,
+          47,
+          0
+        ],
+        [
+          0,
+          0,
+          177,
+          0,
+          0,
+          23
+        ],
+        [
+          19,
+          0,
+          0,
+          178,
+          0,
+          3
+        ],
+        [
+          0,
+          13,
+          0,
+          0,
+          187,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          2,
+          0,
+          194
+        ]
+      ],
+      "display_name": "SigLIP2 strict P1 zero-shot",
+      "evaluated_at": "2026-09-02T18:06:43.405734+00:00",
+      "macro_f1": 0.907042691855353,
+      "macro_precision": 0.9137802797431549,
+      "macro_recall": 0.9075000000000001,
+      "per_class": {
+        "fresh_apple": {
+          "f1-score": 0.954653937947494,
+          "precision": 0.91324200913242,
+          "recall": 1.0,
+          "support": 200.0
+        },
+        "fresh_banana": {
+          "f1-score": 0.8360655737704918,
+          "precision": 0.9216867469879518,
+          "recall": 0.765,
+          "support": 200.0
+        },
+        "fresh_orange": {
+          "f1-score": 0.9291338582677166,
+          "precision": 0.9779005524861878,
+          "recall": 0.885,
+          "support": 200.0
+        },
+        "rotten_apple": {
+          "f1-score": 0.9368421052631579,
+          "precision": 0.9888888888888889,
+          "recall": 0.89,
+          "support": 200.0
+        },
+        "rotten_banana": {
+          "f1-score": 0.8617511520737328,
+          "precision": 0.7991452991452992,
+          "recall": 0.935,
+          "support": 200.0
+        },
+        "rotten_orange": {
+          "f1-score": 0.9238095238095239,
+          "precision": 0.8818181818181818,
+          "recall": 0.97,
+          "support": 200.0
+        }
+      },
+      "prompt_family": "P1",
+      "prompt_registry_sha256": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+      "prototype_generation": {
+        "equal_weighting": true,
+        "family": "P1",
+        "normalize_each_prompt": true,
+        "prompt_counts": {
+          "fresh_apple": 1,
+          "fresh_banana": 1,
+          "fresh_orange": 1,
+          "rotten_apple": 1,
+          "rotten_banana": 1,
+          "rotten_orange": 1
+        },
+        "renormalize_class_prototype": true,
+        "text_embedding_seconds": 0.31860158999916166,
+        "total_prompts": 6
+      },
+      "samples": 1200,
+      "single_external_pass": true,
+      "system": "siglip2_strict_zero_shot",
+      "timing": {
+        "device": "cpu",
+        "evaluation_loop_wall_seconds": 221.28635031398153,
+        "model_forward_ms_per_image": 105.83626655168094,
+        "model_forward_seconds": 127.00351986201713,
+        "scope": "Model forward after deterministic preprocessing; decoding/transforms excluded from model-forward time."
+      },
+      "weighted_f1": 0.9070426918553528,
+      "weighted_precision": 0.913780279743155,
+      "weighted_recall": 0.9075,
+      "zero_target_domain_adaptation": true
+    }
+  }
+}

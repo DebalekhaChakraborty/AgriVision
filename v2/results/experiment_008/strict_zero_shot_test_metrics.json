@@ -1,0 +1,162 @@
+{
+  "accuracy": 0.8995552260934025,
+  "classifier_trained": false,
+  "condition": "strict_zero_shot",
+  "confusion_matrix": [
+    [
+      362,
+      0,
+      0,
+      32,
+      0,
+      1
+    ],
+    [
+      0,
+      376,
+      0,
+      0,
+      5,
+      0
+    ],
+    [
+      0,
+      0,
+      273,
+      0,
+      0,
+      115
+    ],
+    [
+      18,
+      0,
+      0,
+      527,
+      1,
+      55
+    ],
+    [
+      0,
+      11,
+      0,
+      0,
+      519,
+      0
+    ],
+    [
+      3,
+      0,
+      24,
+      6,
+      0,
+      370
+    ]
+  ],
+  "end_to_end_forward_ms_per_image": 79.26793929945711,
+  "image_encoding": {
+    "image_encoder_ms_per_image": 79.2677172379319,
+    "image_encoder_seconds": 213.86430110794026,
+    "image_loop_wall_ms_per_image": 88.64133184100173,
+    "image_loop_wall_seconds": 239.15431330702268,
+    "peak_process_rss_mb": 2181.56640625,
+    "samples": 2698,
+    "scope": "Model forward after deterministic preprocessing; image embeddings are L2-normalized."
+  },
+  "macro_f1": 0.8964279817964617,
+  "macro_precision": 0.9068618866517265,
+  "macro_recall": 0.8968619818640483,
+  "per_class": {
+    "fresh_apple": {
+      "f1-score": 0.9305912596401028,
+      "precision": 0.9451697127937336,
+      "recall": 0.9164556962025316,
+      "support": 395.0
+    },
+    "fresh_banana": {
+      "f1-score": 0.9791666666666666,
+      "precision": 0.9715762273901809,
+      "recall": 0.9868766404199475,
+      "support": 381.0
+    },
+    "fresh_orange": {
+      "f1-score": 0.7970802919708029,
+      "precision": 0.9191919191919192,
+      "recall": 0.7036082474226805,
+      "support": 388.0
+    },
+    "rotten_apple": {
+      "f1-score": 0.9039451114922813,
+      "precision": 0.9327433628318584,
+      "recall": 0.8768718801996672,
+      "support": 601.0
+    },
+    "rotten_banana": {
+      "f1-score": 0.9838862559241706,
+      "precision": 0.9885714285714285,
+      "recall": 0.9792452830188679,
+      "support": 530.0
+    },
+    "rotten_orange": {
+      "f1-score": 0.7838983050847458,
+      "precision": 0.6839186691312384,
+      "recall": 0.9181141439205955,
+      "support": 403.0
+    }
+  },
+  "prompt_family": "P1",
+  "samples": 2698,
+  "semantic_error_analysis": {
+    "confusion_pairs": {
+      "fresh_apple -> rotten_apple": 32,
+      "fresh_apple -> rotten_orange": 1,
+      "fresh_banana -> rotten_banana": 5,
+      "fresh_orange -> rotten_orange": 115,
+      "rotten_apple -> fresh_apple": 18,
+      "rotten_apple -> rotten_banana": 1,
+      "rotten_apple -> rotten_orange": 55,
+      "rotten_banana -> fresh_banana": 11,
+      "rotten_orange -> fresh_apple": 3,
+      "rotten_orange -> fresh_orange": 24,
+      "rotten_orange -> rotten_apple": 6
+    },
+    "counts": {
+      "both_errors": 4,
+      "condition_errors": 205,
+      "fruit_identity_errors": 62
+    },
+    "percent_of_all_predictions": {
+      "both_errors": 0.14825796886582654,
+      "condition_errors": 7.59822090437361,
+      "fruit_identity_errors": 2.2979985174203112
+    },
+    "percent_of_errors": {
+      "both_errors": 1.4760147601476015,
+      "condition_errors": 75.64575645756457,
+      "fruit_identity_errors": 22.878228782287824
+    },
+    "total_errors": 271,
+    "total_predictions": 2698
+  },
+  "similarity_classification_ms_per_image": 0.00022206152521772482,
+  "similarity_classification_seconds": 0.0005991219950374216,
+  "similarity_score_warning": "Cosine similarities and native logits are not calibrated probabilities.",
+  "text_prototype_generation": {
+    "equal_weighting": true,
+    "family": "P1",
+    "normalize_each_prompt": true,
+    "prompt_counts": {
+      "fresh_apple": 1,
+      "fresh_banana": 1,
+      "fresh_orange": 1,
+      "rotten_apple": 1,
+      "rotten_banana": 1,
+      "rotten_orange": 1
+    },
+    "renormalize_class_prototype": true,
+    "text_embedding_seconds": 0.20551030000206083,
+    "total_prompts": 6
+  },
+  "weighted_f1": 0.900872848568694,
+  "weighted_precision": 0.9118976596368945,
+  "weighted_recall": 0.8995552260934025
+}

@@ -1,0 +1,109 @@
+schema_version: 1
+status: frozen_before_validation
+registered_at_utc: "2026-09-01"
+purpose: V2 Phase 3B zero-shot fruit-freshness prompt registry
+
+class_order:
+  - fresh_apple
+  - fresh_banana
+  - fresh_orange
+  - rotten_apple
+  - rotten_banana
+  - rotten_orange
+
+selection:
+  primary_metric: macro_f1
+  first_tie_breaker: accuracy
+  second_tie_breaker: simpler_prompt_strategy
+  simplicity_order: [P1, P2, P3, P4]
+
+families:
+  P1:
+    name: canonical
+    strict_zero_shot: true
+    aggregation: single_prompt
+    prompts:
+      fresh_apple:
+        - "a photo of a fresh apple"
+      fresh_banana:
+        - "a photo of a fresh banana"
+      fresh_orange:
+        - "a photo of a fresh orange"
+      rotten_apple:
+        - "a photo of a rotten apple"
+      rotten_banana:
+        - "a photo of a rotten banana"
+      rotten_orange:
+        - "a photo of a rotten orange"
+
+  P2:
+    name: natural_object
+    strict_zero_shot: false
+    aggregation: single_prompt
+    prompts:
+      fresh_apple:
+        - "a photo of a fresh apple fruit"
+      fresh_banana:
+        - "a photo of a fresh banana fruit"
+      fresh_orange:
+        - "a photo of a fresh orange fruit"
+      rotten_apple:
+        - "a photo of a rotten apple fruit"
+      rotten_banana:
+        - "a photo of a rotten banana fruit"
+      rotten_orange:
+        - "a photo of a rotten orange fruit"
+
+  P3:
+    name: condition_description
+    strict_zero_shot: false
+    aggregation: single_prompt
+    prompts:
+      fresh_apple:
+        - "a photo of an apple that appears fresh and healthy"
+      fresh_banana:
+        - "a photo of a banana that appears fresh and healthy"
+      fresh_orange:
+        - "a photo of an orange that appears fresh and healthy"
+      rotten_apple:
+        - "a photo of an apple showing visible rot and decay"
+      rotten_banana:
+        - "a photo of a banana showing visible rot and decay"
+      rotten_orange:
+        - "a photo of an orange showing visible rot and decay"
+
+  P4:
+    name: equal_weight_template_ensemble
+    strict_zero_shot: false
+    aggregation: normalize_each_mean_equal_weight_renormalize
+    prompts:
+      fresh_apple:
+        - "a photo of a fresh apple"
+        - "an image of a fresh apple"
+        - "a close-up photo of a fresh apple"
+        - "a photograph of an apple that is fresh"
+      fresh_banana:
+        - "a photo of a fresh banana"
+        - "an image of a fresh banana"
+        - "a close-up photo of a fresh banana"
+        - "a photograph of a banana that is fresh"
+      fresh_orange:
+        - "a photo of a fresh orange"
+        - "an image of a fresh orange"
+        - "a close-up photo of a fresh orange"
+        - "a photograph of an orange that is fresh"
+      rotten_apple:
+        - "a photo of a rotten apple"
+        - "an image of a rotten apple"
+        - "a close-up photo of a rotten apple"
+        - "a photograph of an apple that is rotten"
+      rotten_banana:
+        - "a photo of a rotten banana"
+        - "an image of a rotten banana"
+        - "a close-up photo of a rotten banana"
+        - "a photograph of a banana that is rotten"
+      rotten_orange:
+        - "a photo of a rotten orange"
+        - "an image of a rotten orange"
+        - "a close-up photo of a rotten orange"
+        - "a photograph of an orange that is rotten"

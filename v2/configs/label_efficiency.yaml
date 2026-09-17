@@ -1,0 +1,61 @@
+schema_version: 1
+status: phase_3c_label_efficiency
+
+phase:
+  id: V2-P3C
+  title: Label-Efficiency and Few-Shot Representation Study
+
+data:
+  root: v2/data/processed/v1_frozen_split
+  split_report_path: /tmp/fruit-v1-genuine-2018/work/partition_report.json
+  split_report_sha256: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  train_samples: 1539
+  validation_samples: 270
+  test_samples: 2698
+
+protocol:
+  examples_per_class: [1, 5, 10, 25, 50, 100]
+  subset_seeds: [42, 43, 44, 45, 46]
+  optimization_seed: 42
+  architecture: nn.Linear(embedding_dim, 6)
+  optimizer: Adam
+  learning_rate: 0.001
+  maximum_epochs: 50
+  batch_size: 64
+  loss: CrossEntropyLoss
+  embedding_normalization: L2
+  validation_primary_metric: accuracy
+  validation_tie_break: lower_loss
+  augmentation: none
+
+models:
+  dinov2:
+    experiment_number: 10
+    experiment_id: V2-P3C-DINOV2-010
+    display_name: DINOv2 ViT-B/14
+    phase_3a_config: v2/configs/dinov2_linear_probe.yaml
+    phase_3a_experiment: 5
+    full_data_metrics: v2/results/experiment_005/test_metrics.json
+    strict_zero_shot_metrics: null
+  clip:
+    experiment_number: 11
+    experiment_id: V2-P3C-CLIP-011
+    display_name: Original CLIP ViT-B/16
+    phase_3a_config: v2/configs/clip_linear_probe.yaml
+    phase_3a_experiment: 6
+    full_data_metrics: v2/results/experiment_006/test_metrics.json
+    strict_zero_shot_metrics: v2/results/experiment_008/strict_zero_shot_test_metrics.json
+  siglip2:
+    experiment_number: 12
+    experiment_id: V2-P3C-SIGLIP2-012
+    display_name: SigLIP2 Base Patch16/224
+    phase_3a_config: v2/configs/siglip2_linear_probe.yaml
+    phase_3a_experiment: 7
+    full_data_metrics: v2/results/experiment_007/test_metrics.json
+    strict_zero_shot_metrics: v2/results/experiment_009/strict_zero_shot_test_metrics.json
+
+outputs:
+  manifest_directory: v2/experiments/label_efficiency_manifests
+  checkpoint_directory: v2/checkpoints/label_efficiency
+  combined_summary: v2/results/label_efficiency_summary.json
+  figure_directory: v2/results

@@ -1,0 +1,89 @@
+{
+  "cache_identity": {
+    "dataset_split_hash": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+    "embedding_dim": 768,
+    "encoder_checkpoint": "facebook/dinov2-base",
+    "encoder_revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "experiment_id": "V2-P3A-DINOV2-005",
+    "l2_normalized": true,
+    "preprocessing_identity": "facebook-dinov2-base-bitprocessor-rev-f9e44c8"
+  },
+  "completed_at": "2026-09-01T17:42:53.079655+00:00",
+  "device": "cpu",
+  "encoder": {
+    "adapter": "DINOv2Encoder",
+    "all_parameters_frozen": true,
+    "canonical_architecture": "dinov2_vitb14",
+    "checkpoint_file": {
+      "path": "/home/AI_POC/tactics/AI-Based-Detection-of-Rotten-Fruits/v2/cache/huggingface/models--facebook--dinov2-base/blobs/d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "sha256": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "size_bytes": 346345912
+    },
+    "checkpoint_id": "facebook/dinov2-base",
+    "embedding_dim": 768,
+    "encoder_parameters": 86580480,
+    "library": "transformers",
+    "library_version": "5.16.1",
+    "preprocessing": {
+      "crop_size": {
+        "height": 224,
+        "width": 224
+      },
+      "do_center_crop": true,
+      "do_convert_rgb": true,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_processor_type": "BitImageProcessor",
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "resample": 3,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "shortest_edge": 256
+      }
+    },
+    "revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+  },
+  "experiment_id": "V2-P3A-DINOV2-005",
+  "seed": 42,
+  "splits": {
+    "train": {
+      "cache_path": "v2/cache/dinov2/train.pt",
+      "cache_sha256": "fe34d078df0f8b372fedd41f1ed43f2c9438a9f22fbaa9ec696d6a628dd88fe1",
+      "deterministic_order": true,
+      "embedding_dim": 768,
+      "encoder_forward_ms_per_image": 98.87907985055334,
+      "encoder_forward_seconds": 152.1749038900016,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1419.91015625,
+      "samples": 1539,
+      "split": "train",
+      "wall_ms_per_image": 105.44871155556024,
+      "wall_seconds": 162.2855670840072
+    },
+    "validation": {
+      "cache_path": "v2/cache/dinov2/validation.pt",
+      "cache_sha256": "c75075cf7a3fc1cc053631130a8de07139fba2738b7d5c90d3ed6eddf4831946",
+      "deterministic_order": true,
+      "embedding_dim": 768,
+      "encoder_forward_ms_per_image": 97.07502228902067,
+      "encoder_forward_seconds": 26.21025601803558,
+      "l2_normalized": true,
+      "peak_process_rss_mb": 1473.703125,
+      "samples": 270,
+      "split": "validation",
+      "wall_ms_per_image": 104.01861588147261,
+      "wall_seconds": 28.085026287997607
+    }
+  },
+  "test_accessed": false
+}

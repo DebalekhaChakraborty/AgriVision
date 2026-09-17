@@ -1,0 +1,1 @@
+71651aee8816b01baaa1a752f1bcc6327ae26e98578ed95c2150276ad445cb3f  fruitvision_manifest.json

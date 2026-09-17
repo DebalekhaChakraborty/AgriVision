@@ -1,0 +1,30 @@
+{
+  "balanced_manifest_sha256": "e9998cd1ab4eadfc17edc5d59835cd35d4ff527171bb2d6c225b4f81147e8941",
+  "encoders": {
+    "clip": {
+      "embedding_dimension": 512,
+      "pca_explained_variance_ratio": [
+        0.1878155916929245,
+        0.13796277344226837
+      ],
+      "samples": 3600
+    },
+    "dinov2": {
+      "embedding_dimension": 768,
+      "pca_explained_variance_ratio": [
+        0.24058814346790314,
+        0.16912518441677094
+      ],
+      "samples": 3600
+    },
+    "siglip2": {
+      "embedding_dimension": 768,
+      "pca_explained_variance_ratio": [
+        0.18218033015727997,
+        0.15124601125717163
+      ],
+      "samples": 3600
+    }
+  },
+  "schema_version": 1
+}

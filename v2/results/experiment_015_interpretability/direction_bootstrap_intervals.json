@@ -1,0 +1,194 @@
+{
+  "encoders": {
+    "clip": {
+      "apple": {
+        "source_vs_fruitvision": {
+          "bootstrap_mean": 0.4802693724632263,
+          "estimate": 0.48235663771629333,
+          "lower": 0.45441296696662903,
+          "upper": 0.5048733949661255
+        },
+        "source_vs_sultana": {
+          "bootstrap_mean": 0.47630757093429565,
+          "estimate": 0.4806862771511078,
+          "lower": 0.43439581990242004,
+          "upper": 0.5175323486328125
+        },
+        "sultana_vs_fruitvision": {
+          "bootstrap_mean": 0.7024813294410706,
+          "estimate": 0.7076894044876099,
+          "lower": 0.6675391793251038,
+          "upper": 0.7339758276939392
+        }
+      },
+      "banana": {
+        "source_vs_fruitvision": {
+          "bootstrap_mean": 0.6691620945930481,
+          "estimate": 0.6715325713157654,
+          "lower": 0.6474729776382446,
+          "upper": 0.691615641117096
+        },
+        "source_vs_sultana": {
+          "bootstrap_mean": 0.6424335837364197,
+          "estimate": 0.6472548246383667,
+          "lower": 0.6156290173530579,
+          "upper": 0.667885959148407
+        },
+        "sultana_vs_fruitvision": {
+          "bootstrap_mean": 0.513762891292572,
+          "estimate": 0.51674485206604,
+          "lower": 0.46960631012916565,
+          "upper": 0.5560434460639954
+        }
+      },
+      "orange": {
+        "source_vs_fruitvision": {
+          "bootstrap_mean": 0.5079379081726074,
+          "estimate": 0.5097533464431763,
+          "lower": 0.4832736551761627,
+          "upper": 0.5326119065284729
+        },
+        "source_vs_sultana": {
+          "bootstrap_mean": 0.3683745861053467,
+          "estimate": 0.37171125411987305,
+          "lower": 0.32699453830718994,
+          "upper": 0.4085812270641327
+        },
+        "sultana_vs_fruitvision": {
+          "bootstrap_mean": 0.5904797911643982,
+          "estimate": 0.5945743322372437,
+          "lower": 0.55637127161026,
+          "upper": 0.6229140758514404
+        }
+      }
+    },
+    "dinov2": {
+      "apple": {
+        "source_vs_fruitvision": {
+          "bootstrap_mean": 0.641480565071106,
+          "estimate": 0.6443305015563965,
+          "lower": 0.6189977526664734,
+          "upper": 0.6625165343284607
+        },
+        "source_vs_sultana": {
+          "bootstrap_mean": 0.6201394200325012,
+          "estimate": 0.6240504384040833,
+          "lower": 0.5928993225097656,
+          "upper": 0.6467782855033875
+        },
+        "sultana_vs_fruitvision": {
+          "bootstrap_mean": 0.7766915559768677,
+          "estimate": 0.7816298007965088,
+          "lower": 0.7555286884307861,
+          "upper": 0.7956031560897827
+        }
+      },
+      "banana": {
+        "source_vs_fruitvision": {
+          "bootstrap_mean": 0.6966400146484375,
+          "estimate": 0.7002160549163818,
+          "lower": 0.6772440075874329,
+          "upper": 0.7135173082351685
+        },
+        "source_vs_sultana": {
+          "bootstrap_mean": 0.6056391596794128,
+          "estimate": 0.6121437549591064,
+          "lower": 0.5711372494697571,
+          "upper": 0.6378308534622192
+        },
+        "sultana_vs_fruitvision": {
+          "bootstrap_mean": 0.6472681760787964,
+          "estimate": 0.6524206399917603,
+          "lower": 0.6160319447517395,
+          "upper": 0.6740249991416931
+        }
+      },
+      "orange": {
+        "source_vs_fruitvision": {
+          "bootstrap_mean": 0.5377938747406006,
+          "estimate": 0.5396553874015808,
+          "lower": 0.5148481726646423,
+          "upper": 0.558362603187561
+        },
+        "source_vs_sultana": {
+          "bootstrap_mean": 0.46867385506629944,
+          "estimate": 0.4721839427947998,
+          "lower": 0.43770018219947815,
+          "upper": 0.49799856543540955
+        },
+        "sultana_vs_fruitvision": {
+          "bootstrap_mean": 0.5873194336891174,
+          "estimate": 0.5909485816955566,
+          "lower": 0.560027539730072,
+          "upper": 0.6149292588233948
+        }
+      }
+    },
+    "siglip2": {
+      "apple": {
+        "source_vs_fruitvision": {
+          "bootstrap_mean": 0.5914384722709656,
+          "estimate": 0.593518853187561,
+          "lower": 0.5708332061767578,
+          "upper": 0.6113824248313904
+        },
+        "source_vs_sultana": {
+          "bootstrap_mean": 0.5689824223518372,
+          "estimate": 0.5718204975128174,
+          "lower": 0.5376503467559814,
+          "upper": 0.5985373854637146
+        },
+        "sultana_vs_fruitvision": {
+          "bootstrap_mean": 0.7660233378410339,
+          "estimate": 0.7697068452835083,
+          "lower": 0.7418879866600037,
+          "upper": 0.790057897567749
+        }
+      },
+      "banana": {
+        "source_vs_fruitvision": {
+          "bootstrap_mean": 0.6985377669334412,
+          "estimate": 0.7003616690635681,
+          "lower": 0.682540774345398,
+          "upper": 0.7146516442298889
+        },
+        "source_vs_sultana": {
+          "bootstrap_mean": 0.6909458637237549,
+          "estimate": 0.6953679323196411,
+          "lower": 0.6621629595756531,
+          "upper": 0.7167734503746033
+        },
+        "sultana_vs_fruitvision": {
+          "bootstrap_mean": 0.7370392680168152,
+          "estimate": 0.7408421635627747,
+          "lower": 0.7127314209938049,
+          "upper": 0.7598186731338501
+        }
+      },
+      "orange": {
+        "source_vs_fruitvision": {
+          "bootstrap_mean": 0.6649388074874878,
+          "estimate": 0.6667449474334717,
+          "lower": 0.6473589539527893,
+          "upper": 0.6822568774223328
+        },
+        "source_vs_sultana": {
+          "bootstrap_mean": 0.5652123093605042,
+          "estimate": 0.5679841041564941,
+          "lower": 0.5405248403549194,
+          "upper": 0.5885400772094727
+        },
+        "sultana_vs_fruitvision": {
+          "bootstrap_mean": 0.7073003053665161,
+          "estimate": 0.7107218503952026,
+          "lower": 0.6816002726554871,
+          "upper": 0.7315423488616943
+        }
+      }
+    }
+  },
+  "method": "Independent class-stratified bootstrap within each domain/fruit condition; percentile 95% interval.",
+  "resamples": 2000,
+  "schema_version": 1,
+  "seed": 42
+}

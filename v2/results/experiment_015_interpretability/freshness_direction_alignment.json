@@ -1,0 +1,192 @@
+{
+  "definition": "empirical fresh-to-rotten centroid direction",
+  "encoders": {
+    "clip": {
+      "cross_domain_by_fruit": {
+        "apple": {
+          "source_vs_fruitvision": 0.48235663771629333,
+          "source_vs_sultana": 0.4806862771511078,
+          "sultana_vs_fruitvision": 0.7076894044876099
+        },
+        "banana": {
+          "source_vs_fruitvision": 0.6715325713157654,
+          "source_vs_sultana": 0.6472548246383667,
+          "sultana_vs_fruitvision": 0.51674485206604
+        },
+        "orange": {
+          "source_vs_fruitvision": 0.5097533464431763,
+          "source_vs_sultana": 0.37171125411987305,
+          "sultana_vs_fruitvision": 0.5945743322372437
+        }
+      },
+      "cross_domain_mean": 0.5535892777972751,
+      "cross_domain_range": [
+        0.37171125411987305,
+        0.7076894044876099
+      ],
+      "cross_fruit_within_domain": {
+        "fruitvision": {
+          "mean": 0.5916671554247538,
+          "pairs": {
+            "apple_vs_banana": 0.5990627408027649,
+            "apple_vs_orange": 0.5876240730285645,
+            "banana_vs_orange": 0.5883146524429321
+          },
+          "range": [
+            0.5876240730285645,
+            0.5990627408027649
+          ]
+        },
+        "source": {
+          "mean": 0.5359316766262054,
+          "pairs": {
+            "apple_vs_banana": 0.6413373947143555,
+            "apple_vs_orange": 0.5078374147415161,
+            "banana_vs_orange": 0.45862022042274475
+          },
+          "range": [
+            0.45862022042274475,
+            0.6413373947143555
+          ]
+        },
+        "sultana": {
+          "mean": 0.3944267729918162,
+          "pairs": {
+            "apple_vs_banana": 0.2122378647327423,
+            "apple_vs_orange": 0.4455428719520569,
+            "banana_vs_orange": 0.5254995822906494
+          },
+          "range": [
+            0.2122378647327423,
+            0.5254995822906494
+          ]
+        }
+      }
+    },
+    "dinov2": {
+      "cross_domain_by_fruit": {
+        "apple": {
+          "source_vs_fruitvision": 0.6443305015563965,
+          "source_vs_sultana": 0.6240504384040833,
+          "sultana_vs_fruitvision": 0.7816298007965088
+        },
+        "banana": {
+          "source_vs_fruitvision": 0.7002160549163818,
+          "source_vs_sultana": 0.6121437549591064,
+          "sultana_vs_fruitvision": 0.6524206399917603
+        },
+        "orange": {
+          "source_vs_fruitvision": 0.5396553874015808,
+          "source_vs_sultana": 0.4721839427947998,
+          "sultana_vs_fruitvision": 0.5909485816955566
+        }
+      },
+      "cross_domain_mean": 0.6241754558351305,
+      "cross_domain_range": [
+        0.4721839427947998,
+        0.7816298007965088
+      ],
+      "cross_fruit_within_domain": {
+        "fruitvision": {
+          "mean": 0.3093829055627187,
+          "pairs": {
+            "apple_vs_banana": 0.21748483180999756,
+            "apple_vs_orange": 0.4177950620651245,
+            "banana_vs_orange": 0.29286882281303406
+          },
+          "range": [
+            0.21748483180999756,
+            0.4177950620651245
+          ]
+        },
+        "source": {
+          "mean": 0.30621500809987384,
+          "pairs": {
+            "apple_vs_banana": 0.29658883810043335,
+            "apple_vs_orange": 0.3585361838340759,
+            "banana_vs_orange": 0.2635200023651123
+          },
+          "range": [
+            0.2635200023651123,
+            0.3585361838340759
+          ]
+        },
+        "sultana": {
+          "mean": 0.24928073088328043,
+          "pairs": {
+            "apple_vs_banana": 0.16159147024154663,
+            "apple_vs_orange": 0.40405094623565674,
+            "banana_vs_orange": 0.18219977617263794
+          },
+          "range": [
+            0.16159147024154663,
+            0.40405094623565674
+          ]
+        }
+      }
+    },
+    "siglip2": {
+      "cross_domain_by_fruit": {
+        "apple": {
+          "source_vs_fruitvision": 0.593518853187561,
+          "source_vs_sultana": 0.5718204975128174,
+          "sultana_vs_fruitvision": 0.7697068452835083
+        },
+        "banana": {
+          "source_vs_fruitvision": 0.7003616690635681,
+          "source_vs_sultana": 0.6953679323196411,
+          "sultana_vs_fruitvision": 0.7408421635627747
+        },
+        "orange": {
+          "source_vs_fruitvision": 0.6667449474334717,
+          "source_vs_sultana": 0.5679841041564941,
+          "sultana_vs_fruitvision": 0.7107218503952026
+        }
+      },
+      "cross_domain_mean": 0.6685632069905599,
+      "cross_domain_range": [
+        0.5679841041564941,
+        0.7697068452835083
+      ],
+      "cross_fruit_within_domain": {
+        "fruitvision": {
+          "mean": 0.6197280883789062,
+          "pairs": {
+            "apple_vs_banana": 0.6138742566108704,
+            "apple_vs_orange": 0.6145984530448914,
+            "banana_vs_orange": 0.630711555480957
+          },
+          "range": [
+            0.6138742566108704,
+            0.630711555480957
+          ]
+        },
+        "source": {
+          "mean": 0.6422814925511678,
+          "pairs": {
+            "apple_vs_banana": 0.6721482276916504,
+            "apple_vs_orange": 0.7343761324882507,
+            "banana_vs_orange": 0.5203201174736023
+          },
+          "range": [
+            0.5203201174736023,
+            0.7343761324882507
+          ]
+        },
+        "sultana": {
+          "mean": 0.5223274926344553,
+          "pairs": {
+            "apple_vs_banana": 0.47246262431144714,
+            "apple_vs_orange": 0.5696197748184204,
+            "banana_vs_orange": 0.5249000787734985
+          },
+          "range": [
+            0.47246262431144714,
+            0.5696197748184204
+          ]
+        }
+      }
+    }
+  },
+  "schema_version": 1
+}

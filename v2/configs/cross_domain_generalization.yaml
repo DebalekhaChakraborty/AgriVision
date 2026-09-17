@@ -1,0 +1,79 @@
+schema_version: 1
+status: phase_3d_zero_adaptation_cross_domain
+
+experiment:
+  id: V2-P3D-CROSS-DOMAIN-013
+  number: 13
+  title: Zero-Adaptation Cross-Domain Generalization
+
+external_dataset:
+  name: Fresh and Rotten Fruits Dataset for Machine-Based Evaluation of Fruit Quality
+  authors:
+    - Nusrat Sultana
+    - Musfika Jahan
+    - Mohammad Shorif Uddin
+  doi: 10.17632/bdd69gyhv8.1
+  version: 1
+  publication_date: "2022-04-08"
+  licence: CC BY 4.0
+  institution: Jahangirnagar University
+  local_original_root: v2/data/external/sultana_2022/Original Image
+  official_original_archive:
+    filename: Original Image.zip
+    file_id: de93ba06-6a58-45e3-913d-837b2ae52acb
+    size_bytes: 2794170228
+    sha256: f89d67d4c4b24810bcd8406db877db6b1ac9834cea0b0cb56d65acebe59e66ff
+    downloaded_and_verified_at: "2026-09-02"
+    retained_locally: false
+  official_augmented_archive:
+    filename: Augmented Image.zip
+    file_id: ccd1f142-03b2-473a-8c78-78920e63b8bd
+    size_bytes: 803272180
+    sha256: 5c748b5904932cd8cf631a0b776253d6217d577067d9477c267014d03ac16e10
+    downloaded: false
+  class_mapping:
+    FreshApple: fresh_apple
+    RottenApple: rotten_apple
+    FreshBanana: fresh_banana
+    RottenBanana: rotten_banana
+    FreshOrange: fresh_orange
+    RottenOrange: rotten_orange
+
+source_dataset:
+  root: v2/data/processed/v1_frozen_split
+  split_report_sha256: d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea
+  total_images: 4507
+
+contamination_screening:
+  exact_method: SHA-256 over original file bytes
+  pixel_method: SHA-256 over width, height, and decoded canonical RGB bytes
+  perceptual_method: 64-bit pHash using 32x32 grayscale, orthonormal 2D DCT, and median-thresholded low-frequency 8x8 coefficients excluding DC
+  phash_hamming_candidate_threshold: 6
+  threshold_status: frozen_before_candidate_inspection
+
+uncertainty:
+  bootstrap_seed: 42
+  class_stratified_resamples: 5000
+  interval_percent: 95
+  paired_comparisons:
+    - [siglip2_linear_probe, efficientnet_b0]
+    - [clip_linear_probe, efficientnet_b0]
+    - [siglip2_strict_zero_shot, siglip2_linear_probe]
+    - [clip_strict_zero_shot, clip_linear_probe]
+
+evaluation:
+  batch_size: 32
+  seed: 42
+  device: auto
+  external_training: false
+  external_validation: false
+  calibration: false
+  prompt_selection: false
+
+outputs:
+  directory: v2/results/experiment_013_cross_domain
+  dataset_audit: v2/results/experiment_013_cross_domain/external_dataset_audit.json
+  duplicate_audit: v2/results/experiment_013_cross_domain/cross_dataset_duplicate_audit.json
+  candidate_review: v2/results/experiment_013_cross_domain/perceptual_candidate_review.json
+  manifest: v2/results/experiment_013_cross_domain/external_evaluation_manifest.json
+  manifest_hash: v2/results/experiment_013_cross_domain/manifest_sha256.txt

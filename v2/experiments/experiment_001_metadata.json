@@ -1,0 +1,169 @@
+{
+  "artifacts": {
+    "class_mapping": "v2/checkpoints/class_indices.json",
+    "history": "v2/results/baseline_history.json",
+    "training_curve": "v2/results/baseline_training_curve.png",
+    "validation_curve": "v2/results/baseline_validation_curve.png"
+  },
+  "checkpoint": {
+    "path": "v2/checkpoints/best_model.pt",
+    "sha256": "37e582bb8ec034b04d26ab6f2a6168fc251d9d154ae4bf711b1a8517be33e96d"
+  },
+  "completed_at": "2026-09-01T11:05:39.897147+00:00",
+  "configuration": {
+    "data": {
+      "dataset_author": "Sriram Reddy Kalluri",
+      "dataset_name": "Fruits fresh and rotten for classification",
+      "dataset_version": "Kaggle version 1, 2018-08-24",
+      "root": "v2/data/processed/v1_frozen_split",
+      "split_policy": "Frozen leakage-safe V1 split; do not resplit.",
+      "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+      "test_split": "test",
+      "train_split": "train",
+      "validation_split": "validation"
+    },
+    "experiment": {
+      "id": "V2-P1-CNN-V1SPLIT-001",
+      "objective": "Reproduce the V1 from-scratch CNN baseline with modern PyTorch tooling.",
+      "phase": 1
+    },
+    "model": {
+      "conv_channels": [
+        32,
+        64,
+        128
+      ],
+      "dense_units": 128,
+      "dropout": 0.0,
+      "initialization": "random",
+      "input_channels": 3,
+      "input_size": 150,
+      "kernel_size": 3,
+      "name": "cnn_baseline",
+      "num_classes": 6,
+      "pool_size": 2
+    },
+    "outputs": {
+      "checkpoint": "v2/checkpoints/best_model.pt",
+      "class_mapping": "v2/checkpoints/class_indices.json",
+      "confusion_matrix": "v2/results/baseline_confusion_matrix.png",
+      "history": "v2/results/baseline_history.json",
+      "metadata": "v2/experiments/experiment_001_metadata.json",
+      "test_metrics": "v2/results/baseline_test_metrics.json",
+      "training_curve": "v2/results/baseline_training_curve.png",
+      "validation_curve": "v2/results/baseline_validation_curve.png"
+    },
+    "schema_version": 1,
+    "selection": {
+      "primary_metric": "accuracy",
+      "split": "validation",
+      "tie_break": "lower_loss"
+    },
+    "status": "phase_1_baseline",
+    "training": {
+      "batch_size": 32,
+      "device": "auto",
+      "epochs": 20,
+      "learning_rate": 0.001,
+      "loss": "CrossEntropyLoss",
+      "num_workers": 0,
+      "optimizer": "Adam",
+      "seed": 42
+    }
+  },
+  "configuration_path": "v2/configs/baseline_cnn.yaml",
+  "dataset": {
+    "author": "Sriram Reddy Kalluri",
+    "class_mapping": {
+      "fresh_apple": 0,
+      "fresh_banana": 1,
+      "fresh_orange": 2,
+      "rotten_apple": 3,
+      "rotten_banana": 4,
+      "rotten_orange": 5
+    },
+    "location": "/tmp/fruit-v1-genuine-2018/work/dataset",
+    "name": "Fruits fresh and rotten for classification",
+    "split_policy": "Frozen leakage-safe V1 split; do not resplit.",
+    "split_report_sha256": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+    "train_counts": {
+      "fresh_apple": 261,
+      "fresh_banana": 270,
+      "fresh_orange": 234,
+      "rotten_apple": 207,
+      "rotten_banana": 360,
+      "rotten_orange": 207
+    },
+    "train_total": 1539,
+    "validation_counts": {
+      "fresh_apple": 45,
+      "fresh_banana": 45,
+      "fresh_orange": 45,
+      "rotten_apple": 36,
+      "rotten_banana": 63,
+      "rotten_orange": 36
+    },
+    "validation_total": 270,
+    "version": "Kaggle version 1, 2018-08-24"
+  },
+  "environment": {
+    "cpu_count": 20,
+    "cuda_available": false,
+    "cuda_runtime": null,
+    "device": "cpu",
+    "device_name": "CPU",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2",
+    "pytorch": "2.13.0+cpu",
+    "torchvision": "0.28.0+cpu"
+  },
+  "experiment_id": "V2-P1-CNN-V1SPLIT-001",
+  "model": {
+    "architecture": "CNNBaseline",
+    "configuration": {
+      "conv_channels": [
+        32,
+        64,
+        128
+      ],
+      "dense_units": 128,
+      "dropout": 0.0,
+      "initialization": "random",
+      "input_channels": 3,
+      "input_size": 150,
+      "kernel_size": 3,
+      "name": "cnn_baseline",
+      "num_classes": 6,
+      "pool_size": 2
+    },
+    "trainable_parameters": 4829126
+  },
+  "objective": "Reproduce the V1 from-scratch CNN baseline with modern PyTorch tooling.",
+  "repository": {
+    "branch": "master",
+    "commit": "a4285bfe275bac34a498e5d7f9fb48fbbe3ecf67",
+    "working_tree_porcelain": "D docs/V2_RESEARCH_BLUEPRINT.md\n M requirements-v2.txt\n M v2/configs/baseline_cnn.yaml\n?? docs/handbook/\n?? v2/__init__.py\n?? v2/checkpoints/\n?? v2/experiments/experiment_001_baseline_cnn.md\n?? v2/notebooks/01_baseline_analysis.ipynb\n?? v2/results/baseline_history.json\n?? v2/results/baseline_training_curve.png\n?? v2/results/baseline_validation_curve.png\n?? v2/src/__init__.py\n?? v2/src/datasets/__init__.py\n?? v2/src/datasets/fruit_dataset.py\n?? v2/src/evaluation/__init__.py\n?? v2/src/evaluation/evaluate.py\n?? v2/src/models/__init__.py\n?? v2/src/models/cnn_baseline.py\n?? v2/src/training/__init__.py\n?? v2/src/training/train.py\n?? v2/src/training/utils.py\n?? v2/src/visualization/__init__.py\n?? v2/src/visualization/plots.py"
+  },
+  "started_at": "2026-09-01T10:57:15.721407+00:00",
+  "status": "complete",
+  "test_accessed": true,
+  "test_evaluation": {
+    "accuracy": 0.7409191994069682,
+    "confusion_matrix_path": "v2/results/baseline_confusion_matrix.png",
+    "evaluated_at": "2026-09-01T11:06:30.652462+00:00",
+    "loss": 0.7287531182269329,
+    "metrics_path": "v2/results/baseline_test_metrics.json",
+    "samples": 2698
+  },
+  "training": {
+    "batch_size": 32,
+    "best_epoch": 2,
+    "best_validation_accuracy": 0.8333333333333334,
+    "best_validation_loss": 0.6173486056151214,
+    "epochs_completed": 20,
+    "learning_rate": 0.001,
+    "loss": "CrossEntropyLoss",
+    "optimizer": "Adam",
+    "seed": 42
+  }
+}

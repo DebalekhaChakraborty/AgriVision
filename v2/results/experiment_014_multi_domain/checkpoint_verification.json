@@ -1,0 +1,305 @@
+{
+  "experiment_013_verification_sha256": "a2354d5a3725ed79291b3b2de33454c9a43b503d819aec7e4d3fdd75a2b2458a",
+  "experiment_id": "V2-P3E-MULTI-DOMAIN-014",
+  "failed_conditions": [],
+  "fruitvision_manifest_sha256": "71651aee8816b01baaa1a752f1bcc6327ae26e98578ed95c2150276ad445cb3f",
+  "same_nine_systems": [
+    "custom_cnn",
+    "resnet50",
+    "efficientnet_b0",
+    "mobilenetv3_large",
+    "dinov2_linear_probe",
+    "clip_linear_probe",
+    "siglip2_linear_probe",
+    "clip_strict_zero_shot",
+    "siglip2_strict_zero_shot"
+  ],
+  "schema_version": 1,
+  "status": "PASS",
+  "systems": {
+    "clip_linear_probe": {
+      "class_mapping": {
+        "fresh_apple": 0,
+        "fresh_banana": 1,
+        "fresh_orange": 2,
+        "rotten_apple": 3,
+        "rotten_banana": 4,
+        "rotten_orange": 5
+      },
+      "condition": "014-F",
+      "configuration": "v2/configs/clip_linear_probe.yaml",
+      "configuration_sha256_current": "df15a60c09003f58d6c753bb63b60df411be0a7134997ade1fdccaa22dac6f60",
+      "configuration_sha256_experiment_013": "df15a60c09003f58d6c753bb63b60df411be0a7134997ade1fdccaa22dac6f60",
+      "encoder_revision": "977e3dd0ec55ab8da155f2fbeb6b5f54948b6e3d",
+      "encoder_sha256_current": "4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f",
+      "encoder_sha256_experiment_013": "4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f",
+      "name": "CLIP + linear probe",
+      "preprocessing_identity": "openai-clip-vit-b16-openclip-3.3.0",
+      "probe_checkpoint": "v2/checkpoints/experiment_006_linear_probe.pt",
+      "probe_sha256_current": "f213e49fd0d928524dbc8a25d131fcb8b9d01c03826202a60885bd1409bc8b8b",
+      "probe_sha256_experiment_013": "f213e49fd0d928524dbc8a25d131fcb8b9d01c03826202a60885bd1409bc8b8b",
+      "status": "PASS"
+    },
+    "clip_strict_zero_shot": {
+      "class_mapping": {
+        "fresh_apple": 0,
+        "fresh_banana": 1,
+        "fresh_orange": 2,
+        "rotten_apple": 3,
+        "rotten_banana": 4,
+        "rotten_orange": 5
+      },
+      "condition": "014-H",
+      "configuration": "v2/configs/clip_zero_shot.yaml",
+      "configuration_sha256_current": "5bdfe476e949de3b4ce26a6cfc0a3f5e86235affee881269db713f1c07f4527d",
+      "configuration_sha256_experiment_013": "5bdfe476e949de3b4ce26a6cfc0a3f5e86235affee881269db713f1c07f4527d",
+      "encoder_checkpoint": "/home/AI_POC/tactics/AI-Based-Detection-of-Rotten-Fruits/v2/cache/huggingface/models--timm--vit_base_patch16_clip_224.openai/blobs/4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f",
+      "encoder_revision": "977e3dd0ec55ab8da155f2fbeb6b5f54948b6e3d",
+      "encoder_sha256_current": "4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f",
+      "encoder_sha256_experiment_013": "4b8699299b1e8997753c64b052ba32031449d5d853f55a039148560ee02b820f",
+      "name": "CLIP strict P1 zero-shot",
+      "preprocessing_identity": "openai-clip-vit-b16-openclip-3.3.0",
+      "prompt_family": "P1",
+      "prompt_registry": "v2/configs/zero_shot_prompts.yaml",
+      "prompt_registry_sha256_current": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+      "prompt_registry_sha256_experiment_013": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+      "status": "PASS"
+    },
+    "custom_cnn": {
+      "checkpoint": "v2/checkpoints/best_model.pt",
+      "checkpoint_sha256_current": "37e582bb8ec034b04d26ab6f2a6168fc251d9d154ae4bf711b1a8517be33e96d",
+      "checkpoint_sha256_experiment_013": "37e582bb8ec034b04d26ab6f2a6168fc251d9d154ae4bf711b1a8517be33e96d",
+      "class_mapping": {
+        "fresh_apple": 0,
+        "fresh_banana": 1,
+        "fresh_orange": 2,
+        "rotten_apple": 3,
+        "rotten_banana": 4,
+        "rotten_orange": 5
+      },
+      "condition": "014-A",
+      "configuration": "v2/configs/baseline_cnn.yaml",
+      "configuration_sha256_current": "4095df1710c61994856a495e2cbf388964df3473058268ccd6d1efe220157cfc",
+      "configuration_sha256_experiment_013": "4095df1710c61994856a495e2cbf388964df3473058268ccd6d1efe220157cfc",
+      "name": "Custom CNN",
+      "preprocessing_identity": {
+        "conv_channels": [
+          32,
+          64,
+          128
+        ],
+        "dense_units": 128,
+        "dropout": 0.0,
+        "initialization": "random",
+        "input_channels": 3,
+        "input_size": 150,
+        "kernel_size": 3,
+        "name": "cnn_baseline",
+        "num_classes": 6,
+        "pool_size": 2
+      },
+      "status": "PASS"
+    },
+    "dinov2_linear_probe": {
+      "class_mapping": {
+        "fresh_apple": 0,
+        "fresh_banana": 1,
+        "fresh_orange": 2,
+        "rotten_apple": 3,
+        "rotten_banana": 4,
+        "rotten_orange": 5
+      },
+      "condition": "014-E",
+      "configuration": "v2/configs/dinov2_linear_probe.yaml",
+      "configuration_sha256_current": "9b4f6930426f8a597d435cc8634c2f4c3d0620e2fd5adc44c44298b1143c7ee5",
+      "configuration_sha256_experiment_013": "9b4f6930426f8a597d435cc8634c2f4c3d0620e2fd5adc44c44298b1143c7ee5",
+      "encoder_revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+      "encoder_sha256_current": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "encoder_sha256_experiment_013": "d73036b56966966d07975d696bde331762f37297e2f095de8cea0040c3aa0841",
+      "name": "DINOv2 + linear probe",
+      "preprocessing_identity": "facebook-dinov2-base-bitprocessor-rev-f9e44c8",
+      "probe_checkpoint": "v2/checkpoints/experiment_005_linear_probe.pt",
+      "probe_sha256_current": "55f19bcc5e59f78a0bb55271f7e02af3ce333ae7d9b60138f671b6768416c90a",
+      "probe_sha256_experiment_013": "55f19bcc5e59f78a0bb55271f7e02af3ce333ae7d9b60138f671b6768416c90a",
+      "status": "PASS"
+    },
+    "efficientnet_b0": {
+      "checkpoint": "v2/checkpoints/best_efficientnet.pt",
+      "checkpoint_sha256_current": "b312eb80df31f4bce5882311d3d4fea3be20e05e1e2062dadcdb3f70e50abcd2",
+      "checkpoint_sha256_experiment_013": "b312eb80df31f4bce5882311d3d4fea3be20e05e1e2062dadcdb3f70e50abcd2",
+      "class_mapping": {
+        "fresh_apple": 0,
+        "fresh_banana": 1,
+        "fresh_orange": 2,
+        "rotten_apple": 3,
+        "rotten_banana": 4,
+        "rotten_orange": 5
+      },
+      "condition": "014-C",
+      "configuration": "v2/configs/efficientnet.yaml",
+      "configuration_sha256_current": "1895d7e8f7e2cfa71bad99b7c005dae163094e02139d6c354ad3ae2b3f6cb349",
+      "configuration_sha256_experiment_013": "1895d7e8f7e2cfa71bad99b7c005dae163094e02139d6c354ad3ae2b3f6cb349",
+      "name": "EfficientNet-B0",
+      "preprocessing_identity": {
+        "evaluation_resize_size": 256,
+        "image_size": 224,
+        "normalization_mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "normalization_std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "train_augmentation": {
+          "color_jitter": {
+            "brightness": 0.1,
+            "contrast": 0.1,
+            "hue": 0.02,
+            "saturation": 0.1
+          },
+          "horizontal_flip_probability": 0.5,
+          "rotation_degrees": 10
+        }
+      },
+      "status": "PASS"
+    },
+    "mobilenetv3_large": {
+      "checkpoint": "v2/checkpoints/best_mobilenetv3.pt",
+      "checkpoint_sha256_current": "ee4c1b3c5561041d635ae6726d11c5ebe40bc3470e4eac6603f48c8bf1ab57ab",
+      "checkpoint_sha256_experiment_013": "ee4c1b3c5561041d635ae6726d11c5ebe40bc3470e4eac6603f48c8bf1ab57ab",
+      "class_mapping": {
+        "fresh_apple": 0,
+        "fresh_banana": 1,
+        "fresh_orange": 2,
+        "rotten_apple": 3,
+        "rotten_banana": 4,
+        "rotten_orange": 5
+      },
+      "condition": "014-D",
+      "configuration": "v2/configs/mobilenetv3.yaml",
+      "configuration_sha256_current": "cb19572345d13824df2097fb8aeca597f0341c6e732855b80fbcaf76f87e68eb",
+      "configuration_sha256_experiment_013": "cb19572345d13824df2097fb8aeca597f0341c6e732855b80fbcaf76f87e68eb",
+      "name": "MobileNetV3-Large",
+      "preprocessing_identity": {
+        "evaluation_resize_size": 256,
+        "image_size": 224,
+        "normalization_mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "normalization_std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "train_augmentation": {
+          "color_jitter": {
+            "brightness": 0.1,
+            "contrast": 0.1,
+            "hue": 0.02,
+            "saturation": 0.1
+          },
+          "horizontal_flip_probability": 0.5,
+          "rotation_degrees": 10
+        }
+      },
+      "status": "PASS"
+    },
+    "resnet50": {
+      "checkpoint": "v2/checkpoints/best_resnet50.pt",
+      "checkpoint_sha256_current": "791b5ef11d4eec9050f28d917874fef687eb86fbc6c9f536b673f0006a766fd9",
+      "checkpoint_sha256_experiment_013": "791b5ef11d4eec9050f28d917874fef687eb86fbc6c9f536b673f0006a766fd9",
+      "class_mapping": {
+        "fresh_apple": 0,
+        "fresh_banana": 1,
+        "fresh_orange": 2,
+        "rotten_apple": 3,
+        "rotten_banana": 4,
+        "rotten_orange": 5
+      },
+      "condition": "014-B",
+      "configuration": "v2/configs/resnet50.yaml",
+      "configuration_sha256_current": "c87cd903be30dec205b9d0a1f9779e43cfc56132dfe663ce2393667c918ac3fd",
+      "configuration_sha256_experiment_013": "c87cd903be30dec205b9d0a1f9779e43cfc56132dfe663ce2393667c918ac3fd",
+      "name": "ResNet50",
+      "preprocessing_identity": {
+        "evaluation_resize_size": 256,
+        "image_size": 224,
+        "normalization_mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "normalization_std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "train_augmentation": {
+          "color_jitter": {
+            "brightness": 0.1,
+            "contrast": 0.1,
+            "hue": 0.02,
+            "saturation": 0.1
+          },
+          "horizontal_flip_probability": 0.5,
+          "rotation_degrees": 10
+        }
+      },
+      "status": "PASS"
+    },
+    "siglip2_linear_probe": {
+      "class_mapping": {
+        "fresh_apple": 0,
+        "fresh_banana": 1,
+        "fresh_orange": 2,
+        "rotten_apple": 3,
+        "rotten_banana": 4,
+        "rotten_orange": 5
+      },
+      "condition": "014-G",
+      "configuration": "v2/configs/siglip2_linear_probe.yaml",
+      "configuration_sha256_current": "019aed4f4923cf337a889e23fbb1291f8a37bab8ca36702dae22b425cbd5000e",
+      "configuration_sha256_experiment_013": "019aed4f4923cf337a889e23fbb1291f8a37bab8ca36702dae22b425cbd5000e",
+      "encoder_revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "encoder_sha256_current": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "encoder_sha256_experiment_013": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "name": "SigLIP2 + linear probe",
+      "preprocessing_identity": "google-siglip2-base-patch16-224-rev-75de2d5",
+      "probe_checkpoint": "v2/checkpoints/experiment_007_linear_probe.pt",
+      "probe_sha256_current": "011909e15d99abc090ebe1e1d5ba8035085a8ff1e59775539cadd15b71aa8736",
+      "probe_sha256_experiment_013": "011909e15d99abc090ebe1e1d5ba8035085a8ff1e59775539cadd15b71aa8736",
+      "status": "PASS"
+    },
+    "siglip2_strict_zero_shot": {
+      "class_mapping": {
+        "fresh_apple": 0,
+        "fresh_banana": 1,
+        "fresh_orange": 2,
+        "rotten_apple": 3,
+        "rotten_banana": 4,
+        "rotten_orange": 5
+      },
+      "condition": "014-I",
+      "configuration": "v2/configs/siglip2_zero_shot.yaml",
+      "configuration_sha256_current": "5d0a89e06da0a8c5014fce6749f5ee5db3e8858f3c5a9bad9c06581f1db82b15",
+      "configuration_sha256_experiment_013": "5d0a89e06da0a8c5014fce6749f5ee5db3e8858f3c5a9bad9c06581f1db82b15",
+      "encoder_checkpoint": "/home/AI_POC/tactics/AI-Based-Detection-of-Rotten-Fruits/v2/cache/huggingface/models--google--siglip2-base-patch16-224/blobs/612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "encoder_revision": "75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+      "encoder_sha256_current": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "encoder_sha256_experiment_013": "612923381c76ec5a9bed335d1c48827e3f2e506ac31b044b63b2031fadee6a0b",
+      "name": "SigLIP2 strict P1 zero-shot",
+      "preprocessing_identity": "google-siglip2-base-patch16-224-rev-75de2d5",
+      "prompt_family": "P1",
+      "prompt_registry": "v2/configs/zero_shot_prompts.yaml",
+      "prompt_registry_sha256_current": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+      "prompt_registry_sha256_experiment_013": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+      "status": "PASS"
+    }
+  },
+  "verified_at": "2026-09-02T22:06:52.820340+00:00"
+}

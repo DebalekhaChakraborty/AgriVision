@@ -1,0 +1,48 @@
+{
+  "budgets_examples_per_class": [
+    1,
+    5,
+    10,
+    25,
+    50,
+    100
+  ],
+  "dataset_split_hash": "d6a532e2360384a1e23967f9a6a1d26204f983e57ad67d7cc901291132539bea",
+  "frozen_at": "2026-09-02T16:30:20.790913+00:00",
+  "manifests": [
+    {
+      "path": "v2/experiments/label_efficiency_manifests/subset_seed_42.json",
+      "sha256": "fdd146826cdc6c2b88618e7c039d01c8314cf484010d41bdec647acde38260b2",
+      "subset_seed": 42
+    },
+    {
+      "path": "v2/experiments/label_efficiency_manifests/subset_seed_43.json",
+      "sha256": "8ac7adcbd0f05079ff7e3229abbc7b535ca0acac511d372ce037bdcfa4757726",
+      "subset_seed": 43
+    },
+    {
+      "path": "v2/experiments/label_efficiency_manifests/subset_seed_44.json",
+      "sha256": "d73d392c17d986d9218b7c3dd69245e2bb7e86b5d7d426e59fa342b9591bdcb4",
+      "subset_seed": 44
+    },
+    {
+      "path": "v2/experiments/label_efficiency_manifests/subset_seed_45.json",
+      "sha256": "32c99984b1a924c2a066a5af358932acd6b9af64bac961347b694cb8fe10eccc",
+      "subset_seed": 45
+    },
+    {
+      "path": "v2/experiments/label_efficiency_manifests/subset_seed_46.json",
+      "sha256": "33bafe11786f9e776c2ac96af1167065f7094e86e015476e31f628132e44f396",
+      "subset_seed": 46
+    }
+  ],
+  "schema_version": 1,
+  "status": "frozen_before_probe_training",
+  "subset_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}

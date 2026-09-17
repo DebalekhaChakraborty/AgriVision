@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "experiment_id": "V2-P3D-CROSS-DOMAIN-013",
+  "reviewed_at": "2026-09-02T17:45:00Z",
+  "method": "Side-by-side visual inspection of every source/external pair returned by the pre-registered 63-bit pHash threshold (Hamming distance <= 6). Review asked only whether the images depict the same underlying photograph or scene; class agreement alone was not treated as evidence of duplication.",
+  "candidate_count": 5,
+  "unique_external_images": 3,
+  "candidate_reviews": [
+    {
+      "source_identifier": "test/rotten_apple/vertical_flip_Screen Shot 2018-06-08 at 2.42.30 PM.png",
+      "external_identifier": "FreshBanana/FreshBanana (54).jpg",
+      "hamming_distance": 6,
+      "disposition": "false_positive_not_same_photograph",
+      "basis": "Different fruit identity, outline, scale, and scene: source is a rotten apple; external is a single yellow banana. Similarity is dominated by a centered object on a light background."
+    },
+    {
+      "source_identifier": "train/fresh_orange/Screen Shot 2018-06-12 at 11.55.00 PM.png",
+      "external_identifier": "RottenOrange/RottenOrange (49).jpg",
+      "hamming_distance": 6,
+      "disposition": "false_positive_not_same_photograph",
+      "basis": "Different orange, crop, resolution, background, surface texture, and defect pattern; the external image is a close-up rotten orange while the source is a small whole fresh orange."
+    },
+    {
+      "source_identifier": "train/fresh_orange/saltandpepper_Screen Shot 2018-06-12 at 11.55.00 PM.png",
+      "external_identifier": "RottenOrange/RottenOrange (49).jpg",
+      "hamming_distance": 6,
+      "disposition": "false_positive_not_same_photograph",
+      "basis": "The source is the frozen source image's salt-and-pepper derivative and remains visually distinct from the external close-up in crop, background, and defect pattern."
+    },
+    {
+      "source_identifier": "train/rotten_banana/Screen Shot 2018-06-12 at 9.06.56 PM.png",
+      "external_identifier": "RottenBanana/RottenBanana (117).jpg",
+      "hamming_distance": 6,
+      "disposition": "false_positive_not_same_photograph",
+      "basis": "Different banana shape, orientation, scale, peel markings, and scene; both are merely elongated dark bananas against light backgrounds."
+    },
+    {
+      "source_identifier": "train/rotten_banana/saltandpepper_Screen Shot 2018-06-12 at 9.06.56 PM.png",
+      "external_identifier": "RottenBanana/RottenBanana (117).jpg",
+      "hamming_distance": 6,
+      "disposition": "false_positive_not_same_photograph",
+      "basis": "The source is the frozen source image's salt-and-pepper derivative and remains a different physical banana with different geometry and markings."
+    }
+  ],
+  "ambiguous_candidates": [],
+  "contamination_blocker": false,
+  "status": "PASS_FALSE_POSITIVES"
+}

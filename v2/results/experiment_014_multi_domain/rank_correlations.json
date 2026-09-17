@@ -1,0 +1,27 @@
+{
+  "correlations": {
+    "source_vs_fruitvision": {
+      "kendall_p_value_descriptive": 0.07517636684303351,
+      "kendall_tau_b": 0.5,
+      "spearman_p_value_descriptive": 0.07692880993776312,
+      "spearman_rho": 0.6166666666666666,
+      "tie_method": "average ranks; Kendall tau-b"
+    },
+    "source_vs_sultana": {
+      "kendall_p_value_descriptive": 0.25951829805996474,
+      "kendall_tau_b": 0.3333333333333333,
+      "spearman_p_value_descriptive": 0.1116329876114912,
+      "spearman_rho": 0.5666666666666667,
+      "tie_method": "average ranks; Kendall tau-b"
+    },
+    "sultana_vs_fruitvision": {
+      "kendall_p_value_descriptive": 0.0058862433862433864,
+      "kendall_tau_b": 0.7222222222222222,
+      "spearman_p_value_descriptive": 0.005265691029161747,
+      "spearman_rho": 0.8333333333333333,
+      "tie_method": "average ranks; Kendall tau-b"
+    }
+  },
+  "inferential_boundary": "Descriptive ranking stability for nine fixed systems; p-values are not used for model selection.",
+  "schema_version": 1
+}

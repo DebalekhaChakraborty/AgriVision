@@ -1,0 +1,4052 @@
+{
+  "correctness_definition": "majority_correct_across_the_five_attribution_systems",
+  "domains": [
+    "sultana",
+    "fruitvision"
+  ],
+  "experiment_id": "V2-P3F-REPRESENTATION-INTERPRETABILITY-015",
+  "frozen_at": "2026-09-03T18:43:37.282567+00:00",
+  "records": [
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.6728782653808594,
+          "predicted_class": "fresh_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.015898585319519043,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 3.204543888568878,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.7416396141052246,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.05814945697784424,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (28).jpg",
+      "selection_sha256": "000dc7204c5a37dc1466844ff492ae8e52208ce1094c9cc2b3a1308dab1bafc9",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.40482664108276367,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.014095127582550049,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.5779238939285278,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.473357915878296,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.046769559383392334,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (164).jpg",
+      "selection_sha256": "003810f56ec1b7c4810f89d8760f2e79a009fab8c7f6fddc1596fe70b7e46673",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.608108401298523,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.012125134468078613,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 3.87083899974823,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.2819793224334717,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03973808139562607,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (102).jpg",
+      "selection_sha256": "0079129a387e7978f5762c6f6279b5ec6fd9074cb1bd10daa63dfece688a914c",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.8887412548065186,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0018600225448608398,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.2875316143035889,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.8578711748123169,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03844057023525238,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (87).jpg",
+      "selection_sha256": "0207820e68da2119942a747183f3f7466f122fed5b9d60d4508b96a7d4f06d5b",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.19608795642852783,
+          "predicted_class": "fresh_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.014965444803237915,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.12585902214050293,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.1301841735839844,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.046461865305900574,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (66).jpg",
+      "selection_sha256": "021d53001f0fff0c296358e4110bd146598597a7986062e1ffd7c2cbd1cd8af0",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.6721985340118408,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.004503905773162842,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 1.775571346282959,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.4811450242996216,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.030991964042186737,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (76).jpg",
+      "selection_sha256": "13e6e81c4c7ee6516494fe9190a28d151852574a8897f076b93c693b65d93ab1",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.9711995124816895,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0013248920440673828,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.08968639373779297,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.7757591009140015,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.025488421320915222,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (114).jpg",
+      "selection_sha256": "46450add971f0cb09d5bbd1e87e37194e36c9c3cc2042a932a994cb48574b178",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.4497331082820892,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.003435373306274414,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.9694357812404633,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.31928277015686035,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.025357916951179504,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (10).jpg",
+      "selection_sha256": "825db24060461fde60f78abc2fe60a1e4b95326664bbf150fbf7e1769d53c991",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.6633658409118652,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 2.205371856689453e-05,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 2.1281455755233765,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.1075706481933594,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.04433063417673111,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (93).jpg",
+      "selection_sha256": "def38ef989afe21d9a8e6870eb65618ff4a664aada1c9b8f1ec894b149703aed",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.6107103824615479,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.002140432596206665,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 1.9941493272781372,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.9406057596206665,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03623080998659134,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "FreshApple/FreshApple (18).jpg",
+      "selection_sha256": "e9c84cff9b88e9349b75b891e682bcebee55cf8f50205f4a873719172abcd6d2",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.6664755344390869,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.007872700691223145,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.094076156616211,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.8642659783363342,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.013440325856208801,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (70).jpg",
+      "selection_sha256": "07ff8c6e71297443bc0d273f41e914cfc4c6ee70a55ad2d94562cf912590673c",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.766208291053772,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.0013584792613983154,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 3.3209898471832275,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.9072067737579346,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.04856100678443909,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (169).jpg",
+      "selection_sha256": "091d2649915f4a7916ca79bd32a35014711f55b4b16c9b29e65289e4ab3e854e",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.4454195499420166,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.004519224166870117,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.4704394340515137,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.6090419292449951,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.027511097490787506,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (4).jpg",
+      "selection_sha256": "0cf3dc5604b6ac6155a52beece9870ed9dc4eb84dd74d58e09ad9845d9e37fd2",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.16583287715911865,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.006447434425354004,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.9263551235198975,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.06957626342773438,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03783886879682541,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (15).jpg",
+      "selection_sha256": "0e07424b719e47f83c1762e07728988fd462a8f9ee5b815c925e3722ff910329",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.5687495470046997,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.010847777128219604,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.510058656334877,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.43588924407958984,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.04743848741054535,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (32).jpg",
+      "selection_sha256": "10787736f07525cd2ad1c2a91c38aa5a129decb531a76156511df1a86aeeb83c",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 2.517137825489044,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.017656803131103516,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.817704439163208,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.6189324855804443,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.021992221474647522,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (84).jpg",
+      "selection_sha256": "0068d2e14380c4d7301822c0405e23ae67476afa73084f33d18d89f97d76855e",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.8993831872940063,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.01180356740951538,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 4.091728568077087,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 2.2260180711746216,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.014610618352890015,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (108).jpg",
+      "selection_sha256": "007c393f02ff9ebb7d137f4bb1b4140d7a0af2b725510d210fe9760140025f73",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.7565996646881104,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.005003452301025391,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.396129608154297,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.6359989643096924,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.0034381598234176636,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (44).jpg",
+      "selection_sha256": "00eb9f93f35c3b390456a268d5a3c550d673e3ee0430cbaf5919d1871ec4296d",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.4982728958129883,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.006940782070159912,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.4149446487426758,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 2.26982444524765,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.011936858296394348,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (119).jpg",
+      "selection_sha256": "062d936cddd678986f99147dd210089994419ad9b0ee37cdefce79e885ebeafe",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 3.065262645483017,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.02175992727279663,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 4.587036430835724,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 3.129969224333763,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.02710658311843872,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "FreshBanana/FreshBanana (105).jpg",
+      "selection_sha256": "0bc34af8c5874b0468b28e64d0cc812018602ad0667baea5351625a78e6040c4",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 2.107179641723633,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.00918269157409668,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.734161615371704,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.7459452152252197,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.027636513113975525,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (6).jpg",
+      "selection_sha256": "030e4fc7613467d894901dd9d7aa43ed8fb629d52b74120fe870fbe6c17c741a",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.3589246273040771,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.009476780891418457,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.605560779571533,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.0962119102478027,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.002288818359375,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (45).jpg",
+      "selection_sha256": "03c3eca88b9c688c149c915ca1f000f1c10bde603467d84725fc1843df27b217",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.3261209726333618,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.008629053831100464,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.994917869567871,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.8930195569992065,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0001552104949951172,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (129).jpg",
+      "selection_sha256": "054a95b14ca27d937c14b0a8c67a7e198057813a5ed946dc91d533e4192cc71a",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.620551884174347,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.004175961017608643,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.56810998916626,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.189311295747757,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02008405327796936,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (32).jpg",
+      "selection_sha256": "0675ce3f6b533192815519c04a672a45fa3f817a0e0afdea2670c3fb660cf95b",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.5144741535186768,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0018204748630523682,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 3.0895642042160034,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.120611548423767,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.018124684691429138,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (78).jpg",
+      "selection_sha256": "073ebb85e35e36799decdac1313e762346418eae34bab38c56442ab774201311",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.1767804622650146,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.009271323680877686,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 3.002840995788574,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.0038144588470458984,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.006962686777114868,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (74).jpg",
+      "selection_sha256": "0e9d06f8b1b9be51abfdbad394abcc2fe485c75e088ed7a3648d66baae056d84",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.24535268545150757,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.01586747169494629,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.5120434761047363,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.7609890699386597,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0023318231105804443,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (62).jpg",
+      "selection_sha256": "3099743d559164cc3ac919e825d55d9e909abea3b64faa64bd88bc95230ff44c",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.16354095935821533,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.020976245403289795,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 2.288615643978119,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.19677340984344482,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0161554217338562,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (169).jpg",
+      "selection_sha256": "3206c209d3d4e2066c11563ac43a24f2b219d80a66c421ca79bfdc9fe21fe1a6",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.07506674528121948,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.02666330337524414,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 1.6655365228652954,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.2854118347167969,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.02099921554327011,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (171).jpg",
+      "selection_sha256": "3fa917f6014acd269e51011b46dd11b19c3f21d595221b6d33f3748c1d800070",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.05152785778045654,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.025041788816452026,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.033066749572753906,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.8394241333007812,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.016735225915908813,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "FreshOrange/FreshOrange (168).jpg",
+      "selection_sha256": "3fff0ef359b5f20e7c9f41ff93feb54199088936c924e1329abddeab414e0402",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.1608386039733887,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.014493972063064575,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.4818739891052246,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.5897480249404907,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03954164683818817,
+          "predicted_class": "rotten_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (171).jpg",
+      "selection_sha256": "073b94d9e287d2238bf9a39bd2af3e6ec6e32a56a78d6c24f898dcc4320c170c",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 2.3472599387168884,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.020280450582504272,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 3.176306664943695,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.7847836017608643,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.056163251399993896,
+          "predicted_class": "rotten_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (173).jpg",
+      "selection_sha256": "0d505183a1210d0178a12c4e3fc7c79859b801f426e7754dabcbb01ee0d4d9b9",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.4415959119796753,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.01380389928817749,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.13488531112670898,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.7464005947113037,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.023357734084129333,
+          "predicted_class": "rotten_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (6).jpg",
+      "selection_sha256": "0dde09e317926cdeeaab243b5d626c5d6981a9aaee3f00d22a3cec3dace72d7b",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.1970930099487305,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.008617162704467773,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.257463574409485,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.2215406894683838,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03669807314872742,
+          "predicted_class": "rotten_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (172).jpg",
+      "selection_sha256": "0f83ddf1557c004fc3ac209371acd73beecdab053f8b743035ae85401508902c",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 2.245653212070465,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.01418045163154602,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.8523266315460205,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.3141134977340698,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.023289047181606293,
+          "predicted_class": "rotten_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (117).jpg",
+      "selection_sha256": "116e4bc47c64688cf33647120f419de564b1151783c0e634f506b2734d42a4e4",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.2591359615325928,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.0023097991943359375,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 3.4176985025405884,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.363400936126709,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.03816681355237961,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (53).jpg",
+      "selection_sha256": "09c451c15820bf36c5795984ed9c40163c60bf35afe4bcbdc9034447742ded56",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 1,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.355663537979126,
+          "predicted_class": "fresh_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.002231299877166748,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 4.170115828514099,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.6888492703437805,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.04215710610151291,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (59).jpg",
+      "selection_sha256": "1956077261e24c8de277d5ae5f9ca5c5409764626b200e70a482591d6239093b",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.0078057050704956055,
+          "predicted_class": "fresh_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0018258988857269287,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 3.17758309841156,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.4111191630363464,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.03579256683588028,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (58).jpg",
+      "selection_sha256": "274859471f315f0f276c0ce35bd78937d4596d2748decc3941dc126857a4d598",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 1,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.3038061857223511,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0019935965538024902,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 4.27728134393692,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.5174782872200012,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0306527242064476,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (34).jpg",
+      "selection_sha256": "317f9be3265ec28f686fdf77b7c96decdeea3caeb2dfd9a0b25378c8bceabcb8",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.35231685638427734,
+          "predicted_class": "fresh_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.003741621971130371,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 0.04364585876464844,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.05153250694274902,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0015220046043395996,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "RottenApple/RottenApple (24).jpg",
+      "selection_sha256": "369d2d289fa9cae27e782566544fa21aa66ba210b68f11e9a724f7209320520e",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 2.8996238708496094,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.030349403619766235,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 6.6363455057144165,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 3.345860742032528,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.031547918915748596,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "RottenBanana/RottenBanana (128).jpg",
+      "selection_sha256": "00b4a70e230eae4ccdca0b9ae75a6d81d2ebbc3ad2f07e26aa8e1f186afd25bb",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 3.9703024476766586,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.036836713552474976,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 0.877918004989624,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 3.285914570093155,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03545181453227997,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "RottenBanana/RottenBanana (139).jpg",
+      "selection_sha256": "01ef641e2c3afda1883078cf72803c7bb635e6aae8226d96a10655ebb99e2fca",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 2.4437931329011917,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.018453121185302734,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.8165923357009888,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 3.6728875637054443,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.019634850323200226,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "RottenBanana/RottenBanana (19).jpg",
+      "selection_sha256": "03faa3e6ab59aaa69ab4c01480707f0e3c420c759cdcc8b35128ec6a6061c7a4",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 2.2854002118110657,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.01419365406036377,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 0.84010910987854,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.5419211387634277,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.00997287780046463,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "RottenBanana/RottenBanana (9).jpg",
+      "selection_sha256": "048263f355001eb82ae5fa9b36f9514139aa0b4c2ea9965d9354567d113a1ded",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 3.4378075301647186,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.0336722731590271,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 5.3907957673072815,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 3.4317803904414177,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.04643544554710388,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "RottenBanana/RottenBanana (153).jpg",
+      "selection_sha256": "05d6c24542a371d0b61226e3c1afd05f1f92686479ede1edd495a12d47e56b78",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.2765451073646545,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.032347291707992554,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 0.5581263303756714,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.08294260501861572,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02475731074810028,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (12).jpg",
+      "selection_sha256": "02245b39d29e5ff9f0ce066a52d259cc10c81a32e98596943333561eb44ce719",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.05915963649749756,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03227657079696655,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 1.3236634731292725,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.5936604738235474,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03694924712181091,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (66).jpg",
+      "selection_sha256": "02539c4f3bd5d0e92837a0690975505c3ba8fa8bfc986753a572e9a98f8e7b53",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.0845390558242798,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.026112854480743408,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 0.18783867359161377,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.6719460487365723,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.025823980569839478,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (64).jpg",
+      "selection_sha256": "02b555113ac241bc2579ba6768d942438d1afb8203424b7ac535709f3163eaa6",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.19550538063049316,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.009191513061523438,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.7777285575866699,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.4516756534576416,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03668127954006195,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (52).jpg",
+      "selection_sha256": "03dee7d37ebc1b3a4a3ec1b123650aac02d98b4077ebb3831e91c6d768cad70a",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.12855970859527588,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.008094429969787598,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 2.2796454429626465,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.26678240299224854,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.021820709109306335,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (59).jpg",
+      "selection_sha256": "03e981ddcaf4dc55b05ae40d97f2f70ba521725e0e1a87329245fa1fa3e396a1",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.5843731164932251,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02320161461830139,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 1.0215766429901123,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.0717882513999939,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.015162259340286255,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (115).jpg",
+      "selection_sha256": "0c0bfc007001d4c23ca422f524dd67e1ddf81e80dff8c274ee80c0b9a8bd6f6c",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 1,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.1571556329727173,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.008408963680267334,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 1.8153631687164307,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.064698338508606,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0011343955993652344,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (47).jpg",
+      "selection_sha256": "10e0e7e3b0b461cb727b9e497d9b0d970742fbed32c58f6fb19cbc54f65a4cb7",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.9051641225814819,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02493828535079956,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.9746506810188293,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.11598443984985352,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02782660722732544,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (117).jpg",
+      "selection_sha256": "159e25dbd25b55c92dfbf0f0eab6bb802f319da4bcf67f237ac1827331e59956",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.1400079131126404,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.008439213037490845,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 2.774991512298584,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.11299514770507812,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.019752174615859985,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (158).jpg",
+      "selection_sha256": "1e6e9a39618d0021554ef579585c6696a926c6fa0b43e77e2c4af0d61e497c8e",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "sultana",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.7333451509475708,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.00975346565246582,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.329298734664917,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.39743542671203613,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.004726409912109375,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "RottenOrange/RottenOrange (163).jpg",
+      "selection_sha256": "2942699d21d1e9828f8079e032e184ad7b968e5c1bd7e394962a320e3b31ebe8",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.5174161195755005,
+          "predicted_class": "fresh_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02635657787322998,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.835122883319855,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.365766689181328,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.05264770984649658,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/msg5170347760-64626.jpg",
+      "selection_sha256": "00301ca92265eaa145cd3237eba1b0b53058c493cc73afcd2899a5d8e6714284",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.22734355926513672,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.01227375864982605,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 0.14090979099273682,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.4616098403930664,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.037342652678489685,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/IMG-20240612-WA0102.jpg",
+      "selection_sha256": "00b3bce46ecf45e1b10f7b658ebd99bad421985629871ad8a8129e7fe0101945",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.761011153459549,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.015754610300064087,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.9392486810684204,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.5141034126281738,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.016730546951293945,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/msg5170347760-68596.jpg",
+      "selection_sha256": "00e85447b23a101e57c6d35416a3ac6870cb6b538fad3be00f4cb6963e9edfeb",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.38060712814331055,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02047327160835266,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.1992868185043335,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.276114284992218,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03244997560977936,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/msg5170347760-66189.jpg",
+      "selection_sha256": "01063c864dac891a9766bbfbb733fc0fd0eb05959676fdca8d60d0fedb2c849d",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.5282225608825684,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.004441797733306885,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.432066798210144,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.5034847855567932,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.040050916373729706,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/msg5170347760-63156.jpg",
+      "selection_sha256": "010cb1eb6c23f11e6e98698c32623027aacc3b5bdcb42684298b15fedceba615",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 2.1017887890338898,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.010271668434143066,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.5309295654296875,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.6353759765625,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0023001432418823242,
+          "predicted_class": "rotten_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/WhatsApp Image 2024-06-22 at 10.44.20 PM.jpeg",
+      "selection_sha256": "0259cdb4807b322ac8edd9b5b99df2206877188c69c6d0c05eba2fd67e6217a3",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.8539940118789673,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0013625025749206543,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.47313666343688965,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.7188538312911987,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.01971536874771118,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/msg5170347760-66248.jpg",
+      "selection_sha256": "034a9762119e797b0ec73538879b1386374ae36af29986002ccf3959f795f636",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.05422642827034,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0029451847076416016,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 1.7347286939620972,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.20727062225341797,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.012055322527885437,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/msg5170347760-66216.jpg",
+      "selection_sha256": "03883862d93227b90948b8e52fee7f8974b7d5c4c9c33614d000296155e2ca5b",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.4421563148498535,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 3.0547380447387695e-05,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.3796783685684204,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.23404884338378906,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.007388025522232056,
+          "predicted_class": "rotten_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/msg5170347760-68595.jpg",
+      "selection_sha256": "072dcfcc3254bce21faca6b0de80f32fa55e601199b126f5f3390dd1bf155f35",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.480495810508728,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0005116164684295654,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.08098220825195312,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.841553807258606,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.027025744318962097,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Fresh/msg5170347760-69529.jpg",
+      "selection_sha256": "074cdfb5896f63a4021b237f7ca83fc8e9210d64aac0fb2f0ba2ad35b6dd3b8d",
+      "semantic_class": "fresh_apple"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.9731013774871826,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.0030546188354492188,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.128708600997925,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.640582799911499,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.01714293658733368,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/msg5170347760-69724.jpg",
+      "selection_sha256": "00ae432176b587bdca80ed3c7c446b12d1b40ade98493a3db81b0f841d38e4a3",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.310553789138794,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.0008078813552856445,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.5751912593841553,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.3831040859222412,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.007508143782615662,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/msg5170347760-69841.jpg",
+      "selection_sha256": "015873394ed505bebd868a384af60c71958d6353c2814669ae1e85b50b1d4535",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.09086298942565918,
+          "predicted_class": "fresh_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.005063354969024658,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.418485403060913,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.4940481185913086,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02184753119945526,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/_. (4)_25.jpg",
+      "selection_sha256": "0174e73db84719d609a9de4077795bd6d083442804890e159f28eaa458d076bb",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 2.5091429948806763,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.004675716161727905,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.9279603958129883,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.7551488876342773,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.019145801663398743,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/msg5170347760-66608.jpg",
+      "selection_sha256": "0536db77d603d92754a811887c5b89f4ba73fa204a2b8ef028a8c3a4d1de260c",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.5157990455627441,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.0004724264144897461,
+          "predicted_class": "fresh_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 3.303840219974518,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.4456824064254761,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.01579141616821289,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/msg5170347760-69727.jpg",
+      "selection_sha256": "05f35d3ed3f697b8549d4793d44b78d43310f8b2bcfc0290be48bb5fdd530544",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.2596957087516785,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.008818566799163818,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 3.4948224425315857,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.057802677154541,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.013674676418304443,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/msg5170347760-69920.jpg",
+      "selection_sha256": "005331013cb5f71131d95ba47a870d1484fcc269c331b4bd0323d18c953a2a5e",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.4283947944641113,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0049217939376831055,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.4555063247680664,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.4039686918258667,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.002556025981903076,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/msg5170347760-66721.jpg",
+      "selection_sha256": "00df3646365eda51b5c4d175a042e4bd183fa60488909911bee1c7fab7947347",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 1,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 2.274702712893486,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.012412726879119873,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.8875112533569336,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.0601959228515625,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.014502853155136108,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/msg5170347760-66775.jpg",
+      "selection_sha256": "0188ae5e848b375fd7c4777bda98161f7613d14459c356eeb57d640fe1629fd4",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.793135404586792,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0020994842052459717,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.5750608444213867,
+          "predicted_class": "fresh_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.8550248146057129,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.00019338726997375488,
+          "predicted_class": "fresh_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/_. (46)_1.jpg",
+      "selection_sha256": "02664ae5cb109aa2821244fd5a192e6c1610e3744efdc758789cbfdc66fce897",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.9752147942781448,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.013117790222167969,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.5335805416107178,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.8765794038772583,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0020454078912734985,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Fresh/_. (30)_3.jpg",
+      "selection_sha256": "0298aed0598c3191db1ae6b318aeeeb2941b991632002d0ca448086e7833afc1",
+      "semantic_class": "fresh_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.3067901134490967,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.008804559707641602,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.144079685211182,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.4401766657829285,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.010359808802604675,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Fresh/WhatsApp Image 2024-06-22 at 10.41.14 PM (1).jpeg",
+      "selection_sha256": "0028d3b69c2bfde644aaeaedb6b2e1a05eba79a9016c7ee62f49a01211f3e941",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.8654816150665283,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.013214260339736938,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.484961986541748,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.969681203365326,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.019576162099838257,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Fresh/WhatsApp Image 2024-06-21 at 11.10.24 PM.jpeg",
+      "selection_sha256": "002e8b85495e1dd2f783480e6da470496b5b26c651e424457b981c659cf655a5",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.7045392394065857,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.018629342317581177,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.423527479171753,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.7872265577316284,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03156714141368866,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Fresh/msg5170347760-65565.jpg",
+      "selection_sha256": "005aba44ac6afcd9577480a75dc1f702235787ba11c9721061fbf267e5679e62",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 2.2405667901039124,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02080059051513672,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.603308439254761,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.0894435048103333,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.027243271470069885,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Fresh/msg5170347760-65258.jpg",
+      "selection_sha256": "006223433290573465616ecb6fd46224c1665502255cdf59dede317cf372854d",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.5850924253463745,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.008550107479095459,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.612548828125,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.1088561713695526,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.026938393712043762,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Fresh/msg5170347760-63217.jpg",
+      "selection_sha256": "00a869bbfcd1c0f604756bebde1aa33705d06d70f8ff6755630299d2b72ed3b4",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.3885510563850403,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.02295619249343872,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 3.422697067260742,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.8045781850814819,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.002971366047859192,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Fresh/WhatsApp Image 2024-06-22 at 10.41.10 PM (1).jpeg",
+      "selection_sha256": "08d6770b275256ba1f948a09fbb0369b0fa801181adb62a889b9c272b0978f18",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.22426891326904297,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.016329646110534668,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 3.3611488342285156,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.8950217962265015,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.009527012705802917,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Fresh/WhatsApp Image 2024-06-22 at 10.41.15 PM (1).jpeg",
+      "selection_sha256": "464b0ff4e919f6ea733b6dcd0fdb74a94538278460bfb4ec968c2472c410aa58",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 1,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.317283034324646,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.021725088357925415,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 0.5043661594390869,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.34548306465148926,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.011502206325531006,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Fresh/WhatsApp Image 2024-06-22 at 10.38.23 PM (1).jpeg",
+      "selection_sha256": "c21b38463933a2622489b142feaf9dd38b099e6b52942a9b8aa8a8e4e67a7695",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "fresh",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.23184704780578613,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.00039067864418029785,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.064662456512451,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.4367893934249878,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.030395030975341797,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Fresh/WhatsApp Image 2024-06-22 at 10.38.22 PM (1).jpeg",
+      "selection_sha256": "ea934c455ef757383a1950d890d390e4552aaa6e5334048f8f2c4733bf864bd9",
+      "semantic_class": "fresh_orange"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.9154362082481384,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.006475925445556641,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 0.6474975347518921,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.43271946907043457,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.011722952127456665,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/msg5170347760-65772.jpg",
+      "selection_sha256": "0247922b0abc322b0a979e2bc2ab35f95627b87540274aadb9aa737a35e99c69",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.8220835030078888,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.009627729654312134,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.43439406156539917,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.9367325305938721,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.022696658968925476,
+          "predicted_class": "rotten_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/msg5170347760-68504.jpg",
+      "selection_sha256": "031a70662e83da6fa870a56068b840036adb61b1ae1c96d8443d7312b51de216",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.9964412450790405,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.014448285102844238,
+          "predicted_class": "rotten_apple"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.3981456756591797,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.6514631509780884,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0031838715076446533,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/msg5170347760-63128.jpg",
+      "selection_sha256": "03256aec89cdd4bff1b121ab5939c42f9390c898aff22bbac920afe9dd0cd252",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.055002212524414,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 9.971857070922852e-05,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.908219575881958,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.6762946248054504,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.01721794903278351,
+          "predicted_class": "rotten_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/msg5170347760-64857.jpg",
+      "selection_sha256": "039e230fce0229bed428210bdb89c85c148fad53486c701b59c1ceeb3136d5a5",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.6141818165779114,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.005182504653930664,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.585241436958313,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.019267678260803223,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0010799020528793335,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/msg5170347760-64845.jpg",
+      "selection_sha256": "03cc06dd2c7cbb872edddc086931802b90fc850193c8b03446408a61950b6e8e",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 1,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.3889981508255005,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.010999500751495361,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 1.2828391790390015,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.5616267919540405,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.02931855618953705,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/6102784868896325418.jpg",
+      "selection_sha256": "00e8ff05db530c51a8c3354b76ab685afa23ce73465d3db02e49d08849c4f2b5",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 1,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.1041958332061768,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.004635035991668701,
+          "predicted_class": "fresh_apple"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 2.9265981912612915,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.31758201122283936,
+          "predicted_class": "fresh_apple"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.007389619946479797,
+          "predicted_class": "fresh_apple"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/msg5170347760-71074.jpg",
+      "selection_sha256": "00fa94d1fcdaa9f6b85e75c1c20fa67cfcada1a91d5b2d4ed1f55887ac25c8c2",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.4575423002243042,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.02053740620613098,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.1581566333770752,
+          "predicted_class": "rotten_apple"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.4512214660644531,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.006133079528808594,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/msg5170347760-64862.jpg",
+      "selection_sha256": "01ad5cbd40c42bf8d008bd3ec41e7e1198ccc8609af647f92195d0c8bf9fd41a",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.5823094844818115,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.0032035112380981445,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.9553683996200562,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.5951234102249146,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.012433566153049469,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/msg5170347760-65792.jpg",
+      "selection_sha256": "02e51e9a27558b0eddbbb79837f48bb747b35835f7def6174f0ccc65e6076178",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.03230619430541992,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.020056068897247314,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.014976024627685547,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.07367122173309326,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.002474188804626465,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "apple",
+      "identifier": "Apple/Rotten/msg5170347760-69190.jpg",
+      "selection_sha256": "0514f65b898920dca1a5a79954bf971db7945a04b0c0f6bb1f83f51e48c39293",
+      "semantic_class": "rotten_apple"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 2.5462236404418945,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03705158829689026,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 9.074688196182251,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.6079550981521606,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.04295086860656738,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Rotten/msg5170347760-69014.jpg",
+      "selection_sha256": "00485a83f2d82340b01044429283c5fbc624e763a4d862d2e631ca8bd23b0922",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 3.4087196588516235,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.037814050912857056,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 4.335836499929428,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 3.960490107536316,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.042564406991004944,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Rotten/msg5170347760-65615.jpg",
+      "selection_sha256": "009eafbb4363a52601dd8dc4cc3d70a55b26879731235fa5e2c73679794980d0",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 4.285480856895447,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.04229027032852173,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 7.704033136367798,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 3.469326674938202,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.04861985146999359,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Rotten/msg5170347760-65589.jpg",
+      "selection_sha256": "00ec98de6dfaa27c54a67394230b9fa774b9367914f9d8f2f19053cf951b2a36",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 3.2014482617378235,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.043793708086013794,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 2.7530016899108887,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.5538173913955688,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.05197706073522568,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Rotten/msg5170347760-65627.jpg",
+      "selection_sha256": "021e3f44404153c56a9392a629b35094206e966554758229bf20413f90b32ac3",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 3.8709790110588074,
+          "predicted_class": "rotten_banana"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03279531002044678,
+          "predicted_class": "rotten_banana"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 6.082594186067581,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 3.3164072483778,
+          "predicted_class": "rotten_banana"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02940024435520172,
+          "predicted_class": "rotten_banana"
+        }
+      },
+      "fruit_identity": "banana",
+      "identifier": "Banana/Rotten/msg5170347760-68999.jpg",
+      "selection_sha256": "0241c7ca21caad069fbba5d8424cac9cc36125e208509ccdbfbfaf60591298bf",
+      "semantic_class": "rotten_banana"
+    },
+    {
+      "correct_system_count": 3,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.0862267017364502,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.020592808723449707,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 1.0949530601501465,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.5260822772979736,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.028993800282478333,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6174559330100165432.jpg",
+      "selection_sha256": "005aefb7f42f80a5db0a90c0bf563089a6eb65871c79e5c174c5e34f9de8df52",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.46909844875335693,
+          "predicted_class": "rotten_apple"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.016677677631378174,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 0.025146961212158203,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 0.97797691822052,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.03063109517097473,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6150065028531863023.jpg",
+      "selection_sha256": "00959d38c57a500f4eadaf8929a2f542fd038d8e4e5425cebef9898a34a575d8",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 1.5048663020133972,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.014792293310165405,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.1264781951904297,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.8533446192741394,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.055919140577316284,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6184002721938521948.jpg",
+      "selection_sha256": "00c9122733041f070b7dd66ebf533a21d7796645248c5c1554a940eaa2e4c7ef",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 4,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.7377536296844482,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.01834946870803833,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 0.5906031131744385,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.6426405906677246,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.045953765511512756,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6150065028531862795.jpg",
+      "selection_sha256": "0160451077d7557a8832acbb8f98943ef89c9c09fe226f683a96f1f5f731a79e",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 5,
+      "correctness_stratum": "majority_correct",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": true,
+          "margin": 0.11499226093292236,
+          "predicted_class": "rotten_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.009268045425415039,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": true,
+          "margin": 1.4694910049438477,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.649803102016449,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.029696792364120483,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6150065028531862830.jpg",
+      "selection_sha256": "019d632e549cb8fbb9d1f7924b800e1464a7e4c0acd73370fa7b6c24c55fb466",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.344487190246582,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.010152190923690796,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 3.4317145347595215,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.46202337741851807,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.013602077960968018,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6150065028531862777.jpg",
+      "selection_sha256": "025873714777ecd659e58c0c93796d00cbbccee5fe5014c5c2a8bc08af9409fd",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.1617120504379272,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.005276292562484741,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 3.0367319583892822,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 1.1599225401878357,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.02080109715461731,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6174559330100165420.jpg",
+      "selection_sha256": "04223c7cc40962ac37b4bda8d09ca5cffc03d512f5a662be3eab21fbcdf148c6",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 0.31292223930358887,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.005270212888717651,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 2.009066104888916,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": true,
+          "margin": 2.082100510597229,
+          "predicted_class": "rotten_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.023213714361190796,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6179278253617954104.jpg",
+      "selection_sha256": "047f605f84a1be0748f99a72361d7742cbefaa142d0047a1590f8d774889ed8e",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 0,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.1234078407287598,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.009246230125427246,
+          "predicted_class": "fresh_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 3.654576301574707,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 0.3533809185028076,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": false,
+          "margin": 0.013484448194503784,
+          "predicted_class": "fresh_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6150065028531862778.jpg",
+      "selection_sha256": "05858859528bdf6ae719e0c100819cdd4efbf3fad5836d4ddf5a188217254d56",
+      "semantic_class": "rotten_orange"
+    },
+    {
+      "correct_system_count": 2,
+      "correctness_stratum": "majority_error",
+      "domain": "fruitvision",
+      "freshness_condition": "rotten",
+      "frozen_predictions": {
+        "clip_linear_probe": {
+          "correct": false,
+          "margin": 1.1559322476387024,
+          "predicted_class": "fresh_orange"
+        },
+        "clip_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.008185803890228271,
+          "predicted_class": "rotten_orange"
+        },
+        "efficientnet_b0": {
+          "correct": false,
+          "margin": 4.803601026535034,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_linear_probe": {
+          "correct": false,
+          "margin": 1.4283186197280884,
+          "predicted_class": "fresh_orange"
+        },
+        "siglip2_strict_zero_shot": {
+          "correct": true,
+          "margin": 0.006341293454170227,
+          "predicted_class": "rotten_orange"
+        }
+      },
+      "fruit_identity": "orange",
+      "identifier": "Orange/Rotten/6150065028531862928.jpg",
+      "selection_sha256": "064fc6699a480784919a7c707d0d4294ab24019260876dcb909fa8bee5520f93",
+      "semantic_class": "rotten_orange"
+    }
+  ],
+  "same_images_for_all_five_systems": true,
+  "schema_version": 1,
+  "seed": 42,
+  "selection_policy": "sha256_of_seed_domain_class_stratum_identifier",
+  "source_omission": "No frozen per-image source prediction record exists; source was not rescored because Experiments 001-014 are frozen.",
+  "status": "frozen_before_attribution_generation",
+  "target_per_domain_class_stratum": 5,
+  "total_images": 109
+}

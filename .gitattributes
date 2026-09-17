@@ -1,0 +1,8 @@
+# Research evidence integrity.
+#
+# Experiment result CSVs are written by Python's csv module, which emits
+# RFC 4180 CRLF terminators. Their exact bytes are recorded in the
+# prior_evidence_baseline.sha256 manifests under v2/results/. Disabling
+# line-ending conversion keeps a clone byte-identical to the committed
+# evidence on every platform, so those checksums continue to verify.
+*.csv -text

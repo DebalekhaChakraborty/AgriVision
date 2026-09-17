@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-02",
+  "branch": "master",
+  "baseline_manifest": "prior_evidence_baseline.sha256",
+  "baseline_entries_verified": 384,
+  "baseline_entries_failed": 0,
+  "status": "PASS",
+  "checks": {
+    "experiments_001_through_013_unchanged": true,
+    "v1_unchanged_by_phase_3e": true,
+    "source_metrics_reused_without_inference": true,
+    "sultana_experiment_013_reused_without_inference": true,
+    "phase_3b_prompt_registry_unchanged": true,
+    "phase_3a_checkpoint_evidence_unchanged": true,
+    "phase_3c_results_unchanged": true
+  },
+  "reference_hashes": {
+    "experiment_013_metrics_by_system": "1f5151b7b730ca45404717c99be10129054ea5c2c568cc176ebfed1bb0649097",
+    "experiment_013_inference_access": "a9ddf2c485b3d15d4490a42f5ba690052b6fa6001e2745f759ee3f5c7ddb297d",
+    "experiment_013_manifest": "6fd074e514f3b79e6d4f1878516fdaa9a4ea2e283a2dee4453a397d9da5a7208",
+    "phase_3b_prompt_registry": "e902ba9a66fab36ff86c6440e34c241095d3f947e05c12d86a51d635ca2c67d7",
+    "phase_3c_manifest_hash_registry": "2f57a9b4edb3d109070752b9ffe3a5cc3d5b1907406fadd154d6b5529a8670ea"
+  }
+}
