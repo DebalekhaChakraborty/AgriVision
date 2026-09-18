@@ -31,6 +31,7 @@ class TraceTool(str, Enum):
     DECIDE_CAPTURE_REMEDIATION = "decide_capture_remediation"
     APPLY_GAMMA_CORRECTION = "apply_gamma_correction"
     APPLY_CLAHE = "apply_clahe"
+    ISOLATE_FOREGROUND = "isolate_foreground"
     COMPARE_CAPTURE_QUALITY = "compare_capture_quality"
     INSPECTION_GATE = "inspection_gate"
     PREDICT_CONDITION = "predict_condition"

@@ -17,7 +17,7 @@ that produced them and are reported separately from the V2 research results.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phases 0, 1, 1b and 2 complete — OpenCV 5 capture-quality perception, bounded evidence-driven remediation, and a gated condition model served through cv2.dnn |
+| Status | Phases 0, 1, 1b, 2 and 2b complete — OpenCV 5 capture-quality perception, bounded remediation, a gated condition model served through cv2.dnn, and foreground-restricted quality measurement |
 
 ---
 
@@ -232,8 +232,8 @@ planned.
 | Illumination assessment **[P1]** | Lab L* statistics, clipping fractions | exposure score, under/over flags |
 | Glare / specular | near-saturation mask, morphology | glare fraction |
 | Enhancement (action) | `createCLAHE`, gamma LUT, `fastNlMeansDenoising` | repaired image |
-| Foreground / ROI | `grabCut`, `watershed`, `findContours` | produce mask |
-| Segmentation quality | solidity, area fraction, `Canny` edge agreement | segmentation confidence |
+| Foreground / ROI **[P2b]** | Otsu on HSV saturation, morphology, `connectedComponentsWithStats` | produce mask |
+| Segmentation validity **[P2b]** | area fraction, border contact, component dominance, solidity | explicit valid/invalid state |
 | Colour analysis | HSV/Lab histograms, brown/dark-spot ratio | discolouration metrics |
 | Texture / edge | Laplacian energy, `Sobel`, edge density | surface texture metrics |
 | Anomaly localisation | threshold + `morphologyEx` + `connectedComponentsWithStats` | scored candidate regions |
@@ -648,8 +648,26 @@ this branch. Dates will be added only from the official schedule.
 **Phase 2 finding affecting the roadmap:** the capture gate rejects 96.7% of
 real research photographs because whole-image clipping statistics are dominated
 by bright backgrounds rather than the produce. No threshold value fixes this;
-the metrics must be restricted to a foreground region. This is now a measured
-argument for bringing surface segmentation forward.
+the metrics must be restricted to a foreground region.
+
+### Phase 2b — Foreground isolation and ROI-restricted quality *(complete)*
+- **Objective:** measure capture quality on the subject rather than the backdrop.
+- **Done:** three classical OpenCV foreground methods compared; `saturation_otsu`
+  selected (98.5% validity, 8 ms, synthetic IoU 0.905); explicit validity guards;
+  one mask-aware quality implementation serving both scopes; mask-edge sharpness
+  handling with measured justification; synthetic known-mask evaluation; real-image
+  gate comparison; mask-stability study; 53 additional tests.
+- **Confirmed:** background-driven clipping is real and removable — `HIGHLIGHT_CLIPPING`
+  80.0% -> 0%, `SHADOW_CLIPPING` 67.8% -> 3.5%, both median fractions to zero.
+- **Exposed:** capture-quality thresholds are **scope-specific**. ROI Laplacian
+  variance is ~5% of whole-image, so `BLUR_RISK` rises 19.3% -> 82.5% under the
+  existing threshold. The gate improves only 96.7% -> 83.3% and is **still not
+  usable on real photography**. ROI gating is therefore implemented but off by
+  default pending Phase 6 calibration.
+- **Artifacts:** `competition/vision/foreground.py`,
+  [PHASE2B_FOREGROUND_QUALITY.md](PHASE2B_FOREGROUND_QUALITY.md).
+- **Supports:** technical execution; spatial substrate for later anomaly work.
+- **Not delivered:** anomaly, defect or spoilage localisation of any kind.
 
 ### Phase 3 — Agentic perception–decision–action workflow
 - **Objective:** the real loop, with traces.
@@ -736,4 +754,5 @@ argument for bringing surface segmentation forward.
 - [PHASE1_OPENCV_PERCEPTION.md](PHASE1_OPENCV_PERCEPTION.md) — Phase 1 technical note
 - [PHASE1B_CAPTURE_REMEDIATION.md](PHASE1B_CAPTURE_REMEDIATION.md) — Phase 1b technical note
 - [PHASE2_MODEL_SELECTION.md](PHASE2_MODEL_SELECTION.md) — Phase 2 model selection record
+- [PHASE2B_FOREGROUND_QUALITY.md](PHASE2B_FOREGROUND_QUALITY.md) — Phase 2b foreground isolation note
 - [DEMO_DATA_PLAN.md](DEMO_DATA_PLAN.md) — competition demo imagery plan

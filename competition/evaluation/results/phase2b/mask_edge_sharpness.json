@@ -1,0 +1,121 @@
+{
+  "default_erosion_px": 5,
+  "median_edge_inflation": 1.506,
+  "method": "Laplacian computed on the unmodified grayscale image; the mask only selects which responses are aggregated, and is eroded first.",
+  "rows": [
+    {
+      "edge_inflation_factor_erode0_over_erode5": 2.921,
+      "fixture": "dark_on_bright",
+      "masked_by_erosion_px": {
+        "0": 3030.4724,
+        "11": 1032.7794,
+        "3": 1035.496,
+        "5": 1037.3766
+      },
+      "naive_background_zeroing": 387.0328,
+      "whole_image": 1408.2219
+    },
+    {
+      "edge_inflation_factor_erode0_over_erode5": 2.866,
+      "fixture": "bright_on_dark",
+      "masked_by_erosion_px": {
+        "0": 2970.4332,
+        "11": 1031.5043,
+        "3": 1034.5669,
+        "5": 1036.418
+      },
+      "naive_background_zeroing": 1393.7083,
+      "whole_image": 1370.7957
+    },
+    {
+      "edge_inflation_factor_erode0_over_erode5": 0.997,
+      "fixture": "textured_neutral",
+      "masked_by_erosion_px": {
+        "0": 2759.6292,
+        "11": 2789.1005,
+        "3": 2763.8609,
+        "5": 2766.7164
+      },
+      "naive_background_zeroing": 1564.5983,
+      "whole_image": 868.5732
+    },
+    {
+      "edge_inflation_factor_erode0_over_erode5": 1.506,
+      "fixture": "touching_border",
+      "masked_by_erosion_px": {
+        "0": 1552.9057,
+        "11": 1024.9338,
+        "3": 1030.6883,
+        "5": 1031.4583
+      },
+      "naive_background_zeroing": 802.6435,
+      "whole_image": 570.2345
+    },
+    {
+      "edge_inflation_factor_erode0_over_erode5": 2.368,
+      "fixture": "multiple_regions",
+      "masked_by_erosion_px": {
+        "0": 2394.8077,
+        "11": 1006.2566,
+        "3": 1011.2736,
+        "5": 1011.3434
+      },
+      "naive_background_zeroing": 1149.6112,
+      "whole_image": 578.6075
+    },
+    {
+      "edge_inflation_factor_erode0_over_erode5": null,
+      "fixture": "small_subject",
+      "masked_by_erosion_px": {
+        "0": 3693.6109,
+        "11": null,
+        "3": null,
+        "5": null
+      },
+      "naive_background_zeroing": 120.4376,
+      "whole_image": 51.0753
+    },
+    {
+      "edge_inflation_factor_erode0_over_erode5": 1.375,
+      "fixture": "with_distractor",
+      "masked_by_erosion_px": {
+        "0": 1750.3641,
+        "11": 1281.1259,
+        "3": 1268.1573,
+        "5": 1272.7309
+      },
+      "naive_background_zeroing": 1019.8288,
+      "whole_image": 727.5656
+    },
+    {
+      "edge_inflation_factor_erode0_over_erode5": 1.006,
+      "fixture": "low_contrast",
+      "masked_by_erosion_px": {
+        "0": 128.4343,
+        "11": 128.1019,
+        "3": 127.984,
+        "5": 127.6886
+      },
+      "naive_background_zeroing": 732.1007,
+      "whole_image": 35.6819
+    }
+  ],
+  "run_context": {
+    "foreground_method_default": "saturation_otsu",
+    "guards": {
+      "max_border_contact_fraction": 0.6,
+      "max_component_count": 12,
+      "max_foreground_fraction": 0.92,
+      "min_bounding_box_side": 24,
+      "min_foreground_fraction": 0.03,
+      "min_largest_component_dominance": 0.65,
+      "sharpness_erosion_px": 5
+    },
+    "machine": "x86_64",
+    "opencv_version": "5.0.0",
+    "platform": "Linux",
+    "processor": "unknown",
+    "python_version": "3.11.2"
+  },
+  "why": "Zeroing the background and then differentiating manufactures a step edge at the mask boundary. Including the un-eroded boundary inflates the variance, so a more aggressively masked image would appear sharper."
+}

@@ -84,12 +84,35 @@ from competition.vision.evidence import (
     IlluminationMetrics,
     ImageProperties,
     ImageValidationError,
+    MeasurementScope,
     PerceptionEvidence,
     QualityFlag,
     SharpnessMetrics,
 )
+from competition.vision.foreground import DEFAULT_GUARDS, masked_pixels
 
 _L_CHANNEL_MAX = 255.0
+
+# Fewer usable pixels than this and a masked statistic is not worth computing.
+MIN_MASKED_PIXELS = 256
+
+
+def _selected(values: np.ndarray, selection: np.ndarray | None) -> np.ndarray:
+    """Flatten either the whole array or just the selected pixels."""
+    if selection is None:
+        return values.reshape(-1)
+    return values[selection > 0]
+
+
+def _validate_mask(image: np.ndarray, mask: np.ndarray) -> None:
+    if not isinstance(mask, np.ndarray):
+        raise ImageValidationError(f"mask must be an ndarray, got {type(mask).__name__}")
+    if mask.ndim != 2:
+        raise ImageValidationError(f"mask must be 2-D, got shape {mask.shape!r}")
+    if mask.shape[:2] != image.shape[:2]:
+        raise ImageValidationError(
+            f"mask shape {mask.shape[:2]} does not match image {image.shape[:2]}"
+        )
 
 
 def _validate(image: np.ndarray, policy: ThresholdPolicy) -> None:
@@ -115,11 +138,39 @@ def _content_hash(image: np.ndarray) -> str:
     return digest.hexdigest()
 
 
-def measure_sharpness(image: np.ndarray, policy: ThresholdPolicy) -> SharpnessMetrics:
-    """Variance of the Laplacian over the grayscale image."""
+def measure_sharpness(
+    image: np.ndarray,
+    policy: ThresholdPolicy,
+    mask: np.ndarray | None = None,
+    erosion_px: int | None = None,
+) -> SharpnessMetrics:
+    """Variance of the Laplacian, optionally restricted to a foreground region.
+
+    The Laplacian is always computed on the **unmodified** grayscale image, and
+    the mask only selects which responses are aggregated. Zeroing the background
+    and then differentiating would manufacture a step edge at the mask boundary
+    and inflate the variance — the more aggressively an image were masked, the
+    sharper it would appear. The mask is additionally eroded before aggregation
+    so that genuine subject/background edges, which sit just inside the mask,
+    do not dominate either.
+    """
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     laplacian = cv2.Laplacian(gray, cv2.CV_64F)
-    variance = float(laplacian.var())
+
+    if mask is not None:
+        erosion = (
+            erosion_px if erosion_px is not None else DEFAULT_GUARDS.sharpness_erosion_px
+        )
+        interior = masked_pixels(mask, erosion)
+        values = laplacian[interior > 0]
+        if values.size < MIN_MASKED_PIXELS:
+            raise ImageValidationError(
+                f"only {values.size} pixels remain inside the eroded mask; "
+                f"at least {MIN_MASKED_PIXELS} are required"
+            )
+        variance = float(values.var())
+    else:
+        variance = float(laplacian.var())
     score = min(1.0, variance / policy.sharpness_reference_variance)
     return SharpnessMetrics(
         laplacian_variance=variance,
@@ -128,11 +179,22 @@ def measure_sharpness(image: np.ndarray, policy: ThresholdPolicy) -> SharpnessMe
 
 
 def measure_illumination(
-    image: np.ndarray, policy: ThresholdPolicy
+    image: np.ndarray, policy: ThresholdPolicy, mask: np.ndarray | None = None
 ) -> IlluminationMetrics:
-    """Exposure, contrast and clipping statistics on the CIELAB L* channel."""
+    """Exposure, contrast and clipping statistics on the CIELAB L* channel.
+
+    With a mask, every statistic is computed over the selected pixels only. That
+    is the whole point of the foreground work: a blown-out backdrop should not
+    count as highlight clipping on the produce.
+    """
     lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
-    luminance = lab[:, :, 0]
+    luminance = _selected(lab[:, :, 0], mask)
+
+    if luminance.size < (MIN_MASKED_PIXELS if mask is not None else 1):
+        raise ImageValidationError(
+            f"only {luminance.size} pixels selected; at least "
+            f"{MIN_MASKED_PIXELS} are required for masked measurement"
+        )
 
     total = float(luminance.size)
     low_p, high_p = np.percentile(
@@ -192,25 +254,36 @@ def derive_quality_flags(
 
 
 def assess_capture_quality(
-    image: np.ndarray, policy: ThresholdPolicy | None = None
+    image: np.ndarray,
+    policy: ThresholdPolicy | None = None,
+    mask: np.ndarray | None = None,
 ) -> PerceptionEvidence:
     """Assess whether a capture is suitable for automated inspection.
+
+    One implementation serves both scopes. Passing a mask restricts every metric
+    to the selected region and stamps the record `FOREGROUND_MASKED`; passing
+    none measures the whole frame and stamps `WHOLE_IMAGE`. There is deliberately
+    no second code path, so the two scopes cannot drift apart.
 
     Args:
         image: decoded BGR uint8 image. Not modified.
         policy: threshold policy; defaults to the provisional development policy.
+        mask: optional 2-D uint8 foreground mask, non-zero inside the subject.
 
     Returns:
         PerceptionEvidence with raw metrics, derived flags and provenance.
 
     Raises:
-        ImageValidationError: input is not an analysable image. Poor quality is
-            never an error — it is reported through flags.
+        ImageValidationError: input is not an analysable image, the mask does not
+            match it, or too few pixels remain to measure. Poor quality is never
+            an error — it is reported through flags.
     """
     policy = policy or DEFAULT_POLICY
     started = time.perf_counter()
 
     _validate(image, policy)
+    if mask is not None:
+        _validate_mask(image, mask)
 
     # Defensive copy: guarantees the caller's array cannot be touched, which is
     # what makes this safe to chain as an agent tool.
@@ -224,8 +297,8 @@ def assess_capture_quality(
         content_sha256=_content_hash(working),
     )
 
-    sharpness = measure_sharpness(working, policy)
-    illumination = measure_illumination(working, policy)
+    sharpness = measure_sharpness(working, policy, mask)
+    illumination = measure_illumination(working, policy, mask)
     flags = derive_quality_flags(properties, sharpness, illumination, policy)
 
     elapsed_ms = (time.perf_counter() - started) * 1000.0
@@ -239,6 +312,11 @@ def assess_capture_quality(
         pipeline_version=PIPELINE_VERSION,
         threshold_policy_fingerprint=policy.fingerprint(),
         threshold_policy_status=policy.status,
+        measurement_scope=(
+            MeasurementScope.FOREGROUND_MASKED.value
+            if mask is not None
+            else MeasurementScope.WHOLE_IMAGE.value
+        ),
         processing_ms=elapsed_ms,
     )
 

@@ -191,3 +191,154 @@ def test_gate_can_be_widened_by_policy(model):
     permissive = inspect_capture(blurred, model, blocking_flags=frozenset())
     assert permissive.outcome is InspectionOutcome.INSPECTED
     assert permissive.inference_ran
+
+
+# --- Phase 2b: foreground-restricted gating ----------------------------------
+
+
+def test_roi_gating_is_off_by_default():
+    """Documents a deliberate, evidence-based default so a silent flip is caught.
+
+    ROI measurement is correct; the thresholds are not yet calibrated for it.
+    """
+    from competition.agent.inspection import DEFAULT_INSPECTION_POLICY
+
+    assert DEFAULT_INSPECTION_POLICY.use_foreground_roi is False
+    assert DEFAULT_INSPECTION_POLICY.resegment_after_remediation is True
+
+
+@requires_artifact
+def test_default_gate_scope_is_whole_image(model):
+    result = inspect_capture(textured_object(), model)
+    assert result.gate_scope == "WHOLE_IMAGE"
+    assert result.foreground is None
+    assert result.roi_evidence is None
+
+
+# --- required test 20: background-only clipping stops blocking ---------------
+
+
+@requires_artifact
+def test_background_only_clipping_stops_blocking_under_roi_gating(model):
+    """The Phase 2 failure case, end to end.
+
+    A dark subject on a blown-out backdrop is blocked by whole-image
+    HIGHLIGHT_CLIPPING. With a valid mask, the clipping is revealed as
+    background-only and no longer blocks.
+    """
+    from competition.agent.inspection import InspectionPolicy
+    from competition.vision.fixtures import dark_subject_on_bright_background
+
+    image, _ = dark_subject_on_bright_background()
+
+    whole = inspect_capture(image, model)
+    assert "HIGHLIGHT_CLIPPING" in whole.blocking_flags
+
+    roi = inspect_capture(
+        image, model, inspection_policy=InspectionPolicy(use_foreground_roi=True)
+    )
+    assert roi.foreground is not None and roi.foreground.valid
+    assert roi.gate_scope == "FOREGROUND_MASKED"
+    assert "HIGHLIGHT_CLIPPING" not in roi.blocking_flags
+
+
+# --- required test 19: genuinely bad ROI quality still blocks ----------------
+
+
+@requires_artifact
+def test_genuinely_bad_roi_quality_still_blocks(model):
+    """Foreground restriction must not become a way to wave images through."""
+    from competition.agent.inspection import InspectionPolicy
+    from competition.vision.fixtures import dark_subject_on_bright_background
+
+    image, _ = dark_subject_on_bright_background()
+    blurred = gaussian_blur(image, 9.0)
+
+    result = inspect_capture(
+        blurred, model, inspection_policy=InspectionPolicy(use_foreground_roi=True)
+    )
+    assert result.outcome is InspectionOutcome.BLOCKED_CAPTURE_UNSUITABLE
+    assert not result.inference_ran
+    assert result.blocking_flags
+
+
+# --- required test 14: an invalid mask never produces trusted ROI evidence ---
+
+
+@requires_artifact
+def test_invalid_segmentation_does_not_produce_roi_evidence(model):
+    """Guards rejected the mask, so the gate must stay on whole-image evidence."""
+    from competition.agent.inspection import InspectionPolicy
+    from competition.vision.fixtures import multiple_disconnected_regions
+    from competition.vision.foreground import isolate_foreground
+
+    image, _ = multiple_disconnected_regions()
+    _, foreground = isolate_foreground(image)
+    assert not foreground.valid  # premise
+
+    result = inspect_capture(
+        image, model, inspection_policy=InspectionPolicy(use_foreground_roi=True)
+    )
+    assert result.foreground is not None
+    assert not result.foreground.valid
+    assert result.roi_evidence is None
+    assert result.gate_scope == "WHOLE_IMAGE"
+
+
+@requires_artifact
+def test_invalid_segmentation_is_recorded_in_the_trace(model):
+    from competition.agent.inspection import InspectionPolicy
+    from competition.vision.fixtures import multiple_disconnected_regions
+
+    image, _ = multiple_disconnected_regions()
+    result = inspect_capture(
+        image, model, inspection_policy=InspectionPolicy(use_foreground_roi=True)
+    )
+    steps = [s for s in result.remediation.trace.steps
+             if s.tool is TraceTool.ISOLATE_FOREGROUND]
+    assert steps
+    assert steps[0].outputs["valid"] is False
+    assert steps[0].outputs["invalid_reasons"]
+    assert steps[0].outputs["gate_scope"] == "WHOLE_IMAGE"
+
+
+# --- required test 15: the mask describes the image actually gated ----------
+
+
+@requires_artifact
+def test_segmentation_runs_on_the_canonical_image_after_remediation(model):
+    """Masks are unstable across tone changes, so the canonical image is segmented.
+
+    The recorded foreground hash must match the canonical image, never the
+    original input, whenever remediation was accepted.
+    """
+    from competition.agent.inspection import InspectionPolicy
+    from competition.models.adapter import array_fingerprint
+
+    dim = adjust_exposure(textured_object(), 0.5)
+    result = inspect_capture(
+        dim, model, inspection_policy=InspectionPolicy(use_foreground_roi=True)
+    )
+    if not result.remediation.remediation_accepted or result.foreground is None:
+        pytest.skip("no accepted remediation for this fixture")
+
+    assert result.foreground.input_sha256 == array_fingerprint(
+        result.remediation.canonical_image
+    )
+    assert result.foreground.input_sha256 != array_fingerprint(dim)
+
+
+@requires_artifact
+def test_roi_result_serialises_without_paths(model):
+    from competition.agent.inspection import InspectionPolicy
+    from competition.vision.fixtures import dark_subject_on_bright_background
+
+    image, _ = dark_subject_on_bright_background()
+    payload = json.dumps(
+        inspect_capture(
+            image, model, inspection_policy=InspectionPolicy(use_foreground_roi=True)
+        ).to_dict()
+    )
+    assert "/home/" not in payload
+    assert "/Users/" not in payload
+    assert '"gate_scope"' in payload

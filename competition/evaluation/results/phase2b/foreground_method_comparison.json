@@ -1,0 +1,50 @@
+{
+  "methods": {
+    "border_lab_distance": {
+      "images": 270,
+      "invalid_reasons": {
+        "EXCESSIVE_BORDER_CONTACT": 16,
+        "FOREGROUND_NEAR_FULL_FRAME": 3,
+        "MASK_FRAGMENTED": 4,
+        "NO_DOMINANT_COMPONENT": 24
+      },
+      "median_latency_ms": 14.982,
+      "p95_latency_ms": 23.916,
+      "validity_rate": 0.8593
+    },
+    "grabcut_rect": {
+      "images": 270,
+      "invalid_reasons": {},
+      "median_latency_ms": 690.83,
+      "p95_latency_ms": 3194.917,
+      "validity_rate": 1.0
+    },
+    "saturation_otsu": {
+      "images": 270,
+      "invalid_reasons": {
+        "MASK_FRAGMENTED": 4,
+        "ROI_TOO_SMALL_TO_MEASURE": 9
+      },
+      "median_latency_ms": 7.8,
+      "p95_latency_ms": 11.562,
+      "validity_rate": 0.9852
+    }
+  },
+  "run_context": {
+    "foreground_method_default": "saturation_otsu",
+    "guards": {
+      "max_border_contact_fraction": 0.6,
+      "max_component_count": 12,
+      "max_foreground_fraction": 0.92,
+      "min_bounding_box_side": 24,
+      "min_foreground_fraction": 0.03,
+      "min_largest_component_dominance": 0.65,
+      "sharpness_erosion_px": 5
+    },
+    "machine": "x86_64",
+    "opencv_version": "5.0.0",
+    "platform": "Linux",
+    "processor": "unknown",
+    "python_version": "3.11.2"
+  }
+}

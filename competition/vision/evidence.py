@@ -21,7 +21,18 @@ import json
 from dataclasses import asdict, dataclass, field
 from enum import Enum
 
-PIPELINE_VERSION = "phase1-capture-quality-1.0.0"
+PIPELINE_VERSION = "phase2b-capture-quality-1.1.0"
+
+
+class MeasurementScope(str, Enum):
+    """Region the capture-quality metrics were computed over.
+
+    Recorded on every record so whole-image and foreground-restricted evidence
+    can never be silently compared or conflated.
+    """
+
+    WHOLE_IMAGE = "WHOLE_IMAGE"
+    FOREGROUND_MASKED = "FOREGROUND_MASKED"
 
 
 class QualityFlag(str, Enum):
@@ -86,6 +97,7 @@ class PerceptionEvidence:
     pipeline_version: str
     threshold_policy_fingerprint: str
     threshold_policy_status: str
+    measurement_scope: str = MeasurementScope.WHOLE_IMAGE.value
     processing_ms: float = field(default=0.0)
 
     # -- serialisation -------------------------------------------------------

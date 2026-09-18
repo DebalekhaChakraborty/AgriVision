@@ -60,6 +60,11 @@ Two plan assumptions have been corrected by measurement:
   are dominated by bright backgrounds. Threshold calibration needs a development
   set drawn from the deployment domain — self-captured imagery
   ([DEMO_DATA_PLAN.md](DEMO_DATA_PLAN.md)).
+* **Capture-quality thresholds are scope-specific.** Phase 2b established that
+  whole-image and foreground-restricted measurement are not interchangeable: ROI
+  Laplacian variance is about 5% of the whole-image value because the latter was
+  dominated by the subject outline. Any threshold set must state the scope it was
+  calibrated for, and a separate ROI set is required before ROI gating is enabled.
 * **FruitVision is excluded from competition evaluation.** Its CC BY-NC-ND 4.0
   terms make competition-context use ambiguous. External-domain evaluation will
   use the CC BY 4.0 Sultana set and self-captured imagery.
@@ -93,6 +98,11 @@ Each perception metric is evaluated as a detector against the degradation sweep:
 ## 5. Localisation and segmentation metrics
 
 Valid only where ground truth exists, so scope is deliberately limited:
+
+Phase 2b status: IoU and Dice are measured on **synthetic** fixtures with
+constructed masks (mean IoU 0.905). No real-image segmentation IoU is reported,
+because no trustworthy manual masks exist; real-image behaviour is reported as
+validity rate and geometry distributions instead.
 
 - **Segmentation IoU / Dice** against a small manually annotated mask set
   (target ~100 images, annotation effort explicitly budgeted in Phase 6). If

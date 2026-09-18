@@ -1,0 +1,173 @@
+{
+  "by_method": {
+    "border_lab_distance": {
+      "clipping": {
+        "paired_images": 232,
+        "roi_highlight": {
+          "mean": 0.197689,
+          "median": 0.003844,
+          "p05": 0.0,
+          "p95": 0.681211
+        },
+        "roi_shadow": {
+          "mean": 0.002934,
+          "median": 6.6e-05,
+          "p05": 0.0,
+          "p95": 0.00415
+        },
+        "whole_highlight": {
+          "mean": 0.279747,
+          "median": 0.284643,
+          "p05": 0.000819,
+          "p95": 0.613583
+        },
+        "whole_shadow": {
+          "mean": 0.110915,
+          "median": 0.138914,
+          "p05": 0.0,
+          "p95": 0.2796
+        }
+      },
+      "images_considered": 270,
+      "roi_flag_rates_over_measured": {
+        "BLUR_RISK": 0.7931,
+        "HIGHLIGHT_CLIPPING": 0.4569,
+        "LOW_CONTRAST": 0.0603,
+        "OVEREXPOSED": 0.319,
+        "SHADOW_CLIPPING": 0.0129,
+        "UNDEREXPOSED": 0.0172
+      },
+      "roi_measured": 232,
+      "roi_restricted_blocked": 227,
+      "roi_restricted_blocked_rate": 0.8407,
+      "segmentation_valid": 232,
+      "whole_image_blocked": 261,
+      "whole_image_blocked_rate": 0.9667,
+      "whole_image_flag_rates": {
+        "BLUR_RISK": 0.1926,
+        "HIGHLIGHT_CLIPPING": 0.8,
+        "LOW_CONTRAST": 0.0111,
+        "OVEREXPOSED": 0.1333,
+        "SHADOW_CLIPPING": 0.6778
+      }
+    },
+    "grabcut_rect": {
+      "clipping": {
+        "paired_images": 270,
+        "roi_highlight": {
+          "mean": 0.034599,
+          "median": 4.7e-05,
+          "p05": 0.0,
+          "p95": 0.328539
+        },
+        "roi_shadow": {
+          "mean": 0.005862,
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.005621
+        },
+        "whole_highlight": {
+          "mean": 0.273583,
+          "median": 0.279124,
+          "p05": 0.000813,
+          "p95": 0.604093
+        },
+        "whole_shadow": {
+          "mean": 0.11388,
+          "median": 0.130963,
+          "p05": 0.0,
+          "p95": 0.282463
+        }
+      },
+      "images_considered": 270,
+      "roi_flag_rates_over_measured": {
+        "BLUR_RISK": 0.7704,
+        "HIGHLIGHT_CLIPPING": 0.0704,
+        "LOW_CONTRAST": 0.0556,
+        "OVEREXPOSED": 0.1259,
+        "SHADOW_CLIPPING": 0.0333
+      },
+      "roi_measured": 270,
+      "roi_restricted_blocked": 214,
+      "roi_restricted_blocked_rate": 0.7926,
+      "segmentation_valid": 270,
+      "whole_image_blocked": 261,
+      "whole_image_blocked_rate": 0.9667,
+      "whole_image_flag_rates": {
+        "BLUR_RISK": 0.1926,
+        "HIGHLIGHT_CLIPPING": 0.8,
+        "LOW_CONTRAST": 0.0111,
+        "OVEREXPOSED": 0.1333,
+        "SHADOW_CLIPPING": 0.6778
+      }
+    },
+    "saturation_otsu": {
+      "clipping": {
+        "paired_images": 257,
+        "roi_highlight": {
+          "mean": 0.000349,
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.003047
+        },
+        "roi_shadow": {
+          "mean": 0.008278,
+          "median": 0.0,
+          "p05": 0.0,
+          "p95": 0.011917
+        },
+        "whole_highlight": {
+          "mean": 0.278671,
+          "median": 0.282138,
+          "p05": 0.000782,
+          "p95": 0.604364
+        },
+        "whole_shadow": {
+          "mean": 0.115366,
+          "median": 0.132268,
+          "p05": 0.0,
+          "p95": 0.285288
+        }
+      },
+      "images_considered": 270,
+      "roi_flag_rates_over_measured": {
+        "BLUR_RISK": 0.8249,
+        "LOW_CONTRAST": 0.07,
+        "OVEREXPOSED": 0.0934,
+        "SHADOW_CLIPPING": 0.035,
+        "UNDEREXPOSED": 0.035
+      },
+      "roi_measured": 257,
+      "roi_restricted_blocked": 225,
+      "roi_restricted_blocked_rate": 0.8333,
+      "segmentation_valid": 266,
+      "whole_image_blocked": 261,
+      "whole_image_blocked_rate": 0.9667,
+      "whole_image_flag_rates": {
+        "BLUR_RISK": 0.1926,
+        "HIGHLIGHT_CLIPPING": 0.8,
+        "LOW_CONTRAST": 0.0111,
+        "OVEREXPOSED": 0.1333,
+        "SHADOW_CLIPPING": 0.6778
+      }
+    }
+  },
+  "hypothesis": "Whole-image clipping statistics are dominated by bright backgrounds, not by the produce.",
+  "run_context": {
+    "foreground_method_default": "saturation_otsu",
+    "guards": {
+      "max_border_contact_fraction": 0.6,
+      "max_component_count": 12,
+      "max_foreground_fraction": 0.92,
+      "min_bounding_box_side": 24,
+      "min_foreground_fraction": 0.03,
+      "min_largest_component_dominance": 0.65,
+      "sharpness_erosion_px": 5
+    },
+    "machine": "x86_64",
+    "opencv_version": "5.0.0",
+    "platform": "Linux",
+    "processor": "unknown",
+    "python_version": "3.11.2"
+  }
+}

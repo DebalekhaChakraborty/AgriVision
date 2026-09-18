@@ -17,7 +17,7 @@ Base commit: `3928d43b3bdd3a754f98f1f411596050de29da17`
 
 | # | Requirement | Proposed implementation | Evidence required | Planned artifact | Phase | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| A1 | Use OpenCV 5 for substantive image/video analysis | Perception layer plus `cv2.dnn` inference (Blueprint §12) | Source showing core OpenCV operations doing load-bearing work; per-metric tests; ablation | `competition/vision/`, `competition/models/`, `tests/competition/` | 1, 1b, 2 | IN PROGRESS — capture quality, remediation and ONNX inference through cv2.dnn done, 259 tests; segmentation and localisation outstanding |
+| A1 | Use OpenCV 5 for substantive image/video analysis | Perception layer plus `cv2.dnn` inference (Blueprint §12) | Source showing core OpenCV operations doing load-bearing work; per-metric tests; ablation | `competition/vision/`, `competition/models/`, `tests/competition/` | 1, 1b, 2, 2b | IN PROGRESS — capture quality, remediation, cv2.dnn inference and foreground isolation done, 312 tests; anomaly localisation outstanding |
 | A2 | Run a meaningful component on AWS | Container on App Runner (or Lambda container) running perception + agent loop; S3, DynamoDB, Bedrock, CloudWatch | Live endpoint; deployment logs; CloudWatch metrics | `infrastructure/aws/`, deployment guide | 4 | NOT STARTED |
 | A3 | Technical report | Written to Blueprint §34 outline | Complete report document | `docs/competition/TECHNICAL_REPORT.md` | 7 | NOT STARTED |
 | A4 | Judge-accessible code repository/archive | Public repository at the competition branch, plus tagged archive | Working clone URL; clean-checkout reproduction rehearsal | Repository + release archive | 7 | NOT STARTED |
@@ -26,7 +26,7 @@ Base commit: `3928d43b3bdd3a754f98f1f411596050de29da17`
 | A7 | Architecture diagram | Rendered diagram of the deployed system | Published image referenced by report and README | `docs/competition/architecture.*` | 4 | NOT STARTED |
 | A8 | Working endpoint or live demo | App Runner HTTPS endpoint with the demo UI | Reachable URL; the three demo scenarios reproducible | Deployed service, `competition/ui/` | 4→5 | NOT STARTED |
 | A9 | Video ≤5 minutes, judge-accessible | Recorded to Blueprint §33 storyboard | Hosted video under 5:00 | Video link in submission | 7 | NOT STARTED |
-| A10 | Evaluation evidence | Execute EVALUATION_PLAN.md | Committed metrics, figures, and the code that produced them | `competition/evaluation/`, results | 6 | IN PROGRESS — Phase 1 sweep, Phase 1b experiments, and Phase 2 inventory/benchmarks/parity/condition evaluation produced |
+| A10 | Evaluation evidence | Execute EVALUATION_PLAN.md | Committed metrics, figures, and the code that produced them | `competition/evaluation/`, results | 6 | IN PROGRESS — Phase 1, 1b, 2 and 2b evaluations produced |
 | A11 | Failure cases and limitations | Failure taxonomy and curated failure set (Blueprint §28) | Documented cases with expected vs observed behaviour | `docs/competition/FAILURE_ANALYSIS.md` | 6 | NOT STARTED |
 | A12 | Responsible use discussion | Claim boundary in UI, API response, report and video (Blueprint §31) | Boundary text present in all four surfaces | Report, UI, API schema | 5→7 | NOT STARTED |
 
