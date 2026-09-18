@@ -4,8 +4,9 @@
 
 This document is the single source of truth for the competition project. It is
 scoped to the `competition/opencv-aws-2026` branch and describes planned work.
-It contains no experimental results of its own. Every number quoted from prior
-research is attributed to the experiment that produced it.
+Numbers quoted from prior research are attributed to the experiment that
+produced them. Numbers from competition phases are attributed to the phase note
+that produced them and are reported separately from the V2 research results.
 
 | Field | Value |
 | --- | --- |
@@ -16,7 +17,7 @@ research is attributed to the experiment that produced it.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phase 0 — architecture and foundation only; no implementation |
+| Status | Phases 0, 1 and 1b complete — OpenCV 5 capture-quality perception and bounded evidence-driven remediation |
 
 ---
 
@@ -65,13 +66,17 @@ them and modifies none.
 | `master` | `3928d43` | V2 research programme, Experiments 001–015. |
 | `competition/opencv-aws-2026` | from `3928d43` | Competition work only. |
 
-Verified environment facts as of Phase 0:
+Verified environment facts:
 
-- `opencv-python==5.0.0.93` is installed in `.venv-v2` and imports as `cv2 5.0.0`.
-- `torch 2.13.0+cpu`, `torchvision 0.28.0+cpu`, `numpy 2.4.6`, `Pillow 12.3.0`.
-- The repository contains **no tests, no CI, and no packaging configuration**.
-- OpenCV is currently unused by any module in `src/` or `v2/src/`; it appears
-  only in the two requirements files and one V1 notebook.
+- `opencv-python==5.0.0.93` imports as `cv2 5.0.0`, in both `.venv-v2` and the
+  dedicated `.venv-competition` used by the competition line.
+- Research environment: `torch 2.13.0+cpu`, `torchvision 0.28.0+cpu`,
+  `numpy 2.4.6`, `Pillow 12.3.0`.
+- At Phase 0 the repository contained **no tests, no CI and no packaging
+  configuration**, and no module imported OpenCV. As of Phase 1b the competition
+  line carries **198 tests** and uses OpenCV substantively; the research tree is
+  unchanged and still has no tests of its own.
+- CI is still absent and remains outstanding.
 
 ## 4. Historical V1 assets available for reuse
 
@@ -602,6 +607,24 @@ this branch. Dates will be added only from the official schedule.
   controlled degradation and deterministic.
 - **Supports:** technical execution, innovation.
 
+### Phase 1b — Evidence-driven capture remediation *(complete)*
+- **Objective:** first explicit perception -> decision -> action -> re-perception
+  cycle, as a deterministic control substrate.
+- **Done:** OpenCV gamma and CLAHE on L* only; closed action enum; deterministic
+  policy; multi-metric acceptance with a harm guard; single-attempt bound;
+  structured JSON trace; exposure-coupling and blur x exposure experiments;
+  117 additional tests.
+- **Artifacts:** `competition/vision/enhancement.py`, `competition/agent/`,
+  `competition/evaluation/phase1b_remediation.py`,
+  [PHASE1B_CAPTURE_REMEDIATION.md](PHASE1B_CAPTURE_REMEDIATION.md).
+- **Exit:** met. Blur-verdict agreement with a well-exposed reference rose from
+  0.938 to 1.000 on a 16-cell synthetic grid (one corrected cell), and false
+  BLUR_RISK flags fell from 3 to 1 across the exposure ladder.
+- **Caveat:** remediation did **not** make sharpness exposure-invariant; CLAHE
+  and strong gamma inflate Laplacian variance and introduce a new confound.
+- **Supports:** technical execution; groundwork for Agentic Vision. **No Agentic
+  Vision Award claim is made at this phase.**
+
 ### Phase 2 — Condition model integration
 - **Objective:** select and wrap the model with calibrated uncertainty.
 - **Tasks:** candidate comparison on retention and footprint; calibration;
@@ -694,3 +717,4 @@ this branch. Dates will be added only from the official schedule.
 - [EVALUATION_PLAN.md](EVALUATION_PLAN.md)
 - [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md)
 - [PHASE1_OPENCV_PERCEPTION.md](PHASE1_OPENCV_PERCEPTION.md) — Phase 1 technical note
+- [PHASE1B_CAPTURE_REMEDIATION.md](PHASE1B_CAPTURE_REMEDIATION.md) — Phase 1b technical note

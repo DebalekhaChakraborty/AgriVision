@@ -1,0 +1,318 @@
+{
+  "action_parameters": {
+    "gamma": 0.3484276177217943
+  },
+  "attempts": 1,
+  "comparison": {
+    "deltas": {
+      "contrast_score": {
+        "after": 0.1411764705882353,
+        "before": 0.09803921568627451,
+        "delta": 0.043137254901960784,
+        "improved": true,
+        "metric": "contrast_score"
+      },
+      "highlight_clip_fraction": {
+        "after": 0.0,
+        "before": 0.0,
+        "delta": 0.0,
+        "improved": true,
+        "metric": "highlight_clip_fraction"
+      },
+      "laplacian_variance": {
+        "after": 159.18612670898438,
+        "before": 66.61398315429688,
+        "delta": 92.5721435546875,
+        "improved": true,
+        "metric": "laplacian_variance"
+      },
+      "luminance_distance": {
+        "after": 0.0,
+        "before": 0.1489102232689951,
+        "delta": -0.1489102232689951,
+        "improved": true,
+        "metric": "luminance_distance"
+      },
+      "mean_luminance": {
+        "after": 0.44131703096277575,
+        "before": 0.1010897767310049,
+        "delta": 0.34022725423177086,
+        "improved": true,
+        "metric": "mean_luminance"
+      },
+      "shadow_clip_fraction": {
+        "after": 0.0,
+        "before": 0.0,
+        "delta": 0.0,
+        "improved": true,
+        "metric": "shadow_clip_fraction"
+      }
+    },
+    "explanation": "Targeted metric luminance_distance met its criterion (reached the target band) with no guardrail violation.",
+    "guardrail_violations": [],
+    "improved_by_margin": true,
+    "reached_target_band": true,
+    "reason_code": "CAPTURE_ACCEPTABLE",
+    "target_improved": true,
+    "target_metric": "luminance_distance",
+    "verdict": "ACCEPT_REMEDIATION"
+  },
+  "decision": {
+    "action": "APPLY_GAMMA",
+    "automation_permitted": true,
+    "explanation": "Mean luminance 0.101 is outside the band [0.25, 0.8]; applying gamma 0.348 toward 0.45.",
+    "human_intervention_required": false,
+    "parameters": {
+      "gamma": 0.3484276177217943
+    },
+    "policy_fingerprint": "225b43230901b0eb",
+    "policy_version": "phase1b-remediation-policy-1.0.0",
+    "reason_code": "UNDEREXPOSED_RECOVERABLE",
+    "thresholds": {
+      "target_luminance": 0.45,
+      "target_luminance_max": 0.8,
+      "target_luminance_min": 0.25
+    },
+    "triggering_flags": [
+      "BLUR_RISK",
+      "UNDEREXPOSED",
+      "LOW_CONTRAST"
+    ],
+    "triggering_metrics": {
+      "contrast_score": 0.09803921568627451,
+      "highlight_clip_fraction": 0.0,
+      "laplacian_variance": 66.61398315429688,
+      "mean_luminance": 0.1010897767310049,
+      "shadow_clip_fraction": 0.0
+    }
+  },
+  "enhancement_metadata": {
+    "colour_space": "CIELAB L* only",
+    "enhancement_version": "phase1b-enhancement-1.0.0",
+    "opencv_version": "5.0.0",
+    "operation": "gamma_correction",
+    "parameters": {
+      "gamma": 0.3484276177217943
+    }
+  },
+  "escalation_reason": "RESIDUAL_QUALITY_FLAGS_AFTER_REMEDIATION",
+  "escalation_required": true,
+  "max_automated_attempts": 1,
+  "original_evidence": {
+    "illumination": {
+      "contrast_score": 0.09803921568627451,
+      "highlight_clip_fraction": 0.0,
+      "luminance_std": 0.04001752403229924,
+      "mean_luminance": 0.1010897767310049,
+      "median_luminance": 0.07058823529411765,
+      "shadow_clip_fraction": 0.0
+    },
+    "image": {
+      "channels": 3,
+      "content_sha256": "03f5a4a70a28dea7c7978a4c657e23bfda47fbdfb825cc48fbe6506fee2c7e97",
+      "height": 256,
+      "width": 256
+    },
+    "opencv_version": "5.0.0",
+    "pipeline_version": "phase1-capture-quality-1.0.0",
+    "quality_flags": [
+      "BLUR_RISK",
+      "UNDEREXPOSED",
+      "LOW_CONTRAST"
+    ],
+    "sharpness": {
+      "laplacian_variance": 66.61398315429688,
+      "sharpness_score": 0.06661398315429687
+    },
+    "threshold_policy_fingerprint": "e6bd2bee4f852f37",
+    "threshold_policy_status": "PROVISIONAL_DEVELOPMENT_ONLY"
+  },
+  "remediated_evidence": {
+    "illumination": {
+      "contrast_score": 0.1411764705882353,
+      "highlight_clip_fraction": 0.0,
+      "luminance_std": 0.05888193022406358,
+      "mean_luminance": 0.44131703096277575,
+      "median_luminance": 0.396078431372549,
+      "shadow_clip_fraction": 0.0
+    },
+    "image": {
+      "channels": 3,
+      "content_sha256": "af26ff5035f388f1084bdcbe27b3aadb3f7a3645c4bbc4d59bf117e341af4574",
+      "height": 256,
+      "width": 256
+    },
+    "opencv_version": "5.0.0",
+    "pipeline_version": "phase1-capture-quality-1.0.0",
+    "quality_flags": [
+      "LOW_CONTRAST"
+    ],
+    "sharpness": {
+      "laplacian_variance": 159.18612670898438,
+      "sharpness_score": 0.15918612670898438
+    },
+    "threshold_policy_fingerprint": "e6bd2bee4f852f37",
+    "threshold_policy_status": "PROVISIONAL_DEVELOPMENT_ONLY"
+  },
+  "remediation_accepted": true,
+  "remediation_attempted": true,
+  "remediation_version": "phase1b-remediation-1.0.0",
+  "trace": {
+    "step_count": 6,
+    "steps": [
+      {
+        "inputs": {
+          "image_sha256": "03f5a4a70a28dea7c7978a4c657e23bfda47fbdfb825cc48fbe6506fee2c7e97"
+        },
+        "outputs": {
+          "contrast_score": 0.09803921568627451,
+          "highlight_clip_fraction": 0.0,
+          "laplacian_variance": 66.61398315429688,
+          "mean_luminance": 0.1010897767310049,
+          "quality_flags": [
+            "BLUR_RISK",
+            "UNDEREXPOSED",
+            "LOW_CONTRAST"
+          ],
+          "shadow_clip_fraction": 0.0
+        },
+        "step": 1,
+        "summary": "Initial capture-quality assessment.",
+        "tool": "assess_capture_quality"
+      },
+      {
+        "inputs": {
+          "quality_flags": [
+            "BLUR_RISK",
+            "UNDEREXPOSED",
+            "LOW_CONTRAST"
+          ],
+          "triggering_metrics": {
+            "contrast_score": 0.09803921568627451,
+            "highlight_clip_fraction": 0.0,
+            "laplacian_variance": 66.61398315429688,
+            "mean_luminance": 0.1010897767310049,
+            "shadow_clip_fraction": 0.0
+          }
+        },
+        "outputs": {
+          "action": "APPLY_GAMMA",
+          "automation_permitted": true,
+          "human_intervention_required": false,
+          "parameters": {
+            "gamma": 0.3484276177217943
+          },
+          "policy_fingerprint": "225b43230901b0eb",
+          "reason_code": "UNDEREXPOSED_RECOVERABLE"
+        },
+        "step": 2,
+        "summary": "Mean luminance 0.101 is outside the band [0.25, 0.8]; applying gamma 0.348 toward 0.45.",
+        "tool": "decide_capture_remediation"
+      },
+      {
+        "inputs": {
+          "parameters": {
+            "gamma": 0.3484276177217943
+          }
+        },
+        "outputs": {
+          "colour_space": "CIELAB L* only"
+        },
+        "step": 3,
+        "summary": "Applied gamma_correction on the L* channel.",
+        "tool": "apply_gamma_correction"
+      },
+      {
+        "inputs": {
+          "image_sha256": "af26ff5035f388f1084bdcbe27b3aadb3f7a3645c4bbc4d59bf117e341af4574"
+        },
+        "outputs": {
+          "contrast_score": 0.1411764705882353,
+          "highlight_clip_fraction": 0.0,
+          "laplacian_variance": 159.18612670898438,
+          "mean_luminance": 0.44131703096277575,
+          "quality_flags": [
+            "LOW_CONTRAST"
+          ],
+          "shadow_clip_fraction": 0.0
+        },
+        "step": 4,
+        "summary": "Re-assessment of the remediated capture.",
+        "tool": "assess_capture_quality"
+      },
+      {
+        "inputs": {
+          "target_metric": "luminance_distance"
+        },
+        "outputs": {
+          "deltas": {
+            "contrast_score": {
+              "after": 0.1411764705882353,
+              "before": 0.09803921568627451,
+              "delta": 0.043137254901960784,
+              "improved": true,
+              "metric": "contrast_score"
+            },
+            "highlight_clip_fraction": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0,
+              "improved": true,
+              "metric": "highlight_clip_fraction"
+            },
+            "laplacian_variance": {
+              "after": 159.18612670898438,
+              "before": 66.61398315429688,
+              "delta": 92.5721435546875,
+              "improved": true,
+              "metric": "laplacian_variance"
+            },
+            "luminance_distance": {
+              "after": 0.0,
+              "before": 0.1489102232689951,
+              "delta": -0.1489102232689951,
+              "improved": true,
+              "metric": "luminance_distance"
+            },
+            "mean_luminance": {
+              "after": 0.44131703096277575,
+              "before": 0.1010897767310049,
+              "delta": 0.34022725423177086,
+              "improved": true,
+              "metric": "mean_luminance"
+            },
+            "shadow_clip_fraction": {
+              "after": 0.0,
+              "before": 0.0,
+              "delta": 0.0,
+              "improved": true,
+              "metric": "shadow_clip_fraction"
+            }
+          },
+          "guardrail_violations": [],
+          "reason_code": "CAPTURE_ACCEPTABLE",
+          "target_improved": true,
+          "verdict": "ACCEPT_REMEDIATION"
+        },
+        "step": 5,
+        "summary": "Targeted metric luminance_distance met its criterion (reached the target band) with no guardrail violation.",
+        "tool": "compare_capture_quality"
+      },
+      {
+        "inputs": {},
+        "outputs": {
+          "canonical": "remediated",
+          "escalation_required": true,
+          "remediation_accepted": true,
+          "residual_flags": [
+            "LOW_CONTRAST"
+          ]
+        },
+        "step": 6,
+        "summary": "Remediation accepted; remediated capture is canonical. Residual flags remain, so review is requested.",
+        "tool": "finalise"
+      }
+    ],
+    "trace_version": "phase1b-trace-1.0.0"
+  }
+}
