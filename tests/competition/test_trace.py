@@ -62,6 +62,8 @@ def test_tool_vocabulary_is_closed():
         "apply_gamma_correction",
         "apply_clahe",
         "compare_capture_quality",
+        "inspection_gate",
+        "predict_condition",
         "finalise",
     }
 

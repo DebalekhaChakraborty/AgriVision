@@ -1,0 +1,33 @@
+{
+  "data_boundary": "Local research images read in place. No image bytes are stored or committed. FruitVision (CC BY-NC-ND 4.0) is excluded from competition evaluation as ambiguous.",
+  "gated": {
+    "accuracy_on_inferred": 0.9167,
+    "arm": "gated",
+    "block_rate": 0.9697,
+    "correct": 11,
+    "images_blocked": 384,
+    "images_considered": 396,
+    "images_inferred": 12,
+    "note": "Accuracy is computed over images the arm actually inferred. In the gated arm this is a biased subset by construction and is not comparable with the research figure."
+  },
+  "run_context": {
+    "machine": "x86_64",
+    "opencv_version": "5.0.0",
+    "platform": "Linux",
+    "preprocessing_version": "phase2-imagenet-eval-1.0.0",
+    "processor": "unknown",
+    "python_version": "3.11.2"
+  },
+  "sample_seed": 42,
+  "source": "v2/data/processed/v1_frozen_split/test (Kaggle, licence Unknown, local use only)",
+  "ungated": {
+    "accuracy_on_inferred": 0.947,
+    "arm": "ungated",
+    "block_rate": 0.0,
+    "correct": 375,
+    "images_blocked": 0,
+    "images_considered": 396,
+    "images_inferred": 396,
+    "note": "Accuracy is computed over images the arm actually inferred. In the gated arm this is a biased subset by construction and is not comparable with the research figure."
+  }
+}

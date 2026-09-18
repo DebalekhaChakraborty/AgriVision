@@ -1,0 +1,53 @@
+{
+  "claim_boundary": "Predicts visible surface condition only. Not a food-safety, edibility, contamination or internal-spoilage assessment.",
+  "class_names": [
+    "fresh_apple",
+    "fresh_banana",
+    "fresh_orange",
+    "rotten_apple",
+    "rotten_banana",
+    "rotten_orange"
+  ],
+  "export_note": "Build product derived from a gitignored research checkpoint. Not committed: the source dataset licence is recorded as Unknown with no redistribution grant, and this repository excludes trained weights from version control.",
+  "feature_dim": 960,
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "model_family": "mobilenet_v3_large",
+  "model_id": "mobilenet_v3_large-v2expV2-P2-MOBILENETV3-LARGE-004",
+  "model_version": "V2-P2-MOBILENETV3-LARGE-004",
+  "num_classes": 6,
+  "onnx_bytes": 11906184,
+  "onnx_sha256_prefix": "77d8614671873cb41ebfd725f0a4b468",
+  "opset_version": 17,
+  "source_checkpoint_name": "best_mobilenetv3.pt",
+  "source_checkpoint_sha256_prefix": "ee4c1b3c5561041d635ae6726d11c5eb",
+  "source_experiment_id": "V2-P2-MOBILENETV3-LARGE-004",
+  "source_preprocessing": {
+    "evaluation_resize_size": 256,
+    "image_size": 224,
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "train_augmentation": {
+      "color_jitter": {
+        "brightness": 0.1,
+        "contrast": 0.1,
+        "hue": 0.02,
+        "saturation": 0.1
+      },
+      "horizontal_flip_probability": 0.5,
+      "rotation_degrees": 10
+    }
+  }
+}

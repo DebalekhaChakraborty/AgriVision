@@ -47,3 +47,7 @@ aws.json
 credentials
 secrets.json
 .venv-competition/
+
+# Exported model graphs are build products derived from gitignored research
+# checkpoints; the manifest is committed, the weights are not.
+*.onnx

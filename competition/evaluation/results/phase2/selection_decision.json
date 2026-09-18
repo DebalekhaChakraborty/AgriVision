@@ -1,0 +1,85 @@
+{
+  "decision": "MobileNetV3-Large (V2 Experiment 004), exported to ONNX and executed through cv2.dnn",
+  "decision_version": "phase2-selection-1.0.0",
+  "framing": "Selected for the competition runtime. This is not a claim that it is the best model in general; SigLIP2 zero-shot is measurably better out of domain and was not selected.",
+  "selected": {
+    "name": "MobileNetV3-Large",
+    "family": "mobilenet_v3_large",
+    "source_experiment": "V2-P2-MOBILENETV3-LARGE-004",
+    "runtime": "opencv_dnn",
+    "artifact_bytes": 11906184,
+    "artifact_mb": 11.35,
+    "serving_dependencies": ["opencv-python", "numpy"],
+    "torch_required_at_serving": false
+  },
+  "rationale": [
+    "Serving needs no deep-learning framework. The ONNX graph runs through cv2.dnn, so the deployment image carries opencv-python and numpy instead of torch, torchvision or transformers. That is the single largest container-size lever available, and it removes an entire dependency class from the attack and maintenance surface.",
+    "Smallest deployable artifact with acceptable behaviour: 11.35 MB, against 1431 MB for the SigLIP2 encoder that the best out-of-domain candidate requires.",
+    "Best worst-external accuracy among the self-contained CNNs (70.4%, against 69.3% for ResNet50 and 68.8% for EfficientNet-B0), which is the criterion that matters for a deployed inspector meeting unfamiliar captures.",
+    "Parity with the framework-native reference is measured, not assumed: 200/200 predicted classes agree with torch plus torchvision preprocessing.",
+    "Running inference through OpenCV deepens substantive OpenCV 5 usage in a competition judged on exactly that, rather than confining OpenCV to pre- and post-processing."
+  ],
+  "rejected": [
+    {
+      "name": "SigLIP2 strict zero-shot",
+      "in_domain_accuracy": 0.979,
+      "worst_external_accuracy": 0.863,
+      "reason": "The accuracy-optimal choice, deliberately not taken. Requires a 1431 MB encoder plus transformers and torch at serving time — roughly 126x the selected artifact — and cannot be executed through cv2.dnn. The out-of-domain advantage is real and is recorded as a limitation of the selection, not dismissed."
+    },
+    {
+      "name": "SigLIP2 + linear probe",
+      "in_domain_accuracy": 0.986,
+      "worst_external_accuracy": 0.735,
+      "reason": "Probe is ~20 KB but inherits the same 1431 MB encoder and dependency burden for lower external retention than SigLIP2 zero-shot."
+    },
+    {
+      "name": "EfficientNet-B0",
+      "in_domain_accuracy": 0.9455,
+      "worst_external_accuracy": 0.688,
+      "reason": "1.5 points better in domain but 1.6 points worse on the worst external domain, and a larger artifact. In-domain accuracy is not the deciding criterion."
+    },
+    {
+      "name": "ResNet50",
+      "in_domain_accuracy": 0.9418,
+      "worst_external_accuracy": 0.693,
+      "reason": "Roughly eight times the weights of the selected model for lower worst-external accuracy."
+    },
+    {
+      "name": "DINOv2 + linear probe",
+      "worst_external_accuracy": 0.664,
+      "reason": "330 MB encoder plus transformers, for worse external behaviour than the selected 11 MB model."
+    },
+    {
+      "name": "CLIP + linear probe",
+      "worst_external_accuracy": 0.552,
+      "reason": "571 MB encoder and the weakest external retention of the foundation probes."
+    },
+    {
+      "name": "Custom CNN (V2 baseline)",
+      "in_domain_accuracy": 0.7409,
+      "worst_external_accuracy": 0.346,
+      "reason": "Collapses out of domain. Small, but smallness does not compensate for 34.6% worst-external accuracy."
+    },
+    {
+      "name": "V1 Keras CNN (2018)",
+      "reason": "Requires TensorFlow 1.12 on CPython 3.6.7, which cannot coexist with the Python 3.11 competition runtime. Retained as a historical reported figure only."
+    }
+  ],
+  "accepted_tradeoff": "A deployable 11 MB model that holds 70.4% on its worst external domain was preferred over a 1431 MB one that holds 86.3%. The gap is material and is stated openly: the selected model is more likely to be wrong on unfamiliar produce photography, which is precisely why the capture gate and the escalation path exist.",
+  "revisit_if": [
+    "Container size or cold start turns out not to be the binding constraint on the chosen AWS runtime.",
+    "A distilled or quantised foundation encoder becomes exportable to ONNX at a size comparable to the selected model.",
+    "Measured external performance on self-captured competition imagery diverges materially from the Experiment 014 figures."
+  ],
+  "evidence_sources": [
+    "v2/results/experiment_014_multi_domain/multi_domain_summary.json",
+    "v2/results/experiment_002/metrics.json",
+    "v2/results/experiment_003/metrics.json",
+    "v2/results/experiment_004/metrics.json",
+    "v2/results/baseline_test_metrics.json",
+    "competition/evaluation/results/phase2/runtime_benchmarks.json",
+    "competition/evaluation/results/phase2/parity_results.json",
+    "competition/evaluation/results/phase2/condition_eval.json"
+  ],
+  "claim_boundary": "The selected model predicts visible surface condition across three fruit types. It makes no food-safety, edibility, contamination or internal-spoilage claim."
+}

@@ -1,0 +1,36 @@
+{
+  "run_context": {
+    "machine": "x86_64",
+    "opencv_version": "5.0.0",
+    "platform": "Linux",
+    "preprocessing_version": "phase2-imagenet-eval-1.0.0",
+    "processor": "unknown",
+    "python_version": "3.11.2"
+  },
+  "vs_framework_reference": {
+    "candidate": "OpenCV preprocessing + cv2.dnn ONNX inference",
+    "class_agreement": 1.0,
+    "images_compared": 200,
+    "max_abs_logit_diff_mean": 0.087965,
+    "max_abs_logit_diff_worst": 0.560743,
+    "max_abs_prob_diff_mean": 0.012881,
+    "max_abs_prob_diff_worst": 0.158148,
+    "note": "Per-pixel preprocessing divergence is large because PIL antialiases when downscaling and OpenCV does not. What matters is whether predictions change, and they do not.",
+    "passes_tolerances": true,
+    "preprocessing_tensor_diff_mean": 1.1034,
+    "preprocessing_tensor_diff_worst": 3.3438,
+    "reference": "torch 2.13.0+cpu + torchvision preprocessing (PIL)",
+    "status": "MEASURED",
+    "tolerances_fixed_before_measurement": {
+      "max_mean_prob_diff": 0.05,
+      "min_class_agreement": 0.99
+    }
+  },
+  "vs_onnxruntime": {
+    "class_agreement": 1.0,
+    "images_compared": 200,
+    "max_abs_logit_diff_mean": 2.93e-06,
+    "max_abs_logit_diff_worst": 1.907e-05,
+    "status": "MEASURED"
+  }
+}

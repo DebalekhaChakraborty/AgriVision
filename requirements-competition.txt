@@ -26,6 +26,9 @@
 # VERIFIED — installed and exercised in .venv-competition
 # ---------------------------------------------------------------------------
 
+# Needed for the CPU torch wheels in the build-time section below.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 # OpenCV 5. Confirmed: imports as cv2 5.0.0. Phase 1 exercises cvtColor
 # (BGR2GRAY, BGR2LAB), Laplacian, GaussianBlur, convertScaleAbs, circle,
 # rectangle and imread/imwrite.
@@ -47,12 +50,20 @@ pytest==9.1.1
 matplotlib==3.11.2
 
 # ---------------------------------------------------------------------------
-# VERIFIED in .venv-v2, but include only if the selected condition model
-# requires them. Phase 2 decides. Torch CPU is a large container dependency and
-# a smaller exported model may remove the need entirely.
+# BUILD-TIME ONLY - required to export a research checkpoint to ONNX and to
+# verify parity against the framework-native reference. These MUST NOT enter
+# the deployment image: Phase 2 established that inference runs through
+# cv2.dnn, so serving needs only opencv-python and numpy above.
+#
+# torch appears only in competition/models/export.py (build-time export) and
+# competition/evaluation/phase2_selection.py (parity check). Neither is in the
+# serving path; the adapter and agent modules do not import it.
+# The CPU wheel index is declared at the top of this file.
 # ---------------------------------------------------------------------------
-# torch==2.13.0+cpu          # requires --extra-index-url https://download.pytorch.org/whl/cpu
-# torchvision==0.28.0+cpu
+torch==2.13.0+cpu
+torchvision==0.28.0+cpu
+onnx==1.23.0
+onnxruntime==1.30.0
 
 # ---------------------------------------------------------------------------
 # UNRESOLVED — required by the planned architecture but not yet installed or

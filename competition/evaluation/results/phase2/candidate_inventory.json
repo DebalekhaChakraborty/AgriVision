@@ -1,0 +1,255 @@
+{
+  "candidates": [
+    {
+      "checkpoint": "v2/checkpoints/best_mobilenetv3.pt",
+      "checkpoint_mb": 11.56,
+      "export_plausible": true,
+      "external": {
+        "evidence_source": "v2/results/experiment_014_multi_domain/multi_domain_summary.json",
+        "mean_external_accuracy": 0.7056018518518519,
+        "source_accuracy": 0.9303187546330616,
+        "worst_external_accuracy": 0.7037037037037037,
+        "worst_external_retention": 0.7564113914711524
+      },
+      "family": "mobilenet_v3_large",
+      "framework_dependencies": [
+        "torch",
+        "torchvision"
+      ],
+      "in_domain": {
+        "accuracy": 0.9303187546330616,
+        "evidence_source": "v2/results/experiment_004/metrics.json",
+        "samples": 2698
+      },
+      "inference_approach": "frozen ImageNet backbone + linear head",
+      "name": "MobileNetV3-Large",
+      "notes": "Smallest self-contained candidate.",
+      "opencv_dnn_plausible": true,
+      "runtime_weight_mb": 11.56
+    },
+    {
+      "checkpoint": "v2/checkpoints/best_efficientnet.pt",
+      "checkpoint_mb": 15.6,
+      "export_plausible": true,
+      "external": {
+        "evidence_source": "v2/results/experiment_014_multi_domain/multi_domain_summary.json",
+        "mean_external_accuracy": 0.6952434289127838,
+        "source_accuracy": 0.9455151964418087,
+        "worst_external_accuracy": 0.6875,
+        "worst_external_retention": 0.7271168169345356
+      },
+      "family": "efficientnet_b0",
+      "framework_dependencies": [
+        "torch",
+        "torchvision"
+      ],
+      "in_domain": {
+        "accuracy": 0.9455151964418087,
+        "evidence_source": "v2/results/experiment_003/metrics.json",
+        "samples": 2698
+      },
+      "inference_approach": "frozen ImageNet backbone + linear head",
+      "name": "EfficientNet-B0",
+      "notes": "Best in-domain of the small CNNs.",
+      "opencv_dnn_plausible": true,
+      "runtime_weight_mb": 15.6
+    },
+    {
+      "checkpoint": "v2/checkpoints/best_resnet50.pt",
+      "checkpoint_mb": 90.03,
+      "export_plausible": true,
+      "external": {
+        "evidence_source": "v2/results/experiment_014_multi_domain/multi_domain_summary.json",
+        "mean_external_accuracy": 0.7276702508960573,
+        "source_accuracy": 0.9418087472201631,
+        "worst_external_accuracy": 0.6933333333333334,
+        "worst_external_retention": 0.7361721107175653
+      },
+      "family": "resnet50",
+      "framework_dependencies": [
+        "torch",
+        "torchvision"
+      ],
+      "in_domain": {
+        "accuracy": 0.9418087472201631,
+        "evidence_source": "v2/results/experiment_002/metrics.json",
+        "samples": 2698
+      },
+      "inference_approach": "frozen ImageNet backbone + linear head",
+      "name": "ResNet50",
+      "notes": "8x the weights of MobileNetV3 for lower worst-external accuracy.",
+      "opencv_dnn_plausible": true,
+      "runtime_weight_mb": 90.03
+    },
+    {
+      "checkpoint": "v2/checkpoints/best_model.pt",
+      "checkpoint_mb": 18.43,
+      "export_plausible": true,
+      "external": {
+        "evidence_source": "v2/results/experiment_014_multi_domain/multi_domain_summary.json",
+        "mean_external_accuracy": 0.36765979689366785,
+        "source_accuracy": 0.7409191994069682,
+        "worst_external_accuracy": 0.3458333333333333,
+        "worst_external_retention": 0.46676254794063693
+      },
+      "family": "custom_cnn",
+      "framework_dependencies": [
+        "torch"
+      ],
+      "in_domain": {
+        "accuracy": 0.7409191994069682,
+        "evidence_source": "v2/results/baseline_test_metrics.json",
+        "samples": 2698
+      },
+      "inference_approach": "trained from scratch",
+      "name": "Custom CNN (V2 baseline)",
+      "notes": "Rejected on performance: worst external accuracy 34.6%.",
+      "opencv_dnn_plausible": true,
+      "runtime_weight_mb": 18.43
+    },
+    {
+      "checkpoint": "v2/checkpoints/experiment_005_linear_probe.pt",
+      "checkpoint_mb": 0.02,
+      "export_plausible": false,
+      "external": {
+        "evidence_source": "v2/results/experiment_014_multi_domain/multi_domain_summary.json",
+        "mean_external_accuracy": 0.6727329749103943,
+        "source_accuracy": 0.890659747961453,
+        "worst_external_accuracy": 0.6637992831541218,
+        "worst_external_retention": 0.7452894157094551
+      },
+      "family": "dinov2_linear_probe",
+      "framework_dependencies": [
+        "torch",
+        "transformers",
+        "huggingface-hub"
+      ],
+      "in_domain": {
+        "accuracy": 0.890659747961453,
+        "evidence_source": "v2/results/experiment_005/test_metrics.json",
+        "samples": 2698
+      },
+      "inference_approach": "frozen foundation encoder + linear probe",
+      "name": "DINOv2 + linear probe",
+      "notes": "Probe is ~20 KB but requires the full encoder at runtime.",
+      "opencv_dnn_plausible": false,
+      "runtime_weight_mb": 330.3
+    },
+    {
+      "checkpoint": "v2/checkpoints/experiment_006_linear_probe.pt",
+      "checkpoint_mb": 0.01,
+      "export_plausible": false,
+      "external": {
+        "evidence_source": "v2/results/experiment_014_multi_domain/multi_domain_summary.json",
+        "mean_external_accuracy": 0.5812246117084827,
+        "source_accuracy": 0.9584877687175686,
+        "worst_external_accuracy": 0.5524492234169653,
+        "worst_external_retention": 0.5763758719176227
+      },
+      "family": "clip_linear_probe",
+      "framework_dependencies": [
+        "torch",
+        "open-clip-torch",
+        "timm"
+      ],
+      "in_domain": {
+        "accuracy": 0.9584877687175686,
+        "evidence_source": "v2/results/experiment_006/test_metrics.json",
+        "samples": 2698
+      },
+      "inference_approach": "frozen foundation encoder + linear probe",
+      "name": "CLIP + linear probe",
+      "notes": "Worst external retention of the foundation probes.",
+      "opencv_dnn_plausible": false,
+      "runtime_weight_mb": 570.8
+    },
+    {
+      "checkpoint": "v2/checkpoints/experiment_007_linear_probe.pt",
+      "checkpoint_mb": 0.02,
+      "export_plausible": false,
+      "external": {
+        "evidence_source": "v2/results/experiment_014_multi_domain/multi_domain_summary.json",
+        "mean_external_accuracy": 0.7813724611708484,
+        "source_accuracy": 0.986286137879911,
+        "worst_external_accuracy": 0.7352449223416966,
+        "worst_external_retention": 0.7454681700405477
+      },
+      "family": "siglip2_linear_probe",
+      "framework_dependencies": [
+        "torch",
+        "transformers"
+      ],
+      "in_domain": {
+        "accuracy": 0.986286137879911,
+        "evidence_source": "v2/results/experiment_007/test_metrics.json",
+        "samples": 2698
+      },
+      "inference_approach": "frozen foundation encoder + linear probe",
+      "name": "SigLIP2 + linear probe",
+      "notes": "Strong, but the encoder alone is over 1.4 GB.",
+      "opencv_dnn_plausible": false,
+      "runtime_weight_mb": 1431.3
+    },
+    {
+      "checkpoint": null,
+      "checkpoint_mb": null,
+      "export_plausible": false,
+      "external": {
+        "evidence_source": "v2/results/experiment_014_multi_domain/multi_domain_summary.json",
+        "mean_external_accuracy": 0.8852912186379929,
+        "source_accuracy": 0.9788732394366197,
+        "worst_external_accuracy": 0.8630824372759857,
+        "worst_external_retention": 0.881710115778345
+      },
+      "family": "siglip2_strict_zero_shot",
+      "framework_dependencies": [
+        "torch",
+        "transformers"
+      ],
+      "in_domain": {
+        "accuracy": 0.9696071163825055,
+        "evidence_source": "v2/results/experiment_009/selected_prompt_test_metrics.json",
+        "samples": 2698
+      },
+      "inference_approach": "text-prompt similarity, no trained head",
+      "name": "SigLIP2 strict zero-shot",
+      "notes": "Best out-of-domain retention in Experiment 014; heaviest to deploy.",
+      "opencv_dnn_plausible": false,
+      "runtime_weight_mb": 1431.3
+    },
+    {
+      "checkpoint": "model/fruit_freshness_cnn.h5",
+      "checkpoint_mb": 55.31,
+      "export_plausible": false,
+      "external": {},
+      "family": "v1_keras_cnn",
+      "framework_dependencies": [
+        "tensorflow==1.12.0",
+        "Keras==2.2.4",
+        "python3.6"
+      ],
+      "in_domain": {
+        "evidence_source": "README.md / legacy branch"
+      },
+      "inference_approach": "historical reference only",
+      "name": "V1 Keras CNN (2018)",
+      "notes": "Excluded: incompatible runtime, cannot coexist with Python 3.11.",
+      "opencv_dnn_plausible": false,
+      "runtime_weight_mb": 55.31
+    }
+  ],
+  "evidence_note": "In-domain and external figures are read from committed research artifacts. No research file is modified.",
+  "foundation_encoder_sizes_mb": {
+    "clip-vit-b16": 570.8,
+    "dinov2-base": 330.3,
+    "siglip2-base": 1431.3
+  },
+  "run_context": {
+    "machine": "x86_64",
+    "opencv_version": "5.0.0",
+    "platform": "Linux",
+    "preprocessing_version": "phase2-imagenet-eval-1.0.0",
+    "processor": "unknown",
+    "python_version": "3.11.2"
+  }
+}

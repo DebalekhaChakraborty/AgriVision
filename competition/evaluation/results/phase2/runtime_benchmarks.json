@@ -1,0 +1,40 @@
+{
+  "artifact_bytes": 11906184,
+  "run_context": {
+    "machine": "x86_64",
+    "opencv_version": "5.0.0",
+    "platform": "Linux",
+    "preprocessing_version": "phase2-imagenet-eval-1.0.0",
+    "processor": "unknown",
+    "python_version": "3.11.2"
+  },
+  "runtimes": [
+    {
+      "cold_load_ms": 166.572,
+      "input_resolution": "224x224",
+      "runtime": "opencv_dnn",
+      "sample_count": 100,
+      "scope": "LOCAL_CPU_ONLY - not an AWS or deployed-endpoint measurement",
+      "warm_inference_max_ms": 42.711,
+      "warm_inference_mean_ms": 19.494,
+      "warm_inference_median_ms": 17.519,
+      "warm_inference_min_ms": 10.69,
+      "warm_inference_p95_ms": 32.18,
+      "warmup_discarded": 5
+    },
+    {
+      "cold_load_ms": 483.193,
+      "input_resolution": "224x224",
+      "runtime": "onnxruntime",
+      "sample_count": 100,
+      "scope": "LOCAL_CPU_ONLY - not an AWS or deployed-endpoint measurement",
+      "warm_inference_max_ms": 34.959,
+      "warm_inference_mean_ms": 13.896,
+      "warm_inference_median_ms": 12.304,
+      "warm_inference_min_ms": 9.122,
+      "warm_inference_p95_ms": 21.188,
+      "warmup_discarded": 5
+    }
+  ],
+  "scope": "LOCAL_CPU_ONLY - not an AWS or deployed-endpoint measurement"
+}

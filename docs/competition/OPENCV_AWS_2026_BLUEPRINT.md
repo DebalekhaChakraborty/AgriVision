@@ -17,7 +17,7 @@ that produced them and are reported separately from the V2 research results.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phases 0, 1 and 1b complete — OpenCV 5 capture-quality perception and bounded evidence-driven remediation |
+| Status | Phases 0, 1, 1b and 2 complete — OpenCV 5 capture-quality perception, bounded evidence-driven remediation, and a gated condition model served through cv2.dnn |
 
 ---
 
@@ -263,6 +263,9 @@ Six classes, unchanged from the research taxonomy: `fresh_apple`,
 Candidate condition models, to be selected in Phase 2 against the criteria
 below — accuracy is **not** the sole criterion, out-of-domain retention and
 container size matter more for a deployed inspector:
+
+Phase 2 selected **MobileNetV3-Large**; the table below records the options as
+assessed. Full record in [PHASE2_MODEL_SELECTION.md](PHASE2_MODEL_SELECTION.md).
 
 | Candidate | Rationale | Concern |
 | --- | --- | --- |
@@ -625,14 +628,28 @@ this branch. Dates will be added only from the official schedule.
 - **Supports:** technical execution; groundwork for Agentic Vision. **No Agentic
   Vision Award claim is made at this phase.**
 
-### Phase 2 — Condition model integration
-- **Objective:** select and wrap the model with calibrated uncertainty.
-- **Tasks:** candidate comparison on retention and footprint; calibration;
-  inference wrapper decoupled from research code.
-- **Artifacts:** `competition/models/`, selection record with justification.
-- **Tests:** deterministic inference, calibration regression, contract tests.
-- **Exit:** model selected on recorded evidence; uncertainty calibrated.
-- **Supports:** technical execution.
+### Phase 2 — Condition model integration *(complete; calibration deferred)*
+- **Objective:** select and wrap a condition model behind the capture gate.
+- **Done:** evidence-based candidate inventory across 9 candidates; ONNX export
+  and `cv2.dnn` runtime; measured parity (200/200 class agreement against the
+  torch reference); explicit preprocessing contract with BGR/RGB guards; typed
+  `ConditionModelEvidence`; ontology constrained to the research labels; capture
+  gate preceding inference; runtime benchmarks; real-image evaluation.
+- **Selected:** MobileNetV3-Large via ONNX + `cv2.dnn`, 11.35 MB, **no torch at
+  serving**. Trade-off accepted and recorded: SigLIP2 zero-shot retains 86.3%
+  worst-external against 70.4%, for a 126x larger model.
+- **Deferred:** confidence calibration (a reliability diagram needs the
+  evaluation corpus of Phase 6), and threshold recalibration.
+- **Artifacts:** `competition/models/`, `competition/agent/inspection.py`,
+  [PHASE2_MODEL_SELECTION.md](PHASE2_MODEL_SELECTION.md).
+- **Exit:** met for selection and integration; uncertainty calibration is not.
+- **Supports:** technical execution, AWS/reproducibility.
+
+**Phase 2 finding affecting the roadmap:** the capture gate rejects 96.7% of
+real research photographs because whole-image clipping statistics are dominated
+by bright backgrounds rather than the produce. No threshold value fixes this;
+the metrics must be restricted to a foreground region. This is now a measured
+argument for bringing surface segmentation forward.
 
 ### Phase 3 — Agentic perception–decision–action workflow
 - **Objective:** the real loop, with traces.
@@ -718,3 +735,5 @@ this branch. Dates will be added only from the official schedule.
 - [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md)
 - [PHASE1_OPENCV_PERCEPTION.md](PHASE1_OPENCV_PERCEPTION.md) — Phase 1 technical note
 - [PHASE1B_CAPTURE_REMEDIATION.md](PHASE1B_CAPTURE_REMEDIATION.md) — Phase 1b technical note
+- [PHASE2_MODEL_SELECTION.md](PHASE2_MODEL_SELECTION.md) — Phase 2 model selection record
+- [DEMO_DATA_PLAN.md](DEMO_DATA_PLAN.md) — competition demo imagery plan

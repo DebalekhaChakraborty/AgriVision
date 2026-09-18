@@ -46,6 +46,24 @@ companion set to check that conclusions transfer, and any divergence is reported
 | V1 Keras CNN | Historical reference | **Cited from existing records; never re-run** |
 | V2 Experiment 014 systems | Out-of-domain context | **Cited from `v2/results/experiment_014_multi_domain/`; never re-derived** |
 
+## 2a. Status after Phase 2
+
+Measured so far: OpenCV detector response across controlled degradations
+(Phase 1), remediation behaviour and blur-verdict agreement (Phase 1b), and
+condition accuracy, runtime parity and latency for the selected model
+(Phase 2). See the phase notes for numbers.
+
+Two plan assumptions have been corrected by measurement:
+
+* **Calibration cannot use the research photographs as a proxy for deployment.**
+  The capture gate rejects 96.7% of them because whole-image clipping statistics
+  are dominated by bright backgrounds. Threshold calibration needs a development
+  set drawn from the deployment domain — self-captured imagery
+  ([DEMO_DATA_PLAN.md](DEMO_DATA_PLAN.md)).
+* **FruitVision is excluded from competition evaluation.** Its CC BY-NC-ND 4.0
+  terms make competition-context use ambiguous. External-domain evaluation will
+  use the CC BY 4.0 Sultana set and self-captured imagery.
+
 ## 3. Classification metrics
 
 Over the six-class taxonomy, on the source test partition and each external

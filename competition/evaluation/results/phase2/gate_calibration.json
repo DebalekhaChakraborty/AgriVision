@@ -1,0 +1,49 @@
+{
+  "blocked_rate": 0.9667,
+  "finding": "The Phase 1 thresholds were chosen on synthetic fixtures and are badly miscalibrated for real photographs. Whole-image clipping statistics are dominated by bright backgrounds and dark surrounds rather than by the produce, so SHADOW_CLIPPING and HIGHLIGHT_CLIPPING fire on most images. A meaningful capture gate needs the metrics restricted to a foreground region, which requires the segmentation that has not been implemented yet.",
+  "flag_rates": {
+    "BLUR_RISK": 0.1926,
+    "HIGHLIGHT_CLIPPING": 0.8,
+    "LOW_CONTRAST": 0.0111,
+    "OVEREXPOSED": 0.1333,
+    "SHADOW_CLIPPING": 0.6778
+  },
+  "images": 270,
+  "metric_percentiles": {
+    "contrast_score": {
+      "median": 1.0,
+      "p05": 0.3625,
+      "p95": 1.0
+    },
+    "highlight_clip_fraction": {
+      "median": 0.2791,
+      "p05": 0.0008,
+      "p95": 0.6041
+    },
+    "laplacian_variance": {
+      "median": 430.106,
+      "p05": 15.9805,
+      "p95": 2994.1382
+    },
+    "mean_luminance": {
+      "median": 0.6666,
+      "p05": 0.4519,
+      "p95": 0.8962
+    },
+    "shadow_clip_fraction": {
+      "median": 0.131,
+      "p05": 0.0,
+      "p95": 0.2825
+    }
+  },
+  "run_context": {
+    "machine": "x86_64",
+    "opencv_version": "5.0.0",
+    "platform": "Linux",
+    "preprocessing_version": "phase2-imagenet-eval-1.0.0",
+    "processor": "unknown",
+    "python_version": "3.11.2"
+  },
+  "split": "validation (development split; the frozen test split is never used for calibration)",
+  "unflagged_rate": 0.0333
+}
