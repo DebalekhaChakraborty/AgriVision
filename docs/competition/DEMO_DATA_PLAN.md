@@ -70,6 +70,19 @@ honest calibration, not only for licensing.
 - Research imagery stays local, under existing terms, for numeric evaluation
   only.
 
+## Superseded by the Phase 2c protocol
+
+The condition taxonomy sketched above is now **locked and expanded** in
+[PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md](PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md),
+which is the authoritative document. Three changes were made and recorded there:
+"visibly deteriorated produce" became an item attribute rather than a capture
+condition, "mixed fruit" and "non-produce object" became scene cases, and blur
+and darkness were split into mild and severe so calibration can locate the
+boundary between remediable and recapture-required.
+
+This document remains valid as the statement of *why* self-captured imagery is
+needed; the protocol document states *how*, and supersedes the taxonomy above.
+
 ## Status
 
 **Not started.** No capture has been performed, and none should be performed as

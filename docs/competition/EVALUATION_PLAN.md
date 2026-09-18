@@ -60,6 +60,12 @@ Two plan assumptions have been corrected by measurement:
   are dominated by bright backgrounds. Threshold calibration needs a development
   set drawn from the deployment domain — self-captured imagery
   ([DEMO_DATA_PLAN.md](DEMO_DATA_PLAN.md)).
+* **Calibration is blocked on deployment-domain imagery, and the protocol for
+  collecting it is now locked** before any photograph exists
+  ([PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md](PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md)).
+  Splits are assigned per physical item, the held-out set is fixed by a
+  published fingerprint, and thresholds will be reported as a false-accept /
+  false-block trade-off rather than a single accuracy figure.
 * **Capture-quality thresholds are scope-specific.** Phase 2b established that
   whole-image and foreground-restricted measurement are not interchangeable: ROI
   Laplacian variance is about 5% of the whole-image value because the latter was

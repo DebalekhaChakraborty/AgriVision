@@ -51,3 +51,10 @@ secrets.json
 # Exported model graphs are build products derived from gitignored research
 # checkpoints; the manifest is committed, the weights are not.
 *.onnx
+
+# Self-captured deployment-domain photographs (Phase 2c).
+# Kept local even though they are self-captured: keeps the repository light and
+# prevents accidental EXIF/privacy publication before sanitisation.
+competition/data/self_captured/
+# Manifest variant that carries filesystem paths.
+competition/data/capture_manifest.local.json

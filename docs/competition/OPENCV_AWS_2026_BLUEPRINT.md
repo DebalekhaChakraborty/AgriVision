@@ -17,7 +17,7 @@ that produced them and are reported separately from the V2 research results.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phases 0, 1, 1b, 2 and 2b complete — OpenCV 5 capture-quality perception, bounded remediation, a gated condition model served through cv2.dnn, and foreground-restricted quality measurement |
+| Status | Phases 0–2b complete; Phase 2c-A protocol locked, capture pending. Threshold calibration is blocked on deployment-domain imagery that does not yet exist. |
 
 ---
 
@@ -669,6 +669,26 @@ the metrics must be restricted to a foreground region.
 - **Supports:** technical execution; spatial substrate for later anomaly work.
 - **Not delivered:** anomaly, defect or spoilage localisation of any kind.
 
+### Phase 2c-A — Capture protocol and calibration tooling *(protocol locked, capture pending)*
+- **Objective:** make deployment-domain calibration possible, since two phases
+  have now ended at thresholds calibrated against the wrong population.
+- **Done:** locked 12-condition capture matrix; preregistered quality rubric;
+  deterministic item-level split (24 items, 15/9, fingerprint `2feb9360e1c2bdf5`)
+  generated before any fruit was bought; manifest schema with no filesystem
+  paths; validator covering leakage, duplicates, per-mode capture counts and
+  EXIF privacy;
+  calibration methodology fixed in advance with no threshold values; gitignored
+  raw storage; human capture checklist; 83 additional tests.
+- **Blocked on:** the photographs. **186 captures** across 24 physical items
+  (144 required + 36 extended + 6 scene). The six extended-condition items are
+  preassigned — APL-002, APL-003, BAN-004, BAN-007, ORG-006, ORG-007 — one
+  calibration and one held-out per fruit.
+- **Not done, deliberately:** no threshold calibrated, no image collected, no
+  substitute imagery downloaded, and the research photographs explicitly not
+  used as a proxy.
+- **Artifacts:** `competition/data/`,
+  [PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md](PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md).
+
 ### Phase 3 — Agentic perception–decision–action workflow
 - **Objective:** the real loop, with traces.
 - **Tasks:** tool interfaces; deterministic policy engine; bounded remediation;
@@ -755,4 +775,5 @@ the metrics must be restricted to a foreground region.
 - [PHASE1B_CAPTURE_REMEDIATION.md](PHASE1B_CAPTURE_REMEDIATION.md) — Phase 1b technical note
 - [PHASE2_MODEL_SELECTION.md](PHASE2_MODEL_SELECTION.md) — Phase 2 model selection record
 - [PHASE2B_FOREGROUND_QUALITY.md](PHASE2B_FOREGROUND_QUALITY.md) — Phase 2b foreground isolation note
+- [PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md](PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md) — Phase 2c capture protocol and calibration methodology
 - [DEMO_DATA_PLAN.md](DEMO_DATA_PLAN.md) — competition demo imagery plan

@@ -1,0 +1,81 @@
+{
+  "assignment": {
+    "APL-001": "calibration",
+    "APL-002": "calibration",
+    "APL-003": "evaluation",
+    "APL-004": "calibration",
+    "APL-005": "calibration",
+    "APL-006": "evaluation",
+    "APL-007": "calibration",
+    "APL-008": "evaluation",
+    "BAN-001": "calibration",
+    "BAN-002": "calibration",
+    "BAN-003": "evaluation",
+    "BAN-004": "evaluation",
+    "BAN-005": "calibration",
+    "BAN-006": "calibration",
+    "BAN-007": "calibration",
+    "BAN-008": "evaluation",
+    "ORG-001": "calibration",
+    "ORG-002": "calibration",
+    "ORG-003": "calibration",
+    "ORG-004": "evaluation",
+    "ORG-005": "evaluation",
+    "ORG-006": "evaluation",
+    "ORG-007": "calibration",
+    "ORG-008": "calibration"
+  },
+  "counts_by_fruit": {
+    "apple": {
+      "calibration": 5,
+      "evaluation": 3
+    },
+    "banana": {
+      "calibration": 5,
+      "evaluation": 3
+    },
+    "orange": {
+      "calibration": 5,
+      "evaluation": 3
+    }
+  },
+  "discipline": "Generated before any capture metric is examined. Evaluation items stay closed until a calibrated policy is locked and fingerprinted.",
+  "extended_condition_fingerprint": "fc6b6f334101eadc",
+  "extended_condition_items": {
+    "apple": [
+      "APL-002",
+      "APL-003"
+    ],
+    "banana": [
+      "BAN-004",
+      "BAN-007"
+    ],
+    "orange": [
+      "ORG-006",
+      "ORG-007"
+    ]
+  },
+  "extended_condition_note": "Items receiving the sampled (extended) conditions. Preassigned before capture so the choice cannot be influenced by how the fruit looks. One calibration and one held-out item per fruit.",
+  "fingerprint": "2feb9360e1c2bdf5",
+  "generated_at": "2026-09-18",
+  "rule": "Splits are assigned per physical item. Every capture of an item inherits the item's split. Assignment is a hash of (seed, item_id), so it is reproducible and independent of catalogue order.",
+  "seed": 20260918,
+  "split_version": "phase2c-item-split-1.0.0",
+  "target": {
+    "calibration_items": 15,
+    "calibration_per_fruit": 5,
+    "evaluation_items": 9,
+    "evaluation_per_fruit": 3,
+    "extended_capture_count": 36,
+    "extended_condition_items": 6,
+    "items_per_fruit": 8,
+    "label": "TARGET",
+    "note": "Preferred size: 24 items, 15 calibration and 9 held-out. 186 photographs: 144 required + 36 extended + 6 scene.",
+    "required_capture_count": 144,
+    "sampled_items_per_fruit": 2,
+    "scene_capture_count": 6,
+    "total_capture_count": 186,
+    "total_items": 24
+  },
+  "target_label": "TARGET"
+}

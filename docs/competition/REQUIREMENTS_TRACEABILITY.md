@@ -69,3 +69,6 @@ Base commit: `3928d43b3bdd3a754f98f1f411596050de29da17`
 | D11 | Competition environment isolated from the research venv | `.venv-competition`, gitignored; `.venv-v2` unmodified | COMPLETE |
 | D12 | Model weights excluded from version control | `*.onnx` gitignored; only the artifact manifest is committed | COMPLETE |
 | D13 | Competition demo imagery plan exists | `DEMO_DATA_PLAN.md`; no restricted imagery committed | COMPLETE |
+| D14 | Deployment-domain capture protocol locked before collection | `PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md`; split fingerprint `2feb9360e1c2bdf5` generated pre-capture | COMPLETE |
+| D15 | Calibration methodology fixed before data exists | `calibrate_quality_policy.py --show-method`; contains no threshold values, refuses to run without captures | COMPLETE |
+| D16 | Self-captured imagery collected | **186** captures across 24 items (144 + 36 + 6) | **NOT STARTED — blocked on physical capture** |
