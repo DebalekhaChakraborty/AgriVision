@@ -1,0 +1,169 @@
+{
+  "executed_at": "2026-09-19T18:08:08+00:00",
+  "frozen_fingerprint": "97b059be36bc3fbe",
+  "live_final_version": "phase7-live-final-1.0.0",
+  "policy_unchanged_note": "This run verifies behaviour. Nothing in the policy, the thresholds or the model was modified in response to it.",
+  "smoke": {
+    "all_expectations_met": true,
+    "all_fingerprints_match": true,
+    "all_http_200": true,
+    "all_traces_retrievable": true,
+    "endpoints": {
+      "app_css": {
+        "ok": true,
+        "status": 200
+      },
+      "app_js": {
+        "ok": true,
+        "status": 200
+      },
+      "health": {
+        "body": {
+          "service_version": "phase4-service-1.0.0",
+          "status": "alive",
+          "uptime_seconds": 10306.9
+        },
+        "ok": true,
+        "status": 200
+      },
+      "page": {
+        "bytes": 5402,
+        "ok": true,
+        "status": 200
+      },
+      "ready": {
+        "body": {
+          "detail": "verified",
+          "initialising": false,
+          "model_artifact_present": true,
+          "model_artifact_verified": true,
+          "model_loaded": true,
+          "opencv_loaded": true,
+          "opencv_version": "5.0.0",
+          "persistence_backend": "dynamodb",
+          "persistence_healthy": true,
+          "policy_loaded": true,
+          "ready": true
+        },
+        "ok": true,
+        "status": 200
+      }
+    },
+    "scenarios": [
+      {
+        "client_latency_ms": 356.1,
+        "condition_model_invoked": true,
+        "final_status": "COMPLETE",
+        "http_status": 200,
+        "lossless_transport": true,
+        "matches_expected_blocking": true,
+        "matches_expected_model_invocation": true,
+        "policy_fingerprints_match_frozen": true,
+        "remediation_action": "",
+        "requested_human_action": "",
+        "run_id": "ed457ad007184a8dae26136a31117b67",
+        "scenario": "NORMAL",
+        "trace_retrievable": true,
+        "trace_steps": 9
+      },
+      {
+        "client_latency_ms": 332.2,
+        "condition_model_invoked": true,
+        "final_status": "COMPLETE",
+        "http_status": 200,
+        "lossless_transport": true,
+        "matches_expected_blocking": true,
+        "matches_expected_model_invocation": true,
+        "policy_fingerprints_match_frozen": true,
+        "remediation_action": "APPLY_GAMMA",
+        "requested_human_action": "",
+        "run_id": "dfcabcc4cbdd4232967c6f24dcc22263",
+        "scenario": "UNDEREXPOSED",
+        "trace_retrievable": true,
+        "trace_steps": 16
+      },
+      {
+        "client_latency_ms": 315.7,
+        "condition_model_invoked": false,
+        "final_status": "REQUEST_RECAPTURE",
+        "http_status": 200,
+        "lossless_transport": true,
+        "matches_expected_blocking": true,
+        "matches_expected_model_invocation": true,
+        "policy_fingerprints_match_frozen": true,
+        "remediation_action": "",
+        "requested_human_action": "REQUEST_RECAPTURE",
+        "run_id": "6fe62578b5934ed09709ed53d3971d3a",
+        "scenario": "SEVERE_BLUR",
+        "trace_retrievable": true,
+        "trace_steps": 7
+      },
+      {
+        "client_latency_ms": 329.6,
+        "condition_model_invoked": true,
+        "final_status": "COMPLETE",
+        "http_status": 200,
+        "lossless_transport": true,
+        "matches_expected_blocking": true,
+        "matches_expected_model_invocation": true,
+        "policy_fingerprints_match_frozen": true,
+        "remediation_action": "",
+        "requested_human_action": "",
+        "run_id": "c41c830d21d94231bb26c396b0b7d70a",
+        "scenario": "LOW_CONTRAST",
+        "trace_retrievable": true,
+        "trace_steps": 9
+      },
+      {
+        "client_latency_ms": 286.7,
+        "condition_model_invoked": false,
+        "final_status": "REQUEST_RECAPTURE",
+        "http_status": 200,
+        "lossless_transport": true,
+        "matches_expected_blocking": true,
+        "matches_expected_model_invocation": true,
+        "policy_fingerprints_match_frozen": true,
+        "remediation_action": "",
+        "requested_human_action": "REQUEST_RECAPTURE",
+        "run_id": "367d347282494e53bbd24b5ba47608e8",
+        "scenario": "FOREGROUND_FAILURE",
+        "trace_retrievable": true,
+        "trace_steps": 5
+      }
+    ],
+    "ui_surface": {
+      "counterfactual_control_present": true,
+      "no_food_safety_claim": true,
+      "one_primary_fruit_contract_present": true,
+      "raw_trace_disclosure_present": true,
+      "responsible_use_present": true
+    }
+  },
+  "stability": {
+    "FINAL_DEMO_REVISION": {
+      "audit_principal": "agrivision-auditor (read-only, logs only)",
+      "deployment_principal": "agrivision-deployer (scoped IAM user)",
+      "image_bytes": 265540017,
+      "image_digest": "sha256:b57eaf0506a243798ef21423048e1c571606d78243caa13bbf7d11b79d6ce7e7",
+      "image_pushed_at": "2026-09-19T15:15:11.562000+00:00",
+      "image_tag_resolved": "phase4",
+      "instance_role": "AgriVisionAppRunnerInstanceRole",
+      "last_operation": {
+        "ended": "2026-09-19T15:19:25+00:00",
+        "id": "5b391de941c2441683f80ef6989a95e2",
+        "status": "SUCCEEDED",
+        "type": "START_DEPLOYMENT"
+      },
+      "root_required": false,
+      "service_id": "9be40db3a6d147c79454d1e9c90fae08",
+      "service_status": "RUNNING",
+      "service_url": "https://yp2ajauzkm.us-east-1.awsapprunner.com"
+    },
+    "failed_operations": [],
+    "model_object_available": true,
+    "model_object_bytes": 11906184,
+    "no_pending_failed_deployment": true,
+    "service_running": true,
+    "tag_mutability_note": "The tag is a moving pointer; the digest is the identity. Both are recorded so a reader can tell which was resolved."
+  }
+}

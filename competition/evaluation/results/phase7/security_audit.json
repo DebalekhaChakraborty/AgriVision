@@ -1,0 +1,87 @@
+{
+  "clean": true,
+  "deployment": {
+    "iam_read_identity_note": "The account summary was read with the account-level identity because neither scoped identity has IAM read access - which is the intended posture, not a gap. No IAM change was made for this audit.",
+    "long_lived_credentials_in_container": false,
+    "long_lived_credentials_note": "The container receives no AWS keys. It assumes the App Runner instance role at runtime.",
+    "model_bucket_public_access_blocked": {
+      "all_four_blocks_on": true,
+      "configuration": {
+        "BlockPublicAcls": true,
+        "BlockPublicPolicy": true,
+        "IgnorePublicAcls": true,
+        "RestrictPublicBuckets": true
+      }
+    },
+    "root_mfa_enabled": true,
+    "root_persistent_access_keys": 0,
+    "root_persistent_access_keys_zero": true,
+    "runtime_instance_role": true,
+    "runtime_instance_role_name": "AgriVisionAppRunnerInstanceRole",
+    "runtime_uses_role_not_keys": true,
+    "scoped_auditor": "agrivision-auditor",
+    "scoped_auditor_denied": [
+      "apprunner:*",
+      "s3:*",
+      "iam:*",
+      "dynamodb:*",
+      "ecr:*",
+      "logs:CreateLogGroup"
+    ],
+    "scoped_deployer": "agrivision-deployer",
+    "scoped_deployer_allowed_logs": "logs:FilterLogEvents, GetLogEvents and DescribeLogStreams on arn:aws:logs:us-east-1:<account>:log-group:/aws/apprunner/* - held since Phase 4. DescribeLogGroups is denied because it is an account-wide list call needing Resource '*'.",
+    "scoped_deployer_denied": [
+      "iam:ListUsers",
+      "s3:ListAllMyBuckets",
+      "logs:DescribeLogGroups",
+      "dynamodb:*",
+      "cloudformation:ValidateTemplate"
+    ],
+    "separation_note": "Deploying and auditing are separate identities: the auditor can read the application log group and nothing else, and holds no write permission anywhere. The deployer was not widened for the audit. It is not denied log reads - it has scoped /aws/apprunner/* read from Phase 4 - so the separate auditor is a separation of duties rather than a capability that did not otherwise exist."
+  },
+  "disclosure_policy": "Metadata only. No secret value is read, printed or stored. An AWS account id inside an ARN is an infrastructure identifier and is not treated as a secret.",
+  "repository": {
+    "committed_image_exif": {
+      "checked": true,
+      "clean": true,
+      "findings": [],
+      "images": 92,
+      "note": "Committed images are generated report plots, not photographs."
+    },
+    "env_and_key_files": {
+      "clean": true,
+      "dotenv_gitignored": true,
+      "tracked_secret_files": []
+    },
+    "history_scan": {
+      "clean": true,
+      "commits_scanned": 31,
+      "depth_limit": 400,
+      "findings": [],
+      "scope_note": "The most recent commits on this branch, not the entire repository history. Stated as bounded rather than implied to be exhaustive."
+    },
+    "tracked_file_scan": {
+      "clean": true,
+      "files_scanned": 667,
+      "findings": [],
+      "tracked_files": 761
+    }
+  },
+  "security_audit_version": "phase7-security-audit-1.0.0",
+  "service_controls": {
+    "content_decoding_validation_active": true,
+    "content_validation_method": "magic-byte sniffing of the payload, not the client-declared Content-Type or the filename extension",
+    "foreground_fallback_enabled": false,
+    "lossless_media_types": [
+      "image/bmp",
+      "image/png",
+      "image/tiff"
+    ],
+    "model_checksum_policy": "fail closed - the service refuses to start ready",
+    "model_checksum_prefix": "77d8614671873cb4",
+    "model_checksum_verification_active": true,
+    "upload_size_limit_active": true,
+    "upload_size_limit_bytes": 12582912,
+    "uploads_retained": false
+  }
+}

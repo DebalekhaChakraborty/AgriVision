@@ -464,8 +464,15 @@ def test_no_committed_phase6_artifact_carries_an_aws_identifier():
 
 
 def test_phase6_image_directories_are_gitignored():
-    for directory in ("competition/data/licensed_real/phase6_raw",
-                      "competition/data/licensed_real/phase6_variants"):
+    """The trailing slash matters.
+
+    The .gitignore entries are directory patterns, and a directory pattern
+    cannot match a path that does not exist on disk. Querying without the
+    slash passes in a working checkout, where the directory happens to exist,
+    and fails in a fresh clone - which is where this check actually matters.
+    """
+    for directory in ("competition/data/licensed_real/phase6_raw/",
+                      "competition/data/licensed_real/phase6_variants/"):
         result = subprocess.run(
             ["git", "check-ignore", directory],
             capture_output=True, text=True, cwd=Path.cwd())

@@ -1,148 +1,164 @@
-# Judge demo sequence
+# Judge demo script — final
 
-**Live:** https://yp2ajauzkm.us-east-1.awsapprunner.com
+**Competition maximum: 5 minutes. This script targets 3:55.**
 
-A demonstrable sequence, not a spoken script. Roughly 3–4 minutes, so it fits
-inside a 5-minute submission video with room for titles and a closing card.
+Measured, not guessed: **573 words of narration**, which is 3:57 at a normal
+145 wpm, 4:24 at a deliberate 130 wpm, and still 4:46 at a very slow 120 wpm.
+The section markers below total 3:55, leaving roughly a minute of headroom for
+live uploads and pauses — the demo makes five live requests and each takes a
+second or two on screen.
 
-Everything below is performed against the live service. Nothing is precomputed.
+It is deliberately **not** written to fill the five minutes. Nothing here should
+be padded to use the allowance.
 
----
+Live: <https://yp2ajauzkm.us-east-1.awsapprunner.com>
 
-## 0:00–0:20 · The problem
+Before recording, work through
+[VIDEO_RECORDING_CHECKLIST.md](VIDEO_RECORDING_CHECKLIST.md) in order —
+especially the warm-up run and the "no AWS console on screen" item.
 
-Open the page. The hero states it:
-
-> OpenCV 5 evaluates whether the visual evidence is trustworthy, takes bounded
-> corrective actions when appropriate, and runs the condition model **only**
-> when the capture is suitable.
-
-**The point to land:** a classifier that answers confidently on a photograph it
-should have refused is the failure this project exists to avoid. Most produce
-inspection demos skip straight to a prediction.
-
-Show the input contract directly beneath: **one primary fruit per image.**
+**Every number spoken below is read from the screen or from the results table.
+Nothing is recalled from memory, and nothing is a placeholder.**
 
 ---
 
-## 0:20–0:40 · What the system is
+## 0:00 – 0:20 · Team and problem
 
-Point at the service badge in the header — *Service ready · OpenCV 5.0.0 · model
-verified* — which is a live `/ready` call, not a graphic.
+> *On screen: the live page, freshly loaded.*
 
-Say what the loop is: perception, then a deterministic decision, then a tool.
-**No language model participates in any decision.** One remediation attempt, one
-model invocation, eighteen named states.
+"I'm Debalekha Chakraborty, and this is AgriVision.
 
----
-
-## 0:40–1:20 · A normal inspection
-
-Drop in a clear photograph of one fruit. Press **Inspect**.
-
-Walk the result top to bottom:
-
-1. **Agent outcome** — *Inspection complete*, and beside it *Condition model
-   invoked*. The agent outcome is the headline; the classifier is not.
-2. **Why** — the evidence-to-action chain: the measured high-frequency ratio
-   against the calibrated floor, the interpretation, the decision, the next step.
-3. **Visible-condition model** — fruit, visible condition, confidence, with the
-   note that confidence is *recorded, not thresholded*.
-
-If a judge asks why confidence isn't used to escalate: no confidence policy has
-been calibrated, so acting on it would be inventing a threshold.
+Somebody holds up a phone to check whether produce has gone off. The hard part
+isn't telling a good apple from a bad one — it's that most real photographs are
+dim, blurred, or have six oranges in them instead of one. A classifier answers
+all of those with the same confidence. It can't tell 'this looks rotten' from
+'I can't see this'."
 
 ---
 
-## 1:20–2:30 · The counterfactual — the heart of the demo
+## 0:20 – 0:45 · What's different
 
-Press **Show Agentic Counterfactual** on the *same* image.
+> *Point at the contract line under the upload box.*
 
-The server derives four controlled variants in memory and runs the full bounded
-agent on each. Read the grid across:
+"AgriVision decides **what to do next** before it decides anything about the
+fruit. OpenCV 5 measures the capture, and a deterministic policy chooses:
+correct it, ask for another, escalate to a person, or go ahead.
 
-| Variant | OpenCV finding | Next action | Model |
-| --- | --- | --- | --- |
-| Reference | no blocking finding | `NONE` | invoked |
-| Underexposed | ROI luminance below the calibrated floor | `APPLY_GAMMA` | invoked after re-assessment |
-| Severe blur | high-frequency ratio below 0.3182 | `REQUEST_RECAPTURE` | **skipped** |
-| Recoverable contrast loss | ROI contrast in the recoverable band | `APPLY_CLAHE` | invoked after re-assessment |
-
-**The sentence that matters:** *same subject, same policy, same fingerprints —
-four different next actions, because the visual evidence changed.*
-
-Point at the amber notice above the grid. It says these are controlled
-variants, not a benchmark. Say that out loud; do not let it pass as fine print.
+No language model is involved. The actions are a closed list of fifteen tools.
+And the scope is stated up front — one primary item per photograph."
 
 ---
 
-## 2:30–3:10 · The causal trace
+## 0:45 – 1:15 · A live inspection
 
-Scroll to **Causal trace** on the blurred variant, or re-inspect a blurred
-capture.
+> *Upload the prepared image. Let it run on camera.*
 
-Step through: segment foreground → assess ROI quality → decide → *condition
-model skipped*. Each step carries its tool, its numbers and a maturity badge.
+"This is running on AWS now, not a recording.
 
-Expand **Technical trace** to show the raw JSON a judge can verify, then point
-out what is *not* in it: no image bytes, no filenames, no filesystem paths. The
-image is identified by content hash.
+Segmentation found the subject, quality was measured **on the fruit** rather
+than the whole frame, nothing crossed a threshold, so the agent proceeded and
+the model ran.
 
-Then show the maturity badges and explain the distinction in one line:
-**CALIBRATED** evidence may block, **ADVISORY** evidence may not. Glare is
-advisory because it reached 0.500 detection on unseen groups against a
-preregistered floor of 0.70 — it is reported, never gating.
+The classifier's answer isn't the headline — the agent's decision is."
 
 ---
 
-## 3:10–3:40 · Technical proof
+## 1:15 – 2:15 · Same photograph, four actions
 
-Expand **Technical details**: OpenCV 5.0.0, MobileNetV3-Large through
-`cv2.dnn`, AWS App Runner, a deterministic bounded state machine, one
-remediation attempt, one model invocation, and the policy fingerprints for this
-run.
+> *Trigger the counterfactual. This is the centre of the demo — don't rush it.*
 
-Worth saying: OpenCV 5 is verified *inside* the container across seventeen
-operations, and the model is fetched from S3 and SHA-256 verified at startup —
-a mismatch leaves the service unready rather than running an unverified graph.
+"Now the same image, with only the pixels changed. Say it clearly: **this is a
+controlled demonstration.** I'm degrading this deliberately. It isn't a sample
+of how often real cameras fail.
 
----
+Same subject, same policy — identical fingerprints. Four different actions:
 
-## 3:40–4:00 · Limitations and responsible use
+unchanged, it proceeds. Underexposed, it applies gamma correction and
+re-measures. Contrast flattened, CLAHE, and re-measures. Severely blurred — it
+asks for a recapture, **and never runs the model at all.**
 
-Scroll to the responsible-use panel and read it:
-
-> AgriVision assesses **visible produce condition**. It does not detect
-> pathogens, toxins, microbiological contamination or internal spoilage, and it
-> does not determine whether food is safe to eat.
-
-Then state the honest limits, because they are the credible part:
-
-- **Segmentation is the binding constraint.** On independent validation only 12
-  of 29 photographs produced a mask that passed its guards. The system refuses
-  rather than guessing.
-- **One fruit per image.** Market stalls and piles are out of scope, measured:
-  pushing the fallback past that boundary produced masks adjudicated wrong on
-  18 of 19 scenes.
-- **Glare and subject-visibility detectors did not meet their floors** and are
-  not permitted to gate.
+That last one is the point. Blur destroys the detail the assessment depends on.
+Nothing to recover, so it refuses."
 
 ---
 
-## Fallback if the network fails
+## 2:15 – 2:45 · Why it did that
 
-`competition/evaluation/results/phase3/traces/` holds six curated traces in
-JSON and readable text. Label them **recorded example** on screen; do not let a
-stored trace look like a live run.
+> *Expand the trace on the blurred run.*
+
+"Every decision records what caused it.
+
+High-frequency ratio **0.255**, against a floor of **0.318** calibrated before
+this photograph existed. Threshold crossed, action selected, model skipped.
+
+And the other metrics barely moved from the reference. One measurement changed,
+and it's the one that changed the outcome.
+
+Each piece of evidence also carries how much it's trusted. Glare is advisory —
+reported, never blocking on its own."
 
 ---
 
-## What not to say
+## 2:45 – 3:10 · OpenCV 5 and AWS
 
-- Not "detects spoilage" — **visible condition**.
-- Not "AI restored the lost detail" — **capture enhancement attempted, evidence
-  re-assessed**.
-- Not "99% accurate" — the scenario suite is a deterministic behaviour result,
-  not accuracy.
-- Not "fully solved" — segmentation is the open problem, and saying so is more
-  convincing than claiming otherwise.
+> *Switch to the architecture diagram.*
+
+"One container on App Runner. FastAPI serving the page and the API. The
+eighteen-state orchestrator. OpenCV 5 doing perception, and the classifier
+running through OpenCV's own DNN module — no PyTorch in the serving image.
+
+The model comes from S3 and its SHA-256 is verified at start-up; on a mismatch
+the service reports itself not ready rather than inferring. Traces to DynamoDB,
+structured logs to CloudWatch. No Bedrock, no API Gateway, and no AWS
+credentials in the container."
+
+---
+
+## 3:10 – 3:35 · What was measured
+
+> *Switch to the canonical results table.*
+
+"We froze the system, then opened 38 fresh photographs it had never seen — no
+overlap with earlier data on image, creator or content hash — plus 48 scenarios
+whose expected actions were written down first.
+
+Fruit type **27 of 28 where the model ran**; that denominator matters, ten
+images were blocked before it. Every decision carried its evidence, **58 of
+58**. Model invoked on a blocked capture: **zero of 86**. Severe blur: **12 of
+12** refused.
+
+And 10 of 12 subjects changed action when only the condition changed."
+
+---
+
+## 3:35 – 3:55 · Limits, and what it doesn't claim
+
+> *On screen: the responsible-use statement.*
+
+"Where it's weak: segmentation is the binding limit — about a quarter of real
+photographs give no usable subject region. One preregistered route, the
+underexposure correction, scored **2 of 12**, and we left that number alone
+rather than retuning afterwards.
+
+And it reports **visible surface condition**. It doesn't detect pathogens or
+contamination, says nothing about internal spoilage, and does not determine
+whether food is safe to eat. A person stays responsible for that."
+
+---
+
+## Things that must not be said
+
+| Do not say | Say instead |
+| --- | --- |
+| "96 percent accurate" | "27 of 28 where the model ran" |
+| "determines whether food is safe to eat" | "reports visible surface condition" |
+| "the AI recovers the lost detail" | "it corrects the image and measures again" |
+| "it detects glare" (as a blocking capability) | "glare is advisory — reported, never blocking on its own" |
+| "this is how often cameras fail" | "this is a controlled demonstration" |
+
+## If something goes wrong on camera
+
+Keep it and narrate it, or re-record the whole take. Do not cut to imply a
+result that did not happen. A live failure explained honestly is better
+evidence than a clean take that hides one — and a run that requests a recapture
+is the system working, not the system breaking.

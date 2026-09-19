@@ -1,0 +1,89 @@
+{
+  "agent_step_events": 311,
+  "audit_identity": "arn:aws:iam::<account>:user/agrivision-auditor",
+  "audit_identity_note": "A separate read-only identity created for this audit, and verified denied for apprunner, s3, iam, dynamodb, ecr and every logs write. The deployment principal was NOT widened. It is not, however, denied log reads: it has held scoped logs read on /aws/apprunner/* since Phase 4, so this audit did not require a new identity - a separate audit principal is the preferred separation of duties, not a necessity. The Phase 6 claim that the deployer was 'denied logs:FilterLogEvents by design' was a misdiagnosis: it was inferred from a DescribeLogGroups probe, which needs Resource '*' and is denied by a resource-scoped policy, and generalised without being tested.",
+  "cloudwatch_audit_version": "phase7-cloudwatch-audit-1.0.0",
+  "event_types_observed": {
+    "agent_step": 311,
+    "inspection_completed": 41,
+    "inspection_started": 42,
+    "upload_rejected": 6
+  },
+  "events_examined": 400,
+  "events_not_json": 0,
+  "events_parsed_as_json": 400,
+  "log_group": "/aws/apprunner/agrivision-inspection/9be40db3a6d147c79454d1e9c90fae08/application",
+  "no_sensitive_content": {
+    "how": "Every examined line was matched against credential, authorization-header, private-key, local-path, S3-URI and embedded-image patterns.",
+    "patterns_checked": [
+      "authorization_header",
+      "aws_access_key",
+      "aws_secret_key",
+      "base64_image_blob",
+      "bearer_token",
+      "local_path",
+      "private_key",
+      "s3_uri"
+    ],
+    "verified": true,
+    "violations": []
+  },
+  "redacted_sample_record": {
+    "action": "",
+    "duration_ms": 8.46,
+    "evidence_maturity": "CALIBRATED",
+    "log_version": "phase4-logs-1.0.0",
+    "reason_code": "CAPTURE_ACCEPTABLE",
+    "run_id": "01216e58e774469c85cb83bab5f59e6c",
+    "state": "INPUT_VALIDATED",
+    "tool": "validate_input"
+  },
+  "result": "6/6 VERIFIED",
+  "structured_logging_emitted": {
+    "complete_step_records": 311,
+    "field_coverage": {
+      "action": 311,
+      "duration_ms": 311,
+      "log_version": 311,
+      "reason_code": 311,
+      "run_id": 311,
+      "state": 311,
+      "tool": 311
+    },
+    "how": "Records were read back out of CloudWatch and parsed as JSON, then checked field by field. Emission is established by the records existing, not by the formatter's unit test.",
+    "required_fields": [
+      "run_id",
+      "state",
+      "tool",
+      "action",
+      "reason_code",
+      "duration_ms",
+      "log_version"
+    ],
+    "verified": true
+  },
+  "tied_to_known_inspections": {
+    "example_run_id": "01216e58e774469c85cb83bab5f59e6c",
+    "how": "One recorded inspection was looked up in CloudWatch by its run id, and its step records read back. A broad scan was also intersected with every run id this project recorded.",
+    "matched_run_ids": 1,
+    "targeted_complete_records": 16,
+    "targeted_records_found": 18,
+    "targeted_run_id": "01216e58e774469c85cb83bab5f59e6c",
+    "targeted_states": [
+      "ARTIFACTS_ASSESSED",
+      "COMPLETE",
+      "CONDITION_INFERRED",
+      "DECISION_MADE",
+      "ELIGIBLE_FOR_INFERENCE",
+      "FOREGROUND_ASSESSED",
+      "INPUT_VALIDATED",
+      "QUALITY_ASSESSED",
+      "REASSESSED",
+      "REMEDIATED",
+      "REMEDIATION_SELECTED",
+      "RESEGMENTED"
+    ],
+    "verified": true
+  },
+  "verified": true
+}

@@ -1,0 +1,92 @@
+{
+  "iac_check_version": "phase7-iac-check-1.0.0",
+  "iam_policy_documents": {
+    "all_parse_as_json": true,
+    "files": [
+      "access-trust.json",
+      "deployer-policy.json",
+      "deployer-trust.json",
+      "deployer-user-policy.json",
+      "instance-policy.json",
+      "instance-trust.json"
+    ]
+  },
+  "live_comparison": {
+    "all_match": true,
+    "comparisons": [
+      {
+        "declared": "1024",
+        "field": "cpu",
+        "live": "1024",
+        "matches": true
+      },
+      {
+        "declared": "2048",
+        "field": "memory",
+        "live": "2048",
+        "matches": true
+      },
+      {
+        "declared": "8080",
+        "field": "port",
+        "live": "8080",
+        "matches": true
+      },
+      {
+        "declared": "/health",
+        "field": "health_check_path",
+        "live": "/health",
+        "matches": true
+      },
+      {
+        "declared": "HTTP",
+        "field": "health_check_protocol",
+        "live": "HTTP",
+        "matches": true
+      }
+    ],
+    "drift_note": "A template that no longer describes production is worse than no template, because it invites a redeploy from it.",
+    "live_auto_deployments": false,
+    "live_instance_role": "AgriVisionAppRunnerInstanceRole",
+    "live_status": "RUNNING"
+  },
+  "method": "Local structural validation plus a field-by-field comparison with the running service. Nothing was deployed, synthesised into a new stack, or duplicated.",
+  "no_resources_created": true,
+  "reproducible_components": {
+    "AppRunner": "AWS::AppRunner::Service in the template",
+    "DynamoDB": "AWS::DynamoDB::Table in the template",
+    "ECR": "documented in PHASE4_AWS_DEPLOYMENT.md; image build and push",
+    "IAM": "AWS::IAM::Role in the template plus policy documents",
+    "S3": "AWS::S3::Bucket in the template"
+  },
+  "template": {
+    "all_sections_present": true,
+    "forbidden_services_present": [],
+    "line_count": 179,
+    "missing_resource_types": [],
+    "no_cloud_service_stuffing": true,
+    "outputs": [
+      "ServiceUrl",
+      "ModelBucketName",
+      "TraceTableName"
+    ],
+    "path": "infrastructure/aws/agrivision-stack.yaml",
+    "required_resource_types_present": true,
+    "resource_count": 5,
+    "resources": {
+      "AccessRole": "AWS::IAM::Role",
+      "InspectionService": "AWS::AppRunner::Service",
+      "InstanceRole": "AWS::IAM::Role",
+      "ModelBucket": "AWS::S3::Bucket",
+      "TraceTable": "AWS::DynamoDB::Table"
+    },
+    "sections_present": {
+      "AWSTemplateFormatVersion": true,
+      "Description": true,
+      "Outputs": true,
+      "Parameters": true,
+      "Resources": true
+    }
+  },
+  "validate_template_note": "CloudFormation ValidateTemplate was not called: the deployment identity is denied it, which is correct least privilege, and widening a scoped identity to run a linter is the wrong trade."
+}

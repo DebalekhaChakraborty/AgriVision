@@ -1,200 +1,172 @@
-# Submission Checklist
+# Submission checklist — operational
 
-Nothing here may be ticked without a committed artifact or a working link. Every
-item names where its evidence lives.
+**Rule: an item is only ticked when a named artifact backs it.** "Looks done" is
+not evidence. Every ticked row below names the file, command or measurement that
+makes it true.
 
-Base commit: `3928d43b3bdd3a754f98f1f411596050de29da17`
-Branch: `competition/opencv-aws-2026`
+Status as of the end of Phase 7. Phase 7 is **uncommitted**.
 
 ---
 
-## 1. OpenCV 5 evidence
+## 1. Technical report and documentation
 
-- [ ] OpenCV 5 pinned in `requirements-competition.txt` and in the container image
-- [ ] Installed version recorded from the running container, not just declared
-- [ ] Perception layer performs substantive analysis (quality, segmentation, colour, texture, anomaly localisation)
-- [ ] OpenCV operations are load-bearing — removing them changes system behaviour
-- [ ] Per-metric tests against controlled degradations pass
-- [ ] Perception determinism verified (identical input → identical evidence record)
-- [ ] Ablation recorded: system behaviour with perception disabled
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Technical report | **DONE** | [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md), 20 sections |
+| Result labels used consistently | **DONE** | DEVELOPMENT / CONFIRMATORY / EXPLORATORY / RETROSPECTIVE ABLATION defined at the top and applied throughout |
+| Canonical result table with denominators | **DONE** | TECHNICAL_REPORT §13 |
+| Underexposure limitation given its own section | **DONE** | TECHNICAL_REPORT §15.1, not an appendix |
+| Segmentation limitation stated | **DONE** | TECHNICAL_REPORT §15.2, §19 |
+| Condition-model trade-off stated | **DONE** | TECHNICAL_REPORT §9 — 15.9 points worse than the best candidate, stated plainly |
+| README oriented for a judge | **DONE** | README competition section; V1/V2 research record unchanged below it |
+| Architecture diagram | **DONE** | [ARCHITECTURE.md](ARCHITECTURE.md) — deployed components only |
+| Agent workflow diagram | **DONE** | [AGENT_WORKFLOW_DIAGRAM.md](AGENT_WORKFLOW_DIAGRAM.md) — bounds drawn on the diagram |
+| Evaluation method | **DONE** | [PHASE6_FINAL_EVALUATION.md](PHASE6_FINAL_EVALUATION.md) |
+| Build / deploy / test documentation | **DONE** | [PHASE4_AWS_DEPLOYMENT.md](PHASE4_AWS_DEPLOYMENT.md), README reproduction block |
 
-## 2. AWS evidence
+## 2. Repository
 
-- [x] A meaningful component runs on AWS — the full OpenCV 5 perception and
-      Agentic Vision loop, as a container on App Runner
-- [x] Live HTTPS endpoint with a managed certificate
-- [x] Model artifact in S3, fetched at startup and SHA-256 verified, fail closed
-- [x] Causal traces persisted to DynamoDB with a 14-day TTL
-- [x] Structured JSON logs in CloudWatch carrying run_id, state, tool, action,
-      reason_code and duration
-- [x] IAM least privilege — the runtime role reads one S3 prefix and writes one
-      table; no AdministratorAccess; no long-lived credential in the image
-- [x] No public storage — S3 public access fully blocked, encrypted, versioned
-- [x] Infrastructure as code — one CloudFormation template
-- [x] Deployment smoke-tested against the live endpoint
-- [x] Provisioning uses a scoped identity, not root — `user/agrivision-deployer`
-      with one customer-managed least-privilege policy; verified by redeploying
-      the service entirely under it, and by confirming `iam list-users` and
-      `s3 ls` are both denied to it
-- [x] No persistent root access keys exist on the account
-      (`AccountAccessKeysPresent = 0`); root MFA enabled
-- [ ] Endpoint authentication — currently public, acceptable for a judged demo
-- [ ] Load or concurrency characterisation — none performed
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Judge-accessible repository | **DONE** | public remote, branch `competition/opencv-aws-2026` |
+| Pinned dependencies | **DONE** | `requirements-competition.txt`, `requirements-serving.txt`; `results/phase7/dependency_freeze.json` |
+| `pip check` clean in the container | **DONE** | "No broken requirements found" — dependency_freeze.json |
+| No research dependency in the serving runtime | **DONE** | torch, torchvision, onnx, onnxruntime, matplotlib, pytest all absent — dependency_freeze.json |
+| Dependency manifest / SBOM | **DONE** | `results/phase7/sbom.json`, 34 components, 0 licences guessed |
+| No credentials in the repository | **DONE** | `results/phase7/security_audit.json` — 667 files, 31 commits, 0 findings |
+| No restricted image bytes committed | **DONE** | corpus bytes gitignored; every committed image is a generated plot |
+| Research history untouched | **DONE** | `git status` on `src/ v2/ model/ dataset/ notebooks/ results/ outputs/` → 0 changes |
 
-> Deliberately not used: API Gateway, Lambda, Step Functions, SQS, EventBridge,
-> SageMaker, VPC/NAT, Cognito, Bedrock. Each was considered; none had a measured
-> requirement this service could point at.
+## 3. Live demonstration
 
-## 3. Repository readiness
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Live endpoint reachable | **DONE** | <https://yp2ajauzkm.us-east-1.awsapprunner.com> |
+| `/health` and `/ready` pass | **DONE** | `results/phase7/live_final_smoke.json` |
+| Five demo scenarios behave as documented | **DONE** | live_final_smoke.json — 5/5 matched expected model invocation and blocking |
+| Traces retrievable for every scenario | **DONE** | live_final_smoke.json |
+| Policy fingerprints match the frozen system | **DONE** | live_final_smoke.json — all match |
+| UI surface correct | **DONE** | responsible use, one-primary-fruit contract, no food-safety claim, counterfactual control, raw-trace disclosure — all verified in live_final_smoke.json |
+| Human visual check in a real browser | **DONE** | `HUMAN_UI_SMOKE_CHECK = PASS`, desktop and narrow width; manual, not automated |
+| Final demo revision recorded | **DONE** | `FINAL_DEMO_REVISION` in live_final_smoke.json — digest `sha256:b57eaf05…` |
+| Service stable, no failed deployment | **DONE** | live_final_smoke.json — RUNNING, 0 failed operations |
 
-- [ ] Competition branch isolated; `legacy` and `master` unmodified
-- [ ] Repository or archive accessible to judges
-- [ ] README explains the branch structure and links the blueprint
-- [ ] No secrets, credentials or `.env` files committed
-- [ ] `.gitignore` covers `.env.*`, `*.pem`, `*.key` before any infrastructure work
-- [ ] No third-party dataset images redistributed
-- [ ] Attribution present for CC BY 4.0 material
-- [ ] Repository size sane; no accidental large binaries
+## 4. Evidence
 
-## 4. Pinned dependencies
+| Item | Status | Evidence |
+| --- | --- | --- |
+| OpenCV 5 substantive role | **DONE** | TECHNICAL_REPORT §5; metric selection recorded in PHASE2C_LICENSED_CALIBRATION |
+| Agentic Vision evidence | **DONE** | 10/12 real bases change action; `results/phase6/counterfactual_matrix.json` |
+| Agent trace evidence | **DONE** | 58/58 decision attribution; `results/phase6/track_c_results.json` |
+| AWS evidence | **DONE** | `results/phase7/iac_check.json` — template matches live on 5/5 fields |
+| Confirmatory evaluation | **DONE** | Phase 6, committed at `0124c6d` |
+| Agent-disabled ablation | **DONE** | `results/phase7/baseline_ablation.json`, labelled RETROSPECTIVE / EXPLORATORY |
+| Failure cases documented | **DONE** | `results/phase6/failure_taxonomy.json`; TECHNICAL_REPORT §15 |
+| Limitations documented | **DONE** | TECHNICAL_REPORT §19; README limitations block |
+| Responsible use stated | **DONE** | live page, README, TECHNICAL_REPORT §16 |
+| Observability verified | **DONE** | 6/6 — `results/phase7/cloudwatch_audit.json` |
 
-- [ ] `requirements-competition.txt` fully pinned — no unresolved runtime entries
-- [ ] Container base image pinned by digest
-- [ ] Research requirements files unmodified by competition work
-- [ ] Clean-environment install verified
+## 5. Reproducibility
 
-## 5. Deployment guide
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Clean-clone rehearsal, all 13 steps | **DONE** | `results/phase7/clean_clone_reproduction.json` |
+| Deployed policy fingerprint reproduced | **DONE** | `78b1e2151773787a` reproduced in the clean clone |
+| Artifact-independent test mode | **DONE** | 770 passed, 141 skipped, 0 failed without the ONNX file |
+| Full test suite | **DONE** | 911 passing locally; 909 passed / 2 skipped in the clean clone |
+| Model checksum verification | **DONE** | fail-closed; verified in the clean-clone container |
 
-- [ ] Prerequisites listed
-- [ ] Build, push, deploy steps verified end to end
-- [ ] Configuration and environment variables documented
-- [ ] Teardown instructions included
-- [ ] Rehearsed from a clean checkout by following only the written steps
+## 6. Image licensing
 
-## 6. Architecture diagram
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Per-image licence verified for the evaluation corpus | **DONE** | `results/phase6/phase6_licence_manifest.json` — 38 entries, all commercial + derivatives, no Unknown/NC/ND |
+| Public-facing attribution list | **DONE** | [IMAGE_ATTRIBUTIONS.md](IMAGE_ATTRIBUTIONS.md) — currently nothing to attribute; no third-party photograph is shown publicly |
+| Demo asset policy | **DONE** | IMAGE_ATTRIBUTIONS.md and VIDEO_RECORDING_CHECKLIST.md |
 
-- [ ] Diagram reflects what is actually deployed
-- [ ] Shows the perception → decision → action loop
-- [ ] Shows AWS components and data flow
-- [ ] Referenced from README and technical report
+## 6b. Official competition requirements
 
-## 7. Demo endpoint
+Checked against the stated rules. **Video maximum: 5 minutes.**
 
-- [x] Live HTTPS endpoint — https://yp2ajauzkm.us-east-1.awsapprunner.com
-- [x] Judge-operable single page, served same-origin from the same service
-- [x] Upload → live agent result → causal trace, all from live API calls
-- [x] Counterfactual demonstration: one subject, four distinct next actions
-- [x] Condition-model invocation and skipping both visible
-- [x] Remediation path visible with before/after metrics
-- [x] Recapture and human-review paths presented as guidance, not errors
-- [x] Evidence maturity badges; advisory glare never shown as calibrated
-- [x] Responsible-use boundary unavoidable on the page
-- [x] No fabricated results — asserted by test
-- [x] No AWS or filesystem identifier in the page or script — asserted by test
-- [x] Opened in a real browser by a human — desktop and narrow/mobile width,
-      `HUMAN_UI_SMOKE_CHECK = PASS`. Manual, not automated.
-- [ ] Screenshots captured for the submission
-- [ ] Mobile device check
+| Requirement | Status | Evidence |
+| --- | --- | --- |
+| Technical report | **DONE** | [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md) |
+| Judge-accessible code repository | **DONE** | public remote, branch `competition/opencv-aws-2026` |
+| Pinned dependencies | **DONE** | both requirements files; `dependency_freeze.json` |
+| Build instructions | **DONE** | README reproduction block; `Dockerfile` |
+| Deployment instructions | **DONE** | [PHASE4_AWS_DEPLOYMENT.md](PHASE4_AWS_DEPLOYMENT.md) |
+| Test instructions | **DONE** | README; artifact-absent mode documented |
+| Architecture diagram | **DONE** | [ARCHITECTURE.md](ARCHITECTURE.md) |
+| Working endpoint | **DONE** | <https://yp2ajauzkm.us-east-1.awsapprunner.com> |
+| Video, public or unlisted, judge-accessible | **NOT DONE** | a person records this |
+| Video ≤ 5 minutes | **NOT DONE** | script targets 4:00, leaving a minute of margin |
+| Application working in video | **NOT DONE** | script §0:50 and §1:20 are live runs |
+| Architecture shown in video | **NOT DONE** | script §2:50 |
+| Principal results shown in video | **NOT DONE** | script §3:15 |
+| Evaluation evidence | **DONE** | `results/phase6/`, PHASE6_FINAL_EVALUATION.md |
+| Failure cases and limitations | **DONE** | TECHNICAL_REPORT §15, §19 |
+| Responsible use | **DONE** | live page, README, TECHNICAL_REPORT §16 |
 
-## 7b. Phase 6 confirmatory evaluation
+### Agentic Vision — additional evidence
 
-- [x] System frozen before any evaluation image was opened (`97b059be36bc3fbe`)
-- [x] Fresh pool, 0 overlap with prior corpora on group, image id and content hash
-- [x] Per-image licence verified; no Unknown, NonCommercial or NoDerivatives
-- [x] Expected actions preregistered with a fingerprint (`9ce69ebe042428dc`)
-- [x] Deployed AWS service evaluated, not a local pipeline
-- [x] No threshold, policy, model or transition changed after freezing
-- [x] Every metric states its denominator
-- [x] Negative findings preserved, not tuned away
-- [x] Failure taxonomy with distinct causes, nothing collapsed
-- [x] No image bytes committed; figures are generated plots
-- [ ] CloudWatch log emission verified — needs a read-only audit policy
-- [ ] Agent-disabled baseline measured — outstanding, see EVALUATION_PLAN §2
+| Requirement | Status | Evidence |
+| --- | --- | --- |
+| Workflow diagram | **DONE** | [AGENT_WORKFLOW_DIAGRAM.md](AGENT_WORKFLOW_DIAGRAM.md) |
+| Trace where OpenCV output changes a later decision | **DONE** | 10/12 real bases change action; `counterfactual_matrix.json`; TECHNICAL_REPORT §7 |
+| Task-success evaluation | **DONE** | 29/48 preregistered; `track_c_results.json` |
+| Failure handling | **DONE** | fail-safe 12/12; `failure_taxonomy.json` |
+| Observability | **DONE** | 6/6 verified; `cloudwatch_audit.json` |
+| Human control | **DONE** | three human-action terminals; requests are guidance, never simulated as performed |
 
-## 8. Evaluation artifacts
+## 7. Video — OUTSTANDING
 
-- [ ] Controlled-degradation suite committed and regenerable from seed
-- [ ] Baseline comparisons recorded
-- [ ] Classification metrics with confidence intervals
-- [ ] OpenCV detector metrics (ROC/AUC vs degradation ground truth)
-- [ ] Latency measured on the deployed endpoint
-- [ ] Agent task-success metrics recorded
-- [ ] **Decision attribution rate** measured and reported
-- [ ] Recovery, harm and escalation metrics recorded
-- [ ] Calibration reported
-- [ ] Every claimed number traceable to a committed artifact
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Demo script | **DONE** | [JUDGE_DEMO_SCRIPT.md](JUDGE_DEMO_SCRIPT.md), 4:00 target |
+| Recording checklist | **DONE** | [VIDEO_RECORDING_CHECKLIST.md](VIDEO_RECORDING_CHECKLIST.md) |
+| Competition maximum length confirmed | **NOT DONE** | needs checking against current rules |
+| Video recorded | **NOT DONE** | a person records this; it is not automated |
+| Video within the length limit | **NOT DONE** | |
+| Judge-accessible video link | **NOT DONE** | record the URL here once uploaded: `______` |
+| Demo image attributed if third-party | **NOT DONE** | add a row to IMAGE_ATTRIBUTIONS.md **before** recording |
 
-## 9. Failure cases
+## 7b. Release record
 
-- [ ] Failure taxonomy F1–F10 populated with real cases
-- [ ] Unsafe failures (F8) reported explicitly and not omitted
-- [ ] Curated failure set committed
-- [ ] Limitations section written, including out-of-domain degradation
-- [ ] Expected vs observed behaviour documented per case
+Filled in when the tag is created.
 
-## 10. Responsible AI
+| Field | Value |
+| --- | --- |
+| Tag | `opencv-aws-2026-submission` |
+| Commit SHA | _(recorded at tag time)_ |
+| Branch | `competition/opencv-aws-2026` |
+| Date | _(recorded at tag time)_ |
+| Live service | <https://yp2ajauzkm.us-east-1.awsapprunner.com> |
+| Live revision digest | `sha256:b57eaf0506a243798ef21423048e1c571606d78243caa13bbf7d11b79d6ce7e7` |
+| Container digest (ECR `phase4`) | same as above |
 
-- [ ] Claim boundary stated in UI, API response, report and video
-- [ ] No pathogen, toxin, contamination, internal-spoilage, safety or edibility claim anywhere
-- [ ] Approved language used throughout ("visible freshness condition", "surface deterioration", "human review recommended")
-- [ ] Human-review path documented and functioning
-- [ ] Dataset licensing and redistribution boundary documented
-- [ ] Data retention and deletion documented
-- [ ] Known biases and domain limitations disclosed
+## 8. Submission mechanics — OUTSTANDING
 
-## 11. Agentic Vision trace
+| Item | Status | Evidence |
+| --- | --- | --- |
+| Phase 7 committed | **NOT DONE** | held for final review |
+| Release tag created | **NOT DONE** | candidate name and procedure in the Phase 7 report; do not tag without authorisation |
+| Devpost / submission form completed | **NOT DONE** | |
+| Final reproduction rehearsal from the tagged revision | **NOT DONE** | the Phase 7 rehearsal ran against `0124c6d`, not a tag |
 
-- [x] Trace schema documented and versioned — `AgentTrace`, `phase3-agent-trace-1.0.0`
-- [x] Every inspection produces a complete, replayable trace — completeness 12/12;
-      timing excluded from the deterministic payload so runs compare byte-identical
-- [x] Traces name the OpenCV metric, threshold and resulting action — e.g.
-      `high_frequency_ratio 0.2635` against floor `0.3182` → `REQUEST_RECAPTURE`
-- [x] Traces demonstrate tool calls caused by visual evidence — counterfactual:
-      one base subject, identical policy, four distinct first actions
-- [x] Traces demonstrate re-analysis caused by visual evidence — remediation forces
-      re-segmentation and re-measurement; a second attempt is unreachable
-- [x] Traces demonstrate human-approval requests caused by visual evidence — three
-      human-action terminals, each carrying its triggering evidence and maturity
-- [x] Control decisions are deterministic, not model-generated — no language model
-      participates; `resolve_tool` refuses anything outside the closed vocabulary
-- [x] System demonstrably works with Bedrock unavailable — no Bedrock exists, and
-      the suite also runs with the ONNX artifact absent (636 passed, 94 skipped)
-- [ ] Worked trace walkthrough included in the report — six curated traces exist in
-      `results/phase3/traces/`; the report itself is Phase 7
+---
 
-> Evidence maturity is carried on every step. A reader can tell a `CALIBRATED`
-> finding from an `ADVISORY` one without knowing which detectors were calibrated.
+Remaining human-only actions: [HUMAN_TODO.md](HUMAN_TODO.md).
 
-## 12. Technical report
+## Known gaps carried into submission
 
-- [ ] Follows the Blueprint §34 outline
-- [ ] Prior V1/V2 work described and correctly attributed
-- [ ] Design decisions justified with evidence
-- [ ] Results reported honestly, including negative results
-- [ ] Limitations and responsible use included
-- [ ] Reproduction instructions included
-- [ ] Citations and dataset attributions complete
+Stated here so they are decisions rather than oversights:
 
-## 13. Video (≤5 minutes)
-
-- [ ] Under 5:00
-- [ ] Judge-accessible link
-- [ ] Follows the Blueprint §33 storyboard
-- [ ] Shows the agent loop changing behaviour on real input
-- [ ] Shows an escalation
-- [ ] States the claim boundary
-- [ ] Uses only imagery that is licensed or self-captured
-- [ ] Audio and screen content legible
-
-## 14. Final Devpost materials
-
-- [ ] Project title and tagline
-- [ ] Description covering problem, approach and impact
-- [ ] Repository link
-- [ ] Demo endpoint link
-- [ ] Video link
-- [ ] Technical report link
-- [ ] Architecture diagram attached
-- [ ] Award categories selected (Overall, Agentic Vision)
-- [ ] Team and attributions complete
-- [ ] Submitted before the deadline (schedule not yet verified — confirm from the official source)
+1. **Visible-condition accuracy on real imagery is unmeasured.** No independent
+   label exists. Fruit type is a proxy for domain fit, not the product claim.
+2. **The quality gate's benefit is unproven on the task it exists for.** On
+   fruit type it cost coverage and prevented no error (TECHNICAL_REPORT §14).
+3. **The model artifact is not obtainable by a third party** from the public
+   repository alone. The artifact-independent suite runs for anyone; the
+   container does not.
+4. **No phone-camera validation** has been collected.
+5. **The endpoint is unauthenticated**, which is acceptable for a judged demo.

@@ -1,0 +1,131 @@
+{
+  "defects_found_and_fixed": [
+    {
+      "defect": "unpinned test HTTP transport",
+      "fix": "pinned httpx==0.28.1 in requirements-competition.txt",
+      "impact": "test collection failed on two modules in any fresh environment"
+    },
+    {
+      "defect": "model-dependent checksum test failed instead of skipping",
+      "fix": "test_a_checksum_mismatch_prevents_readiness now skips when the artifact is absent; a missing file and a mismatched checksum are different claims",
+      "impact": "a checkout without the ONNX file saw a failure, not a skip"
+    },
+    {
+      "defect": "gitignore assertion queried a directory pattern without its trailing slash",
+      "fix": "query the pattern as written",
+      "impact": "passed in a working checkout where the directory exists, failed in a fresh clone, which is where the check matters"
+    }
+  ],
+  "fail_closed_observed": "Before the artifact was mounted the container answered /health 200 alive and /ready false with model_artifact_present false. Liveness and readiness are genuinely distinct, and the service refuses to declare itself ready without a verified model rather than serving without one.",
+  "live_service_untouched": true,
+  "manual_prerequisites": [
+    "Docker daemon access (this environment required sudo).",
+    "AWS credentials able to read the model artifact bucket, for step 6.",
+    "Network access for the clone, the package index and the artifact fetch."
+  ],
+  "method": "A new directory, a fresh git clone from the public remote, and a new virtualenv. No existing environment, build cache, generated file, local model copy or image corpus was reused, and no machine-specific path was relied on.",
+  "performed_at": "2026-09-19T18:06:27+00:00",
+  "policy_fingerprint_reproduced": {
+    "note": "Identical to the fingerprint the deployed AWS service reports, so the clean clone reproduces the same decision policy, not merely a working build.",
+    "roi_policy_threshold": "78b1e2151773787a"
+  },
+  "reproduction_version": "phase7-clean-clone-1.0.0",
+  "steps": [
+    {
+      "detail": "git clone of the public remote into an empty directory",
+      "n": 1,
+      "result": "PASS",
+      "step": "clone repository"
+    },
+    {
+      "detail": "competition/opencv-aws-2026 at 0124c6d, working tree clean",
+      "n": 2,
+      "result": "PASS",
+      "step": "checkout competition branch"
+    },
+    {
+      "detail": "python3 -m venv, Python 3.11",
+      "n": 3,
+      "result": "PASS",
+      "step": "create environment"
+    },
+    {
+      "detail": "requirements-competition.txt installed cleanly, but test collection then failed on two modules: starlette's TestClient needs an HTTP transport and none was pinned. The working environment had acquired httpx incidentally, so no earlier run had exercised a genuinely fresh install. httpx==0.28.1 is now pinned - the version every recorded test result was produced under.",
+      "n": 4,
+      "result": "PASS_AFTER_FIX",
+      "step": "install dependencies"
+    },
+    {
+      "detail": "770 passed, 141 skipped, 0 failed with no model artifact present",
+      "n": 5,
+      "result": "PASS",
+      "step": "run artifact-independent tests"
+    },
+    {
+      "detail": "aws s3 cp from the model artifact bucket, as documented in PHASE4_AWS_DEPLOYMENT.md",
+      "n": 6,
+      "result": "PASS",
+      "step": "obtain model through the documented mechanism"
+    },
+    {
+      "detail": "77d8614671873cb41ebfd725f0a4b468beca9c30cfe6a3361217343917324d4b matches EXPECTED_MODEL_SHA256",
+      "n": 7,
+      "result": "PASS",
+      "step": "verify model SHA-256"
+    },
+    {
+      "detail": "24 build steps, image agrivision:cleanroom built from the clone",
+      "n": 8,
+      "result": "PASS",
+      "step": "build Docker image"
+    },
+    {
+      "detail": "model artifact mounted read-only at MODEL_DIR=/opt/agrivision/model, in-memory persistence, non-root user",
+      "n": 9,
+      "result": "PASS",
+      "step": "run container"
+    },
+    {
+      "detail": "200, status alive",
+      "n": 10,
+      "result": "PASS",
+      "step": "/health passes"
+    },
+    {
+      "detail": "ready true, OpenCV 5.0.0, model artifact present and verified, model loaded",
+      "n": 11,
+      "result": "PASS",
+      "step": "/ready passes"
+    },
+    {
+      "detail": "NORMAL -> COMPLETE with the model invoked in 259 ms; SEVERE_BLUR -> REQUEST_RECAPTURE with the model skipped in 68 ms",
+      "n": 12,
+      "result": "PASS",
+      "step": "inspect a generated test fixture"
+    },
+    {
+      "detail": "9 and 7 step records retrieved by run id",
+      "n": 13,
+      "result": "PASS",
+      "step": "trace retrieval works"
+    }
+  ],
+  "test_classification": {
+    "artifact_independent": {
+      "failed": 0,
+      "note": "What a contributor or judge without the ONNX file sees. Explicit skips, no failures.",
+      "passed": 770,
+      "skipped": 141
+    },
+    "remaining_skip_reasons": [
+      "research checkpoint not present locally (1 test)",
+      "licensed corpus imagery not present in this checkout (1 test)"
+    ],
+    "with_model_artifact": {
+      "failed": 0,
+      "passed": 909,
+      "skipped": 2
+    }
+  },
+  "third_party_limitation": "A judge cloning the public repository cannot obtain the model artifact unaided: model.onnx is gitignored, the S3 object is private, and the alternative documented route re-exports it from a V2 research checkpoint that is also not in the repository. The artifact-independent suite runs for anyone; the container does not. This is stated rather than implied, and closing it means either publishing the artifact or shipping a credential-free fetch path."
+}

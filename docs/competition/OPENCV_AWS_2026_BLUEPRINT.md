@@ -901,8 +901,10 @@ the metrics must be restricted to a foreground region.
   confirmatory. A separate exploratory sweep found the recoverable band is
   reachable on only 3 of 12 real photographs, and that the agent chose
   `APPLY_GAMMA` on all 3.
-- **Not verified:** CloudWatch log emission — the scoped deployer is denied log
-  reads by design and widening it was not done unilaterally.
+- **Not verified at the time:** CloudWatch log emission. Closed in Phase 7 at
+  6/6 using a separate read-only audit identity. The Phase 6 artifact's stated
+  reason — that the deployer was denied log reads — was a misdiagnosis and is
+  corrected in the Phase 7 record.
 - **Artifacts:** `competition/evaluation/results/phase6/`, 5 figures. Full
   method: [PHASE6_FINAL_EVALUATION.md](PHASE6_FINAL_EVALUATION.md).
 - **Supports:** technical execution, real-world impact, **Agentic Vision Award**.

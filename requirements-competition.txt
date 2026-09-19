@@ -41,9 +41,18 @@ opencv-python==5.0.0.93
 numpy==2.4.6
 Pillow==12.3.0
 
-# Test framework. Resolved and verified during Phase 1; runs the 81-test
-# competition suite.
+# Test framework. Resolved and verified during Phase 1; runs the competition
+# suite.
 pytest==9.1.1
+
+# Transport for starlette's TestClient, which the service API tests use.
+# Unpinned until a Phase 7 clean-clone rehearsal collected two test modules and
+# failed: the local environment had acquired httpx incidentally, so nothing had
+# ever exercised a genuinely fresh install. Pinned to the version every recorded
+# test result was produced under. Starlette 1.6 prefers httpx2 and says so in a
+# deprecation warning; switching clients at submission time would mean the
+# recorded results came from a client the pin does not describe, so it stays.
+httpx==0.28.1
 
 # Evaluation plots only. Not required by the perception layer or the runtime
 # service, and must be excluded from the deployment container image.

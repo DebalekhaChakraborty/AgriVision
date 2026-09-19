@@ -1,0 +1,286 @@
+{
+  "component_count": 34,
+  "components": [
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "annotated-doc",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "0.0.5"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "annotated-types",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "0.8.0"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "anyio",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "4.15.1"
+    },
+    {
+      "direct": true,
+      "licence": "Apache-2.0",
+      "name": "boto3",
+      "purpose": "S3 model artifact fetch, DynamoDB trace persistence",
+      "source": "package metadata License field",
+      "version": "1.43.98"
+    },
+    {
+      "direct": false,
+      "licence": "Apache-2.0",
+      "name": "botocore",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "1.43.98"
+    },
+    {
+      "direct": false,
+      "licence": "BSD-3-Clause",
+      "name": "click",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "8.5.0"
+    },
+    {
+      "direct": true,
+      "licence": "MIT",
+      "name": "fastapi",
+      "purpose": "HTTP API surface",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "0.141.1"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "h11",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "0.16.0"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "httptools",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "0.8.0"
+    },
+    {
+      "direct": false,
+      "licence": "BSD-3-Clause",
+      "name": "idna",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "3.20"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "jmespath",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "1.1.0"
+    },
+    {
+      "direct": true,
+      "licence": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "name": "numpy",
+      "purpose": "array backing for every OpenCV operation",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "2.4.6"
+    },
+    {
+      "direct": true,
+      "licence": "Apache 2.0",
+      "name": "opencv-python",
+      "purpose": "all perception: segmentation, quality metrics, cv2.dnn inference",
+      "source": "package metadata License field",
+      "version": "5.0.0.93"
+    },
+    {
+      "direct": false,
+      "licence": "Apache-2.0 OR BSD-2-Clause",
+      "name": "packaging",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "26.3"
+    },
+    {
+      "direct": true,
+      "licence": "MIT-CMU",
+      "name": "pillow",
+      "purpose": "image decode fallback and format sniffing support",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "12.3.0"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "pip",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "26.2.1"
+    },
+    {
+      "direct": true,
+      "licence": "MIT",
+      "name": "pydantic",
+      "purpose": "request and response schemas",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "2.13.5"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "pydantic_core",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "2.46.5"
+    },
+    {
+      "direct": false,
+      "licence": "Dual License",
+      "name": "python-dateutil",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "2.9.0.post0"
+    },
+    {
+      "direct": false,
+      "licence": "BSD-3-Clause",
+      "name": "python-dotenv",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "1.2.3"
+    },
+    {
+      "direct": true,
+      "licence": "Apache-2.0",
+      "name": "python-multipart",
+      "purpose": "multipart upload parsing",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "0.0.32"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "PyYAML",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "6.0.3"
+    },
+    {
+      "direct": false,
+      "licence": "Apache License 2.0",
+      "name": "s3transfer",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "0.19.2"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "setuptools",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "84.0.0"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "six",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "1.17.0"
+    },
+    {
+      "direct": false,
+      "licence": "BSD-3-Clause",
+      "name": "starlette",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "1.6.0"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "typing-inspection",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "0.4.4"
+    },
+    {
+      "direct": false,
+      "licence": "PSF-2.0",
+      "name": "typing_extensions",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "4.16.0"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "urllib3",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "2.8.0"
+    },
+    {
+      "direct": true,
+      "licence": "BSD-3-Clause",
+      "name": "uvicorn",
+      "purpose": "ASGI server",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "0.53.0"
+    },
+    {
+      "direct": false,
+      "licence": "MIT License",
+      "name": "uvloop",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "0.22.1"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "watchfiles",
+      "purpose": "transitive dependency",
+      "source": "package metadata License field",
+      "version": "1.2.0"
+    },
+    {
+      "direct": false,
+      "licence": "BSD-3-Clause",
+      "name": "websockets",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "17.1"
+    },
+    {
+      "direct": false,
+      "licence": "MIT",
+      "name": "wheel",
+      "purpose": "transitive dependency",
+      "source": "package metadata License-Expression (PEP 639, SPDX)",
+      "version": "0.48.0"
+    }
+  ],
+  "dependencies_version": "phase7-dependencies-1.0.0",
+  "deployed_image_digest": "sha256:b57eaf0506a243798ef21423048e1c571606d78243caa13bbf7d11b79d6ce7e7",
+  "direct_count": 8,
+  "format": "lightweight dependency manifest, not CycloneDX or SPDX",
+  "format_note": "No SBOM generator is available in this environment, so this is produced from package metadata inside the image. It is honest about being lighter than a standard SBOM rather than claiming to be one.",
+  "image": "agrivision:phase5",
+  "licence_rule": "Recorded only where the package's own metadata states it. Where metadata is unclear the licence is null and the reason is given; no value is inferred.",
+  "licence_unknown_count": 0,
+  "python": "3.11.16"
+}

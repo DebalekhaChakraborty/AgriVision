@@ -1,0 +1,162 @@
+{
+  "assessed_at": "2026-09-19T18:14:11+00:00",
+  "candidate_commit": {
+    "note": "Phase 7 is uncommitted by instruction. The commit that should eventually be tagged is the Phase 7 commit, once created and reviewed - not the Phase 6 commit, because the submission documentation and the reproducibility fixes live in Phase 7.",
+    "phase6_commit": "0124c6d6c437677eed8800a997ad483a6f6943e2",
+    "phase7_committed": false
+  },
+  "infrastructure_preserved": {
+    "app_runner_service": "RUNNING - not deleted",
+    "dynamodb_table": "healthy - not deleted",
+    "ecr_image_in_use": "sha256:b57eaf05... - not deleted",
+    "model_artifact": "present in S3 - not deleted",
+    "note": "Cost cleanup happens only after judging requirements are over.",
+    "runtime_iam_role": "AgriVisionAppRunnerInstanceRole - not removed"
+  },
+  "known_gaps_carried": [
+    "Visible-condition accuracy on real imagery is unmeasured; no independent label exists.",
+    "The quality gate's benefit is unproven on the task it exists for - on fruit type it cost coverage and prevented no error.",
+    "The model artifact is not obtainable by a third party from the public repository alone.",
+    "No phone-camera validation has been collected.",
+    "The recoverable-underexposure band is reachable on only 3 of 12 real photographs by global darkening.",
+    "The live endpoint is unauthenticated, which is acceptable for a judged demo."
+  ],
+  "outstanding": [
+    {
+      "blocker_for_submission": true,
+      "item": "video recorded and uploaded",
+      "why": "a person records this; it is not automated"
+    },
+    {
+      "blocker_for_submission": true,
+      "item": "competition maximum video length confirmed against current rules",
+      "why": "the script targets 4:00 but the limit must be checked on the day"
+    },
+    {
+      "blocker_for_submission": true,
+      "item": "Phase 7 committed",
+      "why": "held for final review by instruction"
+    },
+    {
+      "blocker_for_submission": false,
+      "item": "release tag created",
+      "why": "requires explicit authorisation"
+    },
+    {
+      "blocker_for_submission": false,
+      "item": "reproduction rehearsal re-run against the tagged revision",
+      "why": "the Phase 7 rehearsal ran against 0124c6d, before the Phase 7 fixes were committed"
+    },
+    {
+      "blocker_for_submission": true,
+      "item": "Devpost / submission form",
+      "why": "not started"
+    }
+  ],
+  "ready": {
+    "architecture_diagram": {
+      "evidence": "docs/competition/ARCHITECTURE.md",
+      "ready": true
+    },
+    "attributions": {
+      "evidence": "docs/competition/IMAGE_ATTRIBUTIONS.md; no third-party image shown publicly",
+      "ready": true
+    },
+    "clean_clone_reproduction": {
+      "evidence": "clean_clone_reproduction.json",
+      "ready": true,
+      "steps_passed": 13
+    },
+    "confirmatory_evaluation": {
+      "evidence": "Phase 6, committed 0124c6d",
+      "ready": true
+    },
+    "demo_script": {
+      "evidence": "docs/competition/JUDGE_DEMO_SCRIPT.md, 4:00 target",
+      "ready": true
+    },
+    "dependency_freeze": {
+      "evidence": "dependency_freeze.json",
+      "packages": 34,
+      "ready": true
+    },
+    "iac_matches_live": {
+      "evidence": "iac_check.json",
+      "ready": true
+    },
+    "live_service": {
+      "evidence": "live_final_smoke.json",
+      "ready": true,
+      "revision": "sha256:b57eaf0506a243798ef21423048e1c571606d78243caa13bbf7d11b79d6ce7e7"
+    },
+    "observability": {
+      "evidence": "cloudwatch_audit.json",
+      "ready": true,
+      "result": "6/6 VERIFIED"
+    },
+    "readme": {
+      "evidence": "README.md competition section; V1/V2 record unchanged",
+      "ready": true
+    },
+    "retrospective_ablation": {
+      "evidence": "baseline_ablation.json",
+      "label": "RETROSPECTIVE_EXPLORATORY_ABLATION",
+      "ready": true
+    },
+    "sbom": {
+      "evidence": "sbom.json",
+      "licences_guessed": 0,
+      "ready": true
+    },
+    "security_audit": {
+      "evidence": "security_audit.json",
+      "ready": true
+    },
+    "technical_report": {
+      "evidence": "docs/competition/TECHNICAL_REPORT.md, 20 sections",
+      "ready": true
+    },
+    "video_checklist": {
+      "evidence": "docs/competition/VIDEO_RECORDING_CHECKLIST.md",
+      "ready": true
+    },
+    "workflow_diagram": {
+      "evidence": "docs/competition/AGENT_WORKFLOW_DIAGRAM.md",
+      "ready": true
+    }
+  },
+  "recommended_tag": {
+    "alternative": "v2026-opencv-aws-submission",
+    "created": false,
+    "name": "opencv-aws-2026-submission",
+    "procedure": [
+      "review and commit Phase 7 on competition/opencv-aws-2026",
+      "push the branch and confirm local == remote",
+      "re-run the clean-clone rehearsal against the tagged revision, not 0124c6d",
+      "git tag -a opencv-aws-2026-submission -m '<message>' <phase 7 sha>",
+      "git push origin opencv-aws-2026-submission",
+      "record the tag and its SHA in SUBMISSION_CHECKLIST.md"
+    ],
+    "reason_not_created": "tagging requires explicit authorisation"
+  },
+  "rule": "An item is READY only when a named artifact backs it. Items without evidence are listed as outstanding, not assumed.",
+  "submission_readiness_version": "phase7-readiness-1.0.0",
+  "test_counts": {
+    "artifact_absent": {
+      "failed": 0,
+      "passed": 822,
+      "skipped": 139
+    },
+    "clean_clone_artifact_absent": {
+      "failed": 0,
+      "passed": 770,
+      "skipped": 141
+    },
+    "clean_clone_with_artifact": {
+      "failed": 0,
+      "passed": 909,
+      "skipped": 2
+    },
+    "full_suite": 961
+  }
+}

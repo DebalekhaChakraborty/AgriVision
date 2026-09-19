@@ -29,26 +29,127 @@ The research framework begins with [V2_RESEARCH_BLUEPRINT.md](docs/handbook/V2_R
 
 ### Competition line — OpenCV AI Competition 2026
 
-A separate branch, `competition/opencv-aws-2026`, adapts this work into an agentic visual inspection system for the OpenCV AI Competition 2026. It is branched from the completed V2 research state and contains only competition-specific work. It does not modify `legacy` or `master`, and its measurements are reported separately from the V2 research results above.
+> **A separate branch.** `competition/opencv-aws-2026` adapts this work into an
+> agentic visual inspection system for the OpenCV AI Competition 2026. It is
+> branched from the completed V2 research state, contains only
+> competition-specific work, does not modify `legacy` or `master`, and reports
+> its measurements separately from the V2 research results elsewhere in this
+> README.
 
-That branch is documented in [OPENCV_AWS_2026_BLUEPRINT.md](docs/competition/OPENCV_AWS_2026_BLUEPRINT.md).
+**Live demonstration:** <https://yp2ajauzkm.us-east-1.awsapprunner.com>
 
-**Live demonstration:** https://yp2ajauzkm.us-east-1.awsapprunner.com
+#### What AgriVision is
 
-OpenCV 5 evaluates whether a capture is trustworthy, takes bounded corrective
-actions when appropriate, and runs the condition model only when the capture is
-suitable. The demonstration shows the same subject producing four different next
-actions as its visual evidence changes.
+It inspects a photograph of a single piece of produce and decides **what to do
+next** — correct the capture, ask for a new one, escalate to a person, or run
+the condition model. The decision is made by a deterministic policy reading
+OpenCV 5 measurements, and every decision records the metric, the threshold it
+crossed, and how much that evidence is trusted.
 
-- Judge demo and sequence: [PHASE5_JUDGE_DEMO.md](docs/competition/PHASE5_JUDGE_DEMO.md),
-  [JUDGE_DEMO_SCRIPT.md](docs/competition/JUDGE_DEMO_SCRIPT.md)
-- Agent loop: [AGENT_WORKFLOW.md](docs/competition/AGENT_WORKFLOW.md)
-- Deployment: [PHASE4_AWS_DEPLOYMENT.md](docs/competition/PHASE4_AWS_DEPLOYMENT.md),
-  [DEPLOYED_ARCHITECTURE.md](docs/competition/DEPLOYED_ARCHITECTURE.md)
+A classifier answers a dim, blurred or backlit photograph with the same
+confidence as a good one. That is the failure this addresses.
+
+#### Input contract
+
+**One primary produce item per capture.** Market stalls, piles, crates and trees
+carrying multiple fruits are out of scope and return a recapture or
+human-review action. This is a scope boundary, not a food-safety statement.
+
+#### Architecture
+
+Browser → AWS App Runner → FastAPI → 18-state bounded orchestrator → OpenCV 5
+perception → `cv2.dnn` MobileNetV3. Supporting: S3 (model artifact, SHA-256
+verified fail-closed), DynamoDB (traces, 14-day TTL), CloudWatch (structured
+logs), ECR, IAM. No Bedrock, no SageMaker, no API Gateway, no Lambda.
+
+Diagrams: [ARCHITECTURE.md](docs/competition/ARCHITECTURE.md) ·
+[AGENT_WORKFLOW_DIAGRAM.md](docs/competition/AGENT_WORKFLOW_DIAGRAM.md)
+
+#### The role OpenCV 5 plays
+
+OpenCV is not a decoding convenience here. It produces the evidence the control
+decisions are made from: segmentation, ROI-restricted quality metrics, artefact
+detection, remediation, and inference through `cv2.dnn`. The blur metric was
+*chosen* by measurement against a rule written down first — Laplacian variance
+separates blurred from sharp perfectly yet its median moves 88-fold across an
+exposure ladder on the same photographs, so the policy gates on
+`high_frequency_ratio` instead.
+
+#### The role the agent plays
+
+An 18-state machine with a declared transition table; illegal transitions raise.
+Evidence maturity is enforced in code, so a blocking decision supported only by
+advisory evidence is refused. Bounded at **1 remediation and 1 model
+invocation** per inspection. **No language model participates in any decision** —
+actions are enum members from a closed 15-tool vocabulary.
+
+#### Evaluation headline — confirmatory, on the deployed service
+
+Measured once on 38 fresh licence-verified photographs and 48 preregistered
+controlled scenarios, against a system frozen beforehand (`97b059be36bc3fbe`):
+
+| Measurement | Result | Denominator |
+| --- | --- | --- |
+| Complete inspection | 28/38 (73.7%) | all images — **not accuracy** |
+| Foreground failure | 9/38 (23.7%) | all images |
+| Fruit-type classification | **27/28 (96.4%)** | **model invocations only** |
+| First-action agreement | 30/48 (62.5%) | all scenarios |
+| Decision attribution | **58/58 (100%)** | all decisions |
+| Unsafe inference | **0/48 and 0/38** | all runs |
+| Fail-safe on severe blur | **12/12** | blur scenarios |
+
+**10 of 12** real bases change their selected action when only the visual
+condition changes. Method and full results:
+[PHASE6_FINAL_EVALUATION.md](docs/competition/PHASE6_FINAL_EVALUATION.md).
+
+#### Reproduction
+
+```bash
+git clone https://github.com/DebalekhaChakraborty/AgriVision.git
+cd AgriVision && git checkout competition/opencv-aws-2026
+python3 -m venv .venv && .venv/bin/pip install -r requirements-competition.txt
+.venv/bin/python -m pytest tests/competition -q      # 770 pass, 141 skip without the model
+```
+
+Running the container additionally needs the ONNX artifact, which is gitignored;
+see [PHASE4_AWS_DEPLOYMENT.md](docs/competition/PHASE4_AWS_DEPLOYMENT.md). A
+clean-clone rehearsal of all 13 documented steps is recorded in
+`competition/evaluation/results/phase7/clean_clone_reproduction.json`.
+
+#### Limitations, stated up front
+
+- **Segmentation is the binding limit** — 76.3% foreground-valid under a contract
+  that already excludes the hard cases.
+- **Visible-condition accuracy on real imagery is unmeasured.** No independent
+  label exists; fruit type is a proxy for domain fit, not the product claim.
+- **The recoverable-underexposure route scored 2/12** in confirmatory testing.
+  The diagnosis, and the decision not to retune afterwards, are in
+  [TECHNICAL_REPORT.md §15.1](docs/competition/TECHNICAL_REPORT.md).
+- **Small samples** — 38 photographs, 48 scenarios.
+- **No phone-camera validation** has been collected.
+
+#### Responsible use
 
 The service reports **visible produce condition** only. It does not detect
-pathogens, toxins, microbiological contamination or internal spoilage, and does
-not determine whether food is safe to eat.
+pathogens, toxins, microbiological contamination or internal spoilage, and it
+does not determine whether food is safe to eat. A person remains responsible for
+any decision about produce.
+
+#### Competition documents
+
+- Technical report: [TECHNICAL_REPORT.md](docs/competition/TECHNICAL_REPORT.md)
+- Evaluation: [PHASE6_FINAL_EVALUATION.md](docs/competition/PHASE6_FINAL_EVALUATION.md)
+- Judge demo: [PHASE5_JUDGE_DEMO.md](docs/competition/PHASE5_JUDGE_DEMO.md) ·
+  [JUDGE_DEMO_SCRIPT.md](docs/competition/JUDGE_DEMO_SCRIPT.md)
+- Agent loop: [AGENT_WORKFLOW.md](docs/competition/AGENT_WORKFLOW.md)
+- Deployment: [PHASE4_AWS_DEPLOYMENT.md](docs/competition/PHASE4_AWS_DEPLOYMENT.md) ·
+  [DEPLOYED_ARCHITECTURE.md](docs/competition/DEPLOYED_ARCHITECTURE.md)
+- Image attributions: [IMAGE_ATTRIBUTIONS.md](docs/competition/IMAGE_ATTRIBUTIONS.md)
+- Blueprint: [OPENCV_AWS_2026_BLUEPRINT.md](docs/competition/OPENCV_AWS_2026_BLUEPRINT.md)
+
+---
+
+*The sections below are the original V1 and V2 research record, unchanged.*
 
 ## V2 Phase 1
 

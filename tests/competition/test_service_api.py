@@ -104,8 +104,16 @@ def test_ready_is_true_with_a_verified_model(client):
 # --- 11: checksum mismatch fails readiness ------------------------------------
 
 
-def test_a_checksum_mismatch_prevents_readiness():
-    """The property that matters most in the artifact path."""
+def test_a_checksum_mismatch_prevents_readiness(model_available):
+    """The property that matters most in the artifact path.
+
+    Needs the artifact present: the claim is that a *mismatched* checksum
+    blocks readiness, which is a different statement from a missing file
+    blocking it. Without the bytes there is nothing to mismatch, so this skips
+    rather than failing in a checkout that has not fetched the model.
+    """
+    if not model_available:
+        pytest.skip("model artifact unavailable in this checkout")
     wrong = ServiceConfig(model_dir=ARTIFACT_DIR, expected_model_sha256="0" * 64)
     status = ensure_model_artifact(wrong)
     assert status.present is True
