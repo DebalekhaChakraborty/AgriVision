@@ -1,0 +1,36 @@
+{
+  "phase3b_version": "phase3b-segmentation-1.0.0",
+  "what_this_is": "Single-rater visual adjudication of the 24 masks recovered by the fallback ladder on the Phase 2c-B calibration split. The rater is the implementer, judging colour overlay renderings at 260x200 px. This is NOT ground truth: no pixel-accurate reference masks exist for these photographs, no second rater scored them, and no inter-rater agreement is available. It is recorded because it is the only evidence in this phase that speaks to mask CORRECTNESS rather than to geometric validity, and leaving it as an unwritten impression would have been worse than stating its limits.",
+  "verdict_vocabulary": {
+    "CORRECT": "mask covers one subject, cleanly, and little else",
+    "ACCEPTABLE": "mask covers the coherent item the photograph is of (a bunch of bananas, a bowl of sliced fruit) rather than one individual fruit",
+    "WRONG": "mask is an arbitrary block carved out of a multi-subject scene, or covers a non-fruit object"
+  },
+  "method_under_adjudication": "first valid candidate from the fallback ladder",
+  "verdicts": [
+    {"image_id": "WC-377f38514c2940", "track": "CLEAN_BASE", "verdict": "CORRECT", "note": "single large citrus filling the frame, boundary follows the fruit"},
+    {"image_id": "WC-9fd7cd40220b0f", "track": "CLEAN_BASE", "verdict": "CORRECT", "note": "single apple on a black ground, clean boundary including the stalk"},
+    {"image_id": "WC-b9bb50051b2695", "track": "NATURAL_SCENE", "verdict": "CORRECT", "note": "one green apple correctly isolated from surrounding red apples"},
+    {"image_id": "WC-2a4bc40afb244e", "track": "CLEAN_BASE", "verdict": "ACCEPTABLE", "note": "a hand of bananas; the bunch is the photographed item"},
+    {"image_id": "WC-70c827a5e7a9f0", "track": "CLEAN_BASE", "verdict": "ACCEPTABLE", "note": "sliced banana pieces on a dark ground, all covered"},
+    {"image_id": "WC-c15da8e28870fd", "track": "CLEAN_BASE", "verdict": "ACCEPTABLE", "note": "bowl of apples in a product shot; covers the fruit, not the bowl rim"},
+    {"image_id": "WC-231ebc597189ff", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "compact block cut out of a large pile of green fruit"},
+    {"image_id": "WC-2b2144305f677e", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "market display; mask spans several produce types"},
+    {"image_id": "WC-30761e03d06e30", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "segmented the white juicer body rather than the fruit"},
+    {"image_id": "WC-317cbb96ee76d3", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "row of fruits, mask covers several with arbitrary ends"},
+    {"image_id": "WC-464dfd5491113c", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "arbitrary subset of an apple pile"},
+    {"image_id": "WC-50c2a39c8536d6", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "bowl of many lemons, no single subject exists"},
+    {"image_id": "WC-5d8ef30fc09a02", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "crate of bananas, mask covers the crate contents"},
+    {"image_id": "WC-83804ca910e2f7", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "banana plus an adjacent can and shadow"},
+    {"image_id": "WC-848f7f06fe7d25", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "market shelf, mask covers a horizontal band of stock"},
+    {"image_id": "WC-953906b4e4b604", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "several green fruits among oranges, not one subject"},
+    {"image_id": "WC-a12bf770426f82", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "banana display, mask covers a band across the stall"},
+    {"image_id": "WC-b1ea342bed3b58", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "apples plus surrounding foliage"},
+    {"image_id": "WC-b605350af66114", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "a loaded truck; mask covers the whole load"},
+    {"image_id": "WC-ba343872bf0233", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "basket of apples; mask covers basket and contents together"},
+    {"image_id": "WC-bfad5b7984d867", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "fruit in a mesh holder; mask dominated by the holder"},
+    {"image_id": "WC-d15f22e3a746ef", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "stall of oranges, arbitrary region"},
+    {"image_id": "WC-d756ea257b3976", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "dense pile, mask is a blob with no object boundary"},
+    {"image_id": "WC-e83470eb62e862", "track": "NATURAL_SCENE", "verdict": "WRONG", "note": "produce scattered on grass, mask covers a scattered region"}
+  ]
+}

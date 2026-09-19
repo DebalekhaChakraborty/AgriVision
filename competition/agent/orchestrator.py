@@ -81,6 +81,10 @@ from competition.vision.foreground import (
     isolate_foreground,
     segment_without_fill,
 )
+from competition.vision.foreground_fallback import (
+    MaskProvenance,
+    isolate_foreground_with_fallback,
+)
 from competition.vision.highlights import (
     DEFAULT_HIGHLIGHT_POLICY,
     LocalHighlightPolicy,
@@ -248,6 +252,14 @@ class OrchestratorPolicy:
     # deployments where a second capture is expensive.
     foreground_invalid_action: RemediationAction = RemediationAction.REQUEST_RECAPTURE
 
+    # Phase 3b fallback ladder. OFF by default: every Phase 2c-B, 2d and 3
+    # result was produced with the primary alone, and a default that silently
+    # changed which mask those numbers describe would invalidate them rather
+    # than improve them. Turning it on is a deployment decision whose measured
+    # consequences are documented, and the provenance of every recovered mask
+    # is recorded in the trace.
+    enable_foreground_fallback: bool = False
+
     def fingerprints(self) -> dict:
         return {
             "roi_policy_threshold": self.roi_policy.threshold_fingerprint(),
@@ -264,6 +276,7 @@ class OrchestratorPolicy:
             "orchestrator_version": ORCHESTRATOR_VERSION,
             "state_machine_version": STATE_MACHINE_VERSION,
             "roi_policy_status": self.roi_policy.status,
+            "foreground_fallback_enabled": self.enable_foreground_fallback,
             "foreground_invalid_action": self.foreground_invalid_action.value,
             "budget": self.budget.to_dict(),
             "fingerprints": self.fingerprints(),
@@ -807,8 +820,16 @@ class _Run:
         self.ledger.spend_segmentation()
         mask = None
         foreground = None
+        provenance = MaskProvenance.PRIMARY.value
+        fallback = None
         try:
-            mask, foreground = isolate_foreground(self.canonical_image)
+            if self.policy.enable_foreground_fallback:
+                mask, foreground, fallback = isolate_foreground_with_fallback(
+                    self.canonical_image
+                )
+                provenance = fallback.provenance
+            else:
+                mask, foreground = isolate_foreground(self.canonical_image)
         except ForegroundError as error:
             self.step(
                 ToolName.SEGMENT_FOREGROUND,
@@ -828,20 +849,35 @@ class _Run:
             started,
             evidence_summary={
                 "valid": foreground.valid,
+                "mask_provenance": provenance,
+                "accepted_method": foreground.method,
                 "invalid_reasons": list(foreground.invalid_reasons),
                 "foreground_fraction": round(foreground.foreground_fraction, 6),
                 "component_count": foreground.component_count,
                 "method": foreground.method,
             },
-            evidence_ids=["foreground.valid", "foreground.component_count",
-                          "foreground.foreground_fraction"],
+            evidence_ids=(
+                ["foreground.valid", "foreground.component_count",
+                 "foreground.foreground_fraction"]
+                + (["foreground.recovered"]
+                   if provenance == MaskProvenance.FALLBACK.value else [])
+            ),
             input_artifact_hashes={"canonical_image_sha256": self.canonical_sha},
             decision_reason=(
-                "Subject isolated; ROI measurement permitted."
+                ("Subject isolated by the primary method; ROI measurement permitted."
+                 if provenance == MaskProvenance.PRIMARY.value else
+                 f"Primary segmentation failed; mask RECOVERED by the "
+                 f"{foreground.method} fallback. Adjudicated usable on 5 of 5 "
+                 f"single-subject captures and 1 of 19 multi-subject scenes, so "
+                 f"this mask is PROVISIONAL, not equivalent to a primary one.")
                 if foreground.valid else
                 "Mask failed its validity guards; ROI measurement refused."
             ),
-            evidence_maturity=EvidenceMaturity.CALIBRATED.value,
+            evidence_maturity=(
+                EvidenceMaturity.PROVISIONAL.value
+                if provenance == MaskProvenance.FALLBACK.value
+                else EvidenceMaturity.CALIBRATED.value
+            ),
         )
 
         if not foreground.valid:

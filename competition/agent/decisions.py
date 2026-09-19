@@ -81,6 +81,15 @@ EVIDENCE_MATURITY: dict[str, EvidenceMaturity] = {
     "foreground.component_count": EvidenceMaturity.CALIBRATED,
     "foreground.foreground_fraction": EvidenceMaturity.CALIBRATED,
 
+    # Phase 3b. A mask recovered by the fallback ladder passes exactly the same
+    # geometric guards as a primary mask, and is still not the same thing.
+    # Adjudicated by eye on the development split, recovered masks were usable
+    # on 5 of 5 single-subject captures and on 1 of 19 multi-subject scenes,
+    # because a compact block carved out of a fruit pile has the geometry of a
+    # single fruit and no guard can separate them. PROVISIONAL keeps it able to
+    # support a decision while making its provenance visible in every trace.
+    "foreground.recovered": EvidenceMaturity.PROVISIONAL,
+
     # Met the Phase 2c-B criteria. high_frequency_ratio was selected over
     # Laplacian variance despite the latter's AUC of 1.000, because its median
     # moved 88-fold across the exposure ladder and no global threshold can

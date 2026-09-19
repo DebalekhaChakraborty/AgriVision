@@ -17,7 +17,7 @@ that produced them and are reported separately from the V2 research results.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phases 0–2d complete and committed; Phase 3 complete and uncommitted. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. A bounded agentic loop now routes that evidence to tool calls and human actions, with segmentation failure handled as a first-class refusal. |
+| Status | Phases 0–3 complete and committed; Phase 3b complete and uncommitted. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. A bounded agentic loop now routes that evidence to tool calls and human actions, with segmentation failure handled as a first-class refusal. |
 
 ---
 
@@ -142,7 +142,22 @@ In scope:
 
 ## 9. User journey
 
-1. User submits an image or short video frame of produce.
+### Deployment input contract
+
+**One primary produce item per inspection capture.** Locked in Phase 3b.
+
+The system does not perform semantic extraction of a single fruit from market
+stalls, piles, crates, trees carrying multiple fruits, or arbitrary multi-object
+scenes. Such an image is expected to yield `INSUFFICIENT_VISUAL_EVIDENCE` and a
+terminal `REQUEST_RECAPTURE` or `REQUEST_HUMAN_REVIEW`.
+
+That is correct behaviour under the contract rather than a defect, and it is
+measured: pushing the Phase 3b fallback past this boundary produced masks that
+were adjudicated wrong on 18 of 19 scene photographs. **Multi-object produce
+segmentation is not claimed.** This is a scope boundary, not a food-safety
+statement.
+
+1. User submits an image or short video frame of produce, containing one item.
 2. Perception measures capture quality and localises candidate regions.
 3. If capture quality is inadequate, the agent enhances and re-analyses, or asks
    for a recapture with a specific, actionable reason.
@@ -776,6 +791,30 @@ the metrics must be restricted to a foreground region.
   [PHASE3_AGENTIC_ORCHESTRATOR.md](PHASE3_AGENTIC_ORCHESTRATOR.md); diagram:
   [AGENT_WORKFLOW.md](AGENT_WORKFLOW.md).
 - **Supports:** **Agentic Vision Award**, innovation, technical execution.
+
+### Phase 3b — Bounded foreground segmentation recovery *(complete, uncommitted)*
+- **Objective:** recover trustworthy masks without increasing silent wrong-mask
+  acceptance. The last perception-hardening phase before deployment.
+- **Key finding:** the 41% assessability figure pooled two different things.
+  Split by track on the development set, the primary already reaches **85.7% on
+  single-subject captures** — the deployment contract — and 30.0% on market and
+  orchard scenes, where there is often no single subject and refusing is correct.
+- **Delivered:** a classical fallback ladder (`chroma_distance`,
+  `border_lab_distance`, `grabcut_scaled`) consulted only when the primary
+  fails, with unrelaxed guards, recorded provenance, and `PROVISIONAL` maturity
+  on recovered masks. Primary path byte-identical; fallback **off by default**.
+- **Recovery:** single-subject 85.7% → **100%**, all five recoveries adjudicated
+  usable. Scenes 30.0% → 93.3%, but **18 of 19 adjudicated wrong** — arbitrary
+  blocks carved out of piles that pass every geometric guard.
+- **Negative results:** two single-subject discriminators were built and both
+  failed — boundary–edge support measured backwards (0.760 for wrong masks vs
+  0.573 for right ones) and distance-transform multiplicity is confounded by
+  shape. No threshold was fitted to rescue either.
+- **Not confirmatory:** measured on the 65-image development split only. The
+  held-out and Phase 2d validation sets were deliberately not reopened.
+- **Artifacts:** `competition/vision/foreground_fallback.py`,
+  `competition/evaluation/results/phase3b/`. Full method:
+  [PHASE3B_SEGMENTATION_RECOVERY.md](PHASE3B_SEGMENTATION_RECOVERY.md).
 
 ### Phase 4 — AWS deployment and observability
 - **Objective:** a reproducible public endpoint.

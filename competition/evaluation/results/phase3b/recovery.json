@@ -1,0 +1,1644 @@
+{
+  "accepted_method_counts": {
+    "border_lab_distance": 3,
+    "chroma_distance": 12,
+    "grabcut_scaled": 9,
+    "saturation_otsu": 39
+  },
+  "by_track": {
+    "CLEAN_BASE": {
+      "n": 35,
+      "primary_valid": 30,
+      "recovered_by_fallback": 5,
+      "recovered_image_ids": [
+        "WC-2a4bc40afb244e",
+        "WC-377f38514c2940",
+        "WC-70c827a5e7a9f0",
+        "WC-9fd7cd40220b0f",
+        "WC-c15da8e28870fd"
+      ],
+      "still_unresolved": 0,
+      "validity_after": 1.0,
+      "validity_before": 0.8571
+    },
+    "NATURAL_SCENE": {
+      "n": 30,
+      "primary_valid": 9,
+      "recovered_by_fallback": 19,
+      "recovered_image_ids": [
+        "WC-231ebc597189ff",
+        "WC-2b2144305f677e",
+        "WC-30761e03d06e30",
+        "WC-317cbb96ee76d3",
+        "WC-464dfd5491113c",
+        "WC-50c2a39c8536d6",
+        "WC-5d8ef30fc09a02",
+        "WC-83804ca910e2f7",
+        "WC-848f7f06fe7d25",
+        "WC-953906b4e4b604",
+        "WC-a12bf770426f82",
+        "WC-b1ea342bed3b58",
+        "WC-b605350af66114",
+        "WC-b9bb50051b2695",
+        "WC-ba343872bf0233",
+        "WC-bfad5b7984d867",
+        "WC-d15f22e3a746ef",
+        "WC-d756ea257b3976",
+        "WC-e83470eb62e862"
+      ],
+      "still_unresolved": 2,
+      "validity_after": 0.9333,
+      "validity_before": 0.3
+    }
+  },
+  "claim_boundary": "'recovered' means a fallback mask passed the same unrelaxed geometric guards. It does NOT mean the mask is correct. On multi-subject scenes a compact block carved out of a fruit pile passes every guard, and the guards cannot distinguish it from a single subject.",
+  "guards_relaxed": false,
+  "ladder": [
+    "chroma_distance",
+    "border_lab_distance",
+    "grabcut_scaled"
+  ],
+  "overall": {
+    "n": 65,
+    "primary_valid": 39,
+    "recovered_by_fallback": 24,
+    "recovered_image_ids": [
+      "WC-231ebc597189ff",
+      "WC-2a4bc40afb244e",
+      "WC-2b2144305f677e",
+      "WC-30761e03d06e30",
+      "WC-317cbb96ee76d3",
+      "WC-377f38514c2940",
+      "WC-464dfd5491113c",
+      "WC-50c2a39c8536d6",
+      "WC-5d8ef30fc09a02",
+      "WC-70c827a5e7a9f0",
+      "WC-83804ca910e2f7",
+      "WC-848f7f06fe7d25",
+      "WC-953906b4e4b604",
+      "WC-9fd7cd40220b0f",
+      "WC-a12bf770426f82",
+      "WC-b1ea342bed3b58",
+      "WC-b605350af66114",
+      "WC-b9bb50051b2695",
+      "WC-ba343872bf0233",
+      "WC-bfad5b7984d867",
+      "WC-c15da8e28870fd",
+      "WC-d15f22e3a746ef",
+      "WC-d756ea257b3976",
+      "WC-e83470eb62e862"
+    ],
+    "still_unresolved": 2,
+    "validity_after": 0.9692,
+    "validity_before": 0.6
+  },
+  "phase3b_version": "phase3b-segmentation-1.0.0",
+  "population": "Phase 2c-B calibration split (development only)",
+  "rows": [
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.555997,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.556,
+      "image_id": "WC-046eecc2853934",
+      "provenance": "PRIMARY",
+      "total_ms": 97.3,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.25252,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.2525,
+      "image_id": "WC-04d8bb2db2e6eb",
+      "provenance": "PRIMARY",
+      "total_ms": 92.8,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.491392,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4914,
+      "image_id": "WC-0704b859e07871",
+      "provenance": "PRIMARY",
+      "total_ms": 104.6,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.457943,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4579,
+      "image_id": "WC-0712832eb99af0",
+      "provenance": "PRIMARY",
+      "total_ms": 101.6,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.332329,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3323,
+      "image_id": "WC-0740d2afb35005",
+      "provenance": "PRIMARY",
+      "total_ms": 45.4,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.669468,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.6695,
+      "image_id": "WC-09c535e047accc",
+      "provenance": "PRIMARY",
+      "total_ms": 106.1,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.250406,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.2504,
+      "image_id": "WC-0a02c94eea515d",
+      "provenance": "PRIMARY",
+      "total_ms": 65.8,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.357642,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3576,
+      "image_id": "WC-0c655514a8eece",
+      "provenance": "PRIMARY",
+      "total_ms": 121.3,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.267559,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.2676,
+      "image_id": "WC-1487e2e8138205",
+      "provenance": "PRIMARY",
+      "total_ms": 29.9,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.523076,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.5231,
+      "image_id": "WC-187cdc44a83c70",
+      "provenance": "PRIMARY",
+      "total_ms": 88.1,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "grabcut_scaled",
+      "attempts": [
+        {
+          "foreground_fraction": 1.0,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.301528,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.411216,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.472135,
+          "invalid_reasons": [],
+          "method": "grabcut_scaled",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4721,
+      "image_id": "WC-231ebc597189ff",
+      "provenance": "FALLBACK",
+      "total_ms": 1007.4,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.38565,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.29612,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.2961,
+      "image_id": "WC-2a4bc40afb244e",
+      "provenance": "FALLBACK",
+      "total_ms": 59.5,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.924365,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.627491,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.6275,
+      "image_id": "WC-2b2144305f677e",
+      "provenance": "FALLBACK",
+      "total_ms": 164.5,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.36827,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3683,
+      "image_id": "WC-2b94ab88ca515e",
+      "provenance": "PRIMARY",
+      "total_ms": 86.7,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.533413,
+          "invalid_reasons": [
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.125697,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.1257,
+      "image_id": "WC-30761e03d06e30",
+      "provenance": "FALLBACK",
+      "total_ms": 57.5,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "grabcut_scaled",
+      "attempts": [
+        {
+          "foreground_fraction": 0.972165,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.719531,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.635752,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.198646,
+          "invalid_reasons": [],
+          "method": "grabcut_scaled",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.1986,
+      "image_id": "WC-317cbb96ee76d3",
+      "provenance": "FALLBACK",
+      "total_ms": 1480.0,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "grabcut_scaled",
+      "attempts": [
+        {
+          "foreground_fraction": 0.85954,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.308633,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.161423,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.359584,
+          "invalid_reasons": [],
+          "method": "grabcut_scaled",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3596,
+      "image_id": "WC-377f38514c2940",
+      "provenance": "FALLBACK",
+      "total_ms": 1039.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.20185,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.2019,
+      "image_id": "WC-44b56cc7d0317b",
+      "provenance": "PRIMARY",
+      "total_ms": 92.1,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "grabcut_scaled",
+      "attempts": [
+        {
+          "foreground_fraction": 0.956645,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.510353,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.263167,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.427884,
+          "invalid_reasons": [],
+          "method": "grabcut_scaled",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4279,
+      "image_id": "WC-464dfd5491113c",
+      "provenance": "FALLBACK",
+      "total_ms": 1646.9,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.829938,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.482338,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4823,
+      "image_id": "WC-50c2a39c8536d6",
+      "provenance": "FALLBACK",
+      "total_ms": 364.6,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.810134,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.414169,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4142,
+      "image_id": "WC-5d8ef30fc09a02",
+      "provenance": "FALLBACK",
+      "total_ms": 304.0,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.377394,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3774,
+      "image_id": "WC-5ecb26dce668db",
+      "provenance": "PRIMARY",
+      "total_ms": 91.5,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.21974,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.2197,
+      "image_id": "WC-6580f62b48d647",
+      "provenance": "PRIMARY",
+      "total_ms": 217.3,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.683756,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.6838,
+      "image_id": "WC-696028a677187f",
+      "provenance": "PRIMARY",
+      "total_ms": 109.6,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "border_lab_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.413396,
+          "invalid_reasons": [
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.313729,
+          "invalid_reasons": [
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.502186,
+          "invalid_reasons": [],
+          "method": "border_lab_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.5022,
+      "image_id": "WC-70c827a5e7a9f0",
+      "provenance": "FALLBACK",
+      "total_ms": 283.1,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.333309,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3333,
+      "image_id": "WC-7f5e2f8d5b869a",
+      "provenance": "PRIMARY",
+      "total_ms": 42.6,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.23267,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.2327,
+      "image_id": "WC-833ee6da56e64e",
+      "provenance": "PRIMARY",
+      "total_ms": 109.2,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "border_lab_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.9278,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.121319,
+          "invalid_reasons": [
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.347517,
+          "invalid_reasons": [],
+          "method": "border_lab_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3475,
+      "image_id": "WC-83804ca910e2f7",
+      "provenance": "FALLBACK",
+      "total_ms": 205.8,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "grabcut_scaled",
+      "attempts": [
+        {
+          "foreground_fraction": 0.746968,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.329704,
+          "invalid_reasons": [
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.502154,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.48954,
+          "invalid_reasons": [],
+          "method": "grabcut_scaled",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4895,
+      "image_id": "WC-848f7f06fe7d25",
+      "provenance": "FALLBACK",
+      "total_ms": 820.3,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.71917,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.7192,
+      "image_id": "WC-851943722fb83a",
+      "provenance": "PRIMARY",
+      "total_ms": 108.3,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.178192,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.1782,
+      "image_id": "WC-8811be68ec4481",
+      "provenance": "PRIMARY",
+      "total_ms": 62.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.145103,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.1451,
+      "image_id": "WC-941b12f82bf256",
+      "provenance": "PRIMARY",
+      "total_ms": 97.6,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "border_lab_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 1.0,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.081134,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.448328,
+          "invalid_reasons": [],
+          "method": "border_lab_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4483,
+      "image_id": "WC-953906b4e4b604",
+      "provenance": "FALLBACK",
+      "total_ms": 201.2,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.321147,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3211,
+      "image_id": "WC-97f6165b891136",
+      "provenance": "PRIMARY",
+      "total_ms": 100.8,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.916042,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.239219,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.2392,
+      "image_id": "WC-9fd7cd40220b0f",
+      "provenance": "FALLBACK",
+      "total_ms": 178.5,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "grabcut_scaled",
+      "attempts": [
+        {
+          "foreground_fraction": 0.682049,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.87367,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.648895,
+          "invalid_reasons": [
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.301029,
+          "invalid_reasons": [],
+          "method": "grabcut_scaled",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.301,
+      "image_id": "WC-a12bf770426f82",
+      "provenance": "FALLBACK",
+      "total_ms": 1113.0,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.31685,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3169,
+      "image_id": "WC-a357ae8bb25b3c",
+      "provenance": "PRIMARY",
+      "total_ms": 80.3,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.875872,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.8759,
+      "image_id": "WC-a926284084ecac",
+      "provenance": "PRIMARY",
+      "total_ms": 81.5,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.652276,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.6523,
+      "image_id": "WC-ab4b8cd5410710",
+      "provenance": "PRIMARY",
+      "total_ms": 86.8,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.785212,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.7852,
+      "image_id": "WC-aff22b9ccf4015",
+      "provenance": "PRIMARY",
+      "total_ms": 69.2,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.48959,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4896,
+      "image_id": "WC-b0d75474311f22",
+      "provenance": "PRIMARY",
+      "total_ms": 103.8,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.324358,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3244,
+      "image_id": "WC-b103f0334d9954",
+      "provenance": "PRIMARY",
+      "total_ms": 84.6,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.926458,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.316676,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3167,
+      "image_id": "WC-b1ea342bed3b58",
+      "provenance": "FALLBACK",
+      "total_ms": 174.5,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "grabcut_scaled",
+      "attempts": [
+        {
+          "foreground_fraction": 0.770887,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.68084,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.747237,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.39993,
+          "invalid_reasons": [],
+          "method": "grabcut_scaled",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3999,
+      "image_id": "WC-b605350af66114",
+      "provenance": "FALLBACK",
+      "total_ms": 876.2,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "grabcut_scaled",
+      "attempts": [
+        {
+          "foreground_fraction": 0.988049,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.449018,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.453342,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.065603,
+          "invalid_reasons": [],
+          "method": "grabcut_scaled",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.0656,
+      "image_id": "WC-b9bb50051b2695",
+      "provenance": "FALLBACK",
+      "total_ms": 1392.0,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 1.0,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.414145,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4141,
+      "image_id": "WC-ba343872bf0233",
+      "provenance": "FALLBACK",
+      "total_ms": 72.0,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.693747,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.6937,
+      "image_id": "WC-bd6d8cef928d99",
+      "provenance": "PRIMARY",
+      "total_ms": 80.8,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.312181,
+          "invalid_reasons": [
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.057865,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.0579,
+      "image_id": "WC-bfad5b7984d867",
+      "provenance": "FALLBACK",
+      "total_ms": 151.0,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.421085,
+          "invalid_reasons": [
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.199555,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.1996,
+      "image_id": "WC-c15da8e28870fd",
+      "provenance": "FALLBACK",
+      "total_ms": 175.8,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.40807,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4081,
+      "image_id": "WC-c5077b5dde7719",
+      "provenance": "PRIMARY",
+      "total_ms": 89.4,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "",
+      "attempts": [
+        {
+          "foreground_fraction": 0.997335,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.055302,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.150986,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.021965,
+          "invalid_reasons": [
+            "FOREGROUND_TOO_SMALL",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "grabcut_scaled",
+          "valid": false
+        }
+      ],
+      "foreground_fraction": 0.9973,
+      "image_id": "WC-c94405781ac545",
+      "provenance": "NONE",
+      "total_ms": 1147.5,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.325669,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3257,
+      "image_id": "WC-cad5b7ed3cdf6c",
+      "provenance": "PRIMARY",
+      "total_ms": 71.6,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.146852,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.1469,
+      "image_id": "WC-cb1b69bccd12ee",
+      "provenance": "PRIMARY",
+      "total_ms": 111.1,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.851543,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.647116,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.6471,
+      "image_id": "WC-d15f22e3a746ef",
+      "provenance": "FALLBACK",
+      "total_ms": 157.7,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.802368,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.8024,
+      "image_id": "WC-d22ccc96a152ed",
+      "provenance": "PRIMARY",
+      "total_ms": 235.6,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.322731,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.3227,
+      "image_id": "WC-d459fbdc410c44",
+      "provenance": "PRIMARY",
+      "total_ms": 69.9,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.08366,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.0837,
+      "image_id": "WC-d636625f8e6f1d",
+      "provenance": "PRIMARY",
+      "total_ms": 82.5,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "grabcut_scaled",
+      "attempts": [
+        {
+          "foreground_fraction": 0.865923,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.545949,
+          "invalid_reasons": [
+            "EXCESSIVE_BORDER_CONTACT",
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.21614,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.49022,
+          "invalid_reasons": [],
+          "method": "grabcut_scaled",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.4902,
+      "image_id": "WC-d756ea257b3976",
+      "provenance": "FALLBACK",
+      "total_ms": 1627.3,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "",
+      "attempts": [
+        {
+          "foreground_fraction": 0.957441,
+          "invalid_reasons": [
+            "FOREGROUND_NEAR_FULL_FRAME",
+            "EXCESSIVE_BORDER_CONTACT"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.539151,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED"
+          ],
+          "method": "chroma_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.446007,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED",
+            "NO_DOMINANT_COMPONENT"
+          ],
+          "method": "border_lab_distance",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.0,
+          "invalid_reasons": [
+            "MASK_EMPTY",
+            "FOREGROUND_TOO_SMALL"
+          ],
+          "method": "grabcut_scaled",
+          "valid": false
+        }
+      ],
+      "foreground_fraction": 0.9574,
+      "image_id": "WC-de282666236091",
+      "provenance": "NONE",
+      "total_ms": 803.7,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.512128,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.5121,
+      "image_id": "WC-e20ff4e4f6a9b8",
+      "provenance": "PRIMARY",
+      "total_ms": 34.6,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "chroma_distance",
+      "attempts": [
+        {
+          "foreground_fraction": 0.447431,
+          "invalid_reasons": [
+            "MASK_FRAGMENTED"
+          ],
+          "method": "saturation_otsu",
+          "valid": false
+        },
+        {
+          "foreground_fraction": 0.35097,
+          "invalid_reasons": [],
+          "method": "chroma_distance",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.351,
+      "image_id": "WC-e83470eb62e862",
+      "provenance": "FALLBACK",
+      "total_ms": 156.4,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.617858,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.6179,
+      "image_id": "WC-ea9eec520d4610",
+      "provenance": "PRIMARY",
+      "total_ms": 106.9,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.223712,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.2237,
+      "image_id": "WC-f368663cf99e71",
+      "provenance": "PRIMARY",
+      "total_ms": 85.4,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.533947,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.5339,
+      "image_id": "WC-f50ca2ba933947",
+      "provenance": "PRIMARY",
+      "total_ms": 95.5,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "accepted_method": "saturation_otsu",
+      "attempts": [
+        {
+          "foreground_fraction": 0.522572,
+          "invalid_reasons": [],
+          "method": "saturation_otsu",
+          "valid": true
+        }
+      ],
+      "foreground_fraction": 0.5226,
+      "image_id": "WC-f6628f4742d5d5",
+      "provenance": "PRIMARY",
+      "total_ms": 51.4,
+      "track": "CLEAN_BASE",
+      "valid": true
+    }
+  ]
+}

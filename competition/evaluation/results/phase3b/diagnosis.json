@@ -1,0 +1,832 @@
+{
+  "by_track": {
+    "CLEAN_BASE": {
+      "n": 35,
+      "valid": 30,
+      "validity_rate": 0.8571
+    },
+    "NATURAL_SCENE": {
+      "n": 30,
+      "valid": 9,
+      "validity_rate": 0.3
+    }
+  },
+  "claim_boundary": "validity means the geometric guards passed, NOT that the mask is correct; no ground-truth masks exist for these photographs",
+  "dominant_failure_shape": {
+    "count": 20,
+    "description": "foreground fraction >= 0.68 with a single component covering essentially the whole frame: Otsu found no saturation bimodality because the entire scene is colourful",
+    "image_ids": [
+      "WC-231ebc597189ff",
+      "WC-2b2144305f677e",
+      "WC-317cbb96ee76d3",
+      "WC-377f38514c2940",
+      "WC-464dfd5491113c",
+      "WC-50c2a39c8536d6",
+      "WC-5d8ef30fc09a02",
+      "WC-83804ca910e2f7",
+      "WC-848f7f06fe7d25",
+      "WC-953906b4e4b604",
+      "WC-9fd7cd40220b0f",
+      "WC-a12bf770426f82",
+      "WC-b1ea342bed3b58",
+      "WC-b605350af66114",
+      "WC-b9bb50051b2695",
+      "WC-ba343872bf0233",
+      "WC-c94405781ac545",
+      "WC-d15f22e3a746ef",
+      "WC-d756ea257b3976",
+      "WC-de282666236091"
+    ]
+  },
+  "failure_reasons": {
+    "EXCESSIVE_BORDER_CONTACT": 20,
+    "FOREGROUND_NEAR_FULL_FRAME": 11,
+    "MASK_FRAGMENTED": 2,
+    "NO_DOMINANT_COMPONENT": 4
+  },
+  "image_count": 65,
+  "phase3b_version": "phase3b-segmentation-1.0.0",
+  "population": "Phase 2c-B calibration split (development only)",
+  "rows": [
+    {
+      "border_contact_fraction": 0.0731,
+      "component_count": 1,
+      "foreground_fraction": 0.556,
+      "fruit_type": "banana",
+      "image_id": "WC-046eecc2853934",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.2368,
+      "component_count": 6,
+      "foreground_fraction": 0.2525,
+      "fruit_type": "orange",
+      "image_id": "WC-04d8bb2db2e6eb",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.759,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.464,
+      "component_count": 12,
+      "foreground_fraction": 0.4914,
+      "fruit_type": "banana",
+      "image_id": "WC-0704b859e07871",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.8949,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.1896,
+      "component_count": 2,
+      "foreground_fraction": 0.4579,
+      "fruit_type": "orange",
+      "image_id": "WC-0712832eb99af0",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9864,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 5,
+      "foreground_fraction": 0.3323,
+      "fruit_type": "apple",
+      "image_id": "WC-0740d2afb35005",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.98,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.556,
+      "component_count": 3,
+      "foreground_fraction": 0.6695,
+      "fruit_type": "apple",
+      "image_id": "WC-09c535e047accc",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.887,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0192,
+      "component_count": 1,
+      "foreground_fraction": 0.2504,
+      "fruit_type": "banana",
+      "image_id": "WC-0a02c94eea515d",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9939,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.4872,
+      "component_count": 7,
+      "foreground_fraction": 0.3576,
+      "fruit_type": "apple",
+      "image_id": "WC-0c655514a8eece",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.6872,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0159,
+      "component_count": 4,
+      "foreground_fraction": 0.2676,
+      "fruit_type": "banana",
+      "image_id": "WC-1487e2e8138205",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.971,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0348,
+      "component_count": 2,
+      "foreground_fraction": 0.5231,
+      "fruit_type": "banana",
+      "image_id": "WC-187cdc44a83c70",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9915,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 1.0,
+      "component_count": 1,
+      "foreground_fraction": 1.0,
+      "fruit_type": "orange",
+      "image_id": "WC-231ebc597189ff",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.0892,
+      "component_count": 14,
+      "foreground_fraction": 0.3856,
+      "fruit_type": "banana",
+      "image_id": "WC-2a4bc40afb244e",
+      "invalid_reasons": [
+        "MASK_FRAGMENTED"
+      ],
+      "largest_component_fraction": 0.8777,
+      "track": "CLEAN_BASE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.8089,
+      "component_count": 1,
+      "foreground_fraction": 0.9244,
+      "fruit_type": "orange",
+      "image_id": "WC-2b2144305f677e",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 2,
+      "foreground_fraction": 0.3683,
+      "fruit_type": "banana",
+      "image_id": "WC-2b94ab88ca515e",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9915,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.4375,
+      "component_count": 7,
+      "foreground_fraction": 0.5334,
+      "fruit_type": "apple",
+      "image_id": "WC-30761e03d06e30",
+      "invalid_reasons": [
+        "NO_DOMINANT_COMPONENT"
+      ],
+      "largest_component_fraction": 0.5114,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.8943,
+      "component_count": 1,
+      "foreground_fraction": 0.9722,
+      "fruit_type": "apple",
+      "image_id": "WC-317cbb96ee76d3",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9995,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.8753,
+      "component_count": 1,
+      "foreground_fraction": 0.8595,
+      "fruit_type": "apple",
+      "image_id": "WC-377f38514c2940",
+      "invalid_reasons": [
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.045,
+      "component_count": 2,
+      "foreground_fraction": 0.2019,
+      "fruit_type": "apple",
+      "image_id": "WC-44b56cc7d0317b",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9857,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.8181,
+      "component_count": 1,
+      "foreground_fraction": 0.9566,
+      "fruit_type": "apple",
+      "image_id": "WC-464dfd5491113c",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.607,
+      "component_count": 2,
+      "foreground_fraction": 0.8299,
+      "fruit_type": "orange",
+      "image_id": "WC-50c2a39c8536d6",
+      "invalid_reasons": [
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9891,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.7254,
+      "component_count": 4,
+      "foreground_fraction": 0.8101,
+      "fruit_type": "banana",
+      "image_id": "WC-5d8ef30fc09a02",
+      "invalid_reasons": [
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9772,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.2708,
+      "component_count": 9,
+      "foreground_fraction": 0.3774,
+      "fruit_type": "orange",
+      "image_id": "WC-5ecb26dce668db",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.8318,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.2197,
+      "fruit_type": "banana",
+      "image_id": "WC-6580f62b48d647",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.3589,
+      "component_count": 6,
+      "foreground_fraction": 0.6838,
+      "fruit_type": "orange",
+      "image_id": "WC-696028a677187f",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9418,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.5987,
+      "component_count": 6,
+      "foreground_fraction": 0.4134,
+      "fruit_type": "banana",
+      "image_id": "WC-70c827a5e7a9f0",
+      "invalid_reasons": [
+        "NO_DOMINANT_COMPONENT"
+      ],
+      "largest_component_fraction": 0.4634,
+      "track": "CLEAN_BASE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.3333,
+      "fruit_type": "orange",
+      "image_id": "WC-7f5e2f8d5b869a",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.2327,
+      "fruit_type": "banana",
+      "image_id": "WC-833ee6da56e64e",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9967,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.7229,
+      "component_count": 1,
+      "foreground_fraction": 0.9278,
+      "fruit_type": "banana",
+      "image_id": "WC-83804ca910e2f7",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.6982,
+      "component_count": 4,
+      "foreground_fraction": 0.747,
+      "fruit_type": "banana",
+      "image_id": "WC-848f7f06fe7d25",
+      "invalid_reasons": [
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9786,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.3415,
+      "component_count": 3,
+      "foreground_fraction": 0.7192,
+      "fruit_type": "banana",
+      "image_id": "WC-851943722fb83a",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9783,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.1782,
+      "fruit_type": "apple",
+      "image_id": "WC-8811be68ec4481",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0378,
+      "component_count": 2,
+      "foreground_fraction": 0.1451,
+      "fruit_type": "orange",
+      "image_id": "WC-941b12f82bf256",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9764,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 1.0,
+      "component_count": 1,
+      "foreground_fraction": 1.0,
+      "fruit_type": "orange",
+      "image_id": "WC-953906b4e4b604",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.3211,
+      "fruit_type": "apple",
+      "image_id": "WC-97f6165b891136",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.6125,
+      "component_count": 2,
+      "foreground_fraction": 0.916,
+      "fruit_type": "apple",
+      "image_id": "WC-9fd7cd40220b0f",
+      "invalid_reasons": [
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9939,
+      "track": "CLEAN_BASE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.6138,
+      "component_count": 2,
+      "foreground_fraction": 0.682,
+      "fruit_type": "banana",
+      "image_id": "WC-a12bf770426f82",
+      "invalid_reasons": [
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9968,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.3169,
+      "fruit_type": "orange",
+      "image_id": "WC-a357ae8bb25b3c",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.8759,
+      "fruit_type": "banana",
+      "image_id": "WC-a926284084ecac",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.4391,
+      "component_count": 1,
+      "foreground_fraction": 0.6523,
+      "fruit_type": "orange",
+      "image_id": "WC-ab4b8cd5410710",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.3215,
+      "component_count": 5,
+      "foreground_fraction": 0.7852,
+      "fruit_type": "apple",
+      "image_id": "WC-aff22b9ccf4015",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9712,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.2152,
+      "component_count": 8,
+      "foreground_fraction": 0.4896,
+      "fruit_type": "apple",
+      "image_id": "WC-b0d75474311f22",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9409,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.3244,
+      "fruit_type": "banana",
+      "image_id": "WC-b103f0334d9954",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.7183,
+      "component_count": 1,
+      "foreground_fraction": 0.9265,
+      "fruit_type": "apple",
+      "image_id": "WC-b1ea342bed3b58",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.6898,
+      "component_count": 1,
+      "foreground_fraction": 0.7709,
+      "fruit_type": "banana",
+      "image_id": "WC-b605350af66114",
+      "invalid_reasons": [
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9974,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.9289,
+      "component_count": 1,
+      "foreground_fraction": 0.988,
+      "fruit_type": "apple",
+      "image_id": "WC-b9bb50051b2695",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 1.0,
+      "component_count": 1,
+      "foreground_fraction": 1.0,
+      "fruit_type": "apple",
+      "image_id": "WC-ba343872bf0233",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.3682,
+      "component_count": 4,
+      "foreground_fraction": 0.6937,
+      "fruit_type": "banana",
+      "image_id": "WC-bd6d8cef928d99",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9874,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.3256,
+      "component_count": 10,
+      "foreground_fraction": 0.3122,
+      "fruit_type": "orange",
+      "image_id": "WC-bfad5b7984d867",
+      "invalid_reasons": [
+        "NO_DOMINANT_COMPONENT"
+      ],
+      "largest_component_fraction": 0.3664,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.5651,
+      "component_count": 10,
+      "foreground_fraction": 0.4211,
+      "fruit_type": "apple",
+      "image_id": "WC-c15da8e28870fd",
+      "invalid_reasons": [
+        "NO_DOMINANT_COMPONENT"
+      ],
+      "largest_component_fraction": 0.582,
+      "track": "CLEAN_BASE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.4081,
+      "fruit_type": "banana",
+      "image_id": "WC-c5077b5dde7719",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.9833,
+      "component_count": 1,
+      "foreground_fraction": 0.9973,
+      "fruit_type": "orange",
+      "image_id": "WC-c94405781ac545",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 1.0,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.0851,
+      "component_count": 4,
+      "foreground_fraction": 0.3257,
+      "fruit_type": "banana",
+      "image_id": "WC-cad5b7ed3cdf6c",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9633,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 4,
+      "foreground_fraction": 0.1469,
+      "fruit_type": "banana",
+      "image_id": "WC-cb1b69bccd12ee",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9482,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.777,
+      "component_count": 2,
+      "foreground_fraction": 0.8515,
+      "fruit_type": "orange",
+      "image_id": "WC-d15f22e3a746ef",
+      "invalid_reasons": [
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9965,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.4987,
+      "component_count": 5,
+      "foreground_fraction": 0.8024,
+      "fruit_type": "orange",
+      "image_id": "WC-d22ccc96a152ed",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.7867,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0622,
+      "component_count": 3,
+      "foreground_fraction": 0.3227,
+      "fruit_type": "apple",
+      "image_id": "WC-d459fbdc410c44",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.9636,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.0837,
+      "fruit_type": "apple",
+      "image_id": "WC-d636625f8e6f1d",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.7963,
+      "component_count": 4,
+      "foreground_fraction": 0.8659,
+      "fruit_type": "apple",
+      "image_id": "WC-d756ea257b3976",
+      "invalid_reasons": [
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9508,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.7991,
+      "component_count": 1,
+      "foreground_fraction": 0.9574,
+      "fruit_type": "apple",
+      "image_id": "WC-de282666236091",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "largest_component_fraction": 0.9998,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.0738,
+      "component_count": 1,
+      "foreground_fraction": 0.5121,
+      "fruit_type": "banana",
+      "image_id": "WC-e20ff4e4f6a9b8",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.2367,
+      "component_count": 13,
+      "foreground_fraction": 0.4474,
+      "fruit_type": "apple",
+      "image_id": "WC-e83470eb62e862",
+      "invalid_reasons": [
+        "MASK_FRAGMENTED"
+      ],
+      "largest_component_fraction": 0.7559,
+      "track": "NATURAL_SCENE",
+      "valid": false
+    },
+    {
+      "border_contact_fraction": 0.5426,
+      "component_count": 1,
+      "foreground_fraction": 0.6179,
+      "fruit_type": "orange",
+      "image_id": "WC-ea9eec520d4610",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0892,
+      "component_count": 12,
+      "foreground_fraction": 0.2237,
+      "fruit_type": "banana",
+      "image_id": "WC-f368663cf99e71",
+      "invalid_reasons": [],
+      "largest_component_fraction": 0.6743,
+      "track": "NATURAL_SCENE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.5339,
+      "fruit_type": "apple",
+      "image_id": "WC-f50ca2ba933947",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "component_count": 1,
+      "foreground_fraction": 0.5226,
+      "fruit_type": "apple",
+      "image_id": "WC-f6628f4742d5d5",
+      "invalid_reasons": [],
+      "largest_component_fraction": 1.0,
+      "track": "CLEAN_BASE",
+      "valid": true
+    }
+  ],
+  "valid": 39,
+  "validity_rate": 0.6
+}

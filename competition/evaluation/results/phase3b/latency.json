@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "local CPU on full-resolution licensed photographs; NOT an AWS figure",
+  "fallback_invoked": {
+    "max_ms": 2424.8,
+    "median_ms": 293.4,
+    "n": 78,
+    "p95_ms": 1670.2
+  },
+  "note": "The ladder costs nothing when the primary succeeds: it is not consulted. The fallback figure is the price of an image that would otherwise have been refused outright.",
+  "phase3b_version": "phase3b-segmentation-1.0.0",
+  "primary_accepted": {
+    "max_ms": 230.1,
+    "median_ms": 91.8,
+    "n": 117,
+    "p95_ms": 211.4
+  }
+}
