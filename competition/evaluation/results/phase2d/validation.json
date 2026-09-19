@@ -1,0 +1,39 @@
+{
+  "artifact_policy_fingerprint": "b3cd5db5ca193027",
+  "code_fingerprint": "6b62bb544b9fdd78ad2d8ab2aac43936f238e335+dirty",
+  "detectors_usable": {
+    "glare": false,
+    "severe_contrast": true,
+    "visibility": false
+  },
+  "evaluated_on": "2026-09-19",
+  "evaluation_version": "phase2d-artifact-evaluation-1.0.0",
+  "glare_false_positive_rate": 0.16666666666666666,
+  "highlight_policy_fingerprint": "10757655e4c34533",
+  "injected_glare": {
+    "detection_rate": 0.5,
+    "flagged": 6,
+    "n": 12,
+    "note": "confirmatory detection on unseen source groups, injected highlight"
+  },
+  "population": {
+    "clean_base": 9,
+    "images": 29,
+    "natural_scene": 20,
+    "segmentation_valid": 12,
+    "source_groups": 29
+  },
+  "severe_contrast_false_positive_rate": 0.0,
+  "status": "CONFIRMATORY",
+  "undegraded_flag_counts": {
+    "ARTIFACT_EVIDENCE_UNAVAILABLE": 17,
+    "GLARE_RISK": 2,
+    "SUBJECT_VISIBILITY_INSUFFICIENT": 1
+  },
+  "undegraded_outcomes": {
+    "ARTIFACT_EVIDENCE_UNAVAILABLE": 17,
+    "CAPTURE_ACCEPTABLE": 12
+  },
+  "visibility_false_positive_rate": 0.08333333333333333,
+  "visibility_policy_fingerprint": "213bac848e52951f"
+}

@@ -26,6 +26,10 @@ class RemediationAction(str, Enum):
     APPLY_CLAHE = "APPLY_CLAHE"
     REQUEST_RECAPTURE = "REQUEST_RECAPTURE"
     REQUEST_HUMAN_REVIEW = "REQUEST_HUMAN_REVIEW"
+    # Added in Phase 2d. A specular highlight is not an exposure problem and no
+    # tone curve recovers the surface beneath it: the correct response is to
+    # change the lighting geometry, which only a person can do.
+    REQUEST_REPOSITION_LIGHT = "REQUEST_REPOSITION_LIGHT"
 
     @property
     def is_automated(self) -> bool:
@@ -37,6 +41,7 @@ class RemediationAction(str, Enum):
         return self in (
             RemediationAction.REQUEST_RECAPTURE,
             RemediationAction.REQUEST_HUMAN_REVIEW,
+            RemediationAction.REQUEST_REPOSITION_LIGHT,
         )
 
 
@@ -57,6 +62,12 @@ class ReasonCode(str, Enum):
     REMEDIATION_INEFFECTIVE = "REMEDIATION_INEFFECTIVE"
     REMEDIATION_HARMFUL = "REMEDIATION_HARMFUL"
     BLUR_NOT_REMEDIABLE = "BLUR_NOT_REMEDIABLE"
+    # --- Phase 2d capture artefacts ------------------------------------------
+    GLARE_LOCAL_HIGHLIGHT = "GLARE_LOCAL_HIGHLIGHT"
+    SEVERE_CONTRAST_LOSS = "SEVERE_CONTRAST_LOSS"
+    MODERATE_CONTRAST_LOSS_RECOVERABLE = "MODERATE_CONTRAST_LOSS_RECOVERABLE"
+    SUBJECT_VISIBILITY_INSUFFICIENT = "SUBJECT_VISIBILITY_INSUFFICIENT"
+    ARTIFACT_EVIDENCE_UNAVAILABLE = "ARTIFACT_EVIDENCE_UNAVAILABLE"
 
 
 class ComparisonVerdict(str, Enum):

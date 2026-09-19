@@ -89,3 +89,20 @@ Base commit: `3928d43b3bdd3a754f98f1f411596050de29da17`
 | No third-party image bytes are committed | `raw/`, `cache/`, `derived/`, `synthetic/` gitignored | `::test_image_directories_are_gitignored` |
 | No machine-specific paths reach committed artifacts | `_reject_paths` on every record; manifests scanned | `::test_no_committed_manifest_contains_a_machine_path` |
 | Claims stay inside the evidence | Locked policy status names which thresholds are provisional; claim boundary recorded in every results file | §11 and §16 of the phase note |
+
+
+## F. Capture-artefact evidence (Phase 2d)
+
+| Requirement | Where it is satisfied | Evidence |
+| --- | --- | --- |
+| Glare is measured locally, not by whole-image clipping | `competition/vision/highlights.py` — multi-scale local excess plus ROI-relative desaturation | `test_phase2d_artifacts.py::test_a_bright_saturated_fruit_is_not_called_glare` |
+| Bright fruit is not called glare | Candidate pixels must be locally bright **and** desaturated relative to the subject's own chroma | `::test_a_uniformly_brightened_subject_is_not_called_glare` |
+| Local evidence never includes background | Candidates are a subset of the eroded foreground | `::test_glare_candidates_never_include_background` |
+| No unsupported semantic occlusion claim | Evidence is named `SUBJECT_VISIBILITY_INSUFFICIENT` and describes the region | `::test_no_semantic_occlusion_claim_appears_in_the_evidence` |
+| Untrusted segmentation stops local evidence | `decide_capture_artifacts` escalates when the mask fails its guards | `::test_invalid_segmentation_prevents_trusted_artifact_evidence` |
+| Actions come from a closed enum | `RemediationAction` / `ReasonCode`; no free-form strings | `::test_every_decision_uses_the_closed_action_enum` |
+| Glare never triggers an enhancement that fakes recovery | Policy routes glare to `REQUEST_REPOSITION_LIGHT` only | `::test_glare_never_routes_to_an_enhancement` |
+| Detectors below the preregistered bar cannot gate | `glare_blocks` / `visibility_blocks` default False | `::test_a_sub_floor_detector_records_its_finding_without_blocking` |
+| Validation data is independent of calibration | No shared source group, no previously screened file, disjoint categories | `build_validation_pool.py`, fingerprint `e9e7ace82c40783e` |
+| Parameters frozen before validation is opened | Fingerprints recorded in `results/phase2d/locked_artifact_policy.json` | `phase2d_artifacts.py::load_frozen_policies` verifies them |
+| Latency is not described as AWS | `"environment"` field says local CPU | `results/phase2d/latency.json` |

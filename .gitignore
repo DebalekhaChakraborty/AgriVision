@@ -68,3 +68,6 @@ competition/data/licensed_real/raw/
 competition/data/licensed_real/cache/
 competition/data/licensed_real/derived/
 competition/data/licensed_real/synthetic/
+
+# Phase 2d independent validation imagery.
+competition/data/licensed_real/validation_raw/

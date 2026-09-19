@@ -73,6 +73,11 @@ class CorpusTrack(str, Enum):
 class Split(str, Enum):
     CALIBRATION = "calibration"
     HELD_OUT = "held_out"
+    # Phase 2d's independent pool. A separate member rather than a reuse of
+    # HELD_OUT, because the two are not interchangeable: the Phase 2c-B held-out
+    # groups have been spent, and mixing the names would make it possible to
+    # report a validation result as though it came from the original split.
+    VALIDATION = "validation"
     UNASSIGNED = "unassigned"
 
 

@@ -1,0 +1,148 @@
+{
+  "artifact_policy_fingerprint": "b3cd5db5ca193027",
+  "code_fingerprint": "6b62bb544b9fdd78ad2d8ab2aac43936f238e335+dirty",
+  "contrast": {
+    "by_factor": {
+      "factor=0.08": {
+        "block_rate": 1.0,
+        "blocked": 35,
+        "by_reason_code": {
+          "ARTIFACT_EVIDENCE_UNAVAILABLE": 7,
+          "SEVERE_CONTRAST_LOSS": 28
+        },
+        "median_roi_contrast": 0.0392156862745098,
+        "n": 35
+      },
+      "factor=0.2": {
+        "block_rate": 0.7714285714285715,
+        "blocked": 27,
+        "by_reason_code": {
+          "ARTIFACT_EVIDENCE_UNAVAILABLE": 5,
+          "CAPTURE_ACCEPTABLE": 5,
+          "MODERATE_CONTRAST_LOSS_RECOVERABLE": 3,
+          "SEVERE_CONTRAST_LOSS": 22
+        },
+        "median_roi_contrast": 0.09411764705882353,
+        "n": 35
+      },
+      "factor=0.5": {
+        "block_rate": 0.2,
+        "blocked": 7,
+        "by_reason_code": {
+          "ARTIFACT_EVIDENCE_UNAVAILABLE": 7,
+          "CAPTURE_ACCEPTABLE": 28
+        },
+        "median_roi_contrast": 0.24705882352941178,
+        "n": 35
+      },
+      "factor=1.0": {
+        "block_rate": 0.14285714285714285,
+        "blocked": 5,
+        "by_reason_code": {
+          "ARTIFACT_EVIDENCE_UNAVAILABLE": 5,
+          "CAPTURE_ACCEPTABLE": 30
+        },
+        "median_roi_contrast": 0.6,
+        "n": 35
+      }
+    }
+  },
+  "detectors_usable": {
+    "glare": false,
+    "severe_contrast": true,
+    "visibility": false
+  },
+  "evaluated_on": "2026-09-19",
+  "evaluation_version": "phase2d-artifact-evaluation-1.0.0",
+  "glare": {
+    "by_severity": {
+      "severity=0.0": {
+        "assessable": 30,
+        "flag_rate": 0.03333333333333333,
+        "median_detected_roi_fraction": 0.06430582364469378,
+        "median_injected_roi_fraction": 0.0,
+        "median_iou_with_injected_region": null,
+        "no_usable_mask": 0
+      },
+      "severity=0.3": {
+        "assessable": 30,
+        "flag_rate": 0.16666666666666666,
+        "median_detected_roi_fraction": 0.08252686609511872,
+        "median_injected_roi_fraction": 0.08788146610874878,
+        "median_iou_with_injected_region": 0.2815398335437419,
+        "no_usable_mask": 0
+      },
+      "severity=0.6": {
+        "assessable": 29,
+        "flag_rate": 0.3793103448275862,
+        "median_detected_roi_fraction": 0.1063907556280559,
+        "median_injected_roi_fraction": 0.08800452669940306,
+        "median_iou_with_injected_region": 0.5115569309572084,
+        "no_usable_mask": 1
+      },
+      "severity=0.9": {
+        "assessable": 29,
+        "flag_rate": 0.6551724137931034,
+        "median_detected_roi_fraction": 0.1216133891725314,
+        "median_injected_roi_fraction": 0.08791757817994848,
+        "median_iou_with_injected_region": 0.5841811551866551,
+        "no_usable_mask": 1
+      }
+    },
+    "claim_boundary": "a smooth additive highlight injected into a real photograph; not equivalent to a real specular reflection, which has sharper structure and interacts with surface microgeometry",
+    "detection_rate_at_severity_0_9": 0.6551724137931034,
+    "false_positive_rate_on_undegraded": 0.03333333333333333,
+    "injection": {
+      "falloff": 0.35,
+      "radius_fraction_of_subject_radius": 0.3,
+      "shape": "blurred disc centred on the subject"
+    }
+  },
+  "highlight_policy_fingerprint": "10757655e4c34533",
+  "population": "calibration groups only",
+  "visibility": {
+    "by_coverage": {
+      "coverage=0.0": {
+        "block_rate": 0.0,
+        "blocked": 0,
+        "by_reason_code": {
+          "CAPTURE_ACCEPTABLE": 30
+        },
+        "n": 30
+      },
+      "coverage=0.1": {
+        "block_rate": 0.03333333333333333,
+        "blocked": 1,
+        "by_reason_code": {
+          "ARTIFACT_EVIDENCE_UNAVAILABLE": 1,
+          "CAPTURE_ACCEPTABLE": 29
+        },
+        "n": 30
+      },
+      "coverage=0.25": {
+        "block_rate": 0.16666666666666666,
+        "blocked": 5,
+        "by_reason_code": {
+          "ARTIFACT_EVIDENCE_UNAVAILABLE": 5,
+          "CAPTURE_ACCEPTABLE": 25
+        },
+        "n": 30
+      },
+      "coverage=0.45": {
+        "block_rate": 0.4666666666666667,
+        "blocked": 14,
+        "by_reason_code": {
+          "ARTIFACT_EVIDENCE_UNAVAILABLE": 14,
+          "CAPTURE_ACCEPTABLE": 16
+        },
+        "n": 30
+      }
+    },
+    "claim_boundary": "an opaque geometric patch, not a hand, leaf or label; real occluders are textured and coloured and are not represented here",
+    "injection": {
+      "coverage_is_of": "subject mask area",
+      "shape": "opaque black square centred on the subject"
+    }
+  },
+  "visibility_policy_fingerprint": "213bac848e52951f"
+}

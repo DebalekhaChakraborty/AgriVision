@@ -293,3 +293,71 @@ def subject_scale_sweep(seed: int = 0) -> list[DegradationSpec]:
         DegradationSpec(kind="shrink_subject", level=float(level), seed=seed)
         for level in SUBJECT_SCALES
     ]
+
+
+# --- Phase 2d: injections with a known, targeted affected region -------------
+#
+# The Phase 1 `add_glare` and `occlude` place their effect at a seeded position
+# anywhere in the frame. That is the right design for a whole-image degradation
+# sweep and the wrong one for testing a detector that only looks *inside the
+# subject*: measured on the Phase 2c-B corpus, only about a quarter of the
+# injected glare landed on the fruit at all, so most "glare positive" samples
+# were photographs whose fruit had no glare on it. Evaluating a subject-region
+# detector against that labelling measures the placement, not the detector.
+#
+# These variants take an explicit centre and return the affected region as a
+# mask, so ground truth is known rather than assumed.
+
+
+def add_glare_at(
+    image: np.ndarray,
+    intensity: float,
+    centre: tuple[int, int],
+    radius: int,
+    falloff: float = 0.45,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Add a specular-like highlight at a chosen point; return image and region.
+
+    `falloff` sets the blur sigma as a fraction of the radius. Smaller values
+    give a harder-edged highlight, closer to a real specular reflection than the
+    broad glow `add_glare` produces.
+    """
+    if not 0.0 <= intensity <= 1.0:
+        raise DegradationError(f"glare intensity must be in [0, 1], got {intensity}")
+    if radius < 2:
+        raise DegradationError(f"glare radius must be at least 2, got {radius}")
+
+    height, width = image.shape[:2]
+    field = np.zeros((height, width), dtype=np.float32)
+    cv2.circle(field, (int(centre[0]), int(centre[1])), int(radius), 1.0, thickness=-1)
+    region = (field > 0).astype(np.uint8) * 255
+    if intensity == 0.0:
+        return image.copy(), np.zeros((height, width), dtype=np.uint8)
+
+    sigma = max(1.0, radius * falloff)
+    field = cv2.GaussianBlur(field, (0, 0), sigmaX=sigma, sigmaY=sigma)
+    result = image.astype(np.float32) + (field * intensity * 255.0)[:, :, np.newaxis]
+    return np.clip(result, 0, 255).astype(np.uint8), region
+
+
+def occlude_at(
+    image: np.ndarray,
+    centre: tuple[int, int],
+    width_px: int,
+    height_px: int,
+    value: int = 0,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Cover a chosen rectangle; return the image and the covered region."""
+    if width_px < 1 or height_px < 1:
+        raise DegradationError("occluder must have positive size")
+    height, width = image.shape[:2]
+    x0 = max(0, int(centre[0] - width_px // 2))
+    y0 = max(0, int(centre[1] - height_px // 2))
+    x1 = min(width - 1, x0 + width_px - 1)
+    y1 = min(height - 1, y0 + height_px - 1)
+
+    result = image.copy()
+    cv2.rectangle(result, (x0, y0), (x1, y1), (value, value, value), thickness=-1)
+    region = np.zeros((height, width), dtype=np.uint8)
+    cv2.rectangle(region, (x0, y0), (x1, y1), 255, thickness=-1)
+    return result, region

@@ -1,0 +1,41 @@
+{
+  "artifact_policy": {
+    "glare_blocks": false,
+    "moderate_contrast_limit": 0.1314,
+    "severe_contrast_limit": 0.12,
+    "visibility_blocks": false
+  },
+  "artifact_policy_fingerprint": "b3cd5db5ca193027",
+  "code_fingerprint": "6b62bb544b9fdd78ad2d8ab2aac43936f238e335+dirty",
+  "detectors_usable": {
+    "glare": false,
+    "severe_contrast": true,
+    "visibility": false
+  },
+  "highlight_policy": {
+    "background_sigma_fractions": [
+      0.1,
+      0.3,
+      0.9
+    ],
+    "clipped_luminance": 244.0,
+    "erosion_px": 5,
+    "local_excess_l": 15.0,
+    "luminance_percentile": 75.0,
+    "min_candidate_fraction": 0.15,
+    "min_component_fraction": 0.1,
+    "min_spatial_concentration": 0.35,
+    "saturation_ratio": 0.75
+  },
+  "highlight_policy_fingerprint": "10757655e4c34533",
+  "visibility_policy": {
+    "max_border_truncation": 0.5,
+    "max_defect_depth_ratio": 1.2,
+    "max_fragments": 1,
+    "max_internal_hole_fraction": 0.1,
+    "min_fragment_fraction": 0.02,
+    "min_hull_fill": 0.4,
+    "min_solidity": 0.4
+  },
+  "visibility_policy_fingerprint": "213bac848e52951f"
+}

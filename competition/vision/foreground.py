@@ -170,7 +170,9 @@ def cleanup_kernel_size(shape: tuple[int, ...]) -> int:
     return max(3, size)
 
 
-def _clean_mask(binary: np.ndarray, kernel_size: int | None = None) -> np.ndarray:
+def _clean_mask(
+    binary: np.ndarray, kernel_size: int | None = None, fill_holes: bool = True
+) -> np.ndarray:
     """Close gaps, drop speckle, then fill interior holes of the largest region.
 
     Produce is a solid convex-ish object; a mask of it should not be porous.
@@ -185,6 +187,8 @@ def _clean_mask(binary: np.ndarray, kernel_size: int | None = None) -> np.ndarra
     closed = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel)
     opened = cv2.morphologyEx(closed, cv2.MORPH_OPEN, kernel)
 
+    if not fill_holes:
+        return opened
     contours, _ = cv2.findContours(opened, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     if not contours:
         return opened
@@ -439,3 +443,47 @@ def masked_pixels(mask: np.ndarray, erosion_px: int) -> np.ndarray:
         cv2.MORPH_ELLIPSE, (2 * erosion_px + 1, 2 * erosion_px + 1)
     )
     return cv2.erode(mask, kernel)
+
+
+def segment_without_fill(
+    image: np.ndarray, method: ForegroundMethod | None = None
+) -> np.ndarray:
+    """The cleaned subject mask with interior holes left open.
+
+    `isolate_foreground` fills holes, which is right for measuring the subject:
+    a mask of a fruit should not be porous just because a specular highlight
+    desaturated a patch of it. But filling also erases the one place an occluder
+    *inside* the silhouette shows up. Measured on the Phase 2c-B corpus, a black
+    rectangle covering three quarters of a fruit left a filled mask that still
+    looked like an intact subject.
+
+    So visibility evidence measures holes on this unfilled mask instead. This is
+    not a synthetic-rectangle trick: a hand, a label or a leaf covering part of
+    the fruit differs from it in saturation or lightness, so it is excluded by
+    the same thresholding and leaves a genuine hole here too.
+    """
+    method = method or DEFAULT_METHOD
+    if not isinstance(method, ForegroundMethod):
+        raise ForegroundError(f"unknown foreground method {method!r}")
+    _validate_image(image)
+
+    working = image.copy()
+    if method is ForegroundMethod.SATURATION_OTSU:
+        hsv = cv2.cvtColor(working, cv2.COLOR_BGR2HSV)
+        _, binary = cv2.threshold(
+            hsv[:, :, 1], 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU
+        )
+    elif method is ForegroundMethod.BORDER_LAB_DISTANCE:
+        lab = cv2.cvtColor(working, cv2.COLOR_BGR2LAB).astype(np.float32)
+        height, width = lab.shape[:2]
+        band = max(2, min(12, height // 4, width // 4))
+        ring = np.concatenate([
+            lab[:band, :, :].reshape(-1, 3), lab[-band:, :, :].reshape(-1, 3),
+            lab[:, :band, :].reshape(-1, 3), lab[:, -band:, :].reshape(-1, 3),
+        ])
+        distance = np.linalg.norm(lab - np.median(ring, axis=0), axis=2)
+        scaled = cv2.normalize(distance, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+        _, binary = cv2.threshold(scaled, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    else:
+        return _METHODS[method](working)
+    return _clean_mask(binary, fill_holes=False)

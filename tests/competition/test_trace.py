@@ -66,6 +66,10 @@ def test_tool_vocabulary_is_closed():
         "inspection_gate",
         "predict_condition",
         "finalise",
+        # Phase 2d capture-artefact evidence.
+        "measure_local_highlights",
+        "measure_visibility",
+        "decide_capture_artifact",
     }
 
 

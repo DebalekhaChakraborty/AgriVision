@@ -35,6 +35,9 @@ class TraceTool(str, Enum):
     COMPARE_CAPTURE_QUALITY = "compare_capture_quality"
     INSPECTION_GATE = "inspection_gate"
     PREDICT_CONDITION = "predict_condition"
+    MEASURE_LOCAL_HIGHLIGHTS = "measure_local_highlights"
+    MEASURE_VISIBILITY = "measure_visibility"
+    DECIDE_CAPTURE_ARTIFACT = "decide_capture_artifact"
     FINALISE = "finalise"
 
 

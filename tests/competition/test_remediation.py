@@ -234,6 +234,7 @@ def test_action_enum_is_closed():
         "APPLY_CLAHE",
         "REQUEST_RECAPTURE",
         "REQUEST_HUMAN_REVIEW",
+        "REQUEST_REPOSITION_LIGHT",
     }
 
 

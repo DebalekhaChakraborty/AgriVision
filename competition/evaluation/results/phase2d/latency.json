@@ -1,0 +1,47 @@
+{
+  "artifact_policy_fingerprint": "b3cd5db5ca193027",
+  "code_fingerprint": "6b62bb544b9fdd78ad2d8ab2aac43936f238e335+dirty",
+  "detectors_usable": {
+    "glare": false,
+    "severe_contrast": true,
+    "visibility": false
+  },
+  "environment": "local CPU; not an AWS measurement and not a deployment figure",
+  "evaluated_on": "2026-09-19",
+  "evaluation_version": "phase2d-artifact-evaluation-1.0.0",
+  "highlight_policy_fingerprint": "10757655e4c34533",
+  "opencv_version": "5.0.0",
+  "resolutions": {
+    "median_height": 1363,
+    "median_width": 1920,
+    "n": 10
+  },
+  "stages": {
+    "combined": {
+      "median_ms": 296.26448557246476,
+      "n": 10,
+      "p95_ms": 348.07428454514593
+    },
+    "contrast": {
+      "median_ms": 19.791851518675685,
+      "n": 10,
+      "p95_ms": 33.13689959468319
+    },
+    "foreground": {
+      "median_ms": 89.09126895014197,
+      "n": 12,
+      "p95_ms": 113.82939839968456
+    },
+    "glare": {
+      "median_ms": 165.87660845834762,
+      "n": 10,
+      "p95_ms": 190.67644538590685
+    },
+    "visibility": {
+      "median_ms": 17.986083053983748,
+      "n": 10,
+      "p95_ms": 20.901894778944552
+    }
+  },
+  "visibility_policy_fingerprint": "213bac848e52951f"
+}

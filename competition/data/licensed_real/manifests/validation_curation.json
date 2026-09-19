@@ -1,0 +1,639 @@
+{
+  "curated_on": "2026-09-19",
+  "curation_version": "phase2d-validation-curation-1.0.0",
+  "decisions": {
+    "WC-01d16dba699241": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 83
+    },
+    "WC-06d12fe72faedf": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 39
+    },
+    "WC-07195a4fe48bfe": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 60
+    },
+    "WC-091f25f27fc182": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 87
+    },
+    "WC-09dbc4db8eb575": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 14
+    },
+    "WC-0aafcbf969dd21": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 36
+    },
+    "WC-0eb8bf3ad68144": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 70
+    },
+    "WC-112796aca6bcc7": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 32
+    },
+    "WC-120e8172fab7ca": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 25
+    },
+    "WC-125e3f895d187e": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 57
+    },
+    "WC-129c025f0f58d7": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 84
+    },
+    "WC-136a413fdb09de": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 2
+    },
+    "WC-1418e6a877dfa8": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 101
+    },
+    "WC-14776e8a3fac3b": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 85
+    },
+    "WC-15596522f5736c": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 65
+    },
+    "WC-16a541f3889df7": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus",
+      "pool_index": 105,
+      "track": "CLEAN_BASE"
+    },
+    "WC-17153d789a65a1": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 19
+    },
+    "WC-1951987d99df6f": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 0
+    },
+    "WC-19bfdb91181912": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 75
+    },
+    "WC-1c47f44ab7e904": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 23
+    },
+    "WC-24298151c5c491": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 82
+    },
+    "WC-2787b71aaec4d5": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 90
+    },
+    "WC-28221855f37f7e": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 93
+    },
+    "WC-2a10d6278b3a2f": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 100,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-2b7f22adb7cda6": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus",
+      "pool_index": 48,
+      "track": "CLEAN_BASE"
+    },
+    "WC-2cc1c445206e2e": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 112
+    },
+    "WC-2db610382626f9": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 41
+    },
+    "WC-2f381cc8f3c5ca": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 72
+    },
+    "WC-303e8f7e807353": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 95
+    },
+    "WC-32acc06a40f705": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 6
+    },
+    "WC-342e42737a0ec4": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus",
+      "pool_index": 43,
+      "track": "CLEAN_BASE"
+    },
+    "WC-356b12e21ed013": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 98
+    },
+    "WC-35ddcf4a1a9a02": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 34
+    },
+    "WC-38ef19e7f777d2": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 50,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-432409aa310605": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 55,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-45e64cb95fd0fd": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 107,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-4610f28fe5354f": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 9
+    },
+    "WC-470388cfb39e9f": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 111,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-48d3998e8ad697": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 109,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-4dca76573707fa": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 94
+    },
+    "WC-4f72ce9d6a4217": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus",
+      "pool_index": 21,
+      "track": "CLEAN_BASE"
+    },
+    "WC-52e8b50e896dfb": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 33
+    },
+    "WC-5504a3fcf939b9": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 46,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-5775c354a93138": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 38
+    },
+    "WC-57f925accdfcb0": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 8
+    },
+    "WC-5b826d8d4cc877": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 108,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-5ec8614b1a80b6": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 66
+    },
+    "WC-5f2aa62a52dda8": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 13
+    },
+    "WC-62be5514016d4e": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 26
+    },
+    "WC-64d5a1e306cf7d": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 74,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-69fde637cdcbd0": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 91
+    },
+    "WC-73ff6e0b1fd8e6": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 71
+    },
+    "WC-753f8698b7afe9": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 45
+    },
+    "WC-75fc5b9bc8109c": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 24
+    },
+    "WC-7bc6946b2199de": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 61
+    },
+    "WC-7e5afbaa286bc6": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 42,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-7ea81b8439ddb9": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 97
+    },
+    "WC-7f13f6b1bd73be": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus",
+      "pool_index": 29,
+      "track": "CLEAN_BASE"
+    },
+    "WC-7f5de6093c32b4": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 113
+    },
+    "WC-834650e08b7674": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 67
+    },
+    "WC-845430909c9c4a": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 4
+    },
+    "WC-851903e325a08f": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus",
+      "pool_index": 15,
+      "track": "CLEAN_BASE"
+    },
+    "WC-8b74d80d08a68e": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 102
+    },
+    "WC-8c4f70c60f901e": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 86,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-8dc1041f7df0be": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 10
+    },
+    "WC-8e5025db9a7ff6": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 3
+    },
+    "WC-90508ed2aae01a": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 79
+    },
+    "WC-91adc96a4268e3": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 16
+    },
+    "WC-94c74e0381630d": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 51
+    },
+    "WC-9717ba750bd3fa": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 28
+    },
+    "WC-98c7d73b0406b4": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 76
+    },
+    "WC-9b8aaf8e47ffae": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 80
+    },
+    "WC-a0b51dc753d8a1": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus",
+      "pool_index": 54,
+      "track": "CLEAN_BASE"
+    },
+    "WC-a10f87d682e255": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 27
+    },
+    "WC-a81f87783bd934": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 53
+    },
+    "WC-a8dffb7d435cd3": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 58
+    },
+    "WC-a9d7be7951d616": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 7
+    },
+    "WC-a9dcbdf861bc48": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 99
+    },
+    "WC-ab9df906caebce": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 62
+    },
+    "WC-ace0c34d851998": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 40,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-ae65eb1403336e": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 89
+    },
+    "WC-b386561440b0e2": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 18
+    },
+    "WC-b3ca894c557bcb": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 12,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-b6b8a34f209c93": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 81
+    },
+    "WC-bc08c148ef9ffe": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 69
+    },
+    "WC-bc4692c80b03e8": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus",
+      "pool_index": 106,
+      "track": "CLEAN_BASE"
+    },
+    "WC-bed6451a2456d2": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 104,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-bf036feb5423e2": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 35
+    },
+    "WC-bf23f9e3244c9d": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 96
+    },
+    "WC-c267791ceade99": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 88
+    },
+    "WC-c448bf61c1a5d1": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus",
+      "pool_index": 44,
+      "track": "CLEAN_BASE"
+    },
+    "WC-c5ddb0b92c6bd4": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 52,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-c636f00d91a570": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 17
+    },
+    "WC-c63dd0de8a34cf": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 47
+    },
+    "WC-caf77cd3abe278": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 59,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-cd821ec41fd5de": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 68
+    },
+    "WC-d163cebcc447bc": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 11
+    },
+    "WC-d2dd19f4e5d2cb": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 110
+    },
+    "WC-dabd03eec3d6da": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 20,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-dd76606401d97e": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 73
+    },
+    "WC-df08f4e66aff12": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 78
+    },
+    "WC-e08dce939e4171": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 22
+    },
+    "WC-e152ea129e9f62": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 92
+    },
+    "WC-e5609efa69872c": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 37
+    },
+    "WC-e57c1cf44cd6e1": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 30
+    },
+    "WC-e79931f9dd17f2": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 31
+    },
+    "WC-e7a216bd429950": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 63
+    },
+    "WC-e9af2bd05d3723": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 103,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-eb7908c766c18a": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 56,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-f334d6b4a6b746": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 1
+    },
+    "WC-f7e2fea5828ee9": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 77
+    },
+    "WC-fb81529837a8c1": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient lighting",
+      "pool_index": 49,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-fba6e8b435c8c3": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 64
+    },
+    "WC-fe431fb959a305": {
+      "keep": false,
+      "note": "off-subject (plant, orchard, cut fruit, dish, diagram, monochrome, non-target species) or people/objects dominant",
+      "pool_index": 5
+    }
+  },
+  "independence": "drawn from Commons categories not used in Phase 2c-B, with every previously screened file and every corpus source group excluded",
+  "kept": 29,
+  "limitation": "the categories that satisfy the independence constraint are botanical and market-oriented, so clean single-subject photographs are scarce; the pool is deliberately scene-heavy rather than padded with off-subject images",
+  "method": "all 114 licence-cleared candidates reviewed by eye on 4 contact sheets; fruit and track are the reviewed judgement, overriding the category's proposal",
+  "reviewed": 114
+}

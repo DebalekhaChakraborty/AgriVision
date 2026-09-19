@@ -1,0 +1,311 @@
+{
+  "calibrated_on": "2026-09-19",
+  "calibration_version": "phase2d-artifact-calibration-1.0.0",
+  "criteria": {
+    "max_false_positive_rate": 0.1,
+    "min_detection_rate": 0.7
+  },
+  "frozen": {
+    "artifact_policy": {
+      "glare_blocks": false,
+      "moderate_contrast_limit": 0.1314,
+      "severe_contrast_limit": 0.12,
+      "visibility_blocks": false
+    },
+    "artifact_policy_fingerprint": "b3cd5db5ca193027",
+    "code_fingerprint": "6b62bb544b9fdd78ad2d8ab2aac43936f238e335+dirty",
+    "detectors_usable": {
+      "glare": false,
+      "severe_contrast": true,
+      "visibility": false
+    },
+    "highlight_policy": {
+      "background_sigma_fractions": [
+        0.1,
+        0.3,
+        0.9
+      ],
+      "clipped_luminance": 244.0,
+      "erosion_px": 5,
+      "local_excess_l": 15.0,
+      "luminance_percentile": 75.0,
+      "min_candidate_fraction": 0.15,
+      "min_component_fraction": 0.1,
+      "min_spatial_concentration": 0.35,
+      "saturation_ratio": 0.75
+    },
+    "highlight_policy_fingerprint": "10757655e4c34533",
+    "visibility_policy": {
+      "max_border_truncation": 0.5,
+      "max_defect_depth_ratio": 1.2,
+      "max_fragments": 1,
+      "max_internal_hole_fraction": 0.1,
+      "min_fragment_fraction": 0.02,
+      "min_hull_fill": 0.4,
+      "min_solidity": 0.4
+    },
+    "visibility_policy_fingerprint": "213bac848e52951f"
+  },
+  "glare": {
+    "admissible_settings": 6,
+    "best": {
+      "admissible": true,
+      "detection_rate": 0.6551724137931034,
+      "false_positive_rate": 0.03333333333333333,
+      "local_excess_l": 15.0,
+      "min_candidate_fraction": 0.15,
+      "min_component_fraction": 0.1,
+      "min_spatial_concentration": 0.35,
+      "negatives": 30,
+      "positives": 29,
+      "saturation_ratio": 0.75
+    },
+    "grid_size": 144,
+    "rejection_reason": "best detection rate 0.66 is below 0.7",
+    "top_settings": [
+      {
+        "admissible": true,
+        "detection_rate": 0.6551724137931034,
+        "false_positive_rate": 0.03333333333333333,
+        "local_excess_l": 15.0,
+        "min_candidate_fraction": 0.15,
+        "min_component_fraction": 0.1,
+        "min_spatial_concentration": 0.35,
+        "negatives": 30,
+        "positives": 29,
+        "saturation_ratio": 0.75
+      },
+      {
+        "admissible": true,
+        "detection_rate": 0.6551724137931034,
+        "false_positive_rate": 0.03333333333333333,
+        "local_excess_l": 15.0,
+        "min_candidate_fraction": 0.15,
+        "min_component_fraction": 0.1,
+        "min_spatial_concentration": 0.6,
+        "negatives": 30,
+        "positives": 29,
+        "saturation_ratio": 0.75
+      },
+      {
+        "admissible": true,
+        "detection_rate": 0.6206896551724138,
+        "false_positive_rate": 0.03333333333333333,
+        "local_excess_l": 25.0,
+        "min_candidate_fraction": 0.15,
+        "min_component_fraction": 0.1,
+        "min_spatial_concentration": 0.35,
+        "negatives": 30,
+        "positives": 29,
+        "saturation_ratio": 0.75
+      },
+      {
+        "admissible": true,
+        "detection_rate": 0.6206896551724138,
+        "false_positive_rate": 0.03333333333333333,
+        "local_excess_l": 25.0,
+        "min_candidate_fraction": 0.15,
+        "min_component_fraction": 0.1,
+        "min_spatial_concentration": 0.6,
+        "negatives": 30,
+        "positives": 29,
+        "saturation_ratio": 0.75
+      },
+      {
+        "admissible": true,
+        "detection_rate": 0.5172413793103449,
+        "false_positive_rate": 0.03333333333333333,
+        "local_excess_l": 35.0,
+        "min_candidate_fraction": 0.15,
+        "min_component_fraction": 0.1,
+        "min_spatial_concentration": 0.35,
+        "negatives": 30,
+        "positives": 29,
+        "saturation_ratio": 0.75
+      }
+    ],
+    "usable": false
+  },
+  "opencv_version": "5.0.0",
+  "population": {
+    "base_images": 35,
+    "measured_samples": 223,
+    "samples_without_a_usable_mask": 17
+  },
+  "severe_contrast": {
+    "best": {
+      "admissible": true,
+      "borderline_block_rate": 0.0,
+      "detection_rate": 0.8703703703703703,
+      "false_positive_rate": 0.0,
+      "severe_contrast_limit": 0.12
+    },
+    "median_contrast": {
+      "borderline_rung": 0.24705882352941178,
+      "severe_rungs": 0.058823529411764705,
+      "undegraded": 0.6
+    },
+    "rejection_reason": null,
+    "sweep": [
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.018518518518518517,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.02
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.05555555555555555,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.03
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.3148148148148148,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.04
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.37037037037037035,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.05
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.5370370370370371,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.06
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.5555555555555556,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.07
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.5740740740740741,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.08
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.6481481481481481,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.09
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.7777777777777778,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.1
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.8518518518518519,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.11
+      },
+      {
+        "admissible": true,
+        "borderline_block_rate": 0.0,
+        "detection_rate": 0.8703703703703703,
+        "false_positive_rate": 0.0,
+        "severe_contrast_limit": 0.12
+      }
+    ],
+    "usable": true
+  },
+  "split": "calibration groups only; held-out and validation untouched",
+  "visibility": {
+    "admissible_settings": 216,
+    "best": {
+      "admissible": true,
+      "detection_rate": 0.4,
+      "false_positive_rate": 0.03333333333333333,
+      "max_border_truncation": 0.5,
+      "max_defect_depth_ratio": 1.2,
+      "max_internal_hole_fraction": 0.1,
+      "min_hull_fill": 0.4,
+      "min_solidity": 0.4,
+      "negatives": 30,
+      "positives": 25
+    },
+    "grid_size": 432,
+    "rejection_reason": "best detection rate 0.40 is below 0.7",
+    "top_settings": [
+      {
+        "admissible": true,
+        "detection_rate": 0.4,
+        "false_positive_rate": 0.03333333333333333,
+        "max_border_truncation": 0.5,
+        "max_defect_depth_ratio": 1.2,
+        "max_internal_hole_fraction": 0.1,
+        "min_hull_fill": 0.4,
+        "min_solidity": 0.4,
+        "negatives": 30,
+        "positives": 25
+      },
+      {
+        "admissible": true,
+        "detection_rate": 0.4,
+        "false_positive_rate": 0.03333333333333333,
+        "max_border_truncation": 0.5,
+        "max_defect_depth_ratio": 1.2,
+        "max_internal_hole_fraction": 0.2,
+        "min_hull_fill": 0.4,
+        "min_solidity": 0.4,
+        "negatives": 30,
+        "positives": 25
+      },
+      {
+        "admissible": true,
+        "detection_rate": 0.4,
+        "false_positive_rate": 0.03333333333333333,
+        "max_border_truncation": 0.5,
+        "max_defect_depth_ratio": 1.2,
+        "max_internal_hole_fraction": 0.35,
+        "min_hull_fill": 0.4,
+        "min_solidity": 0.4,
+        "negatives": 30,
+        "positives": 25
+      },
+      {
+        "admissible": true,
+        "detection_rate": 0.4,
+        "false_positive_rate": 0.03333333333333333,
+        "max_border_truncation": 0.7,
+        "max_defect_depth_ratio": 1.2,
+        "max_internal_hole_fraction": 0.1,
+        "min_hull_fill": 0.4,
+        "min_solidity": 0.4,
+        "negatives": 30,
+        "positives": 25
+      },
+      {
+        "admissible": true,
+        "detection_rate": 0.4,
+        "false_positive_rate": 0.03333333333333333,
+        "max_border_truncation": 0.7,
+        "max_defect_depth_ratio": 1.2,
+        "max_internal_hole_fraction": 0.2,
+        "min_hull_fill": 0.4,
+        "min_solidity": 0.4,
+        "negatives": 30,
+        "positives": 25
+      }
+    ],
+    "usable": false
+  }
+}

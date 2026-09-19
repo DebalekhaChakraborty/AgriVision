@@ -17,7 +17,7 @@ that produced them and are reported separately from the V2 research results.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phases 0–2c-B complete. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. Phase 3 is unblocked. |
+| Status | Phases 0–2c-B complete and committed; Phase 2d complete and uncommitted. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. Phase 3 is unblocked. |
 
 ---
 
@@ -721,6 +721,35 @@ the metrics must be restricted to a foreground region.
   [PHASE2C_LICENSED_CALIBRATION.md](PHASE2C_LICENSED_CALIBRATION.md).
 - **Not delivered, deliberately:** no AWS, no Bedrock, no UI, no anomaly or
   spoilage localisation, and no claim of real-world or phone-camera validation.
+
+### Phase 2d — Local capture-artefact evidence *(complete, uncommitted)*
+- **Objective:** address the three false-accept families Phase 2c-B measured, and
+  resolve whether each was a missing detector or a policy choice.
+- **Consistency audit:** the contrast family was **not** a missing detector. The
+  calibrated ROI threshold raised `LOW_CONTRAST` on 91% of unusable rungs and
+  blocked none, because that flag is advisory by an explicit Phase 1b decision.
+  Fixed with a two-tier ladder; no Phase 2c-B threshold was changed and the
+  confirmatory held-out artifacts were not regenerated.
+- **Built:** local multi-scale highlight evidence restricted to a valid
+  foreground; subject-visibility evidence (named for what it measures, never
+  "occlusion detected"); a two-tier contrast policy; closed actions extended with
+  `REQUEST_REPOSITION_LIGHT`; a traced analysis composing all three.
+- **New independent validation pool:** 29 licensed real images, 29 source groups,
+  none shared with Phase 2c-B, from disjoint Commons categories, with all 401
+  previously screened files excluded. Fingerprint `e9e7ace82c40783e`, frozen
+  before any detector parameter was chosen.
+- **Results, preregistered bar 0.70 detection at ≤0.10 false positives:**
+  severe contrast **0.870 / 0.000 — passes and gates**; glare 0.655 / 0.033 —
+  fails, evidence-only; visibility 0.400 — fails, and every controlled refusal
+  came from foreground validity guards rather than from visibility evidence.
+  On the independent pool glare transferred worse still (0.500 detection, 0.167
+  false positives), which is why it does not gate.
+- **Artifacts:** `competition/vision/highlights.py`,
+  `competition/vision/visibility.py`, `competition/agent/artifact_policy.py`,
+  `competition/agent/artifacts.py`,
+  [PHASE2D_CAPTURE_ARTIFACTS.md](PHASE2D_CAPTURE_ARTIFACTS.md).
+- **Not delivered, deliberately:** no AWS, no Bedrock, no UI, no agent
+  orchestrator, no semantic occlusion claim.
 
 ### Phase 3 — Agentic perception–decision–action workflow
 - **Objective:** the real loop, with traces.
