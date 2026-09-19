@@ -33,6 +33,23 @@ A separate branch, `competition/opencv-aws-2026`, adapts this work into an agent
 
 That branch is documented in [OPENCV_AWS_2026_BLUEPRINT.md](docs/competition/OPENCV_AWS_2026_BLUEPRINT.md).
 
+**Live demonstration:** https://yp2ajauzkm.us-east-1.awsapprunner.com
+
+OpenCV 5 evaluates whether a capture is trustworthy, takes bounded corrective
+actions when appropriate, and runs the condition model only when the capture is
+suitable. The demonstration shows the same subject producing four different next
+actions as its visual evidence changes.
+
+- Judge demo and sequence: [PHASE5_JUDGE_DEMO.md](docs/competition/PHASE5_JUDGE_DEMO.md),
+  [JUDGE_DEMO_SCRIPT.md](docs/competition/JUDGE_DEMO_SCRIPT.md)
+- Agent loop: [AGENT_WORKFLOW.md](docs/competition/AGENT_WORKFLOW.md)
+- Deployment: [PHASE4_AWS_DEPLOYMENT.md](docs/competition/PHASE4_AWS_DEPLOYMENT.md),
+  [DEPLOYED_ARCHITECTURE.md](docs/competition/DEPLOYED_ARCHITECTURE.md)
+
+The service reports **visible produce condition** only. It does not detect
+pathogens, toxins, microbiological contamination or internal spoilage, and does
+not determine whether food is safe to eat.
+
 ## V2 Phase 1
 
 ### Modern CNN Baseline Reproduction

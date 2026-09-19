@@ -1,0 +1,272 @@
+{
+  "browser_tested": "HTTP client (urllib); page markup and assets served",
+  "captured_at": "2026-09-19T15:19:54+00:00",
+  "claim_boundary": "live smoke matrix against the deployed service; not an accuracy benchmark",
+  "counterfactual": {
+    "claim_boundary": "Reports visible surface condition only. This is not a food-safety, edibility, contamination or internal-spoilage assessment, and a human remains responsible for any decision about produce.",
+    "counterfactual_version": "phase5-counterfactual-1.0.0",
+    "distinct_first_actions": [
+      "APPLY_CLAHE",
+      "APPLY_GAMMA",
+      "NONE",
+      "REQUEST_RECAPTURE"
+    ],
+    "evidence_changes_action": true,
+    "notice": "Controlled demonstration. These variants are generated from the image you uploaded to show how the agent's next action changes when the visual evidence changes. They are not a real-world accuracy benchmark and do not represent how often real captures look this way.",
+    "policy_fingerprints": {
+      "artifact_policy": "b3cd5db5ca193027",
+      "highlight_policy": "10757655e4c34533",
+      "quality_policy": "e6bd2bee4f852f37",
+      "remediation_policy": "225b43230901b0eb",
+      "roi_policy_lock": "15b7fb0908d6d622",
+      "roi_policy_threshold": "78b1e2151773787a",
+      "visibility_policy": "213bac848e52951f"
+    },
+    "run_id": "94cae7d28835404a916bee651da70be8",
+    "source": "derived in memory from the uploaded image; not persisted",
+    "variant_count": 4,
+    "variants": [
+      {
+        "artifact_flags": [],
+        "condition_model_invoked": true,
+        "description": "Your image, unchanged.",
+        "duration_ms": 33.8,
+        "expected_finding": "no blocking finding",
+        "final_status": "COMPLETE",
+        "first_action": "NONE",
+        "headline_evidence": {
+          "contrast_score": 0.65098,
+          "focus_floor": 0.318197637796402,
+          "high_frequency_ratio": 0.841585,
+          "mean_luminance": 0.565241
+        },
+        "key": "REFERENCE",
+        "label": "Reference",
+        "quality_flags": [],
+        "remediation_action": "",
+        "remediation_applied": false,
+        "requested_human_action": "",
+        "state_path": [
+          "RECEIVED",
+          "INPUT_VALIDATED",
+          "FOREGROUND_ASSESSED",
+          "QUALITY_ASSESSED",
+          "ARTIFACTS_ASSESSED",
+          "DECISION_MADE",
+          "ELIGIBLE_FOR_INFERENCE",
+          "CONDITION_INFERRED",
+          "COMPLETE"
+        ],
+        "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+      },
+      {
+        "artifact_flags": [],
+        "condition_model_invoked": true,
+        "description": "Exposure reduced until the subject falls below the calibrated underexposure limit.",
+        "duration_ms": 77.7,
+        "expected_finding": "ROI mean luminance below the calibrated floor",
+        "final_status": "COMPLETE",
+        "first_action": "APPLY_GAMMA",
+        "headline_evidence": {
+          "contrast_score": 0.070588,
+          "focus_floor": 0.318197637796402,
+          "high_frequency_ratio": 0.850783,
+          "mean_luminance": 0.049854
+        },
+        "key": "UNDEREXPOSED",
+        "label": "Underexposed",
+        "quality_flags": [],
+        "remediation_action": "APPLY_GAMMA",
+        "remediation_applied": true,
+        "requested_human_action": "",
+        "state_path": [
+          "RECEIVED",
+          "INPUT_VALIDATED",
+          "FOREGROUND_ASSESSED",
+          "QUALITY_ASSESSED",
+          "ARTIFACTS_ASSESSED",
+          "DECISION_MADE",
+          "REMEDIATION_SELECTED",
+          "REMEDIATED",
+          "RESEGMENTED",
+          "REASSESSED",
+          "ELIGIBLE_FOR_INFERENCE",
+          "CONDITION_INFERRED",
+          "COMPLETE"
+        ],
+        "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+      },
+      {
+        "artifact_flags": [],
+        "condition_model_invoked": false,
+        "description": "Defocused until subject detail falls below the calibrated high-frequency floor.",
+        "duration_ms": 22.3,
+        "expected_finding": "ROI high-frequency ratio below 0.3182",
+        "final_status": "REQUEST_RECAPTURE",
+        "first_action": "REQUEST_RECAPTURE",
+        "headline_evidence": {
+          "contrast_score": 0.560784,
+          "focus_floor": 0.318197637796402,
+          "high_frequency_ratio": 0.267403,
+          "mean_luminance": 0.582505
+        },
+        "key": "SEVERE_BLUR",
+        "label": "Severe blur",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "remediation_action": "",
+        "remediation_applied": false,
+        "requested_human_action": "REQUEST_RECAPTURE",
+        "state_path": [
+          "RECEIVED",
+          "INPUT_VALIDATED",
+          "FOREGROUND_ASSESSED",
+          "QUALITY_ASSESSED",
+          "ARTIFACTS_ASSESSED",
+          "DECISION_MADE",
+          "REQUEST_RECAPTURE"
+        ],
+        "terminal_reason_code": "BLUR_NOT_REMEDIABLE"
+      },
+      {
+        "artifact_flags": [],
+        "condition_model_invoked": true,
+        "description": "Tonal range compressed to sit in the band the enhancement route exists for.",
+        "duration_ms": 90.9,
+        "expected_finding": "ROI contrast in the recoverable band below 0.1314",
+        "final_status": "COMPLETE",
+        "first_action": "APPLY_CLAHE",
+        "headline_evidence": {
+          "contrast_score": 0.129412,
+          "focus_floor": 0.318197637796402,
+          "high_frequency_ratio": 0.845192,
+          "mean_luminance": 0.549671
+        },
+        "key": "LOW_CONTRAST",
+        "label": "Recoverable contrast loss",
+        "quality_flags": [],
+        "remediation_action": "APPLY_CLAHE",
+        "remediation_applied": true,
+        "requested_human_action": "",
+        "state_path": [
+          "RECEIVED",
+          "INPUT_VALIDATED",
+          "FOREGROUND_ASSESSED",
+          "QUALITY_ASSESSED",
+          "ARTIFACTS_ASSESSED",
+          "DECISION_MADE",
+          "REMEDIATION_SELECTED",
+          "REMEDIATED",
+          "RESEGMENTED",
+          "REASSESSED",
+          "ELIGIBLE_FOR_INFERENCE",
+          "CONDITION_INFERRED",
+          "COMPLETE"
+        ],
+        "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+      }
+    ]
+  },
+  "opencv_version": "5.0.0",
+  "page_assets": [
+    {
+      "bytes": 5421,
+      "ms": 163.8,
+      "path": "/"
+    },
+    {
+      "bytes": 9002,
+      "ms": 163.1,
+      "path": "/static/app.css"
+    },
+    {
+      "bytes": 16032,
+      "ms": 165.8,
+      "path": "/static/app.js"
+    }
+  ],
+  "scenarios": [
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "http_status": 200,
+      "latency_ms": 413.8,
+      "lossless_transport": true,
+      "remediation_applied": false,
+      "requested_human_action": "",
+      "run_id": "f5d3011bc2424952aca9569552653b23",
+      "scenario": "NORMAL",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "http_status": 200,
+      "latency_ms": 321.8,
+      "lossless_transport": true,
+      "remediation_applied": true,
+      "requested_human_action": "",
+      "run_id": "992f341059cd4624b7a9d8837340da96",
+      "scenario": "UNDEREXPOSED",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": false,
+      "final_status": "REQUEST_RECAPTURE",
+      "http_status": 200,
+      "latency_ms": 318.3,
+      "lossless_transport": true,
+      "remediation_applied": false,
+      "requested_human_action": "REQUEST_RECAPTURE",
+      "run_id": "12e91eae406c411ba207a4933a76ec21",
+      "scenario": "SEVERE_BLUR",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "http_status": 200,
+      "latency_ms": 334.6,
+      "lossless_transport": true,
+      "remediation_applied": false,
+      "requested_human_action": "",
+      "run_id": "d3145425de9f41a184c6baec49d773e4",
+      "scenario": "LOW_CONTRAST",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": false,
+      "final_status": "REQUEST_RECAPTURE",
+      "http_status": 200,
+      "latency_ms": 298.5,
+      "lossless_transport": true,
+      "remediation_applied": false,
+      "requested_human_action": "REQUEST_RECAPTURE",
+      "run_id": "e491a9a83977472a84d4fcff7f5ec248",
+      "scenario": "FOREGROUND_FAILURE",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "REQUEST_REPOSITION_LIGHT",
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "http_status": 200,
+      "latency_ms": 327.5,
+      "lossless_transport": true,
+      "remediation_applied": false,
+      "requested_human_action": "",
+      "run_id": "ddc7878bb8d94550a1a284379586daf7",
+      "scenario": "GLARE_ADVISORY",
+      "trace_retrievable": true
+    }
+  ],
+  "service_url": "https://yp2ajauzkm.us-east-1.awsapprunner.com",
+  "service_version": "phase4-service-1.0.0",
+  "transport": "PNG (lossless) so API results match in-process results exactly"
+}

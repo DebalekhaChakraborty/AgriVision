@@ -27,11 +27,13 @@ from __future__ import annotations
 import threading
 import time
 import uuid
+from pathlib import Path
 from contextlib import asynccontextmanager
 from typing import Optional
 
 from fastapi import FastAPI, File, HTTPException, Request, Response, UploadFile
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from competition.agent.orchestrator import (
@@ -44,6 +46,10 @@ from competition.agent.state import InspectionState
 from competition.service import observability as obs
 from competition.service.artifacts import ArtifactStatus, artifact_directory, ensure_model_artifact
 from competition.service.config import SERVICE_VERSION, ServiceConfig, load_config
+from competition.service.counterfactual import (
+    CONTROLLED_DEMONSTRATION_NOTICE,
+    run_counterfactual,
+)
 from competition.service.persistence import build_store
 from competition.service.uploads import ALLOWED_MEDIA_TYPES, UploadRejected, validate_upload
 
@@ -100,6 +106,12 @@ class InspectionResponse(BaseModel):
     pipeline_version: str
     claim_boundary: str
     deployment_input_contract: str
+    # Included so the demo page can render the causal chain from one call
+    # rather than fetching the trace separately. Same content as
+    # GET /inspection/{run_id}/trace; no image bytes, no paths.
+    opencv_version: str = ""
+    state_path: list = Field(default_factory=list)
+    trace_steps: list = Field(default_factory=list)
 
 
 class ErrorResponse(BaseModel):
@@ -276,6 +288,9 @@ def _to_response(result: InspectionRunResult, run_id: str,
         pipeline_version=result.pipeline_version,
         claim_boundary=CLAIM_BOUNDARY,
         deployment_input_contract=DEPLOYMENT_INPUT_CONTRACT,
+        opencv_version=_opencv_version() or "",
+        state_path=result.trace.state_sequence,
+        trace_steps=result.trace.to_dict(include_timing=True)["steps"],
     )
 
 
@@ -377,6 +392,25 @@ def create_app(config: ServiceConfig | None = None) -> FastAPI:
         ),
     )
     app.state.service = state
+
+    static_dir = Path(__file__).resolve().parent / "static"
+    if static_dir.is_dir():
+        app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
+
+    @app.get("/", include_in_schema=False)
+    def home() -> FileResponse:
+        """The judge demo page, served same-origin from this service.
+
+        No Amplify, no CloudFront, no separate SPA host: one page and one API
+        behind one certificate is less to deploy, less to secure and less to
+        explain.
+        """
+        index = static_dir / "index.html"
+        if not index.is_file():
+            raise HTTPException(status_code=404, detail={
+                "error": "ui_unavailable", "reason_code": "UI_NOT_BUILT",
+                "detail": "The demo page is not present in this build."})
+        return FileResponse(str(index), media_type="text/html")
 
     @app.get("/health", tags=["operations"])
     def health() -> dict:
@@ -513,6 +547,56 @@ def create_app(config: ServiceConfig | None = None) -> FastAPI:
             status_code=200, content=body,
             headers={"X-Trace-Stored": "true" if outcome.stored else "false"},
         )
+
+    @app.post("/counterfactual", tags=["inspection"])
+    async def counterfactual(image: UploadFile = File(...)) -> JSONResponse:
+        """Run the bounded agent over controlled variants of one capture.
+
+        The variants are derived in memory from the submitted image and are not
+        persisted. Each is a full inspection through the same orchestrator and
+        the same frozen policy, so nothing here is precomputed or simulated.
+        """
+        if not state.ready:
+            raise HTTPException(status_code=503, detail={
+                "error": "service_not_ready", "reason_code": "MODEL_UNAVAILABLE",
+                "detail": state.readiness_detail()["detail"] or "Not ready."})
+
+        run_id = uuid.uuid4().hex
+        payload = await image.read()
+        try:
+            decoded = validate_upload(payload, state.config)
+        except UploadRejected as rejection:
+            state.metrics.increment(obs.REJECTED_UPLOADS)
+            raise HTTPException(
+                status_code={"UPLOAD_TOO_LARGE": 413,
+                             "UNSUPPORTED_MEDIA_TYPE": 415}.get(
+                                 rejection.reason_code, 400),
+                detail={"error": "upload_rejected",
+                        "reason_code": rejection.reason_code,
+                        "detail": rejection.message}) from None
+
+        started = time.perf_counter()
+        try:
+            report = run_counterfactual(
+                decoded.image, state.model, state.policy, run_id)
+        except Exception as error:  # noqa: BLE001
+            state.metrics.increment(obs.TOOL_FAILURES)
+            obs.log_event(state.logger, "counterfactual_failed", level="ERROR",
+                          run_id=run_id, error_type=type(error).__name__)
+            raise HTTPException(status_code=500, detail={
+                "error": "counterfactual_failed", "reason_code": "INTERNAL_ERROR",
+                "detail": "The demonstration could not be completed."}) from None
+
+        obs.log_event(
+            state.logger, "counterfactual_completed", run_id=run_id,
+            variant_count=report["variant_count"],
+            distinct_actions=report["distinct_first_actions"],
+            evidence_changes_action=report["evidence_changes_action"],
+            duration_ms=round((time.perf_counter() - started) * 1000.0, 2),
+            success=True)
+        report["run_id"] = run_id
+        report["claim_boundary"] = CLAIM_BOUNDARY
+        return JSONResponse(status_code=200, content=report)
 
     @app.get("/inspection/{run_id}", tags=["inspection"])
     def get_inspection(run_id: str) -> dict:

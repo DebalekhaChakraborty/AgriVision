@@ -80,12 +80,21 @@ Branch: `competition/opencv-aws-2026`
 
 ## 7. Demo endpoint
 
-- [ ] Endpoint live and reachable
-- [ ] Three demo scenarios reproducible by a judge unaided (Blueprint §32)
-- [ ] Evidence overlay and trace visible in the UI
-- [ ] Claim boundary visible in the UI
-- [ ] Graceful behaviour on invalid, oversized and non-produce input
-- [ ] Availability confirmed close to judging
+- [x] Live HTTPS endpoint — https://yp2ajauzkm.us-east-1.awsapprunner.com
+- [x] Judge-operable single page, served same-origin from the same service
+- [x] Upload → live agent result → causal trace, all from live API calls
+- [x] Counterfactual demonstration: one subject, four distinct next actions
+- [x] Condition-model invocation and skipping both visible
+- [x] Remediation path visible with before/after metrics
+- [x] Recapture and human-review paths presented as guidance, not errors
+- [x] Evidence maturity badges; advisory glare never shown as calibrated
+- [x] Responsible-use boundary unavoidable on the page
+- [x] No fabricated results — asserted by test
+- [x] No AWS or filesystem identifier in the page or script — asserted by test
+- [x] Opened in a real browser by a human — desktop and narrow/mobile width,
+      `HUMAN_UI_SMOKE_CHECK = PASS`. Manual, not automated.
+- [ ] Screenshots captured for the submission
+- [ ] Mobile device check
 
 ## 8. Evaluation artifacts
 

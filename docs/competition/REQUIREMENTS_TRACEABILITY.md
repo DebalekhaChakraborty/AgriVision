@@ -24,11 +24,11 @@ Base commit: `3928d43b3bdd3a754f98f1f411596050de29da17`
 | A5 | Pinned dependencies | `requirements-competition.txt` with exact versions; container base pinned by digest | No unpinned runtime dependency; resolvable from a clean environment | `requirements-competition.txt`, `requirements-serving.txt`, `Dockerfile` | 1→7 | **COMPLETE (Phase 4)** — fastapi 0.141.1, uvicorn 0.53.0, pydantic 2.13.5, boto3 1.43.98, python-multipart 0.0.32 resolved and pinned; `pip check` clean; base image pinned by digest. |
 | A6 | Build / deployment / test instructions | Step-by-step guide verified from a clean checkout and clean AWS account | Successful reproduction rehearsal record | `docs/competition/DEPLOYMENT.md` | 4→7 | NOT STARTED |
 | A7 | Architecture diagram | Rendered diagram of the deployed system | Published image referenced by report and README | `docs/competition/DEPLOYED_ARCHITECTURE.md` | 4 | **COMPLETE (Phase 4)** — source-controlled Mermaid flowchart and sequence diagram of the deployed topology; only services actually used appear. |
-| A8 | Working endpoint or live demo | App Runner HTTPS endpoint with the demo UI | Reachable URL; the three demo scenarios reproducible | Deployed service, `competition/ui/` | 4→5 | NOT STARTED |
+| A8 | Working endpoint or live demo | App Runner HTTPS endpoint with the demo UI | Reachable URL; the demo scenarios reproducible | Deployed service, `competition/service/static/` | 4→5 | **COMPLETE (Phase 5)** — `https://yp2ajauzkm.us-east-1.awsapprunner.com` serves the judge page and the API same-origin. Six live scenarios verified end to end, every trace retrievable by run id. |
 | A9 | Video ≤5 minutes, judge-accessible | Recorded to Blueprint §33 storyboard | Hosted video under 5:00 | Video link in submission | 7 | NOT STARTED |
 | A10 | Evaluation evidence | Execute EVALUATION_PLAN.md | Committed metrics, figures, and the code that produced them | `competition/evaluation/`, results | 6 | IN PROGRESS — Phase 1, 1b, 2, 2b, 2c-B, 2d and 3 evaluations produced; agent behaviour measured on a deterministic scenario suite, real-domain evaluation outstanding |
 | A11 | Failure cases and limitations | Failure taxonomy and curated failure set (Blueprint §28) | Documented cases with expected vs observed behaviour | `docs/competition/FAILURE_ANALYSIS.md` | 6 | NOT STARTED |
-| A12 | Responsible use discussion | Claim boundary in UI, API response, report and video (Blueprint §31) | Boundary text present in all four surfaces | Report, UI, API schema | 5→7 | NOT STARTED |
+| A12 | Responsible use discussion | Claim boundary in UI, API response, report and video | Boundary text present in all surfaces | Report, UI, API schema | 5→7 | **SUBSTANTIALLY COMPLETE (Phase 5)** — the boundary appears in the page, in every `/inspect` response and in `/version`; a test asserts no food-safety claim exists outside the disclaimer. Report and video remain Phase 7. |
 
 ## B. Agentic Vision Award requirements
 
@@ -37,9 +37,25 @@ Base commit: `3928d43b3bdd3a754f98f1f411596050de29da17`
 | B1 | OpenCV 5 visual evidence influences a later decision | Deterministic policy engine consuming `PerceptionEvidence` (Blueprint §15, §16) | Trace records naming the metric, the threshold crossed, and the branch taken | Trace schema, `competition/agent/` | 1b, 3 | **SUBSTANTIALLY COMPLETE (Phase 3)** — counterfactual experiment: one base subject, identical policy fingerprints, four distinct first actions. `results/phase3/counterfactual_actions.json`. Real-domain rates still unmeasured. |
 | B2 | Evidence influences a tool call | Perception metrics select which tool runs next (enhance, re-segment, reclassify ROI) | Trace showing tool invocation caused by a metric | Trace records | 1b, 3 | **SUBSTANTIALLY COMPLETE (Phase 3)** — closed 15-tool registry; a blur finding selects `request_recapture`, underexposure selects `apply_gamma_correction`, contrast loss selects `apply_clahe`. Unnecessary tool-call rate 0/12. |
 | B3 | Evidence influences a plan or re-analysis step | Bounded remediation loop re-enters perception with new parameters | Trace showing a second pass with changed parameters and the reason | Trace records | 1b, 3 | **SUBSTANTIALLY COMPLETE (Phase 3)** — remediation forces re-segmentation and re-measurement; the state machine has no edge permitting a second attempt. Multi-step planning beyond one excursion remains out of scope. |
-| B4 | Evidence influences a human-approval request | Escalation policy driven by capture quality, conflict, and uncertainty (Blueprint §17) | Escalation records with the triggering evidence attached | DynamoDB queue records | 3 | **IN PROGRESS (Phase 3)** — three human-action terminals (`REQUEST_RECAPTURE`, `REQUEST_REPOSITION_LIGHT`, `REQUEST_HUMAN_REVIEW`) each carry their triggering evidence and maturity. Runs stop and wait; no durable queue exists yet (Phase 4). |
+| B4 | Evidence influences a human-approval request | Escalation policy driven by capture quality | Escalation records with the triggering evidence attached | `competition/agent/`, demo UI | 3 | **COMPLETE (Phase 5)** — three human-action terminals carry their triggering evidence and maturity, and the demo page renders each as guidance rather than an error. |
 | B5 | Not merely a chatbot explaining a fixed prediction | Control decisions are deterministic, not model-generated; Bedrock narrates only | Policy source; tests proving behaviour without Bedrock available | `competition/agent/`, policy tests | 1b, 3 | **COMPLETE (Phase 3)** — no language model participates at any point. Actions are enum members; `resolve_tool` refuses any string outside the closed vocabulary. The renderer is a formatter. |
-| B6 | The trace proves OpenCV changed what happened next | Decision-attribution metric (Blueprint §30) | Measured attribution rate over the evaluation set | Evaluation results | 6 | **IN PROGRESS (Phase 3)** — attribution 33/33 and trace completeness 12/12 on the deterministic scenario suite. A real-imagery attribution rate is Phase 6. |
+| B6 | The trace proves OpenCV changed what happened next | Decision-attribution metric | Measured attribution rate over the evaluation set | Evaluation results, demo UI | 6 | **SUBSTANTIALLY COMPLETE (Phase 5)** — attribution 33/33 on the scenario suite, and the live counterfactual at `https://yp2ajauzkm.us-east-1.awsapprunner.com` shows one subject producing four distinct next actions under identical policy fingerprints. A real-imagery attribution rate remains Phase 6. |
+
+### Claim authorised after Phase 5
+
+> AgriVision exposes a live judge-accessible AWS demonstration in which OpenCV 5
+> evidence changes subsequent tool calls and human-directed actions, with the
+> causal trace visible to the judge.
+
+This is supported by the live endpoint, the six-scenario live smoke matrix, the
+live counterfactual and the retrievable per-run trace. Human visual usability of
+the page was confirmed manually (`HUMAN_UI_SMOKE_CHECK = PASS`), not by an
+automated rendering test.
+
+It is a statement about the demonstration, not about the submission. The
+submission is **not** complete: B6's real-imagery attribution rate and the
+confirmatory segmentation and fruit-type rates on fresh natural images are still
+unmeasured, and remain Phase 6 work.
 
 ## C. Judging-criteria coverage
 

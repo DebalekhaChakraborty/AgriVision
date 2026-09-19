@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgriVision — Agentic Visual Intelligence for Produce Inspection</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brandrow">
+      <h1>AgriVision</h1>
+      <div id="status" class="status" role="status" aria-live="polite">
+        <span class="dot" aria-hidden="true"></span><span id="statusText">Checking service…</span>
+      </div>
+    </div>
+    <p class="tagline">Agentic Visual Intelligence for Produce Inspection</p>
+    <p class="lede">
+      OpenCV&nbsp;5 evaluates whether the visual evidence is trustworthy, takes
+      bounded corrective actions when appropriate, and runs the condition model
+      <strong>only</strong> when the capture is suitable.
+    </p>
+    <p class="contract"><strong>Use one primary fruit per image.</strong>
+      Apple, banana or orange. Market stalls, piles and trees with many fruits
+      are outside the current scope and will be sent back for a recapture.</p>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <section class="card" aria-labelledby="uploadHead">
+    <h2 id="uploadHead">1 · Submit a capture</h2>
+    <div id="drop" class="drop" tabindex="0" role="button"
+         aria-label="Choose an image, or drop one here">
+      <input id="file" type="file" accept="image/jpeg,image/png" hidden>
+      <div id="dropIdle">
+        <p class="dropbig">Drop an image, or <span class="link">choose a file</span></p>
+        <p class="dropsmall">JPG or PNG · up to 12&nbsp;MB · one primary fruit</p>
+        <p class="dropsmall subtle">PNG is lossless, so its pixels reach the
+          agent exactly as encoded. JPEG is lossy and can shift a marginal
+          capture across a threshold.</p>
+      </div>
+      <img id="preview" alt="Selected capture preview" hidden>
+    </div>
+    <div class="actions">
+      <button id="inspect" class="primary" disabled>Inspect</button>
+      <button id="counter" class="secondary" disabled>Show Agentic Counterfactual</button>
+      <button id="reset" class="ghost">New inspection</button>
+    </div>
+    <p id="uploadError" class="error" hidden role="alert"></p>
+  </section>
+
+  <section id="busy" class="card busy" hidden aria-live="polite">
+    <div class="spinner" aria-hidden="true"></div>
+    <p id="busyText">Running the bounded inspection loop…</p>
+    <p class="dropsmall subtle">First request after an idle period may take a
+      little longer while the service warms.</p>
+  </section>
+
+  <section id="results" hidden>
+
+    <section class="card" aria-labelledby="outcomeHead">
+      <h2 id="outcomeHead">2 · Agent outcome</h2>
+      <div id="outcome" class="outcome"></div>
+      <div id="humanAction" class="human" hidden></div>
+      <div id="modelResult" class="model" hidden></div>
+    </section>
+
+    <section class="card" aria-labelledby="causalHead">
+      <h2 id="causalHead">3 · Why — OpenCV evidence to action</h2>
+      <div id="causal" class="causal"></div>
+    </section>
+
+    <section class="card" aria-labelledby="fgHead">
+      <h2 id="fgHead">4 · Foreground and capture evidence</h2>
+      <div id="foreground" class="grid2"></div>
+    </section>
+
+    <section id="remediationCard" class="card" hidden aria-labelledby="remHead">
+      <h2 id="remHead">5 · Capture enhancement attempted</h2>
+      <div id="remediation"></div>
+    </section>
+
+    <section class="card" aria-labelledby="pathHead">
+      <h2 id="pathHead">6 · Path taken</h2>
+      <div id="statePath" class="path"></div>
+      <p class="dropsmall subtle">Only the states this run actually entered. The
+        full 18-state machine is in the documentation.</p>
+    </section>
+
+    <section class="card" aria-labelledby="traceHead">
+      <h2 id="traceHead">7 · Causal trace</h2>
+      <ol id="trace" class="trace"></ol>
+      <details class="tech">
+        <summary>Technical trace (raw JSON)</summary>
+        <pre id="rawTrace"></pre>
+      </details>
+    </section>
+  </section>
+
+  <section id="cfSection" class="card" hidden aria-labelledby="cfHead">
+    <h2 id="cfHead">Why this is Agentic Vision</h2>
+    <p class="cfnotice" id="cfNotice"></p>
+    <p>Same subject. Only the visual evidence differs. Watch the
+       <strong>next action</strong> change with it.</p>
+    <div id="cfGrid" class="cfgrid"></div>
+    <p id="cfVerdict" class="cfverdict"></p>
+  </section>
+
+  <section class="card" aria-labelledby="techHead">
+    <h2 id="techHead">Technical details</h2>
+    <details>
+      <summary>Stack, bounds and contract</summary>
+      <dl id="techDetails" class="techdl"></dl>
+    </details>
+  </section>
+
+  <section class="card responsible" aria-labelledby="respHead">
+    <h2 id="respHead">Responsible use</h2>
+    <p>AgriVision assesses <strong>visible produce condition</strong> from
+      images. It does not detect pathogens, toxins, microbiological
+      contamination or internal spoilage, and it does not determine whether food
+      is safe to eat. A person remains responsible for any decision about
+      produce.</p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>OpenCV 5 · deterministic bounded agent · no language model participates in
+     any decision.</p>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

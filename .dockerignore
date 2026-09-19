@@ -12,8 +12,10 @@ model/
 outputs/
 results/
 notebooks/
-static/
-templates/
+# Root-level research assets only. This pattern is anchored at the context
+# root, so competition/service/static (the judge demo page) is NOT excluded.
+/static/
+/templates/
 src/
 v2/
 tests/

@@ -96,6 +96,21 @@ A blocking decision is checked against this table when it is constructed. That
 is why the glare edge in the diagram is dotted: it reaches the result, not the
 gate.
 
+## Seeing it run
+
+The loop above is live at **https://yp2ajauzkm.us-east-1.awsapprunner.com**, and the counterfactual section of that page
+runs it four times on one subject:
+
+| Variant | Next action | Condition model |
+| --- | --- | --- |
+| Reference | `NONE` | invoked |
+| Underexposed | `APPLY_GAMMA` | invoked after re-assessment |
+| Severe blur | `REQUEST_RECAPTURE` | **skipped** |
+| Recoverable contrast loss | `APPLY_CLAHE` | invoked after re-assessment |
+
+Same subject, same policy, same fingerprints. The diagram's branches are not
+illustrative — those are the edges being taken.
+
 ## Where this goes next
 
 The loop is local and deterministic. A later phase may put a language model

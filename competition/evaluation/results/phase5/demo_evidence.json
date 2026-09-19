@@ -1,0 +1,163 @@
+{
+  "browser_verification_status": "PERFORMED MANUALLY BY A HUMAN - see human_ui_smoke_check. No automated browser/headless rendering test exists in this repository.",
+  "captured_at": "2026-09-19T15:19:54+00:00",
+  "counterfactual": {
+    "distinct_first_actions": [
+      "APPLY_CLAHE",
+      "APPLY_GAMMA",
+      "NONE",
+      "REQUEST_RECAPTURE"
+    ],
+    "evidence_changes_action": true,
+    "notice": "Controlled demonstration. These variants are generated from the image you uploaded to show how the agent's next action changes when the visual evidence changes. They are not a real-world accuracy benchmark and do not represent how often real captures look this way.",
+    "policy_fingerprints": {
+      "artifact_policy": "b3cd5db5ca193027",
+      "highlight_policy": "10757655e4c34533",
+      "quality_policy": "e6bd2bee4f852f37",
+      "remediation_policy": "225b43230901b0eb",
+      "roi_policy_lock": "15b7fb0908d6d622",
+      "roi_policy_threshold": "78b1e2151773787a",
+      "visibility_policy": "213bac848e52951f"
+    },
+    "variants": [
+      {
+        "condition_model_invoked": true,
+        "final_status": "COMPLETE",
+        "first_action": "NONE",
+        "key": "REFERENCE",
+        "remediation_action": ""
+      },
+      {
+        "condition_model_invoked": true,
+        "final_status": "COMPLETE",
+        "first_action": "APPLY_GAMMA",
+        "key": "UNDEREXPOSED",
+        "remediation_action": "APPLY_GAMMA"
+      },
+      {
+        "condition_model_invoked": false,
+        "final_status": "REQUEST_RECAPTURE",
+        "first_action": "REQUEST_RECAPTURE",
+        "key": "SEVERE_BLUR",
+        "remediation_action": ""
+      },
+      {
+        "condition_model_invoked": true,
+        "final_status": "COMPLETE",
+        "first_action": "APPLY_CLAHE",
+        "key": "LOW_CONTRAST",
+        "remediation_action": "APPLY_CLAHE"
+      }
+    ]
+  },
+  "human_ui_smoke_check": {
+    "result": "HUMAN_UI_SMOKE_CHECK = PASS",
+    "performed_by": "human operator, manually, in a real browser",
+    "method": "NOT AUTOMATED. A person opened the live App Runner URL and visually confirmed page, layout and interactions.",
+    "coverage": [
+      "desktop width",
+      "narrow/mobile width"
+    ],
+    "url": "https://yp2ajauzkm.us-east-1.awsapprunner.com",
+    "recorded_at": "2026-09-19",
+    "scope_note": "Confirms visual usability only. It is not a measurement of detector accuracy, agent behaviour or latency; those come from the automated live matrix in this same file."
+  },
+  "images_committed": "none - all fixtures are generated procedurally at test time",
+  "opencv_version": "5.0.0",
+  "page_assets": [
+    {
+      "bytes": 5421,
+      "ms": 163.8,
+      "path": "/"
+    },
+    {
+      "bytes": 9002,
+      "ms": 163.1,
+      "path": "/static/app.css"
+    },
+    {
+      "bytes": 16032,
+      "ms": 165.8,
+      "path": "/static/app.js"
+    }
+  ],
+  "phase5_version": "phase5-judge-demo-1.0.0",
+  "scenarios": [
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "http_status": 200,
+      "latency_ms": 413.8,
+      "remediation_applied": false,
+      "requested_human_action": "",
+      "run_id": "f5d3011bc2424952aca9569552653b23",
+      "scenario": "NORMAL",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "http_status": 200,
+      "latency_ms": 321.8,
+      "remediation_applied": true,
+      "requested_human_action": "",
+      "run_id": "992f341059cd4624b7a9d8837340da96",
+      "scenario": "UNDEREXPOSED",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": false,
+      "final_status": "REQUEST_RECAPTURE",
+      "http_status": 200,
+      "latency_ms": 318.3,
+      "remediation_applied": false,
+      "requested_human_action": "REQUEST_RECAPTURE",
+      "run_id": "12e91eae406c411ba207a4933a76ec21",
+      "scenario": "SEVERE_BLUR",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "http_status": 200,
+      "latency_ms": 334.6,
+      "remediation_applied": false,
+      "requested_human_action": "",
+      "run_id": "d3145425de9f41a184c6baec49d773e4",
+      "scenario": "LOW_CONTRAST",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "",
+      "condition_model_invoked": false,
+      "final_status": "REQUEST_RECAPTURE",
+      "http_status": 200,
+      "latency_ms": 298.5,
+      "remediation_applied": false,
+      "requested_human_action": "REQUEST_RECAPTURE",
+      "run_id": "e491a9a83977472a84d4fcff7f5ec248",
+      "scenario": "FOREGROUND_FAILURE",
+      "trace_retrievable": true
+    },
+    {
+      "advisory_human_action": "REQUEST_REPOSITION_LIGHT",
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "http_status": 200,
+      "latency_ms": 327.5,
+      "remediation_applied": false,
+      "requested_human_action": "",
+      "run_id": "ddc7878bb8d94550a1a284379586daf7",
+      "scenario": "GLARE_ADVISORY",
+      "trace_retrievable": true
+    }
+  ],
+  "service_url": "https://yp2ajauzkm.us-east-1.awsapprunner.com",
+  "service_version": "phase4-service-1.0.0",
+  "transport_note": "Submitted as PNG. Because PNG is lossless the API results match the in-process scenario suite exactly, which is why UNDEREXPOSED and LOW_CONTRAST complete here while the earlier JPEG smoke run sent them to recapture. That difference is transport, not policy.",
+  "what_was_tested": "The deployed service was exercised over HTTP: the page and its two assets were fetched, six inspection scenarios were submitted, every trace was retrieved by run id, and the counterfactual endpoint was run. Rendering was verified by asserting on the served markup and script rather than by driving a browser: no headless browser is available in this environment, so 'the page renders' is claimed only as far as the markup, the assets and the API responses support it."
+}

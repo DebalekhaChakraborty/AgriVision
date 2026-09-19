@@ -17,7 +17,7 @@ that produced them and are reported separately from the V2 research results.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phases 0–3b complete and committed; Phase 4 complete and uncommitted. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. A bounded agentic loop now routes that evidence to tool calls and human actions, with segmentation failure handled as a first-class refusal. |
+| Status | Phases 0–4 complete and committed; Phase 5 complete and uncommitted. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. A bounded agentic loop now routes that evidence to tool calls and human actions, with segmentation failure handled as a first-class refusal. |
 
 ---
 
@@ -843,14 +843,33 @@ the metrics must be restricted to a foreground region.
   [DEPLOYED_ARCHITECTURE.md](DEPLOYED_ARCHITECTURE.md).
 - **Supports:** AWS/reproducibility, real-world impact.
 
-### Phase 5 — UI and judge demonstration
+### Phase 5 — UI and judge demonstration *(complete, uncommitted)*
 - **Objective:** a judge-operable interface showing evidence and trace.
-- **Tasks:** upload, evidence overlay, trace timeline, escalation view, claim
-  boundary surfaced in the UI.
-- **Artifacts:** `competition/ui/`.
-- **Tests:** interaction tests for the three demo scenarios.
-- **Exit:** a judge can reproduce all three scenarios unaided.
-- **Supports:** UX, presentation.
+- **Delivered:** one page served same-origin from the existing FastAPI service
+  on the existing App Runner instance — three static files, no build step, no
+  framework, 30 KB total. Live at `https://yp2ajauzkm.us-east-1.awsapprunner.com`.
+- **Central demonstration:** `POST /counterfactual` derives four controlled
+  variants in memory from the judge's own upload and runs the full bounded agent
+  on each. Measured live: **four distinct next actions** from one subject under
+  one policy — `NONE`, `APPLY_GAMMA`, `REQUEST_RECAPTURE`, `APPLY_CLAHE`.
+- **Evidence maturity in the interface:** CALIBRATED / PROVISIONAL / ADVISORY
+  badges carry the Phase 2d distinction through to the judge. Glare renders as
+  advisory with an explicit line that it did not block the result.
+- **No new AWS services.** No Amplify, no CloudFront, no separate SPA host, no
+  API Gateway, no second container.
+- **Live smoke matrix:** six scenarios, all HTTP 200, all traces retrievable.
+  Underexposed and low contrast complete over PNG where they recaptured over
+  JPEG — transport, not policy.
+- **Rendering:** `HUMAN_UI_SMOKE_CHECK = PASS`. A person opened the live URL in
+  a real browser and confirmed page, layout and interactions at desktop and
+  narrow/mobile width. This was a manual check, not an automated one: no
+  headless browser exists in the build environment, so the automated evidence
+  covers served markup, assets and live API responses only.
+- **Artifacts:** `competition/service/static/`,
+  `competition/evaluation/results/phase5/`. Full method:
+  [PHASE5_JUDGE_DEMO.md](PHASE5_JUDGE_DEMO.md); sequence:
+  [JUDGE_DEMO_SCRIPT.md](JUDGE_DEMO_SCRIPT.md).
+- **Supports:** UX, presentation, **Agentic Vision Award**.
 
 ### Phase 6 — Evaluation and failure analysis
 - **Objective:** execute the evaluation plan and report honestly.
