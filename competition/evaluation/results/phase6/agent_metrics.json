@@ -1,0 +1,150 @@
+{
+  "metrics_version": "phase6-metrics-1.0.0",
+  "note": "Track R and Track C are reported separately and are never pooled. They measure different things: natural-domain behaviour, and routing under known conditions.",
+  "track_c": {
+    "ACTION_SELECTION_ACCURACY": {
+      "definition": "scenarios whose first selected action equalled the action preregistered for that variant",
+      "denominator": 48,
+      "numerator": 30,
+      "value": 0.625
+    },
+    "ACTION_SELECTION_ACCURACY_secondary": {
+      "definition": "same, restricted to bases whose REFERENCE produced a valid foreground; separates wrong routing from perception never reaching the routing question",
+      "denominator": 36,
+      "numerator": 27,
+      "value": 0.75
+    },
+    "BOUNDED_EXECUTION_RATE": {
+      "definition": "scenarios finishing inside the declared 24-step budget",
+      "denominator": 48,
+      "numerator": 48,
+      "value": 1.0
+    },
+    "DECISION_ATTRIBUTION_RATE": {
+      "definition": "recorded decisions carrying an action, a reason code and either the evidence ids it rests on or an explanation naming them",
+      "denominator": 58,
+      "numerator": 58,
+      "value": 1.0
+    },
+    "FAIL_SAFE_RATE": {
+      "definition": "scenarios whose condition is unrecoverable by construction that refused rather than produced a result; denominator is SEVERE_BLUR",
+      "denominator": 12,
+      "numerator": 12,
+      "value": 1.0
+    },
+    "REMEDIATION_HARM_RATE": {
+      "definition": "corrections applied and then rejected at re-measurement",
+      "denominator": 10,
+      "numerator": 1,
+      "value": 0.1
+    },
+    "REMEDIATION_SUCCESS_RATE": {
+      "definition": "applied corrections that survived re-measurement; denominator is corrections attempted on recoverable variants",
+      "denominator": 10,
+      "numerator": 9,
+      "value": 0.9
+    },
+    "TASK_SUCCESS_RATE": {
+      "definition": "scenarios matching the preregistered action AND model invocation AND terminal state",
+      "denominator": 48,
+      "numerator": 29,
+      "value": 0.6042
+    },
+    "TRACE_COMPLETENESS_RATE": {
+      "definition": "traces retrievable by run id where every step carries its step id and both states",
+      "denominator": 48,
+      "numerator": 48,
+      "value": 1.0
+    },
+    "UNNECESSARY_TOOL_CALL_RATE": {
+      "definition": "scenarios that preregistered the model must not run, where it ran anyway; denominator is those scenarios only",
+      "denominator": 12,
+      "numerator": 0,
+      "value": 0.0
+    },
+    "UNSAFE_INFERENCE_RATE": {
+      "definition": "scenarios where the model ran despite a blocking terminal state",
+      "denominator": 48,
+      "numerator": 0,
+      "value": 0.0
+    }
+  },
+  "track_r": {
+    "COMPLETE_INSPECTION_RATE": {
+      "definition": "images that reached a condition result. NOT accuracy.",
+      "denominator": 38,
+      "numerator": 28,
+      "value": 0.7368
+    },
+    "ELIGIBLE_FOR_INFERENCE_RATE": {
+      "definition": "images that reached the state permitting the condition model to run",
+      "denominator": 38,
+      "numerator": 28,
+      "value": 0.7368
+    },
+    "FOREGROUND_VALID_RATE": {
+      "definition": "images where the primary segmenter produced a mask that passed the geometric guards",
+      "denominator": 38,
+      "numerator": 29,
+      "value": 0.7632
+    },
+    "HUMAN_ACTION_RATE": {
+      "definition": "images ending in a request directed at a person",
+      "denominator": 38,
+      "numerator": 10,
+      "value": 0.2632
+    },
+    "INSUFFICIENT_VISUAL_EVIDENCE_RATE": {
+      "definition": "images where no usable subject region could be isolated, so no ROI-dependent measurement was attempted",
+      "denominator": 38,
+      "numerator": 9,
+      "value": 0.2368
+    },
+    "RECAPTURE_RATE": {
+      "definition": "images the agent asked to be recaptured",
+      "denominator": 38,
+      "numerator": 10,
+      "value": 0.2632
+    },
+    "REMEDIATION_ACCEPTANCE_RATE": {
+      "definition": "corrections whose re-measurement was good enough to keep; denominator is attempts, not images",
+      "denominator": 1,
+      "numerator": 1,
+      "value": 1.0
+    },
+    "REMEDIATION_ATTEMPT_RATE": {
+      "definition": "images where an automated correction was applied",
+      "denominator": 38,
+      "numerator": 1,
+      "value": 0.0263
+    },
+    "TRACE_COMPLETENESS_RATE": {
+      "definition": "traces retrievable by run id where every step carries its step id and both states",
+      "denominator": 38,
+      "numerator": 38,
+      "value": 1.0
+    },
+    "UNSAFE_INFERENCE_RATE": {
+      "definition": "runs where the condition model ran despite a blocking terminal state. This is the metric that must be zero.",
+      "denominator": 38,
+      "numerator": 0,
+      "value": 0.0
+    },
+    "foreground_fallback_enabled": false,
+    "policy_fingerprint_sets_observed": 1,
+    "policy_fingerprints_consistent": true,
+    "segmentation_methods_observed": {
+      "PRIMARY": 39,
+      "saturation_otsu": 39
+    },
+    "step_budget_violations": 0,
+    "tool_failures": 0,
+    "trace_retrievable": {
+      "definition": "traces fetched back out of the service by run id",
+      "denominator": 38,
+      "numerator": 38,
+      "value": 1.0
+    },
+    "unsafe_inference_ids": []
+  }
+}

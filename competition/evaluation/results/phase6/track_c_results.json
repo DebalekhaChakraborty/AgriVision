@@ -1,0 +1,1521 @@
+{
+  "ACTION_SELECTION_ACCURACY": {
+    "definition": "scenarios whose first selected action equalled the action preregistered for that variant",
+    "denominator": 48,
+    "numerator": 30,
+    "value": 0.625
+  },
+  "ACTION_SELECTION_ACCURACY_secondary": {
+    "definition": "same, restricted to bases whose REFERENCE produced a valid foreground; separates wrong routing from perception never reaching the routing question",
+    "denominator": 36,
+    "numerator": 27,
+    "value": 0.75
+  },
+  "BOUNDED_EXECUTION_RATE": {
+    "definition": "scenarios finishing inside the declared 24-step budget",
+    "denominator": 48,
+    "numerator": 48,
+    "value": 1.0
+  },
+  "DECISION_ATTRIBUTION_RATE": {
+    "definition": "recorded decisions carrying an action, a reason code and either the evidence ids it rests on or an explanation naming them",
+    "denominator": 58,
+    "numerator": 58,
+    "value": 1.0
+  },
+  "FAIL_SAFE_RATE": {
+    "definition": "scenarios whose condition is unrecoverable by construction that refused rather than produced a result; denominator is SEVERE_BLUR",
+    "denominator": 12,
+    "numerator": 12,
+    "value": 1.0
+  },
+  "REMEDIATION_HARM_RATE": {
+    "definition": "corrections applied and then rejected at re-measurement",
+    "denominator": 10,
+    "numerator": 1,
+    "value": 0.1
+  },
+  "REMEDIATION_SUCCESS_RATE": {
+    "definition": "applied corrections that survived re-measurement; denominator is corrections attempted on recoverable variants",
+    "denominator": 10,
+    "numerator": 9,
+    "value": 0.9
+  },
+  "TASK_SUCCESS_RATE": {
+    "definition": "scenarios matching the preregistered action AND model invocation AND terminal state",
+    "denominator": 48,
+    "numerator": 29,
+    "value": 0.6042
+  },
+  "TRACE_COMPLETENESS_RATE": {
+    "definition": "traces retrievable by run id where every step carries its step id and both states",
+    "denominator": 48,
+    "numerator": 48,
+    "value": 1.0
+  },
+  "UNNECESSARY_TOOL_CALL_RATE": {
+    "definition": "scenarios that preregistered the model must not run, where it ran anyway; denominator is those scenarios only",
+    "denominator": 12,
+    "numerator": 0,
+    "value": 0.0
+  },
+  "UNSAFE_INFERENCE_RATE": {
+    "definition": "scenarios where the model ran despite a blocking terminal state",
+    "denominator": 48,
+    "numerator": 0,
+    "value": 0.0
+  },
+  "claim_boundary": "CONTROLLED DEGRADATIONS APPLIED TO REAL IMAGES. Not real camera-failure prevalence, not phone-camera validation, and not the real-world environmental distribution.",
+  "denominators": {
+    "primary": "All scenarios. A base whose REFERENCE never produces a valid foreground still counts, and its variants count as failures of the preregistered expectation. Perception failing before the routing question is reached is a real limitation of the system, not an excuse for excluding the case.",
+    "secondary": "Scenarios whose base produced a valid foreground on REFERENCE. Reported alongside the primary figure, never instead of it, because it separates 'the agent routed wrongly' from 'the agent never got far enough to route'. Both denominators are fixed here, before any scenario runs."
+  },
+  "expected_actions_fingerprint": "9ce69ebe042428dc",
+  "metrics_version": "phase6-metrics-1.0.0",
+  "per_scenario": [
+    {
+      "action_matched": true,
+      "base_id": "WC-1f478c8b30dabf",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 6265.3,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "APPLY_CLAHE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_CLAHE",
+      "run_id": "08258cdcc4f745d59855cd6ec79ddeb2",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "08258cdcc4f745d59855cd6ec79ddeb2",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-1f478c8b30dabf",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 3590.7,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "SHADOW_CLIPPING"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "286e3172dcc540789f8c3e9512a1e9d4",
+      "task_success": false,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "trace_id": "286e3172dcc540789f8c3e9512a1e9d4",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-1f478c8b30dabf",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 3479.4,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "SHADOW_CLIPPING"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "0d2442f09a4242c08bb09f50dcb9dddb",
+      "task_success": true,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "trace_id": "0d2442f09a4242c08bb09f50dcb9dddb",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-1f478c8b30dabf",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 3402.4,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "UNDEREXPOSED",
+        "LOW_CONTRAST",
+        "SHADOW_CLIPPING"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "8f82083ead734bb1afac2e9cfa716bb5",
+      "task_success": false,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "trace_id": "8f82083ead734bb1afac2e9cfa716bb5",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-297191126fdeef",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1812.2,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "APPLY_CLAHE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_CLAHE",
+      "run_id": "2f2479554ac14759b0aa688912ca8307",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "2f2479554ac14759b0aa688912ca8307",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-297191126fdeef",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1117.9,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "NONE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "4b0bec7861cf4d158670f02f55d92eff",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "4b0bec7861cf4d158670f02f55d92eff",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-297191126fdeef",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1091.7,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "1d95f428e31b4ffd9e9cbde3a49da918",
+      "task_success": true,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "trace_id": "1d95f428e31b4ffd9e9cbde3a49da918",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-297191126fdeef",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1815.5,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "APPLY_GAMMA",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_GAMMA",
+      "run_id": "8235cc102b324b1695a914a427e30066",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "8235cc102b324b1695a914a427e30066",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-2b74b2eb0294bb",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1632.7,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "APPLY_CLAHE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_CLAHE",
+      "run_id": "6d7c6dfa4fab4201afd4c2ee822e7f53",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "6d7c6dfa4fab4201afd4c2ee822e7f53",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-2b74b2eb0294bb",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1046.5,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "NONE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "9081c2a52fe942a599a18a001eb5d200",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "9081c2a52fe942a599a18a001eb5d200",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-2b74b2eb0294bb",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1008.1,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "921ec42553fb4d129388a07fa6c0c5f5",
+      "task_success": true,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "trace_id": "921ec42553fb4d129388a07fa6c0c5f5",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-2b74b2eb0294bb",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 919.3,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "LOW_CONTRAST",
+        "SHADOW_CLIPPING"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "7f7dbf019b0f4a2983041a2ed8abfe9a",
+      "task_success": false,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "trace_id": "7f7dbf019b0f4a2983041a2ed8abfe9a",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-41881957d489f4",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 329.1,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "491480bf0a3544e58047c763463ad9dd",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "491480bf0a3544e58047c763463ad9dd",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-41881957d489f4",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 486.9,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "NONE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "ae5a10c3a0b94437a43c76e183464406",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "ae5a10c3a0b94437a43c76e183464406",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-41881957d489f4",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 450.3,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "29c822cca1df4279bfe88a8359d55576",
+      "task_success": true,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "trace_id": "29c822cca1df4279bfe88a8359d55576",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-41881957d489f4",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 458.5,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "observed_first_action": "APPLY_GAMMA",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "APPLY_GAMMA",
+      "run_id": "a8cccd476eed4ebeb74162324d555fe2",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "a8cccd476eed4ebeb74162324d555fe2",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-4a6528e58b09e9",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1659.7,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "APPLY_CLAHE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_CLAHE",
+      "run_id": "a818a3d3093a413cb727fa526af7ba77",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "a818a3d3093a413cb727fa526af7ba77",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-4a6528e58b09e9",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1099.1,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "NONE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "f94f878ee8f44ce5a1d71286af26eee6",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "f94f878ee8f44ce5a1d71286af26eee6",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-4a6528e58b09e9",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1016.7,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "47b9362eaec44905a8f873530d3dba89",
+      "task_success": true,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "trace_id": "47b9362eaec44905a8f873530d3dba89",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-4a6528e58b09e9",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 991.9,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "UNDEREXPOSED",
+        "LOW_CONTRAST",
+        "SHADOW_CLIPPING"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "8ef18ebdf90744b8b4dcf0f736713298",
+      "task_success": false,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "trace_id": "8ef18ebdf90744b8b4dcf0f736713298",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-6fb6cf4e298b4c",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 590.1,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "bf6f9a1e02f441209d47352f615dfd0f",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "bf6f9a1e02f441209d47352f615dfd0f",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-6fb6cf4e298b4c",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 602.3,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "95fadb8cc2c04b2a8160f06fe260a8d8",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "95fadb8cc2c04b2a8160f06fe260a8d8",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-6fb6cf4e298b4c",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 516.0,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "0ad432ab9ae94c9ead99815eb06d7e96",
+      "task_success": true,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "0ad432ab9ae94c9ead99815eb06d7e96",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-6fb6cf4e298b4c",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 597.6,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "ea5a6507890b43f7999f8ab04f3615e2",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "ea5a6507890b43f7999f8ab04f3615e2",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-99b2a254f65dbc",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 5931.1,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "APPLY_CLAHE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_CLAHE",
+      "run_id": "30645edf6f7f4ca896e2faadd49315fe",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "30645edf6f7f4ca896e2faadd49315fe",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-99b2a254f65dbc",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 3228.6,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "NONE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "d7930674ff384ecd8aa13bf8007491b8",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "d7930674ff384ecd8aa13bf8007491b8",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-99b2a254f65dbc",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 3128.8,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "c2a70e78325540069a860978938545c6",
+      "task_success": true,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "trace_id": "c2a70e78325540069a860978938545c6",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-99b2a254f65dbc",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 3020.2,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "LOW_CONTRAST"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "b5db935c038840f2ad2b79934894029b",
+      "task_success": false,
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS",
+      "trace_id": "b5db935c038840f2ad2b79934894029b",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-9ee60b933468cc",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 545.2,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "NONE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "c1a55b38e5744ee9b4ac124e32a5f4de",
+      "task_success": false,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "c1a55b38e5744ee9b4ac124e32a5f4de",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-9ee60b933468cc",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 394.2,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "ce085b7a7e4b46c2ade7d544800d12d3",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "ce085b7a7e4b46c2ade7d544800d12d3",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-9ee60b933468cc",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 477.6,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "4e021941b05e4660adbb725b176b7702",
+      "task_success": true,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "trace_id": "4e021941b05e4660adbb725b176b7702",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-9ee60b933468cc",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 355.3,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "c44c3909dbeb4fa0885d8e97083fe757",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "c44c3909dbeb4fa0885d8e97083fe757",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-a43198e8cb16c8",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 5253.5,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "APPLY_CLAHE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_CLAHE",
+      "run_id": "01216e58e774469c85cb83bab5f59e6c",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "01216e58e774469c85cb83bab5f59e6c",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-a43198e8cb16c8",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 2823.3,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "NONE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "4dceca84cfdc4ca2a6206e257efa727d",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "4dceca84cfdc4ca2a6206e257efa727d",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-a43198e8cb16c8",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 2501.1,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "d398a66565a24a5c8fb3f0661858030c",
+      "task_success": true,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "trace_id": "d398a66565a24a5c8fb3f0661858030c",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-a43198e8cb16c8",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 2863.4,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "LOW_CONTRAST"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "3a4beabd401b4fe698fe769a5f260a53",
+      "task_success": false,
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS",
+      "trace_id": "3a4beabd401b4fe698fe769a5f260a53",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-a87766017dff4a",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 5913.2,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "APPLY_CLAHE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_CLAHE",
+      "run_id": "c32e2568b49044c593a17ac4a5d1e46d",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "c32e2568b49044c593a17ac4a5d1e46d",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-a87766017dff4a",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 3236.7,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "NONE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "d9b68966b0d3458da79707ae242deb42",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "d9b68966b0d3458da79707ae242deb42",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-a87766017dff4a",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 3004.5,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "26b1cf587a264cce958728fff53f46f1",
+      "task_success": true,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "trace_id": "26b1cf587a264cce958728fff53f46f1",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-a87766017dff4a",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 3121.1,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "UNDEREXPOSED",
+        "LOW_CONTRAST",
+        "SHADOW_CLIPPING"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "765914dd80db41e292e1e21482697c11",
+      "task_success": false,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "trace_id": "765914dd80db41e292e1e21482697c11",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-ccb158bfa9bcc2",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 641.2,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "4454b97dd6b0498b8a30a0e738696bd3",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "4454b97dd6b0498b8a30a0e738696bd3",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-ccb158bfa9bcc2",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 725.7,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "6956a783c47a4420bdaf0d5046c54264",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "6956a783c47a4420bdaf0d5046c54264",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-ccb158bfa9bcc2",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 679.7,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "71a22b0cc1784ebb8ce0a681e6b1fee1",
+      "task_success": true,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "71a22b0cc1784ebb8ce0a681e6b1fee1",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-ccb158bfa9bcc2",
+      "base_reference_foreground_valid": false,
+      "client_latency_ms": 600.5,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "e511c1e60a544e01b8946f83e75348b3",
+      "task_success": false,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "trace_id": "e511c1e60a544e01b8946f83e75348b3",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-f9a12f1d848584",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 2229.4,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "APPLY_CLAHE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_CLAHE",
+      "run_id": "5e513af9bf514931bc1374b2f89cee28",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "5e513af9bf514931bc1374b2f89cee28",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-f9a12f1d848584",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1250.1,
+      "condition_model_invoked": true,
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "NONE",
+      "observed_terminal": "COMPLETE",
+      "quality_flags": [],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "caecaefab3c644f18afd17246b783d0f",
+      "task_success": true,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "trace_id": "caecaefab3c644f18afd17246b783d0f",
+      "variant": "REFERENCE"
+    },
+    {
+      "action_matched": true,
+      "base_id": "WC-f9a12f1d848584",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1226.1,
+      "condition_model_invoked": false,
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "5b2f2cae68d44029b4b8857c5a041780",
+      "task_success": true,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "trace_id": "5b2f2cae68d44029b4b8857c5a041780",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "action_matched": false,
+      "base_id": "WC-f9a12f1d848584",
+      "base_reference_foreground_valid": true,
+      "client_latency_ms": 1097.2,
+      "condition_model_invoked": false,
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "observed_first_action": "REQUEST_RECAPTURE",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "quality_flags": [
+        "UNDEREXPOSED",
+        "LOW_CONTRAST",
+        "SHADOW_CLIPPING"
+      ],
+      "remediation_accepted": false,
+      "remediation_action": "",
+      "run_id": "7001b880aacb4f8c84b2dd059a7dc3d2",
+      "task_success": false,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "trace_id": "7001b880aacb4f8c84b2dd059a7dc3d2",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    }
+  ],
+  "per_variant": {
+    "action_selection": {
+      "LOW_CONTRAST_RECOVERABLE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 8,
+        "value": 0.6667
+      },
+      "REFERENCE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 8,
+        "value": 0.6667
+      },
+      "SEVERE_BLUR": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 12,
+        "value": 1.0
+      },
+      "UNDEREXPOSED_RECOVERABLE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 2,
+        "value": 0.1667
+      }
+    },
+    "model_invoked_as_expected": {
+      "LOW_CONTRAST_RECOVERABLE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 9,
+        "value": 0.75
+      },
+      "REFERENCE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 8,
+        "value": 0.6667
+      },
+      "SEVERE_BLUR": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 12,
+        "value": 1.0
+      },
+      "UNDEREXPOSED_RECOVERABLE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 1,
+        "value": 0.0833
+      }
+    },
+    "task_success": {
+      "LOW_CONTRAST_RECOVERABLE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 8,
+        "value": 0.6667
+      },
+      "REFERENCE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 8,
+        "value": 0.6667
+      },
+      "SEVERE_BLUR": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 12,
+        "value": 1.0
+      },
+      "UNDEREXPOSED_RECOVERABLE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 1,
+        "value": 0.0833
+      }
+    },
+    "terminal_as_expected": {
+      "LOW_CONTRAST_RECOVERABLE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 9,
+        "value": 0.75
+      },
+      "REFERENCE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 8,
+        "value": 0.6667
+      },
+      "SEVERE_BLUR": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 12,
+        "value": 1.0
+      },
+      "UNDEREXPOSED_RECOVERABLE": {
+        "definition": "per-variant",
+        "denominator": 12,
+        "numerator": 1,
+        "value": 0.0833
+      }
+    }
+  },
+  "policy_fingerprints_consistent": true,
+  "population": "48 controlled scenarios: 12 fresh real bases x 4 preregistered variants, sent as PNG.",
+  "track": "C",
+  "variant_landing_diagnostic": {
+    "diagnostic_only": true,
+    "note": "Measured locally on the variant files. Never used to score, never used to change a threshold. Compared against the calibrated ROI policy in force on the deployed service.",
+    "summary": {
+      "ABOVE_FLOOR": 2,
+      "NO_VALID_FOREGROUND": 3,
+      "SHADOWS_CLIPPED": 7
+    },
+    "thresholds": {
+      "shadow_clip_fraction_limit": 0.05,
+      "shadow_clip_value": 4,
+      "underexposed_mean_luminance": 0.052740868420908985
+    },
+    "zones": {
+      "WC-1f478c8b30dabf__LOW_CONTRAST_RECOVERABLE": {
+        "mean_luminance": 0.51794,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-1f478c8b30dabf__REFERENCE": {
+        "mean_luminance": 0.121036,
+        "shadow_clip_fraction": 0.57705,
+        "zone": "SHADOWS_CLIPPED"
+      },
+      "WC-1f478c8b30dabf__SEVERE_BLUR": {
+        "mean_luminance": 0.117474,
+        "shadow_clip_fraction": 0.597329,
+        "zone": "SHADOWS_CLIPPED"
+      },
+      "WC-1f478c8b30dabf__UNDEREXPOSED_RECOVERABLE": {
+        "mean_luminance": 0.012606,
+        "shadow_clip_fraction": 0.728258,
+        "zone": "SHADOWS_CLIPPED"
+      },
+      "WC-297191126fdeef__LOW_CONTRAST_RECOVERABLE": {
+        "mean_luminance": 0.52793,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-297191126fdeef__REFERENCE": {
+        "mean_luminance": 0.478634,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-297191126fdeef__SEVERE_BLUR": {
+        "mean_luminance": 0.484261,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-297191126fdeef__UNDEREXPOSED_RECOVERABLE": {
+        "mean_luminance": 0.040106,
+        "shadow_clip_fraction": 0.058199,
+        "zone": "SHADOWS_CLIPPED"
+      },
+      "WC-2b74b2eb0294bb__LOW_CONTRAST_RECOVERABLE": {
+        "mean_luminance": 0.575577,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-2b74b2eb0294bb__REFERENCE": {
+        "mean_luminance": 0.700522,
+        "shadow_clip_fraction": 0.000193,
+        "zone": "MEASURED"
+      },
+      "WC-2b74b2eb0294bb__SEVERE_BLUR": {
+        "mean_luminance": 0.726629,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-2b74b2eb0294bb__UNDEREXPOSED_RECOVERABLE": {
+        "mean_luminance": 0.07106,
+        "shadow_clip_fraction": 0.052702,
+        "zone": "SHADOWS_CLIPPED"
+      },
+      "WC-41881957d489f4__LOW_CONTRAST_RECOVERABLE": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-41881957d489f4__REFERENCE": {
+        "mean_luminance": 0.425146,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-41881957d489f4__SEVERE_BLUR": {
+        "mean_luminance": 0.424372,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-41881957d489f4__UNDEREXPOSED_RECOVERABLE": {
+        "mean_luminance": 0.033719,
+        "shadow_clip_fraction": 0.059703,
+        "zone": "SHADOWS_CLIPPED"
+      },
+      "WC-4a6528e58b09e9__LOW_CONTRAST_RECOVERABLE": {
+        "mean_luminance": 0.543211,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-4a6528e58b09e9__REFERENCE": {
+        "mean_luminance": 0.504282,
+        "shadow_clip_fraction": 0.003416,
+        "zone": "MEASURED"
+      },
+      "WC-4a6528e58b09e9__SEVERE_BLUR": {
+        "mean_luminance": 0.528861,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-4a6528e58b09e9__UNDEREXPOSED_RECOVERABLE": {
+        "mean_luminance": 0.042151,
+        "shadow_clip_fraction": 0.139214,
+        "zone": "SHADOWS_CLIPPED"
+      },
+      "WC-6fb6cf4e298b4c__LOW_CONTRAST_RECOVERABLE": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-6fb6cf4e298b4c__REFERENCE": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-6fb6cf4e298b4c__SEVERE_BLUR": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-6fb6cf4e298b4c__UNDEREXPOSED_RECOVERABLE": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-99b2a254f65dbc__LOW_CONTRAST_RECOVERABLE": {
+        "mean_luminance": 0.563377,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-99b2a254f65dbc__REFERENCE": {
+        "mean_luminance": 0.615001,
+        "shadow_clip_fraction": 0.000106,
+        "zone": "MEASURED"
+      },
+      "WC-99b2a254f65dbc__SEVERE_BLUR": {
+        "mean_luminance": 0.633271,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-99b2a254f65dbc__UNDEREXPOSED_RECOVERABLE": {
+        "mean_luminance": 0.057547,
+        "shadow_clip_fraction": 0.044448,
+        "zone": "ABOVE_FLOOR"
+      },
+      "WC-9ee60b933468cc__LOW_CONTRAST_RECOVERABLE": {
+        "mean_luminance": 0.516837,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-9ee60b933468cc__REFERENCE": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-9ee60b933468cc__SEVERE_BLUR": {
+        "mean_luminance": 0.369673,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-9ee60b933468cc__UNDEREXPOSED_RECOVERABLE": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-a43198e8cb16c8__LOW_CONTRAST_RECOVERABLE": {
+        "mean_luminance": 0.560153,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-a43198e8cb16c8__REFERENCE": {
+        "mean_luminance": 0.636073,
+        "shadow_clip_fraction": 1e-06,
+        "zone": "MEASURED"
+      },
+      "WC-a43198e8cb16c8__SEVERE_BLUR": {
+        "mean_luminance": 0.635711,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-a43198e8cb16c8__UNDEREXPOSED_RECOVERABLE": {
+        "mean_luminance": 0.058662,
+        "shadow_clip_fraction": 0.018226,
+        "zone": "ABOVE_FLOOR"
+      },
+      "WC-a87766017dff4a__LOW_CONTRAST_RECOVERABLE": {
+        "mean_luminance": 0.553471,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-a87766017dff4a__REFERENCE": {
+        "mean_luminance": 0.516123,
+        "shadow_clip_fraction": 0.00072,
+        "zone": "MEASURED"
+      },
+      "WC-a87766017dff4a__SEVERE_BLUR": {
+        "mean_luminance": 0.566088,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-a87766017dff4a__UNDEREXPOSED_RECOVERABLE": {
+        "mean_luminance": 0.040831,
+        "shadow_clip_fraction": 0.252475,
+        "zone": "SHADOWS_CLIPPED"
+      },
+      "WC-ccb158bfa9bcc2__LOW_CONTRAST_RECOVERABLE": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-ccb158bfa9bcc2__REFERENCE": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-ccb158bfa9bcc2__SEVERE_BLUR": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-ccb158bfa9bcc2__UNDEREXPOSED_RECOVERABLE": {
+        "zone": "NO_VALID_FOREGROUND"
+      },
+      "WC-f9a12f1d848584__LOW_CONTRAST_RECOVERABLE": {
+        "mean_luminance": 0.539625,
+        "shadow_clip_fraction": 0.0,
+        "zone": "MEASURED"
+      },
+      "WC-f9a12f1d848584__REFERENCE": {
+        "mean_luminance": 0.56277,
+        "shadow_clip_fraction": 0.012218,
+        "zone": "MEASURED"
+      },
+      "WC-f9a12f1d848584__SEVERE_BLUR": {
+        "mean_luminance": 0.562773,
+        "shadow_clip_fraction": 0.009599,
+        "zone": "MEASURED"
+      },
+      "WC-f9a12f1d848584__UNDEREXPOSED_RECOVERABLE": {
+        "mean_luminance": 0.037473,
+        "shadow_clip_fraction": 0.256948,
+        "zone": "SHADOWS_CLIPPED"
+      }
+    }
+  }
+}

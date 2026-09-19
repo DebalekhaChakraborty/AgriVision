@@ -1,0 +1,291 @@
+{
+  "categories": [
+    "FOREGROUND_FAILURE",
+    "QUALITY_FALSE_BLOCK",
+    "QUALITY_FALSE_ACCEPT",
+    "REMEDIATION_INEFFECTIVE",
+    "REMEDIATION_HARM",
+    "MODEL_FRUIT_TYPE_ERROR",
+    "MODEL_NOT_INVOKED",
+    "TOOL_FAILURE",
+    "TRACE_FAILURE",
+    "TRANSPORT_SENSITIVITY",
+    "POLICY_MISMATCH",
+    "SCENARIO_CONSTRUCTION_DEFECT",
+    "SOURCE_IMAGE_BLOCKING_CONDITION",
+    "OTHER"
+  ],
+  "counts": {
+    "FOREGROUND_FAILURE": 19,
+    "MODEL_FRUIT_TYPE_ERROR": 1,
+    "POLICY_MISMATCH": 1,
+    "SCENARIO_CONSTRUCTION_DEFECT": 7,
+    "SOURCE_IMAGE_BLOCKING_CONDITION": 1
+  },
+  "metrics_version": "phase6-metrics-1.0.0",
+  "rows": [
+    {
+      "category": "SOURCE_IMAGE_BLOCKING_CONDITION",
+      "detail": "The unmodified photograph itself carries a calibrated blocking condition (SHADOW_CLIPPING_UNRECOVERABLE). The agent's refusal is correct; the preregistered expectation that a reference image always proceeds was too optimistic about real source material.",
+      "id": "WC-1f478c8b30dabf",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "track": "C",
+      "variant": "REFERENCE"
+    },
+    {
+      "category": "SCENARIO_CONSTRUCTION_DEFECT",
+      "detail": "The variant clipped the subject's shadows, so the detail gamma correction would recover is gone. Blocking is the correct response to these pixels; the scenario was mislabelled recoverable by its construction, not misrouted by the agent.",
+      "id": "WC-1f478c8b30dabf",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "SCENARIO_CONSTRUCTION_DEFECT",
+      "detail": "The variant clipped the subject's shadows, so the detail gamma correction would recover is gone. Blocking is the correct response to these pixels; the scenario was mislabelled recoverable by its construction, not misrouted by the agent.",
+      "id": "WC-2b74b2eb0294bb",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-41881957d489f4",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-41881957d489f4",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "SCENARIO_CONSTRUCTION_DEFECT",
+      "detail": "The variant clipped the subject's shadows, so the detail gamma correction would recover is gone. Blocking is the correct response to these pixels; the scenario was mislabelled recoverable by its construction, not misrouted by the agent.",
+      "id": "WC-4a6528e58b09e9",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-6fb6cf4e298b4c",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-6fb6cf4e298b4c",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "REFERENCE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-6fb6cf4e298b4c",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "SCENARIO_CONSTRUCTION_DEFECT",
+      "detail": "The variant never crossed the calibrated threshold it was meant to cross, so there was nothing for the agent to correct.",
+      "id": "WC-99b2a254f65dbc",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "POLICY_MISMATCH",
+      "detail": "Selected NONE where APPLY_CLAHE was preregistered.",
+      "id": "WC-9ee60b933468cc",
+      "observed_terminal": "COMPLETE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "track": "C",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-9ee60b933468cc",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "REFERENCE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-9ee60b933468cc",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "SCENARIO_CONSTRUCTION_DEFECT",
+      "detail": "The variant never crossed the calibrated threshold it was meant to cross, so there was nothing for the agent to correct.",
+      "id": "WC-a43198e8cb16c8",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "SCENARIO_CONSTRUCTION_DEFECT",
+      "detail": "The variant clipped the subject's shadows, so the detail gamma correction would recover is gone. Blocking is the correct response to these pixels; the scenario was mislabelled recoverable by its construction, not misrouted by the agent.",
+      "id": "WC-a87766017dff4a",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-ccb158bfa9bcc2",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-ccb158bfa9bcc2",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "REFERENCE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region, so the routing question was never reached. The agent refused rather than measuring a region it could not trust.",
+      "id": "WC-ccb158bfa9bcc2",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "SCENARIO_CONSTRUCTION_DEFECT",
+      "detail": "The variant clipped the subject's shadows, so the detail gamma correction would recover is gone. Blocking is the correct response to these pixels; the scenario was mislabelled recoverable by its construction, not misrouted by the agent.",
+      "id": "WC-f9a12f1d848584",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "track": "C",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region could be isolated.",
+      "id": "WC-2429bcb61fe233",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "R",
+      "variant": ""
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region could be isolated.",
+      "id": "WC-37e1f22485257a",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "R",
+      "variant": ""
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region could be isolated.",
+      "id": "WC-6e58c1086b5289",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "R",
+      "variant": ""
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region could be isolated.",
+      "id": "WC-6fb6cf4e298b4c",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "R",
+      "variant": ""
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region could be isolated.",
+      "id": "WC-9c6ffa10df8272",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "R",
+      "variant": ""
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region could be isolated.",
+      "id": "WC-9ee60b933468cc",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "R",
+      "variant": ""
+    },
+    {
+      "category": "MODEL_FRUIT_TYPE_ERROR",
+      "detail": "predicted banana, curated apple",
+      "id": "WC-a59e5a5ab4ff7b",
+      "observed_terminal": "COMPLETE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "track": "R",
+      "variant": ""
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region could be isolated.",
+      "id": "WC-af93f1e2886513",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "R",
+      "variant": ""
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region could be isolated.",
+      "id": "WC-ccb158bfa9bcc2",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "R",
+      "variant": ""
+    },
+    {
+      "category": "FOREGROUND_FAILURE",
+      "detail": "No usable subject region could be isolated.",
+      "id": "WC-d98793262a333f",
+      "observed_terminal": "REQUEST_RECAPTURE",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "track": "R",
+      "variant": ""
+    }
+  ],
+  "rule": "Every unsuccessful case is classified by what actually went wrong. Nothing is collapsed into 'model error', and a scenario that failed because it was built wrong is labelled as such rather than charged to the agent.",
+  "total": 29
+}

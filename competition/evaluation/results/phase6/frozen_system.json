@@ -1,0 +1,153 @@
+{
+  "dependencies": {
+    "numpy": "2.4.6",
+    "opencv": "5.0.0",
+    "platform": "Linux-6.1.0-52-cloud-amd64-x86_64-with-glibc2.36",
+    "python": "3.11.2",
+    "requirement_files": {
+      "requirements-competition.txt": {
+        "lines": 15,
+        "sha256": "d236ab5eb8b6130fa96a08c64e2bc78d8480c4075195d2206762fd18dcec8c94"
+      },
+      "requirements-serving.txt": {
+        "lines": 8,
+        "sha256": "6c5b307e199daf690384453d2440dd358b6c4629b585e3d7e68eafd6c554b87c"
+      }
+    }
+  },
+  "deployed": {
+    "enable_foreground_fallback": false,
+    "expected_model_sha256": "77d8614671873cb41ebfd725f0a4b468beca9c30cfe6a3361217343917324d4b",
+    "opencv_version": "5.0.0",
+    "ready": {
+      "detail": "verified",
+      "initialising": false,
+      "model_artifact_present": true,
+      "model_artifact_verified": true,
+      "model_loaded": true,
+      "opencv_loaded": true,
+      "opencv_version": "5.0.0",
+      "persistence_backend": "dynamodb",
+      "persistence_healthy": true,
+      "policy_loaded": true,
+      "ready": true
+    },
+    "service_url": "https://yp2ajauzkm.us-east-1.awsapprunner.com",
+    "version": {
+      "api_version": "phase4-api-1.0.0",
+      "claim_boundary": "Reports visible surface condition only. This is not a food-safety, edibility, contamination or internal-spoilage assessment, and a human remains responsible for any decision about produce.",
+      "deployment_input_contract": "One primary produce item per inspection capture. Market stalls, piles, crates and trees carrying multiple fruits are outside scope and are expected to return a recapture or human-review action. This is a scope boundary, not a food-safety statement.",
+      "enable_foreground_fallback": false,
+      "expected_model_sha256": "77d8614671873cb41ebfd725f0a4b468beca9c30cfe6a3361217343917324d4b",
+      "max_upload_bytes": 12582912,
+      "model_id": "mobilenet_v3_large-v2expV2-P2-MOBILENETV3-LARGE-004",
+      "model_source": "s3",
+      "opencv_version": "5.0.0",
+      "persistence": "dynamodb",
+      "region": "us-east-1",
+      "retain_uploads": false,
+      "service_version": "phase4-service-1.0.0",
+      "trace_ttl_days": 14,
+      "upload_retention_days": null
+    }
+  },
+  "deployed_revision": {
+    "deployed_at": "2026-09-19T15:19:25+00:00",
+    "image_digest": "sha256:b57eaf0506a243798ef21423048e1c571606d78243caa13bbf7d11b79d6ce7e7",
+    "image_reference": "<account>.dkr.ecr.us-east-1.amazonaws.com/agrivision:phase4",
+    "last_successful_deployment_operation": "5b391de941c2441683f80ef6989a95e2",
+    "note": "The digest is the identity. The tag is a moving pointer and is recorded only to show which pointer was resolved.",
+    "service_id": "9be40db3a6d147c79454d1e9c90fae08",
+    "tag_is_mutable": true
+  },
+  "dirty_paths_note": "Paths are repository-relative, from `git status --porcelain`. They are the Phase 6 evaluation tooling and its artifacts. None of them is a policy, a threshold, a detector, a state transition or the model: the frozen fingerprint below is computed from those, and it is unchanged from the value recorded before any Phase 6 image was fetched.",
+  "frozen_fingerprint": "97b059be36bc3fbe",
+  "frozen_system_version": "phase6-frozen-system-1.0.0",
+  "git": {
+    "branch": "competition/opencv-aws-2026",
+    "commit": "83a2d9a5ca6b684145fdea4522495d00c7efc8de",
+    "committed_at": "2026-09-19T16:28:03+00:00",
+    "dirty_paths": [
+      ".gitignore",
+      "competition/data/licensed_real/manifests/phase6_curation.json",
+      "competition/data/licensed_real/manifests/phase6_pool.json",
+      "competition/data/licensed_sources.py",
+      "competition/evaluation/phase6_evidence.py",
+      "competition/evaluation/phase6_exploratory.py",
+      "competition/evaluation/phase6_figures.py",
+      "competition/evaluation/phase6_frozen_system.py",
+      "competition/evaluation/phase6_metrics.py",
+      "competition/evaluation/phase6_observability.py",
+      "competition/evaluation/phase6_run.py",
+      "competition/evaluation/phase6_source_pool.py",
+      "competition/evaluation/phase6_track_c.py",
+      "competition/evaluation/results/phase6/",
+      "docs/competition/PHASE6_FINAL_EVALUATION.md",
+      "tests/competition/test_phase6_evaluation.py"
+    ],
+    "subject": "Add judge-facing Agentic Vision demo",
+    "working_tree_clean": false
+  },
+  "local_fingerprint_count": 7,
+  "local_matches_deployed_opencv": true,
+  "model": {
+    "artifact_name": "mobilenetv3_large_v2exp004",
+    "classes": null,
+    "manifest_fingerprint": "bdb519799439aa00",
+    "manifest_sha256": "3416ed98466330c627fce56f69aea790307e8630ef8d6d9859406a4130f51179",
+    "model_id": "mobilenet_v3_large-v2expV2-P2-MOBILENETV3-LARGE-004",
+    "onnx_bytes": 11906184,
+    "onnx_present_locally": true,
+    "onnx_sha256": "77d8614671873cb41ebfd725f0a4b468beca9c30cfe6a3361217343917324d4b",
+    "onnx_sha256_prefix_claimed_by_manifest": "77d8614671873cb41ebfd725f0a4b468"
+  },
+  "policy": {
+    "budget": {
+      "max_condition_model_calls": 1,
+      "max_remediation_attempts": 1,
+      "max_segmentation_calls": 2,
+      "max_steps": 24
+    },
+    "fingerprints": {
+      "artifact_policy": "b3cd5db5ca193027",
+      "highlight_policy": "10757655e4c34533",
+      "quality_policy": "e6bd2bee4f852f37",
+      "remediation_policy": "225b43230901b0eb",
+      "roi_policy_lock": "15b7fb0908d6d622",
+      "roi_policy_threshold": "78b1e2151773787a",
+      "visibility_policy": "213bac848e52951f"
+    },
+    "foreground_fallback_enabled": false,
+    "foreground_invalid_action": "REQUEST_RECAPTURE",
+    "foreground_policy": {
+      "default_method": "saturation_otsu",
+      "guards": {
+        "max_border_contact_fraction": 0.6,
+        "max_component_count": 12,
+        "max_foreground_fraction": 0.92,
+        "min_bounding_box_side": 24,
+        "min_component_area_fraction": 0.001,
+        "min_foreground_fraction": 0.03,
+        "min_largest_component_dominance": 0.65,
+        "sharpness_erosion_px": 5
+      },
+      "guards_fingerprint": "4178d8e72f450740"
+    },
+    "roi_policy_status": "PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL",
+    "versions": {
+      "artifact_policy": "phase2d-artifact-policy-1.0.0",
+      "decision_contract": "phase3-decision-1.0.0",
+      "foreground": "phase2c-foreground-1.1.0",
+      "foreground_fallback": "phase3b-fallback-1.0.0",
+      "model_adapter": "phase2-adapter-1.0.0",
+      "orchestrator": "phase3-orchestrator-1.0.0",
+      "pipeline": "agrivision-competition-phase3",
+      "quality_pipeline": "phase2b-capture-quality-1.1.0",
+      "remediation_policy": "phase1b-remediation-policy-1.0.0",
+      "roi_policy": "phase2c-roi-policy-1.0.0",
+      "service": "phase4-service-1.0.0",
+      "state_machine": "phase3-state-1.0.0"
+    }
+  },
+  "purpose": "Identity of the system under confirmatory evaluation in Phase 6. Written before any Phase 6 evaluation image is opened. Any later change to a threshold, policy, model or state transition invalidates the confirmatory status of results measured against this record."
+}

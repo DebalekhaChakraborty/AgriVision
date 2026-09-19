@@ -1,0 +1,256 @@
+{
+  "cap_rule": "Apple and banana are capped at 15 by sorting the kept image ids and taking the first 15. The rule is deterministic, independent of appearance and of any metric, and was fixed before the pipeline was run. Orange is under the cap and keeps every image that passed review.",
+  "criteria_keep": [
+    "exactly one produce item is the dominant subject, per the deployment contract",
+    "a connected hand of bananas counts as one item; bananas are sold that way",
+    "the fruit is whole and uncut",
+    "natural, cluttered or outdoor backgrounds are kept, not avoided"
+  ],
+  "criteria_reject": [
+    "piles, crates, market stalls, orchards and trees carrying multiple fruits",
+    "cut, peeled, sliced or cooked fruit",
+    "the wrong fruit, or no fruit at all",
+    "the fruit is incidental to a scene of something else"
+  ],
+  "curated_on": "2026-09-19",
+  "curation_version": "phase6-curation-1.0.0",
+  "decisions": {
+    "WC-08d35214c63140": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-17b249c843efb0": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single apple filling the frame on the tree; extreme close-up",
+      "track": "CLEAN_BASE"
+    },
+    "WC-17f53e451ef7b2": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-1f478c8b30dabf": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-2429bcb61fe233": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single banana held in a hand, writing on the skin; hand partly occludes",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-297191126fdeef": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-29a2d1065da87c": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single small apple held in an open hand; hand is background, not a second subject",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-2b74b2eb0294bb": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-35f905d1d79a1b": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-37b434f04180b3": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-37e1f22485257a": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-41881957d489f4": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single apple filling the frame; extreme close-up, boundary partly outside the image",
+      "track": "CLEAN_BASE"
+    },
+    "WC-47dc257af17294": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "one orange dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-4a6528e58b09e9": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-4b42fbaf5625f7": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-6791156002f98c": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single unripe green orange on the branch",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-699831863c18ac": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-6e58c1086b5289": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-6fb6cf4e298b4c": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-802ae221e8a5f3": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-85a5bc42592e57": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-85b5d76d6d4346": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single banana, low contrast against a pale surface",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-933c8d147f345f": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-9769e412a38352": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-99b2a254f65dbc": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one hand of two bananas, joined at the crown; counted as one item",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-9c6ffa10df8272": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "one orange dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-9ee60b933468cc": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single unripe green orange on the branch",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-a020244cc9c159": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-a31f305cb3cde1": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-a43198e8cb16c8": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-a59e5a5ab4ff7b": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-a87766017dff4a": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "one orange dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-a8f929c89bcddb": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-af93f1e2886513": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "one apple dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-c57030e140b5c4": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "one orange dominant in frame",
+      "track": "CLEAN_BASE"
+    },
+    "WC-ccb158bfa9bcc2": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "one orange dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-d98793262a333f": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "one banana or one connected hand dominant in frame",
+      "track": "NATURAL_SCENE"
+    },
+    "WC-f9a12f1d848584": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "one orange dominant in frame",
+      "track": "NATURAL_SCENE"
+    }
+  },
+  "kept": 38,
+  "kept_before_cap": {
+    "apple": 22,
+    "banana": 19,
+    "orange": 8
+  },
+  "method": "Single-rater visual review of 11 contact sheets covering all 371 licence-clean candidates. Every decision was made from the image alone, before any AgriVision metric was computed on any Phase 6 image. No candidate was kept or dropped because of how the system later performed on it.",
+  "orange_shortfall": "84 orange candidates were screened across 13 fresh Commons categories and only 8 satisfy the one-primary-item contract. Permissively licensed orange photography on Commons is overwhelmingly market piles, cut fruit showing the interior, juice, and orchard scenes. The shortfall is reported rather than closed by relaxing the contract, which would change what Track R measures in order to make the count come out right.",
+  "reviewed": 371
+}

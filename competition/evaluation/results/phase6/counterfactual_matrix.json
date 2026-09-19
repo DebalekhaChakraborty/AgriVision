@@ -1,0 +1,935 @@
+{
+  "bases": 12,
+  "bases_where_action_never_varies": [
+    "WC-6fb6cf4e298b4c",
+    "WC-ccb158bfa9bcc2"
+  ],
+  "bases_where_action_varies": 10,
+  "claim_boundary": "CONTROLLED DEGRADATIONS APPLIED TO REAL IMAGES. Not real camera-failure prevalence, not phone-camera validation, and not the real-world environmental distribution.",
+  "distinct_first_actions_observed": {
+    "APPLY_CLAHE": 8,
+    "APPLY_GAMMA": 2,
+    "NONE": 9,
+    "REQUEST_RECAPTURE": 29
+  },
+  "evidence_version": "phase6-evidence-1.0.0",
+  "note_on_invariant_bases": "A base whose action never varies is not a contradiction. Those are the bases whose foreground could not be isolated, so every variant stopped at the same earlier refusal and the routing question was never reached. They are listed rather than dropped.",
+  "rows": [
+    {
+      "base_id": "WC-1f478c8b30dabf",
+      "first_action": "APPLY_CLAHE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.12549",
+        "high_frequency_ratio": "0.827867",
+        "mean_luminance": "0.51794",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": "APPLY_CLAHE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "08258cdcc4f745d59855cd6ec79ddeb2",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-1f478c8b30dabf",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.596078",
+        "high_frequency_ratio": "0.76253",
+        "mean_luminance": "0.121036",
+        "quality_flags": [
+          "SHADOW_CLIPPING"
+        ],
+        "shadow_clip_fraction": "0.57705"
+      },
+      "remediation": null,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "286e3172dcc540789f8c3e9512a1e9d4",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-1f478c8b30dabf",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.588235",
+        "high_frequency_ratio": "0.341369",
+        "mean_luminance": "0.117474",
+        "quality_flags": [
+          "SHADOW_CLIPPING"
+        ],
+        "shadow_clip_fraction": "0.597329"
+      },
+      "remediation": null,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "0d2442f09a4242c08bb09f50dcb9dddb",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-1f478c8b30dabf",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.054902",
+        "high_frequency_ratio": "0.781001",
+        "mean_luminance": "0.012606",
+        "quality_flags": [
+          "UNDEREXPOSED",
+          "LOW_CONTRAST",
+          "SHADOW_CLIPPING"
+        ],
+        "shadow_clip_fraction": "0.728258"
+      },
+      "remediation": null,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "8f82083ead734bb1afac2e9cfa716bb5",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-297191126fdeef",
+      "first_action": "APPLY_CLAHE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.12549",
+        "high_frequency_ratio": "0.617768",
+        "mean_luminance": "0.52793",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": "APPLY_CLAHE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "2f2479554ac14759b0aa688912ca8307",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-297191126fdeef",
+      "first_action": "NONE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.556863",
+        "high_frequency_ratio": "0.577673",
+        "mean_luminance": "0.478634",
+        "quality_flags": [],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "4b0bec7861cf4d158670f02f55d92eff",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-297191126fdeef",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.529412",
+        "high_frequency_ratio": "0.255465",
+        "mean_luminance": "0.484261",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "1d95f428e31b4ffd9e9cbde3a49da918",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-297191126fdeef",
+      "first_action": "APPLY_GAMMA",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.058824",
+        "high_frequency_ratio": "0.649212",
+        "mean_luminance": "0.040106",
+        "quality_flags": [
+          "UNDEREXPOSED",
+          "LOW_CONTRAST",
+          "SHADOW_CLIPPING"
+        ],
+        "shadow_clip_fraction": "0.058199"
+      },
+      "remediation": "APPLY_GAMMA",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "8235cc102b324b1695a914a427e30066",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-2b74b2eb0294bb",
+      "first_action": "APPLY_CLAHE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.129412",
+        "high_frequency_ratio": "0.654019",
+        "mean_luminance": "0.575577",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": "APPLY_CLAHE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "6d7c6dfa4fab4201afd4c2ee822e7f53",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-2b74b2eb0294bb",
+      "first_action": "NONE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.756863",
+        "high_frequency_ratio": "0.651417",
+        "mean_luminance": "0.700522",
+        "quality_flags": [],
+        "shadow_clip_fraction": "0.000193"
+      },
+      "remediation": null,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "9081c2a52fe942a599a18a001eb5d200",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-2b74b2eb0294bb",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.501961",
+        "high_frequency_ratio": "0.146626",
+        "mean_luminance": "0.726629",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "921ec42553fb4d129388a07fa6c0c5f5",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-2b74b2eb0294bb",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.094118",
+        "high_frequency_ratio": "0.656668",
+        "mean_luminance": "0.07106",
+        "quality_flags": [
+          "LOW_CONTRAST",
+          "SHADOW_CLIPPING"
+        ],
+        "shadow_clip_fraction": "0.052702"
+      },
+      "remediation": null,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "7f7dbf019b0f4a2983041a2ed8abfe9a",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-41881957d489f4",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "491480bf0a3544e58047c763463ad9dd",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-41881957d489f4",
+      "first_action": "NONE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.419608",
+        "high_frequency_ratio": "0.541566",
+        "mean_luminance": "0.425146",
+        "quality_flags": [],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "ae5a10c3a0b94437a43c76e183464406",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-41881957d489f4",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.4",
+        "high_frequency_ratio": "0.290345",
+        "mean_luminance": "0.424372",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "29c822cca1df4279bfe88a8359d55576",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-41881957d489f4",
+      "first_action": "APPLY_GAMMA",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.035294",
+        "high_frequency_ratio": "0.640699",
+        "mean_luminance": "0.033719",
+        "quality_flags": [
+          "UNDEREXPOSED",
+          "LOW_CONTRAST",
+          "SHADOW_CLIPPING"
+        ],
+        "shadow_clip_fraction": "0.059703"
+      },
+      "remediation": "APPLY_GAMMA",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "a8cccd476eed4ebeb74162324d555fe2",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-4a6528e58b09e9",
+      "first_action": "APPLY_CLAHE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.12549",
+        "high_frequency_ratio": "0.695281",
+        "mean_luminance": "0.543211",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": "APPLY_CLAHE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "a818a3d3093a413cb727fa526af7ba77",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-4a6528e58b09e9",
+      "first_action": "NONE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.729412",
+        "high_frequency_ratio": "0.688284",
+        "mean_luminance": "0.504282",
+        "quality_flags": [],
+        "shadow_clip_fraction": "0.003416"
+      },
+      "remediation": null,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "f94f878ee8f44ce5a1d71286af26eee6",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-4a6528e58b09e9",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.647059",
+        "high_frequency_ratio": "0.164964",
+        "mean_luminance": "0.528861",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "47b9362eaec44905a8f873530d3dba89",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-4a6528e58b09e9",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.07451",
+        "high_frequency_ratio": "0.702401",
+        "mean_luminance": "0.042151",
+        "quality_flags": [
+          "UNDEREXPOSED",
+          "LOW_CONTRAST",
+          "SHADOW_CLIPPING"
+        ],
+        "shadow_clip_fraction": "0.139214"
+      },
+      "remediation": null,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "8ef18ebdf90744b8b4dcf0f736713298",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-6fb6cf4e298b4c",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "bf6f9a1e02f441209d47352f615dfd0f",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-6fb6cf4e298b4c",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "95fadb8cc2c04b2a8160f06fe260a8d8",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-6fb6cf4e298b4c",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "0ad432ab9ae94c9ead99815eb06d7e96",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-6fb6cf4e298b4c",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "ea5a6507890b43f7999f8ab04f3615e2",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-99b2a254f65dbc",
+      "first_action": "APPLY_CLAHE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.129412",
+        "high_frequency_ratio": "0.636906",
+        "mean_luminance": "0.563377",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": "APPLY_CLAHE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "30645edf6f7f4ca896e2faadd49315fe",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-99b2a254f65dbc",
+      "first_action": "NONE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.647059",
+        "high_frequency_ratio": "0.58176",
+        "mean_luminance": "0.615001",
+        "quality_flags": [],
+        "shadow_clip_fraction": "0.000106"
+      },
+      "remediation": null,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "d7930674ff384ecd8aa13bf8007491b8",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-99b2a254f65dbc",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.568627",
+        "high_frequency_ratio": "0.286347",
+        "mean_luminance": "0.633271",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "c2a70e78325540069a860978938545c6",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-99b2a254f65dbc",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "banana",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.07451",
+        "high_frequency_ratio": "0.677782",
+        "mean_luminance": "0.057547",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0.044448"
+      },
+      "remediation": null,
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "b5db935c038840f2ad2b79934894029b",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-9ee60b933468cc",
+      "first_action": "NONE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.235294",
+        "high_frequency_ratio": "0.606198",
+        "mean_luminance": "0.516837",
+        "quality_flags": [],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "c1a55b38e5744ee9b4ac124e32a5f4de",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-9ee60b933468cc",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "ce085b7a7e4b46c2ade7d544800d12d3",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-9ee60b933468cc",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.505882",
+        "high_frequency_ratio": "0.155651",
+        "mean_luminance": "0.369673",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "4e021941b05e4660adbb725b176b7702",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-9ee60b933468cc",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "c44c3909dbeb4fa0885d8e97083fe757",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-a43198e8cb16c8",
+      "first_action": "APPLY_CLAHE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.12549",
+        "high_frequency_ratio": "0.629181",
+        "mean_luminance": "0.560153",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": "APPLY_CLAHE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "01216e58e774469c85cb83bab5f59e6c",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-a43198e8cb16c8",
+      "first_action": "NONE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.584314",
+        "high_frequency_ratio": "0.588203",
+        "mean_luminance": "0.636073",
+        "quality_flags": [],
+        "shadow_clip_fraction": "0.000001"
+      },
+      "remediation": null,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "4dceca84cfdc4ca2a6206e257efa727d",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-a43198e8cb16c8",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.584314",
+        "high_frequency_ratio": "0.286634",
+        "mean_luminance": "0.635711",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "d398a66565a24a5c8fb3f0661858030c",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-a43198e8cb16c8",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "apple",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.070588",
+        "high_frequency_ratio": "0.68314",
+        "mean_luminance": "0.058662",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0.018226"
+      },
+      "remediation": null,
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "3a4beabd401b4fe698fe769a5f260a53",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-a87766017dff4a",
+      "first_action": "APPLY_CLAHE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.12549",
+        "high_frequency_ratio": "0.479309",
+        "mean_luminance": "0.553471",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": "APPLY_CLAHE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "c32e2568b49044c593a17ac4a5d1e46d",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-a87766017dff4a",
+      "first_action": "NONE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.698039",
+        "high_frequency_ratio": "0.435473",
+        "mean_luminance": "0.516123",
+        "quality_flags": [],
+        "shadow_clip_fraction": "0.00072"
+      },
+      "remediation": null,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "d9b68966b0d3458da79707ae242deb42",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-a87766017dff4a",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.627451",
+        "high_frequency_ratio": "0.240145",
+        "mean_luminance": "0.566088",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": null,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "26b1cf587a264cce958728fff53f46f1",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-a87766017dff4a",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.066667",
+        "high_frequency_ratio": "0.532927",
+        "mean_luminance": "0.040831",
+        "quality_flags": [
+          "UNDEREXPOSED",
+          "LOW_CONTRAST",
+          "SHADOW_CLIPPING"
+        ],
+        "shadow_clip_fraction": "0.252475"
+      },
+      "remediation": null,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "765914dd80db41e292e1e21482697c11",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-ccb158bfa9bcc2",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "4454b97dd6b0498b8a30a0e738696bd3",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-ccb158bfa9bcc2",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "6956a783c47a4420bdaf0d5046c54264",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-ccb158bfa9bcc2",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "71a22b0cc1784ebb8ce0a681e6b1fee1",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-ccb158bfa9bcc2",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": false,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {},
+      "remediation": null,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "e511c1e60a544e01b8946f83e75348b3",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-f9a12f1d848584",
+      "first_action": "APPLY_CLAHE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.12549",
+        "high_frequency_ratio": "0.563486",
+        "mean_luminance": "0.539625",
+        "quality_flags": [
+          "LOW_CONTRAST"
+        ],
+        "shadow_clip_fraction": "0"
+      },
+      "remediation": "APPLY_CLAHE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "5e513af9bf514931bc1374b2f89cee28",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-f9a12f1d848584",
+      "first_action": "NONE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": true,
+      "opencv_evidence": {
+        "contrast_score": "0.509804",
+        "high_frequency_ratio": "0.533523",
+        "mean_luminance": "0.56277",
+        "quality_flags": [],
+        "shadow_clip_fraction": "0.012218"
+      },
+      "remediation": null,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "terminal_status": "COMPLETE",
+      "trace_id": "caecaefab3c644f18afd17246b783d0f",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-f9a12f1d848584",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.490196",
+        "high_frequency_ratio": "0.301095",
+        "mean_luminance": "0.562773",
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "shadow_clip_fraction": "0.009599"
+      },
+      "remediation": null,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "5b2f2cae68d44029b4b8857c5a041780",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-f9a12f1d848584",
+      "first_action": "REQUEST_RECAPTURE",
+      "foreground_valid": true,
+      "fruit_type": "orange",
+      "model_invoked": false,
+      "opencv_evidence": {
+        "contrast_score": "0.062745",
+        "high_frequency_ratio": "0.641128",
+        "mean_luminance": "0.037473",
+        "quality_flags": [
+          "UNDEREXPOSED",
+          "LOW_CONTRAST",
+          "SHADOW_CLIPPING"
+        ],
+        "shadow_clip_fraction": "0.256948"
+      },
+      "remediation": null,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE",
+      "terminal_status": "REQUEST_RECAPTURE",
+      "trace_id": "7001b880aacb4f8c84b2dd059a7dc3d2",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    }
+  ],
+  "what_this_shows": "Each base contributes four rows that differ only in a controlled visual condition. Where the selected action differs across a base's rows, the OpenCV evidence is the only thing that changed, so it is what changed the action."
+}

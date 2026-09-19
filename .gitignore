@@ -71,3 +71,7 @@ competition/data/licensed_real/synthetic/
 
 # Phase 2d independent validation imagery.
 competition/data/licensed_real/validation_raw/
+
+# Phase 6 confirmatory imagery and its controlled variants.
+competition/data/licensed_real/phase6_raw/
+competition/data/licensed_real/phase6_variants/

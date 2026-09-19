@@ -1,0 +1,103 @@
+{
+  "checks": {
+    "no_image_bytes_or_paths_in_client_surface": {
+      "covers": "responses and persisted traces",
+      "does_not_cover": "the CloudWatch log stream - see below",
+      "how": "Every response and every persisted trace was scanned for filesystem paths, bucket URIs, ARNs, credential markers and the model filename.",
+      "leaks": [],
+      "verified": true
+    },
+    "policy_fingerprints_match_frozen_system": {
+      "expected": 86,
+      "frozen": {
+        "artifact_policy": "b3cd5db5ca193027",
+        "highlight_policy": "10757655e4c34533",
+        "quality_policy": "e6bd2bee4f852f37",
+        "remediation_policy": "225b43230901b0eb",
+        "roi_policy_lock": "15b7fb0908d6d622",
+        "roi_policy_threshold": "78b1e2151773787a",
+        "visibility_policy": "213bac848e52951f"
+      },
+      "how": "Every response's policy fingerprints were compared with frozen_system.json field by field.",
+      "matching": 86,
+      "verified": true
+    },
+    "run_id_consistent": {
+      "expected": 86,
+      "how": "The run id inside each persisted trace equals the run id the inspection response returned.",
+      "matching": 86,
+      "verified": true
+    },
+    "structured_json_logging_emitted": {
+      "how": "Requires reading the App Runner application log group. The scoped deployment identity is denied logs:FilterLogEvents by design, and creating a read-only audit policy was not permitted in this environment.",
+      "status": "NOT VERIFIED HERE",
+      "to_close_this_gap": "Attach a read-only policy granting logs:FilterLogEvents on /aws/apprunner/agrivision-inspection/* to the deployment identity, then re-run this audit. Deliberately not done unilaterally: it widens a deployment identity that was narrowed on purpose.",
+      "verified": false,
+      "what_is_known": "The service is configured with the JSON formatter and its redaction is covered by unit tests against the formatter itself. What is NOT established is that the deployed process emitted those records, because no log line was read back."
+    },
+    "trace_persisted_and_retrievable": {
+      "expected": 86,
+      "how": "Every run id was fetched back through GET /inspection/{run_id}/trace. The only source for that response is the persistence layer, so a successful read is end-to-end evidence that the DynamoDB write happened and round-tripped.",
+      "retrieved": 86,
+      "verified": true
+    },
+    "unsafe_inference_counter_inspectable": {
+      "counter_present": false,
+      "counter_value": 0,
+      "counters_observed": {
+        "condition_inference_total": 58,
+        "inspection_requests_total": 103,
+        "inspection_success_total": 58,
+        "recapture_requests_total": 45,
+        "remediation_attempts_total": 16
+      },
+      "how": "The service exposes counters at /metrics and only publishes a counter once it has been incremented. `unsafe_inference_count` is absent, which is how a value of zero presents. That is consistent with the measured 0/48 and 0/38, and is stated as an absence rather than dressed up as a printed zero.",
+      "verified": true
+    }
+  },
+  "counters_note": "Counters are cumulative for the life of the running instance and include Phase 5 smoke traffic as well as Phase 6.",
+  "frozen_fingerprint": "97b059be36bc3fbe",
+  "observability_version": "phase6-observability-1.0.0",
+  "server_side_timings": {
+    "artifact_duration_ms": {
+      "count": 192,
+      "max_ms": 1293.98,
+      "median_ms": 153.74,
+      "p95_ms": 983.22
+    },
+    "foreground_duration_ms": {
+      "count": 119,
+      "max_ms": 1350.7,
+      "median_ms": 201.27,
+      "p95_ms": 1136.71
+    },
+    "inspection_duration_ms": {
+      "count": 103,
+      "max_ms": 5854.18,
+      "median_ms": 703.9,
+      "p95_ms": 3654.57
+    },
+    "model_duration_ms": {
+      "count": 58,
+      "max_ms": 76.55,
+      "median_ms": 21.87,
+      "p95_ms": 73.02
+    },
+    "quality_duration_ms": {
+      "count": 96,
+      "max_ms": 650.38,
+      "median_ms": 218.28,
+      "p95_ms": 542.52
+    }
+  },
+  "server_side_timings_note": "Internal per-stage durations measured inside the service. Kept separate from the client-observed latency in latency.json, which includes network transit.",
+  "service_state": {
+    "model_artifact_verified": true,
+    "model_loaded": true,
+    "opencv_version": "5.0.0",
+    "persistence_backend": "dynamodb",
+    "persistence_healthy": true,
+    "ready": true
+  },
+  "service_url": "https://yp2ajauzkm.us-east-1.awsapprunner.com"
+}

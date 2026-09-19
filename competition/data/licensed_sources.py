@@ -78,6 +78,10 @@ class Split(str, Enum):
     # groups have been spent, and mixing the names would make it possible to
     # report a validation result as though it came from the original split.
     VALIDATION = "validation"
+    # Phase 6's confirmatory pool, for the same reason again: Phase 2c-B's
+    # held-out groups and Phase 2d's validation set are both spent, and a
+    # confirmatory number must not be reportable as though it came from either.
+    PHASE6_CONFIRMATORY = "phase6_confirmatory"
     UNASSIGNED = "unassigned"
 
 

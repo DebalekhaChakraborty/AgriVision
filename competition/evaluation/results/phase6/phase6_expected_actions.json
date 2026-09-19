@@ -1,0 +1,436 @@
+{
+  "base_count": 12,
+  "bases_per_fruit": 4,
+  "claim_boundary": "CONTROLLED DEGRADATIONS APPLIED TO REAL IMAGES. Not real camera-failure prevalence, not phone-camera validation, and not the real-world environmental distribution.",
+  "degradation_version": "phase1-degradation-1.0.0",
+  "denominators": {
+    "primary": "All scenarios. A base whose REFERENCE never produces a valid foreground still counts, and its variants count as failures of the preregistered expectation. Perception failing before the routing question is reached is a real limitation of the system, not an excuse for excluding the case.",
+    "secondary": "Scenarios whose base produced a valid foreground on REFERENCE. Reported alongside the primary figure, never instead of it, because it separates 'the agent routed wrongly' from 'the agent never got far enough to route'. Both denominators are fixed here, before any scenario runs."
+  },
+  "expected_actions_fingerprint": "9ce69ebe042428dc",
+  "rule": "Expected actions are frozen at this point and may not be edited after a result is seen. A scenario that does not match its expectation is recorded as a failure and classified in the failure taxonomy; it is never reconciled by rewriting the expectation.",
+  "scenario_count": 48,
+  "scenarios": [
+    {
+      "base_id": "WC-41881957d489f4",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-41881957d489f4",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-41881957d489f4",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "apple",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-41881957d489f4",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-6fb6cf4e298b4c",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-6fb6cf4e298b4c",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-6fb6cf4e298b4c",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "apple",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-6fb6cf4e298b4c",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-a43198e8cb16c8",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-a43198e8cb16c8",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-a43198e8cb16c8",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "apple",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-a43198e8cb16c8",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-1f478c8b30dabf",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-1f478c8b30dabf",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-1f478c8b30dabf",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "apple",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-1f478c8b30dabf",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "apple",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-99b2a254f65dbc",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-99b2a254f65dbc",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-99b2a254f65dbc",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "banana",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-99b2a254f65dbc",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-4a6528e58b09e9",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-4a6528e58b09e9",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-4a6528e58b09e9",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "banana",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-4a6528e58b09e9",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-2b74b2eb0294bb",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-2b74b2eb0294bb",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-2b74b2eb0294bb",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "banana",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-2b74b2eb0294bb",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-297191126fdeef",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-297191126fdeef",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-297191126fdeef",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "banana",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-297191126fdeef",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "banana",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-9ee60b933468cc",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-9ee60b933468cc",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-9ee60b933468cc",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "orange",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-9ee60b933468cc",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-f9a12f1d848584",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-f9a12f1d848584",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-f9a12f1d848584",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "orange",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-f9a12f1d848584",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-a87766017dff4a",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-a87766017dff4a",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-a87766017dff4a",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "orange",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-a87766017dff4a",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-ccb158bfa9bcc2",
+      "condition_model_must_run": true,
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "REFERENCE"
+    },
+    {
+      "base_id": "WC-ccb158bfa9bcc2",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "UNDEREXPOSED_RECOVERABLE"
+    },
+    {
+      "base_id": "WC-ccb158bfa9bcc2",
+      "condition_model_must_run": false,
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "fruit_type": "orange",
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "base_id": "WC-ccb158bfa9bcc2",
+      "condition_model_must_run": true,
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "fruit_type": "orange",
+      "variant": "LOW_CONTRAST_RECOVERABLE"
+    }
+  ],
+  "selection_salt": "phase6-track-c-20260919",
+  "track_c_version": "phase6-track-c-1.0.0",
+  "variant_count": 4,
+  "variants": [
+    {
+      "condition_model_must_run": true,
+      "description": "The photograph as harvested, re-encoded losslessly to PNG.",
+      "expected_first_action": "NONE",
+      "expected_terminal": "COMPLETE",
+      "key": "REFERENCE",
+      "rationale": "Nothing is wrong with the capture, so no corrective tool should be selected and the condition model should be reached."
+    },
+    {
+      "condition_model_must_run": true,
+      "description": "Exposure gain 0.12, which puts ROI mean luminance below the calibrated underexposure floor while detail survives.",
+      "expected_first_action": "APPLY_GAMMA",
+      "expected_terminal": "COMPLETE",
+      "key": "UNDEREXPOSED_RECOVERABLE",
+      "rationale": "Underexposure is recoverable by construction, so the agent should correct it and then reach the model rather than ask for a recapture."
+    },
+    {
+      "condition_model_must_run": false,
+      "description": "Gaussian blur sigma 6.0, which puts the ROI high-frequency ratio below the calibrated floor of 0.3182.",
+      "expected_first_action": "REQUEST_RECAPTURE",
+      "expected_terminal": "REQUEST_RECAPTURE",
+      "key": "SEVERE_BLUR",
+      "rationale": "Detail destroyed by defocus cannot be restored by any enhancement, so the agent must ask for a new capture and must NOT run the model."
+    },
+    {
+      "condition_model_must_run": true,
+      "description": "Tonal range compressed, aimed by a measurement on this image, to sit between the severe limit 0.12 and the advisory limit 0.1314.",
+      "expected_first_action": "APPLY_CLAHE",
+      "expected_terminal": "COMPLETE",
+      "key": "LOW_CONTRAST_RECOVERABLE",
+      "rationale": "The recoverable contrast band is the band CLAHE exists for, so the agent should enhance and then reach the model."
+    }
+  ]
+}

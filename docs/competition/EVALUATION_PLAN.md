@@ -41,10 +41,31 @@ companion set to check that conclusions transfer, and any divergence is reported
 
 | Baseline | Purpose | Source |
 | --- | --- | --- |
-| Single-shot classifier, agent disabled | Isolates the agent's contribution | Measured in Phase 6 |
-| Perception gate, detection only, no remediation | Isolates acting vs merely detecting | Measured in Phase 6 |
+| Single-shot classifier, agent disabled | Isolates the agent's contribution | **NOT measured.** Phase 6 measured the deployed agent, not an ablation of it. Outstanding. |
+| Perception gate, detection only, no remediation | Isolates acting vs merely detecting | **NOT measured.** Outstanding. |
 | V1 Keras CNN | Historical reference | **Cited from existing records; never re-run** |
 | V2 Experiment 014 systems | Out-of-domain context | **Cited from `v2/results/experiment_014_multi_domain/`; never re-derived** |
+
+## 2z. Status after Phase 6
+
+The confirmatory evaluation is done and its numbers are in
+[PHASE6_FINAL_EVALUATION.md](PHASE6_FINAL_EVALUATION.md). Measured on 38 fresh
+licence-verified photographs and 48 controlled scenarios, on the **deployed AWS
+service**, under a system frozen beforehand (`97b059be36bc3fbe`):
+
+- foreground-valid 29/38, complete-inspection 28/38, fruit-type 27/28
+- action selection 30/48 primary, 27/36 on bases whose reference segmented
+- decision attribution 58/58, unsafe inference 0/86, fail-safe 12/12
+- 10 of 12 bases change their action when only the visual condition changes
+
+Two baselines listed in §2 remain unmeasured: the agent-disabled single-shot
+classifier and the detection-only gate. Phase 6 measured the system as deployed
+rather than ablations of it, so the agent's contribution is demonstrated
+causally by the counterfactual matrix but is not yet quantified against a
+no-agent baseline. That is the clearest remaining gap in this plan.
+
+Still unmeasured for the reason given in §14 rather than by omission: visible
+condition accuracy on real imagery, because no independent label exists.
 
 ## 2a. Status after Phase 2
 

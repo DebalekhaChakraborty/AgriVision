@@ -34,12 +34,12 @@ Base commit: `3928d43b3bdd3a754f98f1f411596050de29da17`
 
 | # | Requirement | Proposed implementation | Evidence required | Planned artifact | Phase | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| B1 | OpenCV 5 visual evidence influences a later decision | Deterministic policy engine consuming `PerceptionEvidence` (Blueprint §15, §16) | Trace records naming the metric, the threshold crossed, and the branch taken | Trace schema, `competition/agent/` | 1b, 3 | **SUBSTANTIALLY COMPLETE (Phase 3)** — counterfactual experiment: one base subject, identical policy fingerprints, four distinct first actions. `results/phase3/counterfactual_actions.json`. Real-domain rates still unmeasured. |
+| B1 | OpenCV 5 visual evidence influences a later decision | Deterministic policy engine consuming `PerceptionEvidence` (Blueprint §15, §16) | Trace records naming the metric, the threshold crossed, and the branch taken | Trace schema, `competition/agent/` | 1b, 3, 6 | **COMPLETE (Phase 6)** — measured on fresh real photographs on the deployed service, not only on fixtures: 10/12 bases change action with the condition, four distinct first actions, unsafe inference 0/86. `results/phase6/`. |
 | B2 | Evidence influences a tool call | Perception metrics select which tool runs next (enhance, re-segment, reclassify ROI) | Trace showing tool invocation caused by a metric | Trace records | 1b, 3 | **SUBSTANTIALLY COMPLETE (Phase 3)** — closed 15-tool registry; a blur finding selects `request_recapture`, underexposure selects `apply_gamma_correction`, contrast loss selects `apply_clahe`. Unnecessary tool-call rate 0/12. |
 | B3 | Evidence influences a plan or re-analysis step | Bounded remediation loop re-enters perception with new parameters | Trace showing a second pass with changed parameters and the reason | Trace records | 1b, 3 | **SUBSTANTIALLY COMPLETE (Phase 3)** — remediation forces re-segmentation and re-measurement; the state machine has no edge permitting a second attempt. Multi-step planning beyond one excursion remains out of scope. |
 | B4 | Evidence influences a human-approval request | Escalation policy driven by capture quality | Escalation records with the triggering evidence attached | `competition/agent/`, demo UI | 3 | **COMPLETE (Phase 5)** — three human-action terminals carry their triggering evidence and maturity, and the demo page renders each as guidance rather than an error. |
 | B5 | Not merely a chatbot explaining a fixed prediction | Control decisions are deterministic, not model-generated; Bedrock narrates only | Policy source; tests proving behaviour without Bedrock available | `competition/agent/`, policy tests | 1b, 3 | **COMPLETE (Phase 3)** — no language model participates at any point. Actions are enum members; `resolve_tool` refuses any string outside the closed vocabulary. The renderer is a formatter. |
-| B6 | The trace proves OpenCV changed what happened next | Decision-attribution metric | Measured attribution rate over the evaluation set | Evaluation results, demo UI | 6 | **SUBSTANTIALLY COMPLETE (Phase 5)** — attribution 33/33 on the scenario suite, and the live counterfactual at `https://yp2ajauzkm.us-east-1.awsapprunner.com` shows one subject producing four distinct next actions under identical policy fingerprints. A real-imagery attribution rate remains Phase 6. |
+| B6 | The trace proves OpenCV changed what happened next | Decision-attribution metric | Measured attribution rate over the evaluation set | Evaluation results, demo UI | 6 | **COMPLETE (Phase 6)** — attribution **58/58** on the deployed service over 48 controlled scenarios built from fresh real photographs, and 10 of 12 real bases change their selected action when only the visual condition changes, under identical policy fingerprints. `results/phase6/counterfactual_matrix.json`. |
 
 ### Claim authorised after Phase 5
 
@@ -56,6 +56,25 @@ It is a statement about the demonstration, not about the submission. The
 submission is **not** complete: B6's real-imagery attribution rate and the
 confirmatory segmentation and fruit-type rates on fresh natural images are still
 unmeasured, and remain Phase 6 work.
+
+### Claim authorised after Phase 6
+
+> On fresh, licence-verified real photographs the deployed AgriVision service
+> selects a different next action when the OpenCV 5 evidence changes, never runs
+> the condition model on a capture it has blocked, and records for every
+> decision the metric and threshold that produced it.
+
+Supported by: 38 natural images and 48 preregistered controlled scenarios run
+against the deployed App Runner service under a system frozen beforehand;
+attribution 58/58; unsafe inference 0/86; fail-safe 12/12; 10 of 12 bases
+changing action with the condition.
+
+Not supported, and not claimed: visible-condition accuracy on real imagery (no
+independent label exists), real-world failure prevalence (Track C is controlled
+degradation), and the agent's contribution against a no-agent baseline (not
+measured).
+
+The submission is still **not** complete: Phase 7 hardening remains.
 
 ## C. Judging-criteria coverage
 

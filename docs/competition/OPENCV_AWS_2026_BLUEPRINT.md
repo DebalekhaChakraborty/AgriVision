@@ -871,14 +871,41 @@ the metrics must be restricted to a foreground region.
   [JUDGE_DEMO_SCRIPT.md](JUDGE_DEMO_SCRIPT.md).
 - **Supports:** UX, presentation, **Agentic Vision Award**.
 
-### Phase 6 — Evaluation and failure analysis
-- **Objective:** execute the evaluation plan and report honestly.
-- **Tasks:** degradation suite; baselines; agent metrics; latency; failure
-  taxonomy; calibration.
-- **Artifacts:** `competition/evaluation/`, results and figures.
-- **Tests:** reproducible evaluation entry point, seeded.
-- **Exit:** every claimed number traced to a committed artefact.
-- **Supports:** technical execution, real-world impact.
+### Phase 6 — Fresh confirmatory end-to-end evaluation — **COMPLETE (uncommitted)**
+- **Objective:** measure the frozen deployed system on material no earlier phase
+  has seen, and report the result whatever it is.
+- **System frozen first:** `97b059be36bc3fbe` — commit `83a2d9a`, image digest
+  `sha256:b57eaf05…`, OpenCV 5.0.0, fallback disabled. Regenerated after the
+  tooling existed and came back byte-identical.
+- **Sources:** 38 fresh licence-verified photographs, 38 distinct source groups,
+  8 permissive licences. **Zero overlap** with every prior corpus on source
+  group, image id and content hash. Orange stopped at 8 of a target 15 because
+  only 8 of 84 screened candidates satisfy the one-primary-item contract; the
+  contract was not relaxed to close the gap.
+- **Two tracks, never pooled.** Track R: natural images. Track C: 12 of those
+  bases × 4 controlled variants, preregistered (`9ce69ebe042428dc`) before
+  execution.
+- **Track R, deployed service:** foreground-valid 29/38, complete-inspection
+  28/38, recapture 10/38, **fruit-type 27/28** among model invocations.
+- **Track C, deployed service:** action selection 30/48 (27/36 on bases whose
+  reference segmented), **decision attribution 58/58**, **unsafe inference
+  0/48**, fail-safe 12/12, bounded execution 48/48.
+- **Agentic Vision evidence:** 10 of 12 real bases change their selected action
+  when only the controlled visual condition changes, under identical policy
+  fingerprints. Four distinct first actions.
+- **The negative finding, kept:** `UNDEREXPOSED_RECOVERABLE` scored 2/12. Not one
+  of the twelve variants landed in the band it was named after — a fixed
+  exposure gain tuned on a synthetic fixture clips real photographs' shadows
+  instead. The agent was reading the pixels correctly; the scenario was built
+  wrong. Classified `SCENARIO_CONSTRUCTION_DEFECT` and not rerun as
+  confirmatory. A separate exploratory sweep found the recoverable band is
+  reachable on only 3 of 12 real photographs, and that the agent chose
+  `APPLY_GAMMA` on all 3.
+- **Not verified:** CloudWatch log emission — the scoped deployer is denied log
+  reads by design and widening it was not done unilaterally.
+- **Artifacts:** `competition/evaluation/results/phase6/`, 5 figures. Full
+  method: [PHASE6_FINAL_EVALUATION.md](PHASE6_FINAL_EVALUATION.md).
+- **Supports:** technical execution, real-world impact, **Agentic Vision Award**.
 
 ### Phase 7 — Hardening, documentation and final submission
 - **Objective:** ship it.

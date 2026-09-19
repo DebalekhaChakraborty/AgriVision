@@ -96,6 +96,21 @@ Branch: `competition/opencv-aws-2026`
 - [ ] Screenshots captured for the submission
 - [ ] Mobile device check
 
+## 7b. Phase 6 confirmatory evaluation
+
+- [x] System frozen before any evaluation image was opened (`97b059be36bc3fbe`)
+- [x] Fresh pool, 0 overlap with prior corpora on group, image id and content hash
+- [x] Per-image licence verified; no Unknown, NonCommercial or NoDerivatives
+- [x] Expected actions preregistered with a fingerprint (`9ce69ebe042428dc`)
+- [x] Deployed AWS service evaluated, not a local pipeline
+- [x] No threshold, policy, model or transition changed after freezing
+- [x] Every metric states its denominator
+- [x] Negative findings preserved, not tuned away
+- [x] Failure taxonomy with distinct causes, nothing collapsed
+- [x] No image bytes committed; figures are generated plots
+- [ ] CloudWatch log emission verified — needs a read-only audit policy
+- [ ] Agent-disabled baseline measured — outstanding, see EVALUATION_PLAN §2
+
 ## 8. Evaluation artifacts
 
 - [ ] Controlled-degradation suite committed and regenerable from seed

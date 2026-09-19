@@ -1,0 +1,182 @@
+{
+  "apply_gamma_count": 3,
+  "band_reachable_count": 3,
+  "banner": "EXPLORATORY DIAGNOSTIC. Not part of the Phase 6 confirmatory evaluation, not preregistered, and never pooled with the Track C numbers. It exists to explain a confirmatory failure, not to replace it.",
+  "bases": 12,
+  "exploratory_version": "phase6-exploratory-1.0.0",
+  "method": "For each Track C base, sweep the exposure gain and keep the first value whose ROI mean luminance falls below the calibrated floor while shadow clipping stays within the calibrated limit. Where such a gain exists, send that image to the deployed service. The search is over the image, never over a threshold.",
+  "question": "Is the calibrated recoverable-underexposure band reachable on a real photograph by reducing exposure, and if so does the agent select APPLY_GAMMA?",
+  "rows": [
+    {
+      "band_reachable": false,
+      "base_id": "WC-1f478c8b30dabf",
+      "gain": null,
+      "mean_luminance": null,
+      "shadow_clip_fraction": null,
+      "zones_seen": [
+        "NO_VALID_FOREGROUND",
+        "SHADOWS_CLIPPED"
+      ]
+    },
+    {
+      "band_reachable": true,
+      "base_id": "WC-297191126fdeef",
+      "client_latency_ms": 1821.7,
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "gain": 0.14,
+      "http_status": 200,
+      "mean_luminance": 0.049089,
+      "quality_flags": [],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_GAMMA",
+      "run_id": "4ce34a8c749b47b1a41e9121b2da4ff8",
+      "shadow_clip_fraction": 0.04012,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "zones_seen": [
+        "ABOVE_FLOOR",
+        "SHADOWS_CLIPPED",
+        "UNDEREXPOSED_RECOVERABLE"
+      ]
+    },
+    {
+      "band_reachable": false,
+      "base_id": "WC-2b74b2eb0294bb",
+      "gain": null,
+      "mean_luminance": null,
+      "shadow_clip_fraction": null,
+      "zones_seen": [
+        "ABOVE_FLOOR",
+        "SHADOWS_CLIPPED"
+      ]
+    },
+    {
+      "band_reachable": true,
+      "base_id": "WC-41881957d489f4",
+      "client_latency_ms": 673.0,
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "gain": 0.14,
+      "http_status": 200,
+      "mean_luminance": 0.040286,
+      "quality_flags": [
+        "LOW_CONTRAST"
+      ],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_GAMMA",
+      "run_id": "08bc42e130f14f2dae8e41cce0203725",
+      "shadow_clip_fraction": 0.043605,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "zones_seen": [
+        "ABOVE_FLOOR",
+        "NO_VALID_FOREGROUND",
+        "SHADOWS_CLIPPED",
+        "UNDEREXPOSED_RECOVERABLE"
+      ]
+    },
+    {
+      "band_reachable": false,
+      "base_id": "WC-4a6528e58b09e9",
+      "gain": null,
+      "mean_luminance": null,
+      "shadow_clip_fraction": null,
+      "zones_seen": [
+        "ABOVE_FLOOR",
+        "SHADOWS_CLIPPED"
+      ]
+    },
+    {
+      "band_reachable": false,
+      "base_id": "WC-6fb6cf4e298b4c",
+      "gain": null,
+      "mean_luminance": null,
+      "shadow_clip_fraction": null,
+      "zones_seen": [
+        "NO_VALID_FOREGROUND",
+        "SHADOWS_CLIPPED"
+      ]
+    },
+    {
+      "band_reachable": false,
+      "base_id": "WC-99b2a254f65dbc",
+      "gain": null,
+      "mean_luminance": null,
+      "shadow_clip_fraction": null,
+      "zones_seen": [
+        "ABOVE_FLOOR",
+        "SHADOWS_CLIPPED"
+      ]
+    },
+    {
+      "band_reachable": false,
+      "base_id": "WC-9ee60b933468cc",
+      "gain": null,
+      "mean_luminance": null,
+      "shadow_clip_fraction": null,
+      "zones_seen": [
+        "NO_VALID_FOREGROUND"
+      ]
+    },
+    {
+      "band_reachable": true,
+      "base_id": "WC-a43198e8cb16c8",
+      "client_latency_ms": 5106.1,
+      "condition_model_invoked": false,
+      "final_status": "REQUEST_RECAPTURE",
+      "gain": 0.08,
+      "http_status": 200,
+      "mean_luminance": 0.034136,
+      "quality_flags": [
+        "LOW_CONTRAST"
+      ],
+      "remediation_accepted": true,
+      "remediation_action": "APPLY_GAMMA",
+      "run_id": "9cb166045f294937b489320dcb6f3f11",
+      "shadow_clip_fraction": 0.045267,
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS",
+      "zones_seen": [
+        "ABOVE_FLOOR",
+        "SHADOWS_CLIPPED",
+        "UNDEREXPOSED_RECOVERABLE"
+      ]
+    },
+    {
+      "band_reachable": false,
+      "base_id": "WC-a87766017dff4a",
+      "gain": null,
+      "mean_luminance": null,
+      "shadow_clip_fraction": null,
+      "zones_seen": [
+        "ABOVE_FLOOR",
+        "SHADOWS_CLIPPED"
+      ]
+    },
+    {
+      "band_reachable": false,
+      "base_id": "WC-ccb158bfa9bcc2",
+      "gain": null,
+      "mean_luminance": null,
+      "shadow_clip_fraction": null,
+      "zones_seen": [
+        "NO_VALID_FOREGROUND"
+      ]
+    },
+    {
+      "band_reachable": false,
+      "base_id": "WC-f9a12f1d848584",
+      "gain": null,
+      "mean_luminance": null,
+      "shadow_clip_fraction": null,
+      "zones_seen": [
+        "ABOVE_FLOOR",
+        "NO_VALID_FOREGROUND",
+        "SHADOWS_CLIPPED"
+      ]
+    }
+  ],
+  "status": "EXPLORATORY_NOT_CONFIRMATORY",
+  "thresholds_unchanged": {
+    "shadow_clip_fraction_limit": 0.05,
+    "underexposed_mean_luminance": 0.052740868420908985
+  }
+}

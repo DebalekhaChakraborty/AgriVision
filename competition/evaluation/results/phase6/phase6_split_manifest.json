@@ -1,0 +1,118 @@
+{
+  "membership_note": "Track C bases are also Track R images. The two tracks are reported separately and are never pooled into one headline number: Track R measures natural-domain behaviour, Track C measures routing under known conditions.",
+  "rule": "Bases are ordered by sha256(salt:image_id) within each fruit and the first four taken. Independent of appearance and of every metric, and fixed before any variant was executed.",
+  "selection_salt": "phase6-track-c-20260919",
+  "split_fingerprint": "3df2a5e5849b2e3b",
+  "track_c_base_count": 12,
+  "track_c_bases": [
+    {
+      "content_sha256": "2a9da35ada01969cf6174942cb8d95e932fb1428425bff0f81d652d28cba20b8",
+      "file_extension": ".jpg",
+      "fruit_type": "apple",
+      "height": 683,
+      "image_id": "WC-41881957d489f4",
+      "source_group_id": "SG-c9ad156b44a4",
+      "width": 1024
+    },
+    {
+      "content_sha256": "6652696c20c8092ba83df34c8b35e2759ca4f6bbd1c13802f90b6be64c95828e",
+      "file_extension": ".jpg",
+      "fruit_type": "apple",
+      "height": 1632,
+      "image_id": "WC-6fb6cf4e298b4c",
+      "source_group_id": "SG-9573fe02c1c8",
+      "width": 1224
+    },
+    {
+      "content_sha256": "bb64b94f7ca50967b20400515bf1502fed0f683ea3187e6c378d6aeec5a8be88",
+      "file_extension": ".jpg",
+      "fruit_type": "apple",
+      "height": 2116,
+      "image_id": "WC-a43198e8cb16c8",
+      "source_group_id": "SG-efacc19e6320",
+      "width": 1920
+    },
+    {
+      "content_sha256": "4dcc6708c21cbc9bcf0b9a1a0a34cbf3b8574040c6521e2d6fdfe309506b8bf9",
+      "file_extension": ".jpg",
+      "fruit_type": "apple",
+      "height": 2880,
+      "image_id": "WC-1f478c8b30dabf",
+      "source_group_id": "SG-1dda505700a7",
+      "width": 1920
+    },
+    {
+      "content_sha256": "f434a27e5bd1252557ff382f8d6744edd3f737bf7d90db6348387cd6cd8ba1da",
+      "file_extension": ".jpg",
+      "fruit_type": "banana",
+      "height": 2560,
+      "image_id": "WC-99b2a254f65dbc",
+      "source_group_id": "SG-0b3f052224e7",
+      "width": 1920
+    },
+    {
+      "content_sha256": "21001117e88ce1997665698460655c386c7f9c237d4d3b88b862bd278e66d3ff",
+      "file_extension": ".jpg",
+      "fruit_type": "banana",
+      "height": 1080,
+      "image_id": "WC-4a6528e58b09e9",
+      "source_group_id": "SG-ea25bc5dbc2b",
+      "width": 1920
+    },
+    {
+      "content_sha256": "c5e5b9c1ececb67a1b32c2ff6852ec450000d45b8c46c74881e7ac26cdc485c2",
+      "file_extension": ".jpg",
+      "fruit_type": "banana",
+      "height": 1200,
+      "image_id": "WC-2b74b2eb0294bb",
+      "source_group_id": "SG-638476c42fa1",
+      "width": 1600
+    },
+    {
+      "content_sha256": "7d8741ed6d97f4ace96e9edf971162c6b312bbd3ff990b836f000e9990d3722c",
+      "file_extension": ".jpg",
+      "fruit_type": "banana",
+      "height": 1224,
+      "image_id": "WC-297191126fdeef",
+      "source_group_id": "SG-8251335b93ab",
+      "width": 1632
+    },
+    {
+      "content_sha256": "f292563d1d956fbef35dbd7d2a358568792b59f38aaf501476a385b72ccfb75f",
+      "file_extension": ".jpg",
+      "fruit_type": "orange",
+      "height": 768,
+      "image_id": "WC-9ee60b933468cc",
+      "source_group_id": "SG-00dce030ce12",
+      "width": 1024
+    },
+    {
+      "content_sha256": "0200e44a6d73076b5725f9693da40f0d2bdc8dd16b1b3a508e6672da15a87b05",
+      "file_extension": ".jpg",
+      "fruit_type": "orange",
+      "height": 1280,
+      "image_id": "WC-f9a12f1d848584",
+      "source_group_id": "SG-bdfe08b9b87c",
+      "width": 1920
+    },
+    {
+      "content_sha256": "932a34be78d386687fadaecd6e50c0461cf525f00d188a9c395c2327ad1f4031",
+      "file_extension": ".jpg",
+      "fruit_type": "orange",
+      "height": 2560,
+      "image_id": "WC-a87766017dff4a",
+      "source_group_id": "SG-1b791c66259c",
+      "width": 1920
+    },
+    {
+      "content_sha256": "6955d00017c67cbc1cd25568c3d92445b85e979fb09cb146bdb192280e1316dd",
+      "file_extension": ".jpg",
+      "fruit_type": "orange",
+      "height": 1280,
+      "image_id": "WC-ccb158bfa9bcc2",
+      "source_group_id": "SG-de3051144813",
+      "width": 1920
+    }
+  ],
+  "track_c_version": "phase6-track-c-1.0.0"
+}
