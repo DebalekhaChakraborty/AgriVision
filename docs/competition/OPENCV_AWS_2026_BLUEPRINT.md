@@ -17,7 +17,7 @@ that produced them and are reported separately from the V2 research results.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phases 0–2c-B complete and committed; Phase 2d complete and uncommitted. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. Phase 3 is unblocked. |
+| Status | Phases 0–2d complete and committed; Phase 3 complete and uncommitted. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. A bounded agentic loop now routes that evidence to tool calls and human actions, with segmentation failure handled as a first-class refusal. |
 
 ---
 
@@ -751,14 +751,30 @@ the metrics must be restricted to a foreground region.
 - **Not delivered, deliberately:** no AWS, no Bedrock, no UI, no agent
   orchestrator, no semantic occlusion claim.
 
-### Phase 3 — Agentic perception–decision–action workflow
+### Phase 3 — Agentic perception–decision–action workflow *(complete, uncommitted)*
 - **Objective:** the real loop, with traces.
-- **Tasks:** tool interfaces; deterministic policy engine; bounded remediation;
-  escalation; trace schema; Bedrock explanation.
-- **Artifacts:** `competition/agent/`, `competition/agent/tools/`, trace schema.
-- **Tests:** policy unit tests per branch; end-to-end scenario tests asserting a
-  named OpenCV metric caused a named action; termination and oscillation tests.
-- **Exit:** decision attribution demonstrable on every scenario.
+- **Delivered:** an explicit state machine (`competition/agent/state.py`), a
+  closed 15-tool registry with declared contracts, an evidence-maturity scheme
+  that structurally prevents an uncalibrated detector from gating, bounded
+  execution (one remediation, one inference, 24 steps), and a human-readable
+  trace renderer with no model in it.
+- **Key result:** the counterfactual experiment — one base subject, one policy,
+  identical fingerprints, **four distinct first actions**. Changing only the
+  pixels changes the next tool call.
+- **Scenario suite:** 12/12 task success, decision attribution 33/33, unsafe
+  inference 0/12, bounded execution 12/12, fail-safe 5/5. These are
+  **deterministic scenario-suite results on constructed fixtures**, not accuracy.
+- **What did not improve:** segmentation (still the binding constraint at 12/29
+  on Phase 2d validation), glare (still 0.500, still advisory), visibility
+  (still unqualified). Phase 3 makes those failures *safe*, not smaller.
+- **Latency:** local CPU, 384×384 — no remediation 62.9 ms median, remediation
+  109.0 ms, orchestration overhead 0.7–2.2 ms. **Not an AWS figure.**
+- **Deferred:** Bedrock narration. A language model may later describe a trace;
+  it may never select an action.
+- **Artifacts:** `competition/agent/`, `competition/agent/tools/`,
+  `competition/evaluation/results/phase3/`, six curated traces. Full method:
+  [PHASE3_AGENTIC_ORCHESTRATOR.md](PHASE3_AGENTIC_ORCHESTRATOR.md); diagram:
+  [AGENT_WORKFLOW.md](AGENT_WORKFLOW.md).
 - **Supports:** **Agentic Vision Award**, innovation, technical execution.
 
 ### Phase 4 — AWS deployment and observability

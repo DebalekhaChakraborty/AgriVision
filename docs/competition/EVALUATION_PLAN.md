@@ -163,6 +163,34 @@ Measured locally and on the deployed endpoint:
 | Remediation trigger rate | Degraded inputs where remediation was attempted |
 | Loop termination | Bound respected; no oscillation between actions |
 
+### 8a. Status after Phase 3
+
+Measured on a **deterministic scenario suite** of 12 constructed fixtures, each
+declaring its expected terminal state, model invocation, required tools and
+forbidden tools before it runs. Every denominator is stated in
+`results/phase3/agent_metrics.json`.
+
+| Metric | Value | Denominator |
+| --- | --- | --- |
+| `TASK_SUCCESS_RATE` | 1.0 | 12 scenarios |
+| `DECISION_ATTRIBUTION_RATE` | 1.0 | 33 action-selecting trace steps |
+| `UNSAFE_INFERENCE_RATE` | 0.0 | 12 runs |
+| `UNNECESSARY_TOOL_CALL_RATE` | 0.0 | 12 runs |
+| `BOUNDED_EXECUTION_RATE` | 1.0 | 12 runs |
+| `TRACE_COMPLETENESS_RATE` | 1.0 | 12 traces |
+| `FAIL_SAFE_RATE` | 1.0 | 5 known-unusable inputs |
+
+**These are not accuracy figures.** They say the agent did what the policy
+specifies on cases written down in advance; they say nothing about how often
+real photographs fall into each branch. The recovery, escalation-precision and
+harm-rate metrics in §9 and §10 require a labelled real-imagery population and
+remain outstanding.
+
+The `rejected_remediation` scenario uses a deliberately tightened acceptance
+guard, recorded in its own row as a policy variant: the harm guard never fired
+on any natural fixture, and contriving an image until it did would have been
+worse than exercising the routing honestly.
+
 ## 9. Recovery behaviour
 
 - **Recovery rate**: degraded inputs where the single-shot baseline was wrong and

@@ -1,0 +1,46 @@
+{
+  "BOUNDED_EXECUTION_RATE": {
+    "definition": "runs respecting every declared limit on steps, segmentation calls, remediation attempts and inference",
+    "denominator": 12,
+    "numerator": 12,
+    "value": 1.0
+  },
+  "DECISION_ATTRIBUTION_RATE": {
+    "definition": "trace steps that selected an action and also carry a reason and the evidence it rests on",
+    "denominator": 33,
+    "numerator": 33,
+    "value": 1.0
+  },
+  "FAIL_SAFE_RATE": {
+    "definition": "scenarios with known-unusable input that ended in a refusal with no condition inference",
+    "denominator": 5,
+    "numerator": 5,
+    "value": 1.0
+  },
+  "TASK_SUCCESS_RATE": {
+    "definition": "scenarios whose observed terminal state, model invocation, tool inclusions and exclusions all matched what the scenario declared before running",
+    "denominator": 12,
+    "numerator": 12,
+    "value": 1.0
+  },
+  "TRACE_COMPLETENESS_RATE": {
+    "definition": "traces where every step carries step_id, state_before, tool_name and state_after",
+    "denominator": 12,
+    "numerator": 12,
+    "value": 1.0
+  },
+  "UNNECESSARY_TOOL_CALL_RATE": {
+    "definition": "runs that called a tool the scenario declared forbidden",
+    "denominator": 12,
+    "numerator": 0,
+    "value": 0.0
+  },
+  "UNSAFE_INFERENCE_RATE": {
+    "definition": "runs where the condition model executed despite a blocking terminal state",
+    "denominator": 12,
+    "numerator": 0,
+    "value": 0.0
+  },
+  "claim_boundary": "deterministic scenario-suite result; behaviour of the orchestrator on constructed fixtures, not real-world accuracy",
+  "scenario_version": "phase3-scenarios-1.0.0"
+}

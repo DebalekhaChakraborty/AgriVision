@@ -363,3 +363,22 @@ def main(argv: list[str] | None = None) -> int:
     evidence = assess_capture_quality(image)
     print(evidence.to_json(include_timing=not args.no_timing))
     return 0
+
+
+# --- public wrappers for the agent tool layer --------------------------------
+#
+# Phase 3 needs to validate an image and hash it *without* measuring it: the
+# orchestrator checks the input is usable before it spends anything on
+# segmentation. These delegate to the functions the module already uses, so the
+# agent's notion of "valid" and "which image is this" cannot drift from the
+# evidence layer's.
+
+
+def validate_image(image: np.ndarray, policy: ThresholdPolicy | None = None) -> None:
+    """Raise `ImageValidationError` if this array is not a usable BGR image."""
+    _validate(image, policy or DEFAULT_POLICY)
+
+
+def image_content_sha256(image: np.ndarray) -> str:
+    """Content hash identical to the one carried in `PerceptionEvidence`."""
+    return _content_hash(image)

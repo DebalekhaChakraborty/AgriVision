@@ -1,0 +1,204 @@
+{
+  "base_image_sha256": "9cd5bad3769a5d6be2ddcc3711fda94b0453b930a17b15b14f5c25b11c49fda9",
+  "claim": "One base subject; only the visual evidence differs between variants. The policy, its thresholds and their fingerprints are identical across every row.",
+  "distinct_final_states": [
+    "COMPLETE",
+    "REQUEST_RECAPTURE"
+  ],
+  "distinct_first_actions": [
+    "APPLY_CLAHE",
+    "APPLY_GAMMA",
+    "NONE",
+    "REQUEST_RECAPTURE"
+  ],
+  "evidence_changes_action": true,
+  "policy_fingerprints": {
+    "artifact_policy": "b3cd5db5ca193027",
+    "highlight_policy": "10757655e4c34533",
+    "quality_policy": "e6bd2bee4f852f37",
+    "remediation_policy": "225b43230901b0eb",
+    "roi_policy_lock": "15b7fb0908d6d622",
+    "roi_policy_threshold": "78b1e2151773787a",
+    "visibility_policy": "213bac848e52951f"
+  },
+  "scenario_version": "phase3-scenarios-1.0.0",
+  "variant_count": 7,
+  "variants": [
+    {
+      "advisory_human_action": "",
+      "artifact_flags": [],
+      "condition_model_invoked": true,
+      "final_state": "COMPLETE",
+      "first_selected_action": "NONE",
+      "image_sha256": "9cd5bad3769a5d6be2ddcc3711fda94b0453b930a17b15b14f5c25b11c49fda9",
+      "quality_flags": [],
+      "remediation_action": "",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "tool_sequence": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "variant": "REFERENCE"
+    },
+    {
+      "advisory_human_action": "",
+      "artifact_flags": [],
+      "condition_model_invoked": true,
+      "final_state": "COMPLETE",
+      "first_selected_action": "APPLY_GAMMA",
+      "image_sha256": "2752a3c202f2cf4ea657215a9074f090f51f07c67e62e8d434bb405dc60f5d1f",
+      "quality_flags": [],
+      "remediation_action": "APPLY_GAMMA",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "tool_sequence": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_gamma_correction",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "variant": "UNDEREXPOSED"
+    },
+    {
+      "advisory_human_action": "",
+      "artifact_flags": [],
+      "condition_model_invoked": false,
+      "final_state": "REQUEST_RECAPTURE",
+      "first_selected_action": "REQUEST_RECAPTURE",
+      "image_sha256": "9f3dadec6bffa00503d174c3a6ea6307031b624e5bea233f0c09617ff771d6c4",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "remediation_action": "",
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE",
+      "tool_sequence": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "variant": "SEVERE_BLUR"
+    },
+    {
+      "advisory_human_action": "",
+      "artifact_flags": [],
+      "condition_model_invoked": true,
+      "final_state": "COMPLETE",
+      "first_selected_action": "APPLY_CLAHE",
+      "image_sha256": "debceb8e10b485be84d21250d6adeb8f8cac5987eedd24bc9f6306addf2f7ac0",
+      "quality_flags": [],
+      "remediation_action": "APPLY_CLAHE",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "tool_sequence": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_clahe",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "variant": "LOW_CONTRAST"
+    },
+    {
+      "advisory_human_action": "",
+      "artifact_flags": [
+        "SEVERE_LOW_CONTRAST"
+      ],
+      "condition_model_invoked": false,
+      "final_state": "REQUEST_RECAPTURE",
+      "first_selected_action": "REQUEST_RECAPTURE",
+      "image_sha256": "860121a28d6a20b682b598c5f9da040a51d3d4eb267509c1595b088503b18d9e",
+      "quality_flags": [
+        "LOW_CONTRAST"
+      ],
+      "remediation_action": "",
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS",
+      "tool_sequence": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "variant": "SEVERE_CONTRAST"
+    },
+    {
+      "advisory_human_action": "REQUEST_REPOSITION_LIGHT",
+      "artifact_flags": [
+        "GLARE_RISK"
+      ],
+      "condition_model_invoked": true,
+      "final_state": "COMPLETE",
+      "first_selected_action": "NONE",
+      "image_sha256": "18c170b39110af4511c1980f938152ffa0a19e98b1b65384314d62a9332269b0",
+      "quality_flags": [],
+      "remediation_action": "",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE",
+      "tool_sequence": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "variant": "GLARE"
+    },
+    {
+      "advisory_human_action": "",
+      "artifact_flags": [],
+      "condition_model_invoked": false,
+      "final_state": "REQUEST_RECAPTURE",
+      "first_selected_action": "REQUEST_RECAPTURE",
+      "image_sha256": "d732715db924115412fa97e31484fff10692978113f4fa10c86254f37851ced3",
+      "quality_flags": [],
+      "remediation_action": "",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "tool_sequence": [
+        "validate_input",
+        "segment_foreground",
+        "decide_capture_action",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "variant": "SEGMENTATION_FAILURE"
+    }
+  ]
+}

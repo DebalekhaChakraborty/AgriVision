@@ -1,0 +1,267 @@
+{
+  "claim_boundary": "constructed fixture; demonstrates the causal chain, not detector accuracy",
+  "condition_model_invoked": true,
+  "decisions": [
+    {
+      "advisory_gating_permitted": false,
+      "automated": false,
+      "blocking": false,
+      "canonical_image_sha256": "18c170b39110af4511c1980f938152ffa0a19e98b1b65384314d62a9332269b0",
+      "contract_version": "phase3-decision-1.0.0",
+      "evidence_maturity": "CALIBRATED",
+      "explanation": "No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.",
+      "human_action_required": false,
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "reason_code": "CAPTURE_ACCEPTABLE",
+      "selected_action": "NONE",
+      "state_after": "ELIGIBLE_FOR_INFERENCE",
+      "state_before": "ARTIFACTS_ASSESSED",
+      "triggering_evidence_ids": [
+        "roi.high_frequency_ratio",
+        "roi.contrast_score"
+      ]
+    }
+  ],
+  "final_state": "COMPLETE",
+  "policy_fingerprints": {
+    "artifact_policy": "b3cd5db5ca193027",
+    "highlight_policy": "10757655e4c34533",
+    "quality_policy": "e6bd2bee4f852f37",
+    "remediation_policy": "225b43230901b0eb",
+    "roi_policy_lock": "15b7fb0908d6d622",
+    "roi_policy_threshold": "78b1e2151773787a",
+    "visibility_policy": "213bac848e52951f"
+  },
+  "run_id": "advisory_glare",
+  "scenario": "advisory_glare",
+  "step_count": 10,
+  "steps": [
+    {
+      "decision_reason": "",
+      "evidence_ids": [
+        "input.decodable",
+        "input.dimensions"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "height": 384,
+        "valid": true,
+        "width": 384
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {
+        "canonical_image_sha256": "18c170b39110af4511c1980f938152ffa0a19e98b1b65384314d62a9332269b0"
+      },
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "INPUT_VALIDATED",
+      "state_before": "RECEIVED",
+      "step_id": 1,
+      "tool_name": "validate_input"
+    },
+    {
+      "decision_reason": "Subject isolated; ROI measurement permitted.",
+      "evidence_ids": [
+        "foreground.valid",
+        "foreground.component_count",
+        "foreground.foreground_fraction"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "component_count": 1,
+        "foreground_fraction": 0.257507,
+        "invalid_reasons": [],
+        "method": "saturation_otsu",
+        "valid": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "18c170b39110af4511c1980f938152ffa0a19e98b1b65384314d62a9332269b0"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "FOREGROUND_ASSESSED",
+      "state_before": "INPUT_VALIDATED",
+      "step_id": 2,
+      "tool_name": "segment_foreground"
+    },
+    {
+      "decision_reason": "Subject-restricted metrics against the Phase 2c-B locked policy (PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL).",
+      "evidence_ids": [
+        "roi.high_frequency_ratio",
+        "roi.contrast_score",
+        "roi.mean_luminance.underexposed",
+        "roi.shadow_clip_fraction",
+        "roi.highlight_clip_fraction"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "contrast_score": 0.831373,
+        "focus_floor": 0.318197637796402,
+        "high_frequency_ratio": 0.718056,
+        "highlight_clip_fraction": 0.023492,
+        "mean_luminance": 0.619187,
+        "quality_flags": [],
+        "scope": "FOREGROUND_MASKED",
+        "shadow_clip_fraction": 7.9e-05
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "18c170b39110af4511c1980f938152ffa0a19e98b1b65384314d62a9332269b0"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "78b1e2151773787a",
+      "selected_action": "",
+      "state_after": "QUALITY_ASSESSED",
+      "state_before": "FOREGROUND_ASSESSED",
+      "step_id": 3,
+      "tool_name": "assess_capture_quality"
+    },
+    {
+      "decision_reason": "Local highlight evidence. ADVISORY: 0.500 detection on unseen groups with 0.167 false positives, below the 0.70 floor that would permit it to block.",
+      "evidence_ids": [
+        "artifact.glare"
+      ],
+      "evidence_maturity": "ADVISORY",
+      "evidence_summary": {
+        "glare_flag": true,
+        "largest_component_fraction": 0.17971,
+        "max_local_luminance_excess": 93.331
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "18c170b39110af4511c1980f938152ffa0a19e98b1b65384314d62a9332269b0"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "10757655e4c34533",
+      "selected_action": "",
+      "state_after": "ARTIFACTS_ASSESSED",
+      "state_before": "QUALITY_ASSESSED",
+      "step_id": 4,
+      "tool_name": "assess_local_highlights"
+    },
+    {
+      "decision_reason": "Subject-completeness geometry, RECORDED ONLY. This detector reached 0.40 in controlled evaluation and never fired; it is UNQUALIFIED and cannot contribute to any decision. Coverage failures are reported by the foreground guards instead.",
+      "evidence_ids": [],
+      "evidence_maturity": "UNQUALIFIED",
+      "evidence_summary": {
+        "hull_fill": 1.003316,
+        "insufficiency_reasons": [],
+        "solidity": 0.995098,
+        "visibility_sufficient": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "18c170b39110af4511c1980f938152ffa0a19e98b1b65384314d62a9332269b0"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "213bac848e52951f",
+      "selected_action": "",
+      "state_after": "ARTIFACTS_ASSESSED",
+      "state_before": "ARTIFACTS_ASSESSED",
+      "step_id": 5,
+      "tool_name": "assess_visibility"
+    },
+    {
+      "decision_reason": "No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.",
+      "evidence_ids": [
+        "roi.high_frequency_ratio",
+        "roi.contrast_score"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "artifact_flags": [
+          "GLARE_RISK"
+        ],
+        "foreground_valid": true,
+        "quality_flags": [],
+        "remediation_available": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "18c170b39110af4511c1980f938152ffa0a19e98b1b65384314d62a9332269b0"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "selected_action": "NONE",
+      "state_after": "DECISION_MADE",
+      "state_before": "ARTIFACTS_ASSESSED",
+      "step_id": 6,
+      "tool_name": "decide_capture_action"
+    },
+    {
+      "decision_reason": "No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.",
+      "evidence_ids": [
+        "roi.high_frequency_ratio",
+        "roi.contrast_score"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "after_remediation": false,
+        "quality_flags": []
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "NONE",
+      "state_after": "ELIGIBLE_FOR_INFERENCE",
+      "state_before": "DECISION_MADE",
+      "step_id": 7,
+      "tool_name": "decide_capture_action"
+    },
+    {
+      "decision_reason": "Local highlight evidence is present. It is ADVISORY: the detector reached 0.500 on unseen groups against a 0.70 floor, so the capture is NOT blocked on it. The suggestion to reposition the light accompanies the result for a person to act on or ignore.",
+      "evidence_ids": [
+        "artifact.glare"
+      ],
+      "evidence_maturity": "ADVISORY",
+      "evidence_summary": {
+        "advisory_only": true,
+        "blocks_inference": false,
+        "largest_component_fraction": 0.17971
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "REQUEST_REPOSITION_LIGHT",
+      "state_after": "ELIGIBLE_FOR_INFERENCE",
+      "state_before": "ELIGIBLE_FOR_INFERENCE",
+      "step_id": 8,
+      "tool_name": "decide_capture_action"
+    },
+    {
+      "decision_reason": "Visible-condition inference on the canonical image. Confidence is RECORDED ONLY: no confidence threshold has been calibrated, so no escalation is triggered by it.",
+      "evidence_ids": [],
+      "evidence_maturity": "UNQUALIFIED",
+      "evidence_summary": {
+        "confidence": 0.411366,
+        "fruit_type": "orange",
+        "inference_executed": true,
+        "visible_condition": "deteriorated"
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "18c170b39110af4511c1980f938152ffa0a19e98b1b65384314d62a9332269b0"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "CONDITION_INFERRED",
+      "state_before": "ELIGIBLE_FOR_INFERENCE",
+      "step_id": 9,
+      "tool_name": "run_condition_model"
+    },
+    {
+      "decision_reason": "Inspection complete.",
+      "evidence_ids": [],
+      "evidence_maturity": "",
+      "evidence_summary": {
+        "final_state": "COMPLETE"
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "COMPLETE",
+      "state_before": "CONDITION_INFERRED",
+      "step_id": 10,
+      "tool_name": "finalize_result"
+    }
+  ],
+  "trace_version": "phase3-agent-trace-1.0.0"
+}

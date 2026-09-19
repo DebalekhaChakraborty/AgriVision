@@ -105,15 +105,26 @@ Branch: `competition/opencv-aws-2026`
 
 ## 11. Agentic Vision trace
 
-- [ ] Trace schema documented and versioned
-- [ ] Every inspection produces a complete, replayable trace
-- [ ] Traces name the OpenCV metric, threshold and resulting action
-- [ ] Traces demonstrate tool calls caused by visual evidence
-- [ ] Traces demonstrate re-analysis caused by visual evidence
-- [ ] Traces demonstrate human-approval requests caused by visual evidence
-- [ ] Control decisions are deterministic, not model-generated
-- [ ] System demonstrably works with Bedrock unavailable
-- [ ] Worked trace walkthrough included in the report
+- [x] Trace schema documented and versioned — `AgentTrace`, `phase3-agent-trace-1.0.0`
+- [x] Every inspection produces a complete, replayable trace — completeness 12/12;
+      timing excluded from the deterministic payload so runs compare byte-identical
+- [x] Traces name the OpenCV metric, threshold and resulting action — e.g.
+      `high_frequency_ratio 0.2635` against floor `0.3182` → `REQUEST_RECAPTURE`
+- [x] Traces demonstrate tool calls caused by visual evidence — counterfactual:
+      one base subject, identical policy, four distinct first actions
+- [x] Traces demonstrate re-analysis caused by visual evidence — remediation forces
+      re-segmentation and re-measurement; a second attempt is unreachable
+- [x] Traces demonstrate human-approval requests caused by visual evidence — three
+      human-action terminals, each carrying its triggering evidence and maturity
+- [x] Control decisions are deterministic, not model-generated — no language model
+      participates; `resolve_tool` refuses anything outside the closed vocabulary
+- [x] System demonstrably works with Bedrock unavailable — no Bedrock exists, and
+      the suite also runs with the ONNX artifact absent (636 passed, 94 skipped)
+- [ ] Worked trace walkthrough included in the report — six curated traces exist in
+      `results/phase3/traces/`; the report itself is Phase 7
+
+> Evidence maturity is carried on every step. A reader can tell a `CALIBRATED`
+> finding from an `ADVISORY` one without knowing which detectors were calibrated.
 
 ## 12. Technical report
 

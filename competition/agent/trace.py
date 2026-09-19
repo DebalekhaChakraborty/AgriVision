@@ -103,3 +103,155 @@ def build_remediation_trace(steps: list[TraceStep]) -> RemediationTrace:
     for step in steps:
         trace.add(step.tool, step.summary, step.inputs, step.outputs)
     return trace
+
+
+# =============================================================================
+# Phase 3 agent trace
+# =============================================================================
+#
+# `RemediationTrace` above records one bounded remediation attempt and stays
+# exactly as Phase 1b left it. The agent trace records a whole run: which state
+# the machine was in, which tool it called, what that tool measured, what the
+# policy concluded, and where it went next.
+#
+# The extra fields exist to answer one question without interpretation — *did an
+# OpenCV measurement change what the system did?* A reader should be able to
+# point at a number, then at the decision it caused, then at the tool that
+# decision invoked, without knowing anything about the implementation.
+#
+# Timing is carried but excluded from the deterministic payload, so two runs of
+# the same image compare equal while still being measurable. No filesystem path
+# and no image bytes ever appear: images are named by content hash only.
+
+AGENT_TRACE_VERSION = "phase3-agent-trace-1.0.0"
+
+
+@dataclass(frozen=True)
+class AgentTraceStep:
+    """One tool invocation, with the causal context that makes it auditable."""
+
+    step_id: int
+    state_before: str
+    tool_name: str
+    state_after: str
+    evidence_summary: dict = field(default_factory=dict)
+    evidence_ids: list = field(default_factory=list)
+    input_artifact_hashes: dict = field(default_factory=dict)
+    output_artifact_hashes: dict = field(default_factory=dict)
+    decision_reason: str = ""
+    selected_action: str = ""
+    evidence_maturity: str = ""
+    policy_fingerprint: str = ""
+    duration_ms: float = 0.0
+    timestamp: str = ""
+
+    def to_dict(self, include_timing: bool = True) -> dict:
+        data = {
+            "step_id": self.step_id,
+            "state_before": self.state_before,
+            "tool_name": self.tool_name,
+            "state_after": self.state_after,
+            "evidence_summary": dict(self.evidence_summary),
+            "evidence_ids": list(self.evidence_ids),
+            "input_artifact_hashes": dict(self.input_artifact_hashes),
+            "output_artifact_hashes": dict(self.output_artifact_hashes),
+            "decision_reason": self.decision_reason,
+            "selected_action": self.selected_action,
+            "evidence_maturity": self.evidence_maturity,
+            "policy_fingerprint": self.policy_fingerprint,
+        }
+        if include_timing:
+            data["duration_ms"] = self.duration_ms
+            data["timestamp"] = self.timestamp
+        return data
+
+
+@dataclass
+class AgentTrace:
+    """Ordered causal record of one inspection run."""
+
+    run_id: str = ""
+    steps: list = field(default_factory=list)
+    trace_version: str = AGENT_TRACE_VERSION
+
+    def add(
+        self,
+        state_before,
+        tool_name,
+        state_after,
+        evidence_summary: dict | None = None,
+        evidence_ids: list | None = None,
+        input_artifact_hashes: dict | None = None,
+        output_artifact_hashes: dict | None = None,
+        decision_reason: str = "",
+        selected_action: str = "",
+        evidence_maturity: str = "",
+        policy_fingerprint: str = "",
+        duration_ms: float = 0.0,
+        timestamp: str = "",
+    ) -> AgentTraceStep:
+        step = AgentTraceStep(
+            step_id=len(self.steps) + 1,
+            state_before=getattr(state_before, "value", state_before),
+            tool_name=getattr(tool_name, "value", tool_name),
+            state_after=getattr(state_after, "value", state_after),
+            evidence_summary=evidence_summary or {},
+            evidence_ids=list(evidence_ids or []),
+            input_artifact_hashes=input_artifact_hashes or {},
+            output_artifact_hashes=output_artifact_hashes or {},
+            decision_reason=decision_reason,
+            selected_action=selected_action,
+            evidence_maturity=evidence_maturity,
+            policy_fingerprint=policy_fingerprint,
+            duration_ms=duration_ms,
+            timestamp=timestamp,
+        )
+        self.steps.append(step)
+        return step
+
+    def to_dict(self, include_timing: bool = True) -> dict:
+        data = {
+            "trace_version": self.trace_version,
+            "run_id": self.run_id,
+            "step_count": len(self.steps),
+            "steps": [step.to_dict(include_timing) for step in self.steps],
+        }
+        if include_timing:
+            data["total_duration_ms"] = round(
+                sum(step.duration_ms for step in self.steps), 3
+            )
+        return data
+
+    def deterministic_payload(self) -> dict:
+        """Everything except timing, so identical inputs give identical bytes."""
+        payload = self.to_dict(include_timing=False)
+        payload.pop("run_id", None)
+        return payload
+
+    def to_json(self, indent: int | None = 2, include_timing: bool = True) -> str:
+        return json.dumps(
+            self.to_dict(include_timing), indent=indent, sort_keys=True
+        )
+
+    @property
+    def tool_sequence(self) -> list:
+        return [step.tool_name for step in self.steps]
+
+    @property
+    def state_sequence(self) -> list:
+        """States in order of entry — the spine a reader follows."""
+        if not self.steps:
+            return []
+        sequence = [self.steps[0].state_before]
+        for step in self.steps:
+            if step.state_after != sequence[-1]:
+                sequence.append(step.state_after)
+        return sequence
+
+    def called(self, tool_name) -> bool:
+        return getattr(tool_name, "value", tool_name) in self.tool_sequence
+
+    @property
+    def decision_steps(self) -> list:
+        """Steps that selected an action — the ones attribution is measured on."""
+        return [step for step in self.steps if step.selected_action]

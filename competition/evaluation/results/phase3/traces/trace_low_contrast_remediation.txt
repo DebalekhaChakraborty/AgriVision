@@ -1,0 +1,120 @@
+======================================================================
+INSPECTION moderate_low_contrast
+======================================================================
+Final state       : COMPLETE
+Condition model   : INVOKED
+Foreground        : valid
+Remediation       : APPLY_CLAHE (accepted)
+Visible condition : deteriorated (orange), confidence 0.532 — recorded, not thresholded
+----------------------------------------------------------------------
+
+Step 1 — validate_input
+  State: RECEIVED -> INPUT_VALIDATED
+  Evidence maturity: CALIBRATED (calibrated)
+
+Step 2 — segment_foreground
+  State: INPUT_VALIDATED -> FOREGROUND_ASSESSED
+  Subject fraction: 0.2378
+  Mask components: 1
+  Evidence maturity: CALIBRATED (calibrated)
+  Reason: Subject isolated; ROI measurement permitted.
+
+Step 3 — assess_capture_quality
+  State: FOREGROUND_ASSESSED -> QUALITY_ASSESSED
+  ROI high-frequency ratio: 0.8455
+  Threshold: 0.3182
+  ROI mean luminance: 0.5632
+  ROI contrast: 0.1294
+  Shadow clipping: 0
+  Highlight clipping: 0
+  Quality flags: LOW_CONTRAST
+  Evidence maturity: CALIBRATED (calibrated)
+  Reason: Subject-restricted metrics against the Phase 2c-B locked policy (PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL).
+
+Step 4 — assess_local_highlights
+  State: QUALITY_ASSESSED -> ARTIFACTS_ASSESSED
+  Largest highlight: 0
+  Peak local excess (L*): 18.588
+  Glare finding: no
+  Evidence maturity: ADVISORY (ADVISORY - cannot block)
+  Reason: Local highlight evidence. ADVISORY: 0.500 detection on unseen groups with 0.167 false positives, below the 0.70 floor that would permit it to block.
+
+Step 5 — assess_visibility
+  Hull fill: 0.9969
+  Solidity: 0.9882
+  Visibility sufficient: yes
+  Evidence maturity: UNQUALIFIED (RECORDED ONLY - cannot influence a decision)
+  Reason: Subject-completeness geometry, RECORDED ONLY. This detector reached 0.40 in controlled evaluation and never fired; it is UNQUALIFIED and cannot contribute to any decision. Coverage failures are reported by the foreground guards instead.
+
+Step 6 — decide_capture_action
+  State: ARTIFACTS_ASSESSED -> DECISION_MADE
+  Quality flags: LOW_CONTRAST
+  Artifact flags: MODERATE_LOW_CONTRAST
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: APPLY_CLAHE
+  Reason: Foreground contrast is 0.129, below the advisory limit of 0.1314 but above the severe limit. Local equalisation is permitted, subject to the existing harm guard re-checking the result.
+
+Step 7 — decide_capture_action
+  State: DECISION_MADE -> REMEDIATION_SELECTED
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: APPLY_CLAHE
+  Reason: Foreground contrast is 0.129, below the advisory limit of 0.1314 but above the severe limit. Local equalisation is permitted, subject to the existing harm guard re-checking the result.
+
+Step 8 — apply_clahe
+  State: REMEDIATION_SELECTED -> REMEDIATED
+  Action: APPLY_CLAHE
+  Reason: A new canonical image now exists. Every measurement taken before this point describes a different image and is discarded.
+
+Step 9 — segment_foreground
+  State: REMEDIATED -> RESEGMENTED
+  Subject fraction: 0.242
+  Mask components: 1
+  Evidence maturity: CALIBRATED (calibrated)
+  Reason: Subject isolated; ROI measurement permitted.
+
+Step 10 — assess_capture_quality
+  State: RESEGMENTED -> REASSESSED
+  ROI high-frequency ratio: 0.9038
+  Threshold: 0.3182
+  ROI mean luminance: 0.5758
+  ROI contrast: 0.1961
+  Shadow clipping: 0
+  Highlight clipping: 0
+  Evidence maturity: CALIBRATED (calibrated)
+  Reason: Subject-restricted metrics against the Phase 2c-B locked policy (PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL).
+
+Step 11 — assess_local_highlights
+  Largest highlight: 0
+  Peak local excess (L*): 29.887
+  Glare finding: no
+  Evidence maturity: ADVISORY (ADVISORY - cannot block)
+  Reason: Local highlight evidence. ADVISORY: 0.500 detection on unseen groups with 0.167 false positives, below the 0.70 floor that would permit it to block.
+
+Step 12 — assess_visibility
+  Hull fill: 0.9944
+  Solidity: 0.9858
+  Visibility sufficient: yes
+  Evidence maturity: UNQUALIFIED (RECORDED ONLY - cannot influence a decision)
+  Reason: Subject-completeness geometry, RECORDED ONLY. This detector reached 0.40 in controlled evaluation and never fired; it is UNQUALIFIED and cannot contribute to any decision. Coverage failures are reported by the foreground guards instead.
+
+Step 13 — reassess_capture
+  Verdict: ACCEPT_REMEDIATION
+  Evidence maturity: PROVISIONAL (provisional threshold)
+  Reason: Targeted metric contrast_score met its criterion (improved by the required margin) with no guardrail violation.
+
+Step 14 — decide_capture_action
+  State: REASSESSED -> ELIGIBLE_FOR_INFERENCE
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: NONE
+  Reason: No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.
+
+Step 15 — run_condition_model
+  State: ELIGIBLE_FOR_INFERENCE -> CONDITION_INFERRED
+  Model confidence: 0.5325
+  Condition model invoked: YES
+  Evidence maturity: UNQUALIFIED (RECORDED ONLY - cannot influence a decision)
+  Reason: Visible-condition inference on the canonical image. Confidence is RECORDED ONLY: no confidence threshold has been calibrated, so no escalation is triggered by it.
+
+Step 16 — finalize_result
+  State: CONDITION_INFERRED -> COMPLETE
+  Reason: Inspection complete.

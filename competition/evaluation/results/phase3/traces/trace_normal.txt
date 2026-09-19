@@ -1,0 +1,68 @@
+======================================================================
+INSPECTION normal_acceptable_capture
+======================================================================
+Final state       : COMPLETE
+Condition model   : INVOKED
+Foreground        : valid
+Visible condition : deteriorated (orange), confidence 0.387 — recorded, not thresholded
+----------------------------------------------------------------------
+
+Step 1 — validate_input
+  State: RECEIVED -> INPUT_VALIDATED
+  Evidence maturity: CALIBRATED (calibrated)
+
+Step 2 — segment_foreground
+  State: INPUT_VALIDATED -> FOREGROUND_ASSESSED
+  Subject fraction: 0.2575
+  Mask components: 1
+  Evidence maturity: CALIBRATED (calibrated)
+  Reason: Subject isolated; ROI measurement permitted.
+
+Step 3 — assess_capture_quality
+  State: FOREGROUND_ASSESSED -> QUALITY_ASSESSED
+  ROI high-frequency ratio: 0.8416
+  Threshold: 0.3182
+  ROI mean luminance: 0.5652
+  ROI contrast: 0.651
+  Shadow clipping: 0.0001
+  Highlight clipping: 0
+  Evidence maturity: CALIBRATED (calibrated)
+  Reason: Subject-restricted metrics against the Phase 2c-B locked policy (PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL).
+
+Step 4 — assess_local_highlights
+  State: QUALITY_ASSESSED -> ARTIFACTS_ASSESSED
+  Largest highlight: 0
+  Peak local excess (L*): 70.904
+  Glare finding: no
+  Evidence maturity: ADVISORY (ADVISORY - cannot block)
+  Reason: Local highlight evidence. ADVISORY: 0.500 detection on unseen groups with 0.167 false positives, below the 0.70 floor that would permit it to block.
+
+Step 5 — assess_visibility
+  Hull fill: 1.0033
+  Solidity: 0.995
+  Visibility sufficient: yes
+  Evidence maturity: UNQUALIFIED (RECORDED ONLY - cannot influence a decision)
+  Reason: Subject-completeness geometry, RECORDED ONLY. This detector reached 0.40 in controlled evaluation and never fired; it is UNQUALIFIED and cannot contribute to any decision. Coverage failures are reported by the foreground guards instead.
+
+Step 6 — decide_capture_action
+  State: ARTIFACTS_ASSESSED -> DECISION_MADE
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: NONE
+  Reason: No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.
+
+Step 7 — decide_capture_action
+  State: DECISION_MADE -> ELIGIBLE_FOR_INFERENCE
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: NONE
+  Reason: No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.
+
+Step 8 — run_condition_model
+  State: ELIGIBLE_FOR_INFERENCE -> CONDITION_INFERRED
+  Model confidence: 0.3871
+  Condition model invoked: YES
+  Evidence maturity: UNQUALIFIED (RECORDED ONLY - cannot influence a decision)
+  Reason: Visible-condition inference on the canonical image. Confidence is RECORDED ONLY: no confidence threshold has been calibrated, so no escalation is triggered by it.
+
+Step 9 — finalize_result
+  State: CONDITION_INFERRED -> COMPLETE
+  Reason: Inspection complete.

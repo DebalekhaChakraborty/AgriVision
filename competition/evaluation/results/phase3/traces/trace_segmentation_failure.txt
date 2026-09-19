@@ -1,0 +1,39 @@
+======================================================================
+INSPECTION segmentation_failure
+======================================================================
+Final state       : REQUEST_RECAPTURE
+Condition model   : NOT INVOKED
+Foreground        : INVALID (NO_DOMINANT_COMPONENT)
+Human action      : REQUEST_RECAPTURE (required)
+----------------------------------------------------------------------
+
+Step 1 — validate_input
+  State: RECEIVED -> INPUT_VALIDATED
+  Evidence maturity: CALIBRATED (calibrated)
+
+Step 2 — segment_foreground
+  State: INPUT_VALIDATED -> FOREGROUND_ASSESSED
+  Subject fraction: 0.257
+  Mask components: 4
+  Invalid reasons: NO_DOMINANT_COMPONENT
+  Evidence maturity: CALIBRATED (calibrated)
+  Reason: Mask failed its validity guards; ROI measurement refused.
+
+Step 3 — decide_capture_action
+  State: FOREGROUND_ASSESSED -> DECISION_MADE
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: REQUEST_RECAPTURE
+  Reason: Foreground isolation did not produce a mask that passed its validity guards. Every subject-restricted measurement would be describing an unknown region, so none was taken and the capture is referred to a person. This is a coverage failure, not a claim that anything is covering the produce.
+
+Step 4 — decide_capture_action
+  State: DECISION_MADE -> INSUFFICIENT_VISUAL_EVIDENCE
+  Invalid reasons: NO_DOMINANT_COMPONENT
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: REQUEST_RECAPTURE
+  Reason: No subject region passed its validity guards, so no ROI detector ran and no artefact evidence exists. Recorded as a FOREGROUND / COVERAGE failure; nothing is claimed about occlusion.
+
+Step 5 — request_recapture
+  State: INSUFFICIENT_VISUAL_EVIDENCE -> REQUEST_RECAPTURE
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: REQUEST_RECAPTURE
+  Reason: Foreground isolation did not produce a mask that passed its validity guards. Every subject-restricted measurement would be describing an unknown region, so none was taken and the capture is referred to a person. This is a coverage failure, not a claim that anything is covering the produce.

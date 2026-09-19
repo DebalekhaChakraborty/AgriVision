@@ -1,0 +1,482 @@
+{
+  "claim_boundary": "constructed fixture; demonstrates the causal chain, not detector accuracy",
+  "condition_model_invoked": true,
+  "decisions": [
+    {
+      "advisory_gating_permitted": false,
+      "automated": true,
+      "blocking": false,
+      "canonical_image_sha256": "2752a3c202f2cf4ea657215a9074f090f51f07c67e62e8d434bb405dc60f5d1f",
+      "contract_version": "phase3-decision-1.0.0",
+      "evidence_maturity": "CALIBRATED",
+      "explanation": "Mean luminance 0.048 is outside the band [0.25, 0.8]; applying gamma 0.263 toward 0.45.",
+      "human_action_required": false,
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "reason_code": "UNDEREXPOSED_RECOVERABLE",
+      "selected_action": "APPLY_GAMMA",
+      "state_after": "REMEDIATION_SELECTED",
+      "state_before": "ARTIFACTS_ASSESSED",
+      "triggering_evidence_ids": [
+        "roi.mean_luminance.underexposed"
+      ]
+    },
+    {
+      "advisory_gating_permitted": false,
+      "automated": false,
+      "blocking": false,
+      "canonical_image_sha256": "4e9071b544218c60e1e2ce1df14a589f022109435b7dc653307359b20980ef40",
+      "contract_version": "phase3-decision-1.0.0",
+      "evidence_maturity": "CALIBRATED",
+      "explanation": "No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.",
+      "human_action_required": false,
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "reason_code": "CAPTURE_ACCEPTABLE",
+      "selected_action": "NONE",
+      "state_after": "ELIGIBLE_FOR_INFERENCE",
+      "state_before": "REASSESSED",
+      "triggering_evidence_ids": [
+        "roi.high_frequency_ratio",
+        "roi.contrast_score"
+      ]
+    }
+  ],
+  "final_state": "COMPLETE",
+  "policy_fingerprints": {
+    "artifact_policy": "b3cd5db5ca193027",
+    "highlight_policy": "10757655e4c34533",
+    "quality_policy": "e6bd2bee4f852f37",
+    "remediation_policy": "225b43230901b0eb",
+    "roi_policy_lock": "15b7fb0908d6d622",
+    "roi_policy_threshold": "78b1e2151773787a",
+    "visibility_policy": "213bac848e52951f"
+  },
+  "run_id": "recoverable_underexposure",
+  "scenario": "recoverable_underexposure",
+  "step_count": 16,
+  "steps": [
+    {
+      "decision_reason": "",
+      "evidence_ids": [
+        "input.decodable",
+        "input.dimensions"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "height": 384,
+        "valid": true,
+        "width": 384
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {
+        "canonical_image_sha256": "2752a3c202f2cf4ea657215a9074f090f51f07c67e62e8d434bb405dc60f5d1f"
+      },
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "INPUT_VALIDATED",
+      "state_before": "RECEIVED",
+      "step_id": 1,
+      "tool_name": "validate_input"
+    },
+    {
+      "decision_reason": "Subject isolated; ROI measurement permitted.",
+      "evidence_ids": [
+        "foreground.valid",
+        "foreground.component_count",
+        "foreground.foreground_fraction"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "component_count": 1,
+        "foreground_fraction": 0.257521,
+        "invalid_reasons": [],
+        "method": "saturation_otsu",
+        "valid": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "2752a3c202f2cf4ea657215a9074f090f51f07c67e62e8d434bb405dc60f5d1f"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "FOREGROUND_ASSESSED",
+      "state_before": "INPUT_VALIDATED",
+      "step_id": 2,
+      "tool_name": "segment_foreground"
+    },
+    {
+      "decision_reason": "Subject-restricted metrics against the Phase 2c-B locked policy (PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL).",
+      "evidence_ids": [
+        "roi.high_frequency_ratio",
+        "roi.contrast_score",
+        "roi.mean_luminance.underexposed",
+        "roi.shadow_clip_fraction",
+        "roi.highlight_clip_fraction"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "contrast_score": 0.066667,
+        "focus_floor": 0.318197637796402,
+        "high_frequency_ratio": 0.851806,
+        "highlight_clip_fraction": 0.0,
+        "mean_luminance": 0.047974,
+        "quality_flags": [
+          "UNDEREXPOSED",
+          "LOW_CONTRAST",
+          "SHADOW_CLIPPING"
+        ],
+        "scope": "FOREGROUND_MASKED",
+        "shadow_clip_fraction": 0.086035
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "2752a3c202f2cf4ea657215a9074f090f51f07c67e62e8d434bb405dc60f5d1f"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "78b1e2151773787a",
+      "selected_action": "",
+      "state_after": "QUALITY_ASSESSED",
+      "state_before": "FOREGROUND_ASSESSED",
+      "step_id": 3,
+      "tool_name": "assess_capture_quality"
+    },
+    {
+      "decision_reason": "Local highlight evidence. ADVISORY: 0.500 detection on unseen groups with 0.167 false positives, below the 0.70 floor that would permit it to block.",
+      "evidence_ids": [
+        "artifact.glare"
+      ],
+      "evidence_maturity": "ADVISORY",
+      "evidence_summary": {
+        "glare_flag": false,
+        "largest_component_fraction": 0.0,
+        "max_local_luminance_excess": 11.111
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "2752a3c202f2cf4ea657215a9074f090f51f07c67e62e8d434bb405dc60f5d1f"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "10757655e4c34533",
+      "selected_action": "",
+      "state_after": "ARTIFACTS_ASSESSED",
+      "state_before": "QUALITY_ASSESSED",
+      "step_id": 4,
+      "tool_name": "assess_local_highlights"
+    },
+    {
+      "decision_reason": "Subject-completeness geometry, RECORDED ONLY. This detector reached 0.40 in controlled evaluation and never fired; it is UNQUALIFIED and cannot contribute to any decision. Coverage failures are reported by the foreground guards instead.",
+      "evidence_ids": [],
+      "evidence_maturity": "UNQUALIFIED",
+      "evidence_summary": {
+        "hull_fill": 1.003369,
+        "insufficiency_reasons": [],
+        "solidity": 0.995151,
+        "visibility_sufficient": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "2752a3c202f2cf4ea657215a9074f090f51f07c67e62e8d434bb405dc60f5d1f"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "213bac848e52951f",
+      "selected_action": "",
+      "state_after": "ARTIFACTS_ASSESSED",
+      "state_before": "ARTIFACTS_ASSESSED",
+      "step_id": 5,
+      "tool_name": "assess_visibility"
+    },
+    {
+      "decision_reason": "Mean luminance 0.048 is outside the band [0.25, 0.8]; applying gamma 0.263 toward 0.45.",
+      "evidence_ids": [
+        "roi.mean_luminance.underexposed"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "artifact_flags": [
+          "SEVERE_LOW_CONTRAST"
+        ],
+        "foreground_valid": true,
+        "quality_flags": [
+          "UNDEREXPOSED",
+          "LOW_CONTRAST",
+          "SHADOW_CLIPPING"
+        ],
+        "remediation_available": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "2752a3c202f2cf4ea657215a9074f090f51f07c67e62e8d434bb405dc60f5d1f"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "selected_action": "APPLY_GAMMA",
+      "state_after": "DECISION_MADE",
+      "state_before": "ARTIFACTS_ASSESSED",
+      "step_id": 6,
+      "tool_name": "decide_capture_action"
+    },
+    {
+      "decision_reason": "Mean luminance 0.048 is outside the band [0.25, 0.8]; applying gamma 0.263 toward 0.45.",
+      "evidence_ids": [
+        "roi.mean_luminance.underexposed"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "action": "APPLY_GAMMA"
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "APPLY_GAMMA",
+      "state_after": "REMEDIATION_SELECTED",
+      "state_before": "DECISION_MADE",
+      "step_id": 7,
+      "tool_name": "decide_capture_action"
+    },
+    {
+      "decision_reason": "A new canonical image now exists. Every measurement taken before this point describes a different image and is discarded.",
+      "evidence_ids": [],
+      "evidence_maturity": "",
+      "evidence_summary": {
+        "applied": true,
+        "parameters": {
+          "colour_space": "CIELAB L* only",
+          "enhancement_version": "phase1b-enhancement-1.0.0",
+          "opencv_version": "5.0.0",
+          "operation": "gamma_correction",
+          "parameters": {
+            "gamma": 0.26291801286758926
+          },
+          "processing_ms": 3.9136039558798075
+        }
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "2752a3c202f2cf4ea657215a9074f090f51f07c67e62e8d434bb405dc60f5d1f"
+      },
+      "output_artifact_hashes": {
+        "canonical_image_sha256": "4e9071b544218c60e1e2ce1df14a589f022109435b7dc653307359b20980ef40"
+      },
+      "policy_fingerprint": "225b43230901b0eb",
+      "selected_action": "APPLY_GAMMA",
+      "state_after": "REMEDIATED",
+      "state_before": "REMEDIATION_SELECTED",
+      "step_id": 8,
+      "tool_name": "apply_gamma_correction"
+    },
+    {
+      "decision_reason": "Subject isolated; ROI measurement permitted.",
+      "evidence_ids": [
+        "foreground.valid",
+        "foreground.component_count",
+        "foreground.foreground_fraction"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "component_count": 1,
+        "foreground_fraction": 0.25253,
+        "invalid_reasons": [],
+        "method": "saturation_otsu",
+        "valid": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "4e9071b544218c60e1e2ce1df14a589f022109435b7dc653307359b20980ef40"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "RESEGMENTED",
+      "state_before": "REMEDIATED",
+      "step_id": 9,
+      "tool_name": "segment_foreground"
+    },
+    {
+      "decision_reason": "Subject-restricted metrics against the Phase 2c-B locked policy (PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL).",
+      "evidence_ids": [
+        "roi.high_frequency_ratio",
+        "roi.contrast_score",
+        "roi.mean_luminance.underexposed",
+        "roi.shadow_clip_fraction",
+        "roi.highlight_clip_fraction"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "contrast_score": 0.192157,
+        "focus_floor": 0.318197637796402,
+        "high_frequency_ratio": 0.837653,
+        "highlight_clip_fraction": 0.0,
+        "mean_luminance": 0.43902,
+        "quality_flags": [],
+        "scope": "FOREGROUND_MASKED",
+        "shadow_clip_fraction": 0.001853
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "4e9071b544218c60e1e2ce1df14a589f022109435b7dc653307359b20980ef40"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "78b1e2151773787a",
+      "selected_action": "",
+      "state_after": "REASSESSED",
+      "state_before": "RESEGMENTED",
+      "step_id": 10,
+      "tool_name": "assess_capture_quality"
+    },
+    {
+      "decision_reason": "Local highlight evidence. ADVISORY: 0.500 detection on unseen groups with 0.167 false positives, below the 0.70 floor that would permit it to block.",
+      "evidence_ids": [
+        "artifact.glare"
+      ],
+      "evidence_maturity": "ADVISORY",
+      "evidence_summary": {
+        "glare_flag": false,
+        "largest_component_fraction": 0.0,
+        "max_local_luminance_excess": 20.908
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "4e9071b544218c60e1e2ce1df14a589f022109435b7dc653307359b20980ef40"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "10757655e4c34533",
+      "selected_action": "",
+      "state_after": "REASSESSED",
+      "state_before": "REASSESSED",
+      "step_id": 11,
+      "tool_name": "assess_local_highlights"
+    },
+    {
+      "decision_reason": "Subject-completeness geometry, RECORDED ONLY. This detector reached 0.40 in controlled evaluation and never fired; it is UNQUALIFIED and cannot contribute to any decision. Coverage failures are reported by the foreground guards instead.",
+      "evidence_ids": [],
+      "evidence_maturity": "UNQUALIFIED",
+      "evidence_summary": {
+        "hull_fill": 0.993742,
+        "insufficiency_reasons": [],
+        "solidity": 0.985295,
+        "visibility_sufficient": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "4e9071b544218c60e1e2ce1df14a589f022109435b7dc653307359b20980ef40"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "213bac848e52951f",
+      "selected_action": "",
+      "state_after": "REASSESSED",
+      "state_before": "REASSESSED",
+      "step_id": 12,
+      "tool_name": "assess_visibility"
+    },
+    {
+      "decision_reason": "Targeted metric luminance_distance met its criterion (reached the target band) with no guardrail violation.",
+      "evidence_ids": [],
+      "evidence_maturity": "PROVISIONAL",
+      "evidence_summary": {
+        "deltas": {
+          "contrast_score": {
+            "after": 0.19215686274509805,
+            "before": 0.06666666666666667,
+            "delta": 0.12549019607843137,
+            "improved": true,
+            "metric": "contrast_score"
+          },
+          "highlight_clip_fraction": {
+            "after": 0.0,
+            "before": 0.0,
+            "delta": 0.0,
+            "improved": true,
+            "metric": "highlight_clip_fraction"
+          },
+          "laplacian_variance": {
+            "after": 123.46412878251306,
+            "before": 12.468331816027453,
+            "delta": 110.9957969664856,
+            "improved": true,
+            "metric": "laplacian_variance"
+          },
+          "luminance_distance": {
+            "after": 0.0,
+            "before": 0.2020260783848999,
+            "delta": -0.2020260783848999,
+            "improved": true,
+            "metric": "luminance_distance"
+          },
+          "mean_luminance": {
+            "after": 0.43902022392865625,
+            "before": 0.0479739216151001,
+            "delta": 0.39104630231355614,
+            "improved": true,
+            "metric": "mean_luminance"
+          },
+          "shadow_clip_fraction": {
+            "after": 0.0018529956763434219,
+            "before": 0.08603481421009665,
+            "delta": -0.08418181853375323,
+            "improved": true,
+            "metric": "shadow_clip_fraction"
+          }
+        },
+        "verdict": "ACCEPT_REMEDIATION"
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "4e9071b544218c60e1e2ce1df14a589f022109435b7dc653307359b20980ef40"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "225b43230901b0eb",
+      "selected_action": "",
+      "state_after": "REASSESSED",
+      "state_before": "REASSESSED",
+      "step_id": 13,
+      "tool_name": "reassess_capture"
+    },
+    {
+      "decision_reason": "No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.",
+      "evidence_ids": [
+        "roi.high_frequency_ratio",
+        "roi.contrast_score"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "after_remediation": true,
+        "quality_flags": []
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "NONE",
+      "state_after": "ELIGIBLE_FOR_INFERENCE",
+      "state_before": "REASSESSED",
+      "step_id": 14,
+      "tool_name": "decide_capture_action"
+    },
+    {
+      "decision_reason": "Visible-condition inference on the canonical image. Confidence is RECORDED ONLY: no confidence threshold has been calibrated, so no escalation is triggered by it.",
+      "evidence_ids": [],
+      "evidence_maturity": "UNQUALIFIED",
+      "evidence_summary": {
+        "confidence": 0.667943,
+        "fruit_type": "orange",
+        "inference_executed": true,
+        "visible_condition": "deteriorated"
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "4e9071b544218c60e1e2ce1df14a589f022109435b7dc653307359b20980ef40"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "CONDITION_INFERRED",
+      "state_before": "ELIGIBLE_FOR_INFERENCE",
+      "step_id": 15,
+      "tool_name": "run_condition_model"
+    },
+    {
+      "decision_reason": "Inspection complete.",
+      "evidence_ids": [],
+      "evidence_maturity": "",
+      "evidence_summary": {
+        "final_state": "COMPLETE"
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "COMPLETE",
+      "state_before": "CONDITION_INFERRED",
+      "step_id": 16,
+      "tool_name": "finalize_result"
+    }
+  ],
+  "trace_version": "phase3-agent-trace-1.0.0"
+}

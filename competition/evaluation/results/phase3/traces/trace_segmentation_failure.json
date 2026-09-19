@@ -1,0 +1,157 @@
+{
+  "claim_boundary": "constructed fixture; demonstrates the causal chain, not detector accuracy",
+  "condition_model_invoked": false,
+  "decisions": [
+    {
+      "advisory_gating_permitted": false,
+      "automated": false,
+      "blocking": true,
+      "canonical_image_sha256": "d732715db924115412fa97e31484fff10692978113f4fa10c86254f37851ced3",
+      "contract_version": "phase3-decision-1.0.0",
+      "evidence_maturity": "CALIBRATED",
+      "explanation": "Foreground isolation did not produce a mask that passed its validity guards. Every subject-restricted measurement would be describing an unknown region, so none was taken and the capture is referred to a person. This is a coverage failure, not a claim that anything is covering the produce.",
+      "human_action_required": true,
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE",
+      "selected_action": "REQUEST_RECAPTURE",
+      "state_after": "INSUFFICIENT_VISUAL_EVIDENCE",
+      "state_before": "FOREGROUND_ASSESSED",
+      "triggering_evidence_ids": [
+        "foreground.valid"
+      ]
+    }
+  ],
+  "final_state": "REQUEST_RECAPTURE",
+  "policy_fingerprints": {
+    "artifact_policy": "b3cd5db5ca193027",
+    "highlight_policy": "10757655e4c34533",
+    "quality_policy": "e6bd2bee4f852f37",
+    "remediation_policy": "225b43230901b0eb",
+    "roi_policy_lock": "15b7fb0908d6d622",
+    "roi_policy_threshold": "78b1e2151773787a",
+    "visibility_policy": "213bac848e52951f"
+  },
+  "run_id": "segmentation_failure",
+  "scenario": "segmentation_failure",
+  "step_count": 5,
+  "steps": [
+    {
+      "decision_reason": "",
+      "evidence_ids": [
+        "input.decodable",
+        "input.dimensions"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "height": 384,
+        "valid": true,
+        "width": 384
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {
+        "canonical_image_sha256": "d732715db924115412fa97e31484fff10692978113f4fa10c86254f37851ced3"
+      },
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "INPUT_VALIDATED",
+      "state_before": "RECEIVED",
+      "step_id": 1,
+      "tool_name": "validate_input"
+    },
+    {
+      "decision_reason": "Mask failed its validity guards; ROI measurement refused.",
+      "evidence_ids": [
+        "foreground.valid",
+        "foreground.component_count",
+        "foreground.foreground_fraction"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "component_count": 4,
+        "foreground_fraction": 0.257026,
+        "invalid_reasons": [
+          "NO_DOMINANT_COMPONENT"
+        ],
+        "method": "saturation_otsu",
+        "valid": false
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "d732715db924115412fa97e31484fff10692978113f4fa10c86254f37851ced3"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "FOREGROUND_ASSESSED",
+      "state_before": "INPUT_VALIDATED",
+      "step_id": 2,
+      "tool_name": "segment_foreground"
+    },
+    {
+      "decision_reason": "Foreground isolation did not produce a mask that passed its validity guards. Every subject-restricted measurement would be describing an unknown region, so none was taken and the capture is referred to a person. This is a coverage failure, not a claim that anything is covering the produce.",
+      "evidence_ids": [
+        "foreground.valid"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "artifact_flags": [],
+        "foreground_valid": false,
+        "quality_flags": [],
+        "remediation_available": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "d732715db924115412fa97e31484fff10692978113f4fa10c86254f37851ced3"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "selected_action": "REQUEST_RECAPTURE",
+      "state_after": "DECISION_MADE",
+      "state_before": "FOREGROUND_ASSESSED",
+      "step_id": 3,
+      "tool_name": "decide_capture_action"
+    },
+    {
+      "decision_reason": "No subject region passed its validity guards, so no ROI detector ran and no artefact evidence exists. Recorded as a FOREGROUND / COVERAGE failure; nothing is claimed about occlusion.",
+      "evidence_ids": [
+        "foreground.valid"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "condition_model_invoked": false,
+        "foreground_valid": false,
+        "invalid_reasons": [
+          "NO_DOMINANT_COMPONENT"
+        ],
+        "roi_detectors_run": false
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "REQUEST_RECAPTURE",
+      "state_after": "INSUFFICIENT_VISUAL_EVIDENCE",
+      "state_before": "DECISION_MADE",
+      "step_id": 4,
+      "tool_name": "decide_capture_action"
+    },
+    {
+      "decision_reason": "Foreground isolation did not produce a mask that passed its validity guards. Every subject-restricted measurement would be describing an unknown region, so none was taken and the capture is referred to a person. This is a coverage failure, not a claim that anything is covering the produce.",
+      "evidence_ids": [
+        "foreground.valid"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "human_action_required": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "d732715db924115412fa97e31484fff10692978113f4fa10c86254f37851ced3"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "selected_action": "REQUEST_RECAPTURE",
+      "state_after": "REQUEST_RECAPTURE",
+      "state_before": "INSUFFICIENT_VISUAL_EVIDENCE",
+      "step_id": 5,
+      "tool_name": "request_recapture"
+    }
+  ],
+  "trace_version": "phase3-agent-trace-1.0.0"
+}

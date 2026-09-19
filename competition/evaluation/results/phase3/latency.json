@@ -1,0 +1,91 @@
+{
+  "MODEL_INFERENCE_ms": 12.15,
+  "claim_boundary": "local CPU measurement on constructed fixtures; NOT an AWS latency figure and not a deployment measurement",
+  "model_available": true,
+  "paths": {
+    "NO_REMEDIATION": {
+      "condition_model_invoked": true,
+      "max_ms": 72.97,
+      "median_ms": 62.86,
+      "min_ms": 57.52,
+      "n": 15,
+      "orchestration_overhead_ms": 1.88,
+      "p95_ms": 72.97,
+      "stage_median_ms": {
+        "assess_capture_quality": 13.71,
+        "assess_local_highlights": 19.99,
+        "assess_visibility": 4.86,
+        "decide_capture_action": 0.08,
+        "finalize_result": 0.01,
+        "run_condition_model": 12.15,
+        "segment_foreground": 7.95,
+        "validate_input": 1.88
+      }
+    },
+    "RECAPTURE_TERMINAL": {
+      "condition_model_invoked": false,
+      "max_ms": 56.55,
+      "median_ms": 51.1,
+      "min_ms": 47.8,
+      "n": 15,
+      "orchestration_overhead_ms": 0.98,
+      "p95_ms": 56.55,
+      "stage_median_ms": {
+        "assess_capture_quality": 15.57,
+        "assess_local_highlights": 19.46,
+        "assess_visibility": 4.53,
+        "decide_capture_action": 0.17,
+        "request_recapture": 0.01,
+        "segment_foreground": 7.43,
+        "validate_input": 1.5
+      }
+    },
+    "REMEDIATION": {
+      "condition_model_invoked": true,
+      "max_ms": 113.82,
+      "median_ms": 109.03,
+      "min_ms": 102.93,
+      "n": 15,
+      "orchestration_overhead_ms": 2.21,
+      "p95_ms": 113.82,
+      "stage_median_ms": {
+        "apply_gamma_correction": 3.73,
+        "assess_capture_quality": 13.47,
+        "assess_local_highlights": 18.83,
+        "assess_visibility": 4.59,
+        "decide_capture_action": 0.01,
+        "finalize_result": 0.01,
+        "reassess_capture": 0.06,
+        "run_condition_model": 10.99,
+        "segment_foreground": 7.4,
+        "validate_input": 1.48
+      }
+    },
+    "SEGMENTATION_FAILURE": {
+      "condition_model_invoked": false,
+      "max_ms": 11.1,
+      "median_ms": 9.61,
+      "min_ms": 9.21,
+      "n": 15,
+      "orchestration_overhead_ms": 0.73,
+      "p95_ms": 11.1,
+      "stage_median_ms": {
+        "decide_capture_action": 0.06,
+        "request_recapture": 0.0,
+        "segment_foreground": 7.24,
+        "validate_input": 1.45
+      }
+    }
+  },
+  "resolution": "384x384",
+  "scenario_version": "phase3-scenarios-1.0.0",
+  "stage_breakdown_median_ms": {
+    "artifact_highlights": 19.99,
+    "artifact_visibility": 4.86,
+    "foreground": 7.95,
+    "model_inference": 12.15,
+    "quality": 13.71,
+    "reassessment": 0.06,
+    "remediation": 3.73
+  }
+}

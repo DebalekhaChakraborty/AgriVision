@@ -1,0 +1,913 @@
+{
+  "claim_boundary": "deterministic scenario-suite result on constructed fixtures; not real-world accuracy and not a perception benchmark",
+  "evaluated_count": 12,
+  "model_available": true,
+  "model_unavailable_reason": "",
+  "passed": 12,
+  "policy_fingerprints": {
+    "artifact_policy": "b3cd5db5ca193027",
+    "highlight_policy": "10757655e4c34533",
+    "quality_policy": "e6bd2bee4f852f37",
+    "remediation_policy": "225b43230901b0eb",
+    "roi_policy_lock": "15b7fb0908d6d622",
+    "roi_policy_threshold": "78b1e2151773787a",
+    "visibility_policy": "213bac848e52951f"
+  },
+  "scenario_count": 12,
+  "scenario_version": "phase3-scenarios-1.0.0",
+  "scenarios": [
+    {
+      "artifact_flags": [],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 1,
+        "remediation_attempts": 0,
+        "segmentation_calls": 1,
+        "steps": 9,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "A well-exposed, sharp subject with a full tonal range.",
+      "expected_final_state": "COMPLETE",
+      "expected_human_action": "",
+      "expected_model_invoked": true,
+      "expected_remediation": "",
+      "expected_tools": [
+        "segment_foreground",
+        "assess_capture_quality",
+        "run_condition_model"
+      ],
+      "expects_advisory": false,
+      "forbidden_tools": [
+        "apply_gamma_correction",
+        "apply_clahe",
+        "request_recapture"
+      ],
+      "name": "normal_acceptable_capture",
+      "observed_advisory": "",
+      "observed_final_state": "COMPLETE",
+      "observed_human_action": "",
+      "observed_model_invoked": true,
+      "observed_remediation": "",
+      "observed_remediation_accepted": false,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "ELIGIBLE_FOR_INFERENCE",
+        "CONDITION_INFERRED",
+        "COMPLETE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [],
+      "step_count": 9,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+    },
+    {
+      "artifact_flags": [],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 1,
+        "remediation_attempts": 1,
+        "segmentation_calls": 2,
+        "steps": 16,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "Dark enough to trip the calibrated ROI underexposure limit, with shadow clipping below the unrecoverable rung.",
+      "expected_final_state": "COMPLETE",
+      "expected_human_action": "",
+      "expected_model_invoked": true,
+      "expected_remediation": "APPLY_GAMMA",
+      "expected_tools": [
+        "apply_gamma_correction",
+        "reassess_capture",
+        "run_condition_model"
+      ],
+      "expects_advisory": false,
+      "forbidden_tools": [
+        "request_recapture"
+      ],
+      "name": "recoverable_underexposure",
+      "observed_advisory": "",
+      "observed_final_state": "COMPLETE",
+      "observed_human_action": "",
+      "observed_model_invoked": true,
+      "observed_remediation": "APPLY_GAMMA",
+      "observed_remediation_accepted": true,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "REMEDIATION_SELECTED",
+        "REMEDIATED",
+        "RESEGMENTED",
+        "REASSESSED",
+        "ELIGIBLE_FOR_INFERENCE",
+        "CONDITION_INFERRED",
+        "COMPLETE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_gamma_correction",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [],
+      "step_count": 16,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+    },
+    {
+      "artifact_flags": [
+        "SEVERE_LOW_CONTRAST"
+      ],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 0,
+        "remediation_attempts": 0,
+        "segmentation_calls": 1,
+        "steps": 7,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "Shadow clipping past the unrecoverable limit: the detail is not in the file, so no tone curve can return it.",
+      "expected_final_state": "REQUEST_RECAPTURE",
+      "expected_human_action": "REQUEST_RECAPTURE",
+      "expected_model_invoked": false,
+      "expected_remediation": "",
+      "expected_tools": [],
+      "expects_advisory": false,
+      "forbidden_tools": [
+        "run_condition_model",
+        "apply_gamma_correction"
+      ],
+      "name": "severe_darkness_clipping",
+      "observed_advisory": "",
+      "observed_final_state": "REQUEST_RECAPTURE",
+      "observed_human_action": "REQUEST_RECAPTURE",
+      "observed_model_invoked": false,
+      "observed_remediation": "",
+      "observed_remediation_accepted": false,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "REQUEST_RECAPTURE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [
+        "UNDEREXPOSED",
+        "LOW_CONTRAST",
+        "SHADOW_CLIPPING"
+      ],
+      "step_count": 7,
+      "terminal_reason_code": "SHADOW_CLIPPING_UNRECOVERABLE"
+    },
+    {
+      "artifact_flags": [],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 0,
+        "remediation_attempts": 0,
+        "segmentation_calls": 1,
+        "steps": 7,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "ROI high-frequency ratio below the Phase 2c-B calibrated floor.",
+      "expected_final_state": "REQUEST_RECAPTURE",
+      "expected_human_action": "REQUEST_RECAPTURE",
+      "expected_model_invoked": false,
+      "expected_remediation": "",
+      "expected_tools": [],
+      "expects_advisory": false,
+      "forbidden_tools": [
+        "run_condition_model",
+        "apply_gamma_correction",
+        "apply_clahe"
+      ],
+      "name": "severe_blur",
+      "observed_advisory": "",
+      "observed_final_state": "REQUEST_RECAPTURE",
+      "observed_human_action": "REQUEST_RECAPTURE",
+      "observed_model_invoked": false,
+      "observed_remediation": "",
+      "observed_remediation_accepted": false,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "REQUEST_RECAPTURE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [
+        "BLUR_RISK"
+      ],
+      "step_count": 7,
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE"
+    },
+    {
+      "artifact_flags": [],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 1,
+        "remediation_attempts": 1,
+        "segmentation_calls": 2,
+        "steps": 16,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "Contrast inside the narrow band between the severe limit and the calibrated advisory limit.",
+      "expected_final_state": "COMPLETE",
+      "expected_human_action": "",
+      "expected_model_invoked": true,
+      "expected_remediation": "APPLY_CLAHE",
+      "expected_tools": [
+        "apply_clahe",
+        "reassess_capture"
+      ],
+      "expects_advisory": false,
+      "forbidden_tools": [
+        "apply_gamma_correction"
+      ],
+      "name": "moderate_low_contrast",
+      "observed_advisory": "",
+      "observed_final_state": "COMPLETE",
+      "observed_human_action": "",
+      "observed_model_invoked": true,
+      "observed_remediation": "APPLY_CLAHE",
+      "observed_remediation_accepted": true,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "REMEDIATION_SELECTED",
+        "REMEDIATED",
+        "RESEGMENTED",
+        "REASSESSED",
+        "ELIGIBLE_FOR_INFERENCE",
+        "CONDITION_INFERRED",
+        "COMPLETE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_clahe",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [],
+      "step_count": 16,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+    },
+    {
+      "artifact_flags": [
+        "SEVERE_LOW_CONTRAST"
+      ],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 0,
+        "remediation_attempts": 0,
+        "segmentation_calls": 1,
+        "steps": 7,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "Tonal range collapsed below the Phase 2d severe limit, where equalisation would amplify quantisation into false detail.",
+      "expected_final_state": "REQUEST_RECAPTURE",
+      "expected_human_action": "REQUEST_RECAPTURE",
+      "expected_model_invoked": false,
+      "expected_remediation": "",
+      "expected_tools": [],
+      "expects_advisory": false,
+      "forbidden_tools": [
+        "run_condition_model",
+        "apply_clahe"
+      ],
+      "name": "severe_contrast_loss",
+      "observed_advisory": "",
+      "observed_final_state": "REQUEST_RECAPTURE",
+      "observed_human_action": "REQUEST_RECAPTURE",
+      "observed_model_invoked": false,
+      "observed_remediation": "",
+      "observed_remediation_accepted": false,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "REQUEST_RECAPTURE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [
+        "LOW_CONTRAST"
+      ],
+      "step_count": 7,
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS"
+    },
+    {
+      "artifact_flags": [],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 0,
+        "remediation_attempts": 0,
+        "segmentation_calls": 1,
+        "steps": 5,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "Four equal subjects: no dominant component, so no region can be attributed to a subject.",
+      "expected_final_state": "REQUEST_RECAPTURE",
+      "expected_human_action": "REQUEST_RECAPTURE",
+      "expected_model_invoked": false,
+      "expected_remediation": "",
+      "expected_tools": [],
+      "expects_advisory": false,
+      "forbidden_tools": [
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "run_condition_model"
+      ],
+      "name": "segmentation_failure",
+      "observed_advisory": "",
+      "observed_final_state": "REQUEST_RECAPTURE",
+      "observed_human_action": "REQUEST_RECAPTURE",
+      "observed_model_invoked": false,
+      "observed_remediation": "",
+      "observed_remediation_accepted": false,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "DECISION_MADE",
+        "INSUFFICIENT_VISUAL_EVIDENCE",
+        "REQUEST_RECAPTURE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "decide_capture_action",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [],
+      "step_count": 5,
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE"
+    },
+    {
+      "artifact_flags": [
+        "GLARE_RISK"
+      ],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 1,
+        "remediation_attempts": 0,
+        "segmentation_calls": 1,
+        "steps": 10,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "A concentrated specular highlight on an otherwise usable capture. Recorded, reported, and not blocking.",
+      "expected_final_state": "COMPLETE",
+      "expected_human_action": "",
+      "expected_model_invoked": true,
+      "expected_remediation": "",
+      "expected_tools": [
+        "assess_local_highlights",
+        "run_condition_model"
+      ],
+      "expects_advisory": true,
+      "forbidden_tools": [
+        "request_reposition_light",
+        "apply_gamma_correction",
+        "apply_clahe"
+      ],
+      "name": "advisory_glare",
+      "observed_advisory": "REQUEST_REPOSITION_LIGHT",
+      "observed_final_state": "COMPLETE",
+      "observed_human_action": "",
+      "observed_model_invoked": true,
+      "observed_remediation": "",
+      "observed_remediation_accepted": false,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "ELIGIBLE_FOR_INFERENCE",
+        "CONDITION_INFERRED",
+        "COMPLETE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [],
+      "step_count": 10,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+    },
+    {
+      "artifact_flags": [],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 0,
+        "remediation_attempts": 0,
+        "segmentation_calls": 0,
+        "steps": 1,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "A single-channel array. Not an image; not coerced into one.",
+      "expected_final_state": "FAILED_SAFE",
+      "expected_human_action": "",
+      "expected_model_invoked": false,
+      "expected_remediation": "",
+      "expected_tools": [],
+      "expects_advisory": false,
+      "forbidden_tools": [
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "segment_foreground",
+        "run_condition_model"
+      ],
+      "name": "invalid_input",
+      "observed_advisory": "",
+      "observed_final_state": "FAILED_SAFE",
+      "observed_human_action": "",
+      "observed_model_invoked": false,
+      "observed_remediation": "",
+      "observed_remediation_accepted": false,
+      "observed_states": [
+        "RECEIVED",
+        "FAILED_SAFE"
+      ],
+      "observed_tools": [
+        "validate_input"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [],
+      "step_count": 1,
+      "terminal_reason_code": ""
+    },
+    {
+      "artifact_flags": [],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 1,
+        "remediation_attempts": 1,
+        "segmentation_calls": 2,
+        "steps": 16,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "The correction reaches the target band and the harm guard accepts it, so inference proceeds on the remediated image.",
+      "expected_final_state": "COMPLETE",
+      "expected_human_action": "",
+      "expected_model_invoked": true,
+      "expected_remediation": "APPLY_GAMMA",
+      "expected_tools": [
+        "reassess_capture"
+      ],
+      "expects_advisory": false,
+      "forbidden_tools": [],
+      "name": "accepted_remediation",
+      "observed_advisory": "",
+      "observed_final_state": "COMPLETE",
+      "observed_human_action": "",
+      "observed_model_invoked": true,
+      "observed_remediation": "APPLY_GAMMA",
+      "observed_remediation_accepted": true,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "REMEDIATION_SELECTED",
+        "REMEDIATED",
+        "RESEGMENTED",
+        "REASSESSED",
+        "ELIGIBLE_FOR_INFERENCE",
+        "CONDITION_INFERRED",
+        "COMPLETE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_gamma_correction",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [],
+      "step_count": 16,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+    },
+    {
+      "artifact_flags": [],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 0,
+        "remediation_attempts": 1,
+        "segmentation_calls": 2,
+        "steps": 14,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "The harm guard refuses the correction; the canonical image reverts and the run escalates instead of trying again.",
+      "expected_final_state": "REQUEST_RECAPTURE",
+      "expected_human_action": "REQUEST_RECAPTURE",
+      "expected_model_invoked": false,
+      "expected_remediation": "APPLY_GAMMA",
+      "expected_tools": [],
+      "expects_advisory": false,
+      "forbidden_tools": [
+        "run_condition_model"
+      ],
+      "name": "rejected_remediation",
+      "observed_advisory": "",
+      "observed_final_state": "REQUEST_RECAPTURE",
+      "observed_human_action": "REQUEST_RECAPTURE",
+      "observed_model_invoked": false,
+      "observed_remediation": "APPLY_GAMMA",
+      "observed_remediation_accepted": false,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "REMEDIATION_SELECTED",
+        "REMEDIATED",
+        "RESEGMENTED",
+        "REASSESSED",
+        "REQUEST_RECAPTURE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_gamma_correction",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "request_recapture"
+      ],
+      "passed": true,
+      "policy_note": "POLICY VARIANT: acceptance guard tightened beyond any achievable correction, to exercise the rejection route. Not evidence about images.",
+      "quality_flags": [],
+      "step_count": 14,
+      "terminal_reason_code": "REMEDIATION_INEFFECTIVE"
+    },
+    {
+      "artifact_flags": [],
+      "budget": {
+        "budget": {
+          "max_condition_model_calls": 1,
+          "max_remediation_attempts": 1,
+          "max_segmentation_calls": 2,
+          "max_steps": 24
+        },
+        "condition_model_calls": 1,
+        "remediation_attempts": 0,
+        "segmentation_calls": 1,
+        "steps": 9,
+        "within_budget": true
+      },
+      "checks": {
+        "advisory": true,
+        "expected_tools": true,
+        "final_state": true,
+        "forbidden_tools": true,
+        "human_action": true,
+        "model_invoked": true,
+        "remediation": true,
+        "within_budget": true
+      },
+      "description": "The full accepted path, ending with visible-condition evidence and a recorded, unthresholded confidence.",
+      "expected_final_state": "COMPLETE",
+      "expected_human_action": "",
+      "expected_model_invoked": true,
+      "expected_remediation": "",
+      "expected_tools": [
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "expects_advisory": false,
+      "forbidden_tools": [],
+      "name": "successful_condition_inference",
+      "observed_advisory": "",
+      "observed_final_state": "COMPLETE",
+      "observed_human_action": "",
+      "observed_model_invoked": true,
+      "observed_remediation": "",
+      "observed_remediation_accepted": false,
+      "observed_states": [
+        "RECEIVED",
+        "INPUT_VALIDATED",
+        "FOREGROUND_ASSESSED",
+        "QUALITY_ASSESSED",
+        "ARTIFACTS_ASSESSED",
+        "DECISION_MADE",
+        "ELIGIBLE_FOR_INFERENCE",
+        "CONDITION_INFERRED",
+        "COMPLETE"
+      ],
+      "observed_tools": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "passed": true,
+      "policy_note": "",
+      "quality_flags": [],
+      "step_count": 9,
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+    }
+  ],
+  "skipped": [],
+  "task_success_rate": 1.0
+}

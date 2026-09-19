@@ -1,0 +1,210 @@
+{
+  "claim_boundary": "constructed fixture; demonstrates the causal chain, not detector accuracy",
+  "condition_model_invoked": false,
+  "decisions": [
+    {
+      "advisory_gating_permitted": false,
+      "automated": false,
+      "blocking": true,
+      "canonical_image_sha256": "9f3dadec6bffa00503d174c3a6ea6307031b624e5bea233f0c09617ff771d6c4",
+      "contract_version": "phase3-decision-1.0.0",
+      "evidence_maturity": "CALIBRATED",
+      "explanation": "Illumination is within band, so low sharpness is not an exposure artefact. Blur cannot be removed by tone adjustment.",
+      "human_action_required": true,
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "reason_code": "BLUR_NOT_REMEDIABLE",
+      "selected_action": "REQUEST_RECAPTURE",
+      "state_after": "REQUEST_RECAPTURE",
+      "state_before": "ARTIFACTS_ASSESSED",
+      "triggering_evidence_ids": [
+        "roi.high_frequency_ratio"
+      ]
+    }
+  ],
+  "final_state": "REQUEST_RECAPTURE",
+  "policy_fingerprints": {
+    "artifact_policy": "b3cd5db5ca193027",
+    "highlight_policy": "10757655e4c34533",
+    "quality_policy": "e6bd2bee4f852f37",
+    "remediation_policy": "225b43230901b0eb",
+    "roi_policy_lock": "15b7fb0908d6d622",
+    "roi_policy_threshold": "78b1e2151773787a",
+    "visibility_policy": "213bac848e52951f"
+  },
+  "run_id": "severe_blur",
+  "scenario": "severe_blur",
+  "step_count": 7,
+  "steps": [
+    {
+      "decision_reason": "",
+      "evidence_ids": [
+        "input.decodable",
+        "input.dimensions"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "height": 384,
+        "valid": true,
+        "width": 384
+      },
+      "input_artifact_hashes": {},
+      "output_artifact_hashes": {
+        "canonical_image_sha256": "9f3dadec6bffa00503d174c3a6ea6307031b624e5bea233f0c09617ff771d6c4"
+      },
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "INPUT_VALIDATED",
+      "state_before": "RECEIVED",
+      "step_id": 1,
+      "tool_name": "validate_input"
+    },
+    {
+      "decision_reason": "Subject isolated; ROI measurement permitted.",
+      "evidence_ids": [
+        "foreground.valid",
+        "foreground.component_count",
+        "foreground.foreground_fraction"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "component_count": 1,
+        "foreground_fraction": 0.253242,
+        "invalid_reasons": [],
+        "method": "saturation_otsu",
+        "valid": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "9f3dadec6bffa00503d174c3a6ea6307031b624e5bea233f0c09617ff771d6c4"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "",
+      "selected_action": "",
+      "state_after": "FOREGROUND_ASSESSED",
+      "state_before": "INPUT_VALIDATED",
+      "step_id": 2,
+      "tool_name": "segment_foreground"
+    },
+    {
+      "decision_reason": "Subject-restricted metrics against the Phase 2c-B locked policy (PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL).",
+      "evidence_ids": [
+        "roi.high_frequency_ratio",
+        "roi.contrast_score",
+        "roi.mean_luminance.underexposed",
+        "roi.shadow_clip_fraction",
+        "roi.highlight_clip_fraction"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "contrast_score": 0.588235,
+        "focus_floor": 0.318197637796402,
+        "high_frequency_ratio": 0.266918,
+        "highlight_clip_fraction": 0.0,
+        "mean_luminance": 0.576679,
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "scope": "FOREGROUND_MASKED",
+        "shadow_clip_fraction": 0.0
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "9f3dadec6bffa00503d174c3a6ea6307031b624e5bea233f0c09617ff771d6c4"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "78b1e2151773787a",
+      "selected_action": "",
+      "state_after": "QUALITY_ASSESSED",
+      "state_before": "FOREGROUND_ASSESSED",
+      "step_id": 3,
+      "tool_name": "assess_capture_quality"
+    },
+    {
+      "decision_reason": "Local highlight evidence. ADVISORY: 0.500 detection on unseen groups with 0.167 false positives, below the 0.70 floor that would permit it to block.",
+      "evidence_ids": [
+        "artifact.glare"
+      ],
+      "evidence_maturity": "ADVISORY",
+      "evidence_summary": {
+        "glare_flag": false,
+        "largest_component_fraction": 0.0,
+        "max_local_luminance_excess": 50.698
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "9f3dadec6bffa00503d174c3a6ea6307031b624e5bea233f0c09617ff771d6c4"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "10757655e4c34533",
+      "selected_action": "",
+      "state_after": "ARTIFACTS_ASSESSED",
+      "state_before": "QUALITY_ASSESSED",
+      "step_id": 4,
+      "tool_name": "assess_local_highlights"
+    },
+    {
+      "decision_reason": "Subject-completeness geometry, RECORDED ONLY. This detector reached 0.40 in controlled evaluation and never fired; it is UNQUALIFIED and cannot contribute to any decision. Coverage failures are reported by the foreground guards instead.",
+      "evidence_ids": [],
+      "evidence_maturity": "UNQUALIFIED",
+      "evidence_summary": {
+        "hull_fill": 1.003062,
+        "insufficiency_reasons": [],
+        "solidity": 0.994762,
+        "visibility_sufficient": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "9f3dadec6bffa00503d174c3a6ea6307031b624e5bea233f0c09617ff771d6c4"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "213bac848e52951f",
+      "selected_action": "",
+      "state_after": "ARTIFACTS_ASSESSED",
+      "state_before": "ARTIFACTS_ASSESSED",
+      "step_id": 5,
+      "tool_name": "assess_visibility"
+    },
+    {
+      "decision_reason": "Illumination is within band, so low sharpness is not an exposure artefact. Blur cannot be removed by tone adjustment.",
+      "evidence_ids": [
+        "roi.high_frequency_ratio"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "artifact_flags": [],
+        "foreground_valid": true,
+        "quality_flags": [
+          "BLUR_RISK"
+        ],
+        "remediation_available": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "9f3dadec6bffa00503d174c3a6ea6307031b624e5bea233f0c09617ff771d6c4"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "selected_action": "REQUEST_RECAPTURE",
+      "state_after": "DECISION_MADE",
+      "state_before": "ARTIFACTS_ASSESSED",
+      "step_id": 6,
+      "tool_name": "decide_capture_action"
+    },
+    {
+      "decision_reason": "Illumination is within band, so low sharpness is not an exposure artefact. Blur cannot be removed by tone adjustment.",
+      "evidence_ids": [
+        "roi.high_frequency_ratio"
+      ],
+      "evidence_maturity": "CALIBRATED",
+      "evidence_summary": {
+        "human_action_required": true
+      },
+      "input_artifact_hashes": {
+        "canonical_image_sha256": "9f3dadec6bffa00503d174c3a6ea6307031b624e5bea233f0c09617ff771d6c4"
+      },
+      "output_artifact_hashes": {},
+      "policy_fingerprint": "b3cd5db5ca193027",
+      "selected_action": "REQUEST_RECAPTURE",
+      "state_after": "REQUEST_RECAPTURE",
+      "state_before": "DECISION_MADE",
+      "step_id": 7,
+      "tool_name": "request_recapture"
+    }
+  ],
+  "trace_version": "phase3-agent-trace-1.0.0"
+}

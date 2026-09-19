@@ -1,0 +1,77 @@
+======================================================================
+INSPECTION advisory_glare
+======================================================================
+Final state       : COMPLETE
+Condition model   : INVOKED
+Foreground        : valid
+Artefact findings : GLARE_RISK
+Advisory          : REQUEST_REPOSITION_LIGHT (suggestion only; the result was not blocked on it)
+Visible condition : deteriorated (orange), confidence 0.411 — recorded, not thresholded
+----------------------------------------------------------------------
+
+Step 1 — validate_input
+  State: RECEIVED -> INPUT_VALIDATED
+  Evidence maturity: CALIBRATED (calibrated)
+
+Step 2 — segment_foreground
+  State: INPUT_VALIDATED -> FOREGROUND_ASSESSED
+  Subject fraction: 0.2575
+  Mask components: 1
+  Evidence maturity: CALIBRATED (calibrated)
+  Reason: Subject isolated; ROI measurement permitted.
+
+Step 3 — assess_capture_quality
+  State: FOREGROUND_ASSESSED -> QUALITY_ASSESSED
+  ROI high-frequency ratio: 0.7181
+  Threshold: 0.3182
+  ROI mean luminance: 0.6192
+  ROI contrast: 0.8314
+  Shadow clipping: 0.0001
+  Highlight clipping: 0.0235
+  Evidence maturity: CALIBRATED (calibrated)
+  Reason: Subject-restricted metrics against the Phase 2c-B locked policy (PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL).
+
+Step 4 — assess_local_highlights
+  State: QUALITY_ASSESSED -> ARTIFACTS_ASSESSED
+  Largest highlight: 0.1797
+  Peak local excess (L*): 93.331
+  Glare finding: yes
+  Evidence maturity: ADVISORY (ADVISORY - cannot block)
+  Reason: Local highlight evidence. ADVISORY: 0.500 detection on unseen groups with 0.167 false positives, below the 0.70 floor that would permit it to block.
+
+Step 5 — assess_visibility
+  Hull fill: 1.0033
+  Solidity: 0.9951
+  Visibility sufficient: yes
+  Evidence maturity: UNQUALIFIED (RECORDED ONLY - cannot influence a decision)
+  Reason: Subject-completeness geometry, RECORDED ONLY. This detector reached 0.40 in controlled evaluation and never fired; it is UNQUALIFIED and cannot contribute to any decision. Coverage failures are reported by the foreground guards instead.
+
+Step 6 — decide_capture_action
+  State: ARTIFACTS_ASSESSED -> DECISION_MADE
+  Artifact flags: GLARE_RISK
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: NONE
+  Reason: No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.
+
+Step 7 — decide_capture_action
+  State: DECISION_MADE -> ELIGIBLE_FOR_INFERENCE
+  Evidence maturity: CALIBRATED (calibrated)
+  Action: NONE
+  Reason: No calibrated capture-quality failure and no blocking artefact. The capture is eligible for condition inference.
+
+Step 8 — decide_capture_action
+  Largest highlight: 0.1797
+  Evidence maturity: ADVISORY (ADVISORY - cannot block)
+  Action: REQUEST_REPOSITION_LIGHT
+  Reason: Local highlight evidence is present. It is ADVISORY: the detector reached 0.500 on unseen groups against a 0.70 floor, so the capture is NOT blocked on it. The suggestion to reposition the light accompanies the result for a person to act on or ignore.
+
+Step 9 — run_condition_model
+  State: ELIGIBLE_FOR_INFERENCE -> CONDITION_INFERRED
+  Model confidence: 0.4114
+  Condition model invoked: YES
+  Evidence maturity: UNQUALIFIED (RECORDED ONLY - cannot influence a decision)
+  Reason: Visible-condition inference on the canonical image. Confidence is RECORDED ONLY: no confidence threshold has been calibrated, so no escalation is triggered by it.
+
+Step 10 — finalize_result
+  State: CONDITION_INFERRED -> COMPLETE
+  Reason: Inspection complete.

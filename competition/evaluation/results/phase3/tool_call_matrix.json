@@ -1,0 +1,246 @@
+{
+  "by_scenario": {
+    "accepted_remediation": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_gamma_correction",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "forbidden": [],
+      "violations": []
+    },
+    "advisory_glare": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "forbidden": [
+        "request_reposition_light",
+        "apply_gamma_correction",
+        "apply_clahe"
+      ],
+      "violations": []
+    },
+    "invalid_input": {
+      "called": [
+        "validate_input"
+      ],
+      "forbidden": [
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "segment_foreground",
+        "run_condition_model"
+      ],
+      "violations": []
+    },
+    "moderate_low_contrast": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_clahe",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "forbidden": [
+        "apply_gamma_correction"
+      ],
+      "violations": []
+    },
+    "normal_acceptable_capture": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "forbidden": [
+        "apply_gamma_correction",
+        "apply_clahe",
+        "request_recapture"
+      ],
+      "violations": []
+    },
+    "recoverable_underexposure": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_gamma_correction",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "forbidden": [
+        "request_recapture"
+      ],
+      "violations": []
+    },
+    "rejected_remediation": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "apply_gamma_correction",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "reassess_capture",
+        "request_recapture"
+      ],
+      "forbidden": [
+        "run_condition_model"
+      ],
+      "violations": []
+    },
+    "segmentation_failure": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "decide_capture_action",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "forbidden": [
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "run_condition_model"
+      ],
+      "violations": []
+    },
+    "severe_blur": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "forbidden": [
+        "run_condition_model",
+        "apply_gamma_correction",
+        "apply_clahe"
+      ],
+      "violations": []
+    },
+    "severe_contrast_loss": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "forbidden": [
+        "run_condition_model",
+        "apply_clahe"
+      ],
+      "violations": []
+    },
+    "severe_darkness_clipping": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "request_recapture"
+      ],
+      "forbidden": [
+        "run_condition_model",
+        "apply_gamma_correction"
+      ],
+      "violations": []
+    },
+    "successful_condition_inference": {
+      "called": [
+        "validate_input",
+        "segment_foreground",
+        "assess_capture_quality",
+        "assess_local_highlights",
+        "assess_visibility",
+        "decide_capture_action",
+        "decide_capture_action",
+        "run_condition_model",
+        "finalize_result"
+      ],
+      "forbidden": [],
+      "violations": []
+    }
+  },
+  "scenario_version": "phase3-scenarios-1.0.0",
+  "tools": [
+    "validate_input",
+    "segment_foreground",
+    "assess_capture_quality",
+    "assess_local_highlights",
+    "assess_contrast",
+    "assess_visibility",
+    "decide_capture_action",
+    "apply_gamma_correction",
+    "apply_clahe",
+    "reassess_capture",
+    "run_condition_model",
+    "request_recapture",
+    "request_reposition_light",
+    "request_human_review",
+    "finalize_result"
+  ]
+}
