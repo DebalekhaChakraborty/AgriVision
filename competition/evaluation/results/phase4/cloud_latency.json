@@ -1,0 +1,28 @@
+{
+  "claim_boundary": "end-to-end client-observed latency over the public internet, including TLS and multipart upload. NOT a server-side compute measurement and not comparable to the in-process figures in results/phase3/latency.json.",
+  "client_location": "external to AWS (round trip includes internet + TLS)",
+  "endpoint_region": "us-east-1",
+  "paths": {
+    "COMPLETE_WITH_INFERENCE": {
+      "max_ms": 315.9,
+      "median_ms": 296.8,
+      "min_ms": 284.3,
+      "n": 9,
+      "p95_ms": 313.2
+    },
+    "RECAPTURE_TERMINAL": {
+      "max_ms": 275.5,
+      "median_ms": 240.8,
+      "min_ms": 235.5,
+      "n": 9,
+      "p95_ms": 267.8
+    },
+    "SEGMENTATION_FAILURE": {
+      "max_ms": 262.1,
+      "median_ms": 244.1,
+      "min_ms": 231.1,
+      "n": 9,
+      "p95_ms": 259.2
+    }
+  }
+}

@@ -1,0 +1,24 @@
+# Never build imagery, weights, environments or history into the image.
+.git
+.venv*
+**/__pycache__
+**/*.pyc
+.pytest_cache
+competition/data/licensed_real/
+competition/data/self_captured/
+competition/models/artifacts/
+dataset/
+model/
+outputs/
+results/
+notebooks/
+static/
+templates/
+src/
+v2/
+tests/
+docs/
+infrastructure/
+*.md
+requirements.txt
+requirements-v2.txt

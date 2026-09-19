@@ -1,0 +1,38 @@
+{
+  "ServiceName": "agrivision-inspection",
+  "SourceConfiguration": {
+    "AuthenticationConfiguration": {
+      "AccessRoleArn": "arn:aws:iam::341181499761:role/AgriVisionAppRunnerAccessRole"
+    },
+    "AutoDeploymentsEnabled": false,
+    "ImageRepository": {
+      "ImageIdentifier": "341181499761.dkr.ecr.us-east-1.amazonaws.com/agrivision:phase4",
+      "ImageRepositoryType": "ECR",
+      "ImageConfiguration": {
+        "Port": "8080",
+        "RuntimeEnvironmentVariables": {
+          "MODEL_BUCKET": "agrivision-model-artifacts-341181499761",
+          "MODEL_KEY": "models/mobilenetv3_large_v2exp004/model.onnx",
+          "TRACE_TABLE": "agrivision-inspection-traces",
+          "TRACE_TTL_DAYS": "14",
+          "RETAIN_UPLOADS": "false",
+          "ENABLE_FOREGROUND_FALLBACK": "false",
+          "LOG_LEVEL": "INFO"
+        }
+      }
+    }
+  },
+  "InstanceConfiguration": {
+    "Cpu": "1024",
+    "Memory": "2048",
+    "InstanceRoleArn": "arn:aws:iam::341181499761:role/AgriVisionAppRunnerInstanceRole"
+  },
+  "HealthCheckConfiguration": {
+    "Protocol": "HTTP",
+    "Path": "/health",
+    "Interval": 10,
+    "Timeout": 5,
+    "HealthyThreshold": 1,
+    "UnhealthyThreshold": 5
+  }
+}

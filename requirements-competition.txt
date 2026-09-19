@@ -66,28 +66,32 @@ onnx==1.23.0
 onnxruntime==1.30.0
 
 # ---------------------------------------------------------------------------
-# UNRESOLVED — required by the planned architecture but not yet installed or
-# verified, so no version is asserted. Per the dependency rule, these are
-# documented rather than invented. Each must be resolved against a clean
-# Python 3.11 environment and pinned before Phase 4 deployment.
+# SERVING RUNTIME - resolved and verified in Phase 4
+#
+# Installed into .venv-competition alongside the pinned entries above, then
+# checked three ways: `pip check` reports no broken requirements, the 761-test
+# competition suite still passes, and the same versions are re-verified INSIDE
+# the built container rather than only on the host.
+#
+# No conflict with numpy 2.4.6 or opencv-python 5.0.0.93.
+#
+# pydantic is used for API request/response schemas only. The dataclass
+# contracts in competition/vision/evidence.py remain the source of truth for
+# evidence; the API layer converts, it does not redefine.
 # ---------------------------------------------------------------------------
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+pydantic==2.13.5
+boto3==1.43.98
+# Required by FastAPI to parse multipart uploads; without it POST /inspect
+# raises at import time rather than at request time.
+python-multipart==0.0.32
+
+# ---------------------------------------------------------------------------
+# NOT REQUIRED
 #
-#   fastapi          - HTTP API layer                      UNRESOLVED
-#   uvicorn          - ASGI server                         UNRESOLVED
-#   pydantic         - request/response schemas            UNRESOLVED
-#   boto3            - S3, DynamoDB, Bedrock clients       UNRESOLVED
-#
-# Note on pydantic: Phase 1 evidence types use stdlib dataclasses precisely so
-# that no unverified dependency was needed to define the evidence contract. If
-# pydantic is later adopted for API validation, the dataclass contract in
-# competition/vision/evidence.py should remain the source of truth.
-#
-# Resolution procedure (Phase 4):
-#   1. create a clean Python 3.11 environment
-#   2. install alongside the pinned entries above and confirm no conflict with
-#      numpy 2.4.6 or opencv-python 5.0.0.93
-#   3. record the exact resolved version here
-#   4. rebuild the container and re-verify inside it, not only on the host
-#
-# The container base image must additionally be pinned by digest; a tag is not
-# a pin. See docs/competition/SUBMISSION_CHECKLIST.md section 4.
+#   Bedrock - reachable through the pinned boto3 above when a later phase
+#   needs it. No separate dependency, and no Bedrock call exists in the
+#   serving path: the orchestrator is deterministic and no language model
+#   participates in any decision.
+# ---------------------------------------------------------------------------

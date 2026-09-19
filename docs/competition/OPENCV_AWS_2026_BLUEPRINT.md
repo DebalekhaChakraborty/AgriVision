@@ -17,7 +17,7 @@ that produced them and are reported separately from the V2 research results.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phases 0–3 complete and committed; Phase 3b complete and uncommitted. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. A bounded agentic loop now routes that evidence to tool calls and human actions, with segmentation failure handled as a first-class refusal. |
+| Status | Phases 0–3b complete and committed; Phase 4 complete and uncommitted. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. A bounded agentic loop now routes that evidence to tool calls and human actions, with segmentation failure handled as a first-class refusal. |
 
 ---
 
@@ -816,13 +816,31 @@ the metrics must be restricted to a foreground region.
   `competition/evaluation/results/phase3b/`. Full method:
   [PHASE3B_SEGMENTATION_RECOVERY.md](PHASE3B_SEGMENTATION_RECOVERY.md).
 
-### Phase 4 — AWS deployment and observability
+### Phase 4 — AWS deployment and observability *(complete, uncommitted)*
 - **Objective:** a reproducible public endpoint.
-- **Tasks:** container build; App Runner vs Lambda decision on measured cold
-  start; S3/DynamoDB/Bedrock wiring; IaC; IAM; logging, metrics, alarms.
-- **Artifacts:** `infrastructure/aws/`, deployment guide, architecture diagram.
-- **Tests:** smoke tests against the deployed endpoint; IAM least-privilege check.
-- **Exit:** endpoint reachable; deployable from a clean account by the guide.
+- **Delivered:** the Phase 3 loop containerised and deployed to **App Runner**,
+  live at `https://yp2ajauzkm.us-east-1.awsapprunner.com`. ECR, S3 (model artifact, SHA-256 verified, fail closed),
+  DynamoDB (causal traces, 14-day TTL), CloudWatch (structured JSON per step),
+  two scoped IAM roles. CloudFormation for all of it.
+- **Deliberately absent:** API Gateway, Lambda, Step Functions, SQS,
+  EventBridge, SageMaker, VPC/NAT, Cognito, Bedrock. None had a measured
+  requirement.
+- **Container:** 719 MB, non-root, base pinned by digest, OpenCV **5.0.0
+  verified inside the image** across 17 operations plus the perception path.
+  torch, onnxruntime, matplotlib and every research framework absent.
+- **Key debugging result:** three deployments failed with a successful image
+  pull and no application logs. Bisected to `useradd --shell /usr/sbin/nologin`
+  — App Runner must exec a shell for the container user. Non-root kept; the
+  nologin shell replaced. The image ran perfectly under `docker run` throughout,
+  which is why host verification cannot stand in for container verification.
+- **Latency (client-observed, over the internet):** complete-with-inference
+  297 ms median, recapture 241 ms. Not a server-side compute figure.
+- **Carry forward:** the deployment was performed with **account root
+  credentials**; replace with a scoped IAM principal before submission.
+- **Artifacts:** `competition/service/`, `infrastructure/aws/`,
+  `competition/evaluation/results/phase4/`. Full method:
+  [PHASE4_AWS_DEPLOYMENT.md](PHASE4_AWS_DEPLOYMENT.md); diagram:
+  [DEPLOYED_ARCHITECTURE.md](DEPLOYED_ARCHITECTURE.md).
 - **Supports:** AWS/reproducibility, real-world impact.
 
 ### Phase 5 — UI and judge demonstration

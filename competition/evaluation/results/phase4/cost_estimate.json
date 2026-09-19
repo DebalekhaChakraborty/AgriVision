@@ -1,0 +1,23 @@
+{
+  "assumptions": [
+    "one App Runner instance, 1 vCPU / 2 GB, left running continuously for a 30-day demonstration period",
+    "App Runner bills provisioned memory continuously and vCPU only while a request is being served",
+    "judge and demo traffic on the order of a few thousand requests over the period, which is a rounding error against the idle memory charge",
+    "one 11.4 MB model object in S3 and a few thousand small DynamoDB items under a 14-day TTL",
+    "public AWS list prices as published for us-east-1; no credits applied"
+  ],
+  "cost_controls_in_place": [
+    "DynamoDB on-demand billing rather than provisioned capacity",
+    "14-day TTL on trace records so the table cannot grow without bound",
+    "uploads not retained, so no storage accrues from inspections",
+    "one instance, one worker; no autoscaling floor above 1",
+    "ECR scan-on-push only, no continuous scanning"
+  ],
+  "dominant_cost": "provisioned App Runner memory while idle. Everything else - S3 for a single 11 MB object, on-demand DynamoDB for a few thousand small items, ECR for one image, CloudWatch for modest JSON logs - is negligible beside it.",
+  "how_to_stop_all_charges": "delete the App Runner service; the S3 object, DynamoDB table and ECR image cost approximately nothing at this size",
+  "order_of_magnitude": "single-digit to low-tens of US dollars per month",
+  "phase4_version": "phase4-service-1.0.0",
+  "purpose": "show the architecture is intentionally small, not to predict a bill",
+  "region": "us-east-1",
+  "why_no_precise_figure": "A precise monthly number would be invented. Actual cost depends on the current published rates, how long the service is left running, and how much traffic arrives - none of which has been observed over a full billing period. The account's existing baseline is a separate matter from this stack."
+}

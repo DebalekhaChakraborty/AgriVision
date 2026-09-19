@@ -20,15 +20,30 @@ Branch: `competition/opencv-aws-2026`
 
 ## 2. AWS evidence
 
-- [ ] Container image built and pushed to ECR; digest recorded
-- [ ] Service deployed and reachable over HTTPS
-- [ ] S3 storage wired for uploads and evidence overlays
-- [ ] DynamoDB storing inspection and trace records
-- [ ] Bedrock integration functioning, and the system still works without it
-- [ ] CloudWatch logs, metrics and alarms in place
-- [ ] IAM roles least-privilege; no long-lived keys in the repository
-- [ ] Cost guardrail (budget alarm) active
-- [ ] Deployment reproduced from a clean AWS account following the guide
+- [x] A meaningful component runs on AWS — the full OpenCV 5 perception and
+      Agentic Vision loop, as a container on App Runner
+- [x] Live HTTPS endpoint with a managed certificate
+- [x] Model artifact in S3, fetched at startup and SHA-256 verified, fail closed
+- [x] Causal traces persisted to DynamoDB with a 14-day TTL
+- [x] Structured JSON logs in CloudWatch carrying run_id, state, tool, action,
+      reason_code and duration
+- [x] IAM least privilege — the runtime role reads one S3 prefix and writes one
+      table; no AdministratorAccess; no long-lived credential in the image
+- [x] No public storage — S3 public access fully blocked, encrypted, versioned
+- [x] Infrastructure as code — one CloudFormation template
+- [x] Deployment smoke-tested against the live endpoint
+- [x] Provisioning uses a scoped identity, not root — `user/agrivision-deployer`
+      with one customer-managed least-privilege policy; verified by redeploying
+      the service entirely under it, and by confirming `iam list-users` and
+      `s3 ls` are both denied to it
+- [x] No persistent root access keys exist on the account
+      (`AccountAccessKeysPresent = 0`); root MFA enabled
+- [ ] Endpoint authentication — currently public, acceptable for a judged demo
+- [ ] Load or concurrency characterisation — none performed
+
+> Deliberately not used: API Gateway, Lambda, Step Functions, SQS, EventBridge,
+> SageMaker, VPC/NAT, Cognito, Bedrock. Each was considered; none had a measured
+> requirement this service could point at.
 
 ## 3. Repository readiness
 

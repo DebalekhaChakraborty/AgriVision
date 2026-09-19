@@ -1,0 +1,63 @@
+{
+  "excluded_from_serving_image": [
+    "torch",
+    "torchvision",
+    "onnx",
+    "onnxruntime",
+    "matplotlib",
+    "pytest",
+    "tensorflow",
+    "keras",
+    "transformers",
+    "jupyter"
+  ],
+  "excluded_verification": "each import attempted inside the built image; all absent",
+  "image": {
+    "base_image": "python:3.11-slim-bookworm",
+    "base_image_digest": "sha256:a36c24f9cbdf4fd0f52d67f0823eeac19c2028c637cecc392d97f980d4fec56b",
+    "build_style": "multi-stage; build tooling excluded from the runtime stage",
+    "ecr_repository": "341181499761.dkr.ecr.us-east-1.amazonaws.com/agrivision",
+    "image_digest": "sha256:1107abfed1061acc2d690766c1ac4c9abb80cb5338ba2b6e217d69318d9625e9",
+    "local_tag": "agrivision:phase4",
+    "platform": "linux/amd64",
+    "runs_as": "agrivision (uid 10001, non-root)",
+    "size": "719MB"
+  },
+  "model_artifact": {
+    "bytes": 11906184,
+    "expected_sha256": "77d8614671873cb41ebfd725f0a4b468beca9c30cfe6a3361217343917324d4b",
+    "fail_closed": "a mismatch leaves the service unready; it never loads an unverified graph",
+    "mechanism": "S3 object fetched at startup, SHA-256 verified before load",
+    "not_baked_into_image": true,
+    "objects": [
+      "model.onnx",
+      "manifest.json"
+    ]
+  },
+  "opencv": {
+    "competition_perception_smoke": "ok",
+    "locked_policy_load": "ok (roi lock fingerprint 15b7fb0908d6d622)",
+    "note": "Verified INSIDE the container, not on the host. The distinction was load-bearing: the host imported cv2 cleanly while the first container build failed at `import cv2` with libxcb.so.1 missing.",
+    "verified_operations": [
+      "cvtColor BGR2GRAY/BGR2LAB/BGR2HSV",
+      "Laplacian",
+      "Sobel",
+      "GaussianBlur",
+      "CLAHE",
+      "threshold+Otsu",
+      "morphologyEx",
+      "connectedComponentsWithStats",
+      "findContours",
+      "convexHull",
+      "convexityDefects",
+      "distanceTransform",
+      "grabCut",
+      "imencode/imdecode",
+      "dnn.blobFromImage",
+      "normalize",
+      "dft"
+    ],
+    "version_in_container": "5.0.0"
+  },
+  "phase4_version": "phase4-service-1.0.0"
+}

@@ -1,0 +1,25 @@
+# Serving runtime only. Derived from requirements-competition.txt by removing
+# everything the deployed container does not execute.
+#
+# Deliberately ABSENT, and each for a measured reason:
+#   torch, torchvision  - build-time ONNX export only. Inference runs through
+#                         cv2.dnn, so the serving path never imports them.
+#                         Together they are the single largest avoidable weight
+#                         in an image of this kind.
+#   onnx, onnxruntime   - export and parity checking only. cv2.dnn reads the
+#                         .onnx file directly.
+#   matplotlib          - evaluation plots only.
+#   pytest, httpx       - test tooling.
+#
+# Pinned to the exact versions verified in .venv-competition and re-verified
+# inside the built image.
+
+opencv-python==5.0.0.93
+numpy==2.4.6
+Pillow==12.3.0
+
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+pydantic==2.13.5
+boto3==1.43.98
+python-multipart==0.0.32

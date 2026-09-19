@@ -1,0 +1,148 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "EcrAuthTokenIsAccountWide",
+      "Effect": "Allow",
+      "Action": "ecr:GetAuthorizationToken",
+      "Resource": "*"
+    },
+    {
+      "Sid": "EcrOnTheAgriVisionRepositoryOnly",
+      "Effect": "Allow",
+      "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:CompleteLayerUpload",
+        "ecr:CreateRepository",
+        "ecr:DescribeImages",
+        "ecr:DescribeRepositories",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:InitiateLayerUpload",
+        "ecr:ListImages",
+        "ecr:PutImage",
+        "ecr:PutImageScanningConfiguration",
+        "ecr:UploadLayerPart"
+      ],
+      "Resource": "arn:aws:ecr:us-east-1:341181499761:repository/agrivision"
+    },
+    {
+      "Sid": "AppRunnerCreateAndListAreAccountWide",
+      "Effect": "Allow",
+      "Action": [
+        "apprunner:CreateService",
+        "apprunner:ListServices"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AppRunnerOnTheAgriVisionServiceOnly",
+      "Effect": "Allow",
+      "Action": [
+        "apprunner:DeleteService",
+        "apprunner:DescribeService",
+        "apprunner:ListOperations",
+        "apprunner:PauseService",
+        "apprunner:ResumeService",
+        "apprunner:StartDeployment",
+        "apprunner:UpdateService",
+        "apprunner:TagResource",
+        "apprunner:ListTagsForResource"
+      ],
+      "Resource": "arn:aws:apprunner:us-east-1:341181499761:service/agrivision-inspection/*"
+    },
+    {
+      "Sid": "ModelArtifactBucket",
+      "Effect": "Allow",
+      "Action": [
+        "s3:CreateBucket",
+        "s3:GetBucketLocation",
+        "s3:GetBucketPublicAccessBlock",
+        "s3:GetBucketVersioning",
+        "s3:GetEncryptionConfiguration",
+        "s3:ListBucket",
+        "s3:PutBucketPublicAccessBlock",
+        "s3:PutBucketVersioning",
+        "s3:PutEncryptionConfiguration"
+      ],
+      "Resource": "arn:aws:s3:::agrivision-model-artifacts-341181499761"
+    },
+    {
+      "Sid": "ModelArtifactObjects",
+      "Effect": "Allow",
+      "Action": [
+        "s3:AbortMultipartUpload",
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::agrivision-model-artifacts-341181499761/models/*"
+    },
+    {
+      "Sid": "TraceTableManagement",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:CreateTable",
+        "dynamodb:DescribeTable",
+        "dynamodb:DescribeTimeToLive",
+        "dynamodb:UpdateTimeToLive",
+        "dynamodb:UpdateTable",
+        "dynamodb:TagResource",
+        "dynamodb:Scan",
+        "dynamodb:GetItem"
+      ],
+      "Resource": "arn:aws:dynamodb:us-east-1:341181499761:table/agrivision-inspection-traces"
+    },
+    {
+      "Sid": "ReadDeploymentLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams",
+        "logs:GetLogEvents",
+        "logs:FilterLogEvents"
+      ],
+      "Resource": "arn:aws:logs:us-east-1:341181499761:log-group:/aws/apprunner/*"
+    },
+    {
+      "Sid": "ReadTheServiceRolesAndHandThemToAppRunner",
+      "Effect": "Allow",
+      "Action": [
+        "iam:GetRole",
+        "iam:PassRole"
+      ],
+      "Resource": [
+        "arn:aws:iam::341181499761:role/AgriVisionAppRunnerInstanceRole",
+        "arn:aws:iam::341181499761:role/AgriVisionAppRunnerAccessRole"
+      ]
+    },
+    {
+      "Sid": "AppRunnerNeedsItsOwnServiceLinkedRole",
+      "Effect": "Allow",
+      "Action": "iam:CreateServiceLinkedRole",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "iam:AWSServiceName": "apprunner.amazonaws.com"
+        }
+      }
+    },
+    {
+      "Sid": "CloudFormationForTheAgriVisionStackOnly",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:DescribeStackResources",
+        "cloudformation:DescribeStacks",
+        "cloudformation:GetTemplate",
+        "cloudformation:UpdateStack",
+        "cloudformation:ValidateTemplate",
+        "cloudformation:CreateChangeSet",
+        "cloudformation:DescribeChangeSet",
+        "cloudformation:ExecuteChangeSet",
+        "cloudformation:DeleteChangeSet"
+      ],
+      "Resource": "arn:aws:cloudformation:us-east-1:341181499761:stack/agrivision/*"
+    }
+  ]
+}

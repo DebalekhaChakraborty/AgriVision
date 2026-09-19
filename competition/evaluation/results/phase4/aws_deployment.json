@@ -1,0 +1,87 @@
+{
+  "account": "341181499761",
+  "deployment_failures_encountered": [
+    {
+      "attempts_before_diagnosis": 3,
+      "evidence": "Bisected against a minimal python:3.11-slim image that deployed successfully. The same AgriVision image deployed as root; with non-root restored and only the login shell changed to /bin/sh it also deployed. App Runner needs to exec a shell for the container user.",
+      "resolution": "non-root kept (uid 10001); nologin shell replaced with /bin/sh",
+      "root_cause": "USER directive with --shell /usr/sbin/nologin",
+      "ruled_out": [
+        "Docker HEALTHCHECK",
+        "instance role",
+        "runtime environment variables",
+        "image manifest media type",
+        "architecture"
+      ],
+      "symptom": "CREATE_FAILED after a successful ECR pull, with no application log group created at all"
+    },
+    {
+      "resolution": "both objects fetched; readiness then true",
+      "root_cause": "only model.onnx was downloaded; load_condition_model also requires manifest.json",
+      "symptom": "service live and model SHA-verified, but model_loaded=false"
+    }
+  ],
+  "instance": {
+    "cpu": "1024 (1 vCPU)",
+    "instances": 1,
+    "memory": "2048 MB"
+  },
+  "not_used": [
+    "API Gateway",
+    "Lambda",
+    "Step Functions",
+    "SQS",
+    "EventBridge",
+    "SageMaker",
+    "VPC/NAT",
+    "Cognito",
+    "Bedrock"
+  ],
+  "not_used_rationale": "None had a measured requirement. App Runner already provides managed HTTPS, autoscaling and health checking, and every item above would have added cost and operational surface for no capability this service needs.",
+  "phase4_version": "phase4-service-1.0.0",
+  "region": "us-east-1",
+  "resources_created": [
+    {
+      "name": "agrivision-inspection",
+      "type": "AWS::AppRunner::Service"
+    },
+    {
+      "name": "agrivision",
+      "scan_on_push": true,
+      "type": "AWS::ECR::Repository"
+    },
+    {
+      "encryption": "AES256",
+      "name": "agrivision-model-artifacts-341181499761",
+      "public_access": "fully blocked",
+      "type": "AWS::S3::Bucket",
+      "versioning": "enabled"
+    },
+    {
+      "billing": "PAY_PER_REQUEST",
+      "name": "agrivision-inspection-traces",
+      "ttl_attribute": "expires_at",
+      "ttl_days": 14,
+      "type": "AWS::DynamoDB::Table"
+    },
+    {
+      "grants": [
+        "s3:GetObject on models/* of one bucket",
+        "dynamodb:PutItem/GetItem/DescribeTable on one table"
+      ],
+      "name": "AgriVisionAppRunnerInstanceRole",
+      "type": "AWS::IAM::Role"
+    },
+    {
+      "grants": [
+        "AWSAppRunnerServicePolicyForECRAccess (image pull only)"
+      ],
+      "name": "AgriVisionAppRunnerAccessRole",
+      "type": "AWS::IAM::Role"
+    }
+  ],
+  "runtime": "AWS App Runner",
+  "service_arn": "arn:aws:apprunner:us-east-1:341181499761:service/agrivision-inspection/9be40db3a6d147c79454d1e9c90fae08",
+  "service_url": "https://yp2ajauzkm.us-east-1.awsapprunner.com",
+  "status": "RUNNING"
+}

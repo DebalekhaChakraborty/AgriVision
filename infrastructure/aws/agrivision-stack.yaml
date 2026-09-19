@@ -1,0 +1,179 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  AgriVision inspection service. One App Runner service, one private S3 bucket
+  for the model artifact, one DynamoDB table for run traces, and two scoped IAM
+  roles. Nothing else: no API Gateway, no Lambda, no Step Functions, no VPC, no
+  NAT. Each of those would add cost and operational surface without a measured
+  requirement, and App Runner already provides managed HTTPS, autoscaling and
+  the health-check loop this service needs.
+
+  CloudFormation rather than CDK: the stack is four resources and two roles, and
+  a declarative template needs no build step, no bootstrap stack and no Node
+  toolchain in the deployment path. CDK would earn its place if the topology
+  grew conditional or multi-environment; it has not.
+
+Parameters:
+  ImageTag:
+    Type: String
+    Default: phase4
+    Description: ECR image tag to deploy. Immutable per deployment.
+  ModelSha256:
+    Type: String
+    Default: 77d8614671873cb41ebfd725f0a4b468beca9c30cfe6a3361217343917324d4b
+    Description: >
+      Expected SHA-256 of the ONNX artifact. The service verifies the downloaded
+      object against this and refuses to become ready on a mismatch.
+  TraceTtlDays:
+    Type: Number
+    Default: 14
+    Description: TTL for demonstration trace records.
+
+Resources:
+
+  # --- model artifact storage ------------------------------------------------
+  # Private, encrypted, versioned. Versioning exists so replacing the model is
+  # reversible: the expected SHA-256 is pinned in configuration, so a bad
+  # replacement makes the service unready rather than silently changing results.
+  ModelBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "agrivision-model-artifacts-${AWS::AccountId}"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      VersioningConfiguration:
+        Status: Enabled
+
+  # --- trace persistence -----------------------------------------------------
+  # On-demand billing: demonstration traffic is bursty and low, and provisioned
+  # capacity would cost more while idle. TTL keeps the table from growing
+  # without bound; these are demo records, not business records.
+  TraceTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: agrivision-inspection-traces
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: run_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: run_id
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: expires_at
+        Enabled: true
+      SSESpecification:
+        SSEEnabled: true
+
+  # --- IAM -------------------------------------------------------------------
+  # The runtime role can read one prefix of one bucket and write to one table.
+  # It cannot list buckets, cannot delete anything, and cannot reach any other
+  # service. No AdministratorAccess, and no long-lived credential anywhere in
+  # the image or its environment.
+  InstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AgriVisionAppRunnerInstanceRole
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: tasks.apprunner.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: AgriVisionRuntimeAccess
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Sid: ReadOnlyTheModelObject
+                Effect: Allow
+                Action: s3:GetObject
+                Resource: !Sub "${ModelBucket.Arn}/models/*"
+              - Sid: WriteAndReadTraceRecordsOnly
+                Effect: Allow
+                Action:
+                  - dynamodb:PutItem
+                  - dynamodb:GetItem
+                  - dynamodb:DescribeTable
+                Resource: !GetAtt TraceTable.Arn
+
+  # Used by App Runner itself to pull the image, not by the running container.
+  AccessRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AgriVisionAppRunnerAccessRole
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: build.apprunner.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSAppRunnerServicePolicyForECRAccess
+
+  # --- runtime ---------------------------------------------------------------
+  InspectionService:
+    Type: AWS::AppRunner::Service
+    Properties:
+      ServiceName: agrivision-inspection
+      SourceConfiguration:
+        AuthenticationConfiguration:
+          AccessRoleArn: !GetAtt AccessRole.Arn
+        # Off deliberately. A deployment should be an explicit act with a known
+        # image digest, not something a registry push triggers.
+        AutoDeploymentsEnabled: false
+        ImageRepository:
+          ImageIdentifier: !Sub
+            "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/agrivision:${ImageTag}"
+          ImageRepositoryType: ECR
+          ImageConfiguration:
+            Port: "8080"
+            RuntimeEnvironmentVariables:
+              MODEL_BUCKET: !Ref ModelBucket
+              MODEL_KEY: models/mobilenetv3_large_v2exp004/model.onnx
+              EXPECTED_MODEL_SHA256: !Ref ModelSha256
+              TRACE_TABLE: !Ref TraceTable
+              TRACE_TTL_DAYS: !Ref TraceTtlDays
+              # Uploads are not retained. See PHASE4_AWS_DEPLOYMENT.md §
+              # "Input data lifecycle".
+              RETAIN_UPLOADS: "false"
+              # Phase 3b measured the fallback as wrong on 18 of 19
+              # multi-subject scenes. It stays off in the deployed service.
+              ENABLE_FOREGROUND_FALLBACK: "false"
+              LOG_LEVEL: INFO
+      InstanceConfiguration:
+        # 1 vCPU / 2 GB. OpenCV decoding and the DNN forward pass are CPU-bound
+        # and single-request; a larger instance would idle. Measured locally at
+        # roughly 230 ms for a complete inspection including inference.
+        Cpu: "1024"
+        Memory: "2048"
+        InstanceRoleArn: !GetAtt InstanceRole.Arn
+      HealthCheckConfiguration:
+        # HTTP against /health, which reports process liveness only. Readiness
+        # is a separate endpoint and is deliberately NOT the health check:
+        # initialisation fetches an 11 MB model, and a platform that treats
+        # "not yet ready" as "broken image" will fail the deployment before the
+        # service has done anything wrong.
+        Protocol: HTTP
+        Path: /health
+        Interval: 10
+        Timeout: 5
+        HealthyThreshold: 1
+        UnhealthyThreshold: 5
+
+Outputs:
+  ServiceUrl:
+    Description: HTTPS endpoint (managed certificate, provided by App Runner)
+    Value: !Sub "https://${InspectionService.ServiceUrl}"
+  ModelBucketName:
+    Value: !Ref ModelBucket
+  TraceTableName:
+    Value: !Ref TraceTable

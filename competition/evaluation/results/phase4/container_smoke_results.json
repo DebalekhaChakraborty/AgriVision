@@ -1,0 +1,133 @@
+{
+  "base": "http://127.0.0.1:8099",
+  "failure_cases": [
+    {
+      "case": "not_an_image",
+      "http_status": 415,
+      "reason_code": "UNSUPPORTED_MEDIA_TYPE"
+    },
+    {
+      "case": "corrupt_jpeg",
+      "http_status": 400,
+      "reason_code": "UNDECODABLE_IMAGE"
+    },
+    {
+      "case": "oversized",
+      "http_status": 413,
+      "reason_code": "UPLOAD_TOO_LARGE"
+    }
+  ],
+  "metrics": {
+    "counters": {
+      "condition_inference_total": 2,
+      "inspection_requests_total": 8,
+      "inspection_success_total": 2,
+      "recapture_requests_total": 6,
+      "rejected_uploads_total": 6,
+      "remediation_attempts_total": 2
+    },
+    "durations": {
+      "artifact_duration_ms": {
+        "count": 16,
+        "max_ms": 20.73,
+        "median_ms": 18.7,
+        "p95_ms": 20.73
+      },
+      "foreground_duration_ms": {
+        "count": 10,
+        "max_ms": 7.75,
+        "median_ms": 7.16,
+        "p95_ms": 7.75
+      },
+      "inspection_duration_ms": {
+        "count": 8,
+        "max_ms": 217.2,
+        "median_ms": 64.06,
+        "p95_ms": 217.2
+      },
+      "model_duration_ms": {
+        "count": 2,
+        "max_ms": 11.9,
+        "median_ms": 11.9,
+        "p95_ms": 11.9
+      },
+      "quality_duration_ms": {
+        "count": 8,
+        "max_ms": 169.5,
+        "median_ms": 16.94,
+        "p95_ms": 169.5
+      }
+    },
+    "log_version": "phase4-logs-1.0.0"
+  },
+  "scenarios": [
+    {
+      "condition_model_invoked": true,
+      "final_status": "COMPLETE",
+      "http_status": 200,
+      "latency_ms": 73.1,
+      "remediation_applied": false,
+      "requested_human_action": "",
+      "run_id": "82485057dd004ab68d232f21e41625a9",
+      "scenario": "normal",
+      "terminal_reason_code": "CAPTURE_ACCEPTABLE"
+    },
+    {
+      "condition_model_invoked": false,
+      "final_status": "REQUEST_RECAPTURE",
+      "http_status": 200,
+      "latency_ms": 103.6,
+      "remediation_applied": true,
+      "requested_human_action": "REQUEST_RECAPTURE",
+      "run_id": "9fa09de021bf4cbe8541fdc3b8a45d90",
+      "scenario": "underexposed",
+      "terminal_reason_code": "SEVERE_CONTRAST_LOSS"
+    },
+    {
+      "condition_model_invoked": false,
+      "final_status": "REQUEST_RECAPTURE",
+      "http_status": 200,
+      "latency_ms": 52.8,
+      "remediation_applied": false,
+      "requested_human_action": "REQUEST_RECAPTURE",
+      "run_id": "03e3a8ab4e3549db9adc59bd73ee52c7",
+      "scenario": "severe_blur",
+      "terminal_reason_code": "BLUR_NOT_REMEDIABLE"
+    },
+    {
+      "condition_model_invoked": false,
+      "final_status": "REQUEST_RECAPTURE",
+      "http_status": 200,
+      "latency_ms": 15.3,
+      "remediation_applied": false,
+      "requested_human_action": "REQUEST_RECAPTURE",
+      "run_id": "d1c6f6e43e104973b3f700fc640ce119",
+      "scenario": "foreground_failure",
+      "terminal_reason_code": "ARTIFACT_EVIDENCE_UNAVAILABLE"
+    }
+  ],
+  "trace_retrieval": {
+    "causal_fields_present": true,
+    "leaks": [],
+    "run_id": "03e3a8ab4e3549db9adc59bd73ee52c7",
+    "step_count": 7
+  },
+  "transport_note": "Scenarios are uploaded as JPEG, which is what a client actually sends. JPEG is lossy, so a marginal capture can land on a different side of a calibrated threshold than the same array inspected in-process. Measured: darken(reference, 0.12) completes in-process and, after a JPEG round trip, has gamma applied and accepted and is then refused by the severe contrast check. Pre-remediation metrics are near-identical (luminance 0.0480 vs 0.0485); the divergence is post-gamma contrast falling below the 0.12 severe limit. The agent is responding correctly to the pixels it was actually given; this is recorded because API-path outcomes may therefore differ from in-process scenario-suite outcomes on marginal captures.",
+  "version": {
+    "api_version": "phase4-api-1.0.0",
+    "claim_boundary": "Reports visible surface condition only. This is not a food-safety, edibility, contamination or internal-spoilage assessment, and a human remains responsible for any decision about produce.",
+    "deployment_input_contract": "One primary produce item per inspection capture. Market stalls, piles, crates and trees carrying multiple fruits are outside scope and are expected to return a recapture or human-review action. This is a scope boundary, not a food-safety statement.",
+    "enable_foreground_fallback": false,
+    "expected_model_sha256": "77d8614671873cb41ebfd725f0a4b468beca9c30cfe6a3361217343917324d4b",
+    "max_upload_bytes": 12582912,
+    "model_id": "mobilenet_v3_large-v2expV2-P2-MOBILENETV3-LARGE-004",
+    "model_source": "local",
+    "opencv_version": "5.0.0",
+    "persistence": "in_memory",
+    "region": "us-east-1",
+    "retain_uploads": false,
+    "service_version": "phase4-service-1.0.0",
+    "trace_ttl_days": 14,
+    "upload_retention_days": null
+  }
+}

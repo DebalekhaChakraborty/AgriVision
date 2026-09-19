@@ -1,0 +1,104 @@
+{
+  "health_vs_ready": {
+    "health": "process liveness only; returns 200 while the model is still downloading",
+    "ready": "503 until OpenCV, policy, verified artifact and loaded model are all present",
+    "why_separate": "The platform health check must not treat 'still initialising' as 'broken image'. Conflating them is what turned a working container into three failed deployments."
+  },
+  "metrics": {
+    "counters": [
+      "inspection_requests_total",
+      "inspection_success_total",
+      "recapture_requests_total",
+      "reposition_light_requests_total",
+      "human_review_requests_total",
+      "remediation_attempts_total",
+      "condition_inference_total",
+      "tool_failures_total",
+      "rejected_uploads_total",
+      "persistence_failures_total",
+      "unsafe_inference_count",
+      "step_budget_exceeded_count"
+    ],
+    "durations": [
+      "inspection_duration_ms",
+      "foreground_duration_ms",
+      "quality_duration_ms",
+      "artifact_duration_ms",
+      "model_duration_ms"
+    ],
+    "exposed_at": "GET /metrics",
+    "observed_on_aws": {
+      "inspection_requests_total": 4,
+      "inspection_success_total": 1,
+      "recapture_requests_total": 3,
+      "rejected_uploads_total": 3,
+      "unsafe_inference_count": 0
+    },
+    "why_not_cloudwatch_custom_metrics": "Custom metrics bill per metric per month, and App Runner already publishes request count, latency and error rate at no extra cost. What those miss is the agent dimension, and that lives in the structured logs where it can be queried with Logs Insights without a second billing surface. No production SLO is defined: there is no traffic history to base one on."
+  },
+  "phase4_version": "phase4-service-1.0.0",
+  "structured_logging": {
+    "destination": "CloudWatch Logs",
+    "format": "one JSON object per line",
+    "log_group": "/aws/apprunner/agrivision-inspection/<service-id>/application",
+    "redaction": {
+      "enforced_on": "every logged value, recursively, rather than per call site",
+      "mechanism": "sensitive key names are replaced wholesale; any value containing a path or credential marker is replaced entirely rather than partially masked, since a partial mask still leaks length and prefix",
+      "never_logged": [
+        "image bytes",
+        "credentials",
+        "authorization headers",
+        "filesystem paths",
+        "upload filenames",
+        "full request bodies"
+      ]
+    },
+    "verified_fields_present": [
+      "run_id",
+      "event",
+      "state",
+      "action",
+      "reason_code",
+      "duration_ms",
+      "success",
+      "pipeline_version",
+      "condition_model_invoked",
+      "trace_stored",
+      "level",
+      "timestamp"
+    ],
+    "verified_from": "live CloudWatch events retrieved after the AWS smoke run"
+  },
+  "trace_persistence": {
+    "backend": "DynamoDB",
+    "causal_structure_preserved": "The full step list is stored, not a prose summary: a retrieved trace still shows the OpenCV metric, the threshold it was compared against, the decision that followed and the tool that decision invoked.",
+    "leak_scan": "none",
+    "record_contains": [
+      "run_id",
+      "created_at",
+      "expires_at",
+      "final_status",
+      "requested_human_action",
+      "original_image_sha256",
+      "canonical_image_sha256",
+      "media_type",
+      "pipeline_version",
+      "policy_fingerprints",
+      "terminal_reason_code",
+      "condition_model_invoked",
+      "trace",
+      "decisions"
+    ],
+    "record_excludes": [
+      "image bytes",
+      "EXIF",
+      "filesystem paths",
+      "credentials",
+      "upload filename"
+    ],
+    "records_written_during_smoke": 4,
+    "table": "agrivision-inspection-traces",
+    "verified_record_size_bytes": 8464,
+    "why_dynamodb": "App Runner replaces instances freely and may run more than one, so a run inspected on one instance must be retrievable from another. Local disk cannot do that. It is not chosen for scale."
+  }
+}
