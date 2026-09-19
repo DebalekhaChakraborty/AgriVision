@@ -1,0 +1,2290 @@
+{
+  "count": 249,
+  "rejections": [
+    {
+      "category": "Apples",
+      "fruit": "apple",
+      "reasons": [
+        "551x413 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:AppleCorer&Slicer.JPG",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Apples",
+      "fruit": "apple",
+      "reasons": [
+        "1027x582 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Apple Genome LTR Red Phenotype.png",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Apples",
+      "fruit": "apple",
+      "reasons": [
+        "mime application/sla"
+      ],
+      "stage": "format",
+      "title": "File:3DApple001 HQ-4K-PNG.stl",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_FORMAT"
+    },
+    {
+      "category": "Apples",
+      "fruit": "apple",
+      "reasons": [
+        "800x600 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Apple (511354151).jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Apples",
+      "fruit": "apple",
+      "reasons": [
+        "mime image/tiff"
+      ],
+      "stage": "format",
+      "title": "File:02-'Diva\u2019 apple, a cultivar developed for cider production. Photo by S. Khanizadeh.tif",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_FORMAT"
+    },
+    {
+      "reasons": [
+        "family CF-0aaed90d0c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Apfel 02.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-9d88ddaed3 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2013. \u041a\u0440\u044b\u043c 864.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-0aaed90d0c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Apfel 6.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "category": "Red apples",
+      "fruit": "apple",
+      "reasons": [
+        "640x480 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:A Fine Pair of apples - geograph.org.uk - 916522.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Red apples",
+      "fruit": "apple",
+      "reasons": [
+        "800x600 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Apfelgalerie Kronprinz-Rudolf.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "reasons": [
+        "family CF-9cdcfc5662 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Apples in the Walled Garden of Parham House, West Sussex, England 3.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-0aaed90d0c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Apfel 476.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "category": "Green apples",
+      "fruit": "apple",
+      "reasons": [
+        "800x549 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Apple and Orange - they do not compare.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Green apples",
+      "fruit": "apple",
+      "reasons": [
+        "512x384 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:138 - apples, green1-me.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Green apples",
+      "fruit": "apple",
+      "reasons": [
+        "685x370 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Errezil sagarra.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "reasons": [
+        "family CF-9cdcfc5662 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Apples in the Walled Garden of Parham House, West Sussex, England 1.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2016-08-28 Green apples.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-80e743c46db9 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:2013-365-229 Between a Rock and a Rock Place (9533503381).jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-a91834be96 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Apple - Flickr - Stiller Beobachter (1).jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2018-07-16 Green apples on tree.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2018-07-15 Green apples on tree.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-c3d66deb3c8d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Garden apples in Nuthurst, West Sussex, England 1.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-c3d66deb3c8d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Garden apple tree in Nuthurst, West Sussex, England 1.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "461x346 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:A bunch of bananas.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "1024x384 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Banana-fluorescence-081108.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "750x536 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Banana.arp.750pix.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "400x300 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:BananaCutting.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "36470575 bytes"
+      ],
+      "stage": "size",
+      "title": "File:2016-11-09 23-49-21 recup.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_SIZE"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "960x569 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Banana & Sea Cox's Bazar Bangladesh.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "480x1014 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Baby bananas.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "1280x455 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Assistant-under-acting-deputy banana republic general ribbon.png",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "107x281 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Banana-person.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "567x521 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Banana-Curvature.png",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas",
+      "fruit": "banana",
+      "reasons": [
+        "mime video/webm"
+      ],
+      "stage": "format",
+      "title": "File:Abejas en la flor del platano.webm",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_FORMAT"
+    },
+    {
+      "reasons": [
+        "family CF-da00e9c1a3 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Banana 0757.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2016-09-15 04-25-35 recup.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2016-10-09 00-48-47 recup.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2016-10-27 00-00-00 recup.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2016-10-29 01-04-31 recup.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2016-11-16 21-54-38 recup.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2017-02-13 21-29-06 recup.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-da00e9c1a3 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Banana 5.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-a0c87aaf67 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Banana-ouro (2).jpeg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-da00e9c1a3 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Banana 8.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-da00e9c1a3 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Banana 9.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-da00e9c1a3 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Banana 10.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-98349898d2 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:At Tenerife 2026 568.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "category": "Red banana",
+      "fruit": "banana",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:YosriPisangMerah.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Red banana",
+      "fruit": "banana",
+      "reasons": [
+        "480x640 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Red Banana.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Red banana",
+      "fruit": "banana",
+      "reasons": [
+        "600x600 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:2 red bananas.png",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Red banana",
+      "fruit": "banana",
+      "reasons": [
+        "1047x580 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Musa acuminata (AAA Group) 'Red Dacca' - red banana.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "reasons": [
+        "family CF-18c287d7eb already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Banane Rose - 2.JPG",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-2858794daa4f already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:\"Red banana\".jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-0153b67162 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:04242jfBaclaran Elpidio Quirino Avenue Para\u00f1aque Cityfvf 10.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-ea13d857bf already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Red bananas.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-ea13d857bf already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Red bananas 2.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "category": "Oranges",
+      "fruit": "orange",
+      "reasons": [
+        "no creator recorded; attribution cannot be given"
+      ],
+      "stage": "attribution",
+      "title": "File:Ambersweet oranges.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_NO_CREATOR"
+    },
+    {
+      "category": "Oranges",
+      "fruit": "orange",
+      "reasons": [
+        "mime application/ogg"
+      ],
+      "stage": "format",
+      "title": "File:Apelsin spreadthesign.ogv",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_FORMAT"
+    },
+    {
+      "category": "Oranges",
+      "fruit": "orange",
+      "reasons": [
+        "512x384 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:164 - oranges.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Oranges",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:16-09-17-WikiLovesCocktails-Zutaten-Img0158.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Oranges",
+      "fruit": "orange",
+      "reasons": [
+        "600x358 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:\"To Jeer and Gloat, May Not be Nice, I'll Take the Sun - You Take the Ice\" (11289203294).jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Oranges",
+      "fruit": "orange",
+      "reasons": [
+        "800x600 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Apple (2273874670).jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Oranges",
+      "fruit": "orange",
+      "reasons": [
+        "800x610 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Apples and... (2333028743).jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2010-12-14 Maroc Agadir Soukh local market.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "same file reached from another category"
+      ],
+      "stage": "duplicate",
+      "title": "File:Apples, Pears, Oranges.jpg",
+      "verdict": "SKIPPED_ALREADY_POOLED"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2006-09-16 - United Kingdom - England - London - British Museum - Oranges - Cutout - Orange 4889727396.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-c3d66deb3c8d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Apricots Oranges and Saturn Peaches at Broadstairs Kent England.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-7c45510ab828 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:04916-Kalifornien-1903-Oranges and Snowfields-Br\u00fcck & Sohn Kunstverlag.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-7c45510ab828 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:05593-Kalifornien-1904-Orange Blossoms-Br\u00fcck & Sohn Kunstverlag.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-7c45510ab828 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:05595-Pomona-1904-Orange Groves near Pomona, California-Br\u00fcck & Sohn Kunstverlag.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-7c45510ab828 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:05605-Pomona-1904-Old Baldy 10000 feet high from Orange Orchards-Br\u00fcck & Sohn Kunstverlag.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-7c45510ab828 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:05611-Kalifornien-1904-Orange Groves in California-Br\u00fcck & Sohn Kunstverlag.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-7c45510ab828 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:06718--1905-Orangenpfl\u00fccker-Br\u00fcck & Sohn Kunstverlag.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-7c45510ab828 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:06741--1905-Oranges and Snowfields-Br\u00fcck & Sohn Kunstverlag.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2017-02-13 21-29-06 recup.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-80e743c46db9 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:2012-366-353 Juicing It (8290566278).jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-80e743c46db9 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:2010-365-124 Still Life (4579895727).jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-80e743c46db9 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:2014-365-111 Orange Space (13942821996).jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-258d527a6f66 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:A Panda Brand and A poly basket of oranges.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-1db582320c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:An orange.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "same file reached from another category"
+      ],
+      "stage": "duplicate",
+      "title": "File:A group of ripe bananas sits next to several oranges.jpg",
+      "verdict": "SKIPPED_ALREADY_POOLED"
+    },
+    {
+      "category": "Orange fruit",
+      "fruit": "orange",
+      "reasons": [
+        "600x450 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Alpinia zerumbet pods.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Orange fruit",
+      "fruit": "orange",
+      "reasons": [
+        "250x188 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Clementines.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Orange fruit",
+      "fruit": "orange",
+      "reasons": [
+        "382x368 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Cherapu.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Orange fruit",
+      "fruit": "orange",
+      "reasons": [
+        "640x480 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Citrus Variety.JPG",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Orange fruit",
+      "fruit": "orange",
+      "reasons": [
+        "no creator recorded; attribution cannot be given"
+      ],
+      "stage": "attribution",
+      "title": "File:A cantaloupe melon (Cucumis melo subsp. melo); one op Wellcome V0044281.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_NO_CREATOR"
+    },
+    {
+      "category": "Orange fruit",
+      "fruit": "orange",
+      "reasons": [
+        "no creator recorded; attribution cannot be given"
+      ],
+      "stage": "attribution",
+      "title": "File:A cantaloupe melon (Cucumis melo subsp. melo); one op Wellcome V0044281 (cropped).jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_NO_CREATOR"
+    },
+    {
+      "category": "Orange fruit",
+      "fruit": "orange",
+      "reasons": [
+        "850x478 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:2025.02.14 Japanese Quince Maule's Quince Fruit Chaenomeles Japonica in Baranovichi Brest Region Belarus.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Orange fruit",
+      "fruit": "orange",
+      "reasons": [
+        "850x478 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:2025.02.14 Japanese Quince Maule's Quince Fruit Chaenomeles Japonica in Baranovichi Brest Region.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Orange fruit",
+      "fruit": "orange",
+      "reasons": [
+        "865x487 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:2022.11.16 Japanese Quince Maule's Quince Fruit Chaenomeles Japonica in Baranovichi Brest Region Belarus.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "reasons": [
+        "family CF-efd91119f7 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:20130304FeteDuCitronMenton 005.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-efd91119f7 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:20130304FeteDuCitronMenton 041.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-efd91119f7 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:20130304FeteDuCitronMenton 043.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-efd91119f7 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:20130304FeteDuCitronMenton 051.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-efd91119f7 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:20130304FeteDuCitronMenton 056.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-a7668a657e5f already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus reticulata April 2013 Nordbaden.JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-ece7404c0f already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Ab plant 664.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-c27a6cbce307 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:0431jfPanasahan Fishes City of Malolos Bulacan Fishportfvf 10.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-c3d66deb3c8d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Apricots Oranges and Saturn Peaches at Broadstairs Kent England.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-c3d66deb3c8d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Boxes of green grocery on The Roundway Tottenham London England.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-45ca069b0808 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Cucurbita 2018 G1.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-45ca069b0808 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Cucurbita 2018 G2.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-c3d66deb3c8d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Boxes of green grocery, Lordship Lane, Tottenham, London, England.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-5ca5245a56a0 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Alyxia ruscifolia leaf.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "category": "Citrus sinensis",
+      "fruit": "orange",
+      "reasons": [
+        "640x480 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Citrus sinensis0.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Citrus sinensis",
+      "fruit": "orange",
+      "reasons": [
+        "1425x625 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:2005orange.PNG",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Citrus sinensis",
+      "fruit": "orange",
+      "reasons": [
+        "700x378 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Citrus Black Spot on Valencia orange.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Citrus sinensis",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:Bulletin of the U.S. Department of Agriculture (1098) (20312666978).jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Citrus sinensis",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:16-09-17-WikiLovesCocktails-Zutaten-Img0158.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Citrus sinensis",
+      "fruit": "orange",
+      "reasons": [
+        "350x342 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Citrus Black Spot on Valencia orange (detail).jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Citrus sinensis",
+      "fruit": "orange",
+      "reasons": [
+        "1230x465 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Chromatogramme HE C sinensis.png",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "reasons": [
+        "family CF-d8ef0d8653 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis in Jardin des Plantes de Toulouse 01.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus x sinensis Temple 0zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus x sinensis Temple 1zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus x sinensis Temple 2zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus x sinensis Temple 3zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus x sinensis Temple 4zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis Sanguinelli 0zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis Sanguinelli 1zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis 5zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis 6zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis 7zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis 8zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-b6ac0ed6f8f5 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis 9zz.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-b59d3e5f8c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis Lucca 02.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-b59d3e5f8c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis Lucca 03.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-b59d3e5f8c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Citrus sinensis Lucca 01.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-258d527a6f66 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:A Winter melons and A Valencia.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-258d527a6f66 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:A Box of Valencia from Guang Xi.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "category": "Navel oranges",
+      "fruit": "orange",
+      "reasons": [
+        "800x600 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Navel orange 2006.jpg",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Navel oranges",
+      "fruit": "orange",
+      "reasons": [
+        "mime image/tiff"
+      ],
+      "stage": "format",
+      "title": "File:A carload of mammoth navel oranges from California LCCN2008680519.tif",
+      "track": "CLEAN_BASE",
+      "verdict": "REJECTED_FORMAT"
+    },
+    {
+      "reasons": [
+        "group SG-fa634186be0d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Navel Orange and Pera Orange.JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-fa634186be0d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Navel of a Navel Orange.JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-fa634186be0d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Vertical Cut of a Navel Orange.JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-fa634186be0d already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Some Navel Oranges.JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2019-10-13 21 23 33 The peel from a navel orange from Chile in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2019-10-13 21 22 12 An unpeeled navel orange from Chile in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2019-10-13 21 24 15 A peeled navel orange from Chile in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2019-10-13 21 24 26 A peeled navel orange from Chile in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-6b82bdee9139 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Orange (10963476994).jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2022-04-24 17 43 10 A Navel orange in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2022-04-24 17 41 18 A Navel orange in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2022-04-24 17 47 01 A Navel orange in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2022-04-24 17 51 13 A peeled Navel orange in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2022-04-24 18 52 31 A peeled Navel orange split in two in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2022-04-24 18 46 13 A partially peeled Navel orange in the Dulles section of Sterling, Loudoun County, Virginia.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-36b85885f3 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Navel oranges on display in the produce section of Giant, Kingstowne, Virginia - 2.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-c65bd6a88c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Navel orange.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-7a27b4e7da85 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Cara Cara Navel oranges for sale at Giant.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "category": "Apples in baskets",
+      "fruit": "apple",
+      "reasons": [
+        "800x600 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Apfelgalerie Roter-Eisenapfel.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Apples in baskets",
+      "fruit": "apple",
+      "reasons": [
+        "84x86 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Aplbasket.png",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Apples in baskets",
+      "fruit": "apple",
+      "reasons": [
+        "756x548 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Anis44.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Apples in baskets",
+      "fruit": "apple",
+      "reasons": [
+        "800x600 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Apfelgalerie Kronprinz-Rudolf.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "reasons": [
+        "same file reached from another category"
+      ],
+      "stage": "duplicate",
+      "title": "File:Apples..!!.jpg",
+      "verdict": "SKIPPED_ALREADY_POOLED"
+    },
+    {
+      "reasons": [
+        "same file reached from another category"
+      ],
+      "stage": "duplicate",
+      "title": "File:Apples in a bascket.jpg",
+      "verdict": "SKIPPED_ALREADY_POOLED"
+    },
+    {
+      "reasons": [
+        "group SG-efacc19e6320 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:2015, Fair Smaki Regionow, Poznan (Grojeckie jablka).JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Adersleber Kalvill jm55125.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Ahrina jm55205.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Altl\u00e4nder Rosenapfel jm55131.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Antonowka jm55130.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Apfel aus Grignon jm55128.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Ausbacher Roter jm55134.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Baumanns Renette jm55133.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Bavendorfer Apfel jm55132.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Berner Rosenapfel jm55137.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Birnenf\u00f6rmiger Apfel jm55135.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Bismarck Apfel jm55140.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Biesterfelder Renette jm55136.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Blauacher W\u00e4denswil jm55139.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-674e3b0bb3eb already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Blumberger Langstiel jm55138.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-0aaed90d0c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Apfel 476.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-0aaed90d0c already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Apfel 540.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-067b8e3b3e28 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Ananas-Renette.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-067b8e3b3e28 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Baumanns Renette.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-45ca069b0808 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Apples in basket 2018 G1.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-45ca069b0808 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Apples in basket 2018 G2.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-35965f38ff57 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Aborigen 8.8.2015.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "reasons": [
+        "408x862 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Epicier coupe.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "reasons": [
+        "379x514 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Epicier coupe petit.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "reasons": [
+        "800x506 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:COLLECTIE TROPENMUSEUM Aardewerken fruitschaal TMnr 1330-261.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "reasons": [
+        "800x559 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:COLLECTIE TROPENMUSEUM Aardewerken fruitschaal TMnr 1330-262.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "reasons": [
+        "800x572 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:COLLECTIE TROPENMUSEUM Aardewerken fruitschaal TMnr 1330-263.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "reasons": [
+        "800x531 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:COLLECTIE TROPENMUSEUM Fruitschaal op voet TMnr 6300-84.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:Colourful fruits..jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:Cyclopedia of American horticulture, comprising suggestions for cultivation of horticultural plants, descriptions of the species of fruits, vegetables, flowers and ornamental plants sold in the United (14595742460).jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:16-09-17-WikiLovesCocktails-Zutaten-Img0142.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:16-09-17-WikiLovesCocktails-Zutaten-Img0144.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:16-09-17-WikiLovesCocktails-Zutaten-Img0147.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:16-09-17-WikiLovesCocktails-Zutaten-Img0151.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:16-09-17-WikiLovesCocktails-Zutaten-Img0155.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:16-09-17-WikiLovesCocktails-Zutaten-Img0158.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit bowls",
+      "fruit": "apple",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:16-09-17-WikiLovesCocktails-Zutaten-Img0163.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "reasons": [
+        "same file reached from another category"
+      ],
+      "stage": "duplicate",
+      "title": "File:(330-365) Healthy (6195816251).jpg",
+      "verdict": "SKIPPED_ALREADY_POOLED"
+    },
+    {
+      "reasons": [
+        "family CF-bceafd784d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Arrigo finzi, fruttiera vendemmia, 1935, argento 02.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-38e1f793e193 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Ettore sottsass per memphis srl. e rossi & aracndi, fruttiera murmansk, argento, 1982 (1982-86).jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-38e1f793e193 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Enzo mari per danese srl. (oggi driade spa.), fruttiera, in ottone placcato argento, 1982.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-38e1f793e193 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Ettore sottsass per rossi & arcandi srl. e memphis srl., centrotavola murmansk, 1982.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-38e1f793e193 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Edward c. moore per tiffany & co., fruttiera, argento, new york 1859.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-7f4f5d22c8 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Bowl of Fruit.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "category": "Bananas in Uganda",
+      "fruit": "banana",
+      "reasons": [
+        "380x575 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Banana carrier Uganda.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Bananas in Uganda",
+      "fruit": "banana",
+      "reasons": [
+        "1000x613 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Best transport system for foodstuffs.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "reasons": [
+        "family CF-a5351248e8 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:African Fruits 03.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-a5351248e8 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:African Fruits 02.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-391ba922b1 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:A lady currying a banana on the head from the farm. 02.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-391ba922b1 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:A lady currying a banana on the head from the farm. 04.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-391ba922b1 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:A lady currying a banana on the head from the farm. 06.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-391ba922b1 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:A lady currying a banana on the head from the farm. 03.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-391ba922b1 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:A lady currying a banana on the head from the farm. 07.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-391ba922b1 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:A lady currying a banana on the head from the farm. 08.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-391ba922b1 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:A lady currying a banana on the head from the farm. 05.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "group SG-38e2bc636f36 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:A banana and Cassava stall.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-8b4f948ef700 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Clusters of yellow banana at kawepe market.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "category": "Fruit stalls",
+      "fruit": "banana",
+      "reasons": [
+        "497x864 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Cleveland WS Fruit.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit stalls",
+      "fruit": "banana",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:An illustrated history of Stevens, Ferry, Okanogan and Chelan counties, state of Washington (1904) (14762941154).jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit stalls",
+      "fruit": "banana",
+      "reasons": [
+        "658x456 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:\"Home and habitat\".png",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit stalls",
+      "fruit": "banana",
+      "reasons": [
+        "mime image/tiff"
+      ],
+      "stage": "format",
+      "title": "File:2023 Amsterdam - a fruit market stall at the Albert Cuyp market in the sunlight with a lot of city people walking and shopping - free download photo in Dutch street photography by Fons Heijnsbroek, Netherlands.tif",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_FORMAT"
+    },
+    {
+      "category": "Fruit stalls",
+      "fruit": "banana",
+      "reasons": [
+        "mime image/tiff"
+      ],
+      "stage": "format",
+      "title": "File:- 2024 photo of shopping & walking women on the sunny street market Ten Katemarkt in the neighbourhood Kinkerbuurt, Amsterdam - street photography in free images and high resolutions by Dutch photographer Fons Heijnsbroek, Netherlands.tif",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_FORMAT"
+    },
+    {
+      "category": "Fruit stalls",
+      "fruit": "banana",
+      "licence_id": "CC-BY-SA-4.0",
+      "reasons": [
+        "subject-level restriction present: personality"
+      ],
+      "stage": "licence",
+      "title": "File:Banana Stalls Ooty Market Nilgiris Aug25 A7CR 07094.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESTRICTED"
+    },
+    {
+      "reasons": [
+        "group SG-2858794daa4f already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:A road side fruit juice stall.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-2108d4e56945 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:2012 am Wiener Naschmarkt 3.JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-2108d4e56945 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:2012 am Wiener Naschmarkt 5.JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-2108d4e56945 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:2012 am Wiener Naschmarkt 6.JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-1aa32c9e2277 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Dry Fruit Shop in Jammu.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-1aa32c9e2277 already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:Dryfruit Stall in Jammu.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-6ecac48548 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Bago, mercado 27.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2022-08-08 Wikipedia-Stammtisch mit MUC-KulturTour Wiener Platz 17.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "category": "Greengrocers",
+      "fruit": "orange",
+      "reasons": [
+        "640x480 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Johns - geograph.org.uk - 201217.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Greengrocers",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:\"Street scene with advertising hoardings\" but where? Corner of Summerhill and Langrishe Place! (9155805097).jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "reasons": [
+        "group SG-006a22d31f2e already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:DSC04809 Istanbul - Fruttivendolo a Ey\u00fcp - Foto G. Dall'Orto 30-5-2006.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-006a22d31f2e already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:DSC04810 Istanbul - Fruttivendolo a Ey\u00fcp - Foto G. Dall'Orto 30-5-2006.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-006a22d31f2e already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:DSC04811 Istanbul - Fruttivendolo a Ey\u00fcp - Foto G. Dall'Orto 30-5-2006.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "group SG-006a22d31f2e already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:DSC04812 Istanbul - Strada ad Ey\u00fcp - Foto G. Dall'Orto 30-5-2006.jpg",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    },
+    {
+      "reasons": [
+        "family CF-ceb1191ebb already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Fruit vendors in Da Lat 2.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-ceb1191ebb already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Fruit vendors in Da Lat 3.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-f481620e78 already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Fruter\u00eda, Madrid, Espa\u00f1a, 2016 02.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "category": "Fruit markets",
+      "fruit": "orange",
+      "reasons": [
+        "800x600 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Durians.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit markets",
+      "fruit": "orange",
+      "reasons": [
+        "604x453 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Freezer Bananas.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit markets",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:BWFruits.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit markets",
+      "fruit": "orange",
+      "reasons": [
+        "480x270 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Birniwa water melon market.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "category": "Fruit markets",
+      "fruit": "orange",
+      "licence_id": "CC-BY-SA-4.0",
+      "reasons": [
+        "subject-level restriction present: personality"
+      ],
+      "stage": "licence",
+      "title": "File:Fruit Stand - Kitasenju Tokyo - 2018 1 21.webm",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESTRICTED"
+    },
+    {
+      "reasons": [
+        "family CF-bf20b850cd already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:Fruit - Viktualienmarkt - DSC08601.JPG",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "reasons": [
+        "family CF-430473329d already represented"
+      ],
+      "stage": "diversity",
+      "title": "File:2010-12-14 Maroc Agadir Soukh local market.jpg",
+      "verdict": "SKIPPED_CAPTURE_FAMILY"
+    },
+    {
+      "category": "Fruit shops",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:Obst-supermarkt-1.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit shops",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:Obst-supermarkt-2.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit shops",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:Obst-supermarkt-3.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit shops",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:Obst-supermarkt-5.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit shops",
+      "fruit": "orange",
+      "licence_id": "UNKNOWN",
+      "reasons": [
+        "no field resolved to a recognised licence"
+      ],
+      "stage": "licence",
+      "title": "File:Obst-supermarkt-6.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_UNKNOWN"
+    },
+    {
+      "category": "Fruit shops",
+      "fruit": "orange",
+      "reasons": [
+        "480x640 below 640px"
+      ],
+      "stage": "resolution",
+      "title": "File:Say it with fruit - geograph.org.uk - 423886.jpg",
+      "track": "NATURAL_SCENE",
+      "verdict": "REJECTED_RESOLUTION"
+    },
+    {
+      "reasons": [
+        "group SG-2858794daa4f already at cap"
+      ],
+      "stage": "diversity",
+      "title": "File:A roadside fruit vendor.JPG",
+      "verdict": "SKIPPED_SOURCE_GROUP"
+    }
+  ]
+}

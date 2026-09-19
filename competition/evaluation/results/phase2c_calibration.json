@@ -1,0 +1,1153 @@
+{
+  "calibration_version": "phase2c-roi-calibration-1.0.0",
+  "confusion_matrix_roi": {
+    "borderline": {
+      "accepted": 216,
+      "blocked": 115
+    },
+    "false_accept": 80,
+    "false_accept_rate": 0.1927710843373494,
+    "false_block": 2,
+    "false_block_rate": 0.06666666666666667,
+    "scope": "roi",
+    "scored_acceptable": 30,
+    "scored_unusable": 415,
+    "true_accept": 28,
+    "true_block": 335,
+    "unassessable": 468,
+    "unlabelled": {
+      "accepted": 110,
+      "blocked": 11
+    }
+  },
+  "confusion_matrix_whole_image": {
+    "borderline": {
+      "accepted": 237,
+      "blocked": 283
+    },
+    "false_accept": 63,
+    "false_accept_rate": 0.09692307692307692,
+    "false_block": 9,
+    "false_block_rate": 0.2571428571428571,
+    "scope": "whole_image",
+    "scored_acceptable": 35,
+    "scored_unusable": 650,
+    "true_accept": 26,
+    "true_block": 587,
+    "unassessable": 0,
+    "unlabelled": {
+      "accepted": 89,
+      "blocked": 71
+    }
+  },
+  "focus_metrics": {
+    "high_frequency_ratio": {
+      "disqualifiers": [],
+      "distributions": {
+        "by_blur_level": {
+          "sigma=0.0": {
+            "median": 0.6177579164505005,
+            "n": 39,
+            "p10": 0.46666155457496644,
+            "p90": 0.7811568975448608
+          },
+          "sigma=1.0": {
+            "median": 0.3328048139810562,
+            "n": 44,
+            "p10": 0.24934101104736328,
+            "p90": 0.45297025144100195
+          },
+          "sigma=2.0": {
+            "median": 0.17620249092578888,
+            "n": 45,
+            "p10": 0.1307614415884018,
+            "p90": 0.26418320536613465
+          },
+          "sigma=4.0": {
+            "median": 0.16704809665679932,
+            "n": 45,
+            "p10": 0.12367255836725236,
+            "p90": 0.27947908639907837
+          },
+          "sigma=7.0": {
+            "median": 0.21776221692562103,
+            "n": 48,
+            "p10": 0.16403457671403884,
+            "p90": 0.3355112403631211
+          }
+        },
+        "by_exposure_level": {
+          "overexpose=1.6": {
+            "median": 0.6116025149822235,
+            "n": 38,
+            "p10": 0.48304620683193206,
+            "p90": 0.7632331967353821
+          },
+          "overexpose=2.6": {
+            "median": 0.643536776304245,
+            "n": 38,
+            "p10": 0.4958620697259903,
+            "p90": 0.756684160232544
+          },
+          "overexpose=3.5": {
+            "median": 0.6695272922515869,
+            "n": 34,
+            "p10": 0.5213068544864654,
+            "p90": 0.7911741197109222
+          },
+          "underexpose=0.06": {
+            "median": 0.6996823847293854,
+            "n": 40,
+            "p10": 0.5990609645843505,
+            "p90": 0.805254477262497
+          },
+          "underexpose=0.12": {
+            "median": 0.6748063564300537,
+            "n": 41,
+            "p10": 0.5403574705123901,
+            "p90": 0.7846651673316956
+          },
+          "underexpose=0.25": {
+            "median": 0.6455686986446381,
+            "n": 42,
+            "p10": 0.4962055325508118,
+            "p90": 0.7777410805225372
+          },
+          "underexpose=0.6": {
+            "median": 0.6232964396476746,
+            "n": 41,
+            "p10": 0.46436914801597595,
+            "p90": 0.7804304361343384
+          }
+        },
+        "by_fruit": {
+          "apple": {
+            "median": 0.5695964395999908,
+            "n": 12,
+            "p10": 0.5069521725177765,
+            "p90": 0.7387894630432129
+          },
+          "banana": {
+            "median": 0.6395896673202515,
+            "n": 17,
+            "p10": 0.47436959147453306,
+            "p90": 0.7800974488258362
+          },
+          "orange": {
+            "median": 0.6302995085716248,
+            "n": 10,
+            "p10": 0.3980395972728729,
+            "p90": 0.7860412478446961
+          }
+        },
+        "by_resolution": {
+          "1000-1999": {
+            "median": 0.6299325823783875,
+            "n": 32,
+            "p10": 0.5069521725177765,
+            "p90": 0.7843879461288452
+          },
+          "<1000": {
+            "median": 0.5077219605445862,
+            "n": 7,
+            "p10": 0.44182313680648805,
+            "p90": 0.6800525188446045
+          }
+        },
+        "by_subject_scale": {
+          "scale=0.25": {
+            "median": 0.599351704120636,
+            "n": 49,
+            "p10": 0.5041575908660889,
+            "p90": 0.6813178896903992
+          },
+          "scale=0.5": {
+            "median": 0.6144567131996155,
+            "n": 63,
+            "p10": 0.49840790033340454,
+            "p90": 0.7042501449584961
+          }
+        },
+        "by_track": {
+          "CLEAN_BASE": {
+            "median": 0.6299325823783875,
+            "n": 30,
+            "p10": 0.5076273262500763,
+            "p90": 0.7848566830158233
+          },
+          "NATURAL_SCENE": {
+            "median": 0.5984246730804443,
+            "n": 9,
+            "p10": 0.3796493709087372,
+            "p90": 0.6741877913475036
+          }
+        }
+      },
+      "exposure_sensitivity": [
+        {
+          "family": "underexpose",
+          "max_over_min_ratio": 1.1326158129216775,
+          "medians_by_level": {
+            "0.06": 0.6996823847293854,
+            "0.12": 0.6748063564300537,
+            "0.25": 0.6455686986446381,
+            "0.6": 0.6232964396476746,
+            "1.0": 0.6177579164505005
+          },
+          "n_by_level": {
+            "0.06": 40,
+            "0.12": 41,
+            "0.25": 42,
+            "0.6": 41,
+            "1.0": 39
+          }
+        },
+        {
+          "family": "overexpose",
+          "max_over_min_ratio": 1.0947098415235377,
+          "medians_by_level": {
+            "1.0": 0.6177579164505005,
+            "1.6": 0.6116025149822235,
+            "2.6": 0.643536776304245,
+            "3.5": 0.6695272922515869
+          },
+          "n_by_level": {
+            "1.0": 39,
+            "1.6": 38,
+            "2.6": 38,
+            "3.5": 34
+          }
+        }
+      ],
+      "scale_sensitivity": {
+        "family": "shrink_subject",
+        "max_over_min_ratio": 1.0307102027128963,
+        "medians_by_level": {
+          "0.25": 0.599351704120636,
+          "0.5": 0.6144567131996155,
+          "1.0": 0.6177579164505005
+        },
+        "n_by_level": {
+          "0.25": 49,
+          "0.5": 63,
+          "1.0": 39
+        }
+      },
+      "sweep_points": 122,
+      "threshold": {
+        "acceptable_n": 30,
+        "admissible": true,
+        "direction": "floor",
+        "false_accept_rate": 0.0967741935483871,
+        "false_accepts": 9,
+        "false_block_rate": 0.0,
+        "false_blocks": 0,
+        "reasons": [],
+        "separation_auc": 0.9989247311827957,
+        "threshold": 0.318197637796402,
+        "unusable_n": 93
+      },
+      "usable_as_global_threshold": true
+    },
+    "laplacian_variance": {
+      "disqualifiers": [
+        "underexpose moves the metric by 88.29x, above the 1.5x limit",
+        "overexpose moves the metric by 3.42x, above the 1.5x limit"
+      ],
+      "distributions": {
+        "by_blur_level": {
+          "sigma=0.0": {
+            "median": 174.9731334704502,
+            "n": 39,
+            "p10": 32.93417427607225,
+            "p90": 2164.7766764997114
+          },
+          "sigma=1.0": {
+            "median": 12.562195747968367,
+            "n": 44,
+            "p10": 4.917261465152565,
+            "p90": 39.51947600486745
+          },
+          "sigma=2.0": {
+            "median": 3.0587690165288577,
+            "n": 45,
+            "p10": 2.195682077425915,
+            "p90": 7.301665865658537
+          },
+          "sigma=4.0": {
+            "median": 1.9113727891766172,
+            "n": 45,
+            "p10": 1.5567526230868212,
+            "p90": 2.437040782459341
+          },
+          "sigma=7.0": {
+            "median": 1.6780863223653864,
+            "n": 48,
+            "p10": 1.2772281702928965,
+            "p90": 2.0314300879379954
+          }
+        },
+        "by_exposure_level": {
+          "overexpose=1.6": {
+            "median": 340.6699203559283,
+            "n": 38,
+            "p10": 62.553777581628424,
+            "p90": 2173.7517946590388
+          },
+          "overexpose=2.6": {
+            "median": 474.9194056760817,
+            "n": 38,
+            "p10": 75.97406795973394,
+            "p90": 3295.946300815848
+          },
+          "overexpose=3.5": {
+            "median": 598.5241034135471,
+            "n": 34,
+            "p10": 78.60720066556992,
+            "p90": 4179.578924219203
+          },
+          "underexpose=0.06": {
+            "median": 1.9818681197141488,
+            "n": 40,
+            "p10": 0.8242348984683519,
+            "p90": 9.712454859817388
+          },
+          "underexpose=0.12": {
+            "median": 4.209674108859946,
+            "n": 41,
+            "p10": 1.60532527977445,
+            "p90": 34.05889754653626
+          },
+          "underexpose=0.25": {
+            "median": 13.38083543742524,
+            "n": 42,
+            "p10": 3.4580314674560877,
+            "p90": 129.01135138381733
+          },
+          "underexpose=0.6": {
+            "median": 64.83081268175681,
+            "n": 41,
+            "p10": 13.281750452623744,
+            "p90": 773.0891446423168
+          }
+        },
+        "by_fruit": {
+          "apple": {
+            "median": 146.1042650396451,
+            "n": 12,
+            "p10": 32.918440016286475,
+            "p90": 1027.7164850751017
+          },
+          "banana": {
+            "median": 222.9013784045542,
+            "n": 17,
+            "p10": 44.603321928993786,
+            "p90": 2235.8231589007432
+          },
+          "orange": {
+            "median": 238.9662877540486,
+            "n": 10,
+            "p10": 35.02611437232161,
+            "p90": 701.4157915544265
+          }
+        },
+        "by_resolution": {
+          "1000-1999": {
+            "median": 247.51963264259507,
+            "n": 32,
+            "p10": 34.36805135379651,
+            "p90": 2126.0492294461765
+          },
+          "<1000": {
+            "median": 102.02172697920953,
+            "n": 7,
+            "p10": 39.17221217539836,
+            "p90": 955.3467013005333
+          }
+        },
+        "by_subject_scale": {
+          "scale=0.25": {
+            "median": 510.2773197238473,
+            "n": 49,
+            "p10": 203.74543845124572,
+            "p90": 2081.6020909461768
+          },
+          "scale=0.5": {
+            "median": 360.44708982076725,
+            "n": 63,
+            "p10": 116.93557060189256,
+            "p90": 2038.4666470671827
+          }
+        },
+        "by_track": {
+          "CLEAN_BASE": {
+            "median": 162.43522230208356,
+            "n": 30,
+            "p10": 33.521573802301695,
+            "p90": 2234.2258596503275
+          },
+          "NATURAL_SCENE": {
+            "median": 193.10343202714023,
+            "n": 9,
+            "p10": 30.815562223799883,
+            "p90": 708.5256680311487
+          }
+        }
+      },
+      "exposure_sensitivity": [
+        {
+          "family": "underexpose",
+          "max_over_min_ratio": 88.28697113089802,
+          "medians_by_level": {
+            "0.06": 1.9818681197141488,
+            "0.12": 4.209674108859946,
+            "0.25": 13.38083543742524,
+            "0.6": 64.83081268175681,
+            "1.0": 174.9731334704502
+          },
+          "n_by_level": {
+            "0.06": 40,
+            "0.12": 41,
+            "0.25": 42,
+            "0.6": 41,
+            "1.0": 39
+          }
+        },
+        {
+          "family": "overexpose",
+          "max_over_min_ratio": 3.420662884308619,
+          "medians_by_level": {
+            "1.0": 174.9731334704502,
+            "1.6": 340.6699203559283,
+            "2.6": 474.9194056760817,
+            "3.5": 598.5241034135471
+          },
+          "n_by_level": {
+            "1.0": 39,
+            "1.6": 38,
+            "2.6": 38,
+            "3.5": 34
+          }
+        }
+      ],
+      "scale_sensitivity": {
+        "family": "shrink_subject",
+        "max_over_min_ratio": 2.9163181204046045,
+        "medians_by_level": {
+          "0.25": 510.2773197238473,
+          "0.5": 360.44708982076725,
+          "1.0": 174.9731334704502
+        },
+        "n_by_level": {
+          "0.25": 49,
+          "0.5": 63,
+          "1.0": 39
+        }
+      },
+      "sweep_points": 122,
+      "threshold": {
+        "acceptable_n": 30,
+        "admissible": true,
+        "direction": "floor",
+        "false_accept_rate": 0.0967741935483871,
+        "false_accepts": 9,
+        "false_block_rate": 0.0,
+        "false_blocks": 0,
+        "reasons": [],
+        "separation_auc": 1.0,
+        "threshold": 2.2743284564686688,
+        "unusable_n": 93
+      },
+      "usable_as_global_threshold": false
+    },
+    "normalised_gradient_energy": {
+      "disqualifiers": [
+        "underexpose moves the metric by 1.51x, above the 1.5x limit",
+        "overexpose moves the metric by 2.43x, above the 1.5x limit"
+      ],
+      "distributions": {
+        "by_blur_level": {
+          "sigma=0.0": {
+            "median": 1.3678704706768012,
+            "n": 39,
+            "p10": 0.34682316119132794,
+            "p90": 4.116812053734305
+          },
+          "sigma=1.0": {
+            "median": 0.6846155454642271,
+            "n": 44,
+            "p10": 0.17610441281832662,
+            "p90": 1.762695400453856
+          },
+          "sigma=2.0": {
+            "median": 0.3102045555538923,
+            "n": 45,
+            "p10": 0.09794222441871991,
+            "p90": 0.832063443997891
+          },
+          "sigma=4.0": {
+            "median": 0.15249844662445158,
+            "n": 45,
+            "p10": 0.05486180667963454,
+            "p90": 0.3465488062131262
+          },
+          "sigma=7.0": {
+            "median": 0.08099120570405878,
+            "n": 48,
+            "p10": 0.0303324003863351,
+            "p90": 0.1616578823976073
+          }
+        },
+        "by_exposure_level": {
+          "overexpose=1.6": {
+            "median": 1.778309802259733,
+            "n": 38,
+            "p10": 0.5531826780232382,
+            "p90": 4.875389299869472
+          },
+          "overexpose=2.6": {
+            "median": 2.3367208379788336,
+            "n": 38,
+            "p10": 0.6490726870095115,
+            "p90": 6.636935424332963
+          },
+          "overexpose=3.5": {
+            "median": 3.325150789420464,
+            "n": 34,
+            "p10": 0.915346307050323,
+            "p90": 12.560302573293935
+          },
+          "underexpose=0.06": {
+            "median": 1.8351696649042064,
+            "n": 40,
+            "p10": 0.8148942700137133,
+            "p90": 3.9949886480866956
+          },
+          "underexpose=0.12": {
+            "median": 1.517750878852666,
+            "n": 41,
+            "p10": 0.6494860967707652,
+            "p90": 4.429119266772399
+          },
+          "underexpose=0.25": {
+            "median": 1.312559756459672,
+            "n": 42,
+            "p10": 0.38840680727311555,
+            "p90": 3.478160989510265
+          },
+          "underexpose=0.6": {
+            "median": 1.211622161277154,
+            "n": 41,
+            "p10": 0.35491020278728747,
+            "p90": 4.082290675676242
+          }
+        },
+        "by_fruit": {
+          "apple": {
+            "median": 1.276808191425419,
+            "n": 12,
+            "p10": 0.5430381161563823,
+            "p90": 4.248532289928619
+          },
+          "banana": {
+            "median": 1.8494321323458158,
+            "n": 17,
+            "p10": 0.34468692358767783,
+            "p90": 3.8036262579335887
+          },
+          "orange": {
+            "median": 0.9545052758531813,
+            "n": 10,
+            "p10": 0.3715763577024409,
+            "p90": 2.6596270370028487
+          }
+        },
+        "by_resolution": {
+          "1000-1999": {
+            "median": 1.276808191425419,
+            "n": 32,
+            "p10": 0.3518739653303244,
+            "p90": 3.4450904455156914
+          },
+          "<1000": {
+            "median": 1.6182933301432478,
+            "n": 7,
+            "p10": 0.5431140942976688,
+            "p90": 5.34536324525959
+          }
+        },
+        "by_subject_scale": {
+          "scale=0.25": {
+            "median": 3.4917239798424475,
+            "n": 49,
+            "p10": 1.2664177669429064,
+            "p90": 7.112167327681941
+          },
+          "scale=0.5": {
+            "median": 2.1244390722889235,
+            "n": 63,
+            "p10": 0.7602738906074168,
+            "p90": 4.841227788269928
+          }
+        },
+        "by_track": {
+          "CLEAN_BASE": {
+            "median": 1.4124917732214293,
+            "n": 30,
+            "p10": 0.34789127999315295,
+            "p90": 4.314488843747147
+          },
+          "NATURAL_SCENE": {
+            "median": 1.1949137028150891,
+            "n": 9,
+            "p10": 0.8040276039130425,
+            "p90": 2.696654305608161
+          }
+        }
+      },
+      "exposure_sensitivity": [
+        {
+          "family": "underexpose",
+          "max_over_min_ratio": 1.514638575915267,
+          "medians_by_level": {
+            "0.06": 1.8351696649042064,
+            "0.12": 1.517750878852666,
+            "0.25": 1.312559756459672,
+            "0.6": 1.211622161277154,
+            "1.0": 1.3678704706768012
+          },
+          "n_by_level": {
+            "0.06": 40,
+            "0.12": 41,
+            "0.25": 42,
+            "0.6": 41,
+            "1.0": 39
+          }
+        },
+        {
+          "family": "overexpose",
+          "max_over_min_ratio": 2.4308959515554354,
+          "medians_by_level": {
+            "1.0": 1.3678704706768012,
+            "1.6": 1.778309802259733,
+            "2.6": 2.3367208379788336,
+            "3.5": 3.325150789420464
+          },
+          "n_by_level": {
+            "1.0": 39,
+            "1.6": 38,
+            "2.6": 38,
+            "3.5": 34
+          }
+        }
+      ],
+      "scale_sensitivity": {
+        "family": "shrink_subject",
+        "max_over_min_ratio": 2.5526715099820794,
+        "medians_by_level": {
+          "0.25": 3.4917239798424475,
+          "0.5": 2.1244390722889235,
+          "1.0": 1.3678704706768012
+        },
+        "n_by_level": {
+          "0.25": 49,
+          "0.5": 63,
+          "1.0": 39
+        }
+      },
+      "sweep_points": 122,
+      "threshold": {
+        "acceptable_n": 30,
+        "admissible": true,
+        "direction": "floor",
+        "false_accept_rate": 0.0967741935483871,
+        "false_accepts": 9,
+        "false_block_rate": 0.03333333333333333,
+        "false_blocks": 1,
+        "reasons": [],
+        "separation_auc": 0.9691756272401434,
+        "threshold": 0.29911204253824963,
+        "unusable_n": 93
+      },
+      "usable_as_global_threshold": false
+    },
+    "tenengrad": {
+      "disqualifiers": [
+        "underexpose moves the metric by 212.36x, above the 1.5x limit",
+        "overexpose moves the metric by 2.84x, above the 1.5x limit",
+        "subject scale moves the metric by 3.86x, above the 3.0x limit"
+      ],
+      "distributions": {
+        "by_blur_level": {
+          "sigma=0.0": {
+            "median": 2226.4946438661855,
+            "n": 39,
+            "p10": 690.8869715033767,
+            "p90": 9093.728716556676
+          },
+          "sigma=1.0": {
+            "median": 973.302152101961,
+            "n": 44,
+            "p10": 412.36518976606015,
+            "p90": 2954.290995133611
+          },
+          "sigma=2.0": {
+            "median": 445.0862464670678,
+            "n": 45,
+            "p10": 175.31575875334312,
+            "p90": 1622.881492500662
+          },
+          "sigma=4.0": {
+            "median": 208.19113764988944,
+            "n": 45,
+            "p10": 81.91033612937548,
+            "p90": 721.4239190358021
+          },
+          "sigma=7.0": {
+            "median": 123.98832747826253,
+            "n": 48,
+            "p10": 41.76915397635167,
+            "p90": 344.68083789570477
+          }
+        },
+        "by_exposure_level": {
+          "overexpose=1.6": {
+            "median": 4870.654915615321,
+            "n": 38,
+            "p10": 1409.5794334207928,
+            "p90": 15637.293938002442
+          },
+          "overexpose=2.6": {
+            "median": 5385.67766641366,
+            "n": 38,
+            "p10": 1621.37055268509,
+            "p90": 22252.107014960664
+          },
+          "overexpose=3.5": {
+            "median": 6317.710138726587,
+            "n": 34,
+            "p10": 1405.9562267513363,
+            "p90": 26036.880104950775
+          },
+          "underexpose=0.06": {
+            "median": 10.484716530025462,
+            "n": 40,
+            "p10": 5.756573909896239,
+            "p90": 38.92218373081073
+          },
+          "underexpose=0.12": {
+            "median": 35.07779898535965,
+            "n": 41,
+            "p10": 14.919221276653134,
+            "p90": 147.40221115809055
+          },
+          "underexpose=0.25": {
+            "median": 142.07910676435705,
+            "n": 42,
+            "p10": 56.820963936777126,
+            "p90": 550.0423000893913
+          },
+          "underexpose=0.6": {
+            "median": 808.2039500126184,
+            "n": 41,
+            "p10": 258.27486222033633,
+            "p90": 3220.1695203451345
+          }
+        },
+        "by_fruit": {
+          "apple": {
+            "median": 2124.748330080869,
+            "n": 12,
+            "p10": 723.9641439400956,
+            "p90": 9140.865439099825
+          },
+          "banana": {
+            "median": 2681.373046167851,
+            "n": 17,
+            "p10": 840.4045876561593,
+            "p90": 10167.678423121191
+          },
+          "orange": {
+            "median": 2108.8784458673153,
+            "n": 10,
+            "p10": 861.1120260050759,
+            "p90": 5787.441390757406
+          }
+        },
+        "by_resolution": {
+          "1000-1999": {
+            "median": 2239.794263845168,
+            "n": 32,
+            "p10": 626.7444656378179,
+            "p90": 8757.075151975221
+          },
+          "<1000": {
+            "median": 2167.3007419528794,
+            "n": 7,
+            "p10": 1052.619086394478,
+            "p90": 8098.960347909006
+          }
+        },
+        "by_subject_scale": {
+          "scale=0.25": {
+            "median": 8585.148314745209,
+            "n": 49,
+            "p10": 2334.81579423825,
+            "p90": 19976.00151832505
+          },
+          "scale=0.5": {
+            "median": 3974.098305768934,
+            "n": 63,
+            "p10": 1351.074065822703,
+            "p90": 14492.118089429014
+          }
+        },
+        "by_track": {
+          "CLEAN_BASE": {
+            "median": 2124.748330080869,
+            "n": 30,
+            "p10": 700.050186627028,
+            "p90": 9995.04555881249
+          },
+          "NATURAL_SCENE": {
+            "median": 3489.9335520872155,
+            "n": 9,
+            "p10": 1456.4264850209847,
+            "p90": 6054.946726518013
+          }
+        }
+      },
+      "exposure_sensitivity": [
+        {
+          "family": "underexpose",
+          "max_over_min_ratio": 212.3562079613781,
+          "medians_by_level": {
+            "0.06": 10.484716530025462,
+            "0.12": 35.07779898535965,
+            "0.25": 142.07910676435705,
+            "0.6": 808.2039500126184,
+            "1.0": 2226.4946438661855
+          },
+          "n_by_level": {
+            "0.06": 40,
+            "0.12": 41,
+            "0.25": 42,
+            "0.6": 41,
+            "1.0": 39
+          }
+        },
+        {
+          "family": "overexpose",
+          "max_over_min_ratio": 2.8375141867649996,
+          "medians_by_level": {
+            "1.0": 2226.4946438661855,
+            "1.6": 4870.654915615321,
+            "2.6": 5385.67766641366,
+            "3.5": 6317.710138726587
+          },
+          "n_by_level": {
+            "1.0": 39,
+            "1.6": 38,
+            "2.6": 38,
+            "3.5": 34
+          }
+        }
+      ],
+      "scale_sensitivity": {
+        "family": "shrink_subject",
+        "max_over_min_ratio": 3.8559034212799954,
+        "medians_by_level": {
+          "0.25": 8585.148314745209,
+          "0.5": 3974.098305768934,
+          "1.0": 2226.4946438661855
+        },
+        "n_by_level": {
+          "0.25": 49,
+          "0.5": 63,
+          "1.0": 39
+        }
+      },
+      "sweep_points": 122,
+      "threshold": {
+        "acceptable_n": 30,
+        "admissible": true,
+        "direction": "floor",
+        "false_accept_rate": 0.0967741935483871,
+        "false_accepts": 9,
+        "false_block_rate": 0.06666666666666667,
+        "false_blocks": 2,
+        "reasons": [],
+        "separation_auc": 0.9551971326164874,
+        "threshold": 494.8680357048636,
+        "unusable_n": 93
+      },
+      "usable_as_global_threshold": false
+    }
+  },
+  "focus_selection": {
+    "floor": 0.318197637796402,
+    "gates_on_focus": true,
+    "rejections": [],
+    "selected": "high_frequency_ratio"
+  },
+  "illumination_thresholds": {
+    "highlight_clip_fraction_limit": {
+      "acceptable_n": 30,
+      "admissible": false,
+      "direction": "ceiling",
+      "false_accept_rate": 0.09734513274336283,
+      "false_accepts": 11,
+      "false_block_rate": 0.2,
+      "false_blocks": 6,
+      "families": [
+        "overexpose",
+        "glare"
+      ],
+      "metric": "highlight_clip_fraction",
+      "reasons": [
+        "separation AUC 0.935 below 0.95",
+        "best achievable false-block rate 0.200 exceeds 0.1"
+      ],
+      "separation_auc": 0.9351032448377581,
+      "threshold": 0.0001588813382132561,
+      "unusable_n": 113
+    },
+    "low_contrast_limit": {
+      "acceptable_n": 30,
+      "admissible": true,
+      "direction": "floor",
+      "false_accept_rate": 0.09090909090909091,
+      "false_accepts": 9,
+      "false_block_rate": 0.0,
+      "false_blocks": 0,
+      "families": [
+        "reduce_contrast"
+      ],
+      "metric": "contrast_score",
+      "reasons": [],
+      "separation_auc": 1.0,
+      "threshold": 0.13137254901960785,
+      "unusable_n": 99
+    },
+    "overexposed_mean_luminance": {
+      "acceptable_n": 30,
+      "admissible": false,
+      "direction": "ceiling",
+      "false_accept_rate": 0.08333333333333333,
+      "false_accepts": 6,
+      "false_block_rate": 0.1,
+      "false_blocks": 3,
+      "families": [
+        "overexpose"
+      ],
+      "metric": "mean_luminance",
+      "reasons": [
+        "separation AUC 0.943 below 0.95"
+      ],
+      "separation_auc": 0.9425925925925925,
+      "threshold": 0.6266746410560724,
+      "unusable_n": 72
+    },
+    "shadow_clip_fraction_limit": {
+      "acceptable_n": 30,
+      "admissible": false,
+      "direction": "ceiling",
+      "false_accept_rate": 0.09876543209876543,
+      "false_accepts": 8,
+      "false_block_rate": 0.13333333333333333,
+      "false_blocks": 4,
+      "families": [
+        "underexpose"
+      ],
+      "metric": "shadow_clip_fraction",
+      "reasons": [
+        "separation AUC 0.924 below 0.95",
+        "best achievable false-block rate 0.133 exceeds 0.1"
+      ],
+      "separation_auc": 0.9242798353909465,
+      "threshold": 0.023850107658521892,
+      "unusable_n": 81
+    },
+    "underexposed_mean_luminance": {
+      "acceptable_n": 30,
+      "admissible": true,
+      "direction": "floor",
+      "false_accept_rate": 0.09876543209876543,
+      "false_accepts": 8,
+      "false_block_rate": 0.0,
+      "false_blocks": 0,
+      "families": [
+        "underexpose"
+      ],
+      "metric": "mean_luminance",
+      "reasons": [],
+      "separation_auc": 1.0,
+      "threshold": 0.052740868420908985,
+      "unusable_n": 81
+    }
+  },
+  "locked_policy": {
+    "focus_floor": 0.318197637796402,
+    "focus_metric": "high_frequency_ratio",
+    "gates_on_focus": true,
+    "highlight_clip_fraction_limit": 0.05,
+    "highlight_clip_value": 251,
+    "lock_fingerprint": "15b7fb0908d6d622",
+    "low_contrast_limit": 0.13137254901960785,
+    "measurement_scope": "FOREGROUND_MASKED",
+    "min_image_dimension": 32,
+    "overexposed_mean_luminance": 0.8,
+    "policy_version": "phase2c-roi-policy-1.0.0",
+    "provenance": {
+      "calibrated_on": "2026-09-18",
+      "calibrated_thresholds": {
+        "focus_floor": 0.318197637796402,
+        "focus_metric": "high_frequency_ratio",
+        "low_contrast_limit": 0.13137254901960785,
+        "underexposed_mean_luminance": 0.052740868420908985
+      },
+      "calibration_image_count": 65,
+      "calibration_sample_count": 1365,
+      "calibration_version": "phase2c-roi-calibration-1.0.0",
+      "claim_boundary": "calibrated on licensed real fruit photographs with controlled degradations; not calibrated on phone-camera deployment captures",
+      "code_fingerprint": "418934d5e05b68fcecac3aebf5260d824a6087fc+dirty",
+      "corpus_manifest_fingerprint": "af1bec531376f4b8",
+      "criteria": {
+        "max_exposure_sensitivity": 1.5,
+        "max_false_accept_rate": 0.1,
+        "max_false_block_rate": 0.1,
+        "max_scale_sensitivity": 3.0,
+        "min_separation_auc": 0.95
+      },
+      "derived_manifest_fingerprint": "a100f1a40644e874",
+      "focus_metric_rejected": [],
+      "focus_metric_selected": "high_frequency_ratio",
+      "retained_provisional_thresholds": {
+        "highlight_clip_fraction_limit": {
+          "best_candidate": 0.0001588813382132561,
+          "reasons": [
+            "separation AUC 0.935 below 0.95",
+            "best achievable false-block rate 0.200 exceeds 0.1"
+          ],
+          "retained_value": 0.05,
+          "separation_auc": 0.9351032448377581,
+          "source": "Phase 1 provisional whole-image value"
+        },
+        "overexposed_mean_luminance": {
+          "best_candidate": 0.6266746410560724,
+          "reasons": [
+            "separation AUC 0.943 below 0.95"
+          ],
+          "retained_value": 0.8,
+          "separation_auc": 0.9425925925925925,
+          "source": "Phase 1 provisional whole-image value"
+        },
+        "shadow_clip_fraction_limit": {
+          "best_candidate": 0.023850107658521892,
+          "reasons": [
+            "separation AUC 0.924 below 0.95",
+            "best achievable false-block rate 0.133 exceeds 0.1"
+          ],
+          "retained_value": 0.05,
+          "separation_auc": 0.9242798353909465,
+          "source": "Phase 1 provisional whole-image value"
+        }
+      },
+      "split_fingerprint": "77a995ceff0d33f7"
+    },
+    "shadow_clip_fraction_limit": 0.05,
+    "shadow_clip_value": 4,
+    "status": "PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL",
+    "threshold_fingerprint": "78b1e2151773787a",
+    "underexposed_mean_luminance": 0.052740868420908985
+  },
+  "opencv_version": "5.0.0",
+  "population": {
+    "base_images": 65,
+    "derived_samples": 1300,
+    "measured_samples": 1365,
+    "roi_available": 897
+  },
+  "scope_comparison": {
+    "n": 39,
+    "roi_median_highlight_clip": 1.5064740723258202e-05,
+    "roi_median_laplacian": 174.9731334704502,
+    "roi_median_shadow_clip": 0.0013169194834450515,
+    "whole_image_median_highlight_clip": 0.00033364289890964126,
+    "whole_image_median_laplacian": 179.77187522661657,
+    "whole_image_median_shadow_clip": 0.0008017446968746078
+  },
+  "segmentation": {
+    "by_track": {
+      "CLEAN_BASE": {
+        "invalid_reasons": {
+          "EXCESSIVE_BORDER_CONTACT": 2,
+          "MASK_FRAGMENTED": 1,
+          "NO_DOMINANT_COMPONENT": 2
+        },
+        "median_border_contact": 0.044978,
+        "median_component_count": 2.0,
+        "median_foreground_fraction": 0.357642,
+        "n": 35,
+        "valid": 30,
+        "valid_rate": 0.8571428571428571
+      },
+      "NATURAL_SCENE": {
+        "invalid_reasons": {
+          "EXCESSIVE_BORDER_CONTACT": 18,
+          "FOREGROUND_NEAR_FULL_FRAME": 11,
+          "MASK_FRAGMENTED": 1,
+          "NO_DOMINANT_COMPONENT": 2
+        },
+        "median_border_contact": 0.6939919999999999,
+        "median_component_count": 2.0,
+        "median_foreground_fraction": 0.820036,
+        "n": 30,
+        "valid": 9,
+        "valid_rate": 0.3
+      }
+    },
+    "note": "geometric validity only; no annotated foreground masks exist, so no IoU or Dice figure is reported and none should be inferred"
+  },
+  "split": "calibration only; held-out groups were never opened",
+  "threshold_provenance": {
+    "calibrated": {
+      "focus_floor": 0.318197637796402,
+      "focus_metric": "high_frequency_ratio",
+      "low_contrast_limit": 0.13137254901960785,
+      "underexposed_mean_luminance": 0.052740868420908985
+    },
+    "retained_provisional": {
+      "highlight_clip_fraction_limit": {
+        "best_candidate": 0.0001588813382132561,
+        "reasons": [
+          "separation AUC 0.935 below 0.95",
+          "best achievable false-block rate 0.200 exceeds 0.1"
+        ],
+        "retained_value": 0.05,
+        "separation_auc": 0.9351032448377581,
+        "source": "Phase 1 provisional whole-image value"
+      },
+      "overexposed_mean_luminance": {
+        "best_candidate": 0.6266746410560724,
+        "reasons": [
+          "separation AUC 0.943 below 0.95"
+        ],
+        "retained_value": 0.8,
+        "separation_auc": 0.9425925925925925,
+        "source": "Phase 1 provisional whole-image value"
+      },
+      "shadow_clip_fraction_limit": {
+        "best_candidate": 0.023850107658521892,
+        "reasons": [
+          "separation AUC 0.924 below 0.95",
+          "best achievable false-block rate 0.133 exceeds 0.1"
+        ],
+        "retained_value": 0.05,
+        "separation_auc": 0.9242798353909465,
+        "source": "Phase 1 provisional whole-image value"
+      }
+    },
+    "status": "PARTIALLY_CALIBRATED_SOME_THRESHOLDS_PROVISIONAL"
+  }
+}

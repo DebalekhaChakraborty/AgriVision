@@ -58,3 +58,13 @@ secrets.json
 competition/data/self_captured/
 # Manifest variant that carries filesystem paths.
 competition/data/capture_manifest.local.json
+
+# Third-party licensed imagery (Phase 2c-B).
+# Bytes stay local: the licences permit redistribution, but the committed
+# artifact is the provenance manifest, not other people's photographs.
+# Derived degradations and generated stress images are ignored for the same
+# reason plus one more - they are reproducible from the manifest and the seed.
+competition/data/licensed_real/raw/
+competition/data/licensed_real/cache/
+competition/data/licensed_real/derived/
+competition/data/licensed_real/synthetic/

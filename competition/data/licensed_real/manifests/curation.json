@@ -1,0 +1,2220 @@
+{
+  "criteria_keep_clean_base": [
+    "one of apple, banana or orange is the dominant subject",
+    "whole fruit, not a cut section, a dish, a juice or a package",
+    "a photograph, not an illustration, painting, render, print or model",
+    "in focus and legibly exposed, so presuming it acceptable is defensible",
+    "plain or simple background"
+  ],
+  "criteria_keep_natural_scene": [
+    "the target fruit is present and identifiable",
+    "a real scene: basket, bowl, table, stall, shop or market",
+    "non-plain background, ambient or artificial lighting"
+  ],
+  "criteria_reject": [
+    "fruit on the tree, blossom, orchard or plantation",
+    "cut, peeled, juiced or cooked",
+    "a different species (pumpkin, physalis, cherry, peach, lime, mandarin)",
+    "illustration, painting, 3D render, postcard, diagram or product packaging",
+    "monochrome, which colour-based foreground isolation cannot be judged on",
+    "people or objects dominant with the fruit incidental",
+    "surplus to the per-bucket target once diversity caps were met"
+  ],
+  "curated_on": "2026-09-18",
+  "curation_version": "phase2c-visual-curation-1.0.0",
+  "decisions": {
+    "WC-019f8ccc6e3420": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 395
+    },
+    "WC-01d3e2a5128c3d": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 67
+    },
+    "WC-01dda5468fbf60": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 359
+    },
+    "WC-03c65cf324e7b0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 372
+    },
+    "WC-04315aa75c1e50": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 26
+    },
+    "WC-046eecc2853934": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 108,
+      "track": "CLEAN_BASE"
+    },
+    "WC-04d8bb2db2e6eb": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 143,
+      "track": "CLEAN_BASE"
+    },
+    "WC-05775cace1dbeb": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 122
+    },
+    "WC-0704b859e07871": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 97,
+      "track": "CLEAN_BASE"
+    },
+    "WC-0712832eb99af0": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 139,
+      "track": "CLEAN_BASE"
+    },
+    "WC-07163e1fb50771": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 347
+    },
+    "WC-0740d2afb35005": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 62,
+      "track": "CLEAN_BASE"
+    },
+    "WC-078878156d9c95": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 376
+    },
+    "WC-081e4cfe7395c3": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 227,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-08848982c41693": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 14
+    },
+    "WC-09c535e047accc": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 240,
+      "track": "CLEAN_BASE"
+    },
+    "WC-0a02c94eea515d": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 79,
+      "track": "CLEAN_BASE"
+    },
+    "WC-0aa70f90c59de4": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 161
+    },
+    "WC-0ab428e985239b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 65
+    },
+    "WC-0b0fbff25c175c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 400
+    },
+    "WC-0c655514a8eece": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 9,
+      "track": "CLEAN_BASE"
+    },
+    "WC-0d184f27fa7f80": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 367
+    },
+    "WC-0d2aebb014efa0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 374
+    },
+    "WC-0d2d03770f2654": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 106
+    },
+    "WC-0e3fe86db4255a": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 153
+    },
+    "WC-0e93e2c9bab122": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 258
+    },
+    "WC-0eb219aac11b2b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 363
+    },
+    "WC-0f19a0b264c1d7": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 203
+    },
+    "WC-0f5ba7d3ee5214": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 123
+    },
+    "WC-0f96f28b55cb46": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 328
+    },
+    "WC-0faf0bfd54575e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 189
+    },
+    "WC-1090d229b5bfe3": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 388
+    },
+    "WC-10fdf7dd48c9e0": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 241,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-118f6574c526e8": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 216
+    },
+    "WC-1243c4cea2b968": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 208
+    },
+    "WC-12a9f678cde1eb": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 345
+    },
+    "WC-12b113ab3b0bd3": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 204
+    },
+    "WC-139af45c073b60": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 259
+    },
+    "WC-13f2c53dc1180b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 6
+    },
+    "WC-1487e2e8138205": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 289,
+      "track": "CLEAN_BASE"
+    },
+    "WC-1533c3fea97ca0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 100
+    },
+    "WC-15950b434cd9d5": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 393
+    },
+    "WC-178a334c494320": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 17
+    },
+    "WC-17be8189f3aa03": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 213
+    },
+    "WC-187cdc44a83c70": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 103,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-18aa9f5e6f4db0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 85
+    },
+    "WC-1992919afb3ba7": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 121
+    },
+    "WC-1a5935880c5773": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 273,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-1ab90f17a7bb59": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 44
+    },
+    "WC-1c3f7896b7f1b7": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 163
+    },
+    "WC-1d99d961de4800": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 149
+    },
+    "WC-1e2186f9878999": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 129
+    },
+    "WC-213e136fce4830": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 297
+    },
+    "WC-2172fb67cbceef": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 378
+    },
+    "WC-22fb8e18bbf0bc": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 205
+    },
+    "WC-231ebc597189ff": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 183,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-23ab80ec4143d6": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 398
+    },
+    "WC-24d73efdafec62": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 264
+    },
+    "WC-2598c6c56e92fd": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 64
+    },
+    "WC-26016e81ecf647": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 384
+    },
+    "WC-260510495f81a3": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 382
+    },
+    "WC-26693c96b79c89": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 341
+    },
+    "WC-26c6edae46ff31": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 294,
+      "track": "CLEAN_BASE"
+    },
+    "WC-285dc4d9c55d22": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 377
+    },
+    "WC-288a47b2e6086b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 150
+    },
+    "WC-2a2876d1ca29f4": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 373
+    },
+    "WC-2a4bc40afb244e": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 288,
+      "track": "CLEAN_BASE"
+    },
+    "WC-2a91e483053b61": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 19
+    },
+    "WC-2b1558a728f16b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 296
+    },
+    "WC-2b2144305f677e": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 132,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-2b94ab88ca515e": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 126,
+      "track": "CLEAN_BASE"
+    },
+    "WC-2c22ffd8325bd2": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 306
+    },
+    "WC-2d1edc543ba6c6": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 47,
+      "track": "CLEAN_BASE"
+    },
+    "WC-2e04520307431a": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 366
+    },
+    "WC-2e197369e81611": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 90
+    },
+    "WC-2eb54b512bf927": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 226
+    },
+    "WC-2fd0cbb2abd380": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 276,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-30761e03d06e30": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 5,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-317cbb96ee76d3": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 63,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-33213d515bbcb1": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 162
+    },
+    "WC-3373cdf5b94e4c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 180
+    },
+    "WC-34041520dc04f9": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 75
+    },
+    "WC-34848b2c53bc94": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 110
+    },
+    "WC-35a6706122c556": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 158
+    },
+    "WC-3605ea815e7a70": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 375
+    },
+    "WC-36d518b089a120": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 125
+    },
+    "WC-377f38514c2940": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 28,
+      "track": "CLEAN_BASE"
+    },
+    "WC-3bbffe2a6a1679": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 361
+    },
+    "WC-3cbdea96c0f306": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 93
+    },
+    "WC-3cd333fbbe7ab0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 235
+    },
+    "WC-3da91151915897": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 120,
+      "track": "CLEAN_BASE"
+    },
+    "WC-3ed1d11ac127b9": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 252
+    },
+    "WC-3f66f581b5d176": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 56
+    },
+    "WC-3fe5d347761dda": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 323
+    },
+    "WC-4180e7b55f6c3b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 284
+    },
+    "WC-42eec995fb740a": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 242
+    },
+    "WC-437a006a710577": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 181
+    },
+    "WC-43b003c83c3457": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 237
+    },
+    "WC-44b26857e65462": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 238
+    },
+    "WC-44b446990e70e1": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 332
+    },
+    "WC-44b56cc7d0317b": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 22,
+      "track": "CLEAN_BASE"
+    },
+    "WC-45bc04c342ef5e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 176
+    },
+    "WC-4600c2e9823c94": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 177
+    },
+    "WC-464dfd5491113c": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 30,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-46800e26e55120": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 131
+    },
+    "WC-469f1a0e5e4c1b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 3
+    },
+    "WC-4873e85f79dd8a": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 196
+    },
+    "WC-48dfd30b97fd7b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 191
+    },
+    "WC-4943645cc3c1c3": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 68
+    },
+    "WC-4a8875c6ee3e3e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 164
+    },
+    "WC-4acfa5585ebff8": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 105
+    },
+    "WC-4c4b06e28ee983": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 299
+    },
+    "WC-4d7161fc880735": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 209,
+      "track": "CLEAN_BASE"
+    },
+    "WC-4e064ae24c6d0d": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 70
+    },
+    "WC-4e966d0aea354a": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 392
+    },
+    "WC-4e996071d6be27": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 247
+    },
+    "WC-4effa12ed59627": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 88
+    },
+    "WC-4f15bea056b7d9": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 358
+    },
+    "WC-4f6bcb3697ea96": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 298
+    },
+    "WC-4f84b72d20ecaf": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 270
+    },
+    "WC-50c2a39c8536d6": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 151,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-5234c7cdb652aa": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 83,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-52fcc68ef20b68": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 107
+    },
+    "WC-542a0dcb7619a4": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 61
+    },
+    "WC-5525d3a0c029a1": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 318
+    },
+    "WC-5614f6e2e38740": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 320
+    },
+    "WC-563d90f58a2c6e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 355
+    },
+    "WC-567e61ffa1c71d": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 57,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-56964507d4e7c6": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 101
+    },
+    "WC-577bd8d4690445": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 344
+    },
+    "WC-5945eb408a2f52": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 119
+    },
+    "WC-5aad6df4dc5dd8": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 188
+    },
+    "WC-5b4bc15703051e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 295
+    },
+    "WC-5d0d92089db01b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 186
+    },
+    "WC-5d5ec772c8ec81": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 179
+    },
+    "WC-5d8ef30fc09a02": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 293,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-5dd094a3934424": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 362
+    },
+    "WC-5ecb26dce668db": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 137,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-5ee29cd28f1f6e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 248
+    },
+    "WC-5f4e2731671e83": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 305
+    },
+    "WC-5ffd17700aacc5": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 210,
+      "track": "CLEAN_BASE"
+    },
+    "WC-609dfd2f4f5ee1": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 381
+    },
+    "WC-60b69d8293b128": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 36
+    },
+    "WC-61cc6f50999020": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 152
+    },
+    "WC-6214a306f8fe02": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 201
+    },
+    "WC-623c17d7077aed": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 124,
+      "track": "CLEAN_BASE"
+    },
+    "WC-626bfeb54988fe": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 349
+    },
+    "WC-62dcf121908b66": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 60
+    },
+    "WC-64acdf64efc6de": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 40
+    },
+    "WC-6571986428961f": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 269
+    },
+    "WC-6580f62b48d647": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 96,
+      "track": "CLEAN_BASE"
+    },
+    "WC-6585e3f9cf7837": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 380
+    },
+    "WC-66d460d8d357dd": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 331
+    },
+    "WC-66dde7828abc59": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 324
+    },
+    "WC-688e740e3c610d": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 389
+    },
+    "WC-68ae581389f610": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 217
+    },
+    "WC-696028a677187f": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 130,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-6acb25cb210e5f": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 278,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-6ad550b34b3a5c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 292
+    },
+    "WC-6b27c3dd1b8480": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 159
+    },
+    "WC-6bd527c7684df3": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 253
+    },
+    "WC-6c6ddab9979a9d": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 104,
+      "track": "CLEAN_BASE"
+    },
+    "WC-6d321cd09e73cc": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 245
+    },
+    "WC-6dc04a539bfc69": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 166
+    },
+    "WC-6e14528f7741a0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 342
+    },
+    "WC-6e42e61fd146b7": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 66
+    },
+    "WC-6ef8c23a264e83": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 220,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-6f27e27b2c4d0b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 224
+    },
+    "WC-6ff629dd7ead86": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 255
+    },
+    "WC-7046e73f086aba": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 251
+    },
+    "WC-7060d7c77a10cc": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 134
+    },
+    "WC-707330d1712d10": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 51
+    },
+    "WC-709162369d072e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 170
+    },
+    "WC-70c827a5e7a9f0": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 81,
+      "track": "CLEAN_BASE"
+    },
+    "WC-71a298ed13b0d6": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 112
+    },
+    "WC-7299f4ce2372d5": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 265
+    },
+    "WC-72bd2933cda21d": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 145
+    },
+    "WC-738a78180ed959": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 354
+    },
+    "WC-758e1e6d7d234c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 356
+    },
+    "WC-76320342fe77b9": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 314
+    },
+    "WC-7674bc90a23a09": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 399
+    },
+    "WC-76b1090f52421b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 249
+    },
+    "WC-779e9a7ff2fa25": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 263
+    },
+    "WC-77a591c9dd51a6": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 39,
+      "track": "CLEAN_BASE"
+    },
+    "WC-77fe4a76c4f307": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 313
+    },
+    "WC-780d8340b18f1e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 287
+    },
+    "WC-7873127c30bff7": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 175
+    },
+    "WC-79de9b748e4009": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 281
+    },
+    "WC-7adb33605e5d85": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 182
+    },
+    "WC-7c2c6d8418a7ac": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 302
+    },
+    "WC-7ca009ce84e920": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 184
+    },
+    "WC-7edd7643b1cb25": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 396
+    },
+    "WC-7f5e2f8d5b869a": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 207,
+      "track": "CLEAN_BASE"
+    },
+    "WC-7f7b33c2587525": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 338
+    },
+    "WC-7fa8f7a42d7a42": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 147
+    },
+    "WC-7fc15eceeb02ea": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 236
+    },
+    "WC-7ffb9d601804f0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 50
+    },
+    "WC-800b54ada75cde": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 229
+    },
+    "WC-801abc7b9a9555": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 154
+    },
+    "WC-804a9061890686": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 326
+    },
+    "WC-814cdca50fa71e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 243
+    },
+    "WC-81d63df38f2fb5": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 169
+    },
+    "WC-8329b911b67826": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 58
+    },
+    "WC-833ee6da56e64e": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 89,
+      "track": "CLEAN_BASE"
+    },
+    "WC-83804ca910e2f7": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 92,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-848f7f06fe7d25": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 311,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-851943722fb83a": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 86,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-8564c94310baac": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 329
+    },
+    "WC-85c01d9749d413": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 146
+    },
+    "WC-865db5bf10850f": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 15
+    },
+    "WC-8794d5873aae2d": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 222,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-8811be68ec4481": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 71,
+      "track": "CLEAN_BASE"
+    },
+    "WC-886fb694acb2aa": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 327
+    },
+    "WC-89a997ec1a1862": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 2
+    },
+    "WC-8a098b9face9c8": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 256
+    },
+    "WC-8ae71f3f3b3493": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 387
+    },
+    "WC-8b5fd43bfcce07": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 128,
+      "track": "CLEAN_BASE"
+    },
+    "WC-8c33ef8ba1df50": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 160
+    },
+    "WC-8c8cd54fd2888b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 301
+    },
+    "WC-8f715ab492b140": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 277
+    },
+    "WC-8fbd1ab5a64f44": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 369
+    },
+    "WC-8fd56dceb7effb": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 350,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-90099568a7644c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 360
+    },
+    "WC-90f64550cae496": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 116,
+      "track": "CLEAN_BASE"
+    },
+    "WC-91bcbfee369628": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 285
+    },
+    "WC-927e223a86bbe3": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 316
+    },
+    "WC-934b916f4e547e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 286
+    },
+    "WC-935e2364522f7f": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 383
+    },
+    "WC-93ed0b648300a4": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 371
+    },
+    "WC-941b12f82bf256": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 215,
+      "track": "CLEAN_BASE"
+    },
+    "WC-942df2def74e12": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 115
+    },
+    "WC-94c6c32359160b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 94
+    },
+    "WC-94f796854e8ddb": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 364
+    },
+    "WC-953906b4e4b604": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 144,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-959ed22742f65b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 260
+    },
+    "WC-972e1bda144872": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 46
+    },
+    "WC-97f6165b891136": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 32,
+      "track": "CLEAN_BASE"
+    },
+    "WC-98cf2b5b824bce": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 357
+    },
+    "WC-997e8ee284a235": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 174
+    },
+    "WC-9c544579b682aa": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 11,
+      "track": "CLEAN_BASE"
+    },
+    "WC-9deeb9c2514902": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 54
+    },
+    "WC-9e309a4eb47d5b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 138
+    },
+    "WC-9e65dd1a498095": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 74
+    },
+    "WC-9ec09f28eeefba": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 272
+    },
+    "WC-9f01152c76e9fb": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 312
+    },
+    "WC-9f15033ac7626e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 257
+    },
+    "WC-9fd7cd40220b0f": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 38,
+      "track": "CLEAN_BASE"
+    },
+    "WC-a12bf770426f82": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 102,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-a1930b5245f37e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 397
+    },
+    "WC-a1bf9396a42681": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 190
+    },
+    "WC-a22cb0d7d8f7c4": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 290
+    },
+    "WC-a357ae8bb25b3c": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 206,
+      "track": "CLEAN_BASE"
+    },
+    "WC-a39112b6bf525b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 268
+    },
+    "WC-a47a9ce1bae7bc": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 69
+    },
+    "WC-a4f22dbad93dbc": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 266
+    },
+    "WC-a51eb486437eed": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 352
+    },
+    "WC-a6b424ab025b01": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 10
+    },
+    "WC-a6d0cf2e3a4d6b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 113
+    },
+    "WC-a85f20eb3245fc": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 261
+    },
+    "WC-a8e4073e66fc9e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 218
+    },
+    "WC-a926284084ecac": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 80,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-a98a92c0b60bd1": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 391
+    },
+    "WC-aa0291388989ce": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 193
+    },
+    "WC-ab4b8cd5410710": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 148,
+      "track": "CLEAN_BASE"
+    },
+    "WC-ac056894c38624": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 31
+    },
+    "WC-ac21a28556d70f": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 133
+    },
+    "WC-ac7ae04f1dc050": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 244
+    },
+    "WC-ac829b20f09953": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 7
+    },
+    "WC-ad3096fdd00db9": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 194
+    },
+    "WC-ad4b0cb4823d99": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 275
+    },
+    "WC-ad93472a7f541e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 339
+    },
+    "WC-ad9773a8887f97": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 394
+    },
+    "WC-af0ad05d9459ae": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 197
+    },
+    "WC-aff22b9ccf4015": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 228,
+      "track": "CLEAN_BASE"
+    },
+    "WC-aff4ae19d40de0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 20
+    },
+    "WC-b0d75474311f22": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 232,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-b103f0334d9954": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 98,
+      "track": "CLEAN_BASE"
+    },
+    "WC-b1ea342bed3b58": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 21,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-b1fd733e103eff": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 29
+    },
+    "WC-b3030dd2457523": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 136
+    },
+    "WC-b3ef0c4ef5dc8c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 291
+    },
+    "WC-b457952820d534": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 140
+    },
+    "WC-b52f89f583e32c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 309
+    },
+    "WC-b5e0ca2432737b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 274
+    },
+    "WC-b5e9d98bd47850": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 250
+    },
+    "WC-b5f24c2da7858c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 192
+    },
+    "WC-b605350af66114": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 271,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-b7d88e2d057a52": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 310
+    },
+    "WC-b83600f745c7a4": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 114
+    },
+    "WC-b86117fd2dfbb6": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 370
+    },
+    "WC-b8fd43f335ab7f": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 199
+    },
+    "WC-b91171d3237afd": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 95
+    },
+    "WC-b9bb50051b2695": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 45,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-b9ff3939abfdcc": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 157
+    },
+    "WC-ba343872bf0233": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 223,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-bb7cc2d94c885c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 333
+    },
+    "WC-bd6d8cef928d99": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 99,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-bda288b10370a1": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 178
+    },
+    "WC-be2c9d77527238": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 254
+    },
+    "WC-bfa95ea4b22275": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 117
+    },
+    "WC-bfad5b7984d867": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 141,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-bfd3b4c9400c80": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 300
+    },
+    "WC-bfec4eb99c5ddb": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 27
+    },
+    "WC-c15da8e28870fd": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 231,
+      "track": "CLEAN_BASE"
+    },
+    "WC-c26a02509910a9": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 233
+    },
+    "WC-c3a3ec1aafce1f": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 155
+    },
+    "WC-c5077b5dde7719": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 109,
+      "track": "CLEAN_BASE"
+    },
+    "WC-c5662399550433": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 12,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-c5e64d21b31d93": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 262
+    },
+    "WC-c71663a1ed161a": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 390
+    },
+    "WC-c75a1995d5ac4f": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 195
+    },
+    "WC-c84ef14ab65189": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 334
+    },
+    "WC-c94405781ac545": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 214,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-c94fd10b235a28": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 279
+    },
+    "WC-c9a346d9895147": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 303
+    },
+    "WC-cad5b7ed3cdf6c": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 78,
+      "track": "CLEAN_BASE"
+    },
+    "WC-cb1b69bccd12ee": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 282,
+      "track": "CLEAN_BASE"
+    },
+    "WC-cb255f37d1633e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 335
+    },
+    "WC-cb4d5ac7e1eacf": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 246
+    },
+    "WC-cc5a4cd9927dab": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 167
+    },
+    "WC-ccf9c680ba305a": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 385
+    },
+    "WC-cd8b51792f99ec": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 239
+    },
+    "WC-ceb35c33d6aa27": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 343
+    },
+    "WC-cefa2d4165c087": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 43
+    },
+    "WC-cf168a0b5739c7": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 87
+    },
+    "WC-cf6e2ed9b895db": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 142,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-d04d14b1045c0f": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 200
+    },
+    "WC-d074cf9a49e349": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 55
+    },
+    "WC-d0999bcbcdb14c": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 156
+    },
+    "WC-d15f22e3a746ef": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 304,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-d22ccc96a152ed": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 321,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-d22f2e867f9bb0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 365
+    },
+    "WC-d459fbdc410c44": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 18,
+      "track": "CLEAN_BASE"
+    },
+    "WC-d471eb9e0cf3cf": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 73
+    },
+    "WC-d4724497fd72a3": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 118
+    },
+    "WC-d51ad433c400ba": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 127
+    },
+    "WC-d51fdf546742f9": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 308
+    },
+    "WC-d55e4a685cf1a5": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 211
+    },
+    "WC-d5f77deb11cc6b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 0
+    },
+    "WC-d636625f8e6f1d": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 42,
+      "track": "CLEAN_BASE"
+    },
+    "WC-d7489a8950e6e1": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 76
+    },
+    "WC-d756ea257b3976": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 34,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-d77f8464a7d7f0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 315
+    },
+    "WC-d7c45420d3726a": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 173
+    },
+    "WC-d9d4878cdbb00e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 280
+    },
+    "WC-da1603af82ce72": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 225
+    },
+    "WC-dbe3d876a59c49": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 348
+    },
+    "WC-dcaaea74f4f9d0": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 24,
+      "track": "CLEAN_BASE"
+    },
+    "WC-dce90dbdb0cdb3": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 317
+    },
+    "WC-de1aee6dbb46fc": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 91
+    },
+    "WC-de282666236091": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 35,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-de7d085dfb6ddf": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 25
+    },
+    "WC-deb755e5c58f83": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 283
+    },
+    "WC-dfd34edda38fe2": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 8
+    },
+    "WC-e1cc3f1c7ae860": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 379
+    },
+    "WC-e20ff4e4f6a9b8": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 111,
+      "track": "CLEAN_BASE"
+    },
+    "WC-e4288636a5c437": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 171
+    },
+    "WC-e4667ddb94d763": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 212
+    },
+    "WC-e5b14008fbe107": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 49,
+      "track": "CLEAN_BASE"
+    },
+    "WC-e62536d5b4f9bd": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 82,
+      "track": "CLEAN_BASE"
+    },
+    "WC-e69f5b109d7421": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 168
+    },
+    "WC-e6c39cc54ad106": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 336
+    },
+    "WC-e6ea7ba9f340a7": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 41
+    },
+    "WC-e7f3d0f960f696": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 230
+    },
+    "WC-e83470eb62e862": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 37,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-e8e17dff155bbb": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 23,
+      "track": "CLEAN_BASE"
+    },
+    "WC-ea9eec520d4610": {
+      "fruit": "orange",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 187,
+      "track": "CLEAN_BASE"
+    },
+    "WC-eb766a4a0cfe4b": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 16
+    },
+    "WC-ebed16501a0308": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 351
+    },
+    "WC-ec2ca58d5ad0aa": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 346
+    },
+    "WC-ecd50352782172": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 386
+    },
+    "WC-ed218818d674b8": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 53
+    },
+    "WC-ee53bc54144827": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 219
+    },
+    "WC-eed7f4766fd2b2": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 234
+    },
+    "WC-ef46e1ca7b0253": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 319
+    },
+    "WC-efb0e3bad7d16f": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 48
+    },
+    "WC-eff17bfc2458c7": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 135
+    },
+    "WC-f04de4f6d45ffe": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 13
+    },
+    "WC-f0e92529b2c6d6": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 77
+    },
+    "WC-f14f303ab8db93": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 340
+    },
+    "WC-f35d364efad7ad": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 72
+    },
+    "WC-f368663cf99e71": {
+      "fruit": "banana",
+      "keep": true,
+      "note": "real scene: clutter, other produce, ambient or artificial lighting",
+      "pool_index": 84,
+      "track": "NATURAL_SCENE"
+    },
+    "WC-f385df9a6dff1d": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 202
+    },
+    "WC-f50ca2ba933947": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 52,
+      "track": "CLEAN_BASE"
+    },
+    "WC-f53d7da4d08a60": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 330
+    },
+    "WC-f5b497e67a49e5": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 307
+    },
+    "WC-f5d7f88240ff64": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 267
+    },
+    "WC-f6628f4742d5d5": {
+      "fruit": "apple",
+      "keep": true,
+      "note": "single subject dominant, simple background, in focus and legibly exposed",
+      "pool_index": 33,
+      "track": "CLEAN_BASE"
+    },
+    "WC-f7bd5fe99a09b0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 198
+    },
+    "WC-f7c9110dc81321": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 368
+    },
+    "WC-f7cef0e0fdf7f8": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 322
+    },
+    "WC-f8d7cee778396d": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 337
+    },
+    "WC-fa23827362d9e0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 59
+    },
+    "WC-fb1bdb86eb5ac0": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 325
+    },
+    "WC-fbd68bdc031488": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 165
+    },
+    "WC-fbe61a4f9ae8ae": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 1
+    },
+    "WC-fc548cf1cc6164": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 4
+    },
+    "WC-fcacda6e9eaca2": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 221
+    },
+    "WC-fcdb818edd76f4": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 353
+    },
+    "WC-fcf3da9309a62e": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 185
+    },
+    "WC-fd1eb94022b728": {
+      "keep": false,
+      "note": "off-subject (tree, blossom, cut fruit, dish, illustration, non-target species, monochrome) or surplus to the per-bucket target",
+      "pool_index": 172
+    }
+  },
+  "kept": 92,
+  "method": "Every one of the 401 licence-cleared candidates was rendered as a numbered thumbnail on 12 contact sheets and reviewed by eye. Category membership on Commons tracks subject matter, not photographic composition, so both the fruit and the track recorded here are the reviewed judgement and override the category's proposal.",
+  "reviewed": 401,
+  "why_clean_base_is_presumed_acceptable": "The undegraded Track A images carry a scored ACCEPTABLE label, so this pass deliberately rejected visibly soft or badly exposed photographs from that track. Track B was curated for subject identifiability only and carries no scored label, which is why deliberately hard images were kept there."
+}

@@ -1,0 +1,19 @@
+{
+  "count": 2,
+  "runs": [
+    {
+      "evaluated_on": "2026-09-18",
+      "held_out_images": 27,
+      "lock_fingerprint": "15b7fb0908d6d622",
+      "status": "CONFIRMATORY",
+      "threshold_fingerprint": "78b1e2151773787a"
+    },
+    {
+      "evaluated_on": "2026-09-18",
+      "held_out_images": 27,
+      "lock_fingerprint": "15b7fb0908d6d622",
+      "status": "CONFIRMATORY",
+      "threshold_fingerprint": "78b1e2151773787a"
+    }
+  ]
+}

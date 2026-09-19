@@ -37,6 +37,8 @@ OVEREXPOSURE_GAINS: tuple[float, ...] = (1.0, 1.3, 1.6, 2.0, 2.6, 3.5)
 CONTRAST_FACTORS: tuple[float, ...] = (1.0, 0.8, 0.6, 0.4, 0.25, 0.1)
 GLARE_INTENSITIES: tuple[float, ...] = (0.0, 0.3, 0.5, 0.7, 0.9)
 OCCLUSION_FRACTIONS: tuple[float, ...] = (0.0, 0.1, 0.2, 0.35, 0.5)
+# Added in Phase 2c-B. Linear size of the subject relative to the frame.
+SUBJECT_SCALES: tuple[float, ...] = (1.0, 0.75, 0.5, 0.35, 0.25)
 
 
 class DegradationError(ValueError):
@@ -78,6 +80,7 @@ _IDENTITY_LEVELS: dict[str, float] = {
     "reduce_contrast": 1.0,
     "glare": 0.0,
     "occlude": 0.0,
+    "shrink_subject": 1.0,
 }
 
 
@@ -155,6 +158,39 @@ def add_glare(image: np.ndarray, intensity: float, seed: int = 0) -> np.ndarray:
     return np.clip(result, 0, 255).astype(np.uint8)
 
 
+def shrink_subject(image: np.ndarray, scale: float, background: int = 128) -> np.ndarray:
+    """Make the subject smaller within a frame of unchanged size.
+
+    Downscales the whole image and centres it on a neutral canvas, so the
+    subject occupies fewer pixels while the frame stays the same shape. This is
+    the transform that probes whether a focus threshold survives a change of
+    subject scale, which Phase 1 identified as a confound.
+
+    **What this is not.** It is not equivalent to stepping back with a camera.
+    Physically stepping back also changes perspective, depth of field and what
+    the background contains; here the background becomes flat grey and the
+    subject is resampled rather than re-imaged. Resampling with INTER_AREA is
+    itself a low-pass operation, so some of the measured focus change is the
+    resampling and not the scale. The two cannot be separated by this transform
+    and no result derived from it should be read as if they could.
+    """
+    if not 0.0 < scale <= 1.0:
+        raise DegradationError(f"subject scale must be in (0, 1], got {scale}")
+    if scale == 1.0:
+        return image.copy()
+
+    height, width = image.shape[:2]
+    new_width = max(1, int(round(width * scale)))
+    new_height = max(1, int(round(height * scale)))
+    resized = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_AREA)
+
+    canvas = np.full_like(image, background)
+    y0 = (height - new_height) // 2
+    x0 = (width - new_width) // 2
+    canvas[y0:y0 + new_height, x0:x0 + new_width] = resized
+    return canvas
+
+
 def occlude(image: np.ndarray, area_fraction: float, seed: int = 0) -> np.ndarray:
     """Cover part of the frame with an opaque rectangle.
 
@@ -189,6 +225,7 @@ _TRANSFORMS = {
     "reduce_contrast": lambda img, spec: reduce_contrast(img, spec.level),
     "glare": lambda img, spec: add_glare(img, spec.level, spec.seed),
     "occlude": lambda img, spec: occlude(img, spec.level, spec.seed),
+    "shrink_subject": lambda img, spec: shrink_subject(img, spec.level),
 }
 
 SUPPORTED_KINDS: tuple[str, ...] = tuple(_TRANSFORMS)
@@ -216,8 +253,17 @@ def apply_degradation(
     return degraded, spec.to_dict()
 
 
+# The six families Phase 1 swept. Named explicitly so that adding a transform in
+# a later phase cannot retroactively change what "the Phase 1 ladder" refers to;
+# the Phase 1 findings were measured over exactly these.
+PHASE1_SWEEP_KINDS: tuple[str, ...] = (
+    "none", "gaussian_blur", "underexpose", "overexpose",
+    "reduce_contrast", "glare", "occlude",
+)
+
+
 def standard_sweep(seed: int = 0) -> list[DegradationSpec]:
-    """The Phase 1 measurement ladder.
+    """The Phase 1 measurement ladder. Frozen: see `PHASE1_SWEEP_KINDS`.
 
     Each family begins at its identity level so every curve has an undegraded
     reference point built in.
@@ -235,3 +281,15 @@ def standard_sweep(seed: int = 0) -> list[DegradationSpec]:
         for level in levels:
             specs.append(DegradationSpec(kind=kind, level=float(level), seed=seed))
     return specs
+
+
+def subject_scale_sweep(seed: int = 0) -> list[DegradationSpec]:
+    """Phase 2c-B ladder for the subject-scale confound.
+
+    Kept separate from `standard_sweep` rather than appended to it, so the
+    Phase 1 results stay reproducible from the ladder they were measured on.
+    """
+    return [
+        DegradationSpec(kind="shrink_subject", level=float(level), seed=seed)
+        for level in SUBJECT_SCALES
+    ]

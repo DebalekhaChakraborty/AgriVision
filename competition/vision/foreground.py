@@ -33,7 +33,23 @@ from enum import Enum
 import cv2
 import numpy as np
 
-FOREGROUND_VERSION = "phase2b-foreground-1.0.0"
+FOREGROUND_VERSION = "phase2c-foreground-1.1.0"
+
+# Morphological cleanup kernel as a fraction of the image's shorter side.
+#
+# Phase 2b used a fixed 7-pixel kernel, which was correct on the 256x256
+# fixtures it was developed against and wrong everywhere else: 7 px is 2.7% of a
+# 256 px frame but 0.36% of a 1920 px one, so on full-resolution photographs the
+# opening step removed almost nothing and thresholding speckle survived as
+# hundreds of tiny components. Measured on the Phase 2c-B corpus, the median
+# component count was 19 on plain-background images and 69 on scenes, against a
+# fragmentation guard of 12 - so 71% of samples were rejected as "fragmented"
+# masks when the real defect was a resolution-dependent constant.
+#
+# The fraction below is 7/256 exactly, so behaviour at 256 px is unchanged and
+# the constant is Phase 2b's own value expressed relatively rather than a new
+# number chosen to make the guard pass.
+CLEANUP_KERNEL_FRACTION = 7.0 / 256.0
 
 
 class ForegroundMethod(str, Enum):
@@ -67,6 +83,12 @@ class ForegroundGuards:
     min_largest_component_dominance: float = 0.65
     max_component_count: int = 12
     min_bounding_box_side: int = 24
+    # Components smaller than this fraction of the frame are thresholding
+    # speckle, not pieces of a shattered subject, and counting them turns the
+    # fragmentation guard into a resolution detector. Relative for the same
+    # reason the cleanup kernel is: at 256x256 it is 65 px, at 1920x1440 it is
+    # 2,765 px, and in both cases it means "too small to be part of the fruit".
+    min_component_area_fraction: float = 0.001
     # Pixels eroded from the mask before sharpness aggregation, to keep the
     # mask boundary itself out of the gradient statistics. See `masked_pixels`.
     sharpness_erosion_px: int = 5
@@ -141,11 +163,24 @@ def _image_fingerprint(image: np.ndarray) -> str:
 # Shared post-processing
 # --------------------------------------------------------------------------
 
-def _clean_mask(binary: np.ndarray, kernel_size: int = 7) -> np.ndarray:
+def cleanup_kernel_size(shape: tuple[int, ...]) -> int:
+    """Odd morphological kernel scaled to the image, never below 3 px."""
+    shorter = min(shape[0], shape[1])
+    size = int(round(shorter * CLEANUP_KERNEL_FRACTION)) | 1
+    return max(3, size)
+
+
+def _clean_mask(binary: np.ndarray, kernel_size: int | None = None) -> np.ndarray:
     """Close gaps, drop speckle, then fill interior holes of the largest region.
 
     Produce is a solid convex-ish object; a mask of it should not be porous.
+
+    The kernel scales with the image unless one is given explicitly, because a
+    fixed pixel count means a different physical amount of cleanup at every
+    resolution. See `CLEANUP_KERNEL_FRACTION`.
     """
+    if kernel_size is None:
+        kernel_size = cleanup_kernel_size(binary.shape)
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (kernel_size, kernel_size))
     closed = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel)
     opened = cv2.morphologyEx(closed, cv2.MORPH_OPEN, kernel)
@@ -282,9 +317,16 @@ def evaluate_mask(
     fraction = foreground / total if total else 0.0
 
     count, labels, stats, _ = cv2.connectedComponentsWithStats(mask, connectivity=8)
-    component_count = max(0, count - 1)
-    if component_count:
-        areas = stats[1:, cv2.CC_STAT_AREA]
+    all_areas = stats[1:, cv2.CC_STAT_AREA] if count > 1 else np.empty(0, dtype=np.int64)
+    # Speckle is excluded from the *count* but not from the foreground area, so
+    # fragmentation still means "the subject broke into pieces" rather than
+    # "this image has more pixels for noise to appear in".
+    minimum_area = guards.min_component_area_fraction * total
+    significant = all_areas[all_areas >= minimum_area]
+    component_count = int(significant.size)
+    speckle_count = int(all_areas.size - significant.size)
+    if all_areas.size:
+        areas = all_areas
         largest_area = float(areas.max())
         largest_index = int(np.argmax(areas)) + 1
         largest_fraction = largest_area / foreground if foreground else 0.0
@@ -327,6 +369,8 @@ def evaluate_mask(
         "largest_component_fraction": round(largest_fraction, 6),
         "border_contact_fraction": round(border, 6),
         "component_count": component_count,
+        "speckle_component_count": speckle_count,
+        "cleanup_kernel_px": cleanup_kernel_size(mask.shape),
         "bounding_box": (x, y, w, h),
         "solidity": round(solidity, 6),
     }

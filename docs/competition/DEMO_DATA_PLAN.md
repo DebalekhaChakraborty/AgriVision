@@ -83,8 +83,42 @@ boundary between remediable and recapture-required.
 This document remains valid as the statement of *why* self-captured imagery is
 needed; the protocol document states *how*, and supersedes the taxonomy above.
 
+## Superseded again by Phase 2c-B — three tiers, not one
+
+[Phase 2c-B](PHASE2C_LICENSED_CALIBRATION.md) replaced the single-source
+assumption behind this plan. Imagery now comes in three tiers that are never
+mixed, because they support different claims:
+
+| Tier | What it is | Status | What it may support |
+| --- | --- | --- | --- |
+| **Licensed real** | 92 Commons photographs, per-file verified licence, curated by eye | **primary calibration path — done** | behaviour on real imagery |
+| **Controlled degradation** | 1,840 characterised transformations of those photographs | **done** | behaviour under a known perturbation |
+| **Synthetic / generated** | 12 procedurally composed stress scenes, containing no fruit | **done, exploratory only** | stress probes, nothing else |
+| **Self-captured** | phone captures of real fruit | **optional, not started** | camera-domain transfer |
+
+The schema enforces the separation rather than relying on discipline: a
+generated record cannot carry a real-image licence or enter a real-image track,
+and a derived sample cannot exist without a `LICENSED_REAL` parent.
+
+## Demo imagery — what may actually be shown
+
+Every corpus image is permissively licensed, so public display is permitted.
+**62 of 92 carry share-alike** and 82 of 92 require attribution, so any image
+shown in the video, on Devpost or in the demo needs its creator, licence and a
+link — and an *adapted* share-alike image obliges the adaptation to be offered
+under CC BY-SA too.
+
+That obligation is why the demo should not be built around third-party imagery
+by default. The shortlist in
+[PHASE2C_LICENSED_CALIBRATION.md](PHASE2C_LICENSED_CALIBRATION.md) records which
+images are cleanest for this — CC0 and public-domain first, since they carry
+neither obligation — but self-captured photographs remain preferable for the
+final live demo for exactly the reason this document was written: they are ours,
+they are the deployment domain, and they need no attribution slate.
+
 ## Status
 
-**Not started.** No capture has been performed, and none should be performed as
-part of the current phase. This plan exists so the requirement is visible before
-it becomes urgent.
+**Licensed corpus: built and calibrated.** **Self-capture: optional and not
+started**, at the reduced scale of 3–6 fruits described in
+[PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md](PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md).
+It blocks nothing.

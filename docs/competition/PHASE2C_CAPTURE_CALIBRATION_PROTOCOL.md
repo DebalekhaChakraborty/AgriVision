@@ -4,9 +4,9 @@
 | --- | --- |
 | Branch | `competition/opencv-aws-2026` |
 | Phase 2b base commit | `f615689a4846696cd3eec1d56bb9ddf0a805854f` |
-| **Status** | **PROTOCOL LOCKED — CAPTURE PENDING** |
+| **Status** | **OPTIONAL REAL-DEVICE VALIDATION PROTOCOL** (superseded as the calibration path by [Phase 2c-B](PHASE2C_LICENSED_CALIBRATION.md)) |
 | Photographs collected | **0** |
-| Thresholds calibrated | **none** |
+| Thresholds calibrated | **none here** — calibration was carried out on licensed real imagery in Phase 2c-B |
 | Split fingerprint | `2feb9360e1c2bdf5` |
 | Photographs required | **186** (144 required + 36 extended + 6 scene) |
 | Tests | 413 passing |
@@ -15,6 +15,63 @@
 > built and *how* thresholds will later be chosen, before any image exists, so
 > that the method cannot be shaped by the data it will be applied to. No
 > threshold value appears anywhere in this document or in the tooling.
+
+---
+
+## 0. Status change — this protocol is no longer a blocker
+
+**This protocol is valid and unchanged. It is no longer on the critical path.**
+
+When it was written, 186 self-captured photographs were the only route to a
+calibrated ROI policy, which made every downstream phase wait on a shopping
+trip. [Phase 2c-B](PHASE2C_LICENSED_CALIBRATION.md) opened a second route:
+licence-verified real photographs from Wikimedia Commons, curated file by file,
+with controlled degradations supplying the negative class. That is now the
+**primary calibration path**, and the ROI policy is calibrated and frozen.
+
+What this protocol becomes is the thing licensed imagery genuinely cannot be:
+**evidence of camera-domain transfer.** Commons photographs were taken by many
+people on many cameras for reasons unrelated to inspection. Phone captures of
+fruit on a kitchen table are the deployment domain. Only the second can show
+whether a policy calibrated on the first survives contact with it.
+
+### Reduced scope — 3 to 6 fruits, not 24
+
+Executed as a *validation* rather than a *calibration*, the set shrinks by an
+order of magnitude. It no longer has to support threshold selection, so it needs
+no held-out split, no 8-items-per-fruit statistical margin and no extended
+condition ladder.
+
+| | Original calibration protocol | Optional micro-validation |
+| --- | --- | --- |
+| Purpose | choose thresholds | check a frozen policy transfers |
+| Items | 24 (8 per fruit) | **3–6** (1–2 per fruit) |
+| Conditions per item | 6, plus 6 more on six items | **6**: `REFERENCE`, `DIM`, `OVEREXPOSED`, `DEFOCUS_SEVERE`, `CLUTTERED_BACKGROUND`, `GLARE` |
+| Photographs | 186 | **18–36** |
+| Split | 15 calibration / 9 held-out | none — every image is held-out by construction |
+| Blocking? | was blocking everything | **blocks nothing** |
+
+Everything below — the naming scheme, the per-condition procedures, the
+item-level split rule, the EXIF policy, the quality-target rubric — applies
+unchanged to the smaller set. The apparatus does not need rebuilding; only
+fewer fruits go through it.
+
+### What it would tell us that Phase 2c-B cannot
+
+A controlled Gaussian blur is not a defocused lens; a multiplicative gain is not
+an underexposed sensor. Phase 2c-B says so explicitly and its numbers are scoped
+to characterised perturbations of real photographs. Running even three fruits
+through a phone would convert the open question — *does the frozen policy behave
+sensibly on real camera failure?* — from an assumption into a measurement. If
+the answer is no, that is a finding worth having before a demo, not after.
+
+### The six preassigned extended-condition items
+
+`APL-002`, `APL-003`, `BAN-004`, `BAN-007`, `ORG-006`, `ORG-007` remain frozen
+and recorded in `capture_split.json` (fingerprint `fc6b6f334101eadc`). They are
+irrelevant to the micro-validation, which has no extended ladder, and they are
+kept so that the full protocol stays executable exactly as specified should it
+ever be wanted.
 
 ---
 

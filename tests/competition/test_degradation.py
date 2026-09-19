@@ -170,9 +170,21 @@ def test_empty_image_is_rejected():
 # --- sweep --------------------------------------------------------------------
 
 
-def test_standard_sweep_covers_every_supported_kind():
+def test_standard_sweep_covers_exactly_the_phase1_ladder():
+    """Frozen: the Phase 1 findings were measured over these families only."""
+    from competition.vision.degradation import PHASE1_SWEEP_KINDS
+
     kinds = {spec.kind for spec in standard_sweep()}
-    assert kinds == set(SUPPORTED_KINDS)
+    assert kinds == set(PHASE1_SWEEP_KINDS)
+
+
+def test_every_supported_kind_is_exercised_by_some_ladder():
+    """No transform may exist without a sweep that measures it."""
+    from competition.vision.degradation import subject_scale_sweep
+
+    exercised = {spec.kind for spec in standard_sweep()}
+    exercised |= {spec.kind for spec in subject_scale_sweep()}
+    assert exercised == set(SUPPORTED_KINDS)
 
 
 def test_standard_sweep_is_reproducible():

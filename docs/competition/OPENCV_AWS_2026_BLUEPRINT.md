@@ -17,7 +17,7 @@ that produced them and are reported separately from the V2 research results.
 | Competition base commit | `3928d43b3bdd3a754f98f1f411596050de29da17` |
 | Base commit subject | Complete AgriVision V2 research experiments through Experiment 015 |
 | Research lineage | `legacy` `9769e3c` (frozen V1) → `master` `3928d43` (V2 research) |
-| Status | Phases 0–2b complete; Phase 2c-A protocol locked, capture pending. Threshold calibration is blocked on deployment-domain imagery that does not yet exist. |
+| Status | Phases 0–2c-B complete. The ROI capture-quality policy is **calibrated and frozen** on 92 licence-verified real photographs with controlled degradations, and held-out groups have been opened once. Self-capture is now an optional camera-domain validation and blocks nothing. Phase 3 is unblocked. |
 
 ---
 
@@ -688,6 +688,39 @@ the metrics must be restricted to a foreground region.
   used as a proxy.
 - **Artifacts:** `competition/data/`,
   [PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md](PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md).
+
+### Phase 2c-B — Licensed real-image calibration *(complete)*
+- **Objective:** calibrate the ROI policy without requiring physical capture, by
+  building a licensing-safe real-image corpus with verified per-file provenance.
+- **Done:** default-deny licence gate run on metadata before any byte was
+  fetched; 401 candidates cleared, all reviewed by eye on contact sheets, 92
+  admitted across 86 source groups and 8 permissive licences; source-group split
+  (65/27, fingerprint `77a995ceff0d33f7`) fixed before any metric was computed;
+  20-rung controlled-degradation ladder with preregistered verdicts; policy
+  frozen and fingerprinted before held-out was opened; held-out opened once,
+  ledgered as confirmatory; 12 synthetic stress scenes reported separately; 106
+  additional tests.
+- **Key finding — the blur metric was the problem, not the threshold.**
+  Variance of the Laplacian separates blurred from sharp perfectly (AUC 1.000)
+  and moves **88×** across the exposure ladder on the same images, so no global
+  threshold on it can exist. `high_frequency_ratio` achieves AUC 0.999 with
+  1.13×/1.10×/1.03× movement across underexposure, overexposure and subject
+  scale, and is what the policy gates on.
+- **Key finding — a resolution-dependent bug in Phase 2b.** The foreground
+  cleanup kernel was a fixed 7 px, i.e. 2.7% of a 256 px fixture and 0.36% of a
+  1920 px photograph, so the fragmentation guard was acting as a resolution
+  detector and rejecting 71% of samples. Made scale-relative; clean-base mask
+  validity rose 42.9% -> 85.7% with all 44 Phase 2b tests unchanged.
+- **Rejected with evidence:** Fruits-360 — licence acceptable under the
+  conservative reading, but its published split puts the same physical apple in
+  both Training and Test, and its 100x100 branch has the background
+  algorithmically removed.
+- **Artifacts:** `competition/data/licence_validation.py`,
+  `competition/data/licensed_sources.py`, `competition/vision/blur_metrics.py`,
+  `competition/vision/roi_policy.py`, `competition/evaluation/*licensed*`,
+  [PHASE2C_LICENSED_CALIBRATION.md](PHASE2C_LICENSED_CALIBRATION.md).
+- **Not delivered, deliberately:** no AWS, no Bedrock, no UI, no anomaly or
+  spoilage localisation, and no claim of real-world or phone-camera validation.
 
 ### Phase 3 — Agentic perception–decision–action workflow
 - **Objective:** the real loop, with traces.

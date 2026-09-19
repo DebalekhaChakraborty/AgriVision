@@ -1,0 +1,165 @@
+{
+  "cases": [
+    {
+      "border_contact_fraction": 0.0,
+      "case": "plain_background",
+      "component_count": 1,
+      "foreground_fraction": 0.151539,
+      "gate_flags": [],
+      "gate_outcome": "ELIGIBLE",
+      "invalid_reasons": [],
+      "probes": "baseline: one subject, flat background",
+      "roi_available": true,
+      "segmentation_valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "case": "busy_background",
+      "component_count": 1,
+      "foreground_fraction": 0.151539,
+      "gate_flags": [],
+      "gate_outcome": "ELIGIBLE",
+      "invalid_reasons": [],
+      "probes": "background with more texture energy than the subject",
+      "roi_available": true,
+      "segmentation_valid": true
+    },
+    {
+      "border_contact_fraction": 0.513114,
+      "case": "subject_touching_borders",
+      "component_count": 1,
+      "foreground_fraction": 0.897526,
+      "gate_flags": [],
+      "gate_outcome": "ELIGIBLE",
+      "invalid_reasons": [],
+      "probes": "subject clipped by three frame edges",
+      "roi_available": true,
+      "segmentation_valid": true
+    },
+    {
+      "border_contact_fraction": 0.187779,
+      "case": "three_equal_subjects",
+      "component_count": 7,
+      "foreground_fraction": 0.370196,
+      "gate_flags": [],
+      "gate_outcome": "ELIGIBLE",
+      "invalid_reasons": [],
+      "probes": "no dominant component",
+      "roi_available": true,
+      "segmentation_valid": true
+    },
+    {
+      "border_contact_fraction": 0.147879,
+      "case": "same_colour_distractor",
+      "component_count": 5,
+      "foreground_fraction": 0.520446,
+      "gate_flags": [],
+      "gate_outcome": "ELIGIBLE",
+      "invalid_reasons": [],
+      "probes": "a second object the subject's colour",
+      "roi_available": true,
+      "segmentation_valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "case": "tiny_subject",
+      "component_count": 1,
+      "foreground_fraction": 0.002814,
+      "gate_flags": [],
+      "gate_outcome": "SEGMENTATION_UNAVAILABLE",
+      "invalid_reasons": [
+        "FOREGROUND_TOO_SMALL"
+      ],
+      "probes": "subject far below the minimum foreground fraction",
+      "roi_available": false,
+      "segmentation_valid": false
+    },
+    {
+      "border_contact_fraction": 1.0,
+      "case": "subject_fills_frame",
+      "component_count": 1,
+      "foreground_fraction": 1.0,
+      "gate_flags": [],
+      "gate_outcome": "SEGMENTATION_UNAVAILABLE",
+      "invalid_reasons": [
+        "FOREGROUND_NEAR_FULL_FRAME",
+        "EXCESSIVE_BORDER_CONTACT"
+      ],
+      "probes": "subject above the maximum foreground fraction",
+      "roi_available": false,
+      "segmentation_valid": false
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "case": "heavy_occlusion",
+      "component_count": 2,
+      "foreground_fraction": 0.087667,
+      "gate_flags": [],
+      "gate_outcome": "SEGMENTATION_UNAVAILABLE",
+      "invalid_reasons": [
+        "NO_DOMINANT_COMPONENT"
+      ],
+      "probes": "an opaque bar across the subject",
+      "roi_available": false,
+      "segmentation_valid": false
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "case": "low_contrast_scene",
+      "component_count": 1,
+      "foreground_fraction": 0.12948,
+      "gate_flags": [],
+      "gate_outcome": "ELIGIBLE",
+      "invalid_reasons": [],
+      "probes": "subject and background of near-equal lightness",
+      "roi_available": true,
+      "segmentation_valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "case": "directional_hotspot",
+      "component_count": 1,
+      "foreground_fraction": 0.151539,
+      "gate_flags": [
+        "HIGHLIGHT_CLIPPING"
+      ],
+      "gate_outcome": "ESCALATED",
+      "invalid_reasons": [],
+      "probes": "a blown specular patch on the subject",
+      "roi_available": true,
+      "segmentation_valid": true
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "case": "fragmented_subject",
+      "component_count": 7,
+      "foreground_fraction": 0.057883,
+      "gate_flags": [],
+      "gate_outcome": "SEGMENTATION_UNAVAILABLE",
+      "invalid_reasons": [
+        "NO_DOMINANT_COMPONENT"
+      ],
+      "probes": "subject broken into disconnected pieces",
+      "roi_available": false,
+      "segmentation_valid": false
+    },
+    {
+      "border_contact_fraction": 0.0,
+      "case": "gradient_background",
+      "component_count": 1,
+      "foreground_fraction": 0.151539,
+      "gate_flags": [],
+      "gate_outcome": "ELIGIBLE",
+      "invalid_reasons": [],
+      "probes": "smooth background ramp across the frame",
+      "roi_available": true,
+      "segmentation_valid": true
+    }
+  ],
+  "claim_boundary": "exploratory stress probes only; they support no statement about real-world accuracy, thresholds or condition inference",
+  "n": 12,
+  "policy_threshold_fingerprint": "78b1e2151773787a",
+  "segmentation_valid": 8,
+  "status": "EXPLORATORY",
+  "synthetic_version": "phase2c-synthetic-stress-1.0.0"
+}

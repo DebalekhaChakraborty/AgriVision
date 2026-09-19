@@ -1,0 +1,257 @@
+{
+  "claim_boundary": "held-out licensed real photographs and controlled degradations of them; not phone-camera deployment captures",
+  "condition_model": {
+    "blocked_sample_count": 10,
+    "confidence_distribution": {
+      "max": 0.7288507150385456,
+      "median": 0.4164801537713272,
+      "min": 0.21638399204905048,
+      "n": 17,
+      "p10": 0.2752574003696802,
+      "p90": 0.6483509200080545
+    },
+    "eligible_sample_count": 17,
+    "failure_count": 0,
+    "failures": [],
+    "fruit_type_accuracy": 0.8823529411764706,
+    "fruit_type_confusion": {
+      "true=apple|predicted=apple": 3,
+      "true=apple|predicted=orange": 1,
+      "true=banana|predicted=apple": 1,
+      "true=banana|predicted=banana": 6,
+      "true=orange|predicted=orange": 6
+    },
+    "fruit_type_correct": 15,
+    "fruit_type_counts": {
+      "apple": 4,
+      "banana": 6,
+      "orange": 7
+    },
+    "fruit_type_label_source": "visual identification during corpus curation, recorded before any model was run",
+    "fruit_type_scored": 17,
+    "ran": true,
+    "visible_condition_accuracy": null,
+    "visible_condition_accuracy_note": "not computed: these images carry no ground-truth visible-condition label, and none was invented for them",
+    "visible_condition_counts": {
+      "deteriorated": 7,
+      "fresh": 10
+    }
+  },
+  "confusion_matrix_roi": {
+    "borderline": {
+      "accepted": 97,
+      "blocked": 40
+    },
+    "false_accept": 39,
+    "false_accept_rate": 0.21666666666666667,
+    "false_block": 0,
+    "false_block_rate": 0.0,
+    "scope": "roi",
+    "scored_acceptable": 10,
+    "scored_unusable": 180,
+    "true_accept": 10,
+    "true_block": 141,
+    "unassessable": 184,
+    "unlabelled": {
+      "accepted": 54,
+      "blocked": 2
+    }
+  },
+  "confusion_matrix_whole_image": {
+    "borderline": {
+      "accepted": 107,
+      "blocked": 109
+    },
+    "false_accept": 20,
+    "false_accept_rate": 0.07407407407407407,
+    "false_block": 1,
+    "false_block_rate": 0.06666666666666667,
+    "scope": "whole_image",
+    "scored_acceptable": 15,
+    "scored_unusable": 270,
+    "true_accept": 14,
+    "true_block": 250,
+    "unassessable": 0,
+    "unlabelled": {
+      "accepted": 39,
+      "blocked": 27
+    }
+  },
+  "controlled_degradations": {
+    "by_transformation": {
+      "gaussian_blur": {
+        "ELIGIBLE": 15,
+        "ESCALATED": 59,
+        "SEGMENTATION_UNAVAILABLE": 34
+      },
+      "glare": {
+        "ELIGIBLE": 37,
+        "SEGMENTATION_UNAVAILABLE": 17
+      },
+      "occlude": {
+        "ELIGIBLE": 24,
+        "ESCALATED": 1,
+        "SEGMENTATION_UNAVAILABLE": 29
+      },
+      "overexpose": {
+        "ELIGIBLE": 14,
+        "ESCALATED": 36,
+        "REMEDIATION_CANDIDATE": 1,
+        "SEGMENTATION_UNAVAILABLE": 30
+      },
+      "reduce_contrast": {
+        "ELIGIBLE": 63,
+        "SEGMENTATION_UNAVAILABLE": 18
+      },
+      "shrink_subject": {
+        "ELIGIBLE": 47,
+        "ESCALATED": 2,
+        "SEGMENTATION_UNAVAILABLE": 5
+      },
+      "underexpose": {
+        "ELIGIBLE": 26,
+        "ESCALATED": 39,
+        "REMEDIATION_CANDIDATE": 2,
+        "SEGMENTATION_UNAVAILABLE": 41
+      }
+    },
+    "confusion": {
+      "borderline": {
+        "accepted": 97,
+        "blocked": 40
+      },
+      "false_accept": 39,
+      "false_accept_rate": 0.21666666666666667,
+      "false_block": 0,
+      "false_block_rate": null,
+      "scope": "roi",
+      "scored_acceptable": 0,
+      "scored_unusable": 180,
+      "true_accept": 0,
+      "true_block": 141,
+      "unassessable": 174,
+      "unlabelled": {
+        "accepted": 47,
+        "blocked": 2
+      }
+    },
+    "n": 540,
+    "outcomes": {
+      "ELIGIBLE": 226,
+      "ESCALATED": 137,
+      "REMEDIATION_CANDIDATE": 3,
+      "SEGMENTATION_UNAVAILABLE": 174
+    }
+  },
+  "evaluated_on": "2026-09-18",
+  "evaluation_version": "phase2c-heldout-evaluation-1.0.0",
+  "gate": {
+    "assessable": 383,
+    "eligibility_rate": 0.6344647519582245,
+    "eligible": 243,
+    "escalated": 137,
+    "escalation_rate": 0.3577023498694517,
+    "max_automated_attempts": 1,
+    "remediation_acceptance_rate": 0.6666666666666666,
+    "remediation_accepted": 2,
+    "remediation_attempt_rate": 0.007832898172323759,
+    "remediation_attempted": 3,
+    "remediation_candidates": 3,
+    "segmentation_unavailable": 184
+  },
+  "policy_focus_metric": "high_frequency_ratio",
+  "policy_gates_on_focus": true,
+  "policy_lock_fingerprint": "15b7fb0908d6d622",
+  "policy_threshold_fingerprint": "78b1e2151773787a",
+  "population": {
+    "derived_samples": 540,
+    "held_out_groups": 25,
+    "held_out_images": 27,
+    "measured_samples": 567
+  },
+  "scope_comparison": {
+    "n": 17,
+    "roi_median_highlight_clip": 2.8487191478044063e-05,
+    "roi_median_laplacian": 168.21949555469664,
+    "roi_median_shadow_clip": 0.0002293602520689231,
+    "whole_image_median_highlight_clip": 0.0005312214835093208,
+    "whole_image_median_laplacian": 210.59656843673977,
+    "whole_image_median_shadow_clip": 0.0001654128086419753
+  },
+  "segmentation": {
+    "by_track": {
+      "CLEAN_BASE": {
+        "invalid_reasons": {
+          "EXCESSIVE_BORDER_CONTACT": 3,
+          "FOREGROUND_NEAR_FULL_FRAME": 1,
+          "NO_DOMINANT_COMPONENT": 3
+        },
+        "median_border_contact": 0.162054,
+        "median_component_count": 2.0,
+        "median_foreground_fraction": 0.46701,
+        "n": 15,
+        "valid": 10,
+        "valid_rate": 0.6666666666666666
+      },
+      "NATURAL_SCENE": {
+        "invalid_reasons": {
+          "EXCESSIVE_BORDER_CONTACT": 4,
+          "FOREGROUND_NEAR_FULL_FRAME": 2,
+          "NO_DOMINANT_COMPONENT": 1
+        },
+        "median_border_contact": 0.5553760000000001,
+        "median_component_count": 5.0,
+        "median_foreground_fraction": 0.7669185000000001,
+        "n": 12,
+        "valid": 7,
+        "valid_rate": 0.5833333333333334
+      }
+    },
+    "note": "geometric validity only; no annotated foreground masks exist, so no IoU or Dice figure is reported and none should be inferred"
+  },
+  "status": "CONFIRMATORY",
+  "status_reason": "re-run of thresholds already evaluated once; the result is identical evidence, not a second independent look",
+  "undegraded_real": {
+    "by_track": {
+      "CLEAN_BASE": {
+        "n": 15,
+        "outcomes": {
+          "ELIGIBLE": 10,
+          "SEGMENTATION_UNAVAILABLE": 5
+        }
+      },
+      "NATURAL_SCENE": {
+        "n": 12,
+        "outcomes": {
+          "ELIGIBLE": 7,
+          "SEGMENTATION_UNAVAILABLE": 5
+        }
+      }
+    },
+    "confusion": {
+      "borderline": {
+        "accepted": 0,
+        "blocked": 0
+      },
+      "false_accept": 0,
+      "false_accept_rate": null,
+      "false_block": 0,
+      "false_block_rate": 0.0,
+      "scope": "roi",
+      "scored_acceptable": 10,
+      "scored_unusable": 0,
+      "true_accept": 10,
+      "true_block": 0,
+      "unassessable": 10,
+      "unlabelled": {
+        "accepted": 7,
+        "blocked": 0
+      }
+    },
+    "n": 27,
+    "outcomes": {
+      "ELIGIBLE": 17,
+      "SEGMENTATION_UNAVAILABLE": 10
+    }
+  }
+}

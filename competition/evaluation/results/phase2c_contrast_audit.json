@@ -1,0 +1,142 @@
+{
+  "advisory_flags": [
+    "LOW_CONTRAST"
+  ],
+  "audit_version": "phase2c-contrast-path-audit-1.0.0",
+  "audited_on": "2026-09-19",
+  "base_images": 35,
+  "blocking_flags": [
+    "BLUR_RISK",
+    "HIGHLIGHT_CLIPPING",
+    "IMAGE_TOO_SMALL",
+    "OVEREXPOSED",
+    "SHADOW_CLIPPING",
+    "UNDEREXPOSED"
+  ],
+  "by_family": {
+    "glare": {
+      "advisory_flagged": 0,
+      "block_rate": 0.1,
+      "blocked": 3,
+      "detection_rate_including_advisory": 0.1,
+      "false_accepts": 27,
+      "scored_unusable": 30
+    },
+    "occlude": {
+      "advisory_flagged": 1,
+      "block_rate": 0.25,
+      "blocked": 5,
+      "detection_rate_including_advisory": 0.3,
+      "false_accepts": 15,
+      "scored_unusable": 20
+    },
+    "reduce_contrast": {
+      "advisory_flagged": 53,
+      "block_rate": 0.0,
+      "blocked": 0,
+      "detection_rate_including_advisory": 0.9137931034482759,
+      "false_accepts": 58,
+      "scored_unusable": 58
+    }
+  },
+  "finding": "LOW_CONTRAST is raised by the calibrated threshold but is classified advisory, not blocking, so it never escalates. Glare and occlusion have no detector at all and are blocked only incidentally.",
+  "low_contrast_limit": 0.13137254901960785,
+  "policy_threshold_fingerprint": "78b1e2151773787a",
+  "split": "calibration groups only; held-out artifacts are frozen",
+  "stages": [
+    {
+      "advisory_flagged": 0,
+      "assessable": 31,
+      "blocked": 4,
+      "expected_verdict": "BORDERLINE",
+      "family": "glare",
+      "flag_counts": {
+        "OVEREXPOSED": 1,
+        "SHADOW_CLIPPING": 3
+      },
+      "level": 0.5,
+      "median_roi_contrast": 0.6470588235294118,
+      "no_valid_mask": 4
+    },
+    {
+      "advisory_flagged": 0,
+      "assessable": 30,
+      "blocked": 3,
+      "expected_verdict": "UNUSABLE",
+      "family": "glare",
+      "flag_counts": {
+        "SHADOW_CLIPPING": 3
+      },
+      "level": 0.9,
+      "median_roi_contrast": 0.6666666666666666,
+      "no_valid_mask": 5
+    },
+    {
+      "advisory_flagged": 0,
+      "assessable": 26,
+      "blocked": 2,
+      "expected_verdict": "BORDERLINE",
+      "family": "occlude",
+      "flag_counts": {
+        "SHADOW_CLIPPING": 2
+      },
+      "level": 0.2,
+      "median_roi_contrast": 0.5529411764705883,
+      "no_valid_mask": 9
+    },
+    {
+      "advisory_flagged": 1,
+      "assessable": 20,
+      "blocked": 5,
+      "expected_verdict": "UNUSABLE",
+      "family": "occlude",
+      "flag_counts": {
+        "BLUR_RISK": 1,
+        "LOW_CONTRAST": 1,
+        "OVEREXPOSED": 1,
+        "SHADOW_CLIPPING": 3,
+        "UNDEREXPOSED": 1
+      },
+      "level": 0.5,
+      "median_roi_contrast": 0.48627450980392156,
+      "no_valid_mask": 15
+    },
+    {
+      "advisory_flagged": 28,
+      "assessable": 28,
+      "blocked": 0,
+      "expected_verdict": "UNUSABLE",
+      "family": "reduce_contrast",
+      "flag_counts": {
+        "LOW_CONTRAST": 28
+      },
+      "level": 0.08,
+      "median_roi_contrast": 0.0392156862745098,
+      "no_valid_mask": 7
+    },
+    {
+      "advisory_flagged": 25,
+      "assessable": 30,
+      "blocked": 0,
+      "expected_verdict": "UNUSABLE",
+      "family": "reduce_contrast",
+      "flag_counts": {
+        "LOW_CONTRAST": 25
+      },
+      "level": 0.2,
+      "median_roi_contrast": 0.09411764705882353,
+      "no_valid_mask": 5
+    },
+    {
+      "advisory_flagged": 0,
+      "assessable": 28,
+      "blocked": 0,
+      "expected_verdict": "BORDERLINE",
+      "family": "reduce_contrast",
+      "flag_counts": {},
+      "level": 0.5,
+      "median_roi_contrast": 0.24705882352941178,
+      "no_valid_mask": 7
+    }
+  ]
+}

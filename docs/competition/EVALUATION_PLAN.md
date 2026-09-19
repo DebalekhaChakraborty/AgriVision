@@ -60,17 +60,31 @@ Two plan assumptions have been corrected by measurement:
   are dominated by bright backgrounds. Threshold calibration needs a development
   set drawn from the deployment domain — self-captured imagery
   ([DEMO_DATA_PLAN.md](DEMO_DATA_PLAN.md)).
-* **Calibration is blocked on deployment-domain imagery, and the protocol for
-  collecting it is now locked** before any photograph exists
-  ([PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md](PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md)).
-  Splits are assigned per physical item, the held-out set is fixed by a
-  published fingerprint, and thresholds will be reported as a false-accept /
-  false-block trade-off rather than a single accuracy figure.
+* **Calibration is no longer blocked.** Phase 2c-B calibrated the ROI policy on
+  92 licence-verified real photographs with controlled degradations
+  ([PHASE2C_LICENSED_CALIBRATION.md](PHASE2C_LICENSED_CALIBRATION.md)). Splits
+  are assigned per **source group**, the held-out set is fixed by fingerprint
+  `77a995ceff0d33f7`, and thresholds are reported as a false-accept /
+  false-block trade-off rather than a single accuracy figure. Self-capture
+  remains available as an optional camera-domain validation and blocks nothing.
 * **Capture-quality thresholds are scope-specific.** Phase 2b established that
   whole-image and foreground-restricted measurement are not interchangeable: ROI
-  Laplacian variance is about 5% of the whole-image value because the latter was
+  Laplacian variance was about 5% of the whole-image value because the latter was
   dominated by the subject outline. Any threshold set must state the scope it was
-  calibrated for, and a separate ROI set is required before ROI gating is enabled.
+  calibrated for. Phase 2c-B confirmed the mechanism on an independent corpus:
+  restricted to the subject, highlight clipping is **22× rarer** than
+  whole-image, which is why the Phase 1 clipping limits fire on the backdrop.
+* **Variance of the Laplacian cannot carry a global blur threshold, and this is
+  now measured rather than suspected.** It separates blurred from sharp
+  perfectly (AUC 1.000) yet its median moves **88-fold** across the exposure
+  ladder on the same photographs. Blur gating uses `high_frequency_ratio`
+  instead — AUC 0.999 with 1.13×/1.10×/1.03× movement across exposure and
+  subject scale. Laplacian variance remains valid for *within-image* comparisons
+  such as the Phase 1 degradation sweeps.
+* **Some thresholds have no defensible value and are labelled as such.** Four of
+  seven ROI thresholds met the preregistered rule; three retain provisional
+  Phase 1 values, and the locked policy's status says so. A partially calibrated
+  policy reported as calibrated would be the substitution Phase 2b warns about.
 * **FruitVision is excluded from competition evaluation.** Its CC BY-NC-ND 4.0
   terms make competition-context use ambiguous. External-domain evaluation will
   use the CC BY 4.0 Sultana set and self-captured imagery.

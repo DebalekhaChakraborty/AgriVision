@@ -72,3 +72,20 @@ Base commit: `3928d43b3bdd3a754f98f1f411596050de29da17`
 | D14 | Deployment-domain capture protocol locked before collection | `PHASE2C_CAPTURE_CALIBRATION_PROTOCOL.md`; split fingerprint `2feb9360e1c2bdf5` generated pre-capture | COMPLETE |
 | D15 | Calibration methodology fixed before data exists | `calibrate_quality_policy.py --show-method`; contains no threshold values, refuses to run without captures | COMPLETE |
 | D16 | Self-captured imagery collected | **186** captures across 24 items (144 + 36 + 6) | **NOT STARTED — blocked on physical capture** |
+
+
+## E. Dataset licensing and provenance (Phase 2c-B)
+
+| Requirement | Where it is satisfied | Evidence |
+| --- | --- | --- |
+| Every third-party image has a verified licence | `competition/data/licence_validation.py` — default-deny gate run on metadata before download | `manifests/licensed_corpus.json`, `manifests/licence_rejections.json` |
+| No Unknown, NonCommercial or NoDerivatives source is used | Allow-list of 10 CC/PD identifiers; NC and ND rejected by name | `test_licensed_corpus.py::test_non_commercial_licences_are_rejected`, `::test_no_derivatives_licences_are_rejected` |
+| Attribution is preserved per image, not per dataset | `LicensedImageRecord.attribution_text`, required when the licence demands it | `::test_attribution_is_per_image_not_per_source` |
+| Share-alike obligations are tracked | `share_alike_required` per record; 62 of 92 images carry it | licence table in [PHASE2C_LICENSED_CALIBRATION.md](PHASE2C_LICENSED_CALIBRATION.md) §4 |
+| Evaluation is free of near-duplicate leakage | Split unit is the source group, never the image | `::test_a_built_split_never_lets_a_group_cross`, fingerprint `77a995ceff0d33f7` |
+| Held-out data is opened only after the policy is frozen | `CorpusView` refuses a held-out view without a policy fingerprint | `::test_a_held_out_view_requires_a_policy_fingerprint` |
+| A post-hoc threshold change cannot be reported as confirmatory | Append-only run ledger; a new threshold set after a held-out run is EXPLORATORY | `::test_changing_thresholds_after_a_held_out_run_makes_the_next_run_exploratory` |
+| Generated imagery cannot be presented as real | Schema forbids a real licence or a real track on a `SYNTHETIC_GENERATED` record | `::test_a_generated_image_cannot_claim_a_real_licence` |
+| No third-party image bytes are committed | `raw/`, `cache/`, `derived/`, `synthetic/` gitignored | `::test_image_directories_are_gitignored` |
+| No machine-specific paths reach committed artifacts | `_reject_paths` on every record; manifests scanned | `::test_no_committed_manifest_contains_a_machine_path` |
+| Claims stay inside the evidence | Locked policy status names which thresholds are provisional; claim boundary recorded in every results file | §11 and §16 of the phase note |
